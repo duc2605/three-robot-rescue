@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<robot
+  name="simple_robot"
+  xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:arg
+    name="robot_prefix"
+    default="robot1"/>
+
+  <xacro:arg name="leader_camera_enabled" default="false"/>
+  <xacro:arg name="camera_width" default="640"/>
+  <xacro:arg name="camera_height" default="480"/>
+  <xacro:arg name="camera_rate" default="15.0"/>
+
+  <xacro:include
+    filename="$(find ros2_omni_robot_sim)/urdf/3w_v2_multi/base_link.urdf.xacro"/>
+
+  <xacro:include
+    filename="$(find ros2_omni_robot_sim)/urdf/3w_v2_multi/gazebo_plugins.urdf.xacro"/>
+
+  <xacro:include
+    filename="$(find ros2_omni_robot_sim)/urdf/3w_v2_multi/ros2_control.urdf.xacro"/>
+
+  <link name="base_footprint"/>
+
+  <xacro:base_link
+    parent="base_footprint"
+    xyz="0 0 0"
+    rpy="0 0 0"
+    prefix="$(arg robot_prefix)"
+    leader_camera_enabled="$(arg leader_camera_enabled)"
+    camera_width="$(arg camera_width)"
+    camera_height="$(arg camera_height)"
+    camera_rate="$(arg camera_rate)"/>
+
+</robot>

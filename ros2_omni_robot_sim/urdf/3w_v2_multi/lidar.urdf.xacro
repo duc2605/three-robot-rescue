@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="lidar" params="suffix parent xyz rpy prefix multilayer:=false">
+    <xacro:property name="is_multilayer" value="${str(multilayer).lower() in ('true', '1')}"/>
+    <xacro:property name="lidar_link" value="${'leader_lidar_link' if is_multilayer else prefix + '/lidar_link_' + str(suffix)}"/>
+
+    <!-- LiDAR link -->
+    <link name="${lidar_link}">
+
+      <visual>
+
+        <geometry>
+          <cylinder
+            radius="0.02"
+            length="0.02" />
+        </geometry>
+
+        <material name="red">
+
+          <color rgba="0.4 0 0.1 1" />
+
+        </material>
+
+      </visual>
+
+    </link>
+
+
+    <!-- LiDAR joint -->
+    <joint
+      name="${prefix}/lidar_joint_${suffix}"
+      type="fixed">
+
+      <parent link="${parent}" />
+
+      <child link="${lidar_link}" />
+
+      <origin
+        xyz="${xyz}"
+        rpy="${rpy}" />
+
+      <axis xyz="0 0 1" />
+
+    </joint>
+
+
+    <!-- Gazebo LiDAR -->
+    <gazebo reference="${lidar_link}">
+
+      <sensor
+        name="${prefix}_gpu_lidar"
+        type="gpu_lidar">
+
+        <topic>/${prefix}/scan</topic>
+
+        <update_rate>5</update_rate>
+
+        <gz_frame_id>
+          ${prefix + '/leader_lidar_link' if is_multilayer else prefix + '/lidar_link_' + str(suffix)}
+        </gz_frame_id>
+
+        <ray>
+
+          <scan>
+
+            <horizontal>
+
+              <samples>240</samples>
+
+              <resolution>1</resolution>
+
+              <min_angle>-3.1415</min_angle>
+
+              <max_angle>3.1415</max_angle>
+
+            </horizontal>
+
+            <!-- The elevated leader scans down to the floor as well as
+                 horizontally. Its point cloud is height-filtered into /scan. -->
+            <xacro:if value="${is_multilayer}">
+              <vertical>
+                <samples>91</samples>
+                <resolution>1</resolution>
+                <min_angle>${-pi/3}</min_angle>
+                <max_angle>0</max_angle>
+              </vertical>
+            </xacro:if>
+          </scan>
+
+
+          <range>
+
+            <min>0.08</min>
+
+            <max>10.0</max>
+
+            <resolution>0.01</resolution>
+
+          </range>
+
+
+          <noise>
+
+            <type>gaussian</type>
+
+            <mean>0.0</mean>
+
+            <stddev>0.01</stddev>
+
+          </noise>
+
+        </ray>
+
+
+        <always_on>true</always_on>
+
+        <visualize>false</visualize>
+
+      </sensor>
+
+    </gazebo>
+
+  </xacro:macro>
+
+</robot>
