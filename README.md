@@ -19,8 +19,8 @@ Build/install cũ không đi kèm bản nguồn; cần build lại bằng tên m
 
 ## Tài liệu
 
-- [Nhật ký trao đổi và chỉnh sửa](README_NHAT_KY_DU_AN.md).
-- [Báo cáo tiến độ gửi giảng viên](README_BAO_CAO_TIEN_DO.md).
+- [Nhật ký và bàn giao kỹ thuật cho AI tiếp tục dự án](README_NHAT_KY_DU_AN.md).
+- [Báo cáo cải tiến giữa các phiên bản gửi giảng viên](README_BAO_CAO_TIEN_DO.md).
 - [Quy trình cập nhật hai tài liệu](AGENTS.md).
 - [Chuẩn bị đưa lên GitHub](docs/GITHUB_PREPARATION.md) và [giấy phép](LICENSES.md).
 - [D* Lite, MPC và đội hình](social_navigation_sim/README_DSTAR_MPC.md).

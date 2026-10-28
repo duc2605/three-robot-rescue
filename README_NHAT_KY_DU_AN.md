@@ -1,8 +1,177 @@
-# Nhật ký trao đổi và chỉnh sửa — Three Robot Rescue
+# Nhật ký và bàn giao kỹ thuật cho AI — Three Robot Rescue
 
 **Cập nhật:** 28/10/2026 — múi giờ Việt Nam (`Asia/Ho_Chi_Minh`).\
 **Mốc chức năng hiện hành:** M6 — D* Lite + MPC, cảnh xã hội động và pipeline cảm biến đã sửa.\
 **Báo cáo gửi giảng viên:** [README_BAO_CAO_TIEN_DO.md](README_BAO_CAO_TIEN_DO.md).
+
+## 0. Bàn giao hiện hành — AI tiếp nhận đọc phần này trước
+
+Phần này phản ánh trạng thái cuối đã xác minh ngày 28/10/2026. Các mục
+NK phía sau là lịch sử theo thời điểm: tên file, package, nhận định và số
+mục của báo cáo trong các mục cũ có thể khác hiện tại. Khi tiếp tục công
+việc, kiểm tra mã nguồn thực tế trước khi dựa vào một nhận định lịch sử.
+
+### 0.1. Mục tiêu và các quyết định cần giữ
+
+- Duy trì D* Lite + ba MPC với vùng xã hội đã sửa làm backend chính.
+- Giữ hai backend Paper1 GWO–WOA/DWA và Paper2 APF–MPC để đối chiếu,
+  cùng code/test. Chưa có kết quả chứng minh backend nào tốt hơn.
+- Giữ hai môi trường tĩnh `social_static` và động `social_dynamic`.
+- Tiếp tục cải tiến vùng xem TV, chuyển hoạt động, người đi bộ/người nằm
+  và điều hướng đội hình từ cảm biến. GCFF chỉ được đề xuất, chưa triển khai.
+- Chưa có yêu cầu khởi động lại mô phỏng sau lần dừng; tác vụ chỉ sửa tài
+  liệu không tự chạy Gazebo. Khi được yêu cầu kiểm chứng runtime, ghi điều kiện.
+- Báo cáo chỉ nêu cải tiến bản sau so với bản trước và bằng chứng. Nhật ký
+  giữ cả lịch sử kỹ thuật/vận hành và ngữ cảnh để AI khác tiếp tục.
+
+### 0.2. Cây nguồn và nơi cần sửa
+
+Có hai package: `social_navigation_planner` và `social_navigation_sim`.
+Chỉ sửa nguồn; không sửa bản sao trong build/install. Không dùng các tên
+package/launch cũ từ tab IDE hoặc từ NK cũ để gọi lệnh.
+
+| Thành phần | File hiện hành cần đọc |
+|---|---|
+| Coordinator D* Lite, tham chiếu đội hình, ba MPC | [dstar_mpc_controller.py](social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py) |
+| Đội hình và tránh kẹt | `moving_formation.py`, `adaptive_leader.py`, `leader_follower.py`, `turnaround.py`, `separation_recovery.py`, `grid_clearance.py`, `peer_safety.py` trong namespace planner |
+| Hai backend paper | `paper1_gwo_woa_node/core.py`, `paper2_apf_mpc_node/core.py` trong namespace planner; tên node/core là hai file riêng |
+| Chuỗi khởi động | [social_navigation.launch.py](social_navigation_sim/launch/social_navigation.launch.py) → [dstar_mpc.launch.py](social_navigation_sim/launch/dstar_mpc.launch.py) → [three_robot_sim.launch.py](social_navigation_sim/launch/three_robot_sim.launch.py) |
+| Profile động | [social_dynamic.launch.py](social_navigation_sim/launch/social_dynamic.launch.py) |
+| RGB-D, detector và pose | [leader_person_detector.py](social_navigation_sim/scripts/leader_person_detector.py), `rgbd_pairing.py`, `body_pose_estimation.py`, `head_pose_estimation.py` |
+| Tracking, TV và map xã hội | [social_costmap.py](social_navigation_sim/scripts/social_costmap.py), `camera_people_tracking.py`, `color_attention.py`, `colorful_targets.py`, `social_space_inference.py` |
+| Người nằm và lượt nhìn | `human_posture.py`, `posture_proposals.py`, `route_inspection.py`, `social_search.py`; `social_observation.py` trong planner |
+| Lịch và hình học mô phỏng | `scripts/generate_social_static_world.py`, `generate_social_dynamic_world.py`, `scenario_motion.py`, `src/social_scenario_motion.cpp` trong simulator |
+| Hồi quy | `social_navigation_planner/test/`, `social_navigation_sim/test/`; giữ `test/fixtures/my_maze.pgm` vì test phục hồi cần nó |
+
+Tên rút gọn `paper1_gwo_woa_node/core.py` ở bảng trên nghĩa là
+`paper1_gwo_woa_node.py` và `paper1_gwo_woa_core.py`; tương tự với Paper2.
+Các helper không có executable riêng vẫn có thể là phụ thuộc đang dùng.
+
+### 0.3. Luồng dữ liệu và giả thiết
+
+Gazebo phát RGB-D/LiDAR; `leader_person_detector.py` chọn capture hợp lệ
+rồi chạy detector/pose. `social_costmap.py` nhận quan sát/tracking, tạo
+`/social_navigation/map` từ map vật lý và các vùng có bằng chứng. Coordinator
+và ba MPC cùng dùng map này khi bật social avoidance. Goal đến từ RViz
+`/goal_pose`; mặc định robot3 dẫn đầu. MPC phát `/<robot>/cmd_vel`.
+
+Các topic cần đọc khi kiểm tra: `/leader/people/poses`,
+`/leader/people/body_observations`, `/leader/people/tv_screens`,
+`/social_navigation/status`, `/social_navigation/attention_debug`,
+`/social_navigation/observation_status`, `/dstar_lite/path`,
+`/formation/robot_states` và clock/TF. Đối chiếu kiểu message trong node
+trước khi viết script đọc; không suy ra trạng thái chỉ từ marker.
+
+Pose robot hiện lấy từ Gazebo, chưa phải hệ định vị robot thực. Lịch người,
+manifest và marker `/social_scene/...` là ground truth để đối chiếu, không
+phải đầu vào nhãn cho nhận diện. Tránh giường trên map không chứng minh
+nhận diện người nằm; nằm bất động không chứng minh ngủ; dừng ở bình nước
+không chứng minh nhận diện uống nước. Không lấy nhãn kịch bản thay cảm biến.
+
+### 0.4. Môi trường và lệnh tái hiện
+
+Môi trường đã dùng: ROS 2 Humble, Gazebo Fortress, robot `3w_v2_multi`,
+RGB-D/LiDAR. Build/install/log đã được dọn khỏi bản nguồn; cần build lại.
+Chạy từ thư mục gốc repository:
+
+```bash
+source /opt/ros/humble/setup.bash
+colcon build --symlink-install \
+  --base-paths social_navigation_planner social_navigation_sim \
+  --packages-select social_navigation_planner social_navigation_sim \
+  --cmake-args -DBUILD_TESTING=OFF
+source install/setup.bash
+export ROS_DOMAIN_ID=31
+
+# Chọn một launch mỗi lượt, dừng lượt trước khi chuyển
+ros2 launch social_navigation_sim social_static.launch.py
+ros2 launch social_navigation_sim social_dynamic.launch.py
+ros2 launch social_navigation_sim paper1_gwo_woa.launch.py
+ros2 launch social_navigation_sim paper2_apf_mpc.launch.py
+```
+
+Paper dùng cảnh động bằng `social_scene:=dynamic`. Launch chung nhận
+`social_scene:=static|dynamic`, `navigation_backend:=baseline|paper1|paper2`.
+`motion_enabled:=false` dừng robot, không dừng lịch người; pause Gazebo mới
+ngừng lịch theo simulation clock. Không chạy các lệnh launch hàng loạt.
+
+Profile động: camera 480×360/6 Hz mô phỏng, DNN tối đa 2 Hz thực/1 thread,
+pose 224 px/tối đa 2 crop, scan ngang mỗi 4 capture, ngân sách suy luận 3 s.
+Phân biệt đồng hồ thực với đồng hồ mô phỏng khi sửa TTL/cooldown/latency.
+
+Hồi quy không cần khởi động Gazebo:
+
+```bash
+source /opt/ros/humble/setup.bash
+PYTHONPATH="$PWD/social_navigation_planner:$PYTHONPATH" \
+PYTHONDONTWRITEBYTECODE=1 python3 -m pytest \
+  social_navigation_sim/test social_navigation_planner/test \
+  --ignore=social_navigation_planner/test/test_copyright.py \
+  --ignore=social_navigation_planner/test/test_flake8.py \
+  --ignore=social_navigation_planner/test/test_pep257.py \
+  -q -p no:cacheprovider
+```
+
+`BUILD_TESTING=OFF` dùng trên máy thiếu ament lint, không thay cho hồi quy
+Python. Bộ test động gọi generator và có thể ghi lại asset động trong
+nguồn: kiểm tra diff trước/sau test; không bỏ thay đổi ngoài ý muốn.
+
+### 0.5. Điều gì đã biết chắc và điều gì chưa xong
+
+- Kết quả gần nhất: hai package build được, **115 test qua**, hai warning
+  SciPy clipping bounds ở Paper2; ba lint file không chạy. Log:
+  [build](docs/evidence/2026-10-28/github_build.log),
+  [test](docs/evidence/2026-10-28/github_tests.log).
+- Bảy launch đã đọc được tham số, sáu tổ hợp scene/backend resolve đúng
+  asset; Xacro và 31 tham chiếu tài nguyên hợp lệ. Chưa có lượt Gazebo mới
+  sau tinh gọn/đổi package; không suy ra runtime đã hoàn toàn ổn định.
+- TV đã xuất hiện vùng trong Gazebo. Audit từng thấy trùng người/mảnh TV;
+  M6 có sửa và hồi quy nhưng chưa có số đo dài hạn về ID switch/vùng tồn dư.
+- Nhánh nằm: một ca có người cho 1 ứng viên, cùng giường trống cho 0.
+  [Dữ liệu đối chứng](docs/evidence/2026-10-27/posture_validation.json).
+  Chưa có bộ dữ liệu nhiều góc hoặc chứng minh robot tự nhìn đúng khi đi qua.
+- Ca goal cũ qua giường không xác nhận nhận diện người nằm, không đủ chứng
+  minh không va chạm và chưa tới goal trong mẫu cuối. Xem NK-009 trước khi
+  dùng ca này làm bằng chứng thành công.
+- RTF khoảng 0,16/0,20 ở hai điều kiện khác nhau, vẫn thấp; chưa có A/B
+  kiểm soát. RViz từng có lỗi shader indexed map, chưa xác nhận hết lỗi.
+- Người động chạy kinematic theo lịch, chưa có animation đầy đủ hoặc hành
+  vi phản ứng với robot. Chưa có benchmark công bằng ba backend.
+
+### 0.6. Việc AI tiếp theo nên làm
+
+1. Khi được yêu cầu chạy: tái hiện cảnh động với cùng cấu hình/seed/goal;
+   ghi camera coverage, capture RGB-D, vùng nằm/TV, lượt nhìn, đường và lệnh
+   robot. Tách tránh vật cản có sẵn khỏi tránh vùng suy ra từ cảm biến.
+2. Ưu tiên kiểm tra người nằm khi đường tới goal đi gần giường: robot có
+   nhìn thấy đủ khớp/chiều sâu, xác nhận nhiều capture và tạo vùng kịp không.
+   Có cả ca giường trống và ca bị che khuất, không dùng tọa độ GT để ép nhận diện.
+3. Kiểm tra người rời TV/quay lại: vùng của người rời đi được thu hồi lúc
+   nào, người còn ngồi có giữ vùng, ID có bị hợp nhầm và robot có dừng lặp không.
+4. Đo cùng điều kiện trước/sau sửa: tỷ lệ tới goal, va chạm/khoảng cách nhỏ
+   nhất, thời gian dừng/quay, sai số đội hình, IoU/precision/recall và RTF.
+   Số lượt đo phải ghi đúng thực tế; không tự coi test unit là benchmark.
+5. Sửa đúng nguyên nhân, thêm hồi quy khi cần, ghi kiểm chứng/giới hạn.
+   Nếu có cải tiến chức năng, cập nhật so sánh trong báo cáo; nếu chỉ vận
+   hành/đổi tên/GitHub, chỉ ghi nhật ký và phần bàn giao có liên quan.
+
+### 0.7. Git và tài liệu khi bàn giao
+
+Repository đích: `https://github.com/duc2605/three-robot-rescue`, nhánh
+`main`; mốc đồng bộ đã xác minh trước đợt biên tập NK-020 là `7731ad4`.
+Không mặc định commit này chứa thay đổi mới hơn; kiểm tra HEAD thực tế trước
+khi đồng bộ tiếp.
+
+Tại workspace đã kiểm tra ngày 28/10, `.git` còn trỏ tới snapshot cũ
+`5ac6982` và remote `ngohoanglong220905/...`; việc push bản nguồn trước đó
+thực hiện qua clone tạm. Vì vậy **kiểm tra `git status`, `git remote -v` và
+HEAD trước mọi commit/push**, không đẩy nhầm remote hoặc reset mất thay đổi.
+Clone `/tmp` và ZIP `/tmp` chỉ là dữ liệu tạm, không phải nguồn chuẩn lâu dài;
+AI trên máy khác cần dùng repository đúng và mã nguồn thực tế của nó.
+
+Các yêu cầu và lịch sử cũ giữ nguyên bên dưới. Quy trình cập nhật hiện
+hành ở [AGENTS.md](AGENTS.md). Bản báo cáo là so sánh cải tiến kỹ thuật,
+không phải changelog công cụ hoặc danh sách việc hành chính.
 
 ## 1. Phạm vi và cách đọc
 
@@ -535,6 +704,31 @@ paper, hai môi trường, test và tài liệu đã được đưa lên reposit
 chỉ định. Không force-push; không chạy lại Gazebo hoặc ghi kết quả 115 test
 cũ thành lượt kiểm thử mới. Cập nhật hai README để ghi nhận kết quả đồng bộ.
 
+### NK-020 — 28/10/2026 — Tách báo cáo cải tiến và nhật ký bàn giao cho AI
+
+**Yêu cầu:** báo cáo chỉ nêu cải tiến bản sau so với bản trước, không ghi
+đổi tên/GitHub; nhật ký phải giúp AI khác đọc và tiếp tục cải tiến dự án.
+
+Đã biên tập lại `README_BAO_CAO_TIEN_DO.md` theo từng thay đổi kỹ thuật:
+vùng TV, bằng chứng thời gian, cảnh động, ghép RGB-D, tracking, người nằm,
+điều phối quan sát và giảm tải. Giữ kết quả kiểm chứng và giới hạn tương
+ứng; bỏ các mục đổi tên, tinh gọn, đăng nhập/push, bảng vận hành và lịch sử
+biên tập khỏi báo cáo. Không tạo mốc thuật toán mới hoặc nhận thêm thành tích.
+
+Thêm mục 0 ở nhật ký làm điểm vào cho AI: quyết định/ràng buộc, cây nguồn
+hiện hành, luồng dữ liệu, lệnh build/chạy/test, kết quả đã biết, vấn đề chưa
+xong, thứ tự kiểm chứng tiếp và cảnh báo Git snapshot khác remote đích.
+Giữ nguyên các mục NK-001–NK-019; các số mục của báo cáo trong NK cũ là
+tham chiếu tại thời điểm ghi, không phải bố cục báo cáo mới.
+
+Sửa `AGENTS.md` để các lần sau không chèn việc đổi tên/GitHub vào báo cáo;
+đổi mô tả hai liên kết trong README chính theo vai trò mới.
+Công việc vận hành vẫn ghi nhật ký; báo cáo chỉ đổi khi có nội dung cải tiến
+hoặc bằng chứng kỹ thuật liên quan. Lần này kiểm tra đường dẫn, liên kết,
+bố cục Markdown và tính nhất quán; không chạy lại build/test/Gazebo, không
+thay thuật toán. Đợt tài liệu được đồng bộ tới repository GitHub đã được
+người dùng chỉ định; kiểm tra HEAD remote sau thao tác push.
+
 ## 5. Minh chứng đã lưu trong repository
 
 | File | Ý nghĩa | Giới hạn |
@@ -551,13 +745,14 @@ README; không phải kết quả được chạy mới ngày 28/10/2026.
 
 ## 6. Cách cập nhật từ các lần sau
 
-Thực hiện theo [AGENTS.md](AGENTS.md). Thêm mục `NK-020` tiếp theo; không viết
+Thực hiện theo [AGENTS.md](AGENTS.md). Thêm mục `NK-021` tiếp theo; không viết
 đè nhật ký cũ. Sau mỗi thay đổi code/world/config/test hoặc kết luận thực nghiệm:
 
 1. Ghi yêu cầu và lý do đổi.
 2. Liệt kê phần nguồn bị tác động và hành vi trước/sau.
 3. Ghi đúng kiểm tra đã chạy, kết quả, điều kiện và việc chưa kiểm tra.
-4. Cập nhật đồng thời trạng thái, bảng phiên bản và hạn chế trong báo cáo.
+4. Nếu có cải tiến chức năng/bằng chứng mới, cập nhật so sánh trong báo cáo;
+   việc vận hành chỉ ghi nhật ký, không chèn vào báo cáo.
 5. Giữ minh chứng cần thiết trong repo và kiểm tra liên kết.
 
 Mẫu mục mới:

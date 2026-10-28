@@ -5,26 +5,34 @@
 Đọc trước khi chỉnh sửa và duy trì đồng thời:
 
 1. `README_NHAT_KY_DU_AN.md`: lịch sử yêu cầu, quyết định, thay đổi và kiểm chứng.
-2. `README_BAO_CAO_TIEN_DO.md`: trạng thái hiện tại và so sánh các mốc để báo cáo giảng viên.
+2. `README_BAO_CAO_TIEN_DO.md`: chỉ so sánh cải tiến kỹ thuật giữa bản sau và bản trước để báo cáo giảng viên.
 
-Người dùng yêu cầu hai file này được cập nhật cùng mỗi lần cập nhật dự án.
-Đây là công việc đã được cho phép; không hỏi lại để cập nhật tài liệu.
+Người dùng yêu cầu duy trì cả hai tài liệu. Theo yêu cầu làm rõ ở NK-020,
+nhật ký theo dõi mọi thay đổi cần bàn giao; báo cáo chỉ theo dõi cải tiến
+kỹ thuật và bằng chứng. Đây là công việc đã được cho phép; không hỏi lại.
 
 ## Khi thay đổi code, cấu hình, world, model, map, launch, test hoặc tài liệu dự án
 
 - Thêm một mục có ID tiếp theo vào nhật ký, ghi ngày theo `Asia/Ho_Chi_Minh`,
   yêu cầu, lý do, file thay đổi, kiểm tra thực sự đã chạy và việc còn tồn tại.
-- Cập nhật ngày, mốc hiện hành, bảng tiến độ, khác biệt phiên bản, kết quả
-  kiểm chứng và các hạn chế tương ứng trong báo cáo. Nếu một mục không đổi,
-  có thể ghi rõ điều đó trong lịch sử cập nhật; không tạo phiên bản thuật toán giả.
+- Nếu thay đổi hành vi/thuật toán hoặc có bằng chứng mới về cải tiến, cập
+  nhật báo cáo theo cấu trúc: hạn chế bản trước → sửa ở bản sau → kết quả
+  kiểm chứng → giới hạn còn lại. Không tạo phiên bản thuật toán giả.
+- Đổi tên, dọn file, GitHub, đăng nhập, build, đóng gói hoặc sửa tài liệu
+  chỉ ghi trong nhật ký; không thêm các việc này thành mục tiến độ báo cáo.
+  Khi chỉ có thay đổi vận hành, giữ nguyên nội dung kỹ thuật của báo cáo.
+- Đầu nhật ký phải có phần bàn giao hiện hành cho AI khác: quyết định và
+  ràng buộc người dùng, đường dẫn nguồn, kiến trúc, cách build/chạy/test,
+  trạng thái kiểm chứng, lỗi còn mở và bước tiếp theo. Cập nhật phần này
+  khi tình trạng đổi; không để AI phải suy ra đường dẫn mới từ lịch sử cũ.
 - Thực hiện cập nhật này trước khi kết thúc tác vụ, trong cùng nhóm thay đổi.
-- Giữ lịch sử cũ. Nếu kết luận cũ bị sửa, thêm mục đính chính có dẫn ID;
+- Giữ lịch sử nhật ký cũ. Nếu kết luận cũ bị sửa, thêm mục đính chính có dẫn ID;
   không sửa lịch sử để làm như kết quả mới đã có từ trước.
 - Khi người dùng đưa ra quyết định mới hoặc kiểm thử thực tế làm thay đổi kết
   luận, cũng ghi lại. Không cần tạo mục cho từng lần đọc file, thao tác tool,
   build lặp lại hoặc log tự sinh không có thông tin mới.
-- Chỉ chỉnh sửa hai file này thì cả hai vẫn phải ghi nhận lần cập nhật tài liệu.
-  Sửa chính `AGENTS.md` cũng là cập nhật dự án.
+- Thay đổi quy trình/tài liệu ghi trong nhật ký; báo cáo không ghi nhật ký
+  biên tập. Sửa chính `AGENTS.md` cũng là cập nhật dự án cần ghi nhật ký.
 
 ## Tính chính xác khi báo cáo
 
