@@ -6,6 +6,10 @@
 **Backend được chọn:** D* Lite + ba MPC, không chạy backend Paper1/Paper2.\
 **Trạng thái vận hành cuối đã xác minh:** mô phỏng đã dừng theo yêu cầu người dùng.
 
+**Đồng bộ GitHub:** bản nguồn đã được push thành công lên nhánh `main` của
+`duc2605/three-robot-rescue`, commit nguồn `d1f6b96` (NK-019). Các thông báo
+chưa đăng nhập/chưa push trong NK-018 bên dưới là trạng thái trước khi xử lý.
+
 **Package hiện hành sau NK-017:** `social_navigation_planner` và
 `social_navigation_sim`. Các tên package cũ ở phần lịch sử được giữ để
 đối chiếu; lệnh hiện hành xem mục 14 và README chính. Bản nguồn đã dọn
@@ -341,6 +345,7 @@ mới của ngày lập README. Muốn xác nhận trên máy khác cần chạy
 | 28/10/2026 | Chuẩn hóa 31 tên file, thêm launch tĩnh, đồng bộ import/asset/tài liệu; nhật ký NK-016 | M6, giữ thuật toán; tên world tĩnh/giá trị scene đổi sang static | Build sạch; 115 test qua; kiểm tra bảy launch, sáu tổ hợp scene/backend và generator tương đương sau chuẩn hóa tên; chưa chạy Gazebo |
 | 28/10/2026 | Đổi cả hai package, loại cấu hình cá nhân/output và thêm đóng gói nguồn GitHub; nhật ký NK-017 | M6, không thay thuật toán | Build sạch tên package mới; 115 test qua; kiểm tra launch/import/Xacro/tài nguyên, kích thước và một số mẫu credential; chưa chạy Gazebo, chưa push |
 | 28/10/2026 | Đồng bộ bản nguồn đã làm sạch tới `duc2605/three-robot-rescue`, nhánh `main`; nhật ký NK-018 | M6, không thay thuật toán | Đối chiếu remote, kiểm tra bộ nguồn/diff; dùng lại minh chứng NK-017, không chạy lại mô phỏng |
+| 28/10/2026 | Đăng nhập `duc2605` và push nguồn thành công; nhật ký NK-019 | M6, không thay thuật toán | Git xác nhận `main` từ `115f150` sang `d1f6b96`, không force-push; không chạy lại test/Gazebo |
 
 Mỗi lần thay đổi dự án, cập nhật đồng thời nhật ký và báo cáo theo
 [AGENTS.md](AGENTS.md): ghi điều gì thay đổi, kiểm chứng mới, hạn chế còn lại
@@ -542,3 +547,9 @@ không phải kiểm thử mới hoặc benchmark mới trong lần đồng bộ
 thành công**. HTTPS chưa có thông tin đăng nhập, SSH agent không có khóa;
 plugin GitHub chưa được kết nối. Cần đăng nhập/kết nối GitHub để tiếp tục;
 không coi nhánh remote đã được cập nhật.
+
+**Cập nhật NK-019:** lỗi xác thực trên đã được xử lý. Push thành công đưa
+`main` từ `115f150` sang
+[commit nguồn `d1f6b96`](https://github.com/duc2605/three-robot-rescue/commit/d1f6b96).
+Hai README được cập nhật tiếp để ghi nhận kết quả. Không có thay đổi thuật
+toán, benchmark hoặc lượt chạy mô phỏng mới trong thao tác đồng bộ này.

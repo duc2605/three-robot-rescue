@@ -522,6 +522,19 @@ terminal prompt bị tắt. SSH agent không có identity. Plugin GitHub có s�
 để kết nối nhưng chưa được kết nối; cần người dùng đăng nhập GitHub hoặc
 kết nối plugin trước khi hoàn tất. Chưa có thay đổi nào được đẩy lên remote.
 
+### NK-019 — 28/10/2026 — Đăng nhập và đẩy bản nguồn lên GitHub thành công
+
+Người dùng hoàn tất đăng nhập GitHub bằng tài khoản `duc2605`. Đã xác
+nhận bằng `gh auth status`, cấu hình credential helper qua
+`gh auth setup-git --hostname github.com` và push nối tiếp nhánh `main`.
+Git xác nhận remote chuyển từ `115f150` sang commit **`d1f6b96`**:
+[bản cập nhật nguồn](https://github.com/duc2605/three-robot-rescue/commit/d1f6b96).
+
+Như vậy lỗi xác thực ở NK-018 đã được xử lý. Hai package hiện hành, hai
+paper, hai môi trường, test và tài liệu đã được đưa lên repository được
+chỉ định. Không force-push; không chạy lại Gazebo hoặc ghi kết quả 115 test
+cũ thành lượt kiểm thử mới. Cập nhật hai README để ghi nhận kết quả đồng bộ.
+
 ## 5. Minh chứng đã lưu trong repository
 
 | File | Ý nghĩa | Giới hạn |
@@ -538,7 +551,7 @@ README; không phải kết quả được chạy mới ngày 28/10/2026.
 
 ## 6. Cách cập nhật từ các lần sau
 
-Thực hiện theo [AGENTS.md](AGENTS.md). Thêm mục `NK-019` tiếp theo; không viết
+Thực hiện theo [AGENTS.md](AGENTS.md). Thêm mục `NK-020` tiếp theo; không viết
 đè nhật ký cũ. Sau mỗi thay đổi code/world/config/test hoặc kết luận thực nghiệm:
 
 1. Ghi yêu cầu và lý do đổi.
