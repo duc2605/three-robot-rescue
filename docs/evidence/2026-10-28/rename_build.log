@@ -1,0 +1,6 @@
+Starting >>> astar_planner
+Starting >>> ros2_omni_robot_sim
+Finished <<< astar_planner [0.91s]
+Finished <<< ros2_omni_robot_sim [20.0s]
+
+Summary: 2 packages finished [20.1s]

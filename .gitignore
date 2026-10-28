@@ -1,7 +1,29 @@
-build/
-install/
-log/
+# Generated ROS workspace outputs and local caches.
+/build/
+/install/
+/log/
 __pycache__/
-*.pyc
+*.py[cod]
+.pytest_cache/
+/patch_backups/
+/.codex_backups/
+
+# Local editor, agent and account configuration.
+/.vscode/
+/.idea/
+/.agents/
+/.codex/
+/.aws/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python/package artifacts and source distributions.
 *.egg-info/
-.vscode/
+.coverage
+htmlcov/
+dist/
+*.zip
+*.tar.gz

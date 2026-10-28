@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Isolated to the dynamic launch; avoid stale shared-memory participant ports.
+     https://fast-dds.docs.eprosima.com/en/2.6.x/fastdds/transport/udp/udp.html -->
+<profiles xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+  <transport_descriptors>
+    <transport_descriptor>
+      <transport_id>robot_sim_udp</transport_id>
+      <type>UDPv4</type>
+    </transport_descriptor>
+  </transport_descriptors>
+  <participant profile_name="robot_sim_dynamic_udp" is_default_profile="true">
+    <rtps>
+      <userTransports>
+        <transport_id>robot_sim_udp</transport_id>
+      </userTransports>
+      <useBuiltinTransports>false</useBuiltinTransports>
+    </rtps>
+  </participant>
+</profiles>

@@ -1,0 +1,462 @@
+{
+  "wall_seconds": 22.00087732799966,
+  "counts": {
+    "/leader/people/status": 17,
+    "/robot1/scan": 22,
+    "/robot2/scan": 22,
+    "/robot3/scan": 17,
+    "/social_navigation/map": 2,
+    "/social_navigation/keepout": 2,
+    "/robot3/cmd_vel": 186,
+    "/robot1/cmd_vel": 187,
+    "/map": 1,
+    "/robot2/cmd_vel": 186,
+    "team": 42,
+    "robot_markers": 42,
+    "/leader/people/activity": 9,
+    "/social_navigation/status": 21,
+    "/leader/camera/camera_info": 25,
+    "/leader/camera/depth/image_raw": 22,
+    "/leader/camera/image_raw": 17,
+    "scene_markers": 4,
+    "/social_navigation/attention_debug": 2
+  },
+  "latest": {
+    "/leader/people/status": "people=3, located=3, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=460; RGB-D + capture-time TF",
+    "/robot1/scan": {
+      "min_range": 0.8414462208747864,
+      "finite_rays": 38
+    },
+    "/robot2/scan": {
+      "min_range": 0.8322802186012268,
+      "finite_rays": 52
+    },
+    "/robot3/scan": {
+      "min_range": 0.719174861907959,
+      "finite_rays": 73
+    },
+    "team": [
+      [
+        4.000000000001601,
+        -2.9000000001026973
+      ],
+      [
+        3.0000000000016183,
+        -2.9000000001026973
+      ],
+      [
+        3.5000023518463657,
+        -2.1999998820176745
+      ]
+    ],
+    "robot_labels": [
+      "robot1 (follower 2)",
+      "robot2 (follower 1)",
+      "robot3 (leader)"
+    ],
+    "/leader/people/activity": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": 18.5, \"tracks\": [{\"id\": 0, \"position\": [2.7064897236487804, 0.3110840930324228, 0.9805975013213359], \"stamp\": 18.26, \"window_seconds\": 10.0, \"observed_seconds\": 10.0, \"coverage\": 1.0, \"window_ready\": true, \"state\": \"upper_body_motion\", \"heading\": null, \"speed\": 0.00749740641995337, \"gesture_amplitude\": 0.5384489050201272, \"head_motion_amplitude\": 0.1403920811538402, \"torso_motion_amplitude\": 0.1250847732843533, \"gesturing\": true, \"partners\": [], \"source\": \"camera_body_history\"}, {\"id\": 2, \"position\": [3.9826650828602834, 0.30721485957907735, 0.9529770151355381], \"stamp\": 18.26, \"window_seconds\": 10.0, \"observed_seconds\": 2.896000000000001, \"coverage\": 0.2656000000000002, \"window_ready\": false, \"state\": \"observing\", \"heading\": null, \"speed\": 0.008869082152726634, \"gesture_amplitude\": 0.2911961284719021, \"head_motion_amplitude\": 0.08856089122262813, \"torso_motion_amplitude\": 0.11273582530110537, \"gesturing\": false, \"partners\": [], \"source\": \"camera_body_history\"}]}",
+    "/social_navigation/status": "usable_orientations=2, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=0, remembered_people=3, remembered_viewers=2, tv_tracks=0, tv_raw_tracks=0, person_tracks=3, search=completed: social evidence acquired; social keepout active on D* Lite and all three MPC maps",
+    "/leader/camera/camera_info": {
+      "width": 480,
+      "height": 360
+    },
+    "/leader/camera/depth/image_raw": {
+      "width": 480,
+      "height": 360
+    },
+    "/leader/camera/image_raw": {
+      "width": 480,
+      "height": 360
+    },
+    "scene_last": {
+      "0": [
+        2.65,
+        0.45
+      ],
+      "1": [
+        4.05,
+        0.45
+      ],
+      "2": [
+        -3.4,
+        1.5
+      ],
+      "3": [
+        -1.4,
+        1.5
+      ],
+      "4": [
+        -2.4,
+        2.8
+      ],
+      "5": [
+        -3.5,
+        -2.0
+      ],
+      "6": [
+        0.0,
+        3.5
+      ],
+      "8": [
+        0.35,
+        -3.85
+      ],
+      "9": [
+        -3.9,
+        -0.25
+      ],
+      "10": [
+        -0.8017991678922788,
+        -2.5573021802490405
+      ],
+      "12": [
+        1.6000000000000005,
+        -4.8
+      ]
+    },
+    "/social_navigation/attention_debug": "{\"stamp\": 18.0, \"candidates\": []}"
+  },
+  "snapshots": {
+    "team_first": [
+      [
+        4.000000000001601,
+        -2.9000000001026973
+      ],
+      [
+        3.0000000000016183,
+        -2.9000000001026973
+      ],
+      [
+        3.5000023518463657,
+        -2.1999998820176745
+      ]
+    ],
+    "scene_first": {
+      "0": [
+        2.65,
+        0.45
+      ],
+      "1": [
+        4.05,
+        0.45
+      ],
+      "2": [
+        -3.4,
+        1.5
+      ],
+      "3": [
+        -1.4,
+        1.5
+      ],
+      "4": [
+        -2.4,
+        2.8
+      ],
+      "5": [
+        -3.5,
+        -2.0
+      ],
+      "6": [
+        0.0,
+        3.5
+      ],
+      "8": [
+        0.35,
+        -3.85
+      ],
+      "9": [
+        -3.9,
+        -0.25
+      ],
+      "10": [
+        -0.9243709528677807,
+        -3.5082687499951573
+      ],
+      "12": [
+        0.40000000000000124,
+        -4.8
+      ]
+    }
+  },
+  "nodes": [
+    [
+      "leader_lidar_bridge",
+      "/"
+    ],
+    [
+      "leader_obstacle_scan",
+      "/"
+    ],
+    [
+      "robot_state_publisher",
+      "/robot1"
+    ],
+    [
+      "robot_state_publisher",
+      "/robot2"
+    ],
+    [
+      "robot_state_publisher",
+      "/robot3"
+    ],
+    [
+      "map_server",
+      "/"
+    ],
+    [
+      "map_lifecycle_manager",
+      "/"
+    ],
+    [
+      "three_robot_dstar_mpc",
+      "/"
+    ],
+    [
+      "robot1_distributed_mpc",
+      "/"
+    ],
+    [
+      "robot2_distributed_mpc",
+      "/"
+    ],
+    [
+      "robot3_distributed_mpc",
+      "/"
+    ],
+    [
+      "three_robot_dstar_mpc_rviz",
+      "/"
+    ],
+    [
+      "transform_listener_impl_5cb6983b9db0",
+      "/"
+    ],
+    [
+      "leader_person_detector",
+      "/"
+    ],
+    [
+      "human_activity_analysis",
+      "/"
+    ],
+    [
+      "leader_leg_candidates",
+      "/"
+    ],
+    [
+      "social_navigation",
+      "/"
+    ],
+    [
+      "social_scene_markers",
+      "/"
+    ],
+    [
+      "gz_ros2_control",
+      "/robot1"
+    ],
+    [
+      "controller_manager",
+      "/robot1"
+    ],
+    [
+      "joint_state_broadcaster",
+      "/robot1"
+    ],
+    [
+      "gz_ros2_control",
+      "/robot2"
+    ],
+    [
+      "controller_manager",
+      "/robot2"
+    ],
+    [
+      "wheel1_controller",
+      "/robot1"
+    ],
+    [
+      "wheel2_controller",
+      "/robot1"
+    ],
+    [
+      "joint_state_broadcaster",
+      "/robot2"
+    ],
+    [
+      "gz_ros2_control",
+      "/robot3"
+    ],
+    [
+      "controller_manager",
+      "/robot3"
+    ],
+    [
+      "wheel3_controller",
+      "/robot1"
+    ],
+    [
+      "wheel1_controller",
+      "/robot2"
+    ],
+    [
+      "joint_state_broadcaster",
+      "/robot3"
+    ],
+    [
+      "wheel2_controller",
+      "/robot2"
+    ],
+    [
+      "wheel1_controller",
+      "/robot3"
+    ],
+    [
+      "wheel3_controller",
+      "/robot2"
+    ],
+    [
+      "wheel2_controller",
+      "/robot3"
+    ],
+    [
+      "wheel3_controller",
+      "/robot3"
+    ],
+    [
+      "omni_kinematics",
+      "/robot2"
+    ],
+    [
+      "dynamic_sim_readonly_audit",
+      "/"
+    ],
+    [
+      "omni_kinematics",
+      "/robot3"
+    ],
+    [
+      "omni_kinematics",
+      "/robot1"
+    ],
+    [
+      "ros_gz_bridge",
+      "/"
+    ],
+    [
+      "leader_camera_bridge",
+      "/"
+    ]
+  ],
+  "clock": {
+    "sim_start": 14.294,
+    "sim_end": 18.694,
+    "rtf": 0.20000743178523517
+  },
+  "topic_stats": {
+    "/robot1/scan": {
+      "wall_hz": 0.9999601230447959,
+      "sim_hz": 4.999999999999999,
+      "last_age_sim": 0.09399999999999764
+    },
+    "/robot2/scan": {
+      "wall_hz": 0.9999601230447959,
+      "sim_hz": 4.999999999999999,
+      "last_age_sim": 0.09399999999999764
+    },
+    "/robot3/scan": {
+      "wall_hz": 0.7726964587164332,
+      "sim_hz": 4.000000000000002,
+      "last_age_sim": 0.2940000000000005
+    },
+    "team": {
+      "wall_hz": 1.9090147803582467,
+      "sim_hz": 9.995124329595322,
+      "last_age_sim": 0.09600000000000009
+    },
+    "/leader/camera/camera_info": {
+      "wall_hz": 1.1363183216418136,
+      "sim_hz": 6.02258469259724,
+      "last_age_sim": 0.10099999999999909
+    },
+    "/leader/camera/depth/image_raw": {
+      "wall_hz": 0.9999601230447959,
+      "sim_hz": 5.5002619172341545,
+      "last_age_sim": 0.10099999999999909
+    },
+    "/leader/camera/image_raw": {
+      "wall_hz": 0.7726964587164332,
+      "sim_hz": 4.190675746464118,
+      "last_age_sim": 0.10099999999999909
+    }
+  },
+  "commands": {
+    "/robot3/cmd_vel": {
+      "max_linear": 0.0,
+      "max_angular": 0.0,
+      "last": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "/robot1/cmd_vel": {
+      "max_linear": 0.0,
+      "max_angular": 0.0,
+      "last": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "/robot2/cmd_vel": {
+      "max_linear": 0.0,
+      "max_angular": 0.0,
+      "last": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "maps": {
+    "/social_navigation/map": {
+      "file": "/tmp/audit_social_navigation_map.npy",
+      "resolution": 0.05000000074505806,
+      "origin": [
+        -6.5,
+        -5.5
+      ],
+      "occupied": 3228,
+      "unknown": 0,
+      "cells": 57200
+    },
+    "/social_navigation/keepout": {
+      "file": "/tmp/audit_social_navigation_keepout.npy",
+      "resolution": 0.05000000074505806,
+      "origin": [
+        -6.5,
+        -5.5
+      ],
+      "occupied": 1497,
+      "unknown": 55703,
+      "cells": 57200
+    },
+    "/map": {
+      "file": "/tmp/audit_map.npy",
+      "resolution": 0.05000000074505806,
+      "origin": [
+        -6.5,
+        -5.5
+      ],
+      "occupied": 1731,
+      "unknown": 0,
+      "cells": 57200
+    }
+  },
+  "rgb_depth_matching": {
+    "rgb_frames": 17,
+    "depth_frames": 22,
+    "exact_matches": 15
+  }
+}

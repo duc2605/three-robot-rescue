@@ -1,0 +1,9 @@
+........................................................................ [ 62%]
+...........................................                              [100%]
+=============================== warnings summary ===============================
+astar_planner/test/test_paper2.py::Paper2Checks::test_mpc_avoids_static_disc_on_prediction
+astar_planner/test/test_paper2.py::Paper2Checks::test_mpc_receding_horizon_reaches_goal
+  Warning: Values in x were outside bounds during a minimize step, clipping to bounds
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+115 passed, 2 warnings in 26.91s

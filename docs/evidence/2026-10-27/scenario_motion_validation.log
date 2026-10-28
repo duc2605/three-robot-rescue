@@ -1,0 +1,17 @@
+[Msg] Social dynamic scenario loaded: 5 model tracks; simulation-time, kinematic collision bodies.
+[Msg] Social scenario: tv_viewer_a active at simulation second 0.01
+[Msg] Social scenario: patrol_person active at simulation second 0.01
+[Msg] Social motion verified in physics: tv_viewer_a at -1 -3.85 0
+[Msg] Social motion verified in physics: patrol_person at -5.5 -4.8 0
+[Msg] Social scenario: tv_viewer_a hidden at simulation second 14.02
+[Msg] Social scenario: tv_viewer_a_walking active at simulation second 14.02
+[Msg] Social motion verified in physics: tv_viewer_a_walking at -0.981849 -3.76798 0
+[Msg] Social scenario: tv_viewer_a_walking hidden at simulation second 54.31
+[Msg] Social scenario: tv_viewer_a_drinking active at simulation second 54.31
+[Msg] Social motion verified in physics: tv_viewer_a_drinking at 5 2.15 0
+[Msg] Social scenario: tv_viewer_a_drinking hidden at simulation second 60.31
+[Msg] Social scenario: tv_viewer_a_returning active at simulation second 60.31
+[Msg] Social motion verified in physics: tv_viewer_a_returning at 5 2.15 0
+[Msg] Social scenario: tv_viewer_a active at simulation second 106.76
+[Msg] Social scenario: tv_viewer_a_returning hidden at simulation second 106.76
+[Msg] Social motion verified in physics: tv_viewer_a at -1 -3.85 0
