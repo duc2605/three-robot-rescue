@@ -1,0 +1,816 @@
+{
+  "robot1": {
+    "kind": "controller",
+    "robot": "robot1",
+    "reason": "watchdog_wall_freshness",
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pose": [
+      3.975171861876918,
+      -1.9087001410305044,
+      -0.27235358975093904
+    ],
+    "motion_enabled": true,
+    "state_age_sim": 0.03700000000002035,
+    "state_age_wall": 0.2264027029996214,
+    "reference_age_sim": 1.7340000000000089,
+    "reference_age_wall": 10.374153621000005,
+    "reference_rows": 0,
+    "reference_first": null,
+    "scan_age_sim": 0.0350000000000108,
+    "scan_age_wall": 0.19739388400012103,
+    "scan_coverage_ok": true,
+    "scan_points": 0,
+    "physical_map_present": true,
+    "planning_map_present": true,
+    "peers": [
+      [
+        3.975171861876918,
+        -1.9087001410305044,
+        -0.27235358975093904
+      ],
+      [
+        2.7954406610879325,
+        -1.1245579868780358,
+        -2.3419105293425977
+      ],
+      [
+        2.9041766916292624,
+        -2.7907643485311713,
+        -1.0434973142928097
+      ]
+    ],
+    "peer_prediction_ages": [
+      null,
+      0.02800000000002001,
+      0.030000000000015348
+    ],
+    "safety_status": "stale_data: holding; fresh state/reference or active escape sensors required",
+    "guard_active": false,
+    "tracks": [
+      {
+        "source": "lidar_2",
+        "position": [
+          2.649095407869171,
+          0.3983014197097313
+        ],
+        "velocity": [
+          -0.042755311895246804,
+          -0.0685985634900311
+        ],
+        "radius": 0.4235000000000011,
+        "stamp": 106.2,
+        "risk": null
+      }
+    ],
+    "sensors": {
+      "lidar": {
+        "stamp": 106.2,
+        "receipt_sim": 106.20500000000001,
+        "receipt_wall": 13417.85379306,
+        "frame": "robot1/lidar_link_1",
+        "accepted": true,
+        "reason": "accepted",
+        "rays": 240,
+        "finite_returns": 0,
+        "range_min": 0.07999999821186066,
+        "range_max": 2.0,
+        "nearest_sectors": {
+          "front": null,
+          "left": null,
+          "right": null,
+          "rear": null
+        }
+      },
+      "lidar_peer_2": {
+        "stamp": 106.2,
+        "receipt_sim": 106.20800000000001,
+        "receipt_wall": 13417.877794138,
+        "frame": "robot2/lidar_link_1",
+        "accepted": true,
+        "reason": "accepted",
+        "rays": 240,
+        "finite_returns": 7,
+        "range_min": 0.07999999821186066,
+        "range_max": 2.0,
+        "nearest_sectors": {
+          "front": null,
+          "left": 1.4025930166244507,
+          "right": 1.4749361276626587,
+          "rear": null
+        }
+      },
+      "lidar_peer_3": {
+        "stamp": 106.2,
+        "receipt_sim": 106.215,
+        "receipt_wall": 13417.929134311,
+        "frame": "robot3/base_link",
+        "accepted": true,
+        "reason": "accepted",
+        "rays": 240,
+        "finite_returns": 13,
+        "range_min": 0.1599999964237213,
+        "range_max": 2.0,
+        "nearest_sectors": {
+          "front": null,
+          "left": 1.2491587400436401,
+          "right": null,
+          "rear": 1.5524530410766602
+        }
+      }
+    },
+    "measured_robot_velocities": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "avoidance_use_camera": false,
+    "selected_lidar_tracks": [
+      {
+        "position": [
+          2.651086932263886,
+          0.3797876274475408
+        ],
+        "velocity": [
+          -0.0467158371313839,
+          -0.07015461361126088
+        ],
+        "radius": 0.4300000000000009,
+        "stamp": 106.1,
+        "velocity_hint": null
+      }
+    ],
+    "safety_motion_hypotheses": [
+      {
+        "position": [
+          2.651086932263886,
+          0.3797876274475408
+        ],
+        "velocity": [
+          -0.0467158371313839,
+          -0.07015461361126088
+        ],
+        "radius": 0.4300000000000009,
+        "stamp": 106.1
+      }
+    ],
+    "escape_initial_command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "camera_last_accepted_stamp": null,
+    "filtered_lidar": {
+      "1": {
+        "range_or_nonfinite": 240,
+        "teammate": 0,
+        "mapped": 0,
+        "retained": 0,
+        "nearest_world": [],
+        "map_supported_motion_clusters": 0
+      },
+      "2": {
+        "range_or_nonfinite": 233,
+        "teammate": 2,
+        "mapped": 0,
+        "retained": 5,
+        "nearest_world": [
+          [
+            2.614781633449019,
+            0.33927222746278085
+          ],
+          [
+            2.6527338267062284,
+            0.3495891066435488
+          ],
+          [
+            2.5667089239933234,
+            0.39831548884851276
+          ],
+          [
+            2.686075216246977,
+            0.4304175711521243
+          ],
+          [
+            2.7251774389503076,
+            0.47391270444169
+          ]
+        ],
+        "map_supported_motion_clusters": 0
+      },
+      "3": {
+        "range_or_nonfinite": 227,
+        "teammate": 13,
+        "mapped": 0,
+        "retained": 0,
+        "nearest_world": [],
+        "map_supported_motion_clusters": 0
+      }
+    },
+    "physical_clearance": 0.18,
+    "limits": {
+      "robot_radius": 0.15,
+      "inflation_radius": 0.18,
+      "max_linear_speed": 0.28,
+      "mpc_dt": 0.15,
+      "mpc_horizon": 8
+    },
+    "rejected_checks": {},
+    "rejected_checks_tick_t": 106.2,
+    "astar": null,
+    "astar_age": 20.835000000000008,
+    "selected_escape_goal": [
+      3.9734250769553054,
+      -1.1128998961760488
+    ],
+    "selected_escape_stops": false,
+    "selected_escape_terminal_safe": true,
+    "selected_escape_heading": 1.5707963267948966,
+    "last_completed_tick_wall_ms": 3.058063999560545,
+    "compute_elapsed_wall_ms": null,
+    "t": 106.23500000000001,
+    "epoch": 0,
+    "wall_unix": 1793616282.3872447,
+    "wall_monotonic": 13418.05141991,
+    "sequence": 1844,
+    "commanded_stop": true,
+    "dropped_records": 0,
+    "measured_team_pose_stall_under_command": false
+  },
+  "robot2": {
+    "kind": "controller",
+    "robot": "robot2",
+    "reason": "watchdog_wall_freshness",
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pose": [
+      2.7954406610879325,
+      -1.1245579868780358,
+      -2.3419105293425977
+    ],
+    "motion_enabled": true,
+    "state_age_sim": 0.03900000000001569,
+    "state_age_wall": 0.2394690189994435,
+    "reference_age_sim": 1.7360000000000042,
+    "reference_age_wall": 10.385208112998953,
+    "reference_rows": 0,
+    "reference_first": null,
+    "scan_age_sim": 0.03700000000000614,
+    "scan_age_wall": 0.18585583599997335,
+    "scan_coverage_ok": true,
+    "scan_points": 5,
+    "physical_map_present": true,
+    "planning_map_present": true,
+    "peers": [
+      [
+        3.975171861876918,
+        -1.9087001410305044,
+        -0.27235358975093904
+      ],
+      [
+        2.7954406610879325,
+        -1.1245579868780358,
+        -2.3419105293425977
+      ],
+      [
+        2.9041766916292624,
+        -2.7907643485311713,
+        -1.0434973142928097
+      ]
+    ],
+    "peer_prediction_ages": [
+      0.0020000000000095497,
+      null,
+      0.0020000000000095497
+    ],
+    "safety_status": "stale_data: holding; fresh state/reference or active escape sensors required",
+    "guard_active": false,
+    "tracks": [
+      {
+        "source": "lidar_2",
+        "position": [
+          2.649095407869171,
+          0.3983014197097313
+        ],
+        "velocity": [
+          -0.042755311895246804,
+          -0.0685985634900311
+        ],
+        "radius": 0.42370000000000063,
+        "stamp": 106.2,
+        "risk": null
+      }
+    ],
+    "sensors": {
+      "lidar_peer_1": {
+        "stamp": 106.2,
+        "receipt_sim": 106.20500000000001,
+        "receipt_wall": 13417.852152721,
+        "frame": "robot1/lidar_link_1",
+        "accepted": true,
+        "reason": "accepted",
+        "rays": 240,
+        "finite_returns": 0,
+        "range_min": 0.07999999821186066,
+        "range_max": 2.0,
+        "nearest_sectors": {
+          "front": null,
+          "left": null,
+          "right": null,
+          "rear": null
+        }
+      },
+      "lidar": {
+        "stamp": 106.2,
+        "receipt_sim": 106.20800000000001,
+        "receipt_wall": 13417.87852465,
+        "frame": "robot2/lidar_link_1",
+        "accepted": true,
+        "reason": "accepted",
+        "rays": 240,
+        "finite_returns": 7,
+        "range_min": 0.07999999821186066,
+        "range_max": 2.0,
+        "nearest_sectors": {
+          "front": null,
+          "left": 1.4025930166244507,
+          "right": 1.4749361276626587,
+          "rear": null
+        }
+      },
+      "lidar_peer_3": {
+        "stamp": 106.2,
+        "receipt_sim": 106.215,
+        "receipt_wall": 13417.929731447,
+        "frame": "robot3/base_link",
+        "accepted": true,
+        "reason": "accepted",
+        "rays": 240,
+        "finite_returns": 13,
+        "range_min": 0.1599999964237213,
+        "range_max": 2.0,
+        "nearest_sectors": {
+          "front": null,
+          "left": 1.2491587400436401,
+          "right": null,
+          "rear": 1.5524530410766602
+        }
+      }
+    },
+    "measured_robot_velocities": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "avoidance_use_camera": false,
+    "selected_lidar_tracks": [
+      {
+        "position": [
+          2.651086932263886,
+          0.3797876274475408
+        ],
+        "velocity": [
+          -0.0467158371313839,
+          -0.07015461361126088
+        ],
+        "radius": 0.4300000000000009,
+        "stamp": 106.1,
+        "velocity_hint": null
+      }
+    ],
+    "safety_motion_hypotheses": [
+      {
+        "position": [
+          2.651086932263886,
+          0.3797876274475408
+        ],
+        "velocity": [
+          -0.0467158371313839,
+          -0.07015461361126088
+        ],
+        "radius": 0.4300000000000009,
+        "stamp": 106.1
+      }
+    ],
+    "escape_initial_command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "camera_last_accepted_stamp": null,
+    "filtered_lidar": {
+      "1": {
+        "range_or_nonfinite": 240,
+        "teammate": 0,
+        "mapped": 0,
+        "retained": 0,
+        "nearest_world": [],
+        "map_supported_motion_clusters": 0
+      },
+      "2": {
+        "range_or_nonfinite": 233,
+        "teammate": 2,
+        "mapped": 0,
+        "retained": 5,
+        "nearest_world": [
+          [
+            2.614781633449019,
+            0.33927222746278085
+          ],
+          [
+            2.6527338267062284,
+            0.3495891066435488
+          ],
+          [
+            2.5667089239933234,
+            0.39831548884851276
+          ],
+          [
+            2.686075216246977,
+            0.4304175711521243
+          ],
+          [
+            2.7251774389503076,
+            0.47391270444169
+          ]
+        ],
+        "map_supported_motion_clusters": 0
+      },
+      "3": {
+        "range_or_nonfinite": 227,
+        "teammate": 13,
+        "mapped": 0,
+        "retained": 0,
+        "nearest_world": [],
+        "map_supported_motion_clusters": 0
+      }
+    },
+    "physical_clearance": 0.18,
+    "limits": {
+      "robot_radius": 0.15,
+      "inflation_radius": 0.18,
+      "max_linear_speed": 0.28,
+      "mpc_dt": 0.15,
+      "mpc_horizon": 8
+    },
+    "rejected_checks": {},
+    "rejected_checks_tick_t": 106.2,
+    "astar": null,
+    "astar_age": 3.037000000000006,
+    "selected_escape_goal": [
+      2.1381124304639103,
+      -1.3933322050074557
+    ],
+    "selected_escape_stops": true,
+    "selected_escape_terminal_safe": true,
+    "selected_escape_heading": -2.748893571891069,
+    "last_completed_tick_wall_ms": 2.718965999520151,
+    "compute_elapsed_wall_ms": null,
+    "t": 106.23700000000001,
+    "epoch": 0,
+    "wall_unix": 1793616282.4005892,
+    "wall_monotonic": 13418.064762794,
+    "sequence": 1832,
+    "commanded_stop": true,
+    "dropped_records": 0,
+    "measured_team_pose_stall_under_command": false
+  },
+  "robot3": {
+    "kind": "controller",
+    "robot": "robot3",
+    "reason": "watchdog_wall_freshness",
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pose": [
+      2.9041766916292624,
+      -2.7907643485311713,
+      -1.0434973142928097
+    ],
+    "motion_enabled": true,
+    "state_age_sim": 0.03700000000002035,
+    "state_age_wall": 0.22975544800101488,
+    "reference_age_sim": 1.7340000000000089,
+    "reference_age_wall": 10.375374238001314,
+    "reference_rows": 0,
+    "reference_first": null,
+    "scan_age_sim": 0.0350000000000108,
+    "scan_age_wall": 0.1245004140000674,
+    "scan_coverage_ok": true,
+    "scan_points": 0,
+    "physical_map_present": true,
+    "planning_map_present": true,
+    "peers": [
+      [
+        3.975171861876918,
+        -1.9087001410305044,
+        -0.27235358975093904
+      ],
+      [
+        2.7954406610879325,
+        -1.1245579868780358,
+        -2.3419105293425977
+      ],
+      [
+        2.9041766916292624,
+        -2.7907643485311713,
+        -1.0434973142928097
+      ]
+    ],
+    "peer_prediction_ages": [
+      1.4210854715202004e-14,
+      0.02800000000002001,
+      null
+    ],
+    "safety_status": "stale_data: holding; fresh state/reference or active escape sensors required",
+    "guard_active": false,
+    "tracks": [
+      {
+        "source": "lidar_2",
+        "position": [
+          2.649095407869171,
+          0.3983014197097313
+        ],
+        "velocity": [
+          -0.042755311895246804,
+          -0.0685985634900311
+        ],
+        "radius": 0.4235000000000011,
+        "stamp": 106.2,
+        "risk": null
+      }
+    ],
+    "sensors": {
+      "lidar_peer_1": {
+        "stamp": 106.2,
+        "receipt_sim": 106.20500000000001,
+        "receipt_wall": 13417.851951765,
+        "frame": "robot1/lidar_link_1",
+        "accepted": true,
+        "reason": "accepted",
+        "rays": 240,
+        "finite_returns": 0,
+        "range_min": 0.07999999821186066,
+        "range_max": 2.0,
+        "nearest_sectors": {
+          "front": null,
+          "left": null,
+          "right": null,
+          "rear": null
+        }
+      },
+      "lidar_peer_2": {
+        "stamp": 106.2,
+        "receipt_sim": 106.20800000000001,
+        "receipt_wall": 13417.878468358,
+        "frame": "robot2/lidar_link_1",
+        "accepted": true,
+        "reason": "accepted",
+        "rays": 240,
+        "finite_returns": 7,
+        "range_min": 0.07999999821186066,
+        "range_max": 2.0,
+        "nearest_sectors": {
+          "front": null,
+          "left": 1.4025930166244507,
+          "right": 1.4749361276626587,
+          "rear": null
+        }
+      },
+      "lidar": {
+        "stamp": 106.2,
+        "receipt_sim": 106.215,
+        "receipt_wall": 13417.929542319,
+        "frame": "robot3/base_link",
+        "accepted": true,
+        "reason": "accepted",
+        "rays": 240,
+        "finite_returns": 13,
+        "range_min": 0.1599999964237213,
+        "range_max": 2.0,
+        "nearest_sectors": {
+          "front": null,
+          "left": 1.2491587400436401,
+          "right": null,
+          "rear": 1.5524530410766602
+        }
+      }
+    },
+    "measured_robot_velocities": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "avoidance_use_camera": false,
+    "selected_lidar_tracks": [
+      {
+        "position": [
+          2.651086932263886,
+          0.3797876274475408
+        ],
+        "velocity": [
+          -0.0467158371313839,
+          -0.07015461361126088
+        ],
+        "radius": 0.4300000000000009,
+        "stamp": 106.1,
+        "velocity_hint": null
+      }
+    ],
+    "safety_motion_hypotheses": [
+      {
+        "position": [
+          2.651086932263886,
+          0.3797876274475408
+        ],
+        "velocity": [
+          -0.0467158371313839,
+          -0.07015461361126088
+        ],
+        "radius": 0.4300000000000009,
+        "stamp": 106.1
+      }
+    ],
+    "escape_initial_command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "camera_last_accepted_stamp": null,
+    "filtered_lidar": {
+      "1": {
+        "range_or_nonfinite": 240,
+        "teammate": 0,
+        "mapped": 0,
+        "retained": 0,
+        "nearest_world": [],
+        "map_supported_motion_clusters": 0
+      },
+      "2": {
+        "range_or_nonfinite": 233,
+        "teammate": 2,
+        "mapped": 0,
+        "retained": 5,
+        "nearest_world": [
+          [
+            2.614781633449019,
+            0.33927222746278085
+          ],
+          [
+            2.6527338267062284,
+            0.3495891066435488
+          ],
+          [
+            2.5667089239933234,
+            0.39831548884851276
+          ],
+          [
+            2.686075216246977,
+            0.4304175711521243
+          ],
+          [
+            2.7251774389503076,
+            0.47391270444169
+          ]
+        ],
+        "map_supported_motion_clusters": 0
+      },
+      "3": {
+        "range_or_nonfinite": 227,
+        "teammate": 13,
+        "mapped": 0,
+        "retained": 0,
+        "nearest_world": [],
+        "map_supported_motion_clusters": 0
+      }
+    },
+    "physical_clearance": 0.18,
+    "limits": {
+      "robot_radius": 0.15,
+      "inflation_radius": 0.18,
+      "max_linear_speed": 0.28,
+      "mpc_dt": 0.15,
+      "mpc_horizon": 8
+    },
+    "rejected_checks": {},
+    "rejected_checks_tick_t": 106.2,
+    "astar": null,
+    "astar_age": 15.735000000000014,
+    "selected_escape_goal": [
+      2.9050683111662714,
+      -1.9709865051966424
+    ],
+    "selected_escape_stops": false,
+    "selected_escape_terminal_safe": true,
+    "selected_escape_heading": 1.5707963267948966,
+    "last_completed_tick_wall_ms": 2.3399689998768736,
+    "compute_elapsed_wall_ms": null,
+    "t": 106.23500000000001,
+    "epoch": 0,
+    "wall_unix": 1793616282.3901563,
+    "wall_monotonic": 13418.054331301,
+    "sequence": 1840,
+    "commanded_stop": true,
+    "dropped_records": 0,
+    "measured_team_pose_stall_under_command": false
+  },
+  "coordinator": {
+    "kind": "coordinator",
+    "reason": "coordinator_empty_reference",
+    "goal": [
+      1.0355337858200073,
+      -1.9560085535049438
+    ],
+    "stationary_team": true,
+    "stationary_robots": [
+      "robot1",
+      "robot2",
+      "robot3"
+    ],
+    "diagnostic_trigger": "coordinator_empty_reference",
+    "observation_output_age_sim": 0.6690000000000111,
+    "observation_output_age_wall": 3.618286945998989,
+    "compute_elapsed_wall_ms": null,
+    "last_completed_tick_wall_ms": 12.966956999662216,
+    "reference_rows": 0,
+    "reference_first": null,
+    "observation_active": false,
+    "observation_kind": null,
+    "moving_safety_active": false,
+    "replan_required": true,
+    "recovering_peers": false,
+    "maneuver": null,
+    "robot_poses": [
+      [
+        3.975171861876918,
+        -1.9087001410305044,
+        -0.27235358975093904,
+        true
+      ],
+      [
+        2.7954406610879325,
+        -1.1245579868780358,
+        -2.3419105293425977,
+        true
+      ],
+      [
+        2.9041766916292624,
+        -2.7907643485311713,
+        -1.0434973142928097,
+        true
+      ]
+    ],
+    "t": 106.245,
+    "epoch": 0,
+    "wall_unix": 1793616282.4524562,
+    "wall_monotonic": 13418.11662861,
+    "sequence": 1062,
+    "commanded_stop": null,
+    "dropped_records": 0,
+    "measured_team_pose_stall_under_command": false
+  }
+}

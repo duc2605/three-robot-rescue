@@ -138,3 +138,26 @@ def test_temporary_goal_leaves_pedestrian_approach_line_instead_of_only_retreati
     assert node.escape_plan is not None
     assert node.escape_plan.side in ('left','right')
     assert abs(node.escape_plan.goal[1])>=.64
+
+
+def test_refuge_wait_requires_robot_to_have_reached_refuge():
+    node, clock = stopped_leader()
+    node.camera_motion.clear()
+    node.refuge_goal = (0., 1.)
+    node.refuge_expires = 10.
+    # Nearby flow approaches but safely passes: must not freeze en route to refuge.
+    obstacle = MovingObstacle((1., 1.5), (-.2, 0.), .32, clock[0])
+    assert not node.yield_to_moving_obstacles(clock[0], [obstacle])
+
+
+def test_brief_velocity_dropout_rechecks_last_measured_threat():
+    node, clock = stopped_leader()
+    node.camera_motion.clear()
+    obstacle = MovingObstacle((1.3, 0.), (-.35, 0.), .32, clock[0])
+    node.yield_to_moving_obstacles(clock[0], [obstacle])
+    clock[0] += .1
+    node.state_time = node.last_scan_stamp = clock[0]
+    node.state_wall = node.scan_wall = time.monotonic()
+    node.yield_to_moving_obstacles(clock[0], [])
+    assert node.recent_escape_threats[0] < clock[0]
+    assert 'brief motion pause' not in node.safety_state

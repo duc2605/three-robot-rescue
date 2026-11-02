@@ -2,7 +2,7 @@
 
 **Cập nhật:** 02/11/2026 — múi giờ Việt Nam (`Asia/Ho_Chi_Minh`).\
 **Nguồn hiện hành:** NK-087 thêm 10 prototype đối chiếu ba tầng (paper3–12; chưa build/test/Gazebo), baseline giữ NK084.  NK-084 ưu tiên điểm né phía sau theo yaw xe, sau ưu tiên xã hội; 44 test qua, chưa Gazebo.  NK-082 ưu tiên A*/MPC né ngoài planning keepout (40 test qua; Gazebo NK083 chưa đạt); NK-081 thêm giả thuyết vận tốc đo khi mất fit, kiểm tra cắt luồng người và vận tốc trôi/phanh (260 test qua, chưa Gazebo mã cuối); NK-076 sửa tìm kiếm normal tracking sau né; NK-074 bổ sung lớp phủ LiDAR/A*/MPC cho bản ghi; điều hướng NK-073 — sửa fusion vận tốc, chọn lối né/điểm dừng và dự báo xe đang phanh trên nền LiDAR2m NK-071; phát triển từ bản tái dựng NK-060, không khôi phục thử nghiệm NK-035–058.\
-**Phiên hiện hành:** NK-083 đã kiểm đúng1 lượt120s camera/xã hội với NK082, đã dừng. Không đạt: robot2 contact người tuần tra, robot3 và kệ TV; leader cuối cách goal0.963m. Xem `recordings/nk083_social_escape_120s_once`; minh chứng `docs/evidence/2026-11-02/nk083_social_escape_120s/`. Chưa audit nhân quả chuỗi contact; chưa sửa thêm/push.\
+**Phiên hiện hành:** Audit NK092 bản `dynamic_20261102_180718_643579943` có contact robot1–người26.834–28.738s; vùng TV có rồi mất. Nguồn NK093 sửa nhánh né và thêm quay quanh goal20cm; chưa kiểm thử runtime. Lỗi vùng TV giữ nguyên theo yêu cầu. Không tự chạy/dừng/push.\
 **Báo cáo gửi giảng viên:** [README_BAO_CAO_TIEN_DO.md](README_BAO_CAO_TIEN_DO.md).
 
 ## 0. Bàn giao hiện hành — AI tiếp nhận đọc phần này trước
@@ -11,6 +11,81 @@ Phần này phản ánh trạng thái cuối đã xác minh ngày 02/11/2026. C�
 NK phía sau là lịch sử theo thời điểm: tên file, package, nhận định và số
 mục của báo cáo trong các mục cũ có thể khác hiện tại. Khi tiếp tục công
 việc, kiểm tra mã nguồn thực tế trước khi dựa vào một nhận định lịch sử.
+
+### Checkpoint NK-095 — trước sửa trở về goal
+
+Bản NK093 trong lượt người dùng tới130.801s không ghi contact ngoài nền
+cho3xe; chưa goal/scan hoàn tất, chưa là benchmark. Source hash khớp bản ghi.
+Người dùng yêu cầu backup/push trước sửa phục hồi goal. Backup được xác minh:
+`backups/20261102_184916_116752_nk095_preserve_contact_free_before_goal_recovery`.
+Evidence: docs/evidence/2026-11-02/nk095_contact_free_checkpoint/. Giữ nguyên
+nhánh né này làm điểm khôi phục. Không coi đề xuất phục hồi là đã sửa.
+
+### Audit vùng TV NK-094 — chưa sửa perception
+
+Bản mới dynamic_20261102_182843_287553000: TV region chớp tắt27–50s,
+cuối2→1 tại77.834,→0 tại80.612, vẫn0 đến130.404. TV track còn; camera
+vẫn có frame mới. Nguồn lưu75s theo min timestamp TV/vị trí/hướng viewer;
+mốc cuối phù hợp expiry nhưng thiếu gate/stamp từng zone để kết luận duy
+nhất. Search bị moving safety từ chối khi cần cập nhật. Chi tiết evidence
+nk094_tv_region_expiry; chỉ audit, không sửa code/chạy mô phỏng.
+Backup cuối:20261102_184257_206365_nk094_tv_region_expiry_audit.
+
+### Nguồn mới NK-093 — chờ người dùng kiểm thử
+
+Sửa nhánh escape chung3xe: bỏ pause cố định khi mất fit, latch đo0.5s,
+chờ refuge khi đã tới, thêm rollout ngắn0.6s trong budget hiện có.
+Goal<=20cm tự full scan một lần hoàn tất/goal, retry nếu bị ngắt; camera
+và observation phải bật. Quay vẫn qua MPC; chưa chứng minh hết contact.
+Giữ nguyên lỗi2 vùng TV theo yêu cầu. Chỉ AST/diff, chưa test/build/Gazebo.
+Backup cuối: 20261102_181917_162847_nk093_continuous_escape_goal_scan.
+
+### Audit mới NK-092 — robot1 contact, vùng TV mất
+
+Bản người dùng dynamic_20261102_180718_643579943 có contact robot1–người
+26.834–28.738s; đã thấy nguy cơ nhưng lệnh né ngắt rồi mọi rollout bị loại,
+robot giữ dừng. Vùng TV có13.061–trước16.247s rồi mất, TV track vẫn còn.
+Chưa xác định gate mất viewer cụ thể; chưa sửa nguồn/chưa chạy mô phỏng.
+Minh chứng: docs/evidence/2026-11-02/nk092_robot1_contact_tv/README.md.
+Backup cuối: 20261102_181512_918371_nk092_audit_robot1_contact_tv.
+
+### Cập nhật nguồn NK-091 — chưa kiểm thử runtime
+
+Đã thêm endpoint tiếp cận khi goal bị chặn và tự replan về goal gốc khi
+clear. Giữ biên mặc định3cm, chặn cấu hình nhỏ hơn1cm ngoài bán kính xe.
+Không có chế độ tiếp xúc chân người. Test mới chưa chạy; không tự chạy mô
+phỏng. Backup cuối: `20261102_180407_004374_nk091_goal_approach_recovery`.
+Đọc mục NK091 cuối nhật ký và source plan/control_tick trước cải tiến tiếp.
+
+### Audit không trở về goal — NK-090
+
+- Đọc đúng bản ghi mới của người dùng và log coordinator cùng phiên; không
+  dùng lại kết luận NK078/NK083. Hash controller khớp diagnostics_config.
+- Root cause trực tiếp: `Goal lacks obstacle clearance` → plan return →
+  reference rỗng → controller giữ dừng. T106.245 observation/moving safety
+  false nhưng replan_required true,9-row path không phục hồi. Leader cách
+  goal2.047m. State/scan mới, reference cũ nên không quy watchdog cho camera.
+- Vùng xã hội/biên an toàn phù hợp nguyên nhân goal bị chặn: contour cách
+  goal0.137–0.146m <0.18m, map vật lý gần nhất1.052m. Chưa có raster sau
+  carve để quy chính xác ô/lớp duy nhất. Không đổi goal; đề xuất chờ ngoài
+  vùng và replan khi clear, chưa triển khai. Minh chứng:
+  `docs/evidence/2026-11-02/nk090_goal_blocked_after_escape/`.
+- Giữ hai backup đầu/cuối: bản đầu01/11 và bản cuối
+  `20261102_175016_860682_nk090_audit_goal_blocked_after_escape` mới tạo.
+  Bản cuối NK089 đã xóa sau khi bản mới được xác minh, giữ số lượng2.
+
+### Dữ liệu cục bộ sau dọn — NK-089
+
+- Chỉ còn hai backup: `backups/20261101_185410_before_nk034_restore/` và
+  `backups/20261102_173137_174092_nk089_final_before_backup_build_cleanup/`.
+  47 bản trung gian đã xóa theo yêu cầu, đường dẫn lịch sử cũ có thể không
+  còn tồn tại. Giữ lịch sử nhật ký, không diễn giải đường cũ như file còn giữ.
+- `build/` và `install/` đã xóa;66 mục log build đã dọn. **Cần build lại**
+  theo bộ lệnh trong README trước khi chạy; không tự build trong tác vụ.
+  Recordings/log chẩn đoán/evidence/source/Git vẫn giữ. Không có mô phỏng
+  chạy lúc kiểm tra; không khởi động/dừng mô phỏng để dọn.
+- Quy định tạo backup trước cải tiến tiếp theo vẫn áp dụng; đây là đợt
+  dọn được người dùng cho phép, không là cơ chế nền tự xóa backup mới.
 
 ### Ghi mọi lượt chạy theo từng bộ lệnh — NK-088
 
@@ -4854,6 +4929,61 @@ có giới hạn dung lượng/queue; các backend có mức chi tiết diagnost
 nhau. Minh chứng `docs/evidence/2026-11-02/nk088_inline_recording/`.
 Không commit/push. AI vẫn chỉ đưa lệnh khi người dùng chưa yêu cầu tự chạy.
 
+### NK-089 — 02/11/2026 — Chỉ giữ backup đầu/cuối và dọn build cũ
+
+Người dùng yêu cầu xóa backup/build cũ, giữ2 backup đầu/cuối. Xác định bản
+đầu theo tên thời gian là `20261101_185410_before_nk034_restore`; tạo bản
+cuối mới từ nguồn hiện tại trước sửa tài liệu/dọn tại
+`backups/20261102_173137_174092_nk089_final_before_backup_build_cleanup/`.
+Script xác minh archive đọc được/SHA-256 nguồn/manifest. Kiểm bổ sung bản
+đầu: hash archive và585 file trong tar khớp manifest. Không khôi phục nguồn.
+
+Đã xóa47 thư mục backup trung gian, gồm bản chưa hoàn tất không manifest;
+giữ README/COLCON_IGNORE quản lý backup. Xóa build/, install/ và66 mục
+build log/alias dưới log/. Không xóa log chẩn đoán hoặc recordings. Mã nguồn,
+assets, docs/evidence và lịch sử/nhánh Git giữ nguyên. Nhật ký các mốc cũ
+vẫn giữ; đường dẫn backup đã xóa nay chỉ là tham chiếu lịch sử. Người dùng
+đã cho phép việc xóa backup trong tác vụ này, không yêu cầu tạo cơ chế
+retention tự động cho tương lai.
+
+Chỉ kiểm thao tác file và hậu điều kiện2 snapshot; không build/test/mô
+phỏng, không có tiến trình mô phỏng khi kiểm tra. Từ đây install/setup.bash
+không còn cho tới khi người dùng build lại bằng README. Đã đọc báo cáo,
+giữ nguyên nội dung vì dọn dữ liệu không là tiến bộ thuật toán. Nhật ký,
+backups/README và `docs/evidence/2026-11-02/nk089_backup_build_cleanup/`
+lưu danh sách/kết quả. Không commit/push hoặc xóa Git backup branch.
+
+### NK-090 — 02/11/2026 — Audit bản ghi mới: goal bị chặn sau né
+
+Người dùng yêu cầu kiểm bản ghi để giải thích xe không trở về goal.
+Đọc `dynamic_20261102_173439_286642343`, goal duy nhất(1.0355337858,
+−1.9560085535), baseline; hash source controller trùng diagnostics_config.
+Chỉ đọc config/goal, đoạn quyết định cuối, contour xã hội và log coordinator
+cùng lượt, rồi đoạn plan/publish_reference liên quan. Không chạy mô phỏng
+hoặc thay goal. Phạm vi đến106.245s, không coi là trạng thái kết thúc phiên.
+
+Log planner lặp reject goal vì clearance. T106.245 observation/moving safety
+đãfalse nhưng replan_requiredtrue, reference_rows0. Controller3 t106.235
+state0.037s/scan0.035s còn mới, reference1.734s; cả3 giữ dừng. Leader còn
+cách goal2.047m. Trong plan, goal không free thì return trước tạo route;
+không còn convoy/structure/maneuver thì phát reference rỗng. Đây là nguyên
+nhân trực tiếp sau né không tiếp tục goal, không kết luận camera chậm.
+
+Khoảng hở map vật lý hiện hành1.052m; contour viewing_tv90–100s cách goal
+0.146m, contour color_attention105–106s cách0.137m, dưới planning margin
+0.18m. Phù hợp lớp xã hội cộng biên làm goal không hợp lệ; thiếu raster
+planning/keepout sau carve nên không quy chính xác ô/lớp duy nhất. Đề xuất
+phân biệt social blockage tạm và physical blockage, giữ goal, chờ ở vị trí
+an toàn và replan khi clear. Chưa triển khai hay chứng minh fix.
+
+Backup trước sửa tài liệu: `backups/20261102_175016_860682_nk090_audit_goal_blocked_after_escape/`,
+archive đọc được/SHA-256 nguồn/manifest qua theo script. Giữ bản đầu01/11,
+xóa bản cuối NK089 sau khi có bản mới verified để duy trì yêu cầu chỉ2 bản
+đầu/cuối; không xóa bản ghi/runtime log. Cập nhật report bằng chứng audit,
+không tạo phiên bản thuật toán mới. Minh chứng tại
+`docs/evidence/2026-11-02/nk090_goal_blocked_after_escape/`. Không build/test,
+không khởi động/dừng mô phỏng và không push.
+
 ## 5. Minh chứng đã lưu trong repository
 
 | File | Ý nghĩa | Giới hạn |
@@ -4870,7 +5000,7 @@ README; không phải kết quả được chạy mới ngày 28/10/2026.
 
 ## 6. Cách cập nhật từ các lần sau
 
-Thực hiện theo [AGENTS.md](AGENTS.md). Thêm mục `NK-089` tiếp theo; không viết
+Thực hiện theo [AGENTS.md](AGENTS.md). Thêm mục `NK-091` tiếp theo; không viết
 đè nhật ký cũ. Sau mỗi thay đổi code/world/config/test hoặc kết luận thực nghiệm:
 
 1. Ghi yêu cầu và lý do đổi.
@@ -4896,3 +5026,89 @@ Giới hạn/việc còn lại:
 Quy trình áp dụng cho các tác vụ làm việc trong repo. Không có dịch vụ nền
 tự đọc ý định của mọi sửa đổi ngoài Codex; người sửa bằng công cụ khác cũng
 cần cập nhật hai file trong cùng thay đổi.
+
+### NK-091 — 02/11/2026 — Tiếp cận goal bị chặn, giữ yêu cầu gốc
+
+- Yêu cầu: sửa đứng yên sau né; khoảng hở ít nhất1cm; làm rõ yêu cầu chạm chân.
+- Backup nguồn/assets/cấu hình/tài liệu trước sửa:
+  `backups/20261102_180407_004374_nk091_goal_approach_recovery/`.
+  Script xác minh archive, SHA-256 nguồn và manifest thành công; kiểm lại SHA
+  archive trước dọn bản cuối NK090. Giữ bản đầu và bản cuối theo yêu cầu2backup.
+- `dstar_mpc_controller.py`: không bỏ cuộc ngay tại goal thiếu clearance.
+  Tìm endpoint bên ngoài keepout trong bán kính0.1–1m quanh goal, tối đa8
+  kiểm tra đường tới các ứng viên gần nhất; tuyến đi vẫn kiểm footprint/map/
+  dynamic/peer. Goal người dùng giữ nguyên, endpoint tạm riêng. Khi goal gốc
+  clear, control_tick yêu cầu lập lại đường; log thêm approach_goal và
+  goal_route_status. Không ghi đè vùng xã hội để đi xuyên vào goal.
+- Thêm ràng buộc inflation >= robot_radius+0.01 cho coordinator và MPC.
+  Mặc định0.18−0.15=0.03m giữ nguyên; đây là ngưỡng cấu hình map, không phải
+  bảo đảm mọi quỹ đạo thực đạt1cm hoặc giảm mọi lớp dự báo người về1cm.
+- Goal RViz là vị trí tâm xe. Chạm chân bằng mép xe cần task tiếp xúc riêng,
+  mục tiêu bề mặt và feedback contact; CHƯA triển khai task đó. Không báo
+  hoàn thành goal gốc chỉ vì đến endpoint tiếp cận. Chưa bổ sung marker riêng
+  cho endpoint tạm; dữ liệu có trong stop diagnostics.
+- Viết `test_goal_approach_recovery.py` cho giữ goal, không có approach và
+  quay lại goal gốc. Chỉ kiểm AST/diff; chưa pytest/build/Gazebo theo NK085.
+- Giới hạn:8 ứng viên không bảo đảm tìm được mọi đường; goal trong vùng xã
+  hội tồn tại lâu vẫn phải chờ. Map5cm không chứng minh độ chính xác1cm.
+  Cần người dùng kiểm thử bản mới, không suy ra thành công từ NK090.
+
+### NK-092 — 02/11/2026 — Audit va chạm robot1 và vùng xem TV
+
+Theo yêu cầu đọc bản mới, đối chiếu contact, lệnh né, perception và nguồn
+xóa vùng. Xác nhận contact vật lý, không chỉ chồng lấn hình học; vùng TV
+đã xuất hiện rồi bị gỡ. Chi tiết và giới hạn tại evidence NK092. Chưa sửa
+thuật toán, không chạy/dừng Gazebo/build/test. Backup nguồn trước cập nhật
+tài liệu tại backups/20261102_181512_918371_nk092_audit_robot1_contact_tv;
+script kiểm archive/SHA nguồn/manifest thành công, kiểm SHA archive lại
+trước thay backup cuối NK091, giữ hai bản đầu/cuối. Kiểm diff tài liệu.
+
+### NK-093 — 02/11/2026 — Né liên tục và quay quanh goal ở20cm
+
+- Yêu cầu: chỉ sửa lỗi1 NK092; lỗi2 mất vùng TV chưa sửa. Thêm quay360
+  khi leader cách goal20cm. Người dùng tự chạy, không mở/dừng mô phỏng.
+- Backup trước sửa: backups/20261102_181917_162847_nk093_continuous_escape_goal_scan.
+  Script kiểm archive/SHA nguồn/manifest thành công; kiểm lại SHA archive
+  trước thay backup cuối NK092, giữ hai bản đầu/cuối theo yêu cầu.
+- Controller chung3xe: chờ refuge chỉ khi đã cách điểm đó<=12cm. Loại
+  pause giữ dừng1.25s khi mất fit; giữ giả thuyết vận tốc đo cũ tối đa0.5s
+  và kiểm lại đường nếu vẫn nguy hiểm. Không tự tạo vận tốc người.
+- Dự trữ tối đa25ms (40% budget) cho rollout ngắn>=0.6s khi không có
+  phương án đầy đủ3s; từng bước giữ map/scan/corridor/moving/peer/gia tốc.
+  Chỉ thực hiện lệnh đầu rồi tính lại tick sau. Endpoint ngắn có thể chưa
+  dừng an toàn, không bảo đảm thoát hết mọi tình huống; không bỏ check
+  physical để ép xe di chuyển. Diagnostics thêm escape_horizon_seconds.
+- Tự yêu cầu full ObservationSweep khi leader<=0.20m từ goal gốc. Dùng
+  camera processed frames và cổng safety hiện có; chỉ đánh dấu done sau
+  completed; ngắt bởi người/stale/clearance thì retry sau cooldown. Mỗi
+  goal mới reset done. Không cho search tự động thay thế full goal scan.
+- Full sweep vẫn feedback theo yaw từng60deg, điểm cuối thêm0.15rad để
+  bù tolerance0.12rad, tránh báo đủ360 khi thiếu góc. Qua MPC; followers
+  giữ anchor nhưng có quyền né người. Camera/observation phải bật, không
+  thể nhận diện nếu profile LiDAR-only. Không xác nhận vùng chỉ vì quay.
+- File: dstar_mpc_controller.py, social_observation.py; test_goal_scan_rotation.py
+  (đứng yên không hoàn thành, qua wrap đủ vòng) và test_escape_and_observation.py
+  (refuge chưa tới, mất fit ngắn). README thêm hành vi mới. Không sửa
+  social_costmap/color_attention, TTL hay gate vùng TV.
+- Kiểm thực sự: AST4file, git diff --check. Chưa chạy pytest/build/Gazebo;
+  không khẳng định hết va chạm NK092. Lệnh test/chạy giao người dùng.
+
+### NK-094 — 02/11/2026 — Đọc bản mới để giải thích mất vùng TV
+
+Yêu cầu audit, không sửa perception. Đã đối chiếu transitions và dữ liệu
+camera/coordinator quanh74–82s với TTL và stamp trong nguồn; lưu evidence
+`docs/evidence/2026-11-02/nk094_tv_region_expiry/`. Phân biệt phù hợp expiry
+với xác nhận gate xóa, không quy mọi lần chớp tắt cho TTL. Không test/build/
+Gazebo/push. Backup nguồn/assets/docs trước cập nhật:
+`backups/20261102_184257_206365_nk094_tv_region_expiry_audit`, script kiểm
+archive/SHA nguồn/manifest thành công; kiểm SHA archive lại trước thay bản
+cuối NK093, giữ hai bản đầu/cuối. Kiểm diff tài liệu.
+
+### NK-095 — 02/11/2026 — Giữ bản né chưa có contact trước sửa goal
+
+Yêu cầu: backup trạng thái vừa đạt trong một lượt, đưa lên GitHub rồi mới
+sửa trở về goal. Tạo snapshot nguồn/assets/config/docs có manifest và kiểm
+SHA nguồn/archive thành công trước thay đổi. Bằng chứng và giới hạn của
+lượt130.801s lưu docs/evidence/2026-11-02/nk095_contact_free_checkpoint/.
+Không đổi thuật toán trong checkpoint; push theo yêu cầu hiện tại, không
+kèm build/install/log/recordings/backups. Không chạy lại mô phỏng/test.

@@ -351,6 +351,8 @@ class ThreeRobotDStarMPC(Node):
         self.observation_wall_deadline = INF
         self.last_observation = -INF
         self.observation_frame_time = self.observation_frame_wall = -INF
+        if self.inflation_radius < self.robot_radius + 0.01 - 1e-9:
+            raise ValueError('Inflation must include robot radius plus at least 0.01 m clearance')
         if not 0.0 < self.robot_radius <= self.inflation_radius:
             raise ValueError('Require 0 < robot_radius <= inflation_radius')
         if self.follow_gap < max(0.40, 2.0 * self.robot_radius + 0.04):
@@ -472,6 +474,10 @@ class ThreeRobotDStarMPC(Node):
         self.dstar = None
         self.map_geometry = None
         self.goal_xy = None
+        self.approach_goal_xy = None
+        self.goal_route_status = "no_goal"
+        self.goal_scan_done = False
+        self.goal_scan_active = False
         self.goal_cell = None
         self.last_planned_start = None
         self.last_map_signature = None
@@ -822,6 +828,10 @@ class ThreeRobotDStarMPC(Node):
         if not math.isfinite(x) or not math.isfinite(y):
             return
         self.goal_xy = (x, y)
+        self.approach_goal_xy = None
+        self.goal_route_status = "planning"
+        self.goal_scan_done = False
+        self.goal_scan_active = False
         history = getattr(self,'goal_history',None)
         if history is not None:
             try:
@@ -836,10 +846,22 @@ class ThreeRobotDStarMPC(Node):
         self.replan_required = True
         self.plan()
 
+    def maybe_start_goal_scan(self):
+        """One completed full sweep per selected goal; retry interrupted sweeps."""
+        if (self.goal_xy is None or getattr(self, 'goal_scan_done', False)
+                or self.observation is not None or not self.poses_ready()
+                or math.dist(self.get_robot_pose(self.leader_index)[:2], self.goal_xy) > .20):
+            return
+        accepted, _ = self.start_observation()
+        if accepted:
+            self.goal_scan_active = True
+
     def start_observation(self, point=None, search_kind=None, search_id=None):
         now = self.now_seconds()
         if self.moving_safety_active():
             return False, 'Moving obstacle avoidance takes priority over camera observation.'
+        if getattr(self, 'goal_scan_active', False):
+            return False, 'Full goal scan is active.'
         priority_screen = search_kind == 'find_screen'
         previous = self.observation
         previous_wall_deadline = self.observation_wall_deadline
@@ -941,6 +963,9 @@ class ThreeRobotDStarMPC(Node):
         return response
 
     def finish_observation(self, reason):
+        if getattr(self, 'goal_scan_active', False):
+            self.goal_scan_done = reason == 'completed'
+            self.goal_scan_active = False
         if self.observation_search_id is not None:
             self.search_status(self.observation_search_id, reason.split(':')[0], reason)
         self.observation_search_id = None
@@ -1128,10 +1153,6 @@ class ThreeRobotDStarMPC(Node):
             self.get_logger().warning('Waiting for fresh measured poses of all three robots.',
                                       throttle_duration_sec=3.0)
             return
-        if not self.is_free_world(*self.goal_xy):
-            self.get_logger().warning('Goal lacks obstacle clearance; choose a free goal.',
-                                      throttle_duration_sec=3.0)
-            return
         actual = tuple(self.get_robot_pose(i)[:3] for i in range(3))
         if any(not self.is_free_world(*pose[:2]) for pose in actual):
             self.start_clearance_recovery(actual)
@@ -1140,20 +1161,49 @@ class ThreeRobotDStarMPC(Node):
             self.start_peer_recovery(actual)
             return
 
+        route_goal = self.goal_xy
+        self.approach_goal_xy = None
+        self.goal_route_status = 'original_goal'
+        if not self.is_free_world(*route_goal):
+            # Preserve the requested goal. Approach only a reachable, fully
+            # checked point outside keepout; never punch a hole in the map.
+            leader_pose = actual[self.leader_index]
+            candidates = []
+            for radius in (0.10, 0.20, 0.35, 0.50, 0.75, 1.0):
+                for k in range(16):
+                    angle = 2.0 * math.pi * k / 16
+                    point = (route_goal[0] + radius * math.cos(angle),
+                             route_goal[1] + radius * math.sin(angle))
+                    if self.is_free_world(*point):
+                        candidates.append((radius, math.dist(leader_pose[:2], point), point))
+            # Bound expensive graph searches; failure leaves the goal pending.
+            for _, _, point in sorted(candidates)[:8]:
+                if self.route_between(leader_pose, point, []) is not None:
+                    self.approach_goal_xy = point
+                    break
+            if self.approach_goal_xy is None:
+                self.goal_route_status = 'blocked_no_reachable_approach'
+                self.get_logger().warning(
+                    'Goal blocked; keeping requested goal pending, no safe approach found.',
+                    throttle_duration_sec=3.0)
+                return
+            route_goal = self.approach_goal_xy
+            self.goal_route_status = 'approaching_blocked_goal'
+
         # Keep the incremental D* graph obstacle-only. First find the leader's
         # route; teammates become routing obstacles only if yielding fails.
         saved, saved_peers = self.blocked, self.routing_peers
         self.routing_peers = []
         try:
             start = self.connect_to_grid(actual[self.leader_index], measured_endpoint=True)
-            goal = self.connect_to_grid(self.goal_xy)
+            goal = self.connect_to_grid(route_goal)
             if start is None:
                 self.get_logger().warning(self.connector_diagnostic(
                     'Leader start', actual[self.leader_index], measured_endpoint=True),
                     throttle_duration_sec=3.0)
                 return
             if goal is None:
-                self.get_logger().warning(self.connector_diagnostic('Goal', self.goal_xy),
+                self.get_logger().warning(self.connector_diagnostic('Goal', route_goal),
                                           throttle_duration_sec=3.0)
                 return
             if self.dstar is None or self.dstar.goal != goal:
@@ -1167,7 +1217,7 @@ class ThreeRobotDStarMPC(Node):
                 self.get_logger().warning('D* Lite: no route for the leader with current obstacles.',
                                           throttle_duration_sec=3.0)
                 return
-            points = self.path_with_connectors(actual[self.leader_index], cells, self.goal_xy)
+            points = self.path_with_connectors(actual[self.leader_index], cells, route_goal)
             if points is None:
                 self.get_logger().warning('Leader route failed swept-footprint clearance.',
                                           throttle_duration_sec=3.0)
@@ -1206,7 +1256,7 @@ class ThreeRobotDStarMPC(Node):
                 throttle_duration_sec=5.0)
         if blockers:
             peers = [actual[i] for i in self.convoy_order[1:]]
-            points = self.route_between(actual[self.leader_index], self.goal_xy, peers)
+            points = self.route_between(actual[self.leader_index], route_goal, peers)
             if points is None:
                 self.get_logger().warning(
                     'Leader corridor is blocked and no safe yield/detour is available here.',
@@ -1277,6 +1327,10 @@ class ThreeRobotDStarMPC(Node):
             self.diagnostic_pose_history = (history+[(now,poses)])[-40:]
             diagnostic.observe(now, dict(
                 kind='coordinator', reason=reason, goal=getattr(self, 'goal_xy', None),
+                approach_goal=getattr(self, 'approach_goal_xy', None),
+                goal_route_status=getattr(self, 'goal_route_status', 'unknown'),
+                goal_scan_active=getattr(self, 'goal_scan_active', False),
+                goal_scan_done=getattr(self, 'goal_scan_done', False),
                 stationary_team=stationary, stationary_robots=stationary_robots,
                 diagnostic_trigger='coordinator_empty_reference' if not rows else 'coordinator_stationary_robot',
                 observation_output_age_sim=self.now_seconds()-self.observation_frame_time,
@@ -1720,6 +1774,11 @@ class ThreeRobotDStarMPC(Node):
             self.replan_required = self.goal_xy is not None
         self.last_tick = now
         self.update_dynamic_layer()
+        if (self.approach_goal_xy is not None and self.goal_xy is not None
+                and self.is_free_world(*self.goal_xy)):
+            # Rejoin the original goal as soon as the temporary blockage clears.
+            self.replan_required = True
+        self.maybe_start_goal_scan()
         if (self.observation is None and not self.moving_safety_active()
                 and self.replan_required and now - self.last_plan_attempt > 1.0):
             self.plan()
@@ -1909,6 +1968,8 @@ class DistributedRobotMPC(Node):
         self.mpc_dt = float(self.get_parameter('mpc_dt').value)
         if len(self.robot_names) != 3 or len(set(self.robot_names)) != 3:
             raise ValueError('MPC requires exactly three distinct robot names')
+        if self.inflation_radius < self.robot_radius + 0.01 - 1e-9:
+            raise ValueError('Inflation must include robot radius plus at least 0.01 m clearance')
         if not 0.0 < self.robot_radius <= self.inflation_radius <= self.preferred_clearance:
             raise ValueError('Require 0 < robot_radius <= inflation_radius <= preferred_clearance')
         if self.mpc_dt <= 0.0:
@@ -2060,6 +2121,7 @@ class DistributedRobotMPC(Node):
                 astar=dict(side=plan.side,goal=plan.goal,stamp=plan.stamp) if plan else None,
                 astar_age=now-self.escape_plan_time,
                 selected_escape_goal=getattr(self,'selected_escape_goal',None),
+                escape_horizon_seconds=getattr(self,'escape_horizon_seconds',None),
                 selected_escape_stops=getattr(self,'selected_escape_stops',None),
                 selected_escape_terminal_safe=getattr(self,'selected_escape_terminal_safe',None),
                 selected_escape_heading=getattr(self,'escape_heading',None),
@@ -2412,11 +2474,24 @@ class DistributedRobotMPC(Node):
         """
         risks = [(o,collision_risk(o,self.own_pose,now,self.robot_radius)) for o in obstacles]
         risks = [(o,risk) for o,risk in risks if risk is not None]
+        if risks:
+            self.recent_escape_threats = (now, tuple(o for o, _ in risks))
+        elif now - getattr(self, 'recent_escape_threats', (-INF, ()))[0] <= 0.5:
+            # Brief fit dropouts retain the last measured approach. Continue
+            # checking escape instead of commanding a fixed-duration pause.
+            retained = self.recent_escape_threats[1]
+            for obstacle in retained:
+                risk = collision_risk(obstacle, self.own_pose, now, self.robot_radius)
+                if risk is not None:
+                    risks.append((obstacle, risk))
+                    if obstacle not in obstacles:
+                        obstacles = [*obstacles, obstacle]
         threats = [o for o,_ in risks]
         if not threats:
             # Once outside the corridor, wait for the nearby flow to pass
             # instead of immediately pulling back toward the global route.
             if (getattr(self,'refuge_goal',None) is not None
+                    and math.dist(self.refuge_goal, self.own_pose[:2]) <= .12
                     and now<=getattr(self,'refuge_expires',-INF)
                     and any(math.hypot(*o.velocity)>=.05
                             and math.dist(o.at(now),self.own_pose[:2])<1.8
@@ -2424,12 +2499,6 @@ class DistributedRobotMPC(Node):
                             for o in obstacles)):
                 self.publish_stop('refuge_wait_for_pass')
                 self.safety_status('moving_obstacle: at refuge, waiting for nearby flow to pass')
-                return True
-            # Do not pull back toward the goal during a brief velocity dropout
-            # or pause at a corner. No motion is issued without a verified path.
-            if now < getattr(self,'moving_pause_until',-INF):
-                self.publish_stop('moving_obstacle_pause_hold')
-                self.safety_status('moving_obstacle: brief motion pause, holding')
                 return True
             if self.escape_plan is not None:
                 self.escape_plan = None
@@ -2517,7 +2586,9 @@ class DistributedRobotMPC(Node):
                     escape_angles=angles,goal_score=endpoint_score,prefer_rear=True)
             self.publish_escape_plan(self.escape_plan,now)
         plan = self.escape_plan
-        steps = max(self.mpc_horizon, int(math.ceil(duration/self.mpc_dt)))
+        full_steps = max(self.mpc_horizon, int(math.ceil(duration/self.mpc_dt)))
+        short_steps = max(2, int(math.ceil(.6/self.mpc_dt)))
+        full_deadline = deadline - min(.025, getattr(self, 'escape_wall_budget', .06) * .4)
         candidates = []
         angle = flow_angle
         directions = sorted(range(16),key=lambda d:(
@@ -2535,101 +2606,106 @@ class DistributedRobotMPC(Node):
         refuge=getattr(self,'refuge_goal',None)
         if (refuge is not None and (now>getattr(self,'refuge_expires',-INF)
                                    or math.dist(refuge,self.own_pose[:2])>1.2)):refuge=None
-        for speed in (self.max_linear_speed,.24,.16,.08):
-            speed = min(speed, self.max_linear_speed)
-            proposals=[*([('refuge',True)] if refuge is not None else []),
-                       *([(None,True)] if plan is not None else []),
-                       *((d,stop) for d in directions for stop in (False,True))]
-            for direction,stop_at_goal in proposals:
-                if time.perf_counter() >= deadline:
-                    exhausted = True
-                    break
-                trajectory = [self.own_pose]
-                previous = initial_command
-                self.escape_initial_command=previous
-                margin, first = INF, None
-                target=(refuge if direction=='refuge' else plan.goal if direction is None else
-                        (self.own_pose[0]+.72*math.cos(2*math.pi*direction/16),
-                         self.own_pose[1]+.72*math.sin(2*math.pi*direction/16)))
-                for k in range(steps):
-                    if time.perf_counter() >= deadline:
+        for steps, stage_deadline in ((full_steps, full_deadline), (short_steps, deadline)):
+            if candidates:
+                break
+            exhausted = False
+            for speed in (self.max_linear_speed,.24,.16,.08):
+                speed = min(speed, self.max_linear_speed)
+                proposals=[*([('refuge',True)] if refuge is not None else []),
+                           *([(None,True)] if plan is not None else []),
+                           *((d,stop) for d in directions for stop in (False,True))]
+                for direction,stop_at_goal in proposals:
+                    if time.perf_counter() >= stage_deadline:
                         exhausted = True
                         break
-                    x,y,yaw = trajectory[-1]
-                    angle = (plan.heading((x,y,yaw)) if direction is None else
-                             math.atan2(target[1]-y,target[0]-x) if stop_at_goal else 2*math.pi*direction/16)
-                    # Reach a refuge and decelerate there; do not reject an
-                    # otherwise safe refuge by driving through it for 3s.
-                    distance=math.dist((x,y),target)
-                    target_speed=min(speed,1.5*distance,math.sqrt(.8*distance)) if stop_at_goal else speed
-                    wx,wy = target_speed*math.cos(angle),target_speed*math.sin(angle)
-                    dt = (.1 if self.last_control_time is None else
-                          clamp(now-self.last_control_time,.02,.2)) if k == 0 else self.mpc_dt
-                    vx,vy = math.cos(yaw)*wx+math.sin(yaw)*wy, -math.sin(yaw)*wx+math.cos(yaw)*wy
-                    dvx,dvy = vx-previous[0], vy-previous[1]
-                    dv = math.hypot(dvx,dvy)
-                    if dv > .8*dt:
-                        vx,vy = previous[0]+dvx*.8*dt/dv, previous[1]+dvy*.8*dt/dv
-                    spin = clamp(0.0,previous[2]-2*dt,previous[2]+2*dt)
-                    mid = yaw+.5*spin*self.mpc_dt
-                    after = (x+(vx*math.cos(mid)-vy*math.sin(mid))*self.mpc_dt,
-                             y+(vx*math.sin(mid)+vy*math.cos(mid))*self.mpc_dt,
-                             normalize_angle(yaw+spin*self.mpc_dt))
-                    start,end = now+k*self.mpc_dt,now+(k+1)*self.mpc_dt
-                    gaps = [o.clearance((x,y),after,start,end,self.robot_radius) for o in obstacles]
-                    if not self.diagnostic_check('escape.map',not (self.physical_grid.segment_clearance((x,y),after,self.inflation_radius)
-                            < self.inflation_radius-1e-9)):
-                        break
-                    if not self.diagnostic_check('escape.lidar',not any(swept_separation((x,y),after,p,p) < self.robot_radius+.03 for p in laser)):
-                        break
-                    if not self.diagnostic_check('escape.corridor',not any(crosses_approach_corridor(o,(x,y),after,start,end,self.robot_radius) for o in threats)):
-                        break
-                    if not self.diagnostic_check('escape.moving',all(escape_motion_free(o,(x,y),after,start,end,self.robot_radius,gap=g) for o,g in zip(obstacles,gaps))):
-                        break
-                    if not self.diagnostic_check('escape.peer',all(self.peer_sweep_safe((x,y),after,i,start,end,now,preferred=.42) for i in peers)):
-                        break
-                    margin = min([margin]+gaps)
-                    previous = (vx,vy,spin)
-                    if first is None:
-                        first = previous
-                    trajectory.append(after)
-                if len(trajectory) == steps+1:
-                    travel = math.dist(self.own_pose[:2],trajectory[-1][:2])
-                    change = math.dist(first[:2],self.last_command[:2])
-                    # Prefer leaving the approach line. Retreating along it
-                    # can look safe for one horizon yet be caught by a faster
-                    # pedestrian after repeated receding-horizon retreats.
-                    dx = trajectory[-1][0]-self.own_pose[0]
-                    dy = trajectory[-1][1]-self.own_pose[1]
-                    lateral = abs(dx*math.sin(flow_angle)-dy*math.cos(flow_angle))
-                    reversal=(1.-math.cos(math.atan2(dy,dx)-committed)) if committed is not None else 0.
-                    target_cost = .2*math.dist(trajectory[-1][:2],plan.goal) if plan is not None else 0.
-                    if refuge is not None and direction!='refuge':target_cost+=2.
-                    # Prefer staying on the current side of an approach line.
-                    # Crossing ahead of a tracked object is sensitive to turn/
-                    # velocity noise even when one constant-velocity rollout fits.
-                    crossing = 0.
-                    for obstacle in threats:
-                        q=obstacle.at(now);ovx,ovy=obstacle.velocity
-                        object_speed=math.hypot(ovx,ovy)
-                        side0=(self.own_pose[0]-q[0])*ovy-(self.own_pose[1]-q[1])*ovx
-                        side1=(trajectory[-1][0]-q[0])*ovy-(trajectory[-1][1]-q[1])*ovx
-                        if abs(side0)>.08*object_speed and side0*side1<0:crossing+=5.
-                    terminal_safe=holding_safe(trajectory[-1],now+steps*self.mpc_dt,now+steps*self.mpc_dt+.3)
-                    # Cruise may continue through a gap before moving sideways.
-                    # Requiring every cruise to park at the horizon end can
-                    # reject all collision-free exits from a close formation.
-                    if terminal_safe or not stop_at_goal:
-                        candidates.append((.3*travel+.2*change-margin-1.2*min(lateral,.7)+target_cost+crossing+.8*reversal
-                                           +(0. if terminal_safe else 2.),
-                                           first,trajectory,target,stop_at_goal,terminal_safe))
-            if exhausted:
-                break
+                    trajectory = [self.own_pose]
+                    previous = initial_command
+                    self.escape_initial_command=previous
+                    margin, first = INF, None
+                    target=(refuge if direction=='refuge' else plan.goal if direction is None else
+                            (self.own_pose[0]+.72*math.cos(2*math.pi*direction/16),
+                             self.own_pose[1]+.72*math.sin(2*math.pi*direction/16)))
+                    for k in range(steps):
+                        if time.perf_counter() >= stage_deadline:
+                            exhausted = True
+                            break
+                        x,y,yaw = trajectory[-1]
+                        angle = (plan.heading((x,y,yaw)) if direction is None else
+                                 math.atan2(target[1]-y,target[0]-x) if stop_at_goal else 2*math.pi*direction/16)
+                        # Reach a refuge and decelerate there; do not reject an
+                        # otherwise safe refuge by driving through it for 3s.
+                        distance=math.dist((x,y),target)
+                        target_speed=min(speed,1.5*distance,math.sqrt(.8*distance)) if stop_at_goal else speed
+                        wx,wy = target_speed*math.cos(angle),target_speed*math.sin(angle)
+                        dt = (.1 if self.last_control_time is None else
+                              clamp(now-self.last_control_time,.02,.2)) if k == 0 else self.mpc_dt
+                        vx,vy = math.cos(yaw)*wx+math.sin(yaw)*wy, -math.sin(yaw)*wx+math.cos(yaw)*wy
+                        dvx,dvy = vx-previous[0], vy-previous[1]
+                        dv = math.hypot(dvx,dvy)
+                        if dv > .8*dt:
+                            vx,vy = previous[0]+dvx*.8*dt/dv, previous[1]+dvy*.8*dt/dv
+                        spin = clamp(0.0,previous[2]-2*dt,previous[2]+2*dt)
+                        mid = yaw+.5*spin*self.mpc_dt
+                        after = (x+(vx*math.cos(mid)-vy*math.sin(mid))*self.mpc_dt,
+                                 y+(vx*math.sin(mid)+vy*math.cos(mid))*self.mpc_dt,
+                                 normalize_angle(yaw+spin*self.mpc_dt))
+                        start,end = now+k*self.mpc_dt,now+(k+1)*self.mpc_dt
+                        gaps = [o.clearance((x,y),after,start,end,self.robot_radius) for o in obstacles]
+                        if not self.diagnostic_check('escape.map',not (self.physical_grid.segment_clearance((x,y),after,self.inflation_radius)
+                                < self.inflation_radius-1e-9)):
+                            break
+                        if not self.diagnostic_check('escape.lidar',not any(swept_separation((x,y),after,p,p) < self.robot_radius+.03 for p in laser)):
+                            break
+                        if not self.diagnostic_check('escape.corridor',not any(crosses_approach_corridor(o,(x,y),after,start,end,self.robot_radius) for o in threats)):
+                            break
+                        if not self.diagnostic_check('escape.moving',all(escape_motion_free(o,(x,y),after,start,end,self.robot_radius,gap=g) for o,g in zip(obstacles,gaps))):
+                            break
+                        if not self.diagnostic_check('escape.peer',all(self.peer_sweep_safe((x,y),after,i,start,end,now,preferred=.42) for i in peers)):
+                            break
+                        margin = min([margin]+gaps)
+                        previous = (vx,vy,spin)
+                        if first is None:
+                            first = previous
+                        trajectory.append(after)
+                    if len(trajectory) == steps+1:
+                        travel = math.dist(self.own_pose[:2],trajectory[-1][:2])
+                        change = math.dist(first[:2],self.last_command[:2])
+                        # Prefer leaving the approach line. Retreating along it
+                        # can look safe for one horizon yet be caught by a faster
+                        # pedestrian after repeated receding-horizon retreats.
+                        dx = trajectory[-1][0]-self.own_pose[0]
+                        dy = trajectory[-1][1]-self.own_pose[1]
+                        lateral = abs(dx*math.sin(flow_angle)-dy*math.cos(flow_angle))
+                        reversal=(1.-math.cos(math.atan2(dy,dx)-committed)) if committed is not None else 0.
+                        target_cost = .2*math.dist(trajectory[-1][:2],plan.goal) if plan is not None else 0.
+                        if refuge is not None and direction!='refuge':target_cost+=2.
+                        # Prefer staying on the current side of an approach line.
+                        # Crossing ahead of a tracked object is sensitive to turn/
+                        # velocity noise even when one constant-velocity rollout fits.
+                        crossing = 0.
+                        for obstacle in threats:
+                            q=obstacle.at(now);ovx,ovy=obstacle.velocity
+                            object_speed=math.hypot(ovx,ovy)
+                            side0=(self.own_pose[0]-q[0])*ovy-(self.own_pose[1]-q[1])*ovx
+                            side1=(trajectory[-1][0]-q[0])*ovy-(trajectory[-1][1]-q[1])*ovx
+                            if abs(side0)>.08*object_speed and side0*side1<0:crossing+=5.
+                        terminal_safe=holding_safe(trajectory[-1],now+steps*self.mpc_dt,now+steps*self.mpc_dt+.3)
+                        # Cruise may continue through a gap before moving sideways.
+                        # Requiring every cruise to park at the horizon end can
+                        # reject all collision-free exits from a close formation.
+                        if terminal_safe or not stop_at_goal:
+                            candidates.append((.3*travel+.2*change-margin-1.2*min(lateral,.7)+target_cost+crossing+.8*reversal
+                                               +(0. if terminal_safe else 2.),
+                                               first,trajectory,target,stop_at_goal,terminal_safe))
+                if exhausted:
+                    break
         self.last_control_time = now
         if not candidates:
             self.publish_stop('escape_compute_budget_exhausted' if exhausted else 'escape_all_rollouts_rejected')
             self.safety_status('moving_obstacle: no verified safe escape, holding')
             return True
+        self.escape_horizon_seconds = (len(candidates[0][2])-1)*self.mpc_dt
         _,command,trajectory,target,stop_at_goal,terminal_safe = min(candidates,key=lambda c:(self.escape_social_rank(c[2]),self.escape_rear_rank(c[2][-1]) if c[5] else 1,c[0]))
         # A refuge lives in world coordinates across control ticks. Moving
         # the target .72m ahead every tick would never let the robot settle.
@@ -2863,6 +2939,7 @@ class DistributedRobotMPC(Node):
             self.escape_plan = None
             self.escape_plan_time = -INF
             self.moving_pause_until = -INF
+            self.recent_escape_threats = (-INF, ())
             self.escape_commit_until = -INF
             self.refuge_goal = None
             self.publish_stop('simulation_clock_reset')

@@ -1,0 +1,61 @@
+{
+  "session": "recordings/dynamic_20261102_173439_286642343",
+  "read_window_end_sim": 106.245,
+  "goal": [
+    1.0355337858200073,
+    -1.9560085535049438
+  ],
+  "leader_latest_pose": [
+    2.9041766916292624,
+    -2.7907643485311713,
+    -1.0434973142928097
+  ],
+  "leader_goal_distance_m": 2.0466175868395946,
+  "planner_warning": "Goal lacks obstacle clearance; choose a free goal.",
+  "coordinator_latest": {
+    "t": 106.245,
+    "reference_rows": 0,
+    "observation_active": false,
+    "moving_safety_active": false,
+    "replan_required": true
+  },
+  "controllers_latest": {
+    "robot1": {
+      "t": 106.23500000000001,
+      "reason": "watchdog_wall_freshness",
+      "reference_rows": 0,
+      "state_age_sim": 0.03700000000002035,
+      "scan_age_sim": 0.0350000000000108,
+      "reference_age_sim": 1.7340000000000089
+    },
+    "robot2": {
+      "t": 106.23700000000001,
+      "reason": "watchdog_wall_freshness",
+      "reference_rows": 0,
+      "state_age_sim": 0.03900000000001569,
+      "scan_age_sim": 0.03700000000000614,
+      "reference_age_sim": 1.7360000000000042
+    },
+    "robot3": {
+      "t": 106.23500000000001,
+      "reason": "watchdog_wall_freshness",
+      "reference_rows": 0,
+      "state_age_sim": 0.03700000000002035,
+      "scan_age_sim": 0.0350000000000108,
+      "reference_age_sim": 1.7340000000000089
+    }
+  },
+  "physical_map_file": "social_navigation_sim/map/social_dynamic.pgm",
+  "physical_map_sha256": "24db14917f7e156b79dd038d6417292386929c4be9323337370cea24e11bc63a",
+  "physical_goal_nearest_occupied_cell_box_m": 1.0524485425800305,
+  "social_contour_distance_m": {
+    "viewing_tv_90_to_100_sim": 0.1457,
+    "color_attention_105_to_106_sim": 0.137
+  },
+  "planner_inflation_radius_m": 0.18,
+  "finding": "Goal clearance rejection prevents replanning, coordinator has no route and emits empty references; controllers hold. Social boundary is within planning margin, consistent with observed rejection; exact social raster/carved mask was not recorded.",
+  "limits": [
+    "No full planning occupancy grid recorded; cannot identify exact blocked cell or rule out additional dynamic layer contribution.",
+    "Live/read-only audit through cutoff; no simulation started/stopped, no goal changed, no navigation edits."
+  ]
+}

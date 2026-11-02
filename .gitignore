@@ -31,3 +31,8 @@ dist/
 
 # Local verified source snapshots
 /backups/
+
+# Raw diagnostic excerpts stay local; publish audit summaries instead.
+/docs/evidence/2026-11-02/nk092_robot1_contact_tv/social.json
+/docs/evidence/2026-11-02/nk092_robot1_contact_tv/robot1_22_29.json
+/docs/evidence/2026-11-02/nk092_robot1_contact_tv/contact.json

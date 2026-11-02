@@ -1326,3 +1326,91 @@ xấp xỉ, car-like trên omni, DEFORM-inspired và một phương pháp tổ h
 nghiên cứu. Chưa đối chiếu đầy đủ DOI/phương trình, chưa chứng minh tốt hơn
 baseline/hai paper cũ. Shared safety không là bảo đảm tránh va chạm.
 [Phạm vi và minh chứng](docs/evidence/2026-11-02/nk087_ten_comparison_methods/README.md).
+
+
+## Đối chiếu lỗi không trở về goal sau né — NK-090 (chưa sửa thuật toán)
+
+**Hạn chế xác nhận:** bản ghi người dùng `dynamic_20261102_173439_286642343`
+đến106.245s có goal bị planner loại do clearance. Khi hết moving safety/
+observation, coordinator vẫn reference_rows0/replan_requiredtrue; ba xe giữ
+dừng. Leader cách goal2.047m. Scan/state mới, reference cũ; không quy trực
+tiếp cho chậm camera hoặc thiếu phát hiện người.
+
+**Bằng chứng:** cảnh báo Goal lacks obstacle clearance lặp trong log cùng
+phiên. Map vật lý hiện hành có khoảng hở1.052m, contour xã hội cách goal
+0.137–0.146m dưới margin0.18m, phù hợp social clearance chặn goal. Thiếu
+raster planning/keepout sau carve nên chưa quy ô hoặc lớp duy nhất.
+
+**Hướng xử lý chưa triển khai:** giữ goal người dùng, phân biệt goal bị
+social layer chặn tạm với vật cản vật lý; chờ/tiếp cận ngoài vùng và replan
+khi clear. Chưa có bằng chứng sửa được lỗi hoặc benchmark cải thiện.
+[Minh chứng](docs/evidence/2026-11-02/nk090_goal_blocked_after_escape/README.md).
+
+
+## Phục hồi tuyến khi goal bị chặn — NK-091 (đã viết, chưa thử runtime)
+
+**Trước:** goal thiếu clearance làm planner trả về ngay, reference không
+phục hồi sau né (bằng chứng NK090).
+
+**Sau:** giữ goal gốc; tìm điểm tiếp cận ngoài vùng chặn với kiểm tra đường,
+đưa điểm đó vào D*/formation; tự yêu cầu replan về goal khi nó clear. Có
+trạng thái endpoint tạm trong diagnostics. Kiểm tra cấu hình giữ ít nhất
+1cm ngoài robot_radius; mặc định3cm không đổi.
+
+**Kiểm chứng:** AST và diff; đã viết3 test cô lập, chưa chạy pytest/build/
+Gazebo. Chưa chứng minh sửa thành công bản ghi thực.
+
+**Giới hạn:** tìm tối đa8 ứng viên trong1m, có thể không tìm được đường;
+không xóa keepout để đạt goal. Chưa hỗ trợ tiếp xúc có kiểm soát vào chân
+người. Map5cm và sai số động học không cho phép khẳng định khoảng hở thực1cm.
+
+
+## Kiểm chứng thực tế bản NK091 — NK092
+
+Bản người dùng mới vẫn có contact robot1–người tại first26.834,last28.738s.
+Đã có phát hiện nguy cơ và lệnh né, nhưng ngắt bởi pause/budget và loại
+mọi rollout dẫn đến cmd0 khi người đi tới. Chưa chứng minh né ổn định;
+NK091 chỉ sửa tiếp cận goal, không sửa nhánh escape này.
+
+Vùng TV xuất hiện13.061–trước16.247s rồi mất dù track màn hình còn. Chưa
+xác định gate mất vùng vì thiếu debug từng viewer; có camera inference
+stale trong trạng thái quan sát. Chưa sửa mới hoặc benchmark.
+[Minh chứng](docs/evidence/2026-11-02/nk092_robot1_contact_tv/README.md).
+
+
+## Né khi dự báo dài không tìm được đường và quan sát goal — NK093
+
+**Hạn chế trước:** bản NK092 có lệnh né ngắt bởi pause/budget rồi mọi
+rollout bị loại, robot dừng khi người tiếp tục tới; chưa có tự quay quanh goal.
+
+**Sau:** sửa chờ refuge khi chưa tới; giữ hướng tiếp cận đo tối đa0.5s
+qua dropout, kiểm lại escape; dự trữ thời gian tìm rollout ngắn0.6s nếu
+không tìm được full3s, giữ các kiểm tra từng bước. Leader<=20cm từ goal
+thử full scan, hoàn thành một vòng feedback rồi trở lại tuyến; bị ngắt
+thì thử lại. Chưa sửa lỗi mất vùng TV.
+
+**Kiểm chứng:** AST/diff; viết regression tests, chưa chạy pytest/build/
+Gazebo. Chưa có bằng chứng giảm contact, không coi thay đổi này là thành công
+thực nghiệm. Rollout ngắn có rủi ro thiếu lối thoát ở những tick sau;
+không bảo đảm tránh mọi người tiếp tục đi tới. Camera phải bật và đủ mới;
+quay đủ không đồng nghĩa nhận diện đúng mọi vùng xã hội.
+
+
+## Bằng chứng duy trì vùng TV — NK094 (chưa sửa)
+
+Bản người dùng sau NK093 vẫn mất vùng TV:2→1 tại77.834s,→0 tại80.612s;
+track TV còn, camera có frame mới. Nguồn hiện hành hết hạn75s theo thành
+phần bằng chứng cũ nhất; phù hợp mất vùng cuối nhưng chưa có gate/stamp
+mỗi vùng để kết luận duy nhất. Chớp tắt ngắn trước đó còn có thể do invalidation.
+Chưa sửa hoặc chứng minh cải thiện perception.
+[Minh chứng](docs/evidence/2026-11-02/nk094_tv_region_expiry/README.md).
+
+
+## Kiểm chứng có giới hạn nhánh né NK093 — NK095
+
+Lượt người dùng130.801s không ghi contact robot với người/vật/robot khác;
+stream contact nền vẫn có dữ liệu. Nhánh ngắn0.6s đã phát26/11/21lệnh cho
+robot1/2/3. So với lượt NK092 có contact robot1, lượt mới chưa ghi contact,
+nhưng không phải thử lặp cùng điều kiện nên chưa chứng minh tỷ lệ cải thiện.
+Leader cuối cách goal0.455m, chưa scan hoàn tất; phục hồi goal và vùng TV
+còn mở. [Bằng chứng](docs/evidence/2026-11-02/nk095_contact_free_checkpoint/README.md).

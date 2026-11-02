@@ -36,6 +36,7 @@ class ObservationSweep:
         elif bearing is None:
             # Every step is < pi, including the wrap across +/- pi.
             self.targets = [angle(initial + k * math.pi / 3) for k in range(7)]
+            self.targets[-1] = angle(initial + 2 * math.pi + .15)
             self.kind = 'full'
         else:
             self.targets = [angle(bearing)]

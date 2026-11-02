@@ -1,0 +1,106 @@
+[
+  {
+    "t": 0.0,
+    "stamp": 0.0,
+    "epoch": 0,
+    "robot": "leader",
+    "kind": "social_status",
+    "text": "usable_orientations=0, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=0, remembered_people=0, remembered_viewers=0, tv_tracks=0, tv_raw_tracks=0, person_tracks=0, search=idle; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target"
+  },
+  {
+    "t": 27.035,
+    "stamp": 27.035,
+    "epoch": 0,
+    "robot": "leader",
+    "kind": "social_status",
+    "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=3, color_regions=0, tv_regions=1, color_targets=2, remembered_people=8, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=aborted: camera inference is stale; social keepout active on D* Lite and all three MPC maps"
+  },
+  {
+    "t": 28.657,
+    "stamp": 28.657,
+    "epoch": 0,
+    "robot": "leader",
+    "kind": "social_status",
+    "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=3, color_regions=0, tv_regions=0, color_targets=2, remembered_people=8, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=aborted: camera inference is stale; social keepout active on D* Lite and all three MPC maps"
+  },
+  {
+    "t": 29.058000000000003,
+    "stamp": 29.058000000000003,
+    "epoch": 0,
+    "robot": "leader",
+    "kind": "social_status",
+    "text": "usable_orientations=7, provisional_regions=0, confirmed_regions=4, color_regions=0, tv_regions=1, color_targets=2, remembered_people=9, remembered_viewers=7, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=aborted: camera inference is stale; social keepout active on D* Lite and all three MPC maps"
+  },
+  {
+    "t": 40.647000000000006,
+    "stamp": 40.647000000000006,
+    "epoch": 0,
+    "robot": "leader",
+    "kind": "social_status",
+    "text": "usable_orientations=5, provisional_regions=0, confirmed_regions=3, color_regions=0, tv_regions=0, color_targets=2, remembered_people=7, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, search=requesting find_viewers; social keepout active on D* Lite and all three MPC maps"
+  },
+  {
+    "t": 41.018,
+    "stamp": 41.018,
+    "epoch": 0,
+    "robot": "leader",
+    "kind": "social_status",
+    "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=3, color_regions=0, tv_regions=1, color_targets=2, remembered_people=8, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=2, search=Waiting for the observation cooldown.; social keepout active on D* Lite and all three MPC maps"
+  },
+  {
+    "t": 44.263000000000005,
+    "stamp": 44.263000000000005,
+    "epoch": 0,
+    "robot": "leader",
+    "kind": "social_status",
+    "text": "usable_orientations=7, provisional_regions=0, confirmed_regions=3, color_regions=0, tv_regions=2, color_targets=2, remembered_people=9, remembered_viewers=7, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, search=Waiting for the observation cooldown.; social keepout active on D* Lite and all three MPC maps"
+  },
+  {
+    "t": 46.655,
+    "stamp": 46.655,
+    "epoch": 0,
+    "robot": "leader",
+    "kind": "social_status",
+    "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=3, color_regions=0, tv_regions=1, color_targets=2, remembered_people=8, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=find_screen; social keepout active on D* Lite and all three MPC maps"
+  },
+  {
+    "t": 49.633,
+    "stamp": 49.633,
+    "epoch": 0,
+    "robot": "leader",
+    "kind": "social_status",
+    "text": "usable_orientations=5, provisional_regions=0, confirmed_regions=3, color_regions=0, tv_regions=0, color_targets=2, remembered_people=7, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, search=completed: search exhausted; evidence unresolved; social keepout active on D* Lite and all three MPC maps"
+  },
+  {
+    "t": 50.04900000000001,
+    "stamp": 50.04900000000001,
+    "epoch": 0,
+    "robot": "leader",
+    "kind": "social_status",
+    "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=3, color_regions=0, tv_regions=1, color_targets=2, remembered_people=8, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, search=completed: search exhausted; evidence unresolved; social keepout active on D* Lite and all three MPC maps"
+  },
+  {
+    "t": 65.432,
+    "stamp": 65.432,
+    "epoch": 0,
+    "robot": "leader",
+    "kind": "social_status",
+    "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=2, color_targets=2, remembered_people=8, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, search=completed: search exhausted; evidence unresolved; social keepout active on D* Lite and all three MPC maps"
+  },
+  {
+    "t": 77.834,
+    "stamp": 77.834,
+    "epoch": 0,
+    "robot": "leader",
+    "kind": "social_status",
+    "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=1, color_targets=2, remembered_people=8, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=completed: search exhausted; evidence unresolved; social keepout active on D* Lite and all three MPC maps"
+  },
+  {
+    "t": 80.61200000000001,
+    "stamp": 80.61200000000001,
+    "epoch": 0,
+    "robot": "leader",
+    "kind": "social_status",
+    "text": "usable_orientations=4, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=2, remembered_people=8, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=1, search=Moving obstacle avoidance takes priority over camera observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target"
+  }
+]

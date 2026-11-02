@@ -36,6 +36,13 @@ bash scripts/run_simulation.sh dynamic --diagnose-stop "$recording_dir" \
 python3 scripts/view_replay.py --session "$recording_dir"
 ```
 
+Khi leader còn cách **goal đã chọn không quá20cm**, xe tự thử quay đủ một
+vòng để camera quan sát quanh goal. Một vòng hoàn tất cho mỗi goal; nếu
+có người tới hoặc camera mất dữ liệu mới, xe ưu tiên an toàn và thử lại sau.
+Đổi goal bắt đầu lượt quan sát mới. Chế độ này cần camera và
+`social_observation:=true` như lệnh trên. Kết quả nhận diện vẫn phụ thuộc
+camera; quay không tự tạo vùng xã hội. Bản NK093 chưa kiểm chứng Gazebo.
+
 ### 1.2. Chỉ thử né vật động bằng LiDAR 2m
 
 Camera và nhận diện vùng xã hội tắt theo profile động mặc định; vẫn ghi

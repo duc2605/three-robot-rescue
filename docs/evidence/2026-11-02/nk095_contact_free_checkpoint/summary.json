@@ -1,0 +1,18 @@
+{
+  "recording": "recordings/dynamic_20261102_182843_287553000",
+  "end_sim": 130.801,
+  "non_ground_robot_contact_pairs": [],
+  "contact_stream_frames": 2576,
+  "world_frames": 2617,
+  "short_escape_commands": {
+    "robot1": 26,
+    "robot2": 11,
+    "robot3": 21
+  },
+  "leader_goal_distance_last_controller": 0.45520646420411504,
+  "goal_scan_done": false,
+  "scope": "single user-run trial; no new simulation or tests run",
+  "controller_sha256": "f3a24ff7fb8752c07a6d885c6b052a70f2c98a9073e0de0236b0559963f4a19e",
+  "backup": "backups/20261102_184916_116752_nk095_preserve_contact_free_before_goal_recovery",
+  "backup_archive_sha256": "906bac9d51e6afd71eabc75d5eccd465a509c2689f15ff8dab6d7485c50fdece"
+}
