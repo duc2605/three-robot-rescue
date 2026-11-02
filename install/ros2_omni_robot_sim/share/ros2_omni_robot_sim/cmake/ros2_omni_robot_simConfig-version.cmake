@@ -1,1 +1,0 @@
-/home/long/ros2_ws/build/ros2_omni_robot_sim/ament_cmake_core/ros2_omni_robot_simConfig-version.cmake

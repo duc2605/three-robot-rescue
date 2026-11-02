@@ -1,0 +1,76 @@
+{
+  "domain": 32,
+  "counts": {
+    "/formation/robot_states": 24,
+    "/robot1/scan": 12,
+    "/robot2/scan": 12,
+    "/robot3/scan": 8
+  },
+  "nodes": [
+    "gz_ros2_control",
+    "controller_manager",
+    "joint_state_broadcaster",
+    "gz_ros2_control",
+    "controller_manager",
+    "joint_state_broadcaster",
+    "wheel1_controller",
+    "wheel1_controller",
+    "wheel2_controller",
+    "wheel2_controller",
+    "wheel3_controller",
+    "wheel3_controller",
+    "gz_ros2_control",
+    "controller_manager",
+    "joint_state_broadcaster",
+    "wheel1_controller",
+    "wheel2_controller",
+    "wheel3_controller",
+    "read_only_lidar_mode_check",
+    "omni_kinematics",
+    "omni_kinematics",
+    "read_only_ten_minute_audit",
+    "ros_gz_bridge",
+    "leader_lidar_bridge",
+    "leader_obstacle_scan",
+    "robot_state_publisher",
+    "robot_state_publisher",
+    "robot_state_publisher",
+    "map_server",
+    "map_lifecycle_manager",
+    "three_robot_dstar_mpc",
+    "robot1_distributed_mpc",
+    "robot2_distributed_mpc",
+    "omni_kinematics",
+    "robot3_distributed_mpc",
+    "three_robot_dstar_mpc_rviz",
+    "transform_listener_impl_62cb002beb50"
+  ],
+  "publishers": {
+    "/leader/camera/image_raw": [],
+    "/leader/people/poses": [],
+    "/social_navigation/map": [],
+    "/robot1/scan": [
+      "ros_gz_bridge"
+    ],
+    "/robot2/scan": [
+      "ros_gz_bridge"
+    ],
+    "/robot3/scan": [
+      "leader_obstacle_scan"
+    ]
+  },
+  "mpc_map_subscriptions": {
+    "robot1": [
+      "/map",
+      "/map"
+    ],
+    "robot2": [
+      "/map",
+      "/map"
+    ],
+    "robot3": [
+      "/map",
+      "/map"
+    ]
+  }
+}

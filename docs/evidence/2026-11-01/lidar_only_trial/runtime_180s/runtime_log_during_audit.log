@@ -1,0 +1,62 @@
+[three_robot_dstar_mpc-4] [WARN] [1793510500.552607624] [three_robot_dstar_mpc]: D* Lite: no route for the leader with current obstacles.
+[three_robot_dstar_mpc-4] [INFO] [1793510504.564225541] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510504.641715510] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[three_robot_dstar_mpc-4] [WARN] [1793510508.130751264] [three_robot_dstar_mpc]: Goal lacks obstacle clearance; choose a free goal.
+[three_robot_dstar_mpc-4] [INFO] [1793510511.293177913] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510511.357471764] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[three_robot_dstar_mpc-4] [WARN] [1793510527.909950844] [three_robot_dstar_mpc]: D* Lite: no route for the leader with current obstacles.
+[three_robot_dstar_mpc-4] [INFO] [1793510531.647198229] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510531.661718517] [three_robot_dstar_mpc]: Formation: column / tracking
+[three_robot_dstar_mpc-4] [INFO] [1793510535.654432565] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510536.531128586] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510536.560053008] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510543.724192350] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510543.792704850] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[three_robot_dstar_mpc-4] [WARN] [1793510547.762265643] [three_robot_dstar_mpc]: Goal lacks obstacle clearance; choose a free goal.
+[three_robot_dstar_mpc-4] [INFO] [1793510551.423785100] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510551.441202407] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510557.017259176] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510557.038676765] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[three_robot_dstar_mpc-4] [INFO] [1793510562.319995474] [three_robot_dstar_mpc]: Peer separation recovery: spacing 0.366 m; moving one robot at 0.05 m/s toward 0.46 m clearance.
+[three_robot_dstar_mpc-4] [INFO] [1793510562.320684066] [three_robot_dstar_mpc]: Formation: peer separation recovery
+[three_robot_dstar_mpc-4] [INFO] [1793510574.800948625] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510574.820625007] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[three_robot_dstar_mpc-4] [INFO] [1793510585.068170117] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510585.082660562] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510587.152370752] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510587.159921697] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510593.783517971] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510593.795271059] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510598.293275596] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510598.311344053] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510599.540603798] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510599.557375363] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510601.576066738] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510601.593416904] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510605.822746431] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510605.833775355] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510611.044317283] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510611.059217544] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510613.793056659] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510613.803559941] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510615.857585004] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510615.867949745] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[rviz2-8] [INFO] [1793510620.442349731] [rviz2]: Setting goal pose: Frame:map, Position(1.03553, -2.39323, 0), Orientation(0, 0, 0, 1) = Angle: 0
+[three_robot_dstar_mpc-4] [INFO] [1793510620.472095123] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510621.093993231] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510621.104110793] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510622.096196411] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510622.105136589] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510624.956505889] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510624.963644833] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510630.874764687] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510630.883157498] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510640.027927477] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510640.037704611] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510646.820625269] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793510646.836155466] [three_robot_dstar_mpc]: Formation: column / tracking
+[three_robot_dstar_mpc-4] [INFO] [1793510647.147327589] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793510656.821673227] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[three_robot_dstar_mpc-4] [INFO] [1793510658.473637956] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[three_robot_dstar_mpc-4] [INFO] [1793510661.014886534] [three_robot_dstar_mpc]: Peer separation recovery: spacing 0.368 m; moving one robot at 0.05 m/s toward 0.46 m clearance.
+[three_robot_dstar_mpc-4] [INFO] [1793510661.016505319] [three_robot_dstar_mpc]: Formation: peer separation recovery

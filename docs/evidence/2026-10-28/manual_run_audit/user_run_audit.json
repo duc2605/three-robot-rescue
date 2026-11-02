@@ -1,0 +1,685 @@
+{
+  "events": [
+    {
+      "wall_s": 1.149,
+      "kind": "/leader/people/tv_screens",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 14, \"nanosec\": 416000000}, \"objects\": []}"
+    },
+    {
+      "wall_s": 1.357,
+      "kind": "/leader/people/tv_screens",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 14, \"nanosec\": 276000000}, \"objects\": []}"
+    },
+    {
+      "wall_s": 1.361,
+      "kind": "/leader/people/body_observations",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 14, \"nanosec\": 276000000}, \"people\": [{\"position\": [0.4450750621883681, -3.5619847342694184, 0.5760041383455148], \"keypoints\": {\"0\": [0.31842887362544103, -3.70918513130917, 1.2046934367561943, 0.3537074625492096], \"1\": [0.4681499410465282, -3.709585951913242, 0.9507814333955229, 0.28066980838775635], \"2\": [0.5484482847490346, -3.737175626897474, 0.9634297146218715, 0.30259695649147034], \"14\": [0.31842887362544103, -3.70918513130917, 1.2046934367561943, 0.44562703371047974], \"16\": [0.4025366635578853, -3.803877402277344, 1.1586614361729184, 0.4015273153781891]}, \"heading\": null, \"heading_quality\": 0.0, \"visibility\": \"insufficient\", \"person_confidence\": 0.622703492641449}, {\"position\": [0.4694039411608293, -3.7309487837421456, 0.9433650606608364], \"keypoints\": {\"14\": [0.34456535757699935, -3.7228333230275927, 1.215103647766621, 0.27375853061676025]}, \"heading\": null, \"heading_quality\": 0.0, \"visibility\": \"insufficient\", \"person_confidence\": 0.4051160514354706}], \"source\": \"yolo_or_low_surface_openpose_rgbd\"}"
+    },
+    {
+      "wall_s": 1.949,
+      "kind": "physical_map"
+    },
+    {
+      "wall_s": 2.634,
+      "kind": "social_map"
+    },
+    {
+      "wall_s": 3.455,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.6441002846461874,
+          -1.8790652888069608,
+          0.0
+        ],
+        [
+          1.8087674379229137,
+          -2.3690998538459582,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 3.593,
+      "kind": "/social_navigation/status",
+      "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=1, color_targets=1, remembered_people=10, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=aborted: camera inference is stale; social keepout active on D* Lite and all three MPC maps"
+    },
+    {
+      "wall_s": 4.566,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.64410025548634,
+          -1.8790650387929175,
+          0.0
+        ],
+        [
+          1.8087674379229137,
+          -2.3690998538459582,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 5.545,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.6441001919189135,
+          -1.8790649728936273,
+          0.0
+        ],
+        [
+          1.8087674379229137,
+          -2.3690998538459582,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 5.657,
+      "kind": "/social_navigation/status",
+      "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=1, color_targets=1, remembered_people=10, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=aborted: camera inference is stale; social keepout active on D* Lite and all three MPC maps"
+    },
+    {
+      "wall_s": 6.553,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.6441001785626463,
+          -1.8790647523019932,
+          0.0
+        ],
+        [
+          1.8087674379229137,
+          -2.3690998538459582,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 7.599,
+      "kind": "/leader/people/activity",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": 15.0, \"tracks\": [{\"id\": 9, \"position\": [-0.7749540500692982, -3.525082864721778, 0.8229082058959261], \"stamp\": 13.943999999999999, \"window_seconds\": 10.0, \"observed_seconds\": 3.380000000000001, \"coverage\": 0.20780000000000012, \"window_ready\": false, \"state\": \"observing\", \"heading\": null, \"speed\": 0.09896977810491589, \"gesture_amplitude\": 0.0, \"head_motion_amplitude\": 0.0, \"torso_motion_amplitude\": 0.0, \"gesturing\": false, \"partners\": [], \"source\": \"camera_body_history\"}, {\"id\": 10, \"position\": [0.4450750621883681, -3.5619847342694184, 0.5760041383455148], \"stamp\": 14.276, \"window_seconds\": 10.0, \"observed_seconds\": 2.5500000000000007, \"coverage\": 0.18260000000000004, \"window_ready\": false, \"state\": \"observing_partial_body\", \"heading\": null, \"speed\": 0.008801528436631203, \"gesture_amplitude\": 0.0, \"head_motion_amplitude\": 0.0, \"torso_motion_amplitude\": 0.0, \"gesturing\": false, \"partners\": [], \"source\": \"camera_body_history\"}, {\"id\": 11, \"position\": [0.4694039411608293, -3.7309487837421456, 0.9433650606608364], \"stamp\": 14.276, \"window_seconds\": 10.0, \"observed_seconds\": 1.7200000000000006, \"coverage\": 0.075, \"window_ready\": false, \"state\": \"observing_partial_body\", \"heading\": null, \"speed\": 0.007779694865247615, \"gesture_amplitude\": 0.0, \"head_motion_amplitude\": 0.0, \"torso_motion_amplitude\": 0.0, \"gesturing\": false, \"partners\": [], \"source\": \"camera_body_history\"}]}"
+    },
+    {
+      "wall_s": 7.604,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.6440999996891636,
+          -1.8790648760959252,
+          0.0
+        ],
+        [
+          1.8087674379229137,
+          -2.3690998538459582,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 7.807,
+      "kind": "social_map"
+    },
+    {
+      "wall_s": 7.869,
+      "kind": "/social_navigation/status",
+      "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=1, color_targets=1, remembered_people=10, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=aborted: camera inference is stale; social keepout active on D* Lite and all three MPC maps"
+    },
+    {
+      "wall_s": 8.306,
+      "kind": "/leader/people/tv_screens",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 14, \"nanosec\": 940000000}, \"objects\": []}"
+    },
+    {
+      "wall_s": 8.332,
+      "kind": "/leader/people/body_observations",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 14, \"nanosec\": 940000000}, \"people\": [{\"position\": [0.44228691863322434, -3.5506418051213036, 0.5647284333559985], \"keypoints\": {\"0\": [0.3135988110479897, -3.701496838516685, 1.2017481459940813, 0.38800033926963806], \"1\": [0.5002649465512357, -3.7169705406551765, 0.932063268838786, 0.29473480582237244], \"2\": [0.5658730561858827, -3.7558636434836927, 0.9514450612852514, 0.31865015625953674], \"14\": [0.36234328422946205, -3.7232394486129885, 1.2330138517335871, 0.38308948278427124], \"16\": [0.4116161449384599, -3.7899732949436125, 1.2050654142448969, 0.3188648819923401]}, \"heading\": null, \"heading_quality\": 0.0, \"visibility\": \"insufficient\", \"person_confidence\": 0.7306312322616577}, {\"position\": [-0.7778933099232441, -3.482578220712706, 1.0090342611797312], \"keypoints\": {\"1\": [-0.7832970468215343, -3.453189018930704, 1.3615438147039003, 0.6987097859382629], \"2\": [-0.7192814813863531, -3.497581227886039, 1.3364410321853064, 0.5638634562492371], \"3\": [-0.6768613908181424, -3.5351403407200896, 1.1065136171152787, 0.5457664132118225], \"4\": [-0.6873409490781817, -3.526583348268379, 0.9012246434697244, 0.5677494406700134], \"5\": [-0.7832970468215343, -3.453189018930704, 1.3615438147039003, 0.4179582893848419], \"8\": [-0.8408833474604926, -3.44878135159405, 0.8658495000160698, 0.5421573519706726], \"9\": [-0.9815708926195974, -3.4824299223553186, 0.45587716535119904, 0.41255950927734375], \"10\": [-0.9912081997348348, -3.4668110321362025, 0.10454145548961113, 0.3309510350227356], \"11\": [-0.8408833474604926, -3.44878135159405, 0.8658495000160698, 0.4230562448501587], \"12\": [-0.7580831085239992, -3.5331854197972414, 0.5074880200851566, 0.33520615100860596], \"16\": [-0.8871970621710363, -3.4292489575508838, 1.561329652926845, 0.4442254602909088]}, \"heading\": null, \"heading_quality\": 0.0, \"visibility\": \"full\", \"person_confidence\": 0.9718214869499207}], \"source\": \"yolo_or_low_surface_openpose_rgbd\"}"
+    },
+    {
+      "wall_s": 8.947,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.644099940875583,
+          -1.879064578803625,
+          0.0
+        ],
+        [
+          1.8087674379229137,
+          -2.3690998538459582,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 8.998,
+      "kind": "/leader/people/tv_screens",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 15, \"nanosec\": 106000000}, \"objects\": []}"
+    },
+    {
+      "wall_s": 9.986,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.644100014376894,
+          -1.8790641879523564,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 10.123,
+      "kind": "/social_navigation/status",
+      "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=1, color_targets=1, remembered_people=10, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=aborted: camera inference is stale; social keepout active on D* Lite and all three MPC maps"
+    },
+    {
+      "wall_s": 11.125,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.6440998750039313,
+          -1.8790640140105073,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 12.136,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.6440997361264045,
+          -1.8790641878238838,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 12.327,
+      "kind": "/social_navigation/status",
+      "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=1, color_targets=1, remembered_people=10, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=aborted: camera inference is stale; social keepout active on D* Lite and all three MPC maps"
+    },
+    {
+      "wall_s": 13.328,
+      "kind": "/leader/people/activity",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": 15.5, \"tracks\": [{\"id\": 9, \"position\": [-0.7778933099232441, -3.482578220712706, 1.0090342611797312], \"stamp\": 14.94, \"window_seconds\": 10.0, \"observed_seconds\": 3.880000000000001, \"coverage\": 0.2828000000000001, \"window_ready\": false, \"state\": \"observing\", \"heading\": null, \"speed\": 0.08049774213167234, \"gesture_amplitude\": 0.0, \"head_motion_amplitude\": 0.0, \"torso_motion_amplitude\": 0.0, \"gesturing\": false, \"partners\": [], \"source\": \"camera_body_history\"}, {\"id\": 10, \"position\": [0.44228691863322434, -3.5506418051213036, 0.5647284333559985], \"stamp\": 14.94, \"window_seconds\": 10.0, \"observed_seconds\": 3.0500000000000007, \"coverage\": 0.24900000000000003, \"window_ready\": false, \"state\": \"observing_partial_body\", \"heading\": null, \"speed\": 0.007096723085214662, \"gesture_amplitude\": 0.0, \"head_motion_amplitude\": 0.0, \"torso_motion_amplitude\": 0.0, \"gesturing\": false, \"partners\": [], \"source\": \"camera_body_history\"}, {\"id\": 11, \"position\": [0.4694039411608293, -3.7309487837421456, 0.9433650606608364], \"stamp\": 14.276, \"window_seconds\": 10.0, \"observed_seconds\": 2.2200000000000006, \"coverage\": 0.075, \"window_ready\": false, \"state\": \"observing_partial_body\", \"heading\": null, \"speed\": 0.007779694865247615, \"gesture_amplitude\": 0.0, \"head_motion_amplitude\": 0.0, \"torso_motion_amplitude\": 0.0, \"gesturing\": false, \"partners\": [], \"source\": \"camera_body_history\"}]}"
+    },
+    {
+      "wall_s": 13.335,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.6440998157706233,
+          -1.8790643931241195,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 13.459,
+      "kind": "/leader/people/tv_screens",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 15, \"nanosec\": 438000000}, \"objects\": []}"
+    },
+    {
+      "wall_s": 13.487,
+      "kind": "/leader/people/body_observations",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 15, \"nanosec\": 438000000}, \"people\": [{\"position\": [0.4410908329216976, -3.5525112514567834, 0.5708570532821201], \"keypoints\": {\"0\": [0.31559413548283155, -3.7026108650244485, 1.208806454102965, 0.3105829060077667], \"14\": [0.31559413548283155, -3.7026108650244485, 1.208806454102965, 0.37174320220947266], \"16\": [0.38293613320888653, -3.7554208431719314, 1.170654073299017, 0.2739165127277374]}, \"heading\": null, \"heading_quality\": 0.0, \"visibility\": \"insufficient\", \"person_confidence\": 0.697181224822998}, {\"position\": [-0.7803354965985858, -3.2847533756019054, 0.9939339890672859], \"keypoints\": {\"0\": [-0.8527618229847835, -3.231615463931999, 1.6046737253477232, 0.5308880805969238], \"1\": [-0.7590606785173883, -3.2631786810570462, 1.335930533449368, 0.6303353905677795], \"2\": [-0.6952600917947529, -3.313762107952553, 1.383379013533946, 0.5547732710838318], \"3\": [-0.6389014824367392, -3.413722384485127, 1.0834190550689091, 0.5190412402153015], \"4\": [-0.7320489862603008, -3.4419613047970805, 0.9046662599295153, 0.6010808348655701], \"5\": [-0.7590606785173883, -3.2631786810570462, 1.335930533449368, 0.4542790353298187], \"8\": [-0.7288854722002633, -3.3025185682065166, 0.9009332417253818, 0.5106776356697083], \"9\": [-0.9233948163628516, -3.2853698330483976, 0.587577731089821, 0.5473651885986328], \"10\": [-0.9460706796455707, -3.3424149289125005, 0.10635238751189202, 0.3626624643802643], \"11\": [-0.8022985633135873, -3.2593384338048668, 0.9182455202766041, 0.523106575012207], \"12\": [-0.7545932023341604, -3.2956566518790664, 0.567866945197755, 0.444955438375473], \"13\": [-0.9460706796455707, -3.3424149289125005, 0.10635238751189202, 0.37566861510276794], \"14\": [-0.8527618229847835, -3.231615463931999, 1.6046737253477232, 0.5047028064727783], \"16\": [-0.8206984023914239, -3.295004522268604, 1.591355945428186, 0.5650006532669067]}, \"heading\": 2.03908867518351, \"heading_quality\": 0.8, \"visibility\": \"full\", \"person_confidence\": 0.9777352213859558}], \"source\": \"yolo_or_low_surface_openpose_rgbd\"}"
+    },
+    {
+      "wall_s": 14.448,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.6440996195018407,
+          -1.87906469926074,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 14.598,
+      "kind": "social_map"
+    },
+    {
+      "wall_s": 14.603,
+      "kind": "/leader/people/tv_screens",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 15, \"nanosec\": 608000000}, \"objects\": []}"
+    },
+    {
+      "wall_s": 14.621,
+      "kind": "/social_navigation/status",
+      "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=1, color_targets=1, remembered_people=10, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=aborted: camera inference is stale; social keepout active on D* Lite and all three MPC maps"
+    },
+    {
+      "wall_s": 15.656,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.6440996151576326,
+          -1.8790650106888258,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 16.621,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.6440994175566552,
+          -1.8790655390331312,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 16.764,
+      "kind": "/social_navigation/status",
+      "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=1, color_targets=1, remembered_people=10, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=aborted: camera inference is stale; social keepout active on D* Lite and all three MPC maps"
+    },
+    {
+      "wall_s": 17.647,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.64409918964017,
+          -1.8790663215702301,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 18.634,
+      "kind": "/leader/people/activity",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": 16.0, \"tracks\": [{\"id\": 9, \"position\": [-0.7803354965985858, -3.2847533756019054, 0.9939339890672859], \"stamp\": 15.438, \"window_seconds\": 10.0, \"observed_seconds\": 4.380000000000001, \"coverage\": 0.33260000000000023, \"window_ready\": false, \"state\": \"observing\", \"heading\": null, \"speed\": 0.10023273604106753, \"gesture_amplitude\": 0.0, \"head_motion_amplitude\": 0.0, \"torso_motion_amplitude\": 0.0, \"gesturing\": false, \"partners\": [], \"source\": \"camera_body_history\"}, {\"id\": 10, \"position\": [0.4410908329216976, -3.5525112514567834, 0.5708570532821201], \"stamp\": 15.438, \"window_seconds\": 10.0, \"observed_seconds\": 3.5500000000000007, \"coverage\": 0.2988000000000001, \"window_ready\": false, \"state\": \"observing_partial_body\", \"heading\": null, \"speed\": 0.005576165207347344, \"gesture_amplitude\": 0.0, \"head_motion_amplitude\": 0.0, \"torso_motion_amplitude\": 0.0, \"gesturing\": false, \"partners\": [], \"source\": \"camera_body_history\"}, {\"id\": 11, \"position\": [0.4694039411608293, -3.7309487837421456, 0.9433650606608364], \"stamp\": 14.276, \"window_seconds\": 10.0, \"observed_seconds\": 2.7200000000000006, \"coverage\": 0.075, \"window_ready\": false, \"state\": \"observing_partial_body\", \"heading\": null, \"speed\": 0.007779694865247615, \"gesture_amplitude\": 0.0, \"head_motion_amplitude\": 0.0, \"torso_motion_amplitude\": 0.0, \"gesturing\": false, \"partners\": [], \"source\": \"camera_body_history\"}]}"
+    },
+    {
+      "wall_s": 18.649,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.644098923570614,
+          -1.8790663544396904,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 18.824,
+      "kind": "/social_navigation/status",
+      "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=1, color_targets=1, remembered_people=10, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=aborted: camera inference is stale; social keepout active on D* Lite and all three MPC maps"
+    },
+    {
+      "wall_s": 19.673,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.644098679308183,
+          -1.8790670527426379,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 20.882,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.6440982251296448,
+          -1.879067452320581,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 20.911,
+      "kind": "/leader/people/tv_screens",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 16, \"nanosec\": 102000000}, \"objects\": []}"
+    },
+    {
+      "wall_s": 20.95,
+      "kind": "/leader/people/body_observations",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 16, \"nanosec\": 102000000}, \"people\": [{\"position\": [0.4402630084861454, -3.5516523972863467, 0.5593416094136434], \"keypoints\": {\"0\": [0.3113809482140186, -3.693681882772662, 1.198122491858862, 0.504482090473175], \"1\": [0.4908163225533664, -3.715896865945073, 0.9347258620869228, 0.34987354278564453], \"2\": [0.5612617850492154, -3.7490102654103676, 0.9510940125404657, 0.4691539704799652], \"3\": [0.7194505597575238, -3.5741335436356536, 0.6520961043599038, 0.26267164945602417], \"14\": [0.35097842471033047, -3.723607174868349, 1.2350403703175534, 0.4959867000579834], \"16\": [0.408257405756143, -3.7816452444824833, 1.2016654040807848, 0.4016534388065338]}, \"heading\": 2.4043778153829565, \"heading_quality\": 0.8, \"visibility\": \"upper_body\", \"person_confidence\": 0.7114785313606262}, {\"position\": [-0.7070346224404229, -3.0697850761852408, 1.0110028870141325], \"keypoints\": {\"0\": [-0.8124520439077867, -2.9991892646953215, 1.6223262370736922, 0.3100244700908661], \"1\": [-0.7044433090337066, -3.0389350389438192, 1.3403995196346266, 0.533250629901886], \"2\": [-0.6393793160409751, -3.0941868938629558, 1.3879917867331995, 0.5400246977806091], \"3\": [-0.5921453252354465, -3.1410316155644775, 1.1540502218357114, 0.46956902742385864], \"4\": [-0.5946331600502099, -3.133556373329316, 0.9465223658613264, 0.5094393491744995], \"5\": [-0.6393793160409751, -3.0941868938629558, 1.3879917867331995, 0.3924211263656616], \"8\": [-0.6751163843502299, -3.0872074479920872, 0.8978923554485208, 0.4993239641189575], \"9\": [-0.697470614329998, -3.0817124200992643, 0.5590236813793386, 0.3731072247028351], \"10\": [-0.7132801846265031, -3.070221837686334, 0.10184507758117073, 0.27657079696655273], \"11\": [-0.7467390670279506, -3.036962701276064, 0.915011833870861, 0.42532727122306824], \"12\": [-0.8752647040783614, -3.0598666552461378, 0.5796744571231569, 0.3085533678531647], \"14\": [-0.8124520439077867, -2.9991892646953215, 1.6223262370736922, 0.3267778754234314], \"16\": [-0.7695048996230858, -3.063578507740735, 1.6029350139635978, 0.47880640625953674]}, \"heading\": null, \"heading_quality\": 0.0, \"visibility\": \"full\", \"person_confidence\": 0.988463282585144}], \"source\": \"yolo_or_low_surface_openpose_rgbd\"}"
+    },
+    {
+      "wall_s": 20.953,
+      "kind": "/social_navigation/status",
+      "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=1, color_targets=1, remembered_people=10, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=aborted: camera inference is stale; social keepout active on D* Lite and all three MPC maps"
+    },
+    {
+      "wall_s": 21.902,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.6440979913952436,
+          -1.879068214106676,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 23.07,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.6440975896123255,
+          -1.8790689361790835,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 23.226,
+      "kind": "social_map"
+    },
+    {
+      "wall_s": 23.247,
+      "kind": "/social_navigation/status",
+      "text": "usable_orientations=6, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=2, color_targets=1, remembered_people=10, remembered_viewers=6, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, search=aborted: camera inference is stale; social keepout active on D* Lite and all three MPC maps"
+    },
+    {
+      "wall_s": 23.615,
+      "kind": "/leader/people/tv_screens",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 16, \"nanosec\": 436000000}, \"objects\": []}"
+    },
+    {
+      "wall_s": 23.764,
+      "kind": "/leader/people/tv_screens",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 16, \"nanosec\": 268000000}, \"objects\": []}"
+    },
+    {
+      "wall_s": 23.793,
+      "kind": "/leader/people/body_observations",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": {\"sec\": 16, \"nanosec\": 268000000}, \"people\": [{\"position\": [0.4354270956271249, -3.4963214007363024, 0.5245234530197882], \"keypoints\": {\"1\": [0.48668801662004935, -3.7137208673361024, 0.9366394906760196, 0.5165386199951172], \"2\": [0.5589221237838518, -3.7453979280278435, 0.952156210450759, 0.596785306930542], \"3\": [0.7185313796833681, -3.569889724265736, 0.6522858499840338, 0.3776547610759735], \"5\": [0.3890707300582208, -3.696683786050529, 0.9285178701536574, 0.25236958265304565], \"14\": [0.3445561946102389, -3.7224232539935915, 1.2390714969552679, 0.5674518346786499], \"16\": [0.40571202349970004, -3.7771818872397547, 1.2030462177591437, 0.4493754804134369]}, \"heading\": null, \"heading_quality\": 0.0, \"visibility\": \"upper_body\", \"person_confidence\": 0.7149178385734558}, {\"position\": [-0.6797806791864438, -3.030253151047663, 0.9808543729916628], \"keypoints\": {\"0\": [-0.7912809111516912, -2.958422051353746, 1.5962623244934513, 0.47328492999076843], \"1\": [-0.6119799629456952, -3.0534576304196213, 1.3609202599966832, 0.5989508032798767], \"2\": [-0.6119799629456952, -3.0534576304196213, 1.3609202599966832, 0.6657694578170776], \"3\": [-0.5782380791576982, -3.105053983279677, 1.1342465985452537, 0.5575665235519409], \"4\": [-0.6180514231263283, -3.109587778053169, 0.9380723321960915, 0.6122530698776245], \"5\": [-0.7183034044796963, -3.0108553592135046, 1.4073094814712455, 0.48062989115715027], \"8\": [-0.71991053400842, -2.9968321241452247, 0.8920550041404782, 0.529554545879364], \"9\": [-0.8640942796845479, -3.0227990472799284, 0.5606810079374851, 0.45704004168510437], \"11\": [-0.8153502487899009, -2.9478313823383235, 0.9147056420914965, 0.41572144627571106], \"12\": [-0.6765542585870106, -3.0441031564252032, 0.5400811038690332, 0.3558059632778168], \"13\": [-0.6827128876843489, -3.0329826497439196, 0.14963923510934002, 0.25854194164276123], \"14\": [-0.7912809111516912, -2.958422051353746, 1.5962623244934513, 0.4591810405254364], \"16\": [-0.7614083156800897, -3.026331318969402, 1.5839167984364702, 0.5719135999679565]}, \"heading\": 1.9852108882029345, \"heading_quality\": 0.8, \"visibility\": \"full\", \"person_confidence\": 0.9722706079483032}], \"source\": \"yolo_or_low_surface_openpose_rgbd\"}"
+    },
+    {
+      "wall_s": 24.343,
+      "kind": "team",
+      "poses": [
+        [
+          2.92501796518218,
+          -2.7623643318000273,
+          0.0
+        ],
+        [
+          2.644097427087357,
+          -1.8790687387715477,
+          0.0
+        ],
+        [
+          1.8087684380483933,
+          -2.369099650467957,
+          0.0
+        ]
+      ]
+    },
+    {
+      "wall_s": 24.347,
+      "kind": "/leader/people/activity",
+      "text": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": 16.5, \"tracks\": [{\"id\": 9, \"position\": [-0.6797806791864438, -3.030253151047663, 0.9808543729916628], \"stamp\": 16.268, \"window_seconds\": 10.0, \"observed_seconds\": 4.880000000000001, \"coverage\": 0.41560000000000025, \"window_ready\": false, \"state\": \"observing\", \"heading\": null, \"speed\": 0.1422594201080738, \"gesture_amplitude\": 0.1042653880696596, \"head_motion_amplitude\": 0.0, \"torso_motion_amplitude\": 0.0, \"gesturing\": false, \"partners\": [], \"source\": \"camera_body_history\"}, {\"id\": 10, \"position\": [0.4354270956271249, -3.4963214007363024, 0.5245234530197882], \"stamp\": 16.268, \"window_seconds\": 10.0, \"observed_seconds\": 4.050000000000001, \"coverage\": 0.38180000000000014, \"window_ready\": false, \"state\": \"observing\", \"heading\": null, \"speed\": 0.010490698427195475, \"gesture_amplitude\": 0.0, \"head_motion_amplitude\": 0.0, \"torso_motion_amplitude\": 0.0, \"gesturing\": false, \"partners\": [], \"source\": \"camera_body_history\"}]}"
+    }
+  ],
+  "counts": {
+    "clock": 2228,
+    "/leader/people/tv_screens": 9,
+    "/leader/people/body_observations": 5,
+    "depth": 11,
+    "physical_map": 1,
+    "social_map": 4,
+    "team": 20,
+    "/social_navigation/status": 10,
+    "/leader/people/activity": 4,
+    "rgb": 5
+  },
+  "clock_first": [
+    0.05404527600330766,
+    14.334
+  ],
+  "clock_last": [
+    25.000505804004206,
+    16.562
+  ],
+  "physical_map": {
+    "width": 260,
+    "height": 220,
+    "resolution": 0.05000000074505806,
+    "occupied": 1731
+  },
+  "social_map": {
+    "width": 260,
+    "height": 220,
+    "resolution": 0.05000000074505806,
+    "occupied": 7508
+  },
+  "wall_duration": 25.000554169004317,
+  "matched_image_timestamps": 3,
+  "nodes": [
+    "gz_ros2_control",
+    "controller_manager",
+    "joint_state_broadcaster",
+    "gz_ros2_control",
+    "controller_manager",
+    "joint_state_broadcaster",
+    "wheel1_controller",
+    "wheel1_controller",
+    "gz_ros2_control",
+    "controller_manager",
+    "wheel2_controller",
+    "wheel2_controller",
+    "joint_state_broadcaster",
+    "wheel3_controller",
+    "wheel3_controller",
+    "wheel1_controller",
+    "wheel2_controller",
+    "wheel3_controller",
+    "omni_kinematics",
+    "read_only_run_audit",
+    "omni_kinematics",
+    "omni_kinematics",
+    "ros_gz_bridge",
+    "leader_camera_bridge",
+    "leader_lidar_bridge",
+    "leader_obstacle_scan",
+    "robot_state_publisher",
+    "robot_state_publisher",
+    "robot_state_publisher",
+    "map_server",
+    "map_lifecycle_manager",
+    "three_robot_dstar_mpc",
+    "robot1_distributed_mpc",
+    "robot2_distributed_mpc",
+    "robot3_distributed_mpc",
+    "three_robot_dstar_mpc_rviz",
+    "transform_listener_impl_5a81ab6a38a0",
+    "leader_person_detector",
+    "human_activity_analysis",
+    "leader_leg_candidates",
+    "social_navigation",
+    "social_scene_markers"
+  ],
+  "planning_map_subscribers": [
+    {
+      "node": "read_only_run_audit",
+      "namespace": "/"
+    },
+    {
+      "node": "three_robot_dstar_mpc",
+      "namespace": "/"
+    },
+    {
+      "node": "robot1_distributed_mpc",
+      "namespace": "/"
+    },
+    {
+      "node": "robot2_distributed_mpc",
+      "namespace": "/"
+    },
+    {
+      "node": "robot3_distributed_mpc",
+      "namespace": "/"
+    }
+  ],
+  "rtf": 0.08931126712341439
+}

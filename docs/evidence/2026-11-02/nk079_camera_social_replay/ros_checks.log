@@ -1,0 +1,2 @@
+[INFO] [1793607592.532197180] [replay_sensor_recorder]: Replay LiDAR/A* recording: /home/duc/three-robot-rescue/docs/evidence/2026-11-02/nk079_camera_social_replay/ros_fixture/navigation.jsonl
+PASS actual ROS read-only recorder JPEG, social snapshots, clear and clean writer shutdown

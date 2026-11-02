@@ -1,0 +1,6 @@
+{
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "Service call timed out\n",
+  "request": "entity { name: \"social_dynamic\" type: WORLD } plugins { filename: \"/home/duc/three-robot-rescue/install/social_navigation_sim/lib/libcollision_audit.so\" name: \"rescue::CollisionAudit\" innerxml: \"<robot_model>robot1</robot_model>\\n      <robot_model>robot2</robot_model>\\n      <robot_model>robot3</robot_model>\\n      <human_model>group_a_contact</human_model>\\n      <human_model>group_b_contact</human_model>\\n      <human_model>group_c_contact</human_model>\\n      <human_model>pair_a_contact</human_model>\\n      <human_model>pair_b_contact</human_model>\\n      <human_model>patrol_person</human_model>\\n      <human_model>sleeping_person</human_model>\\n      <human_model>standing_a</human_model>\\n      <human_model>standing_b</human_model>\\n      <human_model>tv_viewer_a</human_model>\\n      <human_model>tv_viewer_a_drinking</human_model>\\n      <human_model>tv_viewer_a_returning</human_model>\\n      <human_model>tv_viewer_a_walking</human_model>\\n      <human_model>tv_viewer_b</human_model>\\n    \" }"
+}

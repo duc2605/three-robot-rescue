@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-28",
+  "interpretation": "slow and fast pedestrian cases; user wrote low speed and slow speed",
+  "full_tests_passed": 153,
+  "targeted_safety_tests_passed": 38,
+  "warnings": 2,
+  "lint_files_excluded": 3,
+  "speed_bands_mps": {
+    "slow": [
+      0.05,
+      0.5
+    ],
+    "fast_minimum": 0.5,
+    "maximum_accepted_fit": 1.7
+  },
+  "risk_lookahead_seconds": {
+    "slow": 2.0,
+    "fast": 2.5
+  },
+  "kinematic_test_cases": [
+    {
+      "speed_mps": 0.08,
+      "minimum_center_separation_m": 0.675
+    },
+    {
+      "speed_mps": 0.35,
+      "minimum_center_separation_m": 0.643
+    },
+    {
+      "speed_mps": 0.8,
+      "minimum_center_separation_m": 0.692
+    }
+  ],
+  "ros_domain_isolated": 94,
+  "global_goal_preserved_in_smoke": true,
+  "camera_observation_preempted_in_smoke": true,
+  "gazebo_replay": false,
+  "rtf_gain_measured": false,
+  "live_simulation_restarted": false,
+  "github_pushed": false
+}

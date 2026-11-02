@@ -1,0 +1,31 @@
+{
+  "goal_sent": true,
+  "goal": [
+    1.0351457595825195,
+    -2.035773515701294
+  ],
+  "last_sim": 89.7,
+  "wall_seconds": 240.53467126800388,
+  "scans": {
+    "robot1": {
+      "range_max": 2.0,
+      "rays": 240
+    },
+    "robot2": {
+      "range_max": 2.0,
+      "rays": 240
+    },
+    "robot3": {
+      "range_max": 2.0,
+      "rays": 240
+    }
+  },
+  "last_status": {
+    "robot3": "normal",
+    "robot1": "moving_obstacle: yielding with checked local escape; speed=0.42m/s band=slow TTC=0.00s; A* proposal=right",
+    "robot2": "normal"
+  },
+  "launch_exit": 0,
+  "ros_domain": "52",
+  "scope": "One isolated full-stack run; not repeated benchmark or proof of general avoidance."
+}

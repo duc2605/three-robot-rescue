@@ -1,2 +1,33 @@
-# Full ros2_ws workspace snapshot: generated files and backups are included.
-# Git metadata is managed separately.
+# Generated ROS workspace outputs and local caches.
+/build/
+/install/
+/log/
+/recordings/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+/patch_backups/
+/.codex_backups/
+
+# Local editor, agent and account configuration.
+/.vscode/
+/.idea/
+/.agents/
+/.codex/
+/.aws/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python/package artifacts and source distributions.
+*.egg-info/
+.coverage
+htmlcov/
+dist/
+*.zip
+*.tar.gz
+
+# Local verified source snapshots
+/backups/

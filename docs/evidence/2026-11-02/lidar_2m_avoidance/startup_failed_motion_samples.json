@@ -1,0 +1,6297 @@
+[
+  {
+    "wall": 0.05040109800029313,
+    "status": {},
+    "commands": {}
+  },
+  {
+    "wall": 1.0566307319968473,
+    "status": {},
+    "commands": {}
+  },
+  {
+    "wall": 2.1057488119986374,
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 3.1457236869973713,
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 4.195572240001638,
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 5.205379723003716,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 6.206623992002278,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 7.2066304629988736,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 8.25491999299993,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 9.305419693999283,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 10.345222941003158,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 11.347049119001895,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 12.395959458997822,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 13.398028304000036,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 14.398071825002262,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 15.40610171300068,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 16.40680320699903,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 17.4547695250003,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 18.505548590997932,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 19.505652920001012,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 20.546950114003266,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 21.59742162800103,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 22.598277215998678,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 23.606542314999388,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 24.654629017000843,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 25.655386368001928,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 26.705812749998586,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 27.746740595997835,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 28.797028562003106,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 29.80546960799984,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 30.8062343269994,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 31.806712757999776,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 32.80687663600111,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 33.85482873800356,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 34.905858828999044,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 35.906320595997386,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 36.94653262099746,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 37.94738064699777,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 38.947387788000924,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 39.997737582998525,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 40.99780894000287,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 41.9983291919998,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 42.998999538001954,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 44.0066144750017,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 45.00705168300192,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 46.05460965500242,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 47.055268634998356,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 48.05571941800008,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 49.10644043699722,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 50.14740619799704,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 51.198291833999974,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 52.20733319300052,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 53.207426291002776,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 54.25574579300155,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 55.305472856998676,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 56.30661027199676,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 57.347513414002606,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 58.39770901099837,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 59.39828564700292,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 60.40678476500034,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 61.407037498000136,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 62.407169593003346,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 63.454784829002165,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 64.45588923100149,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 65.50624743200024,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 66.506578196997,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 67.54709741700208,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 68.59784277599829,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 69.6064778,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 70.60681045200181,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 71.65526973299711,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 72.70598609199806,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 73.7065974060024,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 74.74673643700226,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 75.79720149499917,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 76.80740799199702,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 77.85550621699804,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 78.90631280699745,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 79.90651102399715,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 80.90667640099855,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 81.94732820300123,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 82.99810627399711,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 84.0070917999983,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 85.00733207599842,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 86.0073841379999,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 87.05503103399678,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 88.10529027599841,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 89.10652569700324,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 90.14640226500342,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 91.14680861800298,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 92.14682048000395,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 93.14708059700206,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 94.19745017900277,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 95.19811281299917,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 96.20690501100034,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 97.20752460099902,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 98.25546189200395,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 99.25572007799929,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 100.30611783899803,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 101.34727629699773,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 102.34797744599928,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 103.39819821799756,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 104.40729264199763,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 105.40744090099906,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 106.45540974399773,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 107.45589511399885,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 108.45597028399789,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 109.50597128100344,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 110.5059800750023,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 111.50667804000113,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 112.50673490099871,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 113.50683797900274,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 114.54677613799868,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 115.54777648599702,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 116.5978035320004,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 117.59792162699887,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 118.59860992099857,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 119.60698153499834,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 120.60727375600254,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 121.65562857899931,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 122.70575526999892,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 123.70581148099882,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 124.70701130700036,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 125.74735717799922,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 126.74783362000016,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 127.79828166899824,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 128.8069387029973,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 129.85447847199976,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 130.85565236899856,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 131.90518126099778,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 132.9066809529977,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 133.94808780199673,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 134.998571281998,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 135.9988783489971,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 137.00709981600085,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 138.05577715000254,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 139.10667743699742,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 140.14717406200361,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 141.19715914999688,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 142.19821297899762,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 143.20653834100085,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 144.20705971999996,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 145.20738567600347,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 146.20768366300035,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 147.25542091500392,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 148.2558856609976,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 149.30589486200188,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 150.34766977399704,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 151.3476868450016,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 152.39836086599826,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 153.3987529579972,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 154.3989845210017,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 155.4074245820011,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 156.40771732400026,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 157.45477504799783,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 158.45479125300335,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 159.45557170599932,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 160.50662105299853,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 161.5477437820009,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 162.59871684300015,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 163.59938793999754,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 164.60716665600194,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 165.60752360599872,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 166.6559172729976,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 167.70546363500034,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 168.70681223700376,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 169.7467258789984,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 170.74768480400235,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 171.79753486400296,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 172.80690996599878,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 173.80718751499808,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 174.85490825900342,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 175.85497273500368,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 176.85599215699767,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 177.85616085700167,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 178.90619660799712,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 179.90686598799948,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 180.94796917500207,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 181.99887929500255,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 183.00757319800323,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 184.05526236900187,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 185.0555494220025,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 186.1064033770017,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 187.106834997001,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 188.1470003200011,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 189.1977026270033,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 190.19903316599812,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 191.1991646289971,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 192.2071662169983,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 193.20756586600328,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 194.2550589099992,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 195.2559929889976,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 196.30610354599776,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 197.30625351100025,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 198.3065520090022,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 199.347704642998,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 200.39735909400042,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 201.39845970799797,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 202.3986498259983,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 203.4073764900022,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 204.4549922869992,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 205.45550491299946,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 206.4559274409985,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 207.4561281819988,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 208.50647273300274,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 209.50697814500018,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 210.54805684900202,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 211.59880924299796,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 212.60695778600348,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 213.60761308299698,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 214.6560384330005,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 215.65604230399913,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 216.70668360799755,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 217.7069729260038,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 218.74779707499692,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 219.79762007400132,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 220.79863608100277,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 221.8073765989975,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 222.85604358399723,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 223.9060798770006,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 224.9069015770001,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 225.9070755990033,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 226.9479060110025,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 227.94791927799815,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 228.99828497099952,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 229.99923206200037,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 231.0075284159975,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 232.05573161999928,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 233.05594278100034,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 234.10581456199725,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 235.10623620000115,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 236.10673941399727,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 237.10709519300144,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 238.1473117830028,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "wall": 239.14791317599884,
+    "t": 2.0,
+    "poses": [],
+    "status": {
+      "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+      "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+    },
+    "commands": {
+      "robot3": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "robot2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

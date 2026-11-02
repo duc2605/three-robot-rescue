@@ -1,0 +1,24 @@
+{
+  "runtime_parameters": {
+    "object_memory": 60.0,
+    "color_object_memory": 75.0,
+    "tv_view_memory": 75.0
+  },
+  "log_field_maxima": {
+    "tv_regions": 0,
+    "color_regions": 1,
+    "tv_tracks": 1,
+    "tv_raw_tracks": 1
+  },
+  "observed_sequence": [
+    "raw TV track disappeared",
+    "remembered TV track disappeared while viewing region remained",
+    "color_regions dropped from 1 to 0; no group regions"
+  ],
+  "limits": [
+    "log timestamps are wall ROS time, not measured memory age",
+    "viewer invalidation and TTL can both remove cached polygon; exact last removal branch not instrumented",
+    "color_regions denotes viewing inferred through color target, not confirmed TV-specific polygon",
+    "same running session; no restart/reset/goal/parameter/code change"
+  ]
+}

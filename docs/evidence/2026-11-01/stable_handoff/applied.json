@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "name": "three_robot_dstar_mpc",
+      "old_pid": 64815,
+      "new_pid": 68536
+    },
+    {
+      "name": "robot1_distributed_mpc",
+      "old_pid": 66269,
+      "new_pid": 68537
+    },
+    {
+      "name": "robot2_distributed_mpc",
+      "old_pid": 66270,
+      "new_pid": 68538
+    },
+    {
+      "name": "robot3_distributed_mpc",
+      "old_pid": 66271,
+      "new_pid": 68539
+    }
+  ],
+  "retained_goal": {
+    "xy": [
+      1.0351457595825195,
+      -2.6798601150512695
+    ],
+    "source": "exact last global-path endpoint matching selected goal log"
+  },
+  "gazebo_restarted": false
+}

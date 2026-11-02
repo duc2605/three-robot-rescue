@@ -1,0 +1,17 @@
+{
+  "camera_sources": [
+    "raw",
+    "detection"
+  ],
+  "capture_vs_receipt": true,
+  "social_and_clear": true,
+  "writer_status": {
+    "bytes": 2591,
+    "dropped": 0,
+    "error": null,
+    "writer_finished": true
+  },
+  "gazebo_started": false,
+  "commands_published": false,
+  "domain": "79"
+}

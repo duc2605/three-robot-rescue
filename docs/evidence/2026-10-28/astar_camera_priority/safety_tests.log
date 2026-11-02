@@ -1,0 +1,5 @@
+........person_speed=0.08m/s; minimum_center_separation=0.675m
+.person_speed=0.35m/s; minimum_center_separation=0.643m
+.person_speed=0.80m/s; minimum_center_separation=0.692m
+............................
+38 passed in 3.46s

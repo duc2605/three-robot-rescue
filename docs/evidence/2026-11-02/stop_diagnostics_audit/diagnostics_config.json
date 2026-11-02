@@ -1,0 +1,19 @@
+{
+  "mode": "manual_stop_diagnostics",
+  "sources": {
+    "dstar_mpc_controller": {
+      "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py",
+      "sha256": "fe59baa9776c8cef46b9b7c97ed74d3197fac072f1e4568d52fcc7969066a859"
+    },
+    "stop_diagnostics": {
+      "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/stop_diagnostics.py",
+      "sha256": "ece7678cb5fbc02de94a4aa71a50e789d12a95e4f504d7636a26b89924617e93"
+    }
+  },
+  "pre_wall_seconds": 3,
+  "post_recovery_wall_seconds": 5,
+  "maximum_samples_per_wall_second": 10,
+  "maximum_bytes_per_stream": 20971520,
+  "raw_camera_pixels_saved": false,
+  "full_lidar_ranges_saved": false
+}

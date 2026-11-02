@@ -1,0 +1,9 @@
+{
+  "ros_nodes_present": false,
+  "observed_processes": [
+    "Gazebo server",
+    "Gazebo GUI"
+  ],
+  "stats_rtf": 0.0783,
+  "note": "No controller, bridge or RViz processes found; 60 s ROS audit received no clock or MPC topics. Not a valid full-stack before/after RTF baseline. CPU sample stored in avoidance_regression_before/cpu_10s.json. Exact cause of ROS process exit not established."
+}

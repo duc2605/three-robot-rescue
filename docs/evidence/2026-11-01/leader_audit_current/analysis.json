@@ -1,0 +1,65 @@
+{
+  "robot1": {
+    "snapshot_status_counts": {
+      "stale_data": 29,
+      "moving_obstacle": 4,
+      "normal": 26
+    },
+    "blocked_examples": [],
+    "longest_near_stationary_seconds": 26.060000000000002,
+    "scan_capture_age_max": 0.203,
+    "scan_age_over_point3": 0
+  },
+  "robot2": {
+    "snapshot_status_counts": {
+      "unknown": 1,
+      "stale_data": 29,
+      "normal": 21,
+      "moving_obstacle": 7,
+      "normal_mpc": 1
+    },
+    "blocked_examples": [
+      {
+        "elapsed": 51.15,
+        "sim": 45.655,
+        "status": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 13, 'peer': 0}",
+        "reference": {
+          "length": 27,
+          "leader_end": [
+            3.1536355035031702,
+            -2.321181003075589
+          ]
+        },
+        "scan_age": {
+          "receipt_age": 0.182,
+          "capture_age": 0.055
+        }
+      }
+    ],
+    "longest_near_stationary_seconds": 25.058,
+    "scan_capture_age_max": 0.218,
+    "scan_age_over_point3": 0
+  },
+  "robot3": {
+    "snapshot_status_counts": {
+      "unknown": 1,
+      "moving_obstacle": 4,
+      "normal": 25,
+      "stale_data": 29
+    },
+    "blocked_examples": [],
+    "longest_near_stationary_seconds": 19.047,
+    "scan_capture_age_max": 0.574,
+    "scan_age_over_point3": 9
+  },
+  "snapshot_count": 60,
+  "duration_sampled": 59.167,
+  "first_sim": 31.766,
+  "last_sim": 47.374,
+  "goal": [
+    1.08156,
+    -2.57733
+  ],
+  "leader_goal_distance": 2.030876289192065,
+  "empty_reference_snapshots": 48
+}

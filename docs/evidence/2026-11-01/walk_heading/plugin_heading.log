@@ -1,0 +1,5 @@
+Error opening log file: /home/duc/.ignition/auto_default.log
+PASS robot1: real plugin ECM yield, safety gap, stopped feet, resume without catch-up, reset
+PASS robot2: real plugin ECM yield, safety gap, stopped feet, resume without catch-up, reset
+PASS rendered heading vs displacement: 4730 translated samples
+PASS robot3: real plugin ECM yield, safety gap, stopped feet, resume without catch-up, reset

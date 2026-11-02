@@ -1,0 +1,28 @@
+{
+  "audit": {
+    "rtf": 0.20693076323435602,
+    "nonzero_commands": {
+      "robot1": 5,
+      "robot2": 6,
+      "robot3": 5
+    },
+    "clock_messages": 2921
+  },
+  "gazebo_stats": {
+    "sim_time": 35.66,
+    "real_time": 167.77908757,
+    "real_time_factor": 0.201
+  },
+  "latest_goal_when_read": [
+    -5.06358,
+    -3.07267
+  ],
+  "pose_sample_time": 35.58,
+  "limitations": [
+    "snapshot obtained after user screenshot, not exact instant of contact",
+    "sensor streams live in audit; cannot attribute this event to complete Gazebo freeze",
+    "new regression failures reproduce guard ownership and close stationary clearance bugs; not proof of sole cause of contact",
+    "running processes do not reload source edits; not restarted during this task",
+    "RTF sample is not a controlled comparison to prior episode"
+  ]
+}

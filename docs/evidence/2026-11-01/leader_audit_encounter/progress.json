@@ -1,0 +1,75 @@
+{
+  "elapsed": 120.0,
+  "sim": 75.055,
+  "sim_elapsed": 26.18200000000001,
+  "rtf_recent": 0.22897289257546644,
+  "goal": [
+    1.08156,
+    -2.57733
+  ],
+  "leader_goal_distance": 0.10865694976030696,
+  "team": [
+    [
+      1.6983376142128874,
+      -2.1225223726158995,
+      -2.1180565475837962
+    ],
+    [
+      1.4180774835853056,
+      -2.1951268201407843,
+      -0.5432654548128898
+    ],
+    [
+      1.1186104172674782,
+      -2.4751850083874904,
+      -2.6359122273354125
+    ]
+  ],
+  "path_length_sampled": [
+    2.9361721620998384,
+    3.4672818093762694,
+    3.284547054995759
+  ],
+  "command_counts": {
+    "robot1": {
+      "total": 352,
+      "linear_nonzero": 82,
+      "angular_nonzero": 73,
+      "any_nonzero": 82
+    },
+    "robot2": {
+      "total": 393,
+      "linear_nonzero": 97,
+      "angular_nonzero": 110,
+      "any_nonzero": 115
+    },
+    "robot3": {
+      "total": 337,
+      "linear_nonzero": 104,
+      "angular_nonzero": 96,
+      "any_nonzero": 108
+    }
+  },
+  "safety_latest": {
+    "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+    "robot2": "stale_data: holding; fresh state/reference or active escape sensors required",
+    "robot3": "stale_data: holding; fresh state/reference or active escape sensors required"
+  },
+  "counts": {
+    "clock": 26183,
+    "robot3/cmd": 337,
+    "team": 259,
+    "reference": 281,
+    "robot2/cmd": 393,
+    "robot1/cmd": 352,
+    "robot1/scan": 131,
+    "robot2/scan": 131,
+    "robot3/scan": 98,
+    "robot2/safety": 186,
+    "robot1/safety": 251,
+    "robot3/safety": 156
+  },
+  "log_warning_counts": {},
+  "social": null,
+  "observation": null
+}

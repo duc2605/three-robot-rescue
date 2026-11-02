@@ -1,0 +1,18 @@
+{
+  "gazebo_stats": {
+    "sim_time": 26.42,
+    "real_time": 243.026272324,
+    "iterations": 26420,
+    "real_time_factor": 0.0008
+  },
+  "last_goal": [
+    2.27774,
+    -2.54233
+  ],
+  "warning": "robot2 clearance 0.126 m is below the 0.15 m footprint limit; motion held.",
+  "limits": [
+    "coordinator clearance includes social planning map and dynamic lidar; not proof of physical penetration",
+    "no synchronized robot/person poses received in audit; cannot prove contact or compare avoidance trajectories",
+    "read only; no restart, goal or source change"
+  ]
+}

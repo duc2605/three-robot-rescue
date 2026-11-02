@@ -1,0 +1,11 @@
+{
+  "exit": 0,
+  "status": {
+    "bytes": 0,
+    "dropped": 0,
+    "error": null,
+    "writer_finished": true
+  },
+  "observer_only": true,
+  "gazebo_started": false
+}

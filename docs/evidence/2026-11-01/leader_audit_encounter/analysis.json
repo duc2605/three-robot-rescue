@@ -1,0 +1,198 @@
+{
+  "robot1": {
+    "snapshot_status_counts": {
+      "unknown": 7,
+      "normal_mpc": 33,
+      "normal": 54,
+      "stale_data": 12,
+      "moving_obstacle": 13
+    },
+    "blocked_examples": [
+      {
+        "elapsed": 8.101,
+        "sim": 50.576,
+        "status": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}",
+        "reference": {
+          "length": 27,
+          "leader_end": [
+            2.601640110224841,
+            -2.362370864357615
+          ]
+        },
+        "scan_age": {
+          "receipt_age": 0.853,
+          "capture_age": 0.176
+        }
+      },
+      {
+        "elapsed": 9.105,
+        "sim": 50.768,
+        "status": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}",
+        "reference": {
+          "length": 27,
+          "leader_end": [
+            2.5254797963387494,
+            -2.3731408670968026
+          ]
+        },
+        "scan_age": {
+          "receipt_age": 0.815,
+          "capture_age": 0.168
+        }
+      },
+      {
+        "elapsed": 10.107,
+        "sim": 50.988,
+        "status": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}",
+        "reference": {
+          "length": 27,
+          "leader_end": [
+            2.3962929977818295,
+            -2.3914094653119555
+          ]
+        },
+        "scan_age": {
+          "receipt_age": 0.812,
+          "capture_age": 0.188
+        }
+      }
+    ],
+    "longest_near_stationary_seconds": 11.030000000000001,
+    "scan_capture_age_max": 0.207,
+    "scan_age_over_point3": 0
+  },
+  "robot2": {
+    "snapshot_status_counts": {
+      "unknown": 4,
+      "normal": 79,
+      "normal_mpc": 14,
+      "stale_data": 14,
+      "moving_obstacle": 8
+    },
+    "blocked_examples": [
+      {
+        "elapsed": 17.121,
+        "sim": 52.432,
+        "status": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 12, 'peer': 0}",
+        "reference": {
+          "length": 27,
+          "leader_end": [
+            2.354305912006054,
+            -2.397346954349776
+          ]
+        },
+        "scan_age": {
+          "receipt_age": 0.103,
+          "capture_age": 0.032
+        }
+      },
+      {
+        "elapsed": 18.124,
+        "sim": 52.63,
+        "status": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}",
+        "reference": {
+          "length": 27,
+          "leader_end": [
+            2.354305912006054,
+            -2.397346954349776
+          ]
+        },
+        "scan_age": {
+          "receipt_age": 0.116,
+          "capture_age": 0.03
+        }
+      },
+      {
+        "elapsed": 20.13,
+        "sim": 53.052,
+        "status": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}",
+        "reference": {
+          "length": 27,
+          "leader_end": [
+            2.153280796731582,
+            -2.415613911686045
+          ]
+        },
+        "scan_age": {
+          "receipt_age": 0.209,
+          "capture_age": 0.052
+        }
+      }
+    ],
+    "longest_near_stationary_seconds": 8.029,
+    "scan_capture_age_max": 0.212,
+    "scan_age_over_point3": 0
+  },
+  "robot3": {
+    "snapshot_status_counts": {
+      "unknown": 10,
+      "normal_mpc": 10,
+      "normal": 77,
+      "stale_data": 18,
+      "moving_obstacle": 4
+    },
+    "blocked_examples": [
+      {
+        "elapsed": 11.109,
+        "sim": 51.19,
+        "status": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}",
+        "reference": {
+          "length": 27,
+          "leader_end": [
+            2.354305912006054,
+            -2.397346954349776
+          ]
+        },
+        "scan_age": {
+          "receipt_age": 0.818,
+          "capture_age": 0.19
+        }
+      },
+      {
+        "elapsed": 12.11,
+        "sim": 51.395,
+        "status": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}",
+        "reference": {
+          "length": 27,
+          "leader_end": [
+            2.354305912006054,
+            -2.397346954349776
+          ]
+        },
+        "scan_age": {
+          "receipt_age": 1.818,
+          "capture_age": 0.395
+        }
+      },
+      {
+        "elapsed": 13.111,
+        "sim": 51.595,
+        "status": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}",
+        "reference": {
+          "length": 27,
+          "leader_end": [
+            2.354305912006054,
+            -2.397346954349776
+          ]
+        },
+        "scan_age": {
+          "receipt_age": 0.859,
+          "capture_age": 0.195
+        }
+      }
+    ],
+    "longest_near_stationary_seconds": 9.01400000000001,
+    "scan_capture_age_max": 0.595,
+    "scan_age_over_point3": 20
+  },
+  "snapshot_count": 120,
+  "duration_sampled": 119.364,
+  "first_sim": 48.873,
+  "last_sim": 74.906,
+  "goal": [
+    1.08156,
+    -2.57733
+  ],
+  "leader_goal_distance": 0.10865694976030696,
+  "empty_reference_snapshots": 33
+}

@@ -1,0 +1,3 @@
+[INFO] [1793518012.833972328] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/collision_audit/events (ignition.msgs.StringMsg) -> /collision_audit/events (std_msgs/msg/String)] (Lazy 0)
+[INFO] [1793518012.840588678] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/collision_audit/status (ignition.msgs.StringMsg) -> /collision_audit/status (std_msgs/msg/String)] (Lazy 0)
+[INFO] [1793518020.871404658] [rclcpp]: signal_handler(SIGINT/SIGTERM)

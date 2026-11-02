@@ -1,0 +1,7 @@
+Generated /tmp/rescue-rename-validation-72ys6nuk/before-output/worlds/social_people.sdf: 5 animated + 2 standing + 2 seated viewers; map has chairs/TV only.
+Generated dynamic scene; TV cycle 106.7 sim s, patrol 107.2 sim s
+Generated /tmp/rescue-rename-validation-72ys6nuk/after-output/worlds/social_static.sdf: 5 animated + 2 standing + 2 seated viewers; map has chairs/TV only.
+Generated dynamic scene; TV cycle 106.7 sim s, patrol 107.2 sim s
+Normalized generator outputs equivalent: 12 files
+Resource references valid: 31
+All 31 renames complete; old source paths absent

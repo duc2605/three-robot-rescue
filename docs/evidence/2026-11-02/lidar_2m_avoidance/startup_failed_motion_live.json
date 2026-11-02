@@ -1,0 +1,18 @@
+{
+  "goal_sent": false,
+  "goal": [
+    1.0351457595825195,
+    -2.035773515701294
+  ],
+  "last_sim": 2.0,
+  "wall_seconds": 251.14194454300014,
+  "scans": {},
+  "last_status": {
+    "robot3": "stale_data: holding; fresh state/reference or active escape sensors required",
+    "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+    "robot2": "stale_data: holding; fresh state/reference or active escape sensors required"
+  },
+  "launch_exit": 0,
+  "ros_domain": "51",
+  "scope": "One isolated full-stack run; not repeated benchmark or proof of general avoidance."
+}

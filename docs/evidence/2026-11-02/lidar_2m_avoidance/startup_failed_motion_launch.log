@@ -1,0 +1,296 @@
+Pose replay recording: /home/duc/three-robot-rescue/recordings/lidar_2m_validation_07
+Stop diagnosis enabled: /home/duc/three-robot-rescue/recordings/lidar_2m_validation_07/stop_*.jsonl
+[INFO] [launch]: All log files can be found below /home/duc/.ros/log/2026-11-02-01-43-23-523416-duc-Vivobook-ASUSLaptop-X1502ZA-X1502ZA-126629
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: Gazebo rendering: intel
+[INFO] [ign gazebo-1]: process started with pid [126661]
+[INFO] [map_server-2]: process started with pid [126664]
+[INFO] [lifecycle_manager-3]: process started with pid [126666]
+[INFO] [three_robot_dstar_mpc-4]: process started with pid [126668]
+[INFO] [robot_distributed_mpc-5]: process started with pid [126670]
+[INFO] [robot_distributed_mpc-6]: process started with pid [126672]
+[INFO] [robot_distributed_mpc-7]: process started with pid [126674]
+[INFO] [social_scene_markers.py-8]: process started with pid [126676]
+[lifecycle_manager-3] [INFO] [1793558603.781577846] [map_lifecycle_manager]: Creating
+[lifecycle_manager-3] [INFO] [1793558603.783456222] [map_lifecycle_manager]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[lifecycle_manager-3] [INFO] [1793558603.802262020] [map_lifecycle_manager]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-3] [INFO] [1793558603.802310053] [map_lifecycle_manager]: [34m[1mConfiguring map_server[0m[0m
+[map_server-2] [INFO] [1793558603.803825239] [map_server]: 
+[map_server-2] 	map_server lifecycle node launched. 
+[map_server-2] 	Waiting on external lifecycle transitions to activate
+[map_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-2] [INFO] [1793558603.803954380] [map_server]: Creating
+[map_server-2] [INFO] [1793558603.804291038] [map_server]: Configuring
+[map_server-2] [INFO] [1793558603.804344926] [map_io]: Loading yaml file: /home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/map/social_dynamic.yaml
+[map_server-2] [INFO] [1793558603.804624426] [map_io]: resolution: 0.05
+[map_server-2] [INFO] [1793558603.804636640] [map_io]: origin[0]: -6.5
+[map_server-2] [INFO] [1793558603.804642887] [map_io]: origin[1]: -5.5
+[map_server-2] [INFO] [1793558603.804648485] [map_io]: origin[2]: 0
+[map_server-2] [INFO] [1793558603.804654761] [map_io]: free_thresh: 0.25
+[map_server-2] [INFO] [1793558603.804661118] [map_io]: occupied_thresh: 0.65
+[map_server-2] [INFO] [1793558603.804667489] [map_io]: mode: trinary
+[map_server-2] [INFO] [1793558603.804673681] [map_io]: negate: 0
+[map_server-2] [INFO] [1793558603.804859461] [map_io]: Loading image_file: /home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/map/social_dynamic.pgm
+[map_server-2] [INFO] [1793558603.811015216] [map_io]: Read map /home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/map/social_dynamic.pgm: 260 X 220 map @ 0.05 m/cell
+[lifecycle_manager-3] [INFO] [1793558603.815360320] [map_lifecycle_manager]: [34m[1mActivating map_server[0m[0m
+[map_server-2] [INFO] [1793558603.815479364] [map_server]: Activating
+[map_server-2] [INFO] [1793558603.815652293] [map_server]: Creating bond (map_server) to lifecycle manager.
+[lifecycle_manager-3] [INFO] [1793558603.918652186] [map_lifecycle_manager]: Server map_server connected with bond.
+[lifecycle_manager-3] [INFO] [1793558603.918704557] [map_lifecycle_manager]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-3] [INFO] [1793558603.918721444] [map_lifecycle_manager]: [34m[1mCreating bond timer...[0m[0m
+[social_scene_markers.py-8] [INFO] [1793558604.144745071] [social_scene_markers]: Publishing authored /social_scene annotations; camera perception and social navigation use separate nodes.
+[robot_distributed_mpc-7] [INFO] [1793558604.198570973] [robot3_distributed_mpc]: robot3: MPC waiting for measured team poses and common reference.
+[three_robot_dstar_mpc-4] [INFO] [1793558604.204074438] [three_robot_dstar_mpc]: D* Lite + leader/follower MPC ready; order: robot3 -> robot2 -> robot1; waiting for /map and an RViz 2D Goal Pose.
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mIgnition Gazebo Server v[0m[1;32m6.18.0[0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mLoading SDF world file[[0m[1;32m/home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/worlds/social_dynamic.sdf[0m[1;32m].[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mServing entity system service on [[0m[1;32m/[0m[1;32mentity/system/add[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;36m[Dbg] [Physics.cc:804] [0m[1;36mLoaded [[0m[1;36mignition::physics::dartsim::Plugin[0m[1;36m] from library [[0m[1;36m/usr/lib/x86_64-linux-gnu/ign-physics-5/engine-plugins/libignition-physics-dartsim-plugin.so[0m[1;36m][0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [SystemManager.cc:73] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::Physics[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mCreate service on [[0m[1;32m/world/social_dynamic/create[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mRemove service on [[0m[1;32m/world/social_dynamic/remove[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mPose service on [[0m[1;32m/world/social_dynamic/set_pose[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mPose service on [[0m[1;32m/world/social_dynamic/set_pose_vector[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mLight configuration service on [[0m[1;32m/world/social_dynamic/light_config[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mPhysics service on [[0m[1;32m/world/social_dynamic/set_physics[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mSphericalCoordinates service on [[0m[1;32m/world/social_dynamic/set_spherical_coordinates[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mEnable collision service on [[0m[1;32m/world/social_dynamic/enable_collision[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mDisable collision service on [[0m[1;32m/world/social_dynamic/disable_collision[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mMaterial service on [[0m[1;32m/world/social_dynamic/visual_config[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mMaterial service on [[0m[1;32m/world/social_dynamic/wheel_slip[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;36m[Dbg] [SystemManager.cc:73] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::UserCommands[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [SystemManager.cc:73] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::SceneBroadcaster[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [SystemManager.cc:73] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::Contact[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [SystemManager.cc:73] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::Imu[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [Sensors.cc:506] [0m[1;36mConfiguring Sensors system[0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [Sensors.cc:431] [0m[1;36mSensorsPrivate::Run[0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [SystemManager.cc:73] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::Sensors[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [Sensors.cc:411] [0m[1;36mSensorsPrivate::RenderThread started[0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [Sensors.cc:258] [0m[1;36mWaiting for init[0m[1;36m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mReplay recorder: measured ECM top-level model/actor poses, 20 Hz sim; evaluation only.[0m
+[ign gazebo-1] [1;36m[Dbg] [SystemManager.cc:73] [0m[1;36mLoaded system [[0m[1;36mrescue::ReplayRecorder[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mSocial dynamic scenario loaded: [0m[1;32m5[0m[1;32m model tracks; simulation-time, kinematic collision bodies.[0m
+[ign gazebo-1] [1;36m[Dbg] [SystemManager.cc:73] [0m[1;36mLoaded system [[0m[1;36mrescue::SocialScenarioMotion[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mLoaded level [[0m[1;32m3[0m[1;32m][0m[1;32m[0m
+[robot_distributed_mpc-5] [INFO] [1793558604.226652949] [robot1_distributed_mpc]: robot1: MPC waiting for measured team poses and common reference.
+[three_robot_dstar_mpc-4] [INFO] [1793558604.249568754] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[robot_distributed_mpc-6] [INFO] [1793558604.315359965] [robot2_distributed_mpc]: robot2: MPC waiting for measured team poses and common reference.
+[INFO] [parameter_bridge-9]: process started with pid [126780]
+[INFO] [robot_state_publisher-10]: process started with pid [126782]
+[INFO] [robot_state_publisher-11]: process started with pid [126784]
+[INFO] [robot_state_publisher-12]: process started with pid [126786]
+[robot_state_publisher-10] [INFO] [1793558605.145945699] [robot1.robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-10] [INFO] [1793558605.146046525] [robot1.robot_state_publisher]: got segment base_link
+[robot_state_publisher-10] [INFO] [1793558605.146057579] [robot1.robot_state_publisher]: got segment camera_link_1
+[robot_state_publisher-10] [INFO] [1793558605.146065618] [robot1.robot_state_publisher]: got segment omni_wheel_link_1
+[robot_state_publisher-10] [INFO] [1793558605.146073035] [robot1.robot_state_publisher]: got segment omni_wheel_link_2
+[robot_state_publisher-10] [INFO] [1793558605.146079756] [robot1.robot_state_publisher]: got segment omni_wheel_link_3
+[robot_state_publisher-10] [INFO] [1793558605.146086312] [robot1.robot_state_publisher]: got segment robot1/imu_link_1
+[robot_state_publisher-10] [INFO] [1793558605.146092826] [robot1.robot_state_publisher]: got segment robot1/lidar_link_1
+[robot_state_publisher-10] [INFO] [1793558605.146099463] [robot1.robot_state_publisher]: got segment roller_link_11
+[robot_state_publisher-10] [INFO] [1793558605.146105965] [robot1.robot_state_publisher]: got segment roller_link_12
+[robot_state_publisher-10] [INFO] [1793558605.146112303] [robot1.robot_state_publisher]: got segment roller_link_13
+[robot_state_publisher-10] [INFO] [1793558605.146122391] [robot1.robot_state_publisher]: got segment roller_link_14
+[robot_state_publisher-10] [INFO] [1793558605.146128870] [robot1.robot_state_publisher]: got segment roller_link_15
+[robot_state_publisher-10] [INFO] [1793558605.146135167] [robot1.robot_state_publisher]: got segment roller_link_16
+[robot_state_publisher-10] [INFO] [1793558605.146141785] [robot1.robot_state_publisher]: got segment roller_link_21
+[robot_state_publisher-10] [INFO] [1793558605.146148175] [robot1.robot_state_publisher]: got segment roller_link_22
+[robot_state_publisher-10] [INFO] [1793558605.146154285] [robot1.robot_state_publisher]: got segment roller_link_23
+[robot_state_publisher-10] [INFO] [1793558605.146160416] [robot1.robot_state_publisher]: got segment roller_link_24
+[robot_state_publisher-10] [INFO] [1793558605.146169980] [robot1.robot_state_publisher]: got segment roller_link_25
+[robot_state_publisher-10] [INFO] [1793558605.146176074] [robot1.robot_state_publisher]: got segment roller_link_26
+[robot_state_publisher-10] [INFO] [1793558605.146182395] [robot1.robot_state_publisher]: got segment roller_link_31
+[robot_state_publisher-10] [INFO] [1793558605.146188708] [robot1.robot_state_publisher]: got segment roller_link_32
+[robot_state_publisher-10] [INFO] [1793558605.146194893] [robot1.robot_state_publisher]: got segment roller_link_33
+[robot_state_publisher-10] [INFO] [1793558605.146201089] [robot1.robot_state_publisher]: got segment roller_link_34
+[robot_state_publisher-10] [INFO] [1793558605.146207293] [robot1.robot_state_publisher]: got segment roller_link_35
+[robot_state_publisher-10] [INFO] [1793558605.146213450] [robot1.robot_state_publisher]: got segment roller_link_36
+[robot_state_publisher-12] [INFO] [1793558605.472739989] [robot3.robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-12] [INFO] [1793558605.472851704] [robot3.robot_state_publisher]: got segment base_link
+[robot_state_publisher-12] [INFO] [1793558605.472859412] [robot3.robot_state_publisher]: got segment camera_link_1
+[robot_state_publisher-12] [INFO] [1793558605.472863826] [robot3.robot_state_publisher]: got segment omni_wheel_link_1
+[robot_state_publisher-12] [INFO] [1793558605.472867899] [robot3.robot_state_publisher]: got segment omni_wheel_link_2
+[robot_state_publisher-12] [INFO] [1793558605.472871588] [robot3.robot_state_publisher]: got segment omni_wheel_link_3
+[robot_state_publisher-12] [INFO] [1793558605.472875887] [robot3.robot_state_publisher]: got segment robot3/imu_link_1
+[robot_state_publisher-12] [INFO] [1793558605.472879988] [robot3.robot_state_publisher]: got segment robot3/lidar_link_1
+[robot_state_publisher-12] [INFO] [1793558605.472883748] [robot3.robot_state_publisher]: got segment roller_link_11
+[robot_state_publisher-12] [INFO] [1793558605.472887686] [robot3.robot_state_publisher]: got segment roller_link_12
+[robot_state_publisher-12] [INFO] [1793558605.472891668] [robot3.robot_state_publisher]: got segment roller_link_13
+[robot_state_publisher-12] [INFO] [1793558605.472895287] [robot3.robot_state_publisher]: got segment roller_link_14
+[robot_state_publisher-12] [INFO] [1793558605.472899325] [robot3.robot_state_publisher]: got segment roller_link_15
+[robot_state_publisher-12] [INFO] [1793558605.472903032] [robot3.robot_state_publisher]: got segment roller_link_16
+[robot_state_publisher-12] [INFO] [1793558605.472906813] [robot3.robot_state_publisher]: got segment roller_link_21
+[robot_state_publisher-12] [INFO] [1793558605.472910556] [robot3.robot_state_publisher]: got segment roller_link_22
+[robot_state_publisher-12] [INFO] [1793558605.472914803] [robot3.robot_state_publisher]: got segment roller_link_23
+[robot_state_publisher-12] [INFO] [1793558605.472919204] [robot3.robot_state_publisher]: got segment roller_link_24
+[robot_state_publisher-12] [INFO] [1793558605.472923558] [robot3.robot_state_publisher]: got segment roller_link_25
+[robot_state_publisher-12] [INFO] [1793558605.472927632] [robot3.robot_state_publisher]: got segment roller_link_26
+[robot_state_publisher-12] [INFO] [1793558605.472931471] [robot3.robot_state_publisher]: got segment roller_link_31
+[robot_state_publisher-12] [INFO] [1793558605.472934898] [robot3.robot_state_publisher]: got segment roller_link_32
+[robot_state_publisher-12] [INFO] [1793558605.472938625] [robot3.robot_state_publisher]: got segment roller_link_33
+[robot_state_publisher-12] [INFO] [1793558605.472942350] [robot3.robot_state_publisher]: got segment roller_link_34
+[robot_state_publisher-12] [INFO] [1793558605.472945992] [robot3.robot_state_publisher]: got segment roller_link_35
+[robot_state_publisher-12] [INFO] [1793558605.472949660] [robot3.robot_state_publisher]: got segment roller_link_36
+[robot_state_publisher-11] [INFO] [1793558605.473941665] [robot2.robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-11] [INFO] [1793558605.474003280] [robot2.robot_state_publisher]: got segment base_link
+[robot_state_publisher-11] [INFO] [1793558605.474008289] [robot2.robot_state_publisher]: got segment camera_link_1
+[robot_state_publisher-11] [INFO] [1793558605.474011235] [robot2.robot_state_publisher]: got segment omni_wheel_link_1
+[robot_state_publisher-11] [INFO] [1793558605.474014141] [robot2.robot_state_publisher]: got segment omni_wheel_link_2
+[robot_state_publisher-11] [INFO] [1793558605.474016672] [robot2.robot_state_publisher]: got segment omni_wheel_link_3
+[robot_state_publisher-11] [INFO] [1793558605.474019232] [robot2.robot_state_publisher]: got segment robot2/imu_link_1
+[robot_state_publisher-11] [INFO] [1793558605.474021743] [robot2.robot_state_publisher]: got segment robot2/lidar_link_1
+[robot_state_publisher-11] [INFO] [1793558605.474024445] [robot2.robot_state_publisher]: got segment roller_link_11
+[robot_state_publisher-11] [INFO] [1793558605.474027057] [robot2.robot_state_publisher]: got segment roller_link_12
+[robot_state_publisher-11] [INFO] [1793558605.474029725] [robot2.robot_state_publisher]: got segment roller_link_13
+[robot_state_publisher-11] [INFO] [1793558605.474034768] [robot2.robot_state_publisher]: got segment roller_link_14
+[robot_state_publisher-11] [INFO] [1793558605.474037213] [robot2.robot_state_publisher]: got segment roller_link_15
+[robot_state_publisher-11] [INFO] [1793558605.474039659] [robot2.robot_state_publisher]: got segment roller_link_16
+[robot_state_publisher-11] [INFO] [1793558605.474042114] [robot2.robot_state_publisher]: got segment roller_link_21
+[robot_state_publisher-11] [INFO] [1793558605.474044543] [robot2.robot_state_publisher]: got segment roller_link_22
+[robot_state_publisher-11] [INFO] [1793558605.474046934] [robot2.robot_state_publisher]: got segment roller_link_23
+[robot_state_publisher-11] [INFO] [1793558605.474049368] [robot2.robot_state_publisher]: got segment roller_link_24
+[robot_state_publisher-11] [INFO] [1793558605.474051753] [robot2.robot_state_publisher]: got segment roller_link_25
+[robot_state_publisher-11] [INFO] [1793558605.474054112] [robot2.robot_state_publisher]: got segment roller_link_26
+[robot_state_publisher-11] [INFO] [1793558605.474056512] [robot2.robot_state_publisher]: got segment roller_link_31
+[robot_state_publisher-11] [INFO] [1793558605.474058914] [robot2.robot_state_publisher]: got segment roller_link_32
+[robot_state_publisher-11] [INFO] [1793558605.474061277] [robot2.robot_state_publisher]: got segment roller_link_33
+[robot_state_publisher-11] [INFO] [1793558605.474063622] [robot2.robot_state_publisher]: got segment roller_link_34
+[robot_state_publisher-11] [INFO] [1793558605.474066034] [robot2.robot_state_publisher]: got segment roller_link_35
+[robot_state_publisher-11] [INFO] [1793558605.474068408] [robot2.robot_state_publisher]: got segment roller_link_36
+[parameter_bridge-9] [INFO] [1793558606.455100828] [ros_gz_bridge]: Creating GZ->ROS Bridge: [clock (gz.msgs.Clock) -> clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1793558606.457826409] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/social_dynamic/dynamic_pose/info (ignition.msgs.Pose_V) -> /gazebo/world_poses (tf2_msgs/msg/TFMessage)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1793558606.461697566] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot1/imu (ignition.msgs.IMU) -> /robot1/imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1793558606.463352077] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot1/scan (ignition.msgs.LaserScan) -> /robot1/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1793558606.464284595] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot2/imu (ignition.msgs.IMU) -> /robot2/imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1793558606.465002254] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot2/scan (ignition.msgs.LaserScan) -> /robot2/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1793558606.465731348] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot3/imu (ignition.msgs.IMU) -> /robot3/imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1793558606.466429784] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot3/scan (ignition.msgs.LaserScan) -> /robot3/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[INFO] [create-13]: process started with pid [126853]
+[create-13] [INFO] [1793558607.804429669] [ros_gz_sim]: Waiting messages on topic [/robot1/robot_description].
+[create-13] [INFO] [1793558608.089481868] [ros_gz_sim]: Requested creation of entity.
+[create-13] [INFO] [1793558608.089612640] [ros_gz_sim]: OK creation of entity.
+[ign gazebo-1] [INFO] [1793558608.200020499] [GazeboSimROS2ControlPlugin]: robot_param_node is robot_state_publisher
+[ign gazebo-1] [INFO] [1793558608.200043125] [GazeboSimROS2ControlPlugin]: robot_param_node is robot_description
+[INFO] [create-13]: process has finished cleanly [pid 126853]
+[INFO] [kinematics-14]: process started with pid [126885]
+[INFO] [spawner-15]: process started with pid [126887]
+[ign gazebo-1] [INFO] [1793558608.579309971] [robot1.gz_ros2_control]: connected to service!! /robot1/robot_state_publisher asking for robot_description
+[spawner-15] [INFO] [1793558608.610869161] [robot1.robot1_controller_spawner]: waiting for service /robot1/controller_manager/list_controllers to become available...
+[robot_state_publisher-10] [WARN] [1793558608.818444900] [robot1.robot_state_publisher.rclcpp]: failed to send response to /robot1/robot_state_publisher/get_parameters (timeout): client will not receive response, at ./src/rmw_response.cpp:154, at ./src/rcl/service.c:314
+[INFO] [create-16]: process started with pid [126932]
+[create-16] [INFO] [1793558609.252404033] [ros_gz_sim]: Waiting messages on topic [/robot2/robot_description].
+[create-16] [INFO] [1793558610.252586535] [ros_gz_sim]: Waiting messages on topic [/robot2/robot_description].
+[create-16] [INFO] [1793558610.540572600] [ros_gz_sim]: Requested creation of entity.
+[create-16] [INFO] [1793558610.540758694] [ros_gz_sim]: OK creation of entity.
+[INFO] [create-16]: process has finished cleanly [pid 126932]
+[INFO] [kinematics-17]: process started with pid [126952]
+[INFO] [spawner-18]: process started with pid [126954]
+[spawner-18] [INFO] [1793558610.900836135] [robot2.robot2_controller_spawner]: waiting for service /robot2/controller_manager/list_controllers to become available...
+[INFO] [create-19]: process started with pid [126981]
+[create-19] [INFO] [1793558611.732892774] [ros_gz_sim]: Waiting messages on topic [/robot3/robot_description].
+[create-19] [INFO] [1793558612.933279679] [ros_gz_sim]: Requested creation of entity.
+[create-19] [INFO] [1793558612.933405282] [ros_gz_sim]: OK creation of entity.
+[INFO] [create-19]: process has finished cleanly [pid 126981]
+[INFO] [kinematics-20]: process started with pid [127002]
+[INFO] [spawner-21]: process started with pid [127004]
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mServing world controls on [[0m[1;32m/world/social_dynamic[0m[1;32m/control], [[0m[1;32m/world/social_dynamic[0m[1;32m/control/state] and [[0m[1;32m/world/social_dynamic[0m[1;32m/playback/control][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mServing GUI information on [[0m[1;32m/world/social_dynamic[0m[1;32m/[0m[1;32mgui/info[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mWorld [[0m[1;32msocial_dynamic[0m[1;32m] initialized with [[0m[1;32m1ms[0m[1;32m] physics profile.[0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mServing world SDF generation service on [[0m[1;32m/world/social_dynamic[0m[1;32m/[0m[1;32mgenerate_world_sdf[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mServing world names on [[0m[1;32m/gazebo/worlds[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mResource path add service on [[0m[1;32m/gazebo/resource_paths/add[0m[1;32m].[0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mResource path get service on [[0m[1;32m/gazebo/resource_paths/get[0m[1;32m].[0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mResource path resolve service on [[0m[1;32m/gazebo/resource_paths/resolve[0m[1;32m].[0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mResource paths published on [[0m[1;32m/gazebo/resource_paths[0m[1;32m].[0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mServer control service on [[0m[1;32m/server_control[0m[1;32m].[0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mFound no publishers on /stats, adding root stats topic[0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mFound no publishers on /clock, adding root clock topic[0m[1;32m[0m
+[ign gazebo-1] [1;36m[Dbg] [SimulationRunner.cc:501] [0m[1;36mCreating PostUpdate worker threads: [0m[1;36m6[0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [SimulationRunner.cc:512] [0m[1;36mCreating postupdate worker thread ([0m[1;36m0[0m[1;36m)[0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [SimulationRunner.cc:512] [0m[1;36mCreating postupdate worker thread ([0m[1;36m1[0m[1;36m)[0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [SimulationRunner.cc:512] [0m[1;36mCreating postupdate worker thread ([0m[1;36m2[0m[1;36m)[0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [SimulationRunner.cc:512] [0m[1;36mCreating postupdate worker thread ([0m[1;36m3[0m[1;36m)[0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [SimulationRunner.cc:512] [0m[1;36mCreating postupdate worker thread ([0m[1;36m4[0m[1;36m)[0m[1;36m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mSocial scenario: [0m[1;32mtv_viewer_a[0m[1;32m active[0m[1;32m at simulation second [0m[1;32m0.001[0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mSocial scenario: [0m[1;32mpatrol_person[0m[1;32m active[0m[1;32m at simulation second [0m[1;32m0.001[0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mServing scene information on [[0m[1;32m/world/social_dynamic[0m[1;32m/[0m[1;32mscene/info[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mServing graph information on [[0m[1;32m/world/social_dynamic[0m[1;32m/[0m[1;32mscene/graph[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mServing full state on [[0m[1;32m/world/social_dynamic[0m[1;32m/[0m[1;32mstate[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mServing full state (async) on [[0m[1;32m/world/social_dynamic[0m[1;32m/[0m[1;32mstate_async[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mPublishing scene information on [[0m[1;32m/world/social_dynamic/scene/info[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mPublishing entity deletions on [[0m[1;32m/world/social_dynamic/scene/deletion[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mPublishing state changes on [[0m[1;32m/world/social_dynamic/state[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mPublishing pose messages on [[0m[1;32m/world/social_dynamic[0m[1;32m/[0m[1;32mpose/info[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mPublishing dynamic pose messages on [[0m[1;32m/world/social_dynamic[0m[1;32m/[0m[1;32mdynamic_pose/info[0m[1;32m][0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mSocial motion verified in physics: [0m[1;32mtv_viewer_a[0m[1;32m at [0m[1;32m-1[0m[1;32m [0m[1;32m-3.85[0m[1;32m [0m[1;32m0[0m[1;32m[0m
+[ign gazebo-1] [1;32m[Msg] [0m[1;32mSocial motion verified in physics: [0m[1;32mpatrol_person[0m[1;32m at [0m[1;32m-5.5188[0m[1;32m [0m[1;32m-4.8[0m[1;32m [0m[1;32m0[0m[1;32m[0m
+[spawner-21] [INFO] [1793558613.490927173] [robot3.robot3_controller_spawner]: waiting for service /robot3/controller_manager/list_controllers to become available...
+[spawner-15] [FATAL] [1793558668.753146604] [robot1.robot1_controller_spawner]: Could not contact service /robot1/controller_manager/list_controllers
+[ERROR] [spawner-15]: process has died [pid 126887, exit code 1, cmd '/opt/ros/humble/lib/controller_manager/spawner joint_state_broadcaster wheel1_controller wheel2_controller wheel3_controller --controller-manager /robot1/controller_manager --controller-manager-timeout 60 --ros-args -r __node:=robot1_controller_spawner -r __ns:=/robot1'].
+[spawner-18] [FATAL] [1793558671.040983818] [robot2.robot2_controller_spawner]: Could not contact service /robot2/controller_manager/list_controllers
+[ERROR] [spawner-18]: process has died [pid 126954, exit code 1, cmd '/opt/ros/humble/lib/controller_manager/spawner joint_state_broadcaster wheel1_controller wheel2_controller wheel3_controller --controller-manager /robot2/controller_manager --controller-manager-timeout 60 --ros-args -r __node:=robot2_controller_spawner -r __ns:=/robot2'].
+[spawner-21] [FATAL] [1793558673.633428409] [robot3.robot3_controller_spawner]: Could not contact service /robot3/controller_manager/list_controllers
+[ERROR] [spawner-21]: process has died [pid 127004, exit code 1, cmd '/opt/ros/humble/lib/controller_manager/spawner joint_state_broadcaster wheel1_controller wheel2_controller wheel3_controller --controller-manager /robot3/controller_manager --controller-manager-timeout 60 --ros-args -r __node:=robot3_controller_spawner -r __ns:=/robot3'].
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[robot_state_publisher-11] [INFO] [1793558843.194537355] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [kinematics-20]: sending signal 'SIGINT' to process[kinematics-20]
+[INFO] [kinematics-17]: sending signal 'SIGINT' to process[kinematics-17]
+[INFO] [kinematics-14]: sending signal 'SIGINT' to process[kinematics-14]
+[INFO] [robot_state_publisher-12]: sending signal 'SIGINT' to process[robot_state_publisher-12]
+[INFO] [robot_state_publisher-11]: sending signal 'SIGINT' to process[robot_state_publisher-11]
+[ERROR] [kinematics-14]: process has died [pid 126885, exit code -2, cmd '/home/duc/three-robot-rescue/install/social_navigation_sim/lib/social_navigation_sim/kinematics --ros-args -r __node:=omni_kinematics -r __ns:=/robot1 --params-file /tmp/launch_params_zf8dfvwi'].
+[INFO] [robot_state_publisher-10]: sending signal 'SIGINT' to process[robot_state_publisher-10]
+[ERROR] [robot_state_publisher-12]: process has died [pid 126786, exit code -2, cmd '/opt/ros/humble/lib/robot_state_publisher/robot_state_publisher --ros-args -r __node:=robot_state_publisher -r __ns:=/robot3 --params-file /tmp/launch_params_pec2ilcn'].
+[INFO] [parameter_bridge-9]: sending signal 'SIGINT' to process[parameter_bridge-9]
+[ERROR] [robot_state_publisher-11]: process has died [pid 126784, exit code -2, cmd '/opt/ros/humble/lib/robot_state_publisher/robot_state_publisher --ros-args -r __node:=robot_state_publisher -r __ns:=/robot2 --params-file /tmp/launch_params_faofqvy3'].
+[INFO] [social_scene_markers.py-8]: sending signal 'SIGINT' to process[social_scene_markers.py-8]
+[ERROR] [robot_state_publisher-10]: process has died [pid 126782, exit code -2, cmd '/opt/ros/humble/lib/robot_state_publisher/robot_state_publisher --ros-args -r __node:=robot_state_publisher -r __ns:=/robot1 --params-file /tmp/launch_params_3c3w4r3c'].
+[INFO] [robot_distributed_mpc-7]: sending signal 'SIGINT' to process[robot_distributed_mpc-7]
+[INFO] [robot_distributed_mpc-6]: sending signal 'SIGINT' to process[robot_distributed_mpc-6]
+[INFO] [robot_distributed_mpc-5]: sending signal 'SIGINT' to process[robot_distributed_mpc-5]
+[ERROR] [social_scene_markers.py-8]: process has died [pid 126676, exit code -2, cmd '/home/duc/three-robot-rescue/install/social_navigation_sim/lib/social_navigation_sim/social_scene_markers.py --ros-args -r __node:=social_scene_markers --params-file /tmp/launch_params_5foeq9y7'].
+[INFO] [three_robot_dstar_mpc-4]: sending signal 'SIGINT' to process[three_robot_dstar_mpc-4]
+[ERROR] [robot_distributed_mpc-7]: process has died [pid 126674, exit code -2, cmd '/home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot3_distributed_mpc --params-file /tmp/launch_params_fe7np1uj'].
+[INFO] [lifecycle_manager-3]: sending signal 'SIGINT' to process[lifecycle_manager-3]
+[ERROR] [robot_distributed_mpc-6]: process has died [pid 126672, exit code -2, cmd '/home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot2_distributed_mpc --params-file /tmp/launch_params_ca19u776'].
+[INFO] [map_server-2]: sending signal 'SIGINT' to process[map_server-2]
+[ERROR] [robot_distributed_mpc-5]: process has died [pid 126670, exit code -2, cmd '/home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot1_distributed_mpc --params-file /tmp/launch_params_micpfjbi'].
+[INFO] [ign gazebo-1]: sending signal 'SIGINT' to process[ign gazebo-1]
+[robot_state_publisher-12] [INFO] [1793558843.194543799] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[ERROR] [lifecycle_manager-3]: process has died [pid 126666, exit code -2, cmd '/opt/ros/humble/lib/nav2_lifecycle_manager/lifecycle_manager --ros-args -r __node:=map_lifecycle_manager --params-file /tmp/launch_params_kiikd_4y'].
+[ERROR] [three_robot_dstar_mpc-4]: process has died [pid 126668, exit code -2, cmd '/home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/three_robot_dstar_mpc --ros-args -r __node:=three_robot_dstar_mpc --params-file /tmp/launch_params_bzhc_12z -r /map:=/map -r /physical_map:=/map'].
+[lifecycle_manager-3] [INFO] [1793558843.194608862] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[lifecycle_manager-3] [INFO] [1793558843.194738881] [map_lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (map_lifecycle_manager)
+[lifecycle_manager-3] [INFO] [1793558843.194837137] [map_lifecycle_manager]: [34m[1mTerminating bond timer...[0m[0m
+[ERROR] [map_server-2]: process has died [pid 126664, exit code -2, cmd '/opt/ros/humble/lib/nav2_map_server/map_server --ros-args -r __node:=map_server --params-file /tmp/launch_params_8711aojm'].
+[kinematics-20] [INFO] [1793558843.194615204] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[kinematics-17] [INFO] [1793558843.194642435] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[parameter_bridge-9] [INFO] [1793558843.194663737] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[map_server-2] [INFO] [1793558843.194664553] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[map_server-2] [INFO] [1793558843.194823199] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)
+[map_server-2] [INFO] [1793558843.194959360] [map_server]: Deactivating
+[map_server-2] [INFO] [1793558843.194989190] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[kinematics-14] [INFO] [1793558843.194787257] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[kinematics-17] OmniKinematics Destroyed
+[kinematics-20] OmniKinematics Destroyed
+[robot_state_publisher-10] [INFO] [1793558843.195787934] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[kinematics-14] OmniKinematics Destroyed
+[ign gazebo-1] [INFO] [1793558843.196962059] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[map_server-2] [INFO] [1793558843.205357140] [map_server]: Cleaning up
+[map_server-2] [INFO] [1793558843.205432630] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[kinematics-20] [INFO] [1793558843.209831242] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[map_server-2] [INFO] [1793558843.211736648] [map_server]: Destroying
+[lifecycle_manager-3] [INFO] [1793558843.212959018] [map_lifecycle_manager]: Destroying map_lifecycle_manager
+[kinematics-17] [INFO] [1793558843.214624525] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[ign gazebo-1] [1;36m[Dbg] [SignalHandler.cc:141] [0m[1;36mReceived signal[[0m[1;36m2[0m[1;36m].[0m
+[ign gazebo-1] [1;36m[Dbg] [ServerPrivate.cc:110] [0m[1;36mServer received signal[[0m[1;36m2[0m[1;36m][0m
+[ign gazebo-1] [1;36m[Dbg] [Sensors.cc:439] [0m[1;36mSensorsPrivate::Stop[0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [Sensors.cc:284] [0m[1;36mRendering Thread initialized[0m[1;36m[0m
+[ign gazebo-1] [1;36m[Dbg] [Sensors.cc:425] [0m[1;36mSensorsPrivate::RenderThread stopped[0m[1;36m[0m
+[parameter_bridge-9] [INFO] [1793558843.232705357] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [parameter_bridge-9]: process has finished cleanly [pid 126780]
+[INFO] [kinematics-17]: process has finished cleanly [pid 126952]
+[INFO] [kinematics-20]: process has finished cleanly [pid 127002]
+[ERROR] [ign gazebo-1]: process[ign gazebo-1] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+[INFO] [ign gazebo-1]: sending signal 'SIGTERM' to process[ign gazebo-1]
+[ERROR] [ign gazebo-1]: process has died [pid 126661, exit code -15, cmd 'ruby /usr/bin/ign gazebo /home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/worlds/social_dynamic.sdf -s -r -v 4 --force-version 6'].
+[INFO] [launch]: process[ign gazebo-1] was required: shutting down launched system

@@ -1,0 +1,66 @@
+[
+  {
+    "folder": "backups/20261102_004332_583001_lidar_2m_dynamic_avoidance_all_robots",
+    "reason": "lidar_2m_dynamic_avoidance_all_robots",
+    "archive_sha256": "eafde4a6f3a2203a9102e5ea88867697eb22187cf0fa6af1d11ff2d90d94eceb",
+    "files": 666,
+    "verified_against_source_at_creation": true,
+    "archive_manifest_reverified": true
+  },
+  {
+    "folder": "backups/20261102_010219_745310_before_checked_tracking_rollout_lidar_2m",
+    "reason": "before_checked_tracking_rollout_lidar_2m",
+    "archive_sha256": "bdc666f8efb00b6407b6d549df373815c68299812790594d65e22a76e3f42fa9",
+    "files": 670,
+    "verified_against_source_at_creation": true,
+    "archive_manifest_reverified": true
+  },
+  {
+    "folder": "backups/20261102_011027_106836_before_lidar_track_deduplication",
+    "reason": "before_lidar_track_deduplication",
+    "archive_sha256": "63e89f043a674663eacedaa59152caa7b16c53880f98e1ee51b652e0fa8e5d88",
+    "files": 674,
+    "verified_against_source_at_creation": true,
+    "archive_manifest_reverified": true
+  },
+  {
+    "folder": "backups/20261102_012150_729470_before_scan_capture_pose_alignment",
+    "reason": "before_scan_capture_pose_alignment",
+    "archive_sha256": "e0ad38f3b94256f6657d8749596c3a43af972843e6a3c67a67e282165e697e8e",
+    "files": 683,
+    "verified_against_source_at_creation": true,
+    "archive_manifest_reverified": true
+  },
+  {
+    "folder": "backups/20261102_013237_472143_before_buffered_scan_pose_retry",
+    "reason": "before_buffered_scan_pose_retry",
+    "archive_sha256": "722cc8bdf6ac9106c8a2cfcf3756d90461d8174a1346fbcccfbe88e72705a380",
+    "files": 688,
+    "verified_against_source_at_creation": true,
+    "archive_manifest_reverified": true
+  },
+  {
+    "folder": "backups/20261102_013735_098651_before_spatial_cluster_motion_persistence",
+    "reason": "before_spatial_cluster_motion_persistence",
+    "archive_sha256": "6e4db22a48bf6f50051cbc54adb584eceb4d5318b40a71b188b8e7e820149c0f",
+    "files": 689,
+    "verified_against_source_at_creation": true,
+    "archive_manifest_reverified": true
+  },
+  {
+    "folder": "backups/20261102_081417_792428_before_escape_speed_shadow_fix",
+    "reason": "before_escape_speed_shadow_fix",
+    "archive_sha256": "1007a852f861361a5b74a5e5f38c147616934395e85922208d56ef37175acecc",
+    "files": 697,
+    "verified_against_source_at_creation": true,
+    "archive_manifest_reverified": true
+  },
+  {
+    "folder": "backups/20261102_082817_438821_trial09_followers_no_contacts_before_turn_guard",
+    "reason": "trial09_followers_no_contacts_before_turn_guard",
+    "archive_sha256": "ca298aad360f18c4714aff56ebb63b31ac54cf711aa0d6968945927fa162053f",
+    "files": 701,
+    "verified_against_source_at_creation": true,
+    "archive_manifest_reverified": true
+  }
+]

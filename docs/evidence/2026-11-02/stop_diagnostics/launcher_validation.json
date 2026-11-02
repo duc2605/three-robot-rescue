@@ -1,0 +1,9 @@
+{
+  "default_unsets_inherited_flags": true,
+  "replay_only_does_not_enable_diagnostics": true,
+  "diagnose_enables_pose_and_controller_files": true,
+  "launch_args_forwarded": true,
+  "existing_directory_refused": true,
+  "missing_directory_argument_refused": true,
+  "gazebo_started": false
+}

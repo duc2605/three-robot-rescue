@@ -1,0 +1,43 @@
+{
+  "normal_replay.json": {
+    "robot1": {
+      "samples": 18,
+      "rejections": {}
+    },
+    "robot2": {
+      "samples": 18,
+      "rejections": {}
+    },
+    "robot3": {
+      "samples": 18,
+      "rejections": {
+        "normal_tracked_obstacle": 68,
+        "normal_planning_map": 12
+      }
+    }
+  },
+  "second_shadow.json": {
+    "robot1": {
+      "samples": 10,
+      "rejections": {}
+    },
+    "robot2": {
+      "samples": 10,
+      "rejections": {}
+    },
+    "robot3": {
+      "samples": 10,
+      "rejections": {
+        "normal_tracked_obstacle": 110,
+        "normal_planning_map": 18
+      }
+    }
+  },
+  "limits": [
+    "Shadow estimates from measured topics, not live internal telemetry; no robot commands published",
+    "Moving-only hazard trigger emulates older code; other rolling state/track association can differ",
+    "No guard rejection counts obtained when guard was inactive; negative initial swept clearance explains impossibility condition geometrically",
+    "Rejection counters count failed proposals, not independent scenarios or benchmark performance",
+    "All three stopped in newest 15s sample; earlier follower avoidance is a separate observation"
+  ]
+}

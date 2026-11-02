@@ -1,0 +1,10 @@
+{
+  "domain": "224",
+  "events": 20,
+  "epoch_reset": true,
+  "all_three_robots": true,
+  "real_static_tf_alias": true,
+  "distinct_astar_mpc": true,
+  "no_gazebo": true,
+  "no_command_publisher_spun": true
+}

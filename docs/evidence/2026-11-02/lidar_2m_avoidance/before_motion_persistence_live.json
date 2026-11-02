@@ -1,0 +1,31 @@
+{
+  "goal_sent": true,
+  "goal": [
+    1.0351457595825195,
+    -2.035773515701294
+  ],
+  "last_sim": 84.699,
+  "wall_seconds": 240.56006259300193,
+  "scans": {
+    "robot1": {
+      "range_max": 2.0,
+      "rays": 240
+    },
+    "robot2": {
+      "range_max": 2.0,
+      "rays": 240
+    },
+    "robot3": {
+      "range_max": 2.0,
+      "rays": 240
+    }
+  },
+  "last_status": {
+    "robot2": "moving_obstacle: no verified safe escape, holding",
+    "robot1": "normal",
+    "robot3": "moving_obstacle: no verified safe escape, holding"
+  },
+  "launch_exit": 0,
+  "ros_domain": "50",
+  "scope": "One isolated full-stack run; not repeated benchmark or proof of general avoidance."
+}

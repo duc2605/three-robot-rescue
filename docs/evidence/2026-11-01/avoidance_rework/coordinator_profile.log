@@ -1,0 +1,43 @@
+[INFO] [1793514854.995720202] [three_robot_dstar_mpc]: D* Lite + leader/follower MPC ready; order: robot3 -> robot2 -> robot1; waiting for /map and an RViz 2D Goal Pose.
+[INFO] [1793514855.162337563] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[INFO] [1793514855.621270465] [three_robot_dstar_mpc]: robot1: using Gazebo world pose in map.
+[INFO] [1793514855.624313224] [three_robot_dstar_mpc]: robot2: using Gazebo world pose in map.
+[INFO] [1793514855.627077098] [three_robot_dstar_mpc]: robot3: using Gazebo world pose in map.
+[WARN] [1793514855.638148725] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[WARN] [1793514859.080399099] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[WARN] [1793514862.490209437] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[WARN] [1793514865.531832750] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[WARN] [1793514869.008270959] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[WARN] [1793514872.453329094] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/usr/lib/python3.10/cProfile.py", line 191, in <module>
+    main()
+  File "/usr/lib/python3.10/cProfile.py", line 180, in main
+    runctx(code, globs, None, options.outfile, options.sort)
+  File "/usr/lib/python3.10/cProfile.py", line 20, in runctx
+    return _pyprofile._Utils(Profile).runctx(statement, globals, locals,
+  File "/usr/lib/python3.10/profile.py", line 63, in runctx
+    prof.runctx(statement, globals, locals)
+  File "/usr/lib/python3.10/cProfile.py", line 101, in runctx
+    exec(cmd, globals, locals)
+  File "/home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/three_robot_dstar_mpc", line 33, in <module>
+    sys.exit(load_entry_point('social-navigation-planner', 'console_scripts', 'three_robot_dstar_mpc')())
+  File "/home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py", line 1761, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 812, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 809, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 309, in _execute_coroutine_step
+    result = coro.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 478, in handler
+    arg = take_from_wait_list(entity)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 400, in _take_subscription
+    msg_info = sub.handle.take_message(sub.msg_type, sub.raw)
+RuntimeError: Unable to convert call argument to Python object (compile in debug mode for details)

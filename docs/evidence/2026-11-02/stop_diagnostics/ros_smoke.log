@@ -1,0 +1,4 @@
+[INFO] [1793553112.146140194] [distributed_robot_mpc]: robot3: MPC waiting for measured team poses and common reference.
+[INFO] [1793553112.154160919] [distributed_robot_mpc]: robot3: MPC waiting for measured team poses and common reference.
+[INFO] [1793553112.163703438] [three_robot_dstar_mpc]: D* Lite + leader/follower MPC ready; order: robot3 -> robot2 -> robot1; waiting for /map and an RViz 2D Goal Pose.
+{'default_writer_disabled': True, 'opt_in_real_ros_timers_write_controller_and_coordinator': True, 'ros_domain': '211', 'gazebo_started': False, 'sensor_data_supplied': False, 'counts': {'stop_coordinator.jsonl': 11, 'stop_robot3.jsonl': 14}}

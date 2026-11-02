@@ -1,0 +1,32 @@
+F....................................................................... [ 97%]
+..                                                                       [100%]
+=================================== FAILURES ===================================
+___ test_safety_does_not_delete_route_or_refresh_cached_future_indefinitely ____
+
+    def test_safety_does_not_delete_route_or_refresh_cached_future_indefinitely():
+        poses=((0.,0.,0.),(1.,0.,0.),(2.,0.,0.))
+        node=coordinator(poses,empty_grid());clock=[100.];node.now_seconds=lambda:clock[0]
+        route=object();node.convoy=route
+        nominal=[tuple((p[0]+k*.02,p[1],p[2]) for p in poses) for k in range(9)]
+        node.publish_reference_rows(nominal)
+>       for _ in range(3):node.moving_safety_callback(String(data='moving_obstacle: yielding with checked local escape;'),2)
+
+social_navigation_planner/test/test_stable_handoff.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <social_navigation_planner.dstar_mpc_controller.ThreeRobotDStarMPC object at 0x75d40abf9300>
+msg = std_msgs.msg.String(data='moving_obstacle: yielding with checked local escape;')
+index = 2
+
+    def moving_safety_callback(self, msg, index):
+        if msg.data.startswith('moving_obstacle:'):
+            self.safety_holds[index] = (self.now_seconds(),time.monotonic())
+            self.last_observation = self.now_seconds()
+            self.safety_transition_pending = True
+>           if self.observation is not None:
+E           AttributeError: 'ThreeRobotDStarMPC' object has no attribute 'observation'
+
+social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:954: AttributeError
+=========================== short test summary info ============================
+FAILED social_navigation_planner/test/test_stable_handoff.py::test_safety_does_not_delete_route_or_refresh_cached_future_indefinitely
+1 failed, 73 passed in 17.62s

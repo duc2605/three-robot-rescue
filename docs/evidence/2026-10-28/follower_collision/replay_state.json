@@ -1,0 +1,92 @@
+{
+  "sim_time": 26.483,
+  "goal": [
+    2.27774,
+    -2.54233
+  ],
+  "models": {
+    "tv_viewer_a_walking": {
+      "xyz": [
+        1.392628835211265,
+        -2.5,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "patrol_person": {
+      "xyz": [
+        4.85,
+        -4.8,
+        0.0
+      ],
+      "yaw": 0.266999944452231
+    },
+    "robot1": {
+      "xyz": [
+        2.1862476904943686,
+        -2.2141150693103535,
+        0.015500572548347729
+      ],
+      "yaw": -3.059927797626341
+    },
+    "robot2": {
+      "xyz": [
+        1.6761732659089763,
+        -2.759861930236217,
+        0.015745432572631637
+      ],
+      "yaw": -1.9778582796799187
+    },
+    "robot3": {
+      "xyz": [
+        1.6602096177742058,
+        -3.3345621151978913,
+        0.015504938054394329
+      ],
+      "yaw": -0.7859522957271621
+    }
+  },
+  "person_to_robot_distances": {
+    "robot1": 0.8435407998765013,
+    "robot2": 0.384611059338888,
+    "robot3": 0.8764093788410608
+  },
+  "note": "Gazebo ground truth for replay/evaluation only; never controller perception input. Visual contact from user screenshot, no contact sensor confirmation. Restoring poses alone is not deterministic replay of controller history.",
+  "goal_history_wall_ros_time": [
+    {
+      "wall_ros_time": 1793175196.6320736,
+      "xy": [
+        1.49521,
+        -2.56484
+      ]
+    },
+    {
+      "wall_ros_time": 1793175258.8089552,
+      "xy": [
+        1.17316,
+        -4.75014
+      ]
+    },
+    {
+      "wall_ros_time": 1793175305.1031528,
+      "xy": [
+        1.79459,
+        -3.0715
+      ]
+    },
+    {
+      "wall_ros_time": 1793175315.9129732,
+      "xy": [
+        2.27774,
+        -2.54233
+      ]
+    }
+  ],
+  "person_velocity_near_capture": {
+    "xy": [
+      0.35,
+      0.0
+    ],
+    "source": "authored trajectory for replay/evaluation only; not a sensor velocity estimate"
+  }
+}

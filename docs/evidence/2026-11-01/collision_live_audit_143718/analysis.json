@@ -1,0 +1,121 @@
+{
+  "rtf_sample": 0.24609126981886822,
+  "physics_stats_rtf_single_sample": 0.2111,
+  "leader_goal_distance_end_m": 0.04827781769246263,
+  "command_counts": {
+    "robot1": {
+      "total": 51,
+      "linear_nonzero": 6,
+      "any_nonzero": 6
+    },
+    "robot2": {
+      "total": 41,
+      "linear_nonzero": 10,
+      "any_nonzero": 10
+    },
+    "robot3": {
+      "total": 47,
+      "linear_nonzero": 3,
+      "any_nonzero": 3
+    }
+  },
+  "sample_wall_s": 15.016637049000565,
+  "contact_events": [
+    {
+      "wall_time_utc": "2026-11-01T07:36:07.285462+00:00",
+      "event": "contact_begin",
+      "session": "1793518476673905575",
+      "epoch": 0,
+      "sim_time": 29.751,
+      "pair": "robot3|tv_viewer_a_walking",
+      "category": "human_robot",
+      "models": [
+        "robot3",
+        "tv_viewer_a_walking"
+      ],
+      "began": 29.751,
+      "last_contact": 29.751,
+      "duration": 0,
+      "physics_samples": 1,
+      "collisions": [
+        "social_dynamic::robot3::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+        "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+      ],
+      "positions": [
+        [
+          1.74820725968,
+          -2.38009376913,
+          0.109430926706
+        ],
+        [
+          1.74820725968,
+          -2.38009376913,
+          0.109430926706
+        ]
+      ],
+      "source": "gazebo_physics_contact"
+    },
+    {
+      "wall_time_utc": "2026-11-01T07:36:41.780371+00:00",
+      "event": "contact_end",
+      "session": "1793518476673905575",
+      "epoch": 0,
+      "sim_time": 35.557,
+      "pair": "robot3|tv_viewer_a_walking",
+      "category": "human_robot",
+      "models": [
+        "robot3",
+        "tv_viewer_a_walking"
+      ],
+      "began": 29.751,
+      "last_contact": 35.556,
+      "duration": 5.806,
+      "physics_samples": 5806,
+      "collisions": [
+        "social_dynamic::robot3::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+        "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+      ],
+      "positions": [
+        [
+          1.80271541856,
+          -2.2436542021,
+          0.103781090658
+        ],
+        [
+          1.80271541856,
+          -2.2436542021,
+          0.103781090658
+        ]
+      ],
+      "source": "gazebo_physics_contact"
+    }
+  ],
+  "safety_snapshot_counts": {
+    "robot1": {
+      "missing": 1,
+      "stale_data: holding": 5,
+      "moving_obstacle: stop, fresh state/lidar/physical map required": 1,
+      "moving_obstacle: no verified safe escape, holding": 7,
+      "moving_obstacle: yielding with checked local escape": 1
+    },
+    "robot2": {
+      "missing": 1,
+      "stale_data: holding": 2,
+      "moving_obstacle: no verified safe escape, holding": 3,
+      "moving_obstacle: yielding with checked local escape": 9
+    },
+    "robot3": {
+      "missing": 1,
+      "moving_obstacle: no verified safe escape, holding": 7,
+      "normal": 2,
+      "moving_obstacle: stop, fresh state/lidar/physical map required": 3,
+      "moving_obstacle: stop, stale state or escape sensors": 1,
+      "moving_obstacle: yielding with checked local escape": 1
+    }
+  },
+  "limits": [
+    "Initial monitor ended before completing 60 seconds; snapshots cover about 9 seconds only. Followup completed 15 seconds.",
+    "Both observations began after the collision ended; no synchronized pre-contact commands captured.",
+    "No controlled baseline, no claim of causal RTF improvement or collision-free avoidance."
+  ]
+}

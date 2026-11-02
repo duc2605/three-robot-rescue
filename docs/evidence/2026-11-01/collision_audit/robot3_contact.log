@@ -1,0 +1,30 @@
+[1;32m[Msg] [0m[1;32mIgnition Gazebo Server v[0m[1;32m6.18.0[0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mLoading SDF world file[[0m[1;32m/home/duc/three-robot-rescue/docs/evidence/2026-11-01/collision_audit/robot3_contact.sdf[0m[1;32m].[0m
+[1;32m[Msg] [0m[1;32mServing entity system service on [[0m[1;32m/[0m[1;32mentity/system/add[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mSocial dynamic scenario loaded: [0m[1;32m1[0m[1;32m model tracks; simulation-time, kinematic collision bodies.[0m
+[1;32m[Msg] [0m[1;32mLoaded level [[0m[1;32m3[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mServing world controls on [[0m[1;32m/world/contact_fixture[0m[1;32m/control], [[0m[1;32m/world/contact_fixture[0m[1;32m/control/state] and [[0m[1;32m/world/contact_fixture[0m[1;32m/playback/control][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mServing GUI information on [[0m[1;32m/world/contact_fixture[0m[1;32m/[0m[1;32mgui/info[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mWorld [[0m[1;32mcontact_fixture[0m[1;32m] initialized with [[0m[1;32mtest[0m[1;32m] physics profile.[0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mServing world SDF generation service on [[0m[1;32m/world/contact_fixture[0m[1;32m/[0m[1;32mgenerate_world_sdf[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mServing world names on [[0m[1;32m/gazebo/worlds[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mResource path add service on [[0m[1;32m/gazebo/resource_paths/add[0m[1;32m].[0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mResource path get service on [[0m[1;32m/gazebo/resource_paths/get[0m[1;32m].[0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mResource path resolve service on [[0m[1;32m/gazebo/resource_paths/resolve[0m[1;32m].[0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mResource paths published on [[0m[1;32m/gazebo/resource_paths[0m[1;32m].[0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mServer control service on [[0m[1;32m/server_control[0m[1;32m].[0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mFound no publishers on /stats, adding root stats topic[0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mFound no publishers on /clock, adding root clock topic[0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mSocial scenario: [0m[1;32mperson_test[0m[1;32m active[0m[1;32m at simulation second [0m[1;32m0.001[0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mServing scene information on [[0m[1;32m/world/contact_fixture[0m[1;32m/[0m[1;32mscene/info[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mServing graph information on [[0m[1;32m/world/contact_fixture[0m[1;32m/[0m[1;32mscene/graph[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mServing full state on [[0m[1;32m/world/contact_fixture[0m[1;32m/[0m[1;32mstate[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mServing full state (async) on [[0m[1;32m/world/contact_fixture[0m[1;32m/[0m[1;32mstate_async[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mPublishing scene information on [[0m[1;32m/world/contact_fixture/scene/info[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mPublishing entity deletions on [[0m[1;32m/world/contact_fixture/scene/deletion[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mPublishing state changes on [[0m[1;32m/world/contact_fixture/state[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mPublishing pose messages on [[0m[1;32m/world/contact_fixture[0m[1;32m/[0m[1;32mpose/info[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mPublishing dynamic pose messages on [[0m[1;32m/world/contact_fixture[0m[1;32m/[0m[1;32mdynamic_pose/info[0m[1;32m][0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mSocial motion verified in physics: [0m[1;32mperson_test[0m[1;32m at [0m[1;32m0.8985[0m[1;32m [0m[1;32m0[0m[1;32m [0m[1;32m0[0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mCOLLISION_AUDIT [0m[1;32m{"event":"contact_begin","session":"1793517736922509390","epoch":0,"sim_time":1.062,"pair":"person_test|robot3","category":"human_robot","models":["person_test","robot3"],"began":1.062,"last_contact":1.062,"duration":0,"physics_samples":1,"collisions":["contact_fixture::person_test::body::body_envelope","contact_fixture::robot3::body::body_collision"],"positions":[[0.149680851064,-1.71616707094e-19,0.17979790634],[0.149680851064,-1.71616707094e-19,0.17979790634]],"source":"gazebo_physics_contact"}[0m[1;32m[0m
+[1;32m[Msg] [0m[1;32mCOLLISION_AUDIT [0m[1;32m{"event":"contact_end","session":"1793517736922509390","epoch":0,"sim_time":2.979,"pair":"person_test|robot3","category":"human_robot","models":["person_test","robot3"],"began":1.062,"last_contact":2.978,"duration":1.917,"physics_samples":1917,"collisions":["contact_fixture::person_test::body::body_envelope","contact_fixture::robot3::body::body_collision"],"positions":[[0.147975994821,-1.22792761971e-08,0.17979821566],[0.147975994821,-1.22792761971e-08,0.17979821566]],"source":"gazebo_physics_contact"}[0m[1;32m[0m

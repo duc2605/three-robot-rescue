@@ -1,0 +1,12 @@
+{
+  "/map": {
+    "clearance": 0.4821320968308151,
+    "footprint_free": true,
+    "stamp": 0.0
+  },
+  "/social_navigation/map": {
+    "clearance": 0.19617053698086215,
+    "footprint_free": true,
+    "stamp": 401.0
+  }
+}

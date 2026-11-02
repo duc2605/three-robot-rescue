@@ -1,0 +1,17 @@
+[
+  {
+    "node": "robot1_distributed_mpc",
+    "old_pid": 65978,
+    "new_pid": 66269
+  },
+  {
+    "node": "robot2_distributed_mpc",
+    "old_pid": 65979,
+    "new_pid": 66270
+  },
+  {
+    "node": "robot3_distributed_mpc",
+    "old_pid": 65980,
+    "new_pid": 66271
+  }
+]

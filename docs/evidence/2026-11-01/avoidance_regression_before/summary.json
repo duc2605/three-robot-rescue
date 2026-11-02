@@ -1,0 +1,59 @@
+{
+  "elapsed": 60.0,
+  "sim": null,
+  "sim_elapsed": null,
+  "rtf_recent": null,
+  "goal": [
+    1.03553,
+    -2.55432
+  ],
+  "leader_goal_distance": null,
+  "team": null,
+  "path_length_sampled": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "command_counts": {
+    "robot1": {},
+    "robot2": {},
+    "robot3": {}
+  },
+  "safety_latest": {
+    "robot1": null,
+    "robot2": null,
+    "robot3": null
+  },
+  "counts": {},
+  "log_warning_counts": {},
+  "social": null,
+  "observation": null,
+  "started_vietnam": "2026-11-01T13:19:33.799429+07:00",
+  "ended_vietnam": "2026-11-01T13:20:33.884715+07:00",
+  "duration_wall_seconds": 60.039871633000075,
+  "first_team": null,
+  "status_message_counts": {
+    "robot1": {},
+    "robot2": {},
+    "robot3": {}
+  },
+  "goal_changes": [
+    {
+      "elapsed": 0.01,
+      "sim": null,
+      "xy": [
+        1.03553,
+        -2.55432
+      ],
+      "source": "trial initial goal (user or unchanged reapplied goal)"
+    }
+  ],
+  "min_capture_matched_camera_center_distance": null,
+  "limitations": [
+    "Read-only ROS observations; no contact sensor or ground-truth collision verification",
+    "Path length is sampled XY movement with 2 mm noise threshold per 1s snapshot",
+    "Status message counts are not time percentages or independent hazard encounters",
+    "Data age and receipt age differ; camera-center distance only computed with <=0.2s capture stamp difference",
+    "No goal, command, parameter or restart action by monitor"
+  ]
+}

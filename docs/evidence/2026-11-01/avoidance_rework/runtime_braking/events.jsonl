@@ -1,0 +1,370 @@
+{"elapsed": 1.315, "sim": 3.9, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 3}; nearest_track=(0.5783942604353527, -3.4364849812352767) velocity=(0.0, 0.0) confirmed=False radius=0.450"}
+{"elapsed": 1.315, "sim": 3.9, "kind": "robot3/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 10}; nearest_track=(4.228970006346223, 0.2738245807783668) velocity=(-0.041048244581344775, -0.10882385427891847) confirmed=True radius=0.410"}
+{"elapsed": 1.497, "sim": 4.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 1.498, "sim": 4.0, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 3.843, "sim": 5.15, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 14, 'peer': 0}; nearest_track=(2.989345099618868, -2.8344577368778126) velocity=(0.0, 0.0) confirmed=False radius=0.415"}
+{"elapsed": 3.932, "sim": 5.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 3.933, "sim": 5.2, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}; nearest_track=(2.989345099618868, -2.8344577368778126) velocity=(0.0, 0.0) confirmed=False radius=0.420"}
+{"elapsed": 4.14, "sim": 5.3, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 4.141, "sim": 5.3, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(2.989345099618868, -2.8344577368778126) velocity=(0.0, 0.0) confirmed=False radius=0.430"}
+{"elapsed": 4.333, "sim": 5.4, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 4.335, "sim": 5.4, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 13, 'peer': 0}; nearest_track=(2.989345099618868, -2.8344577368778126) velocity=(0.0, 0.0) confirmed=False radius=0.440"}
+{"elapsed": 4.337, "sim": 5.4, "kind": "robot3/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 9}; nearest_track=(3.9272395416282957, -4.55736241582286) velocity=(0.0, 0.0) confirmed=False radius=0.479"}
+{"elapsed": 4.344, "sim": 5.4, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 4.438, "sim": 5.45, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 12, 'peer': 0}; nearest_track=(3.9870498243111667, -2.4134600847000054) velocity=(0.0, 0.0) confirmed=False radius=0.424"}
+{"elapsed": 4.534, "sim": 5.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 4.535, "sim": 5.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 4.538, "sim": 5.5, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 9, 'peer': 0}; nearest_track=(3.9870498243111667, -2.4134600847000054) velocity=(0.0, 0.0) confirmed=False radius=0.430"}
+{"elapsed": 4.538, "sim": 5.5, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 15, 'peer': 0}; nearest_track=(2.989345099618868, -2.8344577368778126) velocity=(0.0, 0.0) confirmed=False radius=0.450"}
+{"elapsed": 4.725, "sim": 5.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 4.726, "sim": 5.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 4.729, "sim": 5.6, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 15, 'peer': 0}; nearest_track=(2.989345099618868, -2.8344577368778126) velocity=(0.0, 0.0) confirmed=False radius=0.460"}
+{"elapsed": 4.731, "sim": 5.6, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}; nearest_track=(3.9870498243111667, -2.4134600847000054) velocity=(0.0, 0.0) confirmed=False radius=0.440"}
+{"elapsed": 4.922, "sim": 5.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 4.922, "sim": 5.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 4.924, "sim": 5.7, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 15, 'peer': 0}; nearest_track=(2.989345099618868, -2.8344577368778126) velocity=(0.0, 0.0) confirmed=False radius=0.470"}
+{"elapsed": 4.926, "sim": 5.7, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}; nearest_track=(3.9870498243111667, -2.4134600847000054) velocity=(0.0, 0.0) confirmed=False radius=0.450"}
+{"elapsed": 4.929, "sim": 5.7, "kind": "robot3/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 16, 'peer': 0}; nearest_track=(2.389412986503078, -2.3841980330910424) velocity=(0.0, 0.0) confirmed=False radius=0.623"}
+{"elapsed": 4.93, "sim": 5.7, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 4.935, "sim": 5.7, "kind": "robot3/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}; nearest_track=(2.389412986503078, -2.3841980330910424) velocity=(0.0, 0.0) confirmed=False radius=0.624"}
+{"elapsed": 5.101, "sim": 5.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 5.101, "sim": 5.8, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 5.102, "sim": 5.8, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 5.105, "sim": 5.8, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}; nearest_track=(3.9870498243111667, -2.4134600847000054) velocity=(0.0, 0.0) confirmed=False radius=0.460"}
+{"elapsed": 5.106, "sim": 5.8, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 15, 'peer': 0}; nearest_track=(2.882590502545631, -3.0576991035885563) velocity=(0.0, 0.0) confirmed=False radius=0.420"}
+{"elapsed": 5.109, "sim": 5.8, "kind": "robot3/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}; nearest_track=(2.389412986503078, -2.3841980330910424) velocity=(0.0, 0.0) confirmed=False radius=0.634"}
+{"elapsed": 5.306, "sim": 5.91, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.248m buffer_gap=-0.398m"}
+{"elapsed": 5.315, "sim": 5.92, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.236m buffer_gap=-0.326m"}
+{"elapsed": 5.319, "sim": 5.92, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.054m buffer_gap=-0.036m"}
+{"elapsed": 5.456, "sim": 6.01, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.237m buffer_gap=-0.337m"}
+{"elapsed": 5.464, "sim": 6.01, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.248m buffer_gap=-0.408m"}
+{"elapsed": 5.467, "sim": 6.01, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.051m buffer_gap=-0.049m"}
+{"elapsed": 5.643, "sim": 6.11, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.238m buffer_gap=-0.348m"}
+{"elapsed": 5.649, "sim": 6.12, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.050m buffer_gap=-0.060m"}
+{"elapsed": 5.807, "sim": 6.21, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.239m buffer_gap=-0.359m"}
+{"elapsed": 5.814, "sim": 6.21, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.050m buffer_gap=-0.070m"}
+{"elapsed": 5.973, "sim": 6.3, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.157s scan_wall_age=0.483s scan_capture_age=0.300s coverage=True physical_map=True"}
+{"elapsed": 6.0, "sim": 6.31, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.239m buffer_gap=-0.369m"}
+{"elapsed": 6.155, "sim": 6.4, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.180s scan_wall_age=0.665s scan_capture_age=0.400s coverage=True physical_map=True"}
+{"elapsed": 6.184, "sim": 6.41, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.239m buffer_gap=-0.379m"}
+{"elapsed": 6.2, "sim": 6.42, "kind": "robot1/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.92m/s band=route_blocked TTC=infs; A*=reactive fallback; uncertainty_recovery=False"}
+{"elapsed": 6.342, "sim": 6.5, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.185s scan_wall_age=0.852s scan_capture_age=0.500s coverage=True physical_map=True"}
+{"elapsed": 6.368, "sim": 6.51, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.239m buffer_gap=-0.389m"}
+{"elapsed": 6.525, "sim": 6.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 6.525, "sim": 6.6, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 6.81, "sim": 6.74, "kind": "robot1/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.92m/s band=route_blocked TTC=infs; A*=left; uncertainty_recovery=False"}
+{"elapsed": 6.814, "sim": 6.74, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 16.798, "sim": 11.34, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 12, 'peer': 0}; nearest_track=(3.8950097719286028, -2.987185478062097) velocity=(0.0, 0.0) confirmed=False radius=0.413"}
+{"elapsed": 17.023, "sim": 11.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 17.038, "sim": 11.4, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(3.8950097719286028, -2.987185478062097) velocity=(0.0, 0.0) confirmed=False radius=0.420"}
+{"elapsed": 17.359, "sim": 11.47, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 12, 'peer': 0}; nearest_track=(2.3725485907017867, -2.945408683027402) velocity=(0.0, 0.0) confirmed=False radius=0.407"}
+{"elapsed": 17.448, "sim": 11.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 17.45, "sim": 11.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 17.459, "sim": 11.5, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(2.3725485907017867, -2.945408683027402) velocity=(0.0, 0.0) confirmed=False radius=0.410"}
+{"elapsed": 17.465, "sim": 11.5, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 9, 'peer': 0}; nearest_track=(3.8950097719286028, -2.987185478062097) velocity=(0.0, 0.0) confirmed=False radius=0.430"}
+{"elapsed": 17.811, "sim": 11.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 17.812, "sim": 11.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 17.821, "sim": 11.6, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 9, 'peer': 0}; nearest_track=(2.3725485907017867, -2.945408683027402) velocity=(0.0, 0.0) confirmed=False radius=0.420"}
+{"elapsed": 17.825, "sim": 11.6, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 9, 'peer': 0}; nearest_track=(3.8950097719286028, -2.987185478062097) velocity=(0.0, 0.0) confirmed=False radius=0.440"}
+{"elapsed": 18.124, "sim": 11.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 18.125, "sim": 11.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 18.132, "sim": 11.7, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 9, 'peer': 0}; nearest_track=(3.8950097719286028, -2.987185478062097) velocity=(0.0, 0.0) confirmed=False radius=0.450"}
+{"elapsed": 18.137, "sim": 11.7, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(2.3725485907017867, -2.945408683027402) velocity=(0.0, 0.0) confirmed=False radius=0.430"}
+{"elapsed": 18.412, "sim": 11.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 18.413, "sim": 11.8, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 18.417, "sim": 11.8, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 9, 'peer': 0}; nearest_track=(3.8950097719286028, -2.987185478062097) velocity=(0.0, 0.0) confirmed=False radius=0.460"}
+{"elapsed": 18.421, "sim": 11.8, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(2.3725485907017867, -2.945408683027402) velocity=(0.0, 0.0) confirmed=False radius=0.440"}
+{"elapsed": 18.688, "sim": 11.9, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 18.69, "sim": 11.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 18.696, "sim": 11.9, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 9, 'peer': 0}; nearest_track=(3.8950097719286028, -2.987185478062097) velocity=(0.0, 0.0) confirmed=False radius=0.470"}
+{"elapsed": 18.696, "sim": 11.9, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(2.3725485907017867, -2.945408683027402) velocity=(0.0, 0.0) confirmed=False radius=0.450"}
+{"elapsed": 18.962, "sim": 12.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 18.964, "sim": 12.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 18.972, "sim": 12.0, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(2.3725485907017867, -2.945408683027402) velocity=(0.0, 0.0) confirmed=False radius=0.460"}
+{"elapsed": 19.269, "sim": 12.1, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 19.279, "sim": 12.1, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(2.3725485907017867, -2.945408683027402) velocity=(0.0, 0.0) confirmed=False radius=0.470"}
+{"elapsed": 19.522, "sim": 12.19, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 10, 'peer': 0}; nearest_track=(4.561566355612866, -2.4826750150723536) velocity=(0.0, 0.0) confirmed=False radius=0.596"}
+{"elapsed": 19.539, "sim": 12.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 19.541, "sim": 12.2, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 19.542, "sim": 12.2, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(4.561566355612866, -2.4826750150723536) velocity=(0.0, 0.0) confirmed=False radius=0.598"}
+{"elapsed": 19.835, "sim": 12.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 19.837, "sim": 12.3, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(4.561566355612866, -2.4826750150723536) velocity=(0.0, 0.0) confirmed=False radius=0.608"}
+{"elapsed": 20.108, "sim": 12.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 20.11, "sim": 12.4, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(4.561566355612866, -2.4826750150723536) velocity=(0.0, 0.0) confirmed=False radius=0.618"}
+{"elapsed": 20.416, "sim": 12.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 20.419, "sim": 12.5, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(4.561566355612866, -2.4826750150723536) velocity=(0.0, 0.0) confirmed=False radius=0.628"}
+{"elapsed": 20.704, "sim": 12.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 20.707, "sim": 12.6, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(4.561566355612866, -2.4826750150723536) velocity=(0.0, 0.0) confirmed=False radius=0.638"}
+{"elapsed": 21.058, "sim": 12.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 21.061, "sim": 12.7, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(3.873385267288277, -2.89775679765026) velocity=(0.0, 0.0) confirmed=False radius=0.410"}
+{"elapsed": 21.376, "sim": 12.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 21.382, "sim": 12.8, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(3.873385267288277, -2.89775679765026) velocity=(0.0, 0.0) confirmed=False radius=0.420"}
+{"elapsed": 21.687, "sim": 12.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 21.694, "sim": 12.9, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(3.7534224520012973, -2.2779476488399593) velocity=(0.0, 0.0) confirmed=False radius=0.410"}
+{"elapsed": 22.0, "sim": 13.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 22.004, "sim": 13.0, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(3.7534224520012973, -2.2779476488399593) velocity=(0.0, 0.0) confirmed=False radius=0.420"}
+{"elapsed": 22.327, "sim": 13.1, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 22.332, "sim": 13.1, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(3.7534224520012973, -2.2779476488399593) velocity=(0.0, 0.0) confirmed=False radius=0.430"}
+{"elapsed": 22.618, "sim": 13.2, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 22.623, "sim": 13.2, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(3.7534224520012973, -2.2779476488399593) velocity=(0.0, 0.0) confirmed=False radius=0.440"}
+{"elapsed": 22.91, "sim": 13.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 22.914, "sim": 13.3, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(3.7534224520012973, -2.2779476488399593) velocity=(0.0, 0.0) confirmed=False radius=0.450"}
+{"elapsed": 23.183, "sim": 13.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 23.187, "sim": 13.4, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(3.7534224520012973, -2.2779476488399593) velocity=(0.0, 0.0) confirmed=False radius=0.460"}
+{"elapsed": 23.471, "sim": 13.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 23.476, "sim": 13.5, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(3.7534224520012973, -2.2779476488399593) velocity=(0.0, 0.0) confirmed=False radius=0.470"}
+{"elapsed": 23.759, "sim": 13.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 24.435, "sim": 13.82, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.020s scan_wall_age=0.018s scan_capture_age=0.420s coverage=True physical_map=True"}
+{"elapsed": 24.675, "sim": 13.9, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.260s scan_wall_age=0.258s scan_capture_age=0.500s coverage=True physical_map=True"}
+{"elapsed": 24.951, "sim": 14.0, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.273s scan_wall_age=0.533s scan_capture_age=0.600s coverage=True physical_map=True"}
+{"elapsed": 25.247, "sim": 14.11, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.024m buffer_gap=-0.174m"}
+{"elapsed": 25.494, "sim": 14.2, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 28.132, "sim": 15.21, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 10}; nearest_track=(4.800339767666747, -2.1022070550935954) velocity=(0.0, 0.0) confirmed=False radius=0.420"}
+{"elapsed": 28.227, "sim": 15.24, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 12}; nearest_track=(4.800339767666747, -2.1022070550935954) velocity=(0.0, 0.0) confirmed=False radius=0.423"}
+{"elapsed": 28.392, "sim": 15.3, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 28.394, "sim": 15.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 29.853, "sim": 15.77, "kind": "robot3/safety_change", "value": "normal_mpc: no feasible rollout at step=8; rejected={'map': 0, 'lidar': 0, 'track': 168, 'peer': 0}; nearest_track=(1.2479959047812932, -2.693702674429568) velocity=(0.0, 0.0) confirmed=False radius=0.513"}
+{"elapsed": 29.854, "sim": 15.77, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 31.174, "sim": 16.26, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 31.238, "sim": 16.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 31.282, "sim": 16.31, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 31.374, "sim": 16.35, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 31.453, "sim": 16.39, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 31.479, "sim": 16.4, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 31.483, "sim": 16.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 31.484, "sim": 16.4, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 31.487, "sim": 16.4, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 31.574, "sim": 16.43, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 31.653, "sim": 16.47, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 31.715, "sim": 16.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 31.717, "sim": 16.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 31.717, "sim": 16.5, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 31.774, "sim": 16.52, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 31.853, "sim": 16.55, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 31.883, "sim": 16.57, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 31.956, "sim": 16.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 31.957, "sim": 16.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 31.958, "sim": 16.6, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 31.973, "sim": 16.6, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 32.054, "sim": 16.63, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 32.083, "sim": 16.65, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 32.188, "sim": 16.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 33.557, "sim": 17.19, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.78m/s band=fast TTC=2.47s; A*=right; uncertainty_recovery=False"}
+{"elapsed": 33.563, "sim": 17.19, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.004s scan_wall_age=1.551s scan_capture_age=0.590s coverage=True physical_map=True"}
+{"elapsed": 33.666, "sim": 17.22, "kind": "robot2/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.78m/s band=fast TTC=2.62s; A*=left; uncertainty_recovery=False"}
+{"elapsed": 33.674, "sim": 17.22, "kind": "robot2/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.004s scan_wall_age=1.688s scan_capture_age=0.620s coverage=True physical_map=True"}
+{"elapsed": 33.856, "sim": 17.3, "kind": "robot2/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.186s scan_wall_age=0.180s scan_capture_age=0.300s coverage=True physical_map=True"}
+{"elapsed": 34.136, "sim": 17.4, "kind": "robot2/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.278s scan_wall_age=0.460s scan_capture_age=0.400s coverage=True physical_map=True"}
+{"elapsed": 34.582, "sim": 17.57, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.78m/s band=fast TTC=1.89s; A*=right; uncertainty_recovery=False"}
+{"elapsed": 34.588, "sim": 17.57, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 34.973, "sim": 17.72, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 35.171, "sim": 17.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 35.175, "sim": 17.8, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 35.441, "sim": 17.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 35.574, "sim": 17.95, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 35.683, "sim": 17.99, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 35.7, "sim": 18.0, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 35.702, "sim": 18.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 35.775, "sim": 18.02, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 35.819, "sim": 18.04, "kind": "robot2/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.83m/s band=fast TTC=1.78s; A*=reactive fallback; uncertainty_recovery=False"}
+{"elapsed": 35.821, "sim": 18.04, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 35.854, "sim": 18.05, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 35.882, "sim": 18.06, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 35.987, "sim": 18.1, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 35.988, "sim": 18.1, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 35.989, "sim": 18.1, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 36.053, "sim": 18.13, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 36.204, "sim": 18.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 39.288, "sim": 19.28, "kind": "robot3/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 12, 'peer': 0}; nearest_track=(1.2485039393445736, -2.2947737968534887) velocity=(0.0, 0.0) confirmed=False radius=0.407"}
+{"elapsed": 39.337, "sim": 19.3, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 39.345, "sim": 19.3, "kind": "robot3/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(1.2485039393445736, -2.2947737968534887) velocity=(0.0, 0.0) confirmed=False radius=0.410"}
+{"elapsed": 39.603, "sim": 19.4, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 39.612, "sim": 19.4, "kind": "robot3/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(1.2485039393445736, -2.2947737968534887) velocity=(0.0, 0.0) confirmed=False radius=0.420"}
+{"elapsed": 39.889, "sim": 19.5, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 39.899, "sim": 19.5, "kind": "robot3/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(1.2485039393445736, -2.2947737968534887) velocity=(0.0, 0.0) confirmed=False radius=0.430"}
+{"elapsed": 40.135, "sim": 19.59, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 10, 'peer': 0}; nearest_track=(3.1755798173995338, -2.3784880530168326) velocity=(0.0, 0.0) confirmed=False radius=0.419"}
+{"elapsed": 40.158, "sim": 19.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 40.159, "sim": 19.6, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 40.165, "sim": 19.6, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(3.1755798173995338, -2.3784880530168326) velocity=(0.0, 0.0) confirmed=False radius=0.420"}
+{"elapsed": 40.166, "sim": 19.6, "kind": "robot3/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(1.2485039393445736, -2.2947737968534887) velocity=(0.0, 0.0) confirmed=False radius=0.440"}
+{"elapsed": 40.493, "sim": 19.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 40.499, "sim": 19.7, "kind": "robot1/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(3.3490393355069505, -1.8797037933570317) velocity=(0.0, 0.0) confirmed=False radius=0.410"}
+{"elapsed": 40.528, "sim": 19.71, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.253m buffer_gap=-0.341m"}
+{"elapsed": 40.567, "sim": 19.72, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.122m buffer_gap=-0.252m"}
+{"elapsed": 40.587, "sim": 19.73, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.227m buffer_gap=-0.318m"}
+{"elapsed": 40.757, "sim": 19.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 40.805, "sim": 19.81, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.227m buffer_gap=-0.327m"}
+{"elapsed": 40.825, "sim": 19.82, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.127m buffer_gap=-0.267m"}
+{"elapsed": 41.061, "sim": 19.92, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.200m buffer_gap=-0.310m"}
+{"elapsed": 41.063, "sim": 19.92, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.129m buffer_gap=-0.279m"}
+{"elapsed": 41.306, "sim": 20.02, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.179m buffer_gap=-0.306m"}
+{"elapsed": 41.309, "sim": 20.02, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.247m buffer_gap=0.017m"}
+{"elapsed": 41.568, "sim": 20.12, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.174m buffer_gap=-0.321m"}
+{"elapsed": 41.592, "sim": 20.14, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.247m buffer_gap=0.008m"}
+{"elapsed": 41.792, "sim": 20.21, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.170m buffer_gap=-0.335m"}
+{"elapsed": 41.796, "sim": 20.21, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.248m buffer_gap=0.000m"}
+{"elapsed": 42.036, "sim": 20.32, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.170m buffer_gap=-0.320m"}
+{"elapsed": 42.219, "sim": 20.4, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 42.453, "sim": 20.49, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 42.479, "sim": 20.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 42.574, "sim": 20.53, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 42.654, "sim": 20.56, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 42.724, "sim": 20.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 42.725, "sim": 20.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 42.749, "sim": 20.61, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.00m/s band=close TTC=0.00s; A*=reactive fallback; uncertainty_recovery=False"}
+{"elapsed": 42.773, "sim": 20.62, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 42.854, "sim": 20.65, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 42.993, "sim": 20.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 42.994, "sim": 20.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 43.054, "sim": 20.72, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.174, "sim": 20.77, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.235, "sim": 20.8, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 43.237, "sim": 20.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 43.254, "sim": 20.8, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.374, "sim": 20.84, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.498, "sim": 20.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 43.5, "sim": 20.9, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 43.574, "sim": 20.92, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.654, "sim": 20.96, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.699, "sim": 20.98, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.15m/s band=route_blocked TTC=infs; A*=right; uncertainty_recovery=False"}
+{"elapsed": 43.712, "sim": 20.98, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.006s scan_wall_age=0.960s scan_capture_age=0.580s coverage=True physical_map=True"}
+{"elapsed": 43.747, "sim": 21.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 43.747, "sim": 21.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 43.775, "sim": 21.01, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.853, "sim": 21.03, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.024, "sim": 21.1, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 44.026, "sim": 21.1, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 44.053, "sim": 21.11, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.174, "sim": 21.16, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.273, "sim": 21.2, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 44.273, "sim": 21.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 44.374, "sim": 21.24, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.454, "sim": 21.27, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.533, "sim": 21.3, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 44.534, "sim": 21.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 44.535, "sim": 21.3, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.17m/s band=route_blocked TTC=infs; A*=right; uncertainty_recovery=False"}
+{"elapsed": 44.538, "sim": 21.3, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.002s scan_wall_age=0.825s scan_capture_age=0.500s coverage=True physical_map=True"}
+{"elapsed": 44.574, "sim": 21.31, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.654, "sim": 21.34, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.804, "sim": 21.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 44.806, "sim": 21.4, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 44.853, "sim": 21.41, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.975, "sim": 21.46, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 45.068, "sim": 21.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 45.069, "sim": 21.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 45.174, "sim": 21.53, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 45.253, "sim": 21.56, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 45.354, "sim": 21.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 45.356, "sim": 21.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 45.374, "sim": 21.6, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 45.377, "sim": 21.6, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.00m/s band=route_blocked TTC=infs; A*=left; uncertainty_recovery=False"}
+{"elapsed": 45.454, "sim": 21.63, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 45.641, "sim": 21.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 45.644, "sim": 21.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 45.654, "sim": 21.7, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 45.774, "sim": 21.75, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 45.891, "sim": 21.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 45.891, "sim": 21.8, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 45.974, "sim": 21.82, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 46.054, "sim": 21.85, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 46.166, "sim": 21.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 46.174, "sim": 21.9, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 46.21, "sim": 21.91, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.020m buffer_gap=-0.070m"}
+{"elapsed": 46.419, "sim": 22.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 46.458, "sim": 22.01, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.020m buffer_gap=-0.080m"}
+{"elapsed": 46.575, "sim": 22.05, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 46.702, "sim": 22.1, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 46.706, "sim": 22.1, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 46.738, "sim": 22.11, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.036m buffer_gap=-0.174m"}
+{"elapsed": 46.774, "sim": 22.12, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 46.883, "sim": 22.17, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 46.94, "sim": 22.2, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 46.942, "sim": 22.2, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 46.943, "sim": 22.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 46.974, "sim": 22.21, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 47.054, "sim": 22.23, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 47.083, "sim": 22.24, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 47.223, "sim": 22.3, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 47.26, "sim": 22.31, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.036m buffer_gap=-0.194m"}
+{"elapsed": 47.271, "sim": 22.31, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.013m buffer_gap=-0.213m"}
+{"elapsed": 47.493, "sim": 22.41, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.013m buffer_gap=-0.223m"}
+{"elapsed": 47.494, "sim": 22.41, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.036m buffer_gap=-0.204m"}
+{"elapsed": 47.756, "sim": 22.51, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.013m buffer_gap=-0.234m"}
+{"elapsed": 47.76, "sim": 22.51, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.036m buffer_gap=-0.214m"}
+{"elapsed": 47.992, "sim": 22.61, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.036m buffer_gap=-0.224m"}
+{"elapsed": 47.995, "sim": 22.61, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.048m buffer_gap=-0.092m"}
+{"elapsed": 48.238, "sim": 22.71, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.149m buffer_gap=-0.001m"}
+{"elapsed": 48.25, "sim": 22.71, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.047m buffer_gap=-0.103m"}
+{"elapsed": 48.548, "sim": 22.83, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.438m buffer_gap=0.298m"}
+{"elapsed": 48.803, "sim": 22.93, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.268m buffer_gap=1.168m"}
+{"elapsed": 48.823, "sim": 22.94, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.348m buffer_gap=0.198m"}
+{"elapsed": 48.98, "sim": 23.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 49.185, "sim": 23.06, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.960m buffer_gap=0.867m"}
+{"elapsed": 49.2, "sim": 23.07, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 50.05, "sim": 23.36, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.48m/s band=slow TTC=0.00s; A*=left; uncertainty_recovery=False"}
+{"elapsed": 50.062, "sim": 23.36, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 50.082, "sim": 23.36, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 50.164, "sim": 23.4, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 52.194, "sim": 24.04, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 10, 'peer': 0}; nearest_track=(1.576585850525198, -2.9560783033891673) velocity=(0.0, 0.0) confirmed=False radius=0.486"}
+{"elapsed": 52.345, "sim": 24.1, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 52.349, "sim": 24.1, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}; nearest_track=(1.576585850525198, -2.9560783033891673) velocity=(0.0, 0.0) confirmed=False radius=0.492"}
+{"elapsed": 52.632, "sim": 24.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 53.766, "sim": 24.6, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}; nearest_track=(1.576585850525198, -2.9560783033891673) velocity=(0.0, 0.0) confirmed=False radius=0.542"}
+{"elapsed": 53.799, "sim": 24.61, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.026m buffer_gap=-0.211m"}
+{"elapsed": 54.023, "sim": 24.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 54.068, "sim": 24.71, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.023m buffer_gap=-0.209m"}
+{"elapsed": 54.385, "sim": 24.81, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.019m buffer_gap=-0.139m"}
+{"elapsed": 54.702, "sim": 24.91, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.017m buffer_gap=-0.147m"}
+{"elapsed": 55.12, "sim": 25.01, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.015m buffer_gap=-0.155m"}
+{"elapsed": 55.574, "sim": 25.13, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 55.782, "sim": 25.2, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 55.974, "sim": 25.26, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 56.053, "sim": 25.28, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 56.103, "sim": 25.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 56.105, "sim": 25.3, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 56.174, "sim": 25.32, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 56.254, "sim": 25.35, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 56.375, "sim": 25.4, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 56.378, "sim": 25.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 56.453, "sim": 25.42, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 56.574, "sim": 25.46, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 56.664, "sim": 25.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 56.664, "sim": 25.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 56.775, "sim": 25.54, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 56.854, "sim": 25.57, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 56.925, "sim": 25.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 56.926, "sim": 25.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 56.949, "sim": 25.6, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.39m/s band=slow TTC=2.34s; A*=right; uncertainty_recovery=False"}
+{"elapsed": 56.975, "sim": 25.61, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 57.054, "sim": 25.64, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 57.203, "sim": 25.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 57.205, "sim": 25.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 57.254, "sim": 25.72, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 57.374, "sim": 25.76, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 57.482, "sim": 25.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 57.485, "sim": 25.8, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 57.574, "sim": 25.82, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 57.654, "sim": 25.85, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 57.754, "sim": 25.88, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.35m/s band=slow TTC=1.92s; A*=right; uncertainty_recovery=False"}
+{"elapsed": 57.789, "sim": 25.9, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 57.791, "sim": 25.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 57.855, "sim": 25.92, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 57.974, "sim": 25.96, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 58.086, "sim": 26.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 58.088, "sim": 26.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 58.174, "sim": 26.02, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 58.254, "sim": 26.05, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 58.411, "sim": 26.1, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 58.414, "sim": 26.1, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 58.453, "sim": 26.11, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 58.575, "sim": 26.14, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 58.74, "sim": 26.2, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 58.742, "sim": 26.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 58.757, "sim": 26.2, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 58.774, "sim": 26.21, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 58.854, "sim": 26.23, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 58.883, "sim": 26.24, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 59.026, "sim": 26.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 59.026, "sim": 26.3, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.270s scan_wall_age=0.266s scan_capture_age=0.300s coverage=True physical_map=True"}
+{"elapsed": 59.271, "sim": 26.4, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.222s scan_wall_age=0.511s scan_capture_age=0.400s coverage=True physical_map=True"}
+{"elapsed": 59.952, "sim": 26.66, "kind": "robot3/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.373m buffer_gap=0.238m"}

@@ -1,0 +1,358 @@
+{
+  "counts": {
+    "clock": 245,
+    "robot2/cmd": 27,
+    "robot2/safety": 22,
+    "robot3/cmd": 31,
+    "robot3/safety": 26,
+    "robot1/cmd": 28,
+    "robot1/safety": 25,
+    "poses": 23,
+    "robot2/nonzero": 6,
+    "robot1/nonzero": 2,
+    "robot3/nonzero": 2
+  },
+  "first_poses": [
+    [
+      3.042412905906031,
+      -2.030004498846336
+    ],
+    [
+      2.8581946514921475,
+      -2.8610300567974596
+    ],
+    [
+      2.025115335147682,
+      -2.5239937642429155
+    ]
+  ],
+  "latest": {
+    "clock": 156.95,
+    "robot2/cmd": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "robot2/safety": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.195m buffer_gap=0.085m; rejected={'map': 0, 'lidar': 0, 'track': 6, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True",
+    "robot3/cmd": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "robot3/safety": "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.450s scan_wall_age=1.205s scan_capture_age=0.300s coverage=True physical_map=True",
+    "robot1/cmd": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "robot1/safety": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.064m buffer_gap=-0.046m; rejected={'map': 0, 'lidar': 0, 'track': 23, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True",
+    "poses": [
+      [
+        3.001519003561736,
+        -2.0279076077004436
+      ],
+      [
+        2.847550563466482,
+        -2.813058415487051
+      ],
+      [
+        1.9988675267047942,
+        -2.5159689599653063
+      ]
+    ]
+  },
+  "status_changes": [
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.361m buffer_gap=1.271m; rejected={'map': 0, 'lidar': 0, 'track': 1, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=0; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.160m buffer_gap=1.070m; rejected={'map': 0, 'lidar': 0, 'track': 1, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=0; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.064m buffer_gap=0.964m; rejected={'map': 0, 'lidar': 0, 'track': 4, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.337m buffer_gap=1.237m; rejected={'map': 0, 'lidar': 0, 'track': 3, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.283m buffer_gap=1.173m; rejected={'map': 0, 'lidar': 0, 'track': 2, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.288m buffer_gap=1.178m; rejected={'map': 0, 'lidar': 0, 'track': 2, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.123m buffer_gap=1.013m; rejected={'map': 0, 'lidar': 0, 'track': 4, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.426m buffer_gap=1.336m; rejected={'map': 0, 'lidar': 0, 'track': 4, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.412m buffer_gap=1.312m; rejected={'map': 0, 'lidar': 0, 'track': 6, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.034m buffer_gap=0.914m; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.295m buffer_gap=1.175m; rejected={'map': 0, 'lidar': 0, 'track': 3, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.417s scan_wall_age=1.190s scan_capture_age=0.300s coverage=True physical_map=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: yielding with checked local escape; speed=0.77m/s band=fast TTC=2.41s; A*=reactive fallback; uncertainty_recovery=False; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.303m buffer_gap=1.173m; rejected={'map': 0, 'lidar': 0, 'track': 4, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.404s scan_wall_age=1.597s scan_capture_age=0.400s coverage=True physical_map=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.300m buffer_gap=1.173m; rejected={'map': 0, 'lidar': 0, 'track': 4, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: yielding with checked local escape; speed=0.77m/s band=fast TTC=2.28s; A*=reactive fallback; uncertainty_recovery=False; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.400s scan_wall_age=1.999s scan_capture_age=0.500s coverage=True physical_map=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: stop, stale state or escape sensors; hazard unresolved"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: yielding with checked local escape; speed=0.77m/s band=fast TTC=2.16s; A*=reactive fallback; uncertainty_recovery=False; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.275m buffer_gap=1.145m; rejected={'map': 0, 'lidar': 0, 'track': 2, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.385s scan_wall_age=2.386s scan_capture_age=0.600s coverage=True physical_map=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: stop, stale state or escape sensors; hazard unresolved"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: yielding with checked local escape; speed=0.77m/s band=fast TTC=2.10s; A*=reactive fallback; uncertainty_recovery=False; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: yielding with checked local escape; speed=0.58m/s band=fast TTC=2.02s; A*=reactive fallback; uncertainty_recovery=False; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: yielding with checked local escape; speed=0.77m/s band=fast TTC=2.13s; A*=reactive fallback; uncertainty_recovery=False; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.743m buffer_gap=0.593m; rejected={'map': 0, 'lidar': 0, 'track': 3, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=1; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: yielding with checked local escape; speed=0.51m/s band=fast TTC=2.43s; A*=reactive fallback; uncertainty_recovery=False; team_owner=0; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: yielding with checked local escape; speed=0.58m/s band=fast TTC=1.89s; A*=reactive fallback; uncertainty_recovery=False; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.367s scan_wall_age=1.075s scan_capture_age=0.300s coverage=True physical_map=True"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.100m buffer_gap=0.010m; rejected={'map': 0, 'lidar': 0, 'track': 33, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.349s scan_wall_age=1.427s scan_capture_age=0.400s coverage=True physical_map=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.094m buffer_gap=-0.006m; rejected={'map': 0, 'lidar': 0, 'track': 67, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.152m buffer_gap=-0.242m; rejected={'map': 0, 'lidar': 0, 'track': 43, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.236m buffer_gap=0.146m; rejected={'map': 0, 'lidar': 0, 'track': 2, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.615m buffer_gap=0.525m; rejected={'map': 0, 'lidar': 0, 'track': 1, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.238m buffer_gap=0.138m; rejected={'map': 0, 'lidar': 0, 'track': 2, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.615m buffer_gap=0.515m; rejected={'map': 0, 'lidar': 0, 'track': 1, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.150m buffer_gap=-0.250m; rejected={'map': 0, 'lidar': 0, 'track': 49, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.616m buffer_gap=0.506m; rejected={'map': 0, 'lidar': 0, 'track': 1, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.148m buffer_gap=-0.258m; rejected={'map': 0, 'lidar': 0, 'track': 16, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.242m buffer_gap=0.132m; rejected={'map': 0, 'lidar': 0, 'track': 1, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.244m buffer_gap=0.124m; rejected={'map': 0, 'lidar': 0, 'track': 3, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.616m buffer_gap=0.496m; rejected={'map': 0, 'lidar': 0, 'track': 2, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.149m buffer_gap=-0.269m; rejected={'map': 0, 'lidar': 0, 'track': 32, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.470s scan_wall_age=1.195s scan_capture_age=0.300s coverage=True physical_map=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.615m buffer_gap=0.485m; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.151m buffer_gap=-0.281m; rejected={'map': 0, 'lidar': 0, 'track': 40, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.464s scan_wall_age=1.662s scan_capture_age=0.400s coverage=True physical_map=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.613m buffer_gap=0.473m; rejected={'map': 0, 'lidar': 0, 'track': 1, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.155m buffer_gap=-0.295m; rejected={'map': 0, 'lidar': 0, 'track': 19, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: stop, stale state or escape sensors; hazard unresolved"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.155m buffer_gap=-0.305m; rejected={'map': 0, 'lidar': 0, 'track': 36, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.065m buffer_gap=-0.025m; rejected={'map': 0, 'lidar': 0, 'track': 21, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.242m buffer_gap=0.092m; rejected={'map': 0, 'lidar': 0, 'track': 1, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.175m buffer_gap=0.075m; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.818m buffer_gap=0.718m; rejected={'map': 0, 'lidar': 0, 'track': 3, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.066m buffer_gap=-0.034m; rejected={'map': 0, 'lidar': 0, 'track': 36, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot3/safety",
+      "moving_obstacle: stop, fresh state/lidar/physical map required; state_wall_age=0.450s scan_wall_age=1.205s scan_capture_age=0.300s coverage=True physical_map=True"
+    ],
+    [
+      "robot1/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.064m buffer_gap=-0.046m; rejected={'map': 0, 'lidar': 0, 'track': 23, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ],
+    [
+      "robot2/safety",
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.195m buffer_gap=0.085m; rejected={'map': 0, 'lidar': 0, 'track': 6, 'peer': 0, 'peer_braking': 0, 'terminal': 0}; team_owner=None; budget_expired=True"
+    ]
+  ]
+}

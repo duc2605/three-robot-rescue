@@ -1,0 +1,23 @@
+{
+  "goal_unchanged": [
+    -5.01754,
+    -3.02664
+  ],
+  "read_only_runtime_profiling": true,
+  "physics_engine": "DART (startup log)",
+  "physics_step_seconds": 0.001,
+  "model_per_robot": {
+    "continuous_joints": 21,
+    "primary_collisions": 25,
+    "mesh_collisions": 22,
+    "rollers_with_self_collision": 18
+  },
+  "confirmed_bottleneck": "Gazebo server main thread near 100% of one logical CPU during the sampled interval",
+  "candidate_cause": "DART physics/contact work with articulated mesh-based robot model; function-level hotspot not confirmed",
+  "limits": [
+    "perf blocked by perf_event_paranoid=4",
+    "gdb attach blocked by ptrace restriction",
+    "No runtime parameter changes or component-disable A/B experiments performed",
+    "Process CPU profile was measured after the earlier RTF=0.089 run audit; not a same-condition performance comparison"
+  ]
+}

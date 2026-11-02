@@ -1,0 +1,4 @@
+/**:
+  ros__parameters:
+    analysis_window: 10.0
+    use_sim_time: true

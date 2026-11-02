@@ -1,0 +1,17 @@
+[19.129s] [three_robot_dstar_mpc-4] [INFO] [1793511994.010290950] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[25.149s] [three_robot_dstar_mpc-4] [INFO] [1793511999.519303206] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[43.190s] [three_robot_dstar_mpc-4] [INFO] [1793512017.746413467] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[51.210s] [three_robot_dstar_mpc-4] [INFO] [1793512025.364747355] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[52.215s] [three_robot_dstar_mpc-4] [WARN] [1793512026.806751739] [three_robot_dstar_mpc]: Measured obstacle clearance below 0.18 m (robot2=0.179 m); recovering wall clearance before resuming the route.
+[58.226s] [three_robot_dstar_mpc-4] [INFO] [1793512032.395129336] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[62.234s] [three_robot_dstar_mpc-4] [INFO] [1793512037.168327537] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[66.246s] [three_robot_dstar_mpc-4] [INFO] [1793512040.362344330] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[67.252s] [three_robot_dstar_mpc-4] [INFO] [1793512041.709241256] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[76.271s] [three_robot_dstar_mpc-4] [INFO] [1793512050.592250039] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[91.315s] [three_robot_dstar_mpc-4] [INFO] [1793512066.188145011] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[103.338s] [three_robot_dstar_mpc-4] [INFO] [1793512078.188528678] [three_robot_dstar_mpc]: Formation: yield / leader passing; followers clear corridor
+[108.346s] [three_robot_dstar_mpc-4] [INFO] [1793512082.558312123] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[109.350s] [three_robot_dstar_mpc-4] [INFO] [1793512083.668931885] [three_robot_dstar_mpc]: Formation: peer separation recovery
+[112.353s] [three_robot_dstar_mpc-4] [INFO] [1793512087.270150043] [three_robot_dstar_mpc]: Formation: peer separation recovery
+[115.358s] [three_robot_dstar_mpc-4] [WARN] [1793512089.673785341] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[118.362s] [three_robot_dstar_mpc-4] [WARN] [1793512092.768884580] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.

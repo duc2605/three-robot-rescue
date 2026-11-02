@@ -1,0 +1,1 @@
+Previous log goal: (1.03553, -2.55432). Rounded RViz log, not exact PoseStamped. Not automatically published after restart; user goal selections take priority.

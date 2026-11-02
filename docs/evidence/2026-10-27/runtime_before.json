@@ -1,0 +1,468 @@
+{
+  "wall_seconds": 22.008693537,
+  "counts": {
+    "/social_navigation/map": 3,
+    "/social_navigation/keepout": 3,
+    "/robot1/scan": 18,
+    "/robot2/scan": 18,
+    "/robot3/cmd_vel": 36,
+    "/leader/camera/image_raw": 28,
+    "/social_navigation/status": 17,
+    "/robot2/cmd_vel": 36,
+    "/robot1/cmd_vel": 36,
+    "/map": 1,
+    "/leader/people/status": 14,
+    "team": 34,
+    "robot_markers": 32,
+    "/leader/camera/camera_info": 27,
+    "/leader/camera/depth/image_raw": 20,
+    "/robot3/scan": 15,
+    "/leader/people/activity": 7,
+    "scene_markers": 4,
+    "path": 2,
+    "/social_navigation/attention_debug": 1
+  },
+  "latest": {
+    "/robot1/scan": {
+      "min_range": 0.5274035930633545,
+      "finite_rays": 61
+    },
+    "/robot2/scan": {
+      "min_range": 0.5230540633201599,
+      "finite_rays": 58
+    },
+    "/leader/camera/image_raw": {
+      "width": 480,
+      "height": 360
+    },
+    "/social_navigation/status": "usable_orientations=8, provisional_regions=0, confirmed_regions=5, color_regions=0, tv_regions=2, color_targets=2, remembered_people=11, remembered_viewers=8, tv_tracks=2, person_tracks=0, search=completed: search exhausted; evidence unresolved; social keepout active on D* Lite and all three MPC maps",
+    "/leader/people/status": "people=0, located=0, heads=0, tv=0, bodies=0, color_targets=0/0, inference_ms=340; RGB only: awaiting aligned depth and camera_info",
+    "team": [
+      [
+        2.134325080083581,
+        -3.601769902191733
+      ],
+      [
+        1.8190851209214167,
+        -4.05664040770626
+      ],
+      [
+        1.248439248260741,
+        -4.202168160411109
+      ]
+    ],
+    "robot_labels": [
+      "robot1 (follower 2)",
+      "robot2 (follower 1)",
+      "robot3 (leader)\ncolumn / tracking / narrow passage"
+    ],
+    "/leader/camera/camera_info": {
+      "width": 480,
+      "height": 360
+    },
+    "/leader/camera/depth/image_raw": {
+      "width": 480,
+      "height": 360
+    },
+    "/robot3/scan": {
+      "min_range": 0.44451040029525757,
+      "finite_rays": 95
+    },
+    "/leader/people/activity": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": 46.0, \"tracks\": []}",
+    "scene_last": {
+      "0": [
+        2.65,
+        0.45
+      ],
+      "1": [
+        4.05,
+        0.45
+      ],
+      "2": [
+        -3.4,
+        1.5
+      ],
+      "3": [
+        -1.4,
+        1.5
+      ],
+      "4": [
+        -2.4,
+        2.8
+      ],
+      "5": [
+        -3.5,
+        -2.0
+      ],
+      "6": [
+        0.0,
+        3.5
+      ],
+      "8": [
+        0.35,
+        -3.85
+      ],
+      "9": [
+        -3.9,
+        -0.25
+      ],
+      "10": [
+        2.108202263536028,
+        2.15
+      ],
+      "12": [
+        4.85,
+        2.312241959042722
+      ]
+    },
+    "path_points": 144,
+    "path_end": [
+      -5.041522979736328,
+      -2.9926846027374268
+    ],
+    "/social_navigation/attention_debug": "{\"stamp\": 44.0, \"candidates\": [{\"person\": \"0\", \"target\": \"('screen', 0)\", \"source\": \"tv\", \"position\": [3.955159154431171, 0.33529607712292897], \"target_position\": [-0.028921917209433712, -0.8589009497629011], \"heading\": [-0.5608169749706964, -0.8279398049283035], \"miss_degrees\": null, \"visible\": false, \"person_age\": 39.0, \"direction_age\": 40.0, \"target_age\": 38.75, \"stable_hits\": 8, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"0\", \"target\": \"('tv', 4)\", \"source\": \"tv\", \"position\": [3.955159154431171, 0.33529607712292897], \"target_position\": [0.05842975591553139, -0.8675395749694499], \"heading\": [-0.5608169749706964, -0.8279398049283035], \"miss_degrees\": null, \"visible\": false, \"person_age\": 39.0, \"direction_age\": 40.0, \"target_age\": 15.5, \"stable_hits\": 8, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"0\", \"target\": \"1\", \"source\": \"colour\", \"position\": [3.955159154431171, 0.33529607712292897], \"target_position\": [-0.02253645658493042, -0.866380363702774], \"heading\": [-0.5608169749706964, -0.8279398049283035], \"miss_degrees\": 34.17335982168708, \"visible\": false, \"person_age\": 39.0, \"direction_age\": 40.0, \"target_age\": 5.5, \"stable_hits\": 8, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"0\", \"target\": \"2\", \"source\": \"colour\", \"position\": [3.955159154431171, 0.33529607712292897], \"target_position\": [-0.49026773124933243, -0.9491422176361084], \"heading\": [-0.5608169749706964, -0.8279398049283035], \"miss_degrees\": null, \"visible\": false, \"person_age\": 39.0, \"direction_age\": 40.0, \"target_age\": 5.375, \"stable_hits\": 8, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"0\", \"target\": \"('tv', 16)\", \"source\": \"tv\", \"position\": [3.955159154431171, 0.33529607712292897], \"target_position\": [-0.7328396808066906, -0.8686199463870508], \"heading\": [-0.5608169749706964, -0.8279398049283035], \"miss_degrees\": null, \"visible\": false, \"person_age\": 39.0, \"direction_age\": 40.0, \"target_age\": 5.375, \"stable_hits\": 8, \"confirmed\": false, \"measured_screen\": false}, {\"person\": \"1\", \"target\": \"('screen', 0)\", \"source\": \"tv\", \"position\": [2.7928665198791456, 0.3783659366552032], \"target_position\": [-0.028921917209433712, -0.8589009497629011], \"heading\": [0.7952131309280985, -0.606330006184364], \"miss_degrees\": null, \"visible\": false, \"person_age\": 38.625, \"direction_age\": 39.875, \"target_age\": 38.75, \"stable_hits\": 8, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"1\", \"target\": \"('tv', 4)\", \"source\": \"tv\", \"position\": [2.7928665198791456, 0.3783659366552032], \"target_position\": [0.05842975591553139, -0.8675395749694499], \"heading\": [0.7952131309280985, -0.606330006184364], \"miss_degrees\": null, \"visible\": false, \"person_age\": 38.625, \"direction_age\": 39.875, \"target_age\": 15.5, \"stable_hits\": 8, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"1\", \"target\": \"1\", \"source\": \"colour\", \"position\": [2.7928665198791456, 0.3783659366552032], \"target_position\": [-0.02253645658493042, -0.866380363702774], \"heading\": [0.7952131309280985, -0.606330006184364], \"miss_degrees\": 110.83439962079028, \"visible\": false, \"person_age\": 38.625, \"direction_age\": 39.875, \"target_age\": 5.5, \"stable_hits\": 8, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"1\", \"target\": \"2\", \"source\": \"colour\", \"position\": [2.7928665198791456, 0.3783659366552032], \"target_position\": [-0.49026773124933243, -0.9491422176361084], \"heading\": [0.7952131309280985, -0.606330006184364], \"miss_degrees\": 116.11741933771908, \"visible\": false, \"person_age\": 38.625, \"direction_age\": 39.875, \"target_age\": 5.375, \"stable_hits\": 8, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"1\", \"target\": \"('tv', 16)\", \"source\": \"tv\", \"position\": [2.7928665198791456, 0.3783659366552032], \"target_position\": [-0.7328396808066906, -0.8686199463870508], \"heading\": [0.7952131309280985, -0.606330006184364], \"miss_degrees\": 123.19751862801614, \"visible\": false, \"person_age\": 38.625, \"direction_age\": 39.875, \"target_age\": 5.375, \"stable_hits\": 8, \"confirmed\": false, \"measured_screen\": false}, {\"person\": \"2\", \"target\": \"('screen', 0)\", \"source\": \"tv\", \"position\": [-0.11303975217544611, 3.373071689298329], \"target_position\": [-0.028921917209433712, -0.8589009497629011], \"heading\": [0.18668653572049457, -0.9824195322674933], \"miss_degrees\": null, \"visible\": true, \"person_age\": 26.125, \"direction_age\": 26.875, \"target_age\": 38.75, \"stable_hits\": 44, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"2\", \"target\": \"('tv', 4)\", \"source\": \"tv\", \"position\": [-0.11303975217544611, 3.373071689298329], \"target_position\": [0.05842975591553139, -0.8675395749694499], \"heading\": [0.18668653572049457, -0.9824195322674933], \"miss_degrees\": null, \"visible\": true, \"person_age\": 26.125, \"direction_age\": 26.875, \"target_age\": 15.5, \"stable_hits\": 44, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"2\", \"target\": \"1\", \"source\": \"colour\", \"position\": [-0.11303975217544611, 3.373071689298329], \"target_position\": [-0.02253645658493042, -0.866380363702774], \"heading\": [0.18668653572049457, -0.9824195322674933], \"miss_degrees\": 1.8372866697873553, \"visible\": true, \"person_age\": 26.125, \"direction_age\": 26.875, \"target_age\": 5.5, \"stable_hits\": 44, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"2\", \"target\": \"2\", \"source\": \"colour\", \"position\": [-0.11303975217544611, 3.373071689298329], \"target_position\": [-0.49026773124933243, -0.9491422176361084], \"heading\": [0.18668653572049457, -0.9824195322674933], \"miss_degrees\": 7.80367451446123, \"visible\": true, \"person_age\": 26.125, \"direction_age\": 26.875, \"target_age\": 5.375, \"stable_hits\": 44, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"2\", \"target\": \"('tv', 16)\", \"source\": \"tv\", \"position\": [-0.11303975217544611, 3.373071689298329], \"target_position\": [-0.7328396808066906, -0.8686199463870508], \"heading\": [0.18668653572049457, -0.9824195322674933], \"miss_degrees\": 19.072756273487382, \"visible\": true, \"person_age\": 26.125, \"direction_age\": 26.875, \"target_age\": 5.375, \"stable_hits\": 44, \"confirmed\": false, \"measured_screen\": false}, {\"person\": \"3\", \"target\": \"('screen', 0)\", \"source\": \"tv\", \"position\": [-1.376557230386024, 1.4507909889673125], \"target_position\": [-0.028921917209433712, -0.8589009497629011], \"heading\": [-0.8879555981592332, 0.4599291855249873], \"miss_degrees\": null, \"visible\": true, \"person_age\": 15.625, \"direction_age\": 15.625, \"target_age\": 38.75, \"stable_hits\": 57, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"3\", \"target\": \"('tv', 4)\", \"source\": \"tv\", \"position\": [-1.376557230386024, 1.4507909889673125], \"target_position\": [0.05842975591553139, -0.8675395749694499], \"heading\": [-0.8879555981592332, 0.4599291855249873], \"miss_degrees\": null, \"visible\": true, \"person_age\": 15.625, \"direction_age\": 15.625, \"target_age\": 15.5, \"stable_hits\": 57, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"3\", \"target\": \"1\", \"source\": \"colour\", \"position\": [-1.376557230386024, 1.4507909889673125], \"target_position\": [-0.02253645658493042, -0.866380363702774], \"heading\": [-0.8879555981592332, 0.4599291855249873], \"miss_degrees\": 136.38786750327495, \"visible\": true, \"person_age\": 15.625, \"direction_age\": 15.625, \"target_age\": 5.5, \"stable_hits\": 57, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"3\", \"target\": \"2\", \"source\": \"colour\", \"position\": [-1.376557230386024, 1.4507909889673125], \"target_position\": [-0.49026773124933243, -0.9491422176361084], \"heading\": [-0.8879555981592332, 0.4599291855249873], \"miss_degrees\": 124.39188795216012, \"visible\": false, \"person_age\": 15.625, \"direction_age\": 15.625, \"target_age\": 5.375, \"stable_hits\": 57, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"3\", \"target\": \"('tv', 16)\", \"source\": \"tv\", \"position\": [-1.376557230386024, 1.4507909889673125], \"target_position\": [-0.7328396808066906, -0.8686199463870508], \"heading\": [-0.8879555981592332, 0.4599291855249873], \"miss_degrees\": 132.89373077386313, \"visible\": true, \"person_age\": 15.625, \"direction_age\": 15.625, \"target_age\": 5.375, \"stable_hits\": 57, \"confirmed\": false, \"measured_screen\": false}, {\"person\": \"4\", \"target\": \"('screen', 0)\", \"source\": \"tv\", \"position\": [-2.247384460091007, 2.7027568917702336], \"target_position\": [-0.028921917209433712, -0.8589009497629011], \"heading\": null, \"miss_degrees\": null, \"visible\": true, \"person_age\": 15.875, \"direction_age\": null, \"target_age\": 38.75, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"4\", \"target\": \"('tv', 4)\", \"source\": \"tv\", \"position\": [-2.247384460091007, 2.7027568917702336], \"target_position\": [0.05842975591553139, -0.8675395749694499], \"heading\": null, \"miss_degrees\": null, \"visible\": true, \"person_age\": 15.875, \"direction_age\": null, \"target_age\": 15.5, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"4\", \"target\": \"1\", \"source\": \"colour\", \"position\": [-2.247384460091007, 2.7027568917702336], \"target_position\": [-0.02253645658493042, -0.866380363702774], \"heading\": null, \"miss_degrees\": null, \"visible\": true, \"person_age\": 15.875, \"direction_age\": null, \"target_age\": 5.5, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"4\", \"target\": \"2\", \"source\": \"colour\", \"position\": [-2.247384460091007, 2.7027568917702336], \"target_position\": [-0.49026773124933243, -0.9491422176361084], \"heading\": null, \"miss_degrees\": null, \"visible\": false, \"person_age\": 15.875, \"direction_age\": null, \"target_age\": 5.375, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"4\", \"target\": \"('tv', 16)\", \"source\": \"tv\", \"position\": [-2.247384460091007, 2.7027568917702336], \"target_position\": [-0.7328396808066906, -0.8686199463870508], \"heading\": null, \"miss_degrees\": null, \"visible\": true, \"person_age\": 15.875, \"direction_age\": null, \"target_age\": 5.375, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": false}, {\"person\": \"5\", \"target\": \"('screen', 0)\", \"source\": \"tv\", \"position\": [-3.293444380054878, 1.544139835292682], \"target_position\": [-0.028921917209433712, -0.8589009497629011], \"heading\": null, \"miss_degrees\": null, \"visible\": false, \"person_age\": 37.875, \"direction_age\": null, \"target_age\": 38.75, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"5\", \"target\": \"('tv', 4)\", \"source\": \"tv\", \"position\": [-3.293444380054878, 1.544139835292682], \"target_position\": [0.05842975591553139, -0.8675395749694499], \"heading\": null, \"miss_degrees\": null, \"visible\": false, \"person_age\": 37.875, \"direction_age\": null, \"target_age\": 15.5, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"5\", \"target\": \"1\", \"source\": \"colour\", \"position\": [-3.293444380054878, 1.544139835292682], \"target_position\": [-0.02253645658493042, -0.866380363702774], \"heading\": null, \"miss_degrees\": null, \"visible\": false, \"person_age\": 37.875, \"direction_age\": null, \"target_age\": 5.5, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"5\", \"target\": \"2\", \"source\": \"colour\", \"position\": [-3.293444380054878, 1.544139835292682], \"target_position\": [-0.49026773124933243, -0.9491422176361084], \"heading\": null, \"miss_degrees\": null, \"visible\": false, \"person_age\": 37.875, \"direction_age\": null, \"target_age\": 5.375, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"5\", \"target\": \"('tv', 16)\", \"source\": \"tv\", \"position\": [-3.293444380054878, 1.544139835292682], \"target_position\": [-0.7328396808066906, -0.8686199463870508], \"heading\": null, \"miss_degrees\": null, \"visible\": false, \"person_age\": 37.875, \"direction_age\": null, \"target_age\": 5.375, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": false}, {\"person\": \"6\", \"target\": \"('screen', 0)\", \"source\": \"tv\", \"position\": [-3.3644595069355008, -2.052891895318311], \"target_position\": [-0.028921917209433712, -0.8589009497629011], \"heading\": [-0.9699444321446852, 0.24332652660884335], \"miss_degrees\": 138.4900860232254, \"visible\": false, \"person_age\": 4.75, \"direction_age\": 4.75, \"target_age\": 38.75, \"stable_hits\": 24, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"6\", \"target\": \"('tv', 4)\", \"source\": \"tv\", \"position\": [-3.3644595069355008, -2.052891895318311], \"target_position\": [0.05842975591553139, -0.8675395749694499], \"heading\": [-0.9699444321446852, 0.24332652660884335], \"miss_degrees\": 139.77363399151778, \"visible\": false, \"person_age\": 4.75, \"direction_age\": 4.75, \"target_age\": 15.5, \"stable_hits\": 24, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"6\", \"target\": \"1\", \"source\": \"colour\", \"position\": [-3.3644595069355008, -2.052891895318311], \"target_position\": [-0.02253645658493042, -0.866380363702774], \"heading\": [-0.9699444321446852, 0.24332652660884335], \"miss_degrees\": 142.9345236748889, \"visible\": false, \"person_age\": 4.75, \"direction_age\": 4.75, \"target_age\": 5.5, \"stable_hits\": 24, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"6\", \"target\": \"2\", \"source\": \"colour\", \"position\": [-3.3644595069355008, -2.052891895318311], \"target_position\": [-0.49026773124933243, -0.9491422176361084], \"heading\": [-0.9699444321446852, 0.24332652660884335], \"miss_degrees\": 138.45037393924497, \"visible\": true, \"person_age\": 4.75, \"direction_age\": 4.75, \"target_age\": 5.375, \"stable_hits\": 24, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"6\", \"target\": \"('tv', 16)\", \"source\": \"tv\", \"position\": [-3.3644595069355008, -2.052891895318311], \"target_position\": [-0.7328396808066906, -0.8686199463870508], \"heading\": [-0.9699444321446852, 0.24332652660884335], \"miss_degrees\": 141.68851745242264, \"visible\": false, \"person_age\": 4.75, \"direction_age\": 4.75, \"target_age\": 5.375, \"stable_hits\": 24, \"confirmed\": false, \"measured_screen\": false}, {\"person\": \"9\", \"target\": \"('screen', 0)\", \"source\": \"tv\", \"position\": [-2.3058515237459964, -4.786309526998725], \"target_position\": [-0.028921917209433712, -0.8589009497629011], \"heading\": null, \"miss_degrees\": null, \"visible\": true, \"person_age\": 35.875, \"direction_age\": null, \"target_age\": 38.75, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"9\", \"target\": \"('tv', 4)\", \"source\": \"tv\", \"position\": [-2.3058515237459964, -4.786309526998725], \"target_position\": [0.05842975591553139, -0.8675395749694499], \"heading\": null, \"miss_degrees\": null, \"visible\": true, \"person_age\": 35.875, \"direction_age\": null, \"target_age\": 15.5, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"9\", \"target\": \"1\", \"source\": \"colour\", \"position\": [-2.3058515237459964, -4.786309526998725], \"target_position\": [-0.02253645658493042, -0.866380363702774], \"heading\": null, \"miss_degrees\": null, \"visible\": true, \"person_age\": 35.875, \"direction_age\": null, \"target_age\": 5.5, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"9\", \"target\": \"2\", \"source\": \"colour\", \"position\": [-2.3058515237459964, -4.786309526998725], \"target_position\": [-0.49026773124933243, -0.9491422176361084], \"heading\": null, \"miss_degrees\": null, \"visible\": true, \"person_age\": 35.875, \"direction_age\": null, \"target_age\": 5.375, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"9\", \"target\": \"('tv', 16)\", \"source\": \"tv\", \"position\": [-2.3058515237459964, -4.786309526998725], \"target_position\": [-0.7328396808066906, -0.8686199463870508], \"heading\": null, \"miss_degrees\": null, \"visible\": true, \"person_age\": 35.875, \"direction_age\": null, \"target_age\": 5.375, \"stable_hits\": 0, \"confirmed\": false, \"measured_screen\": false}, {\"person\": \"13\", \"target\": \"('screen', 0)\", \"source\": \"tv\", \"position\": [1.778205430642516, -2.466019783585204], \"target_position\": [-0.028921917209433712, -0.8589009497629011], \"heading\": [-0.9976771916442423, -0.0681191696430437], \"miss_degrees\": 33.08229095712198, \"visible\": true, \"person_age\": 15.0, \"direction_age\": 17.375, \"target_age\": 38.75, \"stable_hits\": 52, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"13\", \"target\": \"('tv', 4)\", \"source\": \"tv\", \"position\": [1.778205430642516, -2.466019783585204], \"target_position\": [0.05842975591553139, -0.8675395749694499], \"heading\": [-0.9976771916442423, -0.0681191696430437], \"miss_degrees\": 34.0293655761929, \"visible\": true, \"person_age\": 15.0, \"direction_age\": 17.375, \"target_age\": 15.5, \"stable_hits\": 52, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"13\", \"target\": \"1\", \"source\": \"colour\", \"position\": [1.778205430642516, -2.466019783585204], \"target_position\": [-0.02253645658493042, -0.866380363702774], \"heading\": [-0.9976771916442423, -0.0681191696430437], \"miss_degrees\": 37.89696051920051, \"visible\": true, \"person_age\": 15.0, \"direction_age\": 17.375, \"target_age\": 5.5, \"stable_hits\": 52, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"13\", \"target\": \"2\", \"source\": \"colour\", \"position\": [1.778205430642516, -2.466019783585204], \"target_position\": [-0.49026773124933243, -0.9491422176361084], \"heading\": [-0.9976771916442423, -0.0681191696430437], \"miss_degrees\": 30.6533130034095, \"visible\": true, \"person_age\": 15.0, \"direction_age\": 17.375, \"target_age\": 5.375, \"stable_hits\": 52, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"13\", \"target\": \"('tv', 16)\", \"source\": \"tv\", \"position\": [1.778205430642516, -2.466019783585204], \"target_position\": [-0.7328396808066906, -0.8686199463870508], \"heading\": [-0.9976771916442423, -0.0681191696430437], \"miss_degrees\": 36.36842024640277, \"visible\": true, \"person_age\": 15.0, \"direction_age\": 17.375, \"target_age\": 5.375, \"stable_hits\": 52, \"confirmed\": false, \"measured_screen\": false}, {\"person\": \"16\", \"target\": \"('screen', 0)\", \"source\": \"tv\", \"position\": [0.5810250008609577, -3.8126027392322226], \"target_position\": [-0.028921917209433712, -0.8589009497629011], \"heading\": [-0.5587276946626656, 0.8293511700220499], \"miss_degrees\": 4.4965646307642215, \"visible\": true, \"person_age\": 3.125, \"direction_age\": 5.625, \"target_age\": 38.75, \"stable_hits\": 17, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"16\", \"target\": \"('tv', 4)\", \"source\": \"tv\", \"position\": [0.5810250008609577, -3.8126027392322226], \"target_position\": [0.05842975591553139, -0.8675395749694499], \"heading\": [-0.5587276946626656, 0.8293511700220499], \"miss_degrees\": 6.223893115663256, \"visible\": true, \"person_age\": 3.125, \"direction_age\": 5.625, \"target_age\": 15.5, \"stable_hits\": 17, \"confirmed\": true, \"measured_screen\": true}, {\"person\": \"16\", \"target\": \"1\", \"source\": \"colour\", \"position\": [0.5810250008609577, -3.8126027392322226], \"target_position\": [-0.02253645658493042, -0.866380363702774], \"heading\": [-0.5587276946626656, 0.8293511700220499], \"miss_degrees\": 12.474452767896846, \"visible\": true, \"person_age\": 3.125, \"direction_age\": 5.625, \"target_age\": 5.5, \"stable_hits\": 17, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"16\", \"target\": \"2\", \"source\": \"colour\", \"position\": [0.5810250008609577, -3.8126027392322226], \"target_position\": [-0.49026773124933243, -0.9491422176361084], \"heading\": [-0.5587276946626656, 0.8293511700220499], \"miss_degrees\": 3.263650135233756, \"visible\": true, \"person_age\": 3.125, \"direction_age\": 5.625, \"target_age\": 5.375, \"stable_hits\": 17, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"16\", \"target\": \"('tv', 16)\", \"source\": \"tv\", \"position\": [0.5810250008609577, -3.8126027392322226], \"target_position\": [-0.7328396808066906, -0.8686199463870508], \"heading\": [-0.5587276946626656, 0.8293511700220499], \"miss_degrees\": 9.917213624980754, \"visible\": true, \"person_age\": 3.125, \"direction_age\": 5.625, \"target_age\": 5.375, \"stable_hits\": 17, \"confirmed\": false, \"measured_screen\": false}, {\"person\": \"17\", \"target\": \"('screen', 0)\", \"source\": \"tv\", \"position\": [0.6746634025941718, -3.8673476119360424], \"target_position\": [-0.028921917209433712, -0.8589009497629011], \"heading\": [-0.5789431956581425, 0.8153678778325387], \"miss_degrees\": 5.005024591905768, \"visible\": true, \"person_age\": 7.125, \"direction_age\": 8.875, \"target_age\": 38.75, \"stable_hits\": 7, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"17\", \"target\": \"('tv', 4)\", \"source\": \"tv\", \"position\": [0.6746634025941718, -3.8673476119360424], \"target_position\": [0.05842975591553139, -0.8675395749694499], \"heading\": [-0.5789431956581425, 0.8153678778325387], \"miss_degrees\": 6.668535097614099, \"visible\": true, \"person_age\": 7.125, \"direction_age\": 8.875, \"target_age\": 15.5, \"stable_hits\": 7, \"confirmed\": true, \"measured_screen\": true}, {\"person\": \"17\", \"target\": \"1\", \"source\": \"colour\", \"position\": [0.6746634025941718, -3.8673476119360424], \"target_position\": [-0.02253645658493042, -0.866380363702774], \"heading\": [-0.5789431956581425, 0.8153678778325387], \"miss_degrees\": 12.695821159264431, \"visible\": true, \"person_age\": 7.125, \"direction_age\": 8.875, \"target_age\": 5.5, \"stable_hits\": 7, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"17\", \"target\": \"2\", \"source\": \"colour\", \"position\": [0.6746634025941718, -3.8673476119360424], \"target_position\": [-0.49026773124933243, -0.9491422176361084], \"heading\": [-0.5789431956581425, 0.8153678778325387], \"miss_degrees\": 3.768182151850094, \"visible\": true, \"person_age\": 7.125, \"direction_age\": 8.875, \"target_age\": 5.375, \"stable_hits\": 7, \"confirmed\": false, \"measured_screen\": true}, {\"person\": \"17\", \"target\": \"('tv', 16)\", \"source\": \"tv\", \"position\": [0.6746634025941718, -3.8673476119360424], \"target_position\": [-0.7328396808066906, -0.8686199463870508], \"heading\": [-0.5789431956581425, 0.8153678778325387], \"miss_degrees\": 10.2324471354313, \"visible\": true, \"person_age\": 7.125, \"direction_age\": 8.875, \"target_age\": 5.375, \"stable_hits\": 7, \"confirmed\": false, \"measured_screen\": false}]}"
+  },
+  "snapshots": {
+    "team_first": [
+      [
+        2.480930425805235,
+        -3.1423837725009394
+      ],
+      [
+        1.937866433087879,
+        -3.573807694148708
+      ],
+      [
+        1.3644567477195522,
+        -3.989207348636074
+      ]
+    ],
+    "scene_first": {
+      "0": [
+        2.65,
+        0.45
+      ],
+      "1": [
+        4.05,
+        0.45
+      ],
+      "2": [
+        -3.4,
+        1.5
+      ],
+      "3": [
+        -1.4,
+        1.5
+      ],
+      "4": [
+        -2.4,
+        2.8
+      ],
+      "5": [
+        -3.5,
+        -2.0
+      ],
+      "6": [
+        0.0,
+        3.5
+      ],
+      "8": [
+        0.35,
+        -3.85
+      ],
+      "9": [
+        -3.9,
+        -0.25
+      ],
+      "10": [
+        1.6,
+        2.15
+      ],
+      "12": [
+        4.85,
+        1.1122419590427226
+      ]
+    }
+  },
+  "nodes": [
+    [
+      "map_server",
+      "/"
+    ],
+    [
+      "map_lifecycle_manager",
+      "/"
+    ],
+    [
+      "ros_gz_bridge",
+      "/"
+    ],
+    [
+      "three_robot_dstar_mpc",
+      "/"
+    ],
+    [
+      "leader_camera_bridge",
+      "/"
+    ],
+    [
+      "robot1_distributed_mpc",
+      "/"
+    ],
+    [
+      "leader_lidar_bridge",
+      "/"
+    ],
+    [
+      "robot2_distributed_mpc",
+      "/"
+    ],
+    [
+      "leader_obstacle_scan",
+      "/"
+    ],
+    [
+      "robot3_distributed_mpc",
+      "/"
+    ],
+    [
+      "robot_state_publisher",
+      "/robot1"
+    ],
+    [
+      "three_robot_dstar_mpc_rviz",
+      "/"
+    ],
+    [
+      "transform_listener_impl_6345143d4350",
+      "/"
+    ],
+    [
+      "robot_state_publisher",
+      "/robot2"
+    ],
+    [
+      "leader_person_detector",
+      "/"
+    ],
+    [
+      "robot_state_publisher",
+      "/robot3"
+    ],
+    [
+      "human_activity_analysis",
+      "/"
+    ],
+    [
+      "leader_leg_candidates",
+      "/"
+    ],
+    [
+      "social_navigation",
+      "/"
+    ],
+    [
+      "social_scene_markers",
+      "/"
+    ],
+    [
+      "gz_ros2_control",
+      "/robot1"
+    ],
+    [
+      "controller_manager",
+      "/robot1"
+    ],
+    [
+      "joint_state_broadcaster",
+      "/robot1"
+    ],
+    [
+      "gz_ros2_control",
+      "/robot2"
+    ],
+    [
+      "controller_manager",
+      "/robot2"
+    ],
+    [
+      "joint_state_broadcaster",
+      "/robot2"
+    ],
+    [
+      "gz_ros2_control",
+      "/robot3"
+    ],
+    [
+      "controller_manager",
+      "/robot3"
+    ],
+    [
+      "wheel1_controller",
+      "/robot2"
+    ],
+    [
+      "wheel1_controller",
+      "/robot1"
+    ],
+    [
+      "joint_state_broadcaster",
+      "/robot3"
+    ],
+    [
+      "wheel2_controller",
+      "/robot2"
+    ],
+    [
+      "wheel2_controller",
+      "/robot1"
+    ],
+    [
+      "wheel1_controller",
+      "/robot3"
+    ],
+    [
+      "wheel3_controller",
+      "/robot2"
+    ],
+    [
+      "wheel3_controller",
+      "/robot1"
+    ],
+    [
+      "wheel2_controller",
+      "/robot3"
+    ],
+    [
+      "wheel3_controller",
+      "/robot3"
+    ],
+    [
+      "dynamic_sim_readonly_audit",
+      "/"
+    ],
+    [
+      "omni_kinematics",
+      "/robot2"
+    ],
+    [
+      "omni_kinematics",
+      "/robot3"
+    ],
+    [
+      "omni_kinematics",
+      "/robot1"
+    ]
+  ],
+  "clock": {
+    "sim_start": 42.514,
+    "sim_end": 46.041,
+    "rtf": 0.16026605406753097
+  },
+  "topic_stats": {
+    "/robot1/scan": {
+      "wall_hz": 0.8178586325326049,
+      "sim_hz": 5.000000000000002,
+      "last_age_sim": 0.04099999999999682
+    },
+    "/robot2/scan": {
+      "wall_hz": 0.8178586325326049,
+      "sim_hz": 5.000000000000002,
+      "last_age_sim": 0.04099999999999682
+    },
+    "/leader/camera/image_raw": {
+      "wall_hz": 1.2722245394951632,
+      "sim_hz": 8.0,
+      "last_age_sim": 0.04099999999999682
+    },
+    "team": {
+      "wall_hz": 1.5448440836726982,
+      "sim_hz": 10.00606428138265,
+      "last_age_sim": 0.04399999999999693
+    },
+    "/leader/camera/camera_info": {
+      "wall_hz": 1.2267879487989075,
+      "sim_hz": 8.0,
+      "last_age_sim": 0.04099999999999682
+    },
+    "/leader/camera/depth/image_raw": {
+      "wall_hz": 0.9087318139251166,
+      "sim_hz": 5.846153846153846,
+      "last_age_sim": 0.04099999999999682
+    },
+    "/robot3/scan": {
+      "wall_hz": 0.6815488604438374,
+      "sim_hz": 4.3749999999999964,
+      "last_age_sim": 0.04099999999999682
+    }
+  },
+  "commands": {
+    "/robot3/cmd_vel": {
+      "max_linear": 0.14048026851756962,
+      "max_angular": 1.0,
+      "last": [
+        0.1343511898447493,
+        0.0021837541309376735,
+        -0.02748223816729123
+      ]
+    },
+    "/robot2/cmd_vel": {
+      "max_linear": 0.22955571077840992,
+      "max_angular": 1.0,
+      "last": [
+        0.1393611323792441,
+        0.09673158682275626,
+        -0.9222360383740273
+      ]
+    },
+    "/robot1/cmd_vel": {
+      "max_linear": 0.2632386240419654,
+      "max_angular": 0.6481124962789178,
+      "last": [
+        0.22574550425375361,
+        0.1354014050766303,
+        -0.6481124962789178
+      ]
+    }
+  },
+  "maps": {
+    "/social_navigation/map": {
+      "file": "/tmp/audit_social_navigation_map.npy",
+      "resolution": 0.05000000074505806,
+      "origin": [
+        -6.5,
+        -5.5
+      ],
+      "occupied": 8889,
+      "unknown": 0,
+      "cells": 57200
+    },
+    "/social_navigation/keepout": {
+      "file": "/tmp/audit_social_navigation_keepout.npy",
+      "resolution": 0.05000000074505806,
+      "origin": [
+        -6.5,
+        -5.5
+      ],
+      "occupied": 7640,
+      "unknown": 49560,
+      "cells": 57200
+    },
+    "/map": {
+      "file": "/tmp/audit_map.npy",
+      "resolution": 0.05000000074505806,
+      "origin": [
+        -6.5,
+        -5.5
+      ],
+      "occupied": 1731,
+      "unknown": 0,
+      "cells": 57200
+    }
+  },
+  "rgb_depth_matching": {
+    "rgb_frames": 28,
+    "depth_frames": 20,
+    "exact_matches": 20
+  }
+}

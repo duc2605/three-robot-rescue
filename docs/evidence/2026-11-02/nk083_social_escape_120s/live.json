@@ -1,0 +1,203 @@
+{
+  "goal_sent": true,
+  "goal": [
+    1.0815577507019043,
+    -2.0020322799682617
+  ],
+  "last_sim": 120.0,
+  "target_sim": 120.0,
+  "completed_120_sim": true,
+  "parameters": {
+    "robot3_distributed_mpc": {
+      "planning_map_topic": {
+        "type": 4,
+        "bool_value": false,
+        "integer_value": 0,
+        "double_value": 0.0,
+        "string_value": "/social_navigation/map",
+        "byte_array_value": [],
+        "bool_array_value": [],
+        "integer_array_value": [],
+        "double_array_value": [],
+        "string_array_value": []
+      },
+      "avoidance_use_camera": {
+        "type": 1,
+        "bool_value": false,
+        "integer_value": 0,
+        "double_value": 0.0,
+        "string_value": "",
+        "byte_array_value": [],
+        "bool_array_value": [],
+        "integer_array_value": [],
+        "double_array_value": [],
+        "string_array_value": []
+      }
+    },
+    "social_navigation": {
+      "require_activity_window": {
+        "type": 1,
+        "bool_value": true,
+        "integer_value": 0,
+        "double_value": 0.0,
+        "string_value": "",
+        "byte_array_value": [],
+        "bool_array_value": [],
+        "integer_array_value": [],
+        "double_array_value": [],
+        "string_array_value": []
+      },
+      "auto_observe": {
+        "type": 1,
+        "bool_value": true,
+        "integer_value": 0,
+        "double_value": 0.0,
+        "string_value": "",
+        "byte_array_value": [],
+        "bool_array_value": [],
+        "integer_array_value": [],
+        "double_array_value": [],
+        "string_array_value": []
+      }
+    },
+    "three_robot_dstar_mpc": {
+      "social_observation_enabled": {
+        "type": 1,
+        "bool_value": true,
+        "integer_value": 0,
+        "double_value": 0.0,
+        "string_value": "",
+        "byte_array_value": [],
+        "bool_array_value": [],
+        "integer_array_value": [],
+        "double_array_value": [],
+        "string_array_value": []
+      }
+    },
+    "leader_person_detector": {
+      "body_pose_enabled": {
+        "type": 1,
+        "bool_value": true,
+        "integer_value": 0,
+        "double_value": 0.0,
+        "string_value": "",
+        "byte_array_value": [],
+        "bool_array_value": [],
+        "integer_array_value": [],
+        "double_array_value": [],
+        "string_array_value": []
+      },
+      "head_pose_enabled": {
+        "type": 1,
+        "bool_value": true,
+        "integer_value": 0,
+        "double_value": 0.0,
+        "string_value": "",
+        "byte_array_value": [],
+        "bool_array_value": [],
+        "integer_array_value": [],
+        "double_array_value": [],
+        "string_array_value": []
+      }
+    }
+  },
+  "social_topic_counts": {
+    "/social_navigation/attention_debug": 60,
+    "/social_navigation/keepout": 73,
+    "/social_navigation/status": 600,
+    "/social_navigation/markers": 600,
+    "/leader/people/activity": 239,
+    "/leader/people/social_body_poses": 239,
+    "/leader/people/tv_screens": 377,
+    "/leader/people/poses": 342,
+    "/leader/people/head_poses": 345,
+    "/leader/people/attention_targets": 348,
+    "/leader/people/status": 370,
+    "/leader/people/body_observations": 362,
+    "/social_navigation/search_status": 15,
+    "/social_navigation/observation_status": 2
+  },
+  "detection_images": [
+    {
+      "t": 3.61,
+      "file": "detection_003.610.jpg",
+      "capture_stamp": {
+        "sec": 3,
+        "nanosec": 590000000
+      }
+    },
+    {
+      "t": 23.911,
+      "file": "detection_023.911.jpg",
+      "capture_stamp": {
+        "sec": 23,
+        "nanosec": 738000000
+      }
+    },
+    {
+      "t": 44.149,
+      "file": "detection_044.149.jpg",
+      "capture_stamp": {
+        "sec": 43,
+        "nanosec": 990000000
+      }
+    },
+    {
+      "t": 64.426,
+      "file": "detection_064.426.jpg",
+      "capture_stamp": {
+        "sec": 64,
+        "nanosec": 76000000
+      }
+    },
+    {
+      "t": 84.5,
+      "file": "detection_084.500.jpg",
+      "capture_stamp": {
+        "sec": 84,
+        "nanosec": 328000000
+      }
+    },
+    {
+      "t": 104.541,
+      "file": "detection_104.541.jpg",
+      "capture_stamp": {
+        "sec": 104,
+        "nanosec": 248000000
+      }
+    }
+  ],
+  "wall_seconds": 498.9226749240006,
+  "scans": {
+    "robot1": {
+      "range_max": 2.0,
+      "rays": 240
+    },
+    "robot2": {
+      "range_max": 2.0,
+      "rays": 240
+    },
+    "robot3": {
+      "range_max": 2.0,
+      "rays": 240
+    }
+  },
+  "last_status": {
+    "robot1": "normal",
+    "robot3": "normal",
+    "robot2": "normal"
+  },
+  "launch_exit": 0,
+  "ros_domain": "69",
+  "profile": {
+    "camera": true,
+    "person_detection": true,
+    "body_pose": true,
+    "social_avoidance": true,
+    "social_observation": true,
+    "social_auto_observe": true,
+    "rviz": false,
+    "gazebo_gui": false
+  },
+  "scope": "One isolated full-stack run; not repeated benchmark or proof of general avoidance."
+}

@@ -1,0 +1,28 @@
+{
+  "sample_wall_seconds": 8,
+  "counts": {
+    "robot1_cmd": 49,
+    "robot2_cmd": 48,
+    "robot3_cmd": 53
+  },
+  "latest_all_cmd": [
+    0,
+    0,
+    0
+  ],
+  "poses": [
+    [
+      4.0,
+      -2.9
+    ],
+    [
+      3.0,
+      -2.9
+    ],
+    [
+      3.5,
+      -2.2
+    ]
+  ],
+  "source": "Read-only diagnostic output captured before inbox fix; condensed record, not full topic recording"
+}

@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-28",
+  "build": "2 packages succeeded; fresh build/install; BUILD_TESTING=OFF",
+  "tests": {
+    "passed": 115,
+    "warnings": 2,
+    "lint_files_not_run": [
+      "test_copyright.py",
+      "test_flake8.py",
+      "test_pep257.py"
+    ],
+    "log": "cleanup_tests.log"
+  },
+  "generator_equivalence": {
+    "identical_files": 12,
+    "comparison": "byte-for-byte outputs of original and extracted generators in temporary directories"
+  },
+  "launch_arguments": [
+    "three_robot_social.launch.py",
+    "dynamic_social.launch.py",
+    "paper1_social.launch.py",
+    "paper2_social.launch.py"
+  ],
+  "asset_combinations": [
+    [
+      "people",
+      "baseline"
+    ],
+    [
+      "people",
+      "paper1"
+    ],
+    [
+      "people",
+      "paper2"
+    ],
+    [
+      "dynamic",
+      "baseline"
+    ],
+    [
+      "dynamic",
+      "paper1"
+    ],
+    [
+      "dynamic",
+      "paper2"
+    ]
+  ],
+  "xacro": [
+    "robot3 camera enabled",
+    "robot1 camera disabled"
+  ],
+  "robot_world_resource_references_checked": 31,
+  "gazebo_runtime_tested": false,
+  "notes": [
+    "Restored historical map solely as regression fixture.",
+    "Updated manually constructed coordinator test object with two existing production speed defaults.",
+    "No algorithm core or perception rules changed."
+  ]
+}

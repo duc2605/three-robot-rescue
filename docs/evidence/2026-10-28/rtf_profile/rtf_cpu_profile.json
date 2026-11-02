@@ -1,0 +1,426 @@
+{
+  "hz": 100,
+  "cpu_count": 16,
+  "processes": [
+    {
+      "pid": 154403,
+      "cpu_pct": 104.44,
+      "state": "R",
+      "name": "ruby",
+      "ppid": 154329
+    },
+    {
+      "pid": 154404,
+      "cpu_pct": 97.47,
+      "state": "S",
+      "name": "ruby",
+      "ppid": 154329
+    },
+    {
+      "pid": 1939,
+      "cpu_pct": 6.85,
+      "state": "S",
+      "name": "gnome-shell",
+      "ppid": 1768
+    },
+    {
+      "pid": 2675,
+      "cpu_pct": 5.73,
+      "state": "S",
+      "name": "code",
+      "ppid": 2629
+    },
+    {
+      "pid": 154342,
+      "cpu_pct": 5.73,
+      "state": "R",
+      "name": "rviz2",
+      "ppid": 154325
+    },
+    {
+      "pid": 2842,
+      "cpu_pct": 4.86,
+      "state": "S",
+      "name": "code",
+      "ppid": 2613
+    },
+    {
+      "pid": 2888,
+      "cpu_pct": 3.98,
+      "state": "S",
+      "name": "code",
+      "ppid": 2632
+    },
+    {
+      "pid": 2684,
+      "cpu_pct": 3.73,
+      "state": "S",
+      "name": "Xwayland",
+      "ppid": 1939
+    },
+    {
+      "pid": 154344,
+      "cpu_pct": 3.36,
+      "state": "S",
+      "name": "python3",
+      "ppid": 154325
+    },
+    {
+      "pid": 154336,
+      "cpu_pct": 2.86,
+      "state": "S",
+      "name": "robot_distribut",
+      "ppid": 154325
+    },
+    {
+      "pid": 154338,
+      "cpu_pct": 2.74,
+      "state": "S",
+      "name": "robot_distribut",
+      "ppid": 154325
+    },
+    {
+      "pid": 154340,
+      "cpu_pct": 2.74,
+      "state": "S",
+      "name": "robot_distribut",
+      "ppid": 154325
+    },
+    {
+      "pid": 154572,
+      "cpu_pct": 1.99,
+      "state": "S",
+      "name": "parameter_bridg",
+      "ppid": 154325
+    },
+    {
+      "pid": 154574,
+      "cpu_pct": 1.99,
+      "state": "S",
+      "name": "parameter_bridg",
+      "ppid": 154325
+    },
+    {
+      "pid": 154570,
+      "cpu_pct": 1.87,
+      "state": "S",
+      "name": "parameter_bridg",
+      "ppid": 154325
+    },
+    {
+      "pid": 2750,
+      "cpu_pct": 1.74,
+      "state": "S",
+      "name": "code",
+      "ppid": 2632
+    },
+    {
+      "pid": 2613,
+      "cpu_pct": 1.62,
+      "state": "S",
+      "name": "code",
+      "ppid": 1768
+    },
+    {
+      "pid": 154334,
+      "cpu_pct": 1.37,
+      "state": "S",
+      "name": "three_robot_dst",
+      "ppid": 154325
+    },
+    {
+      "pid": 151177,
+      "cpu_pct": 0.62,
+      "state": "I",
+      "name": "kworker/u32:4-i915",
+      "ppid": 2
+    },
+    {
+      "pid": 154332,
+      "cpu_pct": 0.62,
+      "state": "S",
+      "name": "lifecycle_manag",
+      "ppid": 154325
+    },
+    {
+      "pid": 154348,
+      "cpu_pct": 0.62,
+      "state": "S",
+      "name": "python3",
+      "ppid": 154325
+    },
+    {
+      "pid": 154330,
+      "cpu_pct": 0.5,
+      "state": "S",
+      "name": "map_server",
+      "ppid": 154325
+    },
+    {
+      "pid": 154350,
+      "cpu_pct": 0.5,
+      "state": "S",
+      "name": "python3",
+      "ppid": 154325
+    },
+    {
+      "pid": 24503,
+      "cpu_pct": 0.37,
+      "state": "I",
+      "name": "kworker/u33:1-i915_flip",
+      "ppid": 2
+    },
+    {
+      "pid": 135927,
+      "cpu_pct": 0.37,
+      "state": "S",
+      "name": "firefox",
+      "ppid": 1939
+    }
+  ],
+  "threads": [
+    {
+      "pid": 154403,
+      "tid": 154403,
+      "cpu_pct": 99.96,
+      "name": "ruby"
+    },
+    {
+      "pid": 154404,
+      "tid": 154678,
+      "cpu_pct": 15.44,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154675,
+      "cpu_pct": 6.47,
+      "name": "QSGRenderThread"
+    },
+    {
+      "pid": 154342,
+      "tid": 154342,
+      "cpu_pct": 5.6,
+      "name": "rviz2"
+    },
+    {
+      "pid": 154404,
+      "tid": 154736,
+      "cpu_pct": 5.35,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154737,
+      "cpu_pct": 5.1,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154740,
+      "cpu_pct": 5.1,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154741,
+      "cpu_pct": 5.1,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154743,
+      "cpu_pct": 5.1,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154738,
+      "cpu_pct": 4.98,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154739,
+      "cpu_pct": 4.98,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154742,
+      "cpu_pct": 4.98,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154747,
+      "cpu_pct": 3.49,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154744,
+      "cpu_pct": 3.36,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154745,
+      "cpu_pct": 3.36,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154746,
+      "cpu_pct": 3.36,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154748,
+      "cpu_pct": 3.36,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154749,
+      "cpu_pct": 3.36,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154751,
+      "cpu_pct": 3.36,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154344,
+      "tid": 154344,
+      "cpu_pct": 3.24,
+      "name": "python3"
+    },
+    {
+      "pid": 154404,
+      "tid": 154750,
+      "cpu_pct": 3.24,
+      "name": "ignition::gui::"
+    },
+    {
+      "pid": 154404,
+      "tid": 154404,
+      "cpu_pct": 2.99,
+      "name": "ruby"
+    },
+    {
+      "pid": 154338,
+      "tid": 154338,
+      "cpu_pct": 2.49,
+      "name": "robot_distribut"
+    },
+    {
+      "pid": 154340,
+      "tid": 154340,
+      "cpu_pct": 2.37,
+      "name": "robot_distribut"
+    },
+    {
+      "pid": 154336,
+      "tid": 154336,
+      "cpu_pct": 2.24,
+      "name": "robot_distribut"
+    },
+    {
+      "pid": 154403,
+      "tid": 154561,
+      "cpu_pct": 1.37,
+      "name": "ruby"
+    },
+    {
+      "pid": 154404,
+      "tid": 154677,
+      "cpu_pct": 1.37,
+      "name": "ign gaze:gdrv0"
+    },
+    {
+      "pid": 154334,
+      "tid": 154334,
+      "cpu_pct": 1.24,
+      "name": "three_robot_dst"
+    },
+    {
+      "pid": 154404,
+      "tid": 154674,
+      "cpu_pct": 1.24,
+      "name": "ign gaze:gdrv0"
+    },
+    {
+      "pid": 154572,
+      "tid": 154639,
+      "cpu_pct": 1.0,
+      "name": "parameter_bridg"
+    },
+    {
+      "pid": 154574,
+      "tid": 154652,
+      "cpu_pct": 1.0,
+      "name": "parameter_bridg"
+    },
+    {
+      "pid": 154403,
+      "tid": 154408,
+      "cpu_pct": 0.87,
+      "name": "ruby"
+    },
+    {
+      "pid": 154403,
+      "tid": 154409,
+      "cpu_pct": 0.87,
+      "name": "ruby"
+    },
+    {
+      "pid": 154404,
+      "tid": 154415,
+      "cpu_pct": 0.87,
+      "name": "ruby"
+    },
+    {
+      "pid": 154570,
+      "tid": 154645,
+      "cpu_pct": 0.87,
+      "name": "parameter_bridg"
+    }
+  ],
+  "system_cpu_busy_pct": 16.19,
+  "loadavg": "3.78 9.53 8.54 4/2001 156060",
+  "memory": {
+    "MemTotal": "16053420 kB",
+    "MemAvailable": "6327724 kB",
+    "SwapTotal": "0 kB",
+    "SwapFree": "0 kB"
+  },
+  "graphics": {
+    "154403": [
+      "/usr/lib/x86_64-linux-gnu/dri/iris_dri.so",
+      "/usr/lib/x86_64-linux-gnu/libEGL.so.1.1.0",
+      "/usr/lib/x86_64-linux-gnu/libEGL_mesa.so.0.0.0",
+      "/usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0",
+      "/usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0",
+      "/usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.2.0.0"
+    ],
+    "154404": [
+      "/usr/lib/x86_64-linux-gnu/dri/iris_dri.so",
+      "/usr/lib/x86_64-linux-gnu/libEGL.so.1.1.0",
+      "/usr/lib/x86_64-linux-gnu/libEGL_mesa.so.0.0.0",
+      "/usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0",
+      "/usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0",
+      "/usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.2.0.0"
+    ],
+    "154342": [
+      "/usr/lib/x86_64-linux-gnu/dri/iris_dri.so",
+      "/usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0",
+      "/usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0",
+      "/usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.2.0.0"
+    ]
+  },
+  "seconds": 8.032950873996015
+}

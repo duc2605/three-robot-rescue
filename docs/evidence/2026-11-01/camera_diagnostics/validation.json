@@ -1,0 +1,12 @@
+{
+  "camera_rgb_received": true,
+  "camera_depth_received": true,
+  "all_lidars_received": true,
+  "three_robot_poses": true,
+  "recorder_running": true,
+  "session_running": true,
+  "recorder_error": null,
+  "events.jsonl_last20_valid_json": true,
+  "scans.jsonl_last20_valid_json": true,
+  "telemetry.jsonl_last20_valid_json": true
+}

@@ -1,0 +1,34 @@
+/**:
+  ros__parameters:
+    adaptive_formation: true
+    formation_follow_gap: 0.7
+    formation_follower_speed: 0.22
+    formation_lookahead: 1.2
+    formation_narrow_follower_speed: 0.12
+    formation_open_hold: 0.6
+    formation_speed: 0.16
+    formation_transition_speed: 0.22
+    formation_triangle_half_width: 0.5
+    leader_robot: robot3
+    narrow_speed: 0.08
+    observation_analysis_time: 12.0
+    observation_angular_speed: 0.75
+    observation_dwell: 0.8
+    require_gazebo_pose: true
+    robot_names: !!python/tuple
+    - robot1
+    - robot2
+    - robot3
+    robot_radius: 0.15
+    social_observation_enabled: true
+    spawn_poses: !!python/tuple
+    - 4.0
+    - -2.9
+    - 1.57
+    - 3.0
+    - -2.9
+    - 1.57
+    - 3.5
+    - -2.2
+    - 1.57
+    use_sim_time: true

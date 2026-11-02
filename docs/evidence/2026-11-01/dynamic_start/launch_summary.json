@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-01",
+  "launch": "bash scripts/run_dynamic_with_logs.sh",
+  "domain": 31,
+  "goal_published_by_assistant": false,
+  "latest_goal_log": "[rviz2-8] [INFO] [1793508639.557464322] [rviz2]: Setting goal pose: Frame:map, Position(1.24217, -2.67986, 0), Orientation(0, 0, 0, 1) = Angle: 0",
+  "limitations": [
+    "179 tests are historical validation from 2026-10-28, not rerun today",
+    "Clock/camera/scan/poses confirmed on startup, not proof of collision avoidance",
+    "No route warning observed for user-selected goal; do not claim route completion",
+    "No source or parameter changes, no GitHub push"
+  ]
+}

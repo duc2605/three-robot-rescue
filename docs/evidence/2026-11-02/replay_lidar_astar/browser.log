@@ -1,0 +1,5 @@
+*** You are running in headless mode.
+Gtk-Message: 14:06:57.980: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+[WARN  rkv::backend::impl_safe::environment] `load_ratio()` is irrelevant for this storage backend.
+[WARN  rkv::backend::impl_safe::environment] `load_ratio()` is irrelevant for this storage backend.
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt

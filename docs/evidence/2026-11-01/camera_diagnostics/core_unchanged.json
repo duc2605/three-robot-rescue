@@ -1,0 +1,6 @@
+{
+  "social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py": true,
+  "social_navigation_planner/social_navigation_planner/moving_obstacles.py": true,
+  "social_navigation_planner/social_navigation_planner/local_escape.py": true,
+  "social_navigation_planner/social_navigation_planner/peer_safety.py": true
+}

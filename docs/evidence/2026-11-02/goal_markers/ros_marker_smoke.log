@@ -1,0 +1,2 @@
+[INFO] [1793554116.742329700] [three_robot_dstar_mpc]: D* Lite + leader/follower MPC ready; order: robot3 -> robot2 -> robot1; waiting for /map and an RViz 2D Goal Pose.
+{'rviz_goal_marker_at_selected_coordinates': True, 'set_goal_records_history': True, 'navigation_goal_unchanged': True, 'ros_domain': '212', 'gazebo_started': False}

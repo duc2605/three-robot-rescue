@@ -1,0 +1,12 @@
+/**:
+  ros__parameters:
+    motion_enabled: true
+    planning_map_topic: /social_navigation/map
+    preferred_clearance: 0.22
+    robot_name: robot3
+    robot_names: !!python/tuple
+    - robot1
+    - robot2
+    - robot3
+    robot_radius: 0.15
+    use_sim_time: true

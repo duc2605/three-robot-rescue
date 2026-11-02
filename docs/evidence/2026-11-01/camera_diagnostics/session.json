@@ -1,0 +1,23 @@
+{
+  "started_vietnam": "2026-11-01T19:22:55.199366+07:00",
+  "state": "running",
+  "supervisor_pid": 73993,
+  "ros_domain_id": "31",
+  "command": [
+    "ros2",
+    "launch",
+    "social_navigation_sim",
+    "social_dynamic.launch.py",
+    "rviz_rendering:=intel",
+    "gazebo_rendering:=intel",
+    "leader_camera:=true"
+  ],
+  "core_sha256": {
+    "dstar_mpc_controller.py": "1ca29b34c54348b5463687f782d74fe90c6e6411306bb21923609f6702b00ca5",
+    "moving_obstacles.py": "603889db8290a49fa610cc9fe4a56c91e1022ef2d294f00ab591b35c366c33c1",
+    "local_escape.py": "5f1a82818172d83a486fddd13c5d1e1b406028748d6ce0e1a57b65351de131a7",
+    "peer_safety.py": "5ff2e65d7ed0b7da714622d46ca196cbe3cd2c9060bff375d672c29a845d3149"
+  },
+  "launch_pid": 74012,
+  "recorder_pid": 74011
+}

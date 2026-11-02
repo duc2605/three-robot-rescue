@@ -1,0 +1,12 @@
+{
+  "social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py": "90690517c1bca0a93ab9abab56bcbf02b578dd0345ab2cb0fa4a3cf4a9f82e49",
+  "social_navigation_sim/scripts/leader_person_detector.py": "fb43d695abef0a407363d6d51ab315a97a91eff8f2a36e40db4f1dd77308cb12",
+  "social_navigation_sim/scripts/human_activity_analysis.py": "b129936f4d34a46c72d59a6e406f23d0efeeb845c8447f146e538734aaca7cae",
+  "social_navigation_sim/scripts/social_costmap.py": "4160c91049d8a2da58d49b96d31ee11a88e647875680a6a2ab01a7e93bd3900c",
+  "social_navigation_sim/launch/social_dynamic.launch.py": "8b47c713bf4bf50f85486074d2a4fd40f0b86f76d38d2ccb98397534e01a5f2e",
+  "social_navigation_sim/launch/social_navigation.launch.py": "634975ffdce306cf46ed82be7bc51ab8caf3c9e33c5ffc2bd94b9d4fad288e85",
+  "scripts/run_dynamic.sh": "5fd5a570e7c95c4c212325df018e858ec1e2b6399aff4c208bf998d0994762dd",
+  "backup": "backups/20261102_145128_553508_nk078_social_camera_120s_once",
+  "navigation_modified": false,
+  "simulation_launch_count": 1
+}

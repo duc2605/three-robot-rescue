@@ -1,0 +1,16 @@
+{
+  "files": {
+    "social_navigation_planner/social_navigation_planner/moving_obstacles.py": "e5acf68c0493eeba01b1484b1b5a745960e03d76f2d18ccff04e276891e7754c",
+    "social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py": "dfb57b31a5ecb0a9331404d256d7a493a55d781fa6dac593ead67aa9abda401b",
+    "social_navigation_planner/test/test_motion_uncertainty_corridor.py": "cffa6acaa169b6d53b80fbd0e7cecbcdaf3d2b41a30ca39e1fb495c312fe5c6c"
+  },
+  "backup": "backups/20261102_153811_755576_nk081_motion_uncertainty_corridor_escape",
+  "uncertainty_bounds": "one alternative per nominal track; engineering speed prior .45m/s, recent observed bound capped .8 unless nominal is faster; expires/confirmed stationary clears",
+  "simulation_launch_limit": 1,
+  "goal": [
+    1.0815577507019043,
+    -2.0020322799682617
+  ],
+  "sim_duration": 120,
+  "camera_social": true
+}

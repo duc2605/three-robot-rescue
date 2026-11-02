@@ -1,0 +1,20 @@
+{
+  "python_tests": 186,
+  "python_warnings": 2,
+  "cpp_ctest_passed": 1,
+  "cpp_robot_cases": [
+    "robot1",
+    "robot2",
+    "robot3"
+  ],
+  "gazebo_profile": "lidar_only_dynamic",
+  "ros_domain_id": 32,
+  "goal_published_by_agent": false,
+  "full_cycle_gazebo_verified": false,
+  "collision_free_verified": false,
+  "source_sha256": {
+    "social_navigation_sim/src/social_scenario_motion.cpp": "39a2a84b4dbfd7f39df20720934c4d2d3136d4fe5178e9984c7c3e9afa18a990",
+    "social_navigation_sim/worlds/social_dynamic.sdf": "3a5ea38f1d4ab9ce3ef726aad40f13d8ccb720ddc8578ac38dc0a6510d0a09f6",
+    "social_navigation_sim/models/person_walking/walk_inplace.dae": "3551c35d593940c2e774de7a13f2b89050c663252ab33367e17d1f0a9036300f"
+  }
+}

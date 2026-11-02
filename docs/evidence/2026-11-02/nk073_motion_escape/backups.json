@@ -1,0 +1,51 @@
+[
+  {
+    "path": "backups/20261102_100114_990952_improve_motion_fusion_escape_and_braking_nk072",
+    "reason": "improve_motion_fusion_escape_and_braking_nk072",
+    "archive_sha256": "da23b8a090c3e5c2633c60018b00aa1455383857107511b59502eaddadf818f4",
+    "files": 727,
+    "verified_against_source_at_creation": true
+  },
+  {
+    "path": "backups/20261102_101135_425789_nk073_before_stop_at_escape_goal_fix",
+    "reason": "nk073_before_stop_at_escape_goal_fix",
+    "archive_sha256": "5d11f447d51e906e9cf470234588a2a7bcf4ac72f2191a9b86e1a13448a5ae86",
+    "files": 733,
+    "verified_against_source_at_creation": true
+  },
+  {
+    "path": "backups/20261102_102207_761045_nk073_before_map_supported_motion_filter",
+    "reason": "nk073_before_map_supported_motion_filter",
+    "archive_sha256": "cb657d06459274ba9255501936afc92def7238a243afc93440c06e4f1e796bc0",
+    "files": 737,
+    "verified_against_source_at_creation": true
+  },
+  {
+    "path": "backups/20261102_103108_248760_nk073_before_pause_motion_uncertainty",
+    "reason": "nk073_before_pause_motion_uncertainty",
+    "archive_sha256": "d1aedeac72e9ce538c136113693d5cf00c19525ab300ef04bcb3309b81cb8df4",
+    "files": 748,
+    "verified_against_source_at_creation": true
+  },
+  {
+    "path": "backups/20261102_104011_237946_nk073_before_warm_start_escape_search",
+    "reason": "nk073_before_warm_start_escape_search",
+    "archive_sha256": "141b2f98e495b384adee88e43e707f0804133623557d982f9b6612352a00b195",
+    "files": 754,
+    "verified_against_source_at_creation": true
+  },
+  {
+    "path": "backups/20261102_105053_078886_nk073_before_fixed_refuge_goal",
+    "reason": "nk073_before_fixed_refuge_goal",
+    "archive_sha256": "e6598ab66c848dfae3ac795375323b12133a67eb5c4fe8a5ab79c67a5e89a7a1",
+    "files": 763,
+    "verified_against_source_at_creation": true
+  },
+  {
+    "path": "backups/20261102_105520_050510_nk073_before_physical_recovery_floor",
+    "reason": "nk073_before_physical_recovery_floor",
+    "archive_sha256": "aa60d7ee534ac44fc31c68a4e0144c38de767f58913b8f2a449316a5fea7c780",
+    "files": 768,
+    "verified_against_source_at_creation": true
+  }
+]

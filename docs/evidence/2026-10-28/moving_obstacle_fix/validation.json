@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-28",
+  "all_functional_tests_passed": 138,
+  "final_safety_tests_passed": 23,
+  "warnings": 2,
+  "lint_files_not_run": [
+    "test_copyright.py",
+    "test_flake8.py",
+    "test_pep257.py"
+  ],
+  "build": "two packages succeeded, BUILD_TESTING=OFF",
+  "ros_smoke_domain": 94,
+  "live_simulation_domain": 31,
+  "restarted_user_simulation": false,
+  "changed_user_goal": false,
+  "gazebo_collision_replay_tested": false,
+  "rtf_improvement_measured": false,
+  "notes": [
+    "Final watchdog adjustment verified by the 23 safety tests; unaffected functional tests passed in the broader run.",
+    "Kinematic test checks swept person separation >0.47m for an incoming 0.35m/s pedestrian with no global reference.",
+    "Person script and collision geometry remain unchanged."
+  ]
+}

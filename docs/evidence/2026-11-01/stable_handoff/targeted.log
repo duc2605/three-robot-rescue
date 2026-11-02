@@ -1,0 +1,63 @@
+.........................F.............................................. [ 75%]
+...........F............                                                 [100%]
+=================================== FAILURES ===================================
+________ test_camera_scan_is_cancelled_as_soon_as_mpc_reports_a_threat _________
+
+    def test_camera_scan_is_cancelled_as_soon_as_mpc_reports_a_threat():
+        node,clock=stopped_leader()
+        now=clock[0]
+        node.reference=ObservationSweep(tuple(node.peer_poses),2,0.,.4,.8,bearing=1.).rows(
+            tuple(node.peer_poses),now,node.mpc_horizon,node.mpc_dt)
+        node.reference_time=now
+        node.control_tick()
+        assert node.guard_active and math.hypot(*node.last_command[:2])>0
+        main=coordinator(tuple(node.peer_poses),empty_grid())
+        original_goal=main.goal_xy
+        main.observation=object();main.observation_search_id=None
+        main.observation_pub=Capture()
+        main.moving_safety_callback(node.safety_pub.messages[-1],2)
+        assert main.observation is None
+        assert main.goal_xy==original_goal
+        assert main.moving_safety_active()
+        assert 'yielding' in main.observation_pub.messages[-1].data
+        main.publish_reference(.1)
+        assert len(main.reference_pub.messages[-1].poses)==27
+        accepted,reason=main.start_observation()
+        assert not accepted and 'priority' in reason
+        main.moving_safety_callback(String(data='normal'),2)
+>       assert main.moving_safety_active()  # Recovery waits for stable clearance.
+E       assert False
+E        +  where False = <bound method ThreeRobotDStarMPC.moving_safety_active of <social_navigation_planner.dstar_mpc_controller.ThreeRobotDStarMPC object at 0x77d4f1a378e0>>()
+E        +    where <bound method ThreeRobotDStarMPC.moving_safety_active of <social_navigation_planner.dstar_mpc_controller.ThreeRobotDStarMPC object at 0x77d4f1a378e0>> = <social_navigation_planner.dstar_mpc_controller.ThreeRobotDStarMPC object at 0x77d4f1a378e0>.moving_safety_active
+
+social_navigation_planner/test/test_escape_and_observation.py:115: AssertionError
+_____ test_blocked_escape_keeps_hazard_priority_despite_missing_reference ______
+
+    def test_blocked_escape_keeps_hazard_priority_despite_missing_reference():
+        node,clock=stopped_leader()
+        node.physical_grid=GridClearance(40,40,.05,(-1.,-1.,0.),[True]*1600,.15)
+        node.reference_wall=time.monotonic()-3
+        node.control_tick()
+        assert node.guard_active, 'An unresolved hazard must retain priority even when no escape exists'
+        node.watchdog()
+        assert node.last_command==(0.,0.,0.)
+        assert node.safety_state.startswith('moving_obstacle:')
+        node.scan_wall=time.monotonic()-3
+        node.watchdog()
+        assert node.safety_state.startswith('moving_obstacle:')
+        # Once the measured track has expired and state/scan are fresh again,
+        # the ordinary no-reference hold must not keep a permanent hazard latch.
+        clock[0]=node.state_time=1.3
+        node.state_wall=node.scan_wall=time.monotonic();node.last_scan_stamp=1.3
+        node.control_tick()
+        assert not node.guard_active
+>       assert node.safety_state=='normal'
+E       AssertionError: assert 'hazard_clear...inal tracking' == 'normal'
+E         - normal
+E         + hazard_clear: recovering nominal tracking
+
+social_navigation_planner/test/test_moving_obstacle_safety.py:347: AssertionError
+=========================== short test summary info ============================
+FAILED social_navigation_planner/test/test_escape_and_observation.py::test_camera_scan_is_cancelled_as_soon_as_mpc_reports_a_threat
+FAILED social_navigation_planner/test/test_moving_obstacle_safety.py::test_blocked_escape_keeps_hazard_priority_despite_missing_reference
+2 failed, 94 passed in 19.10s

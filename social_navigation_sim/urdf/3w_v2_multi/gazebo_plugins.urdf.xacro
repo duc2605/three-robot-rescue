@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <gazebo>
+
+    <!-- World poses are provided by the world's SceneBroadcaster. -->
+
+    <plugin
+      filename="gz_ros2_control-system"
+      name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>
+        $(find social_navigation_sim)/config/controller_configs/three_robot_controllers.yaml
+      </parameters>
+      <ros>
+        <namespace>$(arg robot_prefix)</namespace>
+      </ros>
+    </plugin>
+  </gazebo>
+
+</robot>

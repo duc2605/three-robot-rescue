@@ -1,0 +1,11 @@
+{
+  "geometry_overlap_and_height_checks": true,
+  "right_left_body_labels": true,
+  "measured_robot3_right_label": true,
+  "step_seek_play": true,
+  "before_step": "2.00 s · epoch 0",
+  "after_step": "2.05 s · epoch 0",
+  "after_seek": "0.50 s · epoch 0",
+  "after_play": "0.75 s · epoch 0",
+  "fixture_note": "Scripted simplified robot poses; not navigation validation."
+}

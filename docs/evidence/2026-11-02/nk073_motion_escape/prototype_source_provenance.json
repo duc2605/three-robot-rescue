@@ -1,0 +1,67 @@
+[
+  {
+    "trial": 1,
+    "snapshot": "backups/20261102_101135_425789_nk073_before_stop_at_escape_goal_fix",
+    "runtime_sources_match_checkpoint": {
+      "dstar_mpc_controller": true,
+      "stop_diagnostics": true,
+      "moving_obstacles": true,
+      "local_escape": true,
+      "scan_pose_history": true,
+      "robot_motion": true
+    },
+    "archive_sha256": "5d11f447d51e906e9cf470234588a2a7bcf4ac72f2191a9b86e1a13448a5ae86"
+  },
+  {
+    "trial": 2,
+    "snapshot": "backups/20261102_102207_761045_nk073_before_map_supported_motion_filter",
+    "runtime_sources_match_checkpoint": {
+      "dstar_mpc_controller": true,
+      "stop_diagnostics": true,
+      "moving_obstacles": true,
+      "local_escape": true,
+      "scan_pose_history": true,
+      "robot_motion": true
+    },
+    "archive_sha256": "cb657d06459274ba9255501936afc92def7238a243afc93440c06e4f1e796bc0"
+  },
+  {
+    "trial": 3,
+    "snapshot": "backups/20261102_103108_248760_nk073_before_pause_motion_uncertainty",
+    "runtime_sources_match_checkpoint": {
+      "dstar_mpc_controller": true,
+      "stop_diagnostics": true,
+      "moving_obstacles": true,
+      "local_escape": true,
+      "scan_pose_history": true,
+      "robot_motion": true
+    },
+    "archive_sha256": "d1aedeac72e9ce538c136113693d5cf00c19525ab300ef04bcb3309b81cb8df4"
+  },
+  {
+    "trial": 4,
+    "snapshot": "backups/20261102_104011_237946_nk073_before_warm_start_escape_search",
+    "runtime_sources_match_checkpoint": {
+      "dstar_mpc_controller": true,
+      "stop_diagnostics": true,
+      "moving_obstacles": true,
+      "local_escape": true,
+      "scan_pose_history": true,
+      "robot_motion": true
+    },
+    "archive_sha256": "141b2f98e495b384adee88e43e707f0804133623557d982f9b6612352a00b195"
+  },
+  {
+    "trial": 5,
+    "snapshot": "backups/20261102_105053_078886_nk073_before_fixed_refuge_goal",
+    "runtime_sources_match_checkpoint": {
+      "dstar_mpc_controller": true,
+      "stop_diagnostics": true,
+      "moving_obstacles": true,
+      "local_escape": true,
+      "scan_pose_history": true,
+      "robot_motion": true
+    },
+    "archive_sha256": "e6598ab66c848dfae3ac795375323b12133a67eb5c4fe8a5ab79c67a5e89a7a1"
+  }
+]

@@ -1,0 +1,6 @@
+Starting >>> social_navigation_planner
+Finished <<< social_navigation_planner [3.95s]
+Starting >>> social_navigation_sim
+Finished <<< social_navigation_sim [21.6s]
+
+Summary: 2 packages finished [26.5s]

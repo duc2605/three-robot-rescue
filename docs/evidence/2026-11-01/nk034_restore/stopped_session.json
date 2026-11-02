@@ -1,0 +1,25 @@
+{
+  "signalled": [
+    {
+      "pid": 64804,
+      "args": "/usr/bin/python3 /opt/ros/humble/bin/ros2 launch social_navigation_sim lidar_only_dynamic.launch.py rviz_rendering:=intel gazebo_rendering:=intel "
+    },
+    {
+      "pid": 68536,
+      "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/three_robot_dstar_mpc --ros-args -r __node:=three_robot_dstar_mpc --params-file /tmp/launch_params_6dbvnb6m -r /clock:=/navigation/clock -r /map:=/map -r /physical_map:=/map "
+    },
+    {
+      "pid": 68537,
+      "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot1_distributed_mpc --params-file /tmp/launch_params_mvwdo6bg -r /clock:=/navigation/clock "
+    },
+    {
+      "pid": 68538,
+      "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot2_distributed_mpc --params-file /tmp/launch_params_dw_z9q_0 -r /clock:=/navigation/clock "
+    },
+    {
+      "pid": 68539,
+      "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot3_distributed_mpc --params-file /tmp/launch_params_1_qq__7k -r /clock:=/navigation/clock "
+    }
+  ],
+  "remaining": []
+}

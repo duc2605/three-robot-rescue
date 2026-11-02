@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-28",
+  "renamed_files": {
+    "ros2_omni_robot_sim/launch/three_robot_social.launch.py": "ros2_omni_robot_sim/launch/social_navigation.launch.py",
+    "ros2_omni_robot_sim/launch/dynamic_social.launch.py": "ros2_omni_robot_sim/launch/social_dynamic.launch.py",
+    "ros2_omni_robot_sim/launch/three_robot_dstar_mpc.launch.py": "ros2_omni_robot_sim/launch/dstar_mpc.launch.py",
+    "ros2_omni_robot_sim/launch/three_robot_gazebo.launch.py": "ros2_omni_robot_sim/launch/three_robot_sim.launch.py",
+    "ros2_omni_robot_sim/launch/paper1_social.launch.py": "ros2_omni_robot_sim/launch/paper1_gwo_woa.launch.py",
+    "ros2_omni_robot_sim/launch/paper2_social.launch.py": "ros2_omni_robot_sim/launch/paper2_apf_mpc.launch.py",
+    "astar_planner/astar_planner/three_robot_dstar_mpc.py": "astar_planner/astar_planner/dstar_mpc_controller.py",
+    "astar_planner/astar_planner/paper1_node.py": "astar_planner/astar_planner/paper1_gwo_woa_node.py",
+    "astar_planner/astar_planner/paper1_core.py": "astar_planner/astar_planner/paper1_gwo_woa_core.py",
+    "astar_planner/astar_planner/paper2_node.py": "astar_planner/astar_planner/paper2_apf_mpc_node.py",
+    "astar_planner/astar_planner/paper2_core.py": "astar_planner/astar_planner/paper2_apf_mpc_core.py",
+    "astar_planner/test/test_paper1.py": "astar_planner/test/test_paper1_gwo_woa.py",
+    "astar_planner/test/test_paper2.py": "astar_planner/test/test_paper2_apf_mpc.py",
+    "ros2_omni_robot_sim/scripts/social_navigation.py": "ros2_omni_robot_sim/scripts/social_costmap.py",
+    "ros2_omni_robot_sim/scripts/generate_social_people_world.py": "ros2_omni_robot_sim/scripts/generate_social_static_world.py",
+    "ros2_omni_robot_sim/src/kinematics.cpp": "ros2_omni_robot_sim/src/omni_kinematics.cpp",
+    "ros2_omni_robot_sim/worlds/social_people.sdf": "ros2_omni_robot_sim/worlds/social_static.sdf",
+    "ros2_omni_robot_sim/map/social_people.yaml": "ros2_omni_robot_sim/map/social_static.yaml",
+    "ros2_omni_robot_sim/map/social_people.pgm": "ros2_omni_robot_sim/map/social_static.pgm",
+    "ros2_omni_robot_sim/map/social_people_layout.svg": "ros2_omni_robot_sim/map/social_static_layout.svg",
+    "ros2_omni_robot_sim/config/social_people_scene.json": "ros2_omni_robot_sim/config/social_static_scene.json",
+    "ros2_omni_robot_sim/config/gz_bridge/gz_bridge_social_people.yaml": "ros2_omni_robot_sim/config/gz_bridge/social_static_bridge.yaml",
+    "ros2_omni_robot_sim/config/gz_bridge/gz_bridge_social_dynamic.yaml": "ros2_omni_robot_sim/config/gz_bridge/social_dynamic_bridge.yaml",
+    "ros2_omni_robot_sim/config/controller_configs/controller_config_3w_v2_3robots.yaml": "ros2_omni_robot_sim/config/controller_configs/three_robot_controllers.yaml",
+    "ros2_omni_robot_sim/rviz/three_robot_social.rviz": "ros2_omni_robot_sim/rviz/social_navigation.rviz",
+    "ros2_omni_robot_sim/rviz/three_robot_dstar_mpc.rviz": "ros2_omni_robot_sim/rviz/dstar_mpc.rviz",
+    "ros2_omni_robot_sim/README_SOCIAL_PEOPLE.md": "ros2_omni_robot_sim/README_SOCIAL_STATIC.md",
+    "ros2_omni_robot_sim/README_DYNAMIC_SOCIAL.md": "ros2_omni_robot_sim/README_SOCIAL_DYNAMIC.md",
+    "ros2_omni_robot_sim/README_MPC_FORMATION.md": "ros2_omni_robot_sim/README_DSTAR_MPC.md",
+    "README_PAPER1.md": "README_PAPER1_GWO_WOA.md",
+    "README_PAPER2.md": "README_PAPER2_APF_MPC.md"
+  },
+  "new_files": [
+    "ros2_omni_robot_sim/launch/social_static.launch.py"
+  ],
+  "unchanged_interfaces": [
+    "ROS package names",
+    "node and command topics",
+    "console executable names",
+    "dynamic world name social_dynamic"
+  ],
+  "scene_argument_values": [
+    "static",
+    "dynamic"
+  ],
+  "static_world_rename": {
+    "social_people": "social_static"
+  },
+  "temporary_recovery_archive": "/tmp/three-robot-rescue-before-rename-20261028.tar.gz"
+}

@@ -1,0 +1,58 @@
+{
+  "out": {
+    "inRange": [],
+    "nearReturns": []
+  },
+  "blocked": {
+    "inRange": [
+      "nguoi_A"
+    ],
+    "nearReturns": []
+  },
+  "clear": {
+    "inRange": [
+      "nguoi_A"
+    ],
+    "nearReturns": [
+      {
+        "name": "nguoi_A",
+        "count": 1
+      }
+    ]
+  },
+  "projection": [
+    0.999999999999999,
+    -4.3711390063094755e-08,
+    0.1
+  ],
+  "noFutureAstar": true,
+  "astar": [
+    0,
+    0.72
+  ],
+  "mpc": [
+    0.72,
+    0
+  ],
+  "clearAstar": true,
+  "clearMpc": true,
+  "noOldEpoch": true,
+  "missingTransform": true,
+  "gapEntry": {
+    "from": null,
+    "to": 1
+  },
+  "entry": {
+    "from": 0.1,
+    "to": 0.2
+  },
+  "delayedScan": true,
+  "allThree": true,
+  "label": "robot1: scan 1.000s, ghi 1.100s, tuổi 0.10s\n  Trong bán kính: nguoi_A\n  nguoi_A: vào giữa 0.10–0.20s\n  Tia gần người (ước lượng): nguoi_A [1]\n  A* trước: (0.00, 0.72) @1.00s\n  MPC chọn: (0.72, 0.00) · có chỗ chờ\nrobot2: scan 1.000s, ghi 1.100s, tuổi 0.10s\n  Trong bán kính: không có\n  Tia gần người (ước lượng): không có\n  A* trái: (-1.90, -1.00) @1.00s\nrobot3: scan 1.000s, ghi 1.100s, tuổi 0.10s\n  Trong bán kính: không có\n  Tia gần người (ước lượng): không có\n  A* trái: (-1.90, 2.00) @1.00s",
+  "stale_hidden": true,
+  "legacy_missing_explicit": true,
+  "http_incremental": true,
+  "http_partial_line": true,
+  "png_export": true,
+  "fixture_only": true
+}

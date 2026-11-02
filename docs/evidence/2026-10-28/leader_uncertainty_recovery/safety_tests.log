@@ -1,0 +1,7 @@
+...........................Logged follower geometry, kinematic minimum centre separation: 0.687 m
+............Leader snapshot geometry, kinematic: body gap min=0.085m; distance 0.563->0.803m
+..........person_speed=0.08m/s; minimum_center_separation=0.713m
+.person_speed=0.35m/s; minimum_center_separation=0.671m
+.person_speed=0.80m/s; minimum_center_separation=0.695m
+.....
+56 passed in 3.01s

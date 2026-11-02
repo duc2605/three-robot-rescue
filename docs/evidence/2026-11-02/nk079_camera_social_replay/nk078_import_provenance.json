@@ -1,0 +1,32 @@
+{
+  "source": "docs/evidence/2026-11-02/nk078_social_camera_120s",
+  "source_event_sha256": "1ff9e406955e5bc4540ffb60fbd3ef7fcde970115c9ba343f091b97f8bd28b4c",
+  "images": [
+    {
+      "name": "detection_003.556.jpg",
+      "sha256": "3831b95df76b71d052617c0bbc2d065c4d3f5f4c5c9d0ddf7cfe7fdbdebc1025"
+    },
+    {
+      "name": "detection_023.587.jpg",
+      "sha256": "8eedba7223d14e52e9cfee9e2e25c2ee3c41bd0706dce928177340f49eb9c5a7"
+    },
+    {
+      "name": "detection_044.146.jpg",
+      "sha256": "ad2dacf82ed40509b0ed4894589d9add49cdb076c7712b06ab224e6a05a07031"
+    },
+    {
+      "name": "detection_064.501.jpg",
+      "sha256": "74b8775f137e6c86d99228298de5c1f11f672926e03c924cb573ea92645cf66a"
+    },
+    {
+      "name": "detection_084.704.jpg",
+      "sha256": "3169fafacea7e4e04f5c7834493a0691dc4a3ef308f516a63b810e192a868705"
+    },
+    {
+      "name": "detection_105.213.jpg",
+      "sha256": "0a92e8598ac20c0ae24aadd5a0fa7f4e63b3b728fac9b2d56c4cd5f229709f80"
+    }
+  ],
+  "rows": 1206,
+  "note": "Derived attachment from original records. Six sparse received-time snapshots; capture time unavailable. No interpolated camera frames or fabricated zones."
+}

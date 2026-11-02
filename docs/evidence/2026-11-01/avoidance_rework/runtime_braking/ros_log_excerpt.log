@@ -1,0 +1,13 @@
+[4.082s] [three_robot_dstar_mpc-4] [INFO] [1793516707.071127887] [three_robot_dstar_mpc]: Formation: yield / leader passing; followers clear corridor
+[4.082s] [three_robot_dstar_mpc-4] [INFO] [1793516707.304323632] [three_robot_dstar_mpc]: Formation: peer separation recovery
+[7.111s] [three_robot_dstar_mpc-4] [INFO] [1793516710.285619586] [three_robot_dstar_mpc]: Formation: peer separation recovery
+[15.159s] [three_robot_dstar_mpc-4] [INFO] [1793516717.807829329] [three_robot_dstar_mpc]: Formation: yield / leader passing; followers clear corridor
+[26.303s] [three_robot_dstar_mpc-4] [INFO] [1793516729.105407133] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[30.332s] [three_robot_dstar_mpc-4] [WARN] [1793516732.757386899] [three_robot_dstar_mpc]: D* Lite: no route for the leader with current obstacles.
+[32.359s] [three_robot_dstar_mpc-4] [INFO] [1793516735.551055265] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[36.414s] [three_robot_dstar_mpc-4] [INFO] [1793516739.384445810] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[47.515s] [three_robot_dstar_mpc-4] [INFO] [1793516750.573409883] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[49.554s] [three_robot_dstar_mpc-4] [INFO] [1793516752.679662119] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[50.564s] [three_robot_dstar_mpc-4] [INFO] [1793516753.534381000] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[53.607s] [three_robot_dstar_mpc-4] [INFO] [1793516756.862253653] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[59.660s] [three_robot_dstar_mpc-4] [INFO] [1793516762.376222517] [three_robot_dstar_mpc]: Formation: triangle / tracking

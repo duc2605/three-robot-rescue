@@ -1,0 +1,21 @@
+{
+  "leader_first_xy": [
+    0.7919601357146931,
+    -2.926719172597782
+  ],
+  "leader_last_xy": [
+    0.7919601357146931,
+    -2.926719172597782
+  ],
+  "leader_displacement": 0.0,
+  "zero_cmd_count": 42,
+  "reference_messages": 28,
+  "nonempty_reference_messages": 14,
+  "empty_reference_messages": 14,
+  "static_map_clearance_at_leader": 0.4821321480125471,
+  "limits": [
+    "Static map clearance is not proof of clear sensor-observed people or social map",
+    "No constraint rejection counters in live process, cannot identify sole reason each candidate failed",
+    "Same old running session; latest source fixes not reloaded; no restart/goal/source/parameter change"
+  ]
+}

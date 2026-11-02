@@ -1,0 +1,26 @@
+{
+  "sample_wall_seconds": 10,
+  "displacement_m": [
+    0.18429786986159663,
+    0.1612188709996328,
+    0.09408297819679139
+  ],
+  "command_counts": {
+    "clock": 290,
+    "robot1/cmd": 37,
+    "robot1/safety": 20,
+    "robot1/nonzero": 8,
+    "robot3/cmd": 37,
+    "robot2/cmd": 32,
+    "poses": 28,
+    "robot3/safety": 27,
+    "robot2/safety": 23,
+    "robot3/nonzero": 8,
+    "robot2/nonzero": 11
+  },
+  "limits": [
+    "Live sample with moving people, not controlled benchmark",
+    "Some stops remain; this does not prove collision-free navigation",
+    "Only MPC nodes restarted, no goal published"
+  ]
+}

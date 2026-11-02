@@ -1,0 +1,8 @@
+[32.097s] [rviz2-8] [INFO] [1793511939.736445991] [rviz2]: Setting goal pose: Frame:map, Position(1.08156, -2.57733, 0), Orientation(0, 0, 0, 1) = Angle: 0
+[32.097s] [three_robot_dstar_mpc-4] [INFO] [1793511940.071929401] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[33.102s] [three_robot_dstar_mpc-4] [INFO] [1793511940.493488634] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[36.109s] [three_robot_dstar_mpc-4] [INFO] [1793511943.526777578] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[40.121s] [three_robot_dstar_mpc-4] [WARN] [1793511948.088327778] [three_robot_dstar_mpc]: Goal lacks obstacle clearance; choose a free goal.
+[46.138s] [three_robot_dstar_mpc-4] [INFO] [1793511953.299031705] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[51.150s] [three_robot_dstar_mpc-4] [INFO] [1793511958.409875482] [three_robot_dstar_mpc]: Formation: peer separation recovery
+[56.162s] [three_robot_dstar_mpc-4] [INFO] [1793511963.419484692] [three_robot_dstar_mpc]: Formation: peer separation recovery

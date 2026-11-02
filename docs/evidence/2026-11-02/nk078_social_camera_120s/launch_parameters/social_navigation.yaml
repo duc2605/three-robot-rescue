@@ -1,0 +1,21 @@
+/**:
+  ros__parameters:
+    allow_inferred_focus: false
+    auto_observe: true
+    color_attention_enabled: true
+    color_object_memory: 75.0
+    color_person_memory: 75.0
+    color_zone_memory: 90.0
+    group_margin: 0.45
+    inspect_mapped_obstacles: true
+    leader_robot: robot3
+    nearby_group_distance: 2.5
+    nearby_tv_distance: 4.5
+    observe_cooldown: 30.0
+    prediction_horizon: 1.5
+    protect_uncertain_groups: false
+    provisional_memory: 20.0
+    require_activity_window: true
+    use_sim_time: true
+    viewing_length: 3.2
+    zone_memory: 60.0

@@ -1,0 +1,26 @@
+........................................................................ [ 32%]
+......................F................................................. [ 64%]
+........................................................................ [ 96%]
+.......                                                                  [100%]
+=================================== FAILURES ===================================
+___________ test_priority_has_no_cycle_and_direction_is_world_frame ____________
+
+    def test_priority_has_no_cycle_and_direction_is_world_frame():
+        args=guidance()
+        assert escape_hint(2,*args,.4,10.,.15)==pytest.approx((0,-math.pi/2))
+>       assert escape_hint(1,*args,.4,10.,.15)==pytest.approx((0,-math.pi/2))
+E       assert None == approx((0 ± 1.0e-12, -1.5707963267948966 ± 1.6e-06))
+E        +  where None = escape_hint(1, *([(-1.0, -1.0, 0.0), (-2.0, 2.0, 0.0), (0.0, 0.0, 0.0)], [[(-1.0, -1.0, 0.0), (-1.0, -1.03, 0.0), (-1.0, -1.06, 0.0), ...0), (-1.0, -1.12, 0.0), (-1.0, -1.15, 0.0), ...], None, None], [0.4, -inf, -inf], [10.0, -inf, -inf], {0: (0.4, 10.0)}), 0.4, 10.0, 0.15)
+E        +  and   approx((0 ± 1.0e-12, -1.5707963267948966 ± 1.6e-06)) = <function approx at 0x7a08d208ef80>((0, -1.5707963267948966))
+E        +    where <function approx at 0x7a08d208ef80> = pytest.approx
+
+social_navigation_planner/test/test_cooperative_escape.py:19: AssertionError
+=============================== warnings summary ===============================
+social_navigation_planner/test/test_paper2_apf_mpc.py::Paper2Checks::test_mpc_avoids_static_disc_on_prediction
+social_navigation_planner/test/test_paper2_apf_mpc.py::Paper2Checks::test_mpc_receding_horizon_reaches_goal
+  Warning: Values in x were outside bounds during a minimize step, clipping to bounds
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+=========================== short test summary info ============================
+FAILED social_navigation_planner/test/test_cooperative_escape.py::test_priority_has_no_cycle_and_direction_is_world_frame
+1 failed, 222 passed, 2 warnings in 119.28s (0:01:59)

@@ -1,0 +1,99 @@
+{
+  "leader_reference": [
+    1.8087684380483933,
+    -2.369099650467957
+  ],
+  "leader_sample": {
+    "wall_s": 24.343,
+    "kind": "team",
+    "poses": [
+      [
+        2.92501796518218,
+        -2.7623643318000273,
+        0.0
+      ],
+      [
+        2.644097427087357,
+        -1.8790687387715477,
+        0.0
+      ],
+      [
+        1.8087684380483933,
+        -2.369099650467957,
+        0.0
+      ]
+    ]
+  },
+  "clock_interval_of_recorded_robot_audit": [
+    14.334,
+    16.562
+  ],
+  "walking_model": "tv_viewer_a_walking",
+  "rows": [
+    {
+      "sim_time": 25,
+      "scripted_person": [
+        0.8742788352112647,
+        -2.5
+      ],
+      "distance_to_last_recorded_leader": 0.9436131195136623,
+      "configured_radius_sum": 0.47,
+      "envelope_overlap_if_leader_remained_here": false
+    },
+    {
+      "sim_time": 26,
+      "scripted_person": [
+        1.2242788352112643,
+        -2.5
+      ],
+      "distance_to_last_recorded_leader": 0.5989682774006614,
+      "configured_radius_sum": 0.47,
+      "envelope_overlap_if_leader_remained_here": false
+    },
+    {
+      "sim_time": 26.641,
+      "scripted_person": [
+        1.4486288352112642,
+        -2.5
+      ],
+      "distance_to_last_recorded_leader": 0.3831911207730368,
+      "configured_radius_sum": 0.47,
+      "envelope_overlap_if_leader_remained_here": true
+    },
+    {
+      "sim_time": 26.697,
+      "scripted_person": [
+        1.4682288352112642,
+        -2.5
+      ],
+      "distance_to_last_recorded_leader": 0.3648316359748433,
+      "configured_radius_sum": 0.47,
+      "envelope_overlap_if_leader_remained_here": true
+    },
+    {
+      "sim_time": 27.07348904225353,
+      "scripted_person": [
+        1.6,
+        -2.5
+      ],
+      "distance_to_last_recorded_leader": 0.2464125853782164,
+      "configured_radius_sum": 0.47,
+      "envelope_overlap_if_leader_remained_here": true
+    },
+    {
+      "sim_time": 28,
+      "scripted_person": [
+        1.6,
+        -2.5
+      ],
+      "distance_to_last_recorded_leader": 0.2464125853782164,
+      "configured_radius_sum": 0.47,
+      "envelope_overlap_if_leader_remained_here": true
+    }
+  ],
+  "limits": [
+    "Uses authored trajectory as diagnostic reference only, never as a perception input.",
+    "Robot position recorded around sim 14\u201316 s; no synchronized robot/contact sample at sim 26.641 s.",
+    "Conditional geometric compatibility with reported collision, not a contact-sensor confirmation."
+  ]
+}

@@ -1,0 +1,834 @@
+{
+  "t": 126.301,
+  "epoch": 0,
+  "paused": false,
+  "objects": [
+    {
+      "id": 4,
+      "name": "ground_plane",
+      "kind": "model",
+      "p": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 8,
+      "name": "pair_a_contact",
+      "kind": "model",
+      "p": [
+        2.65,
+        0.45,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 11,
+      "name": "pair_b_contact",
+      "kind": "model",
+      "p": [
+        4.05,
+        0.45,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 14,
+      "name": "group_a_contact",
+      "kind": "model",
+      "p": [
+        -3.4,
+        1.5,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 17,
+      "name": "group_b_contact",
+      "kind": "model",
+      "p": [
+        -1.4,
+        1.5,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 20,
+      "name": "group_c_contact",
+      "kind": "model",
+      "p": [
+        -2.4,
+        2.8,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 23,
+      "name": "standing_a",
+      "kind": "model",
+      "p": [
+        -3.5,
+        -2,
+        0,
+        0,
+        0,
+        -0.3
+      ]
+    },
+    {
+      "id": 27,
+      "name": "standing_b",
+      "kind": "model",
+      "p": [
+        0,
+        3.5,
+        0,
+        0,
+        0,
+        -1.570796
+      ]
+    },
+    {
+      "id": 31,
+      "name": "chair_tv_viewer_a_seat",
+      "kind": "model",
+      "p": [
+        -0.993518,
+        -3.820709,
+        0.37,
+        0,
+        0,
+        1.352995
+      ]
+    },
+    {
+      "id": 35,
+      "name": "chair_tv_viewer_a_back",
+      "kind": "model",
+      "p": [
+        -1.073468,
+        -4.181968,
+        0.53,
+        0,
+        0,
+        1.352995
+      ]
+    },
+    {
+      "id": 39,
+      "name": "chair_tv_viewer_a_arm_-1",
+      "kind": "model",
+      "p": [
+        -0.63442,
+        -3.910423,
+        0.61,
+        0,
+        0,
+        1.352995
+      ]
+    },
+    {
+      "id": 43,
+      "name": "chair_tv_viewer_a_leg_-1_-1",
+      "kind": "model",
+      "p": [
+        -0.776314,
+        -4.135069,
+        0.16,
+        0,
+        0,
+        1.352995
+      ]
+    },
+    {
+      "id": 47,
+      "name": "chair_tv_viewer_a_leg_-1_1",
+      "kind": "model",
+      "p": [
+        -0.676916,
+        -3.685937,
+        0.16,
+        0,
+        0,
+        1.352995
+      ]
+    },
+    {
+      "id": 51,
+      "name": "chair_tv_viewer_a_arm_1",
+      "kind": "model",
+      "p": [
+        -1.356937,
+        -3.750522,
+        0.61,
+        0,
+        0,
+        1.352995
+      ]
+    },
+    {
+      "id": 55,
+      "name": "chair_tv_viewer_a_leg_1_-1",
+      "kind": "model",
+      "p": [
+        -1.323084,
+        -4.014063,
+        0.16,
+        0,
+        0,
+        1.352995
+      ]
+    },
+    {
+      "id": 59,
+      "name": "chair_tv_viewer_a_leg_1_1",
+      "kind": "model",
+      "p": [
+        -1.223686,
+        -3.564931,
+        0.16,
+        0,
+        0,
+        1.352995
+      ]
+    },
+    {
+      "id": 63,
+      "name": "tv_viewer_a",
+      "kind": "model",
+      "p": [
+        0,
+        0,
+        -50,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 67,
+      "name": "chair_tv_viewer_b_seat",
+      "kind": "model",
+      "p": [
+        0.343518,
+        -3.820709,
+        0.37,
+        0,
+        0,
+        1.788597
+      ]
+    },
+    {
+      "id": 71,
+      "name": "chair_tv_viewer_b_back",
+      "kind": "model",
+      "p": [
+        0.423468,
+        -4.181968,
+        0.53,
+        0,
+        0,
+        1.788597
+      ]
+    },
+    {
+      "id": 75,
+      "name": "chair_tv_viewer_b_arm_-1",
+      "kind": "model",
+      "p": [
+        0.706937,
+        -3.750522,
+        0.61,
+        0,
+        0,
+        1.788597
+      ]
+    },
+    {
+      "id": 79,
+      "name": "chair_tv_viewer_b_leg_-1_-1",
+      "kind": "model",
+      "p": [
+        0.673084,
+        -4.014063,
+        0.16,
+        0,
+        0,
+        1.788597
+      ]
+    },
+    {
+      "id": 83,
+      "name": "chair_tv_viewer_b_leg_-1_1",
+      "kind": "model",
+      "p": [
+        0.573686,
+        -3.564931,
+        0.16,
+        0,
+        0,
+        1.788597
+      ]
+    },
+    {
+      "id": 87,
+      "name": "chair_tv_viewer_b_arm_1",
+      "kind": "model",
+      "p": [
+        -0.01558,
+        -3.910423,
+        0.61,
+        0,
+        0,
+        1.788597
+      ]
+    },
+    {
+      "id": 91,
+      "name": "chair_tv_viewer_b_leg_1_-1",
+      "kind": "model",
+      "p": [
+        0.126314,
+        -4.135069,
+        0.16,
+        0,
+        0,
+        1.788597
+      ]
+    },
+    {
+      "id": 95,
+      "name": "chair_tv_viewer_b_leg_1_1",
+      "kind": "model",
+      "p": [
+        0.026916,
+        -3.685937,
+        0.16,
+        0,
+        0,
+        1.788597
+      ]
+    },
+    {
+      "id": 99,
+      "name": "tv_viewer_b",
+      "kind": "model",
+      "p": [
+        0.35,
+        -3.85,
+        0,
+        0,
+        0,
+        1.788597
+      ]
+    },
+    {
+      "id": 103,
+      "name": "tv_console",
+      "kind": "model",
+      "p": [
+        -0.325,
+        -0.8,
+        0.275,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 107,
+      "name": "tv_stand",
+      "kind": "model",
+      "p": [
+        -0.325,
+        -0.8,
+        0.64,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 111,
+      "name": "tv_frame",
+      "kind": "model",
+      "p": [
+        -0.325,
+        -0.8,
+        1.23,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 115,
+      "name": "tv_screen",
+      "kind": "model",
+      "p": [
+        -0.325,
+        -0.857,
+        1.23,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 118,
+      "name": "tv_horizon",
+      "kind": "model",
+      "p": [
+        -0.325,
+        -0.867,
+        0.98,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 121,
+      "name": "tv_graph_0",
+      "kind": "model",
+      "p": [
+        -0.875,
+        -0.872,
+        1.17,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 124,
+      "name": "tv_graph_1",
+      "kind": "model",
+      "p": [
+        -0.615,
+        -0.872,
+        1.23,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 127,
+      "name": "tv_graph_2",
+      "kind": "model",
+      "p": [
+        -0.355,
+        -0.872,
+        1.195,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 130,
+      "name": "tv_graph_3",
+      "kind": "model",
+      "p": [
+        -0.095,
+        -0.872,
+        1.255,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 133,
+      "name": "tv_graph_4",
+      "kind": "model",
+      "p": [
+        0.165,
+        -0.872,
+        1.185,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 136,
+      "name": "bed_frame",
+      "kind": "model",
+      "p": [
+        -3.9,
+        -0.25,
+        0.175,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 140,
+      "name": "bed_mattress",
+      "kind": "model",
+      "p": [
+        -3.9,
+        -0.25,
+        0.425,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 144,
+      "name": "sleeping_person",
+      "kind": "model",
+      "p": [
+        -3.9,
+        -0.25,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 148,
+      "name": "water_dispenser",
+      "kind": "model",
+      "p": [
+        5.65,
+        2.15,
+        0.5,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 152,
+      "name": "water_bottle",
+      "kind": "model",
+      "p": [
+        5.65,
+        2.15,
+        1.2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 156,
+      "name": "tv_viewer_a_walking",
+      "kind": "model",
+      "p": [
+        -0.8,
+        -2.5,
+        0,
+        0,
+        0,
+        0.491021245148
+      ]
+    },
+    {
+      "id": 160,
+      "name": "tv_viewer_a_drinking",
+      "kind": "model",
+      "p": [
+        0,
+        0,
+        -50,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 164,
+      "name": "patrol_person",
+      "kind": "model",
+      "p": [
+        2.02275005386,
+        -4.8,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 168,
+      "name": "tv_viewer_a_returning",
+      "kind": "model",
+      "p": [
+        0,
+        0,
+        -50,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 179,
+      "name": "robot1",
+      "kind": "model",
+      "p": [
+        -0.224617419347,
+        0.0573635994223,
+        0.0187183684678,
+        -0.00447972035261,
+        -0.0104807668418,
+        0.0419470121542
+      ]
+    },
+    {
+      "id": 272,
+      "name": "robot2",
+      "kind": "model",
+      "p": [
+        0.315091708862,
+        0.079665440925,
+        0.0170049247921,
+        -0.015320981526,
+        0.0082025154134,
+        -0.550091411582
+      ]
+    },
+    {
+      "id": 365,
+      "name": "robot3",
+      "kind": "model",
+      "p": [
+        0.525395211406,
+        -0.375415503126,
+        0.0194215129762,
+        4.27102722869e-05,
+        0.00591694847789,
+        -0.56963168948
+      ]
+    },
+    {
+      "id": 172,
+      "name": "pair_a",
+      "kind": "actor",
+      "p": [
+        2.65,
+        0.45,
+        1.066,
+        0,
+        0,
+        0.904827
+      ]
+    },
+    {
+      "id": 173,
+      "name": "pair_b",
+      "kind": "actor",
+      "p": [
+        4.05,
+        0.45,
+        1.0807,
+        0,
+        0,
+        -0.904827
+      ]
+    },
+    {
+      "id": 174,
+      "name": "group_a",
+      "kind": "actor",
+      "p": [
+        -3.4,
+        1.5,
+        1.0807,
+        0,
+        0,
+        1.99365
+      ]
+    },
+    {
+      "id": 175,
+      "name": "group_b",
+      "kind": "actor",
+      "p": [
+        -1.4,
+        1.5,
+        1.066,
+        0,
+        0,
+        -1.99365030718
+      ]
+    },
+    {
+      "id": 176,
+      "name": "group_c",
+      "kind": "actor",
+      "p": [
+        -2.4,
+        2.8,
+        1.0807,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "physics_contact_source": "Gazebo ContactSensorData",
+  "contacts": [
+    {
+      "a": "robot1",
+      "b": "ground_plane",
+      "collision1": "social_dynamic::robot1::roller_link_15::roller_link_15_collision",
+      "collision2": "social_dynamic::ground_plane::link::collision",
+      "first_t": 126.252,
+      "last_t": 126.301,
+      "max_depth": null,
+      "position": [
+        -0.129471507467,
+        0.0628231084565,
+        0
+      ],
+      "steps": 50
+    },
+    {
+      "a": "robot1",
+      "b": "ground_plane",
+      "collision1": "social_dynamic::robot1::roller_link_21::roller_link_21_collision",
+      "collision2": "social_dynamic::ground_plane::link::collision",
+      "first_t": 126.252,
+      "last_t": 126.301,
+      "max_depth": null,
+      "position": [
+        -0.273952580829,
+        0.156518431321,
+        0
+      ],
+      "steps": 50
+    },
+    {
+      "a": "robot1",
+      "b": "ground_plane",
+      "collision1": "social_dynamic::robot1::roller_link_34::roller_link_34_collision",
+      "collision2": "social_dynamic::ground_plane::link::collision",
+      "first_t": 126.252,
+      "last_t": 126.301,
+      "max_depth": null,
+      "position": [
+        -0.261083838753,
+        -0.0310290882505,
+        -3.74802766601e-09
+      ],
+      "steps": 50
+    },
+    {
+      "a": "robot2",
+      "b": "ground_plane",
+      "collision1": "social_dynamic::robot2::roller_link_15::roller_link_15_collision",
+      "collision2": "social_dynamic::ground_plane::link::collision",
+      "first_t": 126.252,
+      "last_t": 126.301,
+      "max_depth": null,
+      "position": [
+        0.388402198597,
+        0.01722418667,
+        0
+      ],
+      "steps": 50
+    },
+    {
+      "a": "robot2",
+      "b": "ground_plane",
+      "collision1": "social_dynamic::robot2::roller_link_26::roller_link_26_collision",
+      "collision2": "social_dynamic::ground_plane::link::collision",
+      "first_t": 126.252,
+      "last_t": 126.301,
+      "max_depth": null,
+      "position": [
+        0.33307270314,
+        0.174390720244,
+        0
+      ],
+      "steps": 50
+    },
+    {
+      "a": "robot2",
+      "b": "ground_plane",
+      "collision1": "social_dynamic::robot2::roller_link_36::roller_link_36_collision",
+      "collision2": "social_dynamic::ground_plane::link::collision",
+      "first_t": 126.252,
+      "last_t": 126.301,
+      "max_depth": null,
+      "position": [
+        0.227165053427,
+        0.0416980497292,
+        0
+      ],
+      "steps": 50
+    },
+    {
+      "a": "robot3",
+      "b": "ground_plane",
+      "collision1": "social_dynamic::robot3::roller_link_12::roller_link_12_collision",
+      "collision2": "social_dynamic::ground_plane::link::collision",
+      "first_t": 126.252,
+      "last_t": 126.301,
+      "max_depth": null,
+      "position": [
+        0.61379639023,
+        -0.441701482254,
+        0
+      ],
+      "steps": 50
+    },
+    {
+      "a": "robot3",
+      "b": "ground_plane",
+      "collision1": "social_dynamic::robot3::roller_link_24::roller_link_24_collision",
+      "collision2": "social_dynamic::ground_plane::link::collision",
+      "first_t": 126.252,
+      "last_t": 126.301,
+      "max_depth": null,
+      "position": [
+        0.531564931436,
+        -0.280329012345,
+        0
+      ],
+      "steps": 50
+    },
+    {
+      "a": "robot3",
+      "b": "ground_plane",
+      "collision1": "social_dynamic::robot3::roller_link_32::roller_link_32_collision",
+      "collision2": "social_dynamic::ground_plane::link::collision",
+      "first_t": 126.252,
+      "last_t": 126.301,
+      "max_depth": null,
+      "position": [
+        0.427561155262,
+        -0.426394915016,
+        -2.8878730518e-09
+      ],
+      "steps": 50
+    }
+  ]
+}

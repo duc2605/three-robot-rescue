@@ -1,0 +1,369 @@
+{
+  "session": "recordings/lidar_2m_01",
+  "frame_count": 4943,
+  "frame_time": [
+    0.001,
+    247.101
+  ],
+  "source_snapshot": [
+    {
+      "path": "recordings/lidar_2m_01/world_frames.jsonl",
+      "complete_bytes": 33513225,
+      "sha256_complete_prefix": "01216e08611e7d00498e3597955e283b3b19d2f89ae02682f02b43d82fac1708"
+    },
+    {
+      "path": "recordings/lidar_2m_01/stop_robot1.jsonl",
+      "complete_bytes": 15039292,
+      "sha256_complete_prefix": "7b579642734c5987279c1a6ddf19f977700ba834b080c5aab2449e97a4d6ba20"
+    },
+    {
+      "path": "recordings/lidar_2m_01/stop_robot2.jsonl",
+      "complete_bytes": 15213372,
+      "sha256_complete_prefix": "a51318a70a6ff52f05e9eba4b2b16e5483eaee9ea7204174984278ca24ecbd1a"
+    },
+    {
+      "path": "recordings/lidar_2m_01/stop_robot3.jsonl",
+      "complete_bytes": 15562880,
+      "sha256_complete_prefix": "d49018580b03a6bec6604ba6670d5376a659ff9c6e0658f980f5cdc71ee225a8"
+    }
+  ],
+  "source_matches": {
+    "dstar_mpc_controller": true,
+    "stop_diagnostics": true,
+    "moving_obstacles": true,
+    "local_escape": true,
+    "scan_pose_history": true
+  },
+  "goals": [
+    {
+      "t": 8.690000000000001,
+      "epoch": 0,
+      "sequence": 1,
+      "xy": [
+        1.0355337858200073,
+        -1.9790207147598267
+      ],
+      "source": "selected_goal",
+      "meaning": "Selected map goal; route feasibility not guaranteed"
+    }
+  ],
+  "contact_episodes": [
+    {
+      "pair": [
+        "robot2",
+        "tv_viewer_a_walking"
+      ],
+      "epoch": 0,
+      "first_t": 32.117,
+      "last_t": 32.638,
+      "first_contact": {
+        "a": "robot2",
+        "b": "tv_viewer_a_walking",
+        "collision1": "social_dynamic::robot2::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+        "collision2": "social_dynamic::tv_viewer_a_walking::link::body_envelope",
+        "first_t": 32.117,
+        "last_t": 32.127,
+        "max_depth": null,
+        "position": [
+          1.77173963274,
+          -1.19984371991,
+          0.108665239297
+        ],
+        "steps": 11
+      }
+    },
+    {
+      "pair": [
+        "patrol_person",
+        "robot3"
+      ],
+      "epoch": 0,
+      "first_t": 84.382,
+      "last_t": 86.557,
+      "first_contact": {
+        "a": "robot3",
+        "b": "patrol_person",
+        "collision1": "social_dynamic::robot3::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+        "collision2": "social_dynamic::patrol_person::link::body_envelope",
+        "first_t": 84.382,
+        "last_t": 84.401,
+        "max_depth": null,
+        "position": [
+          0.608745303504,
+          -2.12061121697,
+          0.110244538689
+        ],
+        "steps": 20
+      }
+    },
+    {
+      "pair": [
+        "robot1",
+        "tv_viewer_a_returning"
+      ],
+      "epoch": 0,
+      "first_t": 93.338,
+      "last_t": 95.664,
+      "first_contact": {
+        "a": "robot1",
+        "b": "tv_viewer_a_returning",
+        "collision1": "social_dynamic::robot1::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+        "collision2": "social_dynamic::tv_viewer_a_returning::link::body_envelope",
+        "first_t": 93.338,
+        "last_t": 93.351,
+        "max_depth": null,
+        "position": [
+          0.716478646958,
+          -2.62974656398,
+          0.107990642982
+        ],
+        "steps": 14
+      }
+    },
+    {
+      "pair": [
+        "robot1",
+        "tv_viewer_a_walking"
+      ],
+      "epoch": 0,
+      "first_t": 139.05,
+      "last_t": 140.701,
+      "first_contact": {
+        "a": "robot1",
+        "b": "tv_viewer_a_walking",
+        "collision1": "social_dynamic::robot1::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+        "collision2": "social_dynamic::tv_viewer_a_walking::link::body_envelope",
+        "first_t": 139.05,
+        "last_t": 139.051,
+        "max_depth": null,
+        "position": [
+          1.41478665963,
+          -1.13601522151,
+          0.106735871238
+        ],
+        "steps": 2
+      }
+    },
+    {
+      "pair": [
+        "robot1",
+        "robot3"
+      ],
+      "epoch": 0,
+      "first_t": 147.65,
+      "last_t": 147.658,
+      "first_contact": {
+        "a": "robot1",
+        "b": "robot3",
+        "collision1": "social_dynamic::robot1::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+        "collision2": "social_dynamic::robot3::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+        "first_t": 147.65,
+        "last_t": 147.651,
+        "max_depth": null,
+        "position": [
+          2.41119248386,
+          -0.889627152892,
+          0.109529113961
+        ],
+        "steps": 2
+      }
+    },
+    {
+      "pair": [
+        "patrol_person",
+        "robot1"
+      ],
+      "epoch": 0,
+      "first_t": 191.601,
+      "last_t": 192.004,
+      "first_contact": {
+        "a": "robot1",
+        "b": "patrol_person",
+        "collision1": "social_dynamic::robot1::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+        "collision2": "social_dynamic::patrol_person::link::body_envelope",
+        "first_t": 191.601,
+        "last_t": 191.601,
+        "max_depth": null,
+        "position": [
+          0.799080839571,
+          -1.69751236802,
+          0.0230229482528
+        ],
+        "steps": 1
+      }
+    },
+    {
+      "pair": [
+        "patrol_person",
+        "robot3"
+      ],
+      "epoch": 0,
+      "first_t": 192.409,
+      "last_t": 192.773,
+      "first_contact": {
+        "a": "robot3",
+        "b": "patrol_person",
+        "collision1": "social_dynamic::robot3::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+        "collision2": "social_dynamic::patrol_person::link::body_envelope",
+        "first_t": 192.409,
+        "last_t": 192.451,
+        "max_depth": null,
+        "position": [
+          0.423184547329,
+          -2.27508369746,
+          0.105680513681
+        ],
+        "steps": 43
+      }
+    },
+    {
+      "pair": [
+        "robot3",
+        "tv_viewer_a_returning"
+      ],
+      "epoch": 0,
+      "first_t": 200.536,
+      "last_t": 201.809,
+      "first_contact": {
+        "a": "robot3",
+        "b": "tv_viewer_a_returning",
+        "collision1": "social_dynamic::robot3::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+        "collision2": "social_dynamic::tv_viewer_a_returning::link::body_envelope",
+        "first_t": 200.536,
+        "last_t": 200.545,
+        "max_depth": null,
+        "position": [
+          0.544094236821,
+          -2.37292551479,
+          0.0199561440765
+        ],
+        "steps": 10
+      }
+    },
+    {
+      "pair": [
+        "robot3",
+        "tv_viewer_a_walking"
+      ],
+      "epoch": 0,
+      "first_t": 245.11,
+      "last_t": 247.101,
+      "first_contact": {
+        "a": "robot3",
+        "b": "tv_viewer_a_walking",
+        "collision1": "social_dynamic::robot3::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+        "collision2": "social_dynamic::tv_viewer_a_walking::link::body_envelope",
+        "first_t": 245.11,
+        "last_t": 245.151,
+        "max_depth": null,
+        "position": [
+          1.46106644795,
+          -1.33847492156,
+          0.108776557591
+        ],
+        "steps": 42
+      }
+    }
+  ],
+  "non_ground_pair_count": 8,
+  "controller_summary": {
+    "robot1": {
+      "sample_time": [
+        0.0,
+        247.10000000000002
+      ],
+      "reason_counts": {
+        "watchdog_wall_freshness": 70,
+        "invalid_team_state": 1,
+        "motion_disabled_or_missing_map_pose_or_stale_state": 10,
+        "missing_or_stale_reference": 68,
+        "invalid_or_empty_reference": 6,
+        "mpc_tracking_command": 1116,
+        "mpc_beam_empty_step_1": 25,
+        "checked_escape_command": 408,
+        "moving_obstacle_pause_hold": 430,
+        "escape_all_rollouts_rejected": 96,
+        "escape_compute_budget_exhausted": 14,
+        "mpc_compute_budget_exhausted": 1
+      },
+      "camera_used": [
+        false
+      ]
+    },
+    "robot2": {
+      "sample_time": [
+        0.0,
+        247.10000000000002
+      ],
+      "reason_counts": {
+        "invalid_or_empty_reference": 3,
+        "watchdog_wall_freshness": 66,
+        "motion_disabled_or_missing_map_pose_or_stale_state": 11,
+        "missing_or_stale_reference": 67,
+        "mpc_tracking_command": 1138,
+        "mpc_beam_empty_step_4": 23,
+        "mpc_beam_empty_step_1": 189,
+        "checked_escape_command": 325,
+        "moving_obstacle_pause_hold": 396,
+        "escape_all_rollouts_rejected": 17,
+        "mpc_compute_budget_exhausted": 6,
+        "mpc_beam_empty_step_7": 1,
+        "mpc_beam_empty_step_6": 3,
+        "mpc_beam_empty_step_5": 26,
+        "escape_compute_budget_exhausted": 2
+      },
+      "camera_used": [
+        false
+      ]
+    },
+    "robot3": {
+      "sample_time": [
+        0.0,
+        246.60000000000002
+      ],
+      "reason_counts": {
+        "watchdog_wall_freshness": 80,
+        "invalid_team_state": 1,
+        "motion_disabled_or_missing_map_pose_or_stale_state": 5,
+        "missing_or_stale_reference": 60,
+        "invalid_or_empty_reference": 3,
+        "mpc_tracking_command": 1117,
+        "mpc_beam_empty_step_1": 25,
+        "checked_escape_command": 490,
+        "moving_obstacle_pause_hold": 423,
+        "escape_all_rollouts_rejected": 91,
+        "escape_compute_budget_exhausted": 12,
+        "mpc_compute_budget_exhausted": 10
+      },
+      "camera_used": [
+        false
+      ]
+    }
+  },
+  "zero_command_motion": {
+    "robot": "robot1",
+    "interval": [
+      147.0,
+      147.6
+    ],
+    "samples": 7,
+    "all_saved_commands_zero": true,
+    "root_xy_start": [
+      2.05953347104,
+      -0.844550720179
+    ],
+    "root_xy_end": [
+      2.29438647449,
+      -0.977855521339
+    ],
+    "root_xy_displacement": 0.2700483350102216,
+    "limit": "Internal saved commands only; no wheel velocity/effort or proof of the physical cause."
+  },
+  "limits": [
+    "Observed contacts confirm engine contact, not just disk overlap.",
+    "No pixel or full raw rays were recorded; perception cannot be fully rerun.",
+    "A* proposal is not the issued MPC trajectory.",
+    "No new navigation changes or simulation startup/shutdown in this audit.",
+    "The older 90s test did not certify this different longer run."
+  ]
+}

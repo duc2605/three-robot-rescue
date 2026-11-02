@@ -1,0 +1,310 @@
+{
+  "updated_utc": "2026-11-01T12:25:24.433657+00:00",
+  "state": "running",
+  "wall_elapsed_s": 149.00538586699986,
+  "sim_estimate": 36.598,
+  "counts": {
+    "/robot2/cmd_vel": 885,
+    "/robot2/safety_status": 280,
+    "/robot3/cmd_vel": 838,
+    "/robot3/safety_status": 272,
+    "/robot1/cmd_vel": 907,
+    "/robot1/safety_status": 291,
+    "/dstar_lite/path": 27,
+    "/formation/reference": 376,
+    "/social_navigation/status": 184,
+    "/formation/robot_states": 364,
+    "/leader/people/activity": 73,
+    "/leader/people/poses": 106,
+    "/leader/people/status": 107,
+    "/robot1/scan": 184,
+    "/robot2/scan": 184,
+    "/leader/camera/depth/image_raw": 165,
+    "/leader/camera/image_raw": 137,
+    "/robot3/scan": 111,
+    "/goal_pose": 1,
+    "/social_navigation/observation_status": 2
+  },
+  "latest": {
+    "/robot2/cmd_vel": [
+      0.2379307693819438,
+      0.029144965679596253,
+      0.2449683099398765
+    ],
+    "/robot2/safety_status": "normal",
+    "/robot3/cmd_vel": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/robot3/safety_status": "normal",
+    "/robot1/cmd_vel": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/robot1/safety_status": "normal",
+    "/dstar_lite/path": {
+      "length": 25,
+      "endpoint": [
+        1.0815577507019043,
+        -2.784435987472534
+      ]
+    },
+    "/formation/reference": {
+      "length": 27,
+      "poses": [
+        [
+          3.5295250626221684,
+          -3.059125615911982,
+          2.819805095002401
+        ],
+        [
+          2.6635381577667774,
+          -2.7704277081380715,
+          3.044824856324742
+        ],
+        [
+          2.1399632474028807,
+          -2.835336946102322,
+          2.5370469428421987
+        ],
+        [
+          3.498218899965771,
+          -3.048688941167067,
+          2.819805095002401
+        ],
+        [
+          2.6635381577667774,
+          -2.7704277081380715,
+          3.044824856324742
+        ],
+        [
+          2.135186024364544,
+          -2.83203669246644,
+          2.5370469428421987
+        ],
+        [
+          3.479222102276899,
+          -3.0423558941932245,
+          2.819805095002401
+        ],
+        [
+          2.6635381577667774,
+          -2.7704277081380715,
+          3.044824856324742
+        ],
+        [
+          2.1304088013262077,
+          -2.828736438830558,
+          2.5370469428421987
+        ],
+        [
+          3.4737137965432736,
+          -3.0405195658010045,
+          2.8198050950024016
+        ],
+        [
+          2.6635381577667774,
+          -2.7704277081380715,
+          3.044824856324742
+        ],
+        [
+          2.125631578287871,
+          -2.825436185194676,
+          2.5370469428421987
+        ],
+        [
+          3.468205490809648,
+          -3.0386832374087844,
+          2.8198050950023994
+        ],
+        [
+          2.6635381577667774,
+          -2.7704277081380715,
+          3.044824856324742
+        ],
+        [
+          2.120073120443433,
+          -2.823944172693876,
+          2.9304993203670446
+        ],
+        [
+          3.462697185076022,
+          -3.036846909016564,
+          2.8198050950024
+        ],
+        [
+          2.6635381577667774,
+          -2.7704277081380715,
+          3.044824856324742
+        ],
+        [
+          2.1143956713993997,
+          -2.8227275764701547,
+          2.9304993203670446
+        ],
+        [
+          3.4571888793423966,
+          -3.035010580624344,
+          2.8198050950024
+        ],
+        [
+          2.6635381577667774,
+          -2.7704277081380715,
+          3.044824856324742
+        ],
+        [
+          2.1087182223553667,
+          -2.8215109802464333,
+          2.9304993203670446
+        ],
+        [
+          3.451680573608771,
+          -3.033174252232124,
+          2.8198050950024003
+        ],
+        [
+          2.6635381577667774,
+          -2.7704277081380715,
+          3.044824856324742
+        ],
+        [
+          2.103040773311333,
+          -2.820294384022712,
+          2.9304993203670446
+        ],
+        [
+          3.4461722678751454,
+          -3.031337923839904,
+          2.8198050950024003
+        ],
+        [
+          2.6635381577667774,
+          -2.7704277081380715,
+          3.044824856324742
+        ],
+        [
+          2.0973633242673,
+          -2.8190777877989905,
+          2.9304993203670446
+        ]
+      ]
+    },
+    "/social_navigation/status": "usable_orientations=5, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=1, color_targets=1, remembered_people=9, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=2, person_tracks=3, search=cancelled: yielding to an approaching moving obstacle; social keepout active on D* Lite and all three MPC maps",
+    "/formation/robot_states": [
+      [
+        3.5503958377264326,
+        -3.066083399075259,
+        2.7431337306749843
+      ],
+      [
+        2.6635381577667774,
+        -2.7704277081380715,
+        2.705272579867544
+      ],
+      [
+        2.1431480627617714,
+        -2.83753711519291,
+        -2.4009494938926057
+      ]
+    ],
+    "/leader/people/activity": "{\"version\": 1, \"frame_id\": \"map\", \"stamp\": 36.5, \"tracks\": [{\"id\": 9, \"position\": [0.5490309107113158, -3.501452406225833, 0.5530451352592423], \"stamp\": 35.856, \"window_seconds\": 10.0, \"observed_seconds\": 9.442, \"coverage\": 0.8638000000000006, \"window_ready\": false, \"state\": \"observing_partial_body\", \"heading\": null, \"speed\": 0.01330015851263992, \"gesture_amplitude\": 0.1169828239791349, \"head_motion_amplitude\": 0.06304970170473818, \"torso_motion_amplitude\": 0.036265687324461636, \"gesturing\": false, \"partners\": [], \"source\": \"camera_body_history\"}]}",
+    "/leader/people/poses": [
+      [
+        0.5490309107113158,
+        -3.501452406225833,
+        0.0
+      ]
+    ],
+    "/leader/people/status": "Waiting for a fresh matched RGB-D capture; inference held",
+    "/robot1/scan": {
+      "rays": 240,
+      "finite_valid": 58,
+      "min_valid_m": 0.9283673167228699,
+      "frame": "robot1/lidar_link_1"
+    },
+    "/robot2/scan": {
+      "rays": 240,
+      "finite_valid": 95,
+      "min_valid_m": 0.3917536735534668,
+      "frame": "robot2/lidar_link_1"
+    },
+    "/leader/camera/depth/image_raw": {
+      "width": 480,
+      "height": 360,
+      "encoding": "32FC1"
+    },
+    "/leader/camera/image_raw": {
+      "width": 480,
+      "height": 360,
+      "encoding": "rgb8"
+    },
+    "/robot3/scan": {
+      "rays": 240,
+      "finite_valid": 132,
+      "min_valid_m": 0.40845194458961487,
+      "frame": "robot3/base_link"
+    },
+    "/goal_pose": {
+      "frame": "map",
+      "xy": [
+        1.0815577507019043,
+        -2.784435987472534
+      ]
+    },
+    "/social_navigation/observation_status": "cancelled: yielding to an approaching moving obstacle"
+  },
+  "receipt_age_s": {
+    "/robot2/cmd_vel": 0.12686436099829734,
+    "/robot2/safety_status": 21.499745106000773,
+    "/robot3/cmd_vel": 0.0019297040016681422,
+    "/robot3/safety_status": 5.607195156000671,
+    "/robot1/cmd_vel": 0.1903140969989181,
+    "/robot1/safety_status": 0.19153894799819682,
+    "/dstar_lite/path": 0.18361653000101796,
+    "/formation/reference": 0.15024897300099838,
+    "/social_navigation/status": 0.2593931689989404,
+    "/formation/robot_states": 0.1785809809989587,
+    "/leader/people/activity": 0.8990617939998629,
+    "/leader/people/poses": 2.5077039690004312,
+    "/leader/people/status": 1.4833521139989898,
+    "/robot1/scan": 0.4163577049985179,
+    "/robot2/scan": 0.385453797000082,
+    "/leader/camera/depth/image_raw": 1.526917537998088,
+    "/leader/camera/image_raw": 0.7701942099993175,
+    "/robot3/scan": 1.2233852079989447,
+    "/goal_pose": 130.31175768899993,
+    "/social_navigation/observation_status": 66.33119240700034
+  },
+  "capture_stamp": {
+    "/dstar_lite/path": 36.601,
+    "/formation/reference": 36.601,
+    "/formation/robot_states": 36.598,
+    "/leader/people/poses": 35.856,
+    "/robot1/scan": 36.6,
+    "/robot2/scan": 36.6,
+    "/leader/camera/depth/image_raw": 36.354,
+    "/leader/camera/image_raw": 36.52,
+    "/robot3/scan": 36.4,
+    "/goal_pose": 6.608
+  },
+  "capture_age_estimate_s": {
+    "/dstar_lite/path": -0.0030000000000001137,
+    "/formation/reference": -0.0030000000000001137,
+    "/formation/robot_states": 0.0,
+    "/leader/people/poses": 0.7419999999999973,
+    "/robot1/scan": -0.0020000000000024443,
+    "/robot2/scan": -0.0020000000000024443,
+    "/leader/camera/depth/image_raw": 0.24399999999999977,
+    "/leader/camera/image_raw": 0.07799999999999585,
+    "/robot3/scan": 0.1980000000000004,
+    "/goal_pose": 29.99
+  },
+  "limits": [
+    "sim_estimate comes from team-pose header, not an independent physics clock",
+    "No physics-contact sensor in restored baseline; these files do not prove no collision",
+    "No camera pixels or people identities recorded; receiving images adds DDS traffic",
+    "Read-only observer; missing topics remain missing rather than zero counts implying success"
+  ]
+}

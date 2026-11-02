@@ -1,0 +1,279 @@
+{
+  "source_session": "log/sessions/20261101_192255_199210",
+  "episodes": [
+    {
+      "wall_vietnam": "2026-11-01T19:26:08.400087+07:00",
+      "sim_estimate": 45.496,
+      "command_body_vx_vy_omega": [
+        -0.06409250499430884,
+        -0.04787641176565448,
+        0.0
+      ],
+      "command_body_angle_deg": -143.24066435820936,
+      "leader_world_pose": [
+        1.4241520417306803,
+        -2.823408431711432,
+        2.8974277900631202
+      ],
+      "pose_capture_stamp": 45.496,
+      "scan_capture_stamp": 45.4,
+      "scan_frame": "robot3/base_link",
+      "scan_receipt_before_command_wall_s": 0.9843170642852783,
+      "scan_capture_age_vs_pose_estimate_s": 0.09600000000000364,
+      "scan_rays": 240,
+      "finite_rays": 159,
+      "range_min_m": 0.525158703327179,
+      "range_max_m": 6.294248580932617,
+      "sectors": {
+        "front": {
+          "finite_hits": 41,
+          "nearest": {
+            "range_m": 1.1208986043930054,
+            "body_angle_deg": 42.92886249964861
+          }
+        },
+        "right": {
+          "finite_hits": 60,
+          "nearest": {
+            "range_m": 1.0879924297332764,
+            "body_angle_deg": -89.62343710006243
+          }
+        },
+        "left": {
+          "finite_hits": 22,
+          "nearest": {
+            "range_m": 0.9935875535011292,
+            "body_angle_deg": 51.966519290537995
+          }
+        },
+        "command_cone": {
+          "finite_hits": 20,
+          "nearest": {
+            "range_m": 1.6100080013275146,
+            "body_angle_deg": -131.79916879087958
+          }
+        }
+      },
+      "camera_people": [
+        {
+          "world_xy": [
+            -3.3948530743476892,
+            -2.031107430878423
+          ],
+          "body_xy": [
+            4.867606908362084,
+            0.39617441913406115
+          ],
+          "range_m": 4.88370261018323,
+          "angle_deg": 4.653045885575296
+        },
+        {
+          "world_xy": [
+            0.20493939206241718,
+            -3.38601254531382
+          ],
+          "body_xy": [
+            1.047042940669879,
+            0.8406568587401211
+          ],
+          "range_m": 1.3427594251218031,
+          "angle_deg": 38.7605176343753
+        }
+      ],
+      "camera_capture_stamp": 44.987,
+      "camera_receipt_before_command_wall_s": 1.5747861862182617,
+      "leader_nearest_safety_status": "moving_obstacle: yielding with checked local escape; speed=0.20m/s band=slow TTC=1.13s; A*=right",
+      "status_wall_offset_from_command_s": 0.002640962600708008,
+      "followers": {
+        "robot1": {
+          "status": "moving_obstacle: yielding with checked local escape; speed=0.16m/s band=slow TTC=0.68s; A*=reactive fallback",
+          "status_receipt_age_wall_s": 0.1388530731201172
+        },
+        "robot2": {
+          "status": "stale_data: holding; fresh state/reference or active escape sensors required",
+          "status_receipt_age_wall_s": 0.03108811378479004
+        }
+      }
+    },
+    {
+      "wall_vietnam": "2026-11-01T19:27:23.470203+07:00",
+      "sim_estimate": 61.299,
+      "command_body_vx_vy_omega": [
+        0.057851982961541086,
+        -0.08410409528787197,
+        1.0
+      ],
+      "command_body_angle_deg": -55.477408324477764,
+      "leader_world_pose": [
+        1.025920429095724,
+        -2.532564228627457,
+        -2.5304596532321884
+      ],
+      "pose_capture_stamp": 61.299,
+      "scan_capture_stamp": 60.4,
+      "scan_frame": "robot3/base_link",
+      "scan_receipt_before_command_wall_s": 4.3983519077301025,
+      "scan_capture_age_vs_pose_estimate_s": 0.8990000000000009,
+      "scan_rays": 240,
+      "finite_rays": 170,
+      "range_min_m": 0.7433757781982422,
+      "range_max_m": 6.535545349121094,
+      "sectors": {
+        "front": {
+          "finite_hits": 42,
+          "nearest": {
+            "range_m": 1.9139208793640137,
+            "body_angle_deg": 35.397481840574116
+          }
+        },
+        "right": {
+          "finite_hits": 60,
+          "nearest": {
+            "range_m": 1.4217313528060913,
+            "body_angle_deg": -91.12971323187733
+          }
+        },
+        "left": {
+          "finite_hits": 31,
+          "nearest": {
+            "range_m": 0.7535306215286255,
+            "body_angle_deg": 131.7991542767276
+          }
+        },
+        "command_cone": {
+          "finite_hits": 20,
+          "nearest": {
+            "range_m": 1.547023057937622,
+            "body_angle_deg": -70.04184738646876
+          }
+        }
+      },
+      "camera_people": [
+        {
+          "world_xy": [
+            -3.3655339875575003,
+            -1.974645794166957
+          ],
+          "body_xy": [
+            3.276463056608271,
+            -2.976732220360971
+          ],
+          "range_m": 4.426753310616481,
+          "angle_deg": -42.25577448789024
+        },
+        {
+          "world_xy": [
+            0.19127601684769235,
+            -3.419093160966733
+          ],
+          "body_xy": [
+            1.1922590025415485,
+            0.2471503866679381
+          ],
+          "range_m": 1.2176061936321938,
+          "angle_deg": 11.711308414194036
+        }
+      ],
+      "camera_capture_stamp": 60.922,
+      "camera_receipt_before_command_wall_s": 0.8445148468017578,
+      "leader_nearest_safety_status": "moving_obstacle: no verified safe escape, holding",
+      "status_wall_offset_from_command_s": 2.3230140209198,
+      "followers": {
+        "robot1": {
+          "status": "normal",
+          "status_receipt_age_wall_s": 5.437374830245972
+        },
+        "robot2": {
+          "status": "moving_obstacle: yielding with checked local escape; speed=0.16m/s band=slow TTC=2.60s; A*=reactive fallback",
+          "status_receipt_age_wall_s": 0.0797429084777832
+        }
+      }
+    },
+    {
+      "wall_vietnam": "2026-11-01T19:29:29.533416+07:00",
+      "sim_estimate": 87.996,
+      "command_body_vx_vy_omega": [
+        -0.21567616992091845,
+        -0.053006283699142176,
+        0.0
+      ],
+      "command_body_angle_deg": -166.1921995707208,
+      "leader_world_pose": [
+        0.7166156392144057,
+        -2.2675832608347433,
+        0.05037548926146081
+      ],
+      "pose_capture_stamp": 87.996,
+      "scan_capture_stamp": 87.8,
+      "scan_frame": "robot3/base_link",
+      "scan_receipt_before_command_wall_s": 0.7504169940948486,
+      "scan_capture_age_vs_pose_estimate_s": 0.19599999999999795,
+      "scan_rays": 240,
+      "finite_rays": 161,
+      "range_min_m": 0.7686029672622681,
+      "range_max_m": 7.873917102813721,
+      "sectors": {
+        "front": {
+          "finite_hits": 36,
+          "nearest": {
+            "range_m": 0.7686029672622681,
+            "body_angle_deg": 23.34727278605493
+          }
+        },
+        "right": {
+          "finite_hits": 28,
+          "nearest": {
+            "range_m": 1.0862741470336914,
+            "body_angle_deg": -110.71130294547102
+          }
+        },
+        "left": {
+          "finite_hits": 60,
+          "nearest": {
+            "range_m": 1.2388745546340942,
+            "body_angle_deg": 97.15480324498495
+          }
+        },
+        "command_cone": {
+          "finite_hits": 0,
+          "nearest": null
+        }
+      },
+      "camera_people": [
+        {
+          "world_xy": [
+            1.4435690713989342,
+            -1.8208101392364486
+          ],
+          "body_xy": [
+            0.7485281327788547,
+            0.40960120750084683
+          ],
+          "range_m": 0.8532687236431149,
+          "angle_deg": 28.687868263431593
+        }
+      ],
+      "camera_capture_stamp": 87.482,
+      "camera_receipt_before_command_wall_s": 0.5151889324188232,
+      "leader_nearest_safety_status": "moving_obstacle: stop, fresh state/lidar/physical map required",
+      "status_wall_offset_from_command_s": 0.2505760192871094,
+      "followers": {
+        "robot1": {
+          "status": "moving_obstacle: yielding with checked local escape; speed=0.57m/s band=fast TTC=1.45s; A*=reactive fallback",
+          "status_receipt_age_wall_s": 0.7448809146881104
+        },
+        "robot2": {
+          "status": "moving_obstacle: yielding with checked local escape; speed=0.39m/s band=slow TTC=1.08s; A*=reactive fallback",
+          "status_receipt_age_wall_s": 0.2641141414642334
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Multiple matching episodes; user identified follower avoidance, not a unique timestamp.",
+    "Recorded subscriber receipt/capture stamps are not proof of exact scan consumed by MPC.",
+    "Camera points are measured person candidates, without saved identity or pixels; cannot identify which person user saw.",
+    "No-return rays are not free-space evidence. LaserScan ranges are projected horizontal distances, height-filtered 0.025..0.40m.",
+    "Right means negative body y, not necessarily right in Gazebo/RViz camera view."
+  ]
+}

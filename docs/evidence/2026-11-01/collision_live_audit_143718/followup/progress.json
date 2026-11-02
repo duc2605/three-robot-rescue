@@ -1,0 +1,73 @@
+{
+  "elapsed": 15.0,
+  "sim": 87.51,
+  "sim_elapsed": 3.680000000000007,
+  "rtf_recent": 0.24609126981886822,
+  "goal": [
+    1.15016,
+    -2.51884
+  ],
+  "leader_goal_distance": 0.04827781769246263,
+  "team": [
+    [
+      1.8982997330098303,
+      -2.4865685902569004,
+      -2.182606844267704
+    ],
+    [
+      0.6141521312199117,
+      -2.2404200968881796,
+      -0.47013585354194154
+    ],
+    [
+      1.1637864934318785,
+      -2.4725251389087948,
+      -2.8517480910728716
+    ]
+  ],
+  "path_length_sampled": [
+    0.04229552630427452,
+    0.4320775966274112,
+    0.030139742044432486
+  ],
+  "command_counts": {
+    "robot1": {
+      "total": 51,
+      "linear_nonzero": 6,
+      "any_nonzero": 6
+    },
+    "robot2": {
+      "total": 41,
+      "linear_nonzero": 10,
+      "any_nonzero": 10
+    },
+    "robot3": {
+      "total": 47,
+      "linear_nonzero": 3,
+      "any_nonzero": 3
+    }
+  },
+  "safety_latest": {
+    "robot1": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.079m buffer_gap=-0.050m",
+    "robot2": "moving_obstacle: yielding with checked local escape; speed=0.12m/s band=slow TTC=0.91s; A*=reactive fallback; uncertainty_recovery=False",
+    "robot3": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.073m buffer_gap=-0.057m"
+  },
+  "counts": {
+    "clock": 369,
+    "robot3/cmd": 47,
+    "robot3/safety": 37,
+    "robot2/cmd": 41,
+    "robot1/cmd": 51,
+    "robot2/safety": 28,
+    "team": 37,
+    "reference": 38,
+    "robot1/safety": 36,
+    "contact_status": 15,
+    "robot1/scan": 18,
+    "robot2/scan": 18,
+    "robot3/scan": 13
+  },
+  "log_warning_counts": {},
+  "social": null,
+  "observation": null
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "pid": 28043,
+    "args": "ign gazebo gui                                                                                                                                                      ",
+    "cpu_percent": 208.56711241888794
+  },
+  {
+    "pid": 28042,
+    "args": "ign gazebo server                                                                                                                                                   ",
+    "cpu_percent": 162.51853060609707
+  },
+  {
+    "pid": 27971,
+    "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/three_robot_dstar_mpc --ros-args -r __node:=three_robot_dstar_mpc --params-file ",
+    "cpu_percent": 95.59325985865698
+  },
+  {
+    "pid": 27977,
+    "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot3_distributed_mpc --params-file",
+    "cpu_percent": 83.20709034719046
+  },
+  {
+    "pid": 27975,
+    "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot2_distributed_mpc --params-file",
+    "cpu_percent": 80.21043643312598
+  },
+  {
+    "pid": 27973,
+    "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot1_distributed_mpc --params-file",
+    "cpu_percent": 77.31367098286364
+  },
+  {
+    "pid": 27979,
+    "args": "/opt/ros/humble/lib/rviz2/rviz2 -d /home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/rviz/social_navigation.rviz --ros-args -r __node:=three_robot_dstar_",
+    "cpu_percent": 21.27624278985782
+  },
+  {
+    "pid": 27966,
+    "args": "ign gazebo /home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/worlds/social_dynamic.sdf -r -v 4                                 ",
+    "cpu_percent": 0.0
+  }
+]

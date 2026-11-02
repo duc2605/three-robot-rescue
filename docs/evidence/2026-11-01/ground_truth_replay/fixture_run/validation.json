@@ -1,0 +1,11 @@
+{
+  "frames": 90,
+  "first_sim": 0.001,
+  "last_sim": 4.451,
+  "objects": 53,
+  "actor_count": 5,
+  "model_count": 48,
+  "robot3_motion_m": 1.111,
+  "patrol_motion_m": 1.7775999999999996,
+  "limits": "Real ECM samples in isolated scene; robot cylinders moved by scripted test plugin, not navigation."
+}

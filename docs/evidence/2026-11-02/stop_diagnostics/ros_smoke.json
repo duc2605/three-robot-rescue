@@ -1,0 +1,11 @@
+{
+  "default_writer_disabled": true,
+  "opt_in_real_ros_timers_write_controller_and_coordinator": true,
+  "ros_domain": "211",
+  "gazebo_started": false,
+  "sensor_data_supplied": false,
+  "counts": {
+    "stop_coordinator.jsonl": 11,
+    "stop_robot3.jsonl": 14
+  }
+}

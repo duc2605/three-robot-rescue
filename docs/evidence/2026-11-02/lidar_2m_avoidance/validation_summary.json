@@ -1,0 +1,1298 @@
+{
+  "trials": [
+    {
+      "folder": "recordings/lidar_2m_validation_01",
+      "frames": 11405,
+      "time": [
+        0.001,
+        570.201
+      ],
+      "contact_pairs": [
+        {
+          "pair": [
+            "robot3",
+            "tv_viewer_a_walking"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 31.059,
+              "last_t": 33.634
+            }
+          ]
+        }
+      ],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            2.8115453698,
+            -1.88691321089
+          ],
+          "sampled_xy_travel": 2.8550602980866184
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            2.82870414684,
+            -1.464241315
+          ],
+          "sampled_xy_travel": 2.3872913374423907
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            35.0025614516,
+            71.2661024899
+          ],
+          "sampled_xy_travel": 98.00085916513902
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 33.1,
+          "reasons": {
+            "watchdog_wall_freshness": 48,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 5,
+            "invalid_team_state": 6,
+            "invalid_or_empty_reference": 3,
+            "missing_or_stale_reference": 24,
+            "mpc_tracking_command": 133,
+            "mpc_beam_empty_step_1": 7,
+            "mpc_compute_budget_exhausted": 106,
+            "checked_escape_command": 24,
+            "escape_all_rollouts_rejected": 1,
+            "escape_compute_budget_exhausted": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 104.01630900014425
+        },
+        "stop_robot1": {
+          "last_t": 33.1,
+          "reasons": {
+            "watchdog_wall_freshness": 49,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 12,
+            "invalid_team_state": 5,
+            "invalid_or_empty_reference": 3,
+            "mpc_tracking_command": 193,
+            "mpc_compute_budget_exhausted": 57,
+            "missing_or_stale_reference": 17,
+            "checked_escape_command": 17,
+            "escape_compute_budget_exhausted": 6
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 102.42347500025062
+        },
+        "stop_robot3": {
+          "last_t": 33.0,
+          "reasons": {
+            "watchdog_wall_freshness": 48,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 10,
+            "invalid_team_state": 3,
+            "invalid_or_empty_reference": 3,
+            "missing_or_stale_reference": 22,
+            "mpc_tracking_command": 107,
+            "mpc_compute_budget_exhausted": 80,
+            "mpc_beam_empty_step_1": 10,
+            "mpc_beam_empty_step_5": 2,
+            "checked_escape_command": 44,
+            "escape_compute_budget_exhausted": 3,
+            "escape_all_rollouts_rejected": 25
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 103.59446999791544
+        }
+      },
+      "frame_sha256": "48e1f8950a582b5e1e228858d29fe32b58eb234c0c5c7e81c66f9d36efdf3adc",
+      "valid_avoidance_trial": true,
+      "revision_note": "Pilot exposed normal MPC deadline holds; GUI."
+    },
+    {
+      "folder": "recordings/lidar_2m_validation_02",
+      "frames": 965,
+      "time": [
+        0.001,
+        48.201
+      ],
+      "contact_pairs": [
+        {
+          "pair": [
+            "robot1",
+            "tv_viewer_a_walking"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 30.456,
+              "last_t": 32.116
+            }
+          ]
+        }
+      ],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            1.77164632285,
+            -1.5991234205
+          ],
+          "sampled_xy_travel": 6.131041151815948
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            1.57046065472,
+            -2.11975652986
+          ],
+          "sampled_xy_travel": 5.0114324802330446
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            1.02946307231,
+            -2.03296691069
+          ],
+          "sampled_xy_travel": 4.594208710339994
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 41.2,
+          "reasons": {
+            "invalid_or_empty_reference": 1,
+            "watchdog_wall_freshness": 83,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 9,
+            "invalid_team_state": 2,
+            "mpc_tracking_command": 196,
+            "mpc_beam_empty_step_1": 44,
+            "missing_or_stale_reference": 8,
+            "checked_escape_command": 25,
+            "escape_compute_budget_exhausted": 8,
+            "escape_all_rollouts_rejected": 12
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 73.22979799937457
+        },
+        "stop_robot1": {
+          "last_t": 48.2,
+          "reasons": {
+            "watchdog_wall_freshness": 107,
+            "invalid_or_empty_reference": 1,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 10,
+            "invalid_team_state": 1,
+            "mpc_tracking_command": 173,
+            "missing_or_stale_reference": 9,
+            "checked_escape_command": 75,
+            "escape_all_rollouts_rejected": 35,
+            "mpc_beam_empty_step_1": 10,
+            "escape_compute_budget_exhausted": 11
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 83.6914089959464
+        },
+        "stop_robot3": {
+          "last_t": 48.2,
+          "reasons": {
+            "watchdog_wall_freshness": 130,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 7,
+            "invalid_team_state": 4,
+            "mpc_tracking_command": 242,
+            "mpc_beam_empty_step_1": 40,
+            "missing_or_stale_reference": 11,
+            "invalid_or_empty_reference": 1,
+            "checked_escape_command": 45,
+            "escape_compute_budget_exhausted": 6,
+            "escape_all_rollouts_rejected": 2,
+            "mpc_compute_budget_exhausted": 18
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 103.45441399840638
+        }
+      },
+      "frame_sha256": "ec2805c1056ac15289036f2732039fd23b0eb1c731fc3dd9d470259a01b69592",
+      "valid_avoidance_trial": true,
+      "revision_note": "Before local-priority fusion: TV walker contact robot1."
+    },
+    {
+      "folder": "recordings/lidar_2m_validation_03",
+      "frames": 60,
+      "time": [
+        0.001,
+        2.951
+      ],
+      "contact_pairs": [],
+      "robots": {},
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 2.976,
+          "reasons": {
+            "watchdog_wall_freshness": 1163,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 5,
+            "invalid_team_state": 8,
+            "invalid_or_empty_reference": 6
+          },
+          "max_saved_command_speed": 0.0,
+          "max_saved_compute_elapsed_wall_ms": 0.2841559980879538
+        },
+        "stop_robot1": {
+          "last_t": 2.976,
+          "reasons": {
+            "watchdog_wall_freshness": 1162,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 7,
+            "invalid_team_state": 10
+          },
+          "max_saved_command_speed": 0.0,
+          "max_saved_compute_elapsed_wall_ms": 0.272746998234652
+        },
+        "stop_robot3": {
+          "last_t": 2.976,
+          "reasons": {
+            "watchdog_wall_freshness": 1160,
+            "invalid_or_empty_reference": 3,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 5,
+            "invalid_team_state": 12
+          },
+          "max_saved_command_speed": 0.0,
+          "max_saved_compute_elapsed_wall_ms": 0.27498700364958495
+        }
+      },
+      "frame_sha256": "ccaa575c38bd07ba8c1f88cfad26a1e5d9ed94402e1d24648cf4009d93de0737",
+      "valid_avoidance_trial": false,
+      "revision_note": "Startup services failed; no scan/control validation."
+    },
+    {
+      "folder": "recordings/lidar_2m_validation_04",
+      "frames": 1338,
+      "time": [
+        0.001,
+        66.851
+      ],
+      "contact_pairs": [
+        {
+          "pair": [
+            "robot2",
+            "tv_viewer_a_walking"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 31.059,
+              "last_t": 33.019
+            },
+            {
+              "epoch": 0,
+              "first_t": 33.4,
+              "last_t": 33.404
+            },
+            {
+              "epoch": 0,
+              "first_t": 33.529,
+              "last_t": 33.634
+            },
+            {
+              "epoch": 0,
+              "first_t": 33.914,
+              "last_t": 33.937
+            },
+            {
+              "epoch": 0,
+              "first_t": 34.086,
+              "last_t": 34.544
+            },
+            {
+              "epoch": 0,
+              "first_t": 34.947,
+              "last_t": 34.949
+            },
+            {
+              "epoch": 0,
+              "first_t": 35.234,
+              "last_t": 35.354
+            },
+            {
+              "epoch": 0,
+              "first_t": 36.868,
+              "last_t": 36.872
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot2",
+            "tv_console"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 50.051,
+              "last_t": 50.076
+            },
+            {
+              "epoch": 0,
+              "first_t": 50.92,
+              "last_t": 51
+            },
+            {
+              "epoch": 0,
+              "first_t": 52.321,
+              "last_t": 52.344
+            },
+            {
+              "epoch": 0,
+              "first_t": 52.63,
+              "last_t": 52.819
+            }
+          ]
+        }
+      ],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            1.74047360575,
+            -2.32118393573
+          ],
+          "sampled_xy_travel": 8.284979500648937
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            0.93179071704,
+            -0.68885471176
+          ],
+          "sampled_xy_travel": 12.784025646882776
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            1.03514736924,
+            -2.03577378771
+          ],
+          "sampled_xy_travel": 5.280742152285126
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 62.50000000000001,
+          "reasons": {
+            "invalid_or_empty_reference": 6,
+            "watchdog_wall_freshness": 34,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 31,
+            "invalid_team_state": 3,
+            "missing_or_stale_reference": 45,
+            "mpc_tracking_command": 273,
+            "mpc_beam_empty_step_1": 74,
+            "mpc_compute_budget_exhausted": 16,
+            "mpc_beam_empty_step_8": 1,
+            "checked_escape_command": 59,
+            "escape_all_rollouts_rejected": 22,
+            "escape_compute_budget_exhausted": 1,
+            "mpc_sensor_data_expired_before_publish": 6,
+            "mpc_beam_empty_step_6": 6,
+            "mpc_beam_empty_step_7": 1,
+            "mpc_beam_empty_step_5": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 101.37482999562053
+        },
+        "stop_robot1": {
+          "last_t": 57.900000000000006,
+          "reasons": {
+            "invalid_or_empty_reference": 6,
+            "watchdog_wall_freshness": 35,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 27,
+            "invalid_team_state": 7,
+            "missing_or_stale_reference": 49,
+            "mpc_tracking_command": 354,
+            "checked_escape_command": 43,
+            "escape_compute_budget_exhausted": 1,
+            "escape_all_rollouts_rejected": 8,
+            "mpc_beam_empty_step_1": 19,
+            "mpc_sensor_data_expired_before_publish": 8,
+            "mpc_beam_empty_step_4": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 83.03682599944295
+        },
+        "stop_robot3": {
+          "last_t": 62.50000000000001,
+          "reasons": {
+            "invalid_or_empty_reference": 5,
+            "watchdog_wall_freshness": 35,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 27,
+            "invalid_team_state": 6,
+            "missing_or_stale_reference": 48,
+            "mpc_tracking_command": 366,
+            "mpc_beam_empty_step_1": 14,
+            "checked_escape_command": 49,
+            "escape_compute_budget_exhausted": 2,
+            "escape_all_rollouts_rejected": 32,
+            "mpc_sensor_data_expired_before_publish": 8
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 61.66883100377163
+        }
+      },
+      "frame_sha256": "ee5c94788af2a7e3900506ff65a5c99af7f3422b584e22c23c98813b263cf485",
+      "valid_avoidance_trial": true,
+      "revision_note": "Before capture-time robot pose alignment: TV walker contact robot2."
+    },
+    {
+      "folder": "recordings/lidar_2m_validation_05",
+      "frames": 1803,
+      "time": [
+        0.001,
+        90.101
+      ],
+      "contact_pairs": [
+        {
+          "pair": [
+            "robot2",
+            "tv_viewer_a_walking"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 26.934,
+              "last_t": 27.549
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot3",
+            "tv_viewer_a_walking"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 30.858,
+              "last_t": 31.213
+            }
+          ]
+        },
+        {
+          "pair": [
+            "patrol_person",
+            "robot3"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 84.18,
+              "last_t": 84.426
+            }
+          ]
+        }
+      ],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            2.499940018,
+            -2.07088609861
+          ],
+          "sampled_xy_travel": 5.093388533940879
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            0.743175539308,
+            -2.68553693856
+          ],
+          "sampled_xy_travel": 5.773559491826323
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            7.63520359673,
+            4.24993945409
+          ],
+          "sampled_xy_travel": 24.34492006106419
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 90.10000000000001,
+          "reasons": {
+            "invalid_or_empty_reference": 4,
+            "watchdog_wall_freshness": 45,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 20,
+            "invalid_team_state": 10,
+            "mpc_tracking_command": 520,
+            "mpc_beam_empty_step_1": 49,
+            "checked_escape_command": 95,
+            "escape_requires_fresh_sensors_map_and_peers": 13,
+            "mpc_sensor_data_expired_before_publish": 89,
+            "missing_or_stale_reference": 64,
+            "escape_all_rollouts_rejected": 10,
+            "escape_compute_budget_exhausted": 2
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 61.75831400469178
+        },
+        "stop_robot1": {
+          "last_t": 90.10000000000001,
+          "reasons": {
+            "invalid_or_empty_reference": 5,
+            "watchdog_wall_freshness": 47,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 23,
+            "invalid_team_state": 8,
+            "mpc_tracking_command": 540,
+            "mpc_beam_empty_step_1": 89,
+            "mpc_sensor_data_expired_before_publish": 103,
+            "mpc_beam_empty_step_5": 1,
+            "missing_or_stale_reference": 64,
+            "checked_escape_command": 43,
+            "escape_requires_fresh_sensors_map_and_peers": 2
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 61.68899800104555
+        },
+        "stop_robot3": {
+          "last_t": 90.10000000000001,
+          "reasons": {
+            "invalid_or_empty_reference": 3,
+            "watchdog_wall_freshness": 38,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 25,
+            "invalid_team_state": 7,
+            "missing_or_stale_reference": 74,
+            "mpc_tracking_command": 510,
+            "mpc_beam_empty_step_1": 87,
+            "mpc_sensor_data_expired_before_publish": 76,
+            "mpc_state_expired_before_publish": 3,
+            "mpc_beam_empty_step_5": 1,
+            "checked_escape_command": 73,
+            "escape_all_rollouts_rejected": 9,
+            "escape_requires_fresh_sensors_map_and_peers": 9,
+            "escape_compute_budget_exhausted": 2,
+            "mpc_compute_budget_exhausted": 6
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 101.03835799964145
+        }
+      },
+      "frame_sha256": "057108be9f2ee996df0453d9ef05d3dd717965d9d7b3f9f2a06691e0466d1645",
+      "valid_avoidance_trial": true,
+      "revision_note": "Before buffered scan retry: missing capture-pose packets and contacts."
+    },
+    {
+      "folder": "recordings/lidar_2m_validation_06",
+      "frames": 1695,
+      "time": [
+        0.001,
+        84.701
+      ],
+      "contact_pairs": [
+        {
+          "pair": [
+            "robot2",
+            "tv_viewer_a_walking"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 30.757,
+              "last_t": 31.762
+            }
+          ]
+        },
+        {
+          "pair": [
+            "patrol_person",
+            "robot2"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 79.778,
+              "last_t": 84.701
+            }
+          ]
+        },
+        {
+          "pair": [
+            "patrol_person",
+            "robot3"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 83.32,
+              "last_t": 84.701
+            }
+          ]
+        }
+      ],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            1.61499306222,
+            -3.35993948692
+          ],
+          "sampled_xy_travel": 4.854529131127743
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            1.18666517039,
+            -1.84830202152
+          ],
+          "sampled_xy_travel": 4.957037061601859
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            0.900223323374,
+            -1.8960850509
+          ],
+          "sampled_xy_travel": 4.015626618225857
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 84.7,
+          "reasons": {
+            "invalid_or_empty_reference": 3,
+            "watchdog_wall_freshness": 84,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 9,
+            "invalid_team_state": 3,
+            "mpc_tracking_command": 168,
+            "missing_or_stale_reference": 35,
+            "checked_escape_command": 43,
+            "escape_all_rollouts_rejected": 87,
+            "mpc_beam_empty_step_1": 398,
+            "escape_compute_budget_exhausted": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 61.40887600486167
+        },
+        "stop_robot1": {
+          "last_t": 84.7,
+          "reasons": {
+            "invalid_or_empty_reference": 4,
+            "watchdog_wall_freshness": 83,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 8,
+            "invalid_team_state": 3,
+            "missing_or_stale_reference": 50,
+            "mpc_tracking_command": 631,
+            "escape_all_rollouts_rejected": 22,
+            "checked_escape_command": 66,
+            "mpc_beam_empty_step_7": 1,
+            "mpc_beam_empty_step_8": 2,
+            "mpc_beam_empty_step_1": 41
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 82.16802799870493
+        },
+        "stop_robot3": {
+          "last_t": 84.7,
+          "reasons": {
+            "invalid_or_empty_reference": 2,
+            "watchdog_wall_freshness": 83,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 9,
+            "invalid_team_state": 4,
+            "missing_or_stale_reference": 38,
+            "mpc_tracking_command": 189,
+            "mpc_compute_budget_exhausted": 2,
+            "mpc_beam_empty_step_1": 436,
+            "checked_escape_command": 46,
+            "escape_all_rollouts_rejected": 55
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 100.79062300064834
+        }
+      },
+      "frame_sha256": "949b6768e16797edac53b8388342e569801adea6b18fec60de8cd691e5601b64",
+      "valid_avoidance_trial": true,
+      "revision_note": "Before spatial components/motion persistence: remaining contacts."
+    },
+    {
+      "folder": "recordings/lidar_2m_validation_07",
+      "frames": 41,
+      "time": [
+        0.001,
+        2.001
+      ],
+      "contact_pairs": [],
+      "robots": {},
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 2.0420000000000003,
+          "reasons": {
+            "watchdog_wall_freshness": 1192,
+            "invalid_team_state": 1,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 2
+          },
+          "max_saved_command_speed": 0.0,
+          "max_saved_compute_elapsed_wall_ms": 0.16979900101432577
+        },
+        "stop_robot1": {
+          "last_t": 2.0420000000000003,
+          "reasons": {
+            "invalid_or_empty_reference": 1,
+            "watchdog_wall_freshness": 1191,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 2,
+            "invalid_team_state": 1
+          },
+          "max_saved_command_speed": 0.0,
+          "max_saved_compute_elapsed_wall_ms": 0.5820570004289038
+        },
+        "stop_robot3": {
+          "last_t": 2.0420000000000003,
+          "reasons": {
+            "invalid_or_empty_reference": 1,
+            "watchdog_wall_freshness": 1193,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 3
+          },
+          "max_saved_command_speed": 0.0,
+          "max_saved_compute_elapsed_wall_ms": 0.2656359938555397
+        }
+      },
+      "frame_sha256": "d0c4f98a35995e1f69f7dc194820fbde87abb3b26d83e2ceb3531ee18621065d",
+      "valid_avoidance_trial": false,
+      "revision_note": "Startup services failed; not an avoidance success."
+    },
+    {
+      "folder": "recordings/lidar_2m_validation_08",
+      "frames": 1796,
+      "time": [
+        0.001,
+        89.751
+      ],
+      "contact_pairs": [
+        {
+          "pair": [
+            "patrol_person",
+            "robot1"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 80.183,
+              "last_t": 82.594
+            },
+            {
+              "epoch": 0,
+              "first_t": 83.299,
+              "last_t": 83.319
+            }
+          ]
+        },
+        {
+          "pair": [
+            "patrol_person",
+            "robot3"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 84.028,
+              "last_t": 86.102
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot1",
+            "tv_viewer_a_returning"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 88.025,
+              "last_t": 89.751
+            }
+          ]
+        }
+      ],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            1.50133243224,
+            -2.40392490888
+          ],
+          "sampled_xy_travel": 14.80511791487533
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            0.774543068622,
+            -2.83857447115
+          ],
+          "sampled_xy_travel": 12.218161370203964
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            0.613977765439,
+            -1.72735118429
+          ],
+          "sampled_xy_travel": 6.7295817136212595
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 89.7,
+          "reasons": {
+            "invalid_or_empty_reference": 1,
+            "watchdog_wall_freshness": 34,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 10,
+            "mpc_tracking_command": 466,
+            "missing_or_stale_reference": 26,
+            "checked_escape_command": 57,
+            "mpc_beam_empty_step_1": 14,
+            "escape_all_rollouts_rejected": 26,
+            "mpc_compute_budget_exhausted": 1,
+            "escape_compute_budget_exhausted": 5
+          },
+          "max_saved_command_speed": 0.34929858441735717,
+          "max_saved_compute_elapsed_wall_ms": 100.74062000785489
+        },
+        "stop_robot1": {
+          "last_t": 89.4,
+          "reasons": {
+            "invalid_or_empty_reference": 1,
+            "watchdog_wall_freshness": 50,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 13,
+            "mpc_tracking_command": 441,
+            "missing_or_stale_reference": 24,
+            "checked_escape_command": 67,
+            "mpc_beam_empty_step_1": 16,
+            "escape_all_rollouts_rejected": 60,
+            "escape_compute_budget_exhausted": 2
+          },
+          "max_saved_command_speed": 0.457059823378936,
+          "max_saved_compute_elapsed_wall_ms": 61.94265799422283
+        },
+        "stop_robot3": {
+          "last_t": 89.7,
+          "reasons": {
+            "invalid_or_empty_reference": 1,
+            "watchdog_wall_freshness": 51,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 12,
+            "invalid_team_state": 1,
+            "missing_or_stale_reference": 27,
+            "mpc_tracking_command": 632,
+            "mpc_beam_empty_step_1": 31,
+            "checked_escape_command": 93,
+            "escape_all_rollouts_rejected": 41,
+            "escape_compute_budget_exhausted": 2
+          },
+          "max_saved_command_speed": 0.38464532886279307,
+          "max_saved_compute_elapsed_wall_ms": 98.50237000500783
+        }
+      },
+      "frame_sha256": "a77e36e0baae4620c7873362cafdce3e7cd89abb01b61ddea676d30c0077f4fe",
+      "valid_avoidance_trial": true,
+      "revision_note": "Spatial persistence revision; speed variable shadowing still present."
+    },
+    {
+      "folder": "recordings/lidar_2m_validation_09",
+      "frames": 1803,
+      "time": [
+        0.001,
+        90.101
+      ],
+      "contact_pairs": [
+        {
+          "pair": [
+            "patrol_person",
+            "robot3"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 83.876,
+              "last_t": 86.051
+            }
+          ]
+        }
+      ],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            -0.499367548169,
+            -2.62067615095
+          ],
+          "sampled_xy_travel": 13.48242322920469
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            0.492501664801,
+            -2.68208979547
+          ],
+          "sampled_xy_travel": 14.007550146270027
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            0.658490014077,
+            -2.1079601744
+          ],
+          "sampled_xy_travel": 8.604212176553458
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 90.10000000000001,
+          "reasons": {
+            "invalid_or_empty_reference": 2,
+            "watchdog_wall_freshness": 27,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 15,
+            "invalid_team_state": 6,
+            "mpc_tracking_command": 517,
+            "mpc_beam_empty_step_1": 32,
+            "missing_or_stale_reference": 16,
+            "mpc_beam_empty_step_6": 4,
+            "mpc_beam_empty_step_5": 1,
+            "mpc_beam_empty_step_4": 3,
+            "checked_escape_command": 128,
+            "escape_compute_budget_exhausted": 8,
+            "escape_all_rollouts_rejected": 3,
+            "mpc_compute_budget_exhausted": 3
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 101.26469199894927
+        },
+        "stop_robot1": {
+          "last_t": 90.10000000000001,
+          "reasons": {
+            "watchdog_wall_freshness": 26,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 18,
+            "invalid_team_state": 4,
+            "invalid_or_empty_reference": 2,
+            "missing_or_stale_reference": 17,
+            "mpc_tracking_command": 390,
+            "mpc_beam_empty_step_1": 157,
+            "checked_escape_command": 170,
+            "escape_compute_budget_exhausted": 8,
+            "escape_all_rollouts_rejected": 24,
+            "mpc_beam_empty_step_7": 2,
+            "mpc_beam_empty_step_6": 4,
+            "mpc_beam_empty_step_4": 2,
+            "mpc_compute_budget_exhausted": 2,
+            "mpc_beam_empty_step_5": 2
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 100.95005300536286
+        },
+        "stop_robot3": {
+          "last_t": 90.10000000000001,
+          "reasons": {
+            "invalid_or_empty_reference": 2,
+            "watchdog_wall_freshness": 29,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 12,
+            "invalid_team_state": 6,
+            "mpc_tracking_command": 519,
+            "mpc_beam_empty_step_3": 1,
+            "mpc_beam_empty_step_1": 63,
+            "missing_or_stale_reference": 16,
+            "checked_escape_command": 131,
+            "escape_all_rollouts_rejected": 9,
+            "mpc_compute_budget_exhausted": 2,
+            "escape_compute_budget_exhausted": 2
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 100.88795299816411
+        }
+      },
+      "frame_sha256": "307a4b3c6729554390a99c907195ad6de19e8cc1ab195ddeeb20c07f4cab2270",
+      "valid_avoidance_trial": true,
+      "revision_note": "Bounded-speed revision; followers no contacts, leader patrol contact."
+    },
+    {
+      "folder": "recordings/lidar_2m_validation_10",
+      "frames": 1803,
+      "time": [
+        0.001,
+        90.101
+      ],
+      "contact_pairs": [],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            2.63399573129,
+            -3.46084476457
+          ],
+          "sampled_xy_travel": 10.817754354387718
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            3.00674240148,
+            -2.1602747587
+          ],
+          "sampled_xy_travel": 10.350081543444643
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            -0.421538011371,
+            -2.92235229136
+          ],
+          "sampled_xy_travel": 8.196743300949622
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 90.10000000000001,
+          "reasons": {
+            "invalid_or_empty_reference": 4,
+            "watchdog_wall_freshness": 24,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 17,
+            "invalid_team_state": 5,
+            "missing_or_stale_reference": 9,
+            "mpc_tracking_command": 453,
+            "mpc_beam_empty_step_1": 16,
+            "mpc_compute_budget_exhausted": 1,
+            "checked_escape_command": 105,
+            "moving_obstacle_pause_hold": 113,
+            "escape_compute_budget_exhausted": 1,
+            "escape_all_rollouts_rejected": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 101.70049400767311
+        },
+        "stop_robot1": {
+          "last_t": 90.10000000000001,
+          "reasons": {
+            "invalid_or_empty_reference": 2,
+            "watchdog_wall_freshness": 29,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 14,
+            "invalid_team_state": 5,
+            "missing_or_stale_reference": 11,
+            "mpc_tracking_command": 535,
+            "checked_escape_command": 79,
+            "moving_obstacle_pause_hold": 87,
+            "mpc_beam_empty_step_1": 14,
+            "escape_all_rollouts_rejected": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 61.78950499452185
+        },
+        "stop_robot3": {
+          "last_t": 90.10000000000001,
+          "reasons": {
+            "invalid_or_empty_reference": 2,
+            "watchdog_wall_freshness": 30,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 11,
+            "invalid_team_state": 7,
+            "missing_or_stale_reference": 9,
+            "mpc_tracking_command": 459,
+            "mpc_beam_empty_step_1": 21,
+            "escape_all_rollouts_rejected": 12,
+            "checked_escape_command": 148,
+            "moving_obstacle_pause_hold": 115,
+            "mpc_compute_budget_exhausted": 9,
+            "escape_compute_budget_exhausted": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 101.95467800076585
+        }
+      },
+      "frame_sha256": "2f6cff5c403b3a05e49f140f3b6b98f4693c1ec7abce36387a471c4102de424e",
+      "valid_avoidance_trial": true,
+      "revision_note": "Nearby approach and short pause guard after measured turn failure."
+    }
+  ],
+  "final": {
+    "folder": "recordings/lidar_2m_validation_10",
+    "frames": 1803,
+    "time": [
+      0.001,
+      90.101
+    ],
+    "contact_pairs": [],
+    "robots": {
+      "robot1": {
+        "start": [
+          4,
+          -2.9
+        ],
+        "end": [
+          2.63399573129,
+          -3.46084476457
+        ],
+        "sampled_xy_travel": 10.817754354387718
+      },
+      "robot2": {
+        "start": [
+          3,
+          -2.9
+        ],
+        "end": [
+          3.00674240148,
+          -2.1602747587
+        ],
+        "sampled_xy_travel": 10.350081543444643
+      },
+      "robot3": {
+        "start": [
+          3.5,
+          -2.2
+        ],
+        "end": [
+          -0.421538011371,
+          -2.92235229136
+        ],
+        "sampled_xy_travel": 8.196743300949622
+      }
+    },
+    "diagnostics": {
+      "stop_robot2": {
+        "last_t": 90.10000000000001,
+        "reasons": {
+          "invalid_or_empty_reference": 4,
+          "watchdog_wall_freshness": 24,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 17,
+          "invalid_team_state": 5,
+          "missing_or_stale_reference": 9,
+          "mpc_tracking_command": 453,
+          "mpc_beam_empty_step_1": 16,
+          "mpc_compute_budget_exhausted": 1,
+          "checked_escape_command": 105,
+          "moving_obstacle_pause_hold": 113,
+          "escape_compute_budget_exhausted": 1,
+          "escape_all_rollouts_rejected": 1
+        },
+        "max_saved_command_speed": 0.2800000000000001,
+        "max_saved_compute_elapsed_wall_ms": 101.70049400767311
+      },
+      "stop_robot1": {
+        "last_t": 90.10000000000001,
+        "reasons": {
+          "invalid_or_empty_reference": 2,
+          "watchdog_wall_freshness": 29,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 14,
+          "invalid_team_state": 5,
+          "missing_or_stale_reference": 11,
+          "mpc_tracking_command": 535,
+          "checked_escape_command": 79,
+          "moving_obstacle_pause_hold": 87,
+          "mpc_beam_empty_step_1": 14,
+          "escape_all_rollouts_rejected": 1
+        },
+        "max_saved_command_speed": 0.2800000000000001,
+        "max_saved_compute_elapsed_wall_ms": 61.78950499452185
+      },
+      "stop_robot3": {
+        "last_t": 90.10000000000001,
+        "reasons": {
+          "invalid_or_empty_reference": 2,
+          "watchdog_wall_freshness": 30,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 11,
+          "invalid_team_state": 7,
+          "missing_or_stale_reference": 9,
+          "mpc_tracking_command": 459,
+          "mpc_beam_empty_step_1": 21,
+          "escape_all_rollouts_rejected": 12,
+          "checked_escape_command": 148,
+          "moving_obstacle_pause_hold": 115,
+          "mpc_compute_budget_exhausted": 9,
+          "escape_compute_budget_exhausted": 1
+        },
+        "max_saved_command_speed": 0.2800000000000001,
+        "max_saved_compute_elapsed_wall_ms": 101.95467800076585
+      }
+    },
+    "frame_sha256": "2f6cff5c403b3a05e49f140f3b6b98f4693c1ec7abce36387a471c4102de424e"
+  },
+  "conditions": {
+    "ROS_DOMAIN_ID": 54,
+    "ROS_LOCALHOST_ONLY": "0",
+    "RMW_FASTRTPS_PUBLICATION_MODE": "ASYNCHRONOUS",
+    "IGN_PARTITION": "lidar_2m_validation_10",
+    "gazebo_gui": false,
+    "rviz": false,
+    "camera": false,
+    "goal": [
+      1.0351457595825195,
+      -2.035773515701294
+    ],
+    "scope": "Single run, no repeated controlled benchmark; do not compare RTF across earlier trials."
+  },
+  "limits": [
+    "Recorded engine contacts are not a universal safety guarantee.",
+    "Saved command speed samples are windowed diagnostics, not all commands.",
+    "Model root trajectories are not exact footprint clearance.",
+    "Earlier revisions and startup failures are retained, not relabelled as final success."
+  ]
+}

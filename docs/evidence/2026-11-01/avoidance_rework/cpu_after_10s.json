@@ -1,0 +1,42 @@
+[
+  {
+    "pid": 31357,
+    "args": "ign gazebo gui                                                                                                                                                      ",
+    "cpu_percent": 157.4388082284443
+  },
+  {
+    "pid": 31356,
+    "args": "ign gazebo server                                                                                                                                                   ",
+    "cpu_percent": 134.06274152447477
+  },
+  {
+    "pid": 31285,
+    "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/three_robot_dstar_mpc --ros-args -r __node:=three_robot_dstar_mpc --params-file ",
+    "cpu_percent": 29.569725403311875
+  },
+  {
+    "pid": 31291,
+    "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot3_distributed_mpc --params-file",
+    "cpu_percent": 17.38220344654144
+  },
+  {
+    "pid": 31287,
+    "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot1_distributed_mpc --params-file",
+    "cpu_percent": 16.78281712079863
+  },
+  {
+    "pid": 31289,
+    "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot2_distributed_mpc --params-file",
+    "cpu_percent": 16.483123957927226
+  },
+  {
+    "pid": 31293,
+    "args": "/opt/ros/humble/lib/rviz2/rviz2 -d /home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/rviz/social_navigation.rviz --ros-args -r __node:=three_robot_dstar_",
+    "cpu_percent": 11.388340189113357
+  },
+  {
+    "pid": 31280,
+    "args": "ign gazebo /home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/worlds/social_dynamic.sdf -r -v 4                                 ",
+    "cpu_percent": 0.0
+  }
+]

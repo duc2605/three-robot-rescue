@@ -1,0 +1,31 @@
+{
+  "elapsed": 60.0,
+  "sim": null,
+  "sim_elapsed": null,
+  "rtf_recent": null,
+  "goal": [
+    1.03553,
+    -2.55432
+  ],
+  "leader_goal_distance": null,
+  "team": null,
+  "path_length_sampled": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "command_counts": {
+    "robot1": {},
+    "robot2": {},
+    "robot3": {}
+  },
+  "safety_latest": {
+    "robot1": null,
+    "robot2": null,
+    "robot3": null
+  },
+  "counts": {},
+  "log_warning_counts": {},
+  "social": null,
+  "observation": null
+}

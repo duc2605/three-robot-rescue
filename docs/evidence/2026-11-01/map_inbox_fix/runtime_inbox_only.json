@@ -1,0 +1,815 @@
+{
+  "counts": {
+    "clock": 329,
+    "robot1/safety": 66,
+    "robot1/cmd": 33,
+    "poses": 31,
+    "robot2/cmd": 31,
+    "robot2/safety": 61,
+    "robot3/cmd": 31,
+    "robot3/safety": 61
+  },
+  "first_poses": [
+    [
+      4.000000000000374,
+      -2.8999999998940327
+    ],
+    [
+      3.00000000000011,
+      -2.8999999998940327
+    ],
+    [
+      3.4999999999999933,
+      -2.199999999994757
+    ]
+  ],
+  "latest": {
+    "clock": 62.43,
+    "robot1/safety": "compute_budget: normal MPC stopped before complete rollout",
+    "robot1/cmd": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "poses": [
+      [
+        4.000000000000374,
+        -2.8999999998940327
+      ],
+      [
+        3.00000000000011,
+        -2.8999999998940327
+      ],
+      [
+        3.4999999999999933,
+        -2.199999999994757
+      ]
+    ],
+    "robot2/cmd": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "robot2/safety": "compute_budget: normal MPC stopped before complete rollout",
+    "robot3/cmd": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "robot3/safety": "compute_budget: normal MPC stopped before complete rollout"
+  },
+  "status_changes": [
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot1/safety",
+      "normal"
+    ],
+    [
+      "robot2/safety",
+      "normal"
+    ],
+    [
+      "robot3/safety",
+      "normal"
+    ],
+    [
+      "robot1/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot2/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ],
+    [
+      "robot3/safety",
+      "compute_budget: normal MPC stopped before complete rollout"
+    ]
+  ]
+}

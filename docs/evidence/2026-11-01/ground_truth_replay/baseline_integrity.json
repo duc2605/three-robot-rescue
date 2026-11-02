@@ -1,0 +1,8 @@
+{
+  "social_static_unchanged_except_recorder": true,
+  "social_dynamic_unchanged_except_recorder": true,
+  "dstar_mpc_controller.py_unchanged": true,
+  "moving_obstacles.py_unchanged": true,
+  "local_escape.py_unchanged": true,
+  "peer_safety.py_unchanged": true
+}

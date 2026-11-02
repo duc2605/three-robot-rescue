@@ -1,0 +1,405 @@
+........................................................................ [ 29%]
+........................................................................ [ 58%]
+....................................FF................................FF [ 87%]
+F...............................                                         [100%]
+=================================== FAILURES ===================================
+___________ test_rolling_turn_tracks_with_mpc_feedback[right_angle] ____________
+
+route = [(0.0, 0.0), (0.0, 3.0)]
+
+    @pytest.mark.parametrize('route', [
+        [(0.0, 0.0), (-3.0, 0.0)],
+        [(0.0, 0.0), (0.0, 3.0)],
+        [(0.0, 0.0), (0.35, 0.0), (0.35, 2.5)],
+    ], ids=['reverse', 'right_angle', 'bend_ahead'])
+    def test_rolling_turn_tracks_with_mpc_feedback(route):
+        grid = GridClearance(240, 240, 0.05, (-6.0, -6.0, 0.0), [False] * (240 * 240), 0.18)
+        router = coordinator(TRIANGLE, grid)
+        planner = TurnaroundPlanner(grid.segment_free, grid.clearance, router.route_between, (2, 1, 0))
+        motion = planner.build(TRIANGLE, route)
+        assert isinstance(motion, RollingTurnMotion)
+        clock, poses, departure = [0.0], TRIANGLE, None
+        nodes = [controller(i, grid, clock) for i in range(3)]
+        minimum_spacing = minimum_team_distance(poses)
+        for k in range(250):
+            clock[0] = k * 0.1
+            rows = motion.rows(poses, 0.1, 8, 0.15)
+            assert not motion.failure_reason
+>           after = step_team(nodes, poses, rows, clock[0])
+
+social_navigation_planner/test/test_mpc_formation_motion.py:228: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+social_navigation_planner/test/test_mpc_formation_motion.py:83: in step_team
+    node.control_tick()
+social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:2848: in control_tick
+    best, failure = self.bounded_tracking_beam(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <social_navigation_planner.dstar_mpc_controller.DistributedRobotMPC object at 0x7b1de81d97b0>
+now = 1.7000000000000002, command_dt = 0.10000000000000009
+references = [((-0.3852432561393044, -0.18524325613930442, 1.5707963267948966), (-0.5, 0.7, 1.5707963267948966), (0.0, 0.016, 1.570...04, -0.12796760686319408, 1.5707963267948966), (-0.5, 0.7, 1.5707963267948966), (0.0, 0.136, 1.5707963267948966)), ...]
+predictions = [{1: (-0.49754514594507243, 0.7085032937162615, 1.3779581513397066), 2: (0.0, 0.0, 1.3779581513397066)}, {1: (-0.49820...808681055)}, {1: (-0.49953676966533805, 0.7014144285942769, 1.538386014646143), 2: (0.0, 0.0, 1.538386014646143)}, ...]
+obstacles = [], moving = [], peers = [1, 2], close_context = True
+deadline = 1545.1452696519998
+
+    def bounded_tracking_beam(self, now, command_dt, references, predictions,
+                              obstacles, moving, peers, close_context, deadline):
+        """Complete a small feasible search before spending budget on breadth.
+    
+        All widths use the same sweeps, limits and cost as normal tracking.
+        Only a complete horizon may be returned. Retry a wider beam if a
+        narrow beam reaches a dead end, within the original wall deadline.
+        This does not participate in moving-obstacle escape planning.
+        """
+        x,y,yaw=self.own_pose
+        failure='mpc_compute_budget_exhausted'
+        for width in (1, 3, 12):
+            beam = [(x, y, yaw, 0.0, None, self.last_command, [self.own_pose])]
+            for step in range(1, self.mpc_horizon + 1):
+                tx, ty, tyaw = references[step][self.robot_index]
+                previous_ref = references[step - 1][self.robot_index]
+                feed_x, feed_y = (tx - previous_ref[0]) / self.mpc_dt, (ty - previous_ref[1]) / self.mpc_dt
+                expanded = []
+                for px, py, pyaw, old_cost, first, previous, trajectory in beam:
+                    # Use the coordinator's planning margin during normal motion.
+                    # If tracking/noisy observations already put the measured
+                    # robot inside that margin, permit only sweeps that preserve
+                    # or increase its clearance, never crossing the footprint.
+                    clearance_before = min(
+                        [self.hard_collision_grid.clearance((px, py), self.inflation_radius)]
+                        + [math.hypot(px - ox, py - oy) for ox, oy in obstacles])
+                    minimum_clearance = max(self.robot_radius, min(
+                        self.inflation_radius, clearance_before))
+                    # Continuous tracking candidates remove the old full-speed/zero
+                    # quantization that caused oscillation near formation slots.
+                    wx, wy = feed_x + 2.0 * (tx - px), feed_y + 2.0 * (ty - py)
+                    c, sn = math.cos(pyaw), math.sin(pyaw)
+                    bx, by = c * wx + sn * wy, -sn * wx + c * wy
+                    omega = clamp(2.0 * normalize_angle(tyaw - pyaw),
+                                  -self.max_angular_speed, self.max_angular_speed)
+                    proposals = [(0.0, 0.0, 0.0), previous]
+                    adjustments = [(0.5, 0.0), (1.0, 0.0), (1.3, 0.0), (1.0, -0.5), (1.0, 0.5)]
+                    if close_context:
+                        adjustments.extend(((0.7, -1.0), (0.7, 1.0)))
+                    for scale, turn in adjustments:
+                        vx = scale * (math.cos(turn) * bx - math.sin(turn) * by)
+                        vy = scale * (math.sin(turn) * bx + math.cos(turn) * by)
+                        for spin in (omega, 0.0):
+                            proposals.append((vx, vy, spin))
+                    seen_commands = set()
+                    for vx, vy, spin in proposals:
+>                       if time.perf_counter() >= normal_deadline:
+E                       NameError: name 'normal_deadline' is not defined
+
+social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:2694: NameError
+____________ test_rolling_turn_tracks_with_mpc_feedback[bend_ahead] ____________
+
+route = [(0.0, 0.0), (0.35, 0.0), (0.35, 2.5)]
+
+    @pytest.mark.parametrize('route', [
+        [(0.0, 0.0), (-3.0, 0.0)],
+        [(0.0, 0.0), (0.0, 3.0)],
+        [(0.0, 0.0), (0.35, 0.0), (0.35, 2.5)],
+    ], ids=['reverse', 'right_angle', 'bend_ahead'])
+    def test_rolling_turn_tracks_with_mpc_feedback(route):
+        grid = GridClearance(240, 240, 0.05, (-6.0, -6.0, 0.0), [False] * (240 * 240), 0.18)
+        router = coordinator(TRIANGLE, grid)
+        planner = TurnaroundPlanner(grid.segment_free, grid.clearance, router.route_between, (2, 1, 0))
+        motion = planner.build(TRIANGLE, route)
+        assert isinstance(motion, RollingTurnMotion)
+        clock, poses, departure = [0.0], TRIANGLE, None
+        nodes = [controller(i, grid, clock) for i in range(3)]
+        minimum_spacing = minimum_team_distance(poses)
+        for k in range(250):
+            clock[0] = k * 0.1
+            rows = motion.rows(poses, 0.1, 8, 0.15)
+            assert not motion.failure_reason
+>           after = step_team(nodes, poses, rows, clock[0])
+
+social_navigation_planner/test/test_mpc_formation_motion.py:228: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+social_navigation_planner/test/test_mpc_formation_motion.py:83: in step_team
+    node.control_tick()
+social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:2848: in control_tick
+    best, failure = self.bounded_tracking_beam(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <social_navigation_planner.dstar_mpc_controller.DistributedRobotMPC object at 0x7b1de81d8940>
+now = 2.9000000000000004, command_dt = 0.10000000000000009
+references = [((-0.025568222812094588, -0.13015031573566482, 1.5707963267948966), (-0.15000000000000013, 0.3499999999999999, 1.5707...0000013, 0.3499999999999999, 1.5707963267948966), (0.3359928008599546, 0.000479912006839743, 1.5707963267948966)), ...]
+predictions = [{1: (-0.15040642763215545, 0.35077565416823414, 1.5575445882828909), 2: (0.3359928008599546, 0.000479912006839743, 1....638, 0.35013053057064175, 1.5685691071031833), 2: (0.3359928008599546, 0.000479912006839743, 1.5201552140624681)}, ...]
+obstacles = [], moving = [], peers = [1, 2], close_context = True
+deadline = 1545.38226622
+
+    def bounded_tracking_beam(self, now, command_dt, references, predictions,
+                              obstacles, moving, peers, close_context, deadline):
+        """Complete a small feasible search before spending budget on breadth.
+    
+        All widths use the same sweeps, limits and cost as normal tracking.
+        Only a complete horizon may be returned. Retry a wider beam if a
+        narrow beam reaches a dead end, within the original wall deadline.
+        This does not participate in moving-obstacle escape planning.
+        """
+        x,y,yaw=self.own_pose
+        failure='mpc_compute_budget_exhausted'
+        for width in (1, 3, 12):
+            beam = [(x, y, yaw, 0.0, None, self.last_command, [self.own_pose])]
+            for step in range(1, self.mpc_horizon + 1):
+                tx, ty, tyaw = references[step][self.robot_index]
+                previous_ref = references[step - 1][self.robot_index]
+                feed_x, feed_y = (tx - previous_ref[0]) / self.mpc_dt, (ty - previous_ref[1]) / self.mpc_dt
+                expanded = []
+                for px, py, pyaw, old_cost, first, previous, trajectory in beam:
+                    # Use the coordinator's planning margin during normal motion.
+                    # If tracking/noisy observations already put the measured
+                    # robot inside that margin, permit only sweeps that preserve
+                    # or increase its clearance, never crossing the footprint.
+                    clearance_before = min(
+                        [self.hard_collision_grid.clearance((px, py), self.inflation_radius)]
+                        + [math.hypot(px - ox, py - oy) for ox, oy in obstacles])
+                    minimum_clearance = max(self.robot_radius, min(
+                        self.inflation_radius, clearance_before))
+                    # Continuous tracking candidates remove the old full-speed/zero
+                    # quantization that caused oscillation near formation slots.
+                    wx, wy = feed_x + 2.0 * (tx - px), feed_y + 2.0 * (ty - py)
+                    c, sn = math.cos(pyaw), math.sin(pyaw)
+                    bx, by = c * wx + sn * wy, -sn * wx + c * wy
+                    omega = clamp(2.0 * normalize_angle(tyaw - pyaw),
+                                  -self.max_angular_speed, self.max_angular_speed)
+                    proposals = [(0.0, 0.0, 0.0), previous]
+                    adjustments = [(0.5, 0.0), (1.0, 0.0), (1.3, 0.0), (1.0, -0.5), (1.0, 0.5)]
+                    if close_context:
+                        adjustments.extend(((0.7, -1.0), (0.7, 1.0)))
+                    for scale, turn in adjustments:
+                        vx = scale * (math.cos(turn) * bx - math.sin(turn) * by)
+                        vy = scale * (math.sin(turn) * bx + math.cos(turn) * by)
+                        for spin in (omega, 0.0):
+                            proposals.append((vx, vy, spin))
+                    seen_commands = set()
+                    for vx, vy, spin in proposals:
+>                       if time.perf_counter() >= normal_deadline:
+E                       NameError: name 'normal_deadline' is not defined
+
+social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:2694: NameError
+______ test_complete_horizon_fits_bounded_candidate_work_before_wide_beam ______
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7b1de8121630>
+
+    def test_complete_horizon_fits_bounded_candidate_work_before_wide_beam(monkeypatch):
+        node,clock,rows,predictions=fixture()
+        count=[0]
+        def work_clock():
+            count[0]+=1
+            return count[0]
+        monkeypatch.setattr(module.time,'perf_counter',work_clock)
+>       best,reason=node.bounded_tracking_beam(clock[0],.1,rows,predictions,[],[],[0,1],False,100.)
+
+social_navigation_planner/test/test_resume_tracking_after_escape.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <social_navigation_planner.dstar_mpc_controller.DistributedRobotMPC object at 0x7b1de81226b0>
+now = 10.0, command_dt = 0.1
+references = [((-3.0, 2.0, 0.0), (-3.0, -2.0, 0.0), (0.2, 0.0, 0.0)), ((-3.0, 2.0, 0.0), (-3.0, -2.0, 0.0), (0.23, 0.0, 0.0)), ((-3... ((-3.0, 2.0, 0.0), (-3.0, -2.0, 0.0), (0.32, 0.0, 0.0)), ((-3.0, 2.0, 0.0), (-3.0, -2.0, 0.0), (0.35, 0.0, 0.0)), ...]
+predictions = [{0: (-3.0, 2.0, 0.0), 1: (-3.0, -2.0, 0.0)}, {0: (-3.0, 2.0, 0.0), 1: (-3.0, -2.0, 0.0)}, {0: (-3.0, 2.0, 0.0), 1: (-..., 1: (-3.0, -2.0, 0.0)}, {0: (-3.0, 2.0, 0.0), 1: (-3.0, -2.0, 0.0)}, {0: (-3.0, 2.0, 0.0), 1: (-3.0, -2.0, 0.0)}, ...]
+obstacles = [], moving = [], peers = [0, 1], close_context = False
+deadline = 100.0
+
+    def bounded_tracking_beam(self, now, command_dt, references, predictions,
+                              obstacles, moving, peers, close_context, deadline):
+        """Complete a small feasible search before spending budget on breadth.
+    
+        All widths use the same sweeps, limits and cost as normal tracking.
+        Only a complete horizon may be returned. Retry a wider beam if a
+        narrow beam reaches a dead end, within the original wall deadline.
+        This does not participate in moving-obstacle escape planning.
+        """
+        x,y,yaw=self.own_pose
+        failure='mpc_compute_budget_exhausted'
+        for width in (1, 3, 12):
+            beam = [(x, y, yaw, 0.0, None, self.last_command, [self.own_pose])]
+            for step in range(1, self.mpc_horizon + 1):
+                tx, ty, tyaw = references[step][self.robot_index]
+                previous_ref = references[step - 1][self.robot_index]
+                feed_x, feed_y = (tx - previous_ref[0]) / self.mpc_dt, (ty - previous_ref[1]) / self.mpc_dt
+                expanded = []
+                for px, py, pyaw, old_cost, first, previous, trajectory in beam:
+                    # Use the coordinator's planning margin during normal motion.
+                    # If tracking/noisy observations already put the measured
+                    # robot inside that margin, permit only sweeps that preserve
+                    # or increase its clearance, never crossing the footprint.
+                    clearance_before = min(
+                        [self.hard_collision_grid.clearance((px, py), self.inflation_radius)]
+                        + [math.hypot(px - ox, py - oy) for ox, oy in obstacles])
+                    minimum_clearance = max(self.robot_radius, min(
+                        self.inflation_radius, clearance_before))
+                    # Continuous tracking candidates remove the old full-speed/zero
+                    # quantization that caused oscillation near formation slots.
+                    wx, wy = feed_x + 2.0 * (tx - px), feed_y + 2.0 * (ty - py)
+                    c, sn = math.cos(pyaw), math.sin(pyaw)
+                    bx, by = c * wx + sn * wy, -sn * wx + c * wy
+                    omega = clamp(2.0 * normalize_angle(tyaw - pyaw),
+                                  -self.max_angular_speed, self.max_angular_speed)
+                    proposals = [(0.0, 0.0, 0.0), previous]
+                    adjustments = [(0.5, 0.0), (1.0, 0.0), (1.3, 0.0), (1.0, -0.5), (1.0, 0.5)]
+                    if close_context:
+                        adjustments.extend(((0.7, -1.0), (0.7, 1.0)))
+                    for scale, turn in adjustments:
+                        vx = scale * (math.cos(turn) * bx - math.sin(turn) * by)
+                        vy = scale * (math.sin(turn) * bx + math.cos(turn) * by)
+                        for spin in (omega, 0.0):
+                            proposals.append((vx, vy, spin))
+                    seen_commands = set()
+                    for vx, vy, spin in proposals:
+>                       if time.perf_counter() >= normal_deadline:
+E                       NameError: name 'normal_deadline' is not defined
+
+social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:2694: NameError
+________________ test_deadline_never_publishes_partial_horizon _________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7b1de827c0d0>
+
+    def test_deadline_never_publishes_partial_horizon(monkeypatch):
+        node,clock,rows,predictions=fixture()
+        monkeypatch.setattr(module.time,'perf_counter',lambda:2.)
+>       best,reason=node.bounded_tracking_beam(clock[0],.1,rows,predictions,[],[],[0,1],False,1.)
+
+social_navigation_planner/test/test_resume_tracking_after_escape.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <social_navigation_planner.dstar_mpc_controller.DistributedRobotMPC object at 0x7b1de827c160>
+now = 10.0, command_dt = 0.1
+references = [((-3.0, 2.0, 0.0), (-3.0, -2.0, 0.0), (0.2, 0.0, 0.0)), ((-3.0, 2.0, 0.0), (-3.0, -2.0, 0.0), (0.23, 0.0, 0.0)), ((-3... ((-3.0, 2.0, 0.0), (-3.0, -2.0, 0.0), (0.32, 0.0, 0.0)), ((-3.0, 2.0, 0.0), (-3.0, -2.0, 0.0), (0.35, 0.0, 0.0)), ...]
+predictions = [{0: (-3.0, 2.0, 0.0), 1: (-3.0, -2.0, 0.0)}, {0: (-3.0, 2.0, 0.0), 1: (-3.0, -2.0, 0.0)}, {0: (-3.0, 2.0, 0.0), 1: (-..., 1: (-3.0, -2.0, 0.0)}, {0: (-3.0, 2.0, 0.0), 1: (-3.0, -2.0, 0.0)}, {0: (-3.0, 2.0, 0.0), 1: (-3.0, -2.0, 0.0)}, ...]
+obstacles = [], moving = [], peers = [0, 1], close_context = False
+deadline = 1.0
+
+    def bounded_tracking_beam(self, now, command_dt, references, predictions,
+                              obstacles, moving, peers, close_context, deadline):
+        """Complete a small feasible search before spending budget on breadth.
+    
+        All widths use the same sweeps, limits and cost as normal tracking.
+        Only a complete horizon may be returned. Retry a wider beam if a
+        narrow beam reaches a dead end, within the original wall deadline.
+        This does not participate in moving-obstacle escape planning.
+        """
+        x,y,yaw=self.own_pose
+        failure='mpc_compute_budget_exhausted'
+        for width in (1, 3, 12):
+            beam = [(x, y, yaw, 0.0, None, self.last_command, [self.own_pose])]
+            for step in range(1, self.mpc_horizon + 1):
+                tx, ty, tyaw = references[step][self.robot_index]
+                previous_ref = references[step - 1][self.robot_index]
+                feed_x, feed_y = (tx - previous_ref[0]) / self.mpc_dt, (ty - previous_ref[1]) / self.mpc_dt
+                expanded = []
+                for px, py, pyaw, old_cost, first, previous, trajectory in beam:
+                    # Use the coordinator's planning margin during normal motion.
+                    # If tracking/noisy observations already put the measured
+                    # robot inside that margin, permit only sweeps that preserve
+                    # or increase its clearance, never crossing the footprint.
+                    clearance_before = min(
+                        [self.hard_collision_grid.clearance((px, py), self.inflation_radius)]
+                        + [math.hypot(px - ox, py - oy) for ox, oy in obstacles])
+                    minimum_clearance = max(self.robot_radius, min(
+                        self.inflation_radius, clearance_before))
+                    # Continuous tracking candidates remove the old full-speed/zero
+                    # quantization that caused oscillation near formation slots.
+                    wx, wy = feed_x + 2.0 * (tx - px), feed_y + 2.0 * (ty - py)
+                    c, sn = math.cos(pyaw), math.sin(pyaw)
+                    bx, by = c * wx + sn * wy, -sn * wx + c * wy
+                    omega = clamp(2.0 * normalize_angle(tyaw - pyaw),
+                                  -self.max_angular_speed, self.max_angular_speed)
+                    proposals = [(0.0, 0.0, 0.0), previous]
+                    adjustments = [(0.5, 0.0), (1.0, 0.0), (1.3, 0.0), (1.0, -0.5), (1.0, 0.5)]
+                    if close_context:
+                        adjustments.extend(((0.7, -1.0), (0.7, 1.0)))
+                    for scale, turn in adjustments:
+                        vx = scale * (math.cos(turn) * bx - math.sin(turn) * by)
+                        vy = scale * (math.sin(turn) * bx + math.cos(turn) * by)
+                        for spin in (omega, 0.0):
+                            proposals.append((vx, vy, spin))
+                    seen_commands = set()
+                    for vx, vy, spin in proposals:
+>                       if time.perf_counter() >= normal_deadline:
+E                       NameError: name 'normal_deadline' is not defined
+
+social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:2694: NameError
+_______ test_raw_obstacle_and_peer_checks_still_reject_blocked_departure _______
+
+    def test_raw_obstacle_and_peer_checks_still_reject_blocked_departure():
+        node,clock,rows,predictions=fixture()
+        node.segment_free=lambda *args:False
+>       best,reason=node.bounded_tracking_beam(clock[0],.1,rows,predictions,[(.1,0.)],[],[0,1],False,time.perf_counter()+1.)
+
+social_navigation_planner/test/test_resume_tracking_after_escape.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <social_navigation_planner.dstar_mpc_controller.DistributedRobotMPC object at 0x7b1de9fefa90>
+now = 10.0, command_dt = 0.1
+references = [((-3.0, 2.0, 0.0), (-3.0, -2.0, 0.0), (0.2, 0.0, 0.0)), ((-3.0, 2.0, 0.0), (-3.0, -2.0, 0.0), (0.23, 0.0, 0.0)), ((-3... ((-3.0, 2.0, 0.0), (-3.0, -2.0, 0.0), (0.32, 0.0, 0.0)), ((-3.0, 2.0, 0.0), (-3.0, -2.0, 0.0), (0.35, 0.0, 0.0)), ...]
+predictions = [{0: (-3.0, 2.0, 0.0), 1: (-3.0, -2.0, 0.0)}, {0: (-3.0, 2.0, 0.0), 1: (-3.0, -2.0, 0.0)}, {0: (-3.0, 2.0, 0.0), 1: (-..., 1: (-3.0, -2.0, 0.0)}, {0: (-3.0, 2.0, 0.0), 1: (-3.0, -2.0, 0.0)}, {0: (-3.0, 2.0, 0.0), 1: (-3.0, -2.0, 0.0)}, ...]
+obstacles = [(0.1, 0.0)], moving = [], peers = [0, 1], close_context = False
+deadline = 1551.91925621
+
+    def bounded_tracking_beam(self, now, command_dt, references, predictions,
+                              obstacles, moving, peers, close_context, deadline):
+        """Complete a small feasible search before spending budget on breadth.
+    
+        All widths use the same sweeps, limits and cost as normal tracking.
+        Only a complete horizon may be returned. Retry a wider beam if a
+        narrow beam reaches a dead end, within the original wall deadline.
+        This does not participate in moving-obstacle escape planning.
+        """
+        x,y,yaw=self.own_pose
+        failure='mpc_compute_budget_exhausted'
+        for width in (1, 3, 12):
+            beam = [(x, y, yaw, 0.0, None, self.last_command, [self.own_pose])]
+            for step in range(1, self.mpc_horizon + 1):
+                tx, ty, tyaw = references[step][self.robot_index]
+                previous_ref = references[step - 1][self.robot_index]
+                feed_x, feed_y = (tx - previous_ref[0]) / self.mpc_dt, (ty - previous_ref[1]) / self.mpc_dt
+                expanded = []
+                for px, py, pyaw, old_cost, first, previous, trajectory in beam:
+                    # Use the coordinator's planning margin during normal motion.
+                    # If tracking/noisy observations already put the measured
+                    # robot inside that margin, permit only sweeps that preserve
+                    # or increase its clearance, never crossing the footprint.
+                    clearance_before = min(
+                        [self.hard_collision_grid.clearance((px, py), self.inflation_radius)]
+                        + [math.hypot(px - ox, py - oy) for ox, oy in obstacles])
+                    minimum_clearance = max(self.robot_radius, min(
+                        self.inflation_radius, clearance_before))
+                    # Continuous tracking candidates remove the old full-speed/zero
+                    # quantization that caused oscillation near formation slots.
+                    wx, wy = feed_x + 2.0 * (tx - px), feed_y + 2.0 * (ty - py)
+                    c, sn = math.cos(pyaw), math.sin(pyaw)
+                    bx, by = c * wx + sn * wy, -sn * wx + c * wy
+                    omega = clamp(2.0 * normalize_angle(tyaw - pyaw),
+                                  -self.max_angular_speed, self.max_angular_speed)
+                    proposals = [(0.0, 0.0, 0.0), previous]
+                    adjustments = [(0.5, 0.0), (1.0, 0.0), (1.3, 0.0), (1.0, -0.5), (1.0, 0.5)]
+                    if close_context:
+                        adjustments.extend(((0.7, -1.0), (0.7, 1.0)))
+                    for scale, turn in adjustments:
+                        vx = scale * (math.cos(turn) * bx - math.sin(turn) * by)
+                        vy = scale * (math.sin(turn) * bx + math.cos(turn) * by)
+                        for spin in (omega, 0.0):
+                            proposals.append((vx, vy, spin))
+                    seen_commands = set()
+                    for vx, vy, spin in proposals:
+>                       if time.perf_counter() >= normal_deadline:
+E                       NameError: name 'normal_deadline' is not defined
+
+social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:2694: NameError
+=============================== warnings summary ===============================
+social_navigation_planner/test/test_paper2_apf_mpc.py::Paper2Checks::test_mpc_avoids_static_disc_on_prediction
+social_navigation_planner/test/test_paper2_apf_mpc.py::Paper2Checks::test_mpc_receding_horizon_reaches_goal
+  Warning: Values in x were outside bounds during a minimize step, clipping to bounds
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+=========================== short test summary info ============================
+FAILED social_navigation_planner/test/test_mpc_formation_motion.py::test_rolling_turn_tracks_with_mpc_feedback[right_angle]
+FAILED social_navigation_planner/test/test_mpc_formation_motion.py::test_rolling_turn_tracks_with_mpc_feedback[bend_ahead]
+FAILED social_navigation_planner/test/test_resume_tracking_after_escape.py::test_complete_horizon_fits_bounded_candidate_work_before_wide_beam
+FAILED social_navigation_planner/test/test_resume_tracking_after_escape.py::test_deadline_never_publishes_partial_horizon
+FAILED social_navigation_planner/test/test_resume_tracking_after_escape.py::test_raw_obstacle_and_peer_checks_still_reject_blocked_departure
+5 failed, 243 passed, 2 warnings in 49.38s

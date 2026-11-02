@@ -1,0 +1,8 @@
+Internal ctest changing into directory: /tmp/pedestrian-portable
+Test project /tmp/pedestrian-portable
+    Start 1: pedestrian_plugin
+1/1 Test #1: pedestrian_plugin ................   Passed    1.09 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   1.09 sec

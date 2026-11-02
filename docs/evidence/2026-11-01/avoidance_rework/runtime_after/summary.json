@@ -1,0 +1,131 @@
+{
+  "elapsed": 60.0,
+  "sim": 19.753,
+  "sim_elapsed": 13.879000000000001,
+  "rtf_recent": 0.23605029807748612,
+  "goal": [
+    1.03553,
+    -2.55432
+  ],
+  "leader_goal_distance": 2.258346960691959,
+  "team": [
+    [
+      3.960811533284458,
+      -2.6608407661343056,
+      2.2456455781384768
+    ],
+    [
+      2.957279794215497,
+      -2.834795737819675,
+      2.266333855417851
+    ],
+    [
+      3.2757507328899185,
+      -2.268764291255166,
+      2.249684702052745
+    ]
+  ],
+  "path_length_sampled": [
+    0.19170884516437003,
+    0.07614723107630561,
+    0.17593342046947785
+  ],
+  "command_counts": {
+    "robot1": {
+      "total": 539,
+      "linear_nonzero": 10,
+      "angular_nonzero": 10,
+      "any_nonzero": 10
+    },
+    "robot2": {
+      "total": 537,
+      "linear_nonzero": 7,
+      "angular_nonzero": 8,
+      "any_nonzero": 8
+    },
+    "robot3": {
+      "total": 541,
+      "linear_nonzero": 7,
+      "angular_nonzero": 7,
+      "any_nonzero": 7
+    }
+  },
+  "safety_latest": {
+    "robot1": "normal",
+    "robot2": "normal",
+    "robot3": "stale_data: holding; fresh state/reference or active escape sensors required"
+  },
+  "counts": {
+    "clock": 13880,
+    "robot3/cmd": 541,
+    "robot2/cmd": 537,
+    "robot1/cmd": 539,
+    "robot1/safety": 255,
+    "team": 139,
+    "reference": 141,
+    "robot2/safety": 255,
+    "robot3/safety": 258,
+    "robot1/scan": 69,
+    "robot2/scan": 69,
+    "robot3/scan": 49,
+    "goal_msg": 1
+  },
+  "log_warning_counts": {
+    "no_route": 1
+  },
+  "social": null,
+  "observation": null,
+  "started_vietnam": "2026-11-01T13:29:25.638587+07:00",
+  "ended_vietnam": "2026-11-01T13:30:25.818735+07:00",
+  "duration_wall_seconds": 60.00658046699937,
+  "first_team": [
+    [
+      4.000000000000374,
+      -2.8999999998940327,
+      1.5699999999994865
+    ],
+    [
+      3.00000000000011,
+      -2.8999999998940327,
+      1.5699999999994865
+    ],
+    [
+      3.4999999999999933,
+      -2.199999999994757,
+      1.5699999999994783
+    ]
+  ],
+  "status_message_counts": {
+    "robot1": {
+      "normal": 128,
+      "stale_data: holding; fresh state/reference or active escape sensors required": 127
+    },
+    "robot2": {
+      "normal": 128,
+      "stale_data: holding; fresh state/reference or active escape sensors required": 127
+    },
+    "robot3": {
+      "normal": 129,
+      "stale_data: holding; fresh state/reference or active escape sensors required": 129
+    }
+  },
+  "goal_changes": [
+    {
+      "elapsed": 54.253,
+      "sim": 18.478,
+      "xy": [
+        1.03553,
+        -2.55432
+      ],
+      "source": "ROS /goal_pose"
+    }
+  ],
+  "min_capture_matched_camera_center_distance": null,
+  "limitations": [
+    "Read-only ROS observations; no contact sensor or ground-truth collision verification",
+    "Path length is sampled XY movement with 2 mm noise threshold per 1s snapshot",
+    "Status message counts are not time percentages or independent hazard encounters",
+    "Data age and receipt age differ; camera-center distance only computed with <=0.2s capture stamp difference",
+    "No goal, command, parameter or restart action by monitor"
+  ]
+}

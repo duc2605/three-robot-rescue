@@ -1,0 +1,7 @@
+{
+  "contact_pair_display": true,
+  "missing_depth_display": true,
+  "no_contact_display": true,
+  "legacy_unknown_display": true,
+  "alerts": "GAZEBO XÁC NHẬN CONTACT:\nrobot3 ↔ person_contact | t=1.952–2.001s | sâu tối đa=không có số đo\nCHỒNG LẤN ƯỚC TÍNH:\nperson_contact ↔ robot3"
+}

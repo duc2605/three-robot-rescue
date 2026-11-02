@@ -1,0 +1,47 @@
+{
+  "command_counts": {
+    "robot1/cmd": 63,
+    "clock": 532,
+    "poses": 53,
+    "reference_length": 53,
+    "robot2/cmd": 57,
+    "robot3/cmd": 56,
+    "robot1/cmd/nonzero": 30,
+    "robot1/safety": 18,
+    "robot2/cmd/nonzero": 28,
+    "robot2/safety": 39,
+    "robot3/safety": 39,
+    "robot3/cmd/nonzero": 11
+  },
+  "travel_sampled_m": [
+    0.07357508447200053,
+    0.32133256344530203,
+    0.17543608801245245
+  ],
+  "leader_goal_distance_end_m": 0.03905230650858,
+  "last_reference_length": 27,
+  "status_change_categories": {
+    "robot1": {
+      "normal": 3,
+      "moving_obstacle: yielding with checked local escape": 2,
+      "moving_obstacle: no verified safe escape, holding": 11,
+      "hazard_clear: recovering nominal tracking": 2
+    },
+    "robot2": {
+      "normal": 1,
+      "moving_obstacle: yielding with checked local escape": 20,
+      "moving_obstacle: no verified safe escape, holding": 16,
+      "hazard_clear: recovering nominal tracking": 1
+    },
+    "robot3": {
+      "stale_data: tracking sensors expired during computation": 2,
+      "normal": 4,
+      "moving_obstacle: no verified safe escape, holding": 23,
+      "moving_obstacle: yielding with checked local escape": 3,
+      "moving_obstacle: stop, fresh state/lidar/physical map required": 3,
+      "hazard_clear: recovering nominal tracking": 4
+    }
+  },
+  "budget_expired_messages_in_changes": 50,
+  "limits": "Live unpaired sample, not controlled A/B or contact-free proof."
+}

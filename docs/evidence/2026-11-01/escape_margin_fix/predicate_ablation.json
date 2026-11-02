@@ -1,0 +1,35 @@
+{
+  "results": [
+    {
+      "predicate": "previous_strict_map_predicate",
+      "robot_index": 0,
+      "result": "failed: "
+    },
+    {
+      "predicate": "previous_strict_map_predicate",
+      "robot_index": 1,
+      "result": "failed: "
+    },
+    {
+      "predicate": "previous_strict_map_predicate",
+      "robot_index": 2,
+      "result": "failed: "
+    },
+    {
+      "predicate": "monotonic_buffer_recovery",
+      "robot_index": 0,
+      "result": "passed"
+    },
+    {
+      "predicate": "monotonic_buffer_recovery",
+      "robot_index": 1,
+      "result": "passed"
+    },
+    {
+      "predicate": "monotonic_buffer_recovery",
+      "robot_index": 2,
+      "result": "passed"
+    }
+  ],
+  "limits": "Synthetic kinematic scenario, same controller except map predicate. Not full old-version benchmark or Gazebo collision replay."
+}

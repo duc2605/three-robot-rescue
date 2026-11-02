@@ -1,0 +1,7 @@
+[17.220s] [three_robot_dstar_mpc-4] [WARN] [1793514662.028913485] [three_robot_dstar_mpc]: Goal lacks obstacle clearance; choose a free goal.
+[33.261s] [three_robot_dstar_mpc-4] [WARN] [1793514677.371478639] [three_robot_dstar_mpc]: D* Lite: no route for the leader with current obstacles.
+[37.268s] [three_robot_dstar_mpc-4] [WARN] [1793514681.902716823] [three_robot_dstar_mpc]: D* Lite: no route for the leader with current obstacles.
+[43.275s] [three_robot_dstar_mpc-4] [WARN] [1793514687.668816095] [three_robot_dstar_mpc]: D* Lite: no route for the leader with current obstacles.
+[49.288s] [three_robot_dstar_mpc-4] [INFO] [1793514693.751114702] [three_robot_dstar_mpc]: Formation: column / tracking
+[52.295s] [three_robot_dstar_mpc-4] [INFO] [1793514696.499138908] [three_robot_dstar_mpc]: Formation: column / tracking
+[52.295s] [three_robot_dstar_mpc-4] [INFO] [1793514696.852062368] [three_robot_dstar_mpc]: Formation: column / tracking

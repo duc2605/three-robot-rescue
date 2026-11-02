@@ -1,0 +1,4 @@
+Consolidate compiler generated dependencies of target test_pedestrian_plugin
+[ 50%] Building CXX object CMakeFiles/test_pedestrian_plugin.dir/home/duc/three-robot-rescue/social_navigation_sim/test/test_pedestrian_plugin.cpp.o
+[100%] Linking CXX executable test_pedestrian_plugin
+[100%] Built target test_pedestrian_plugin

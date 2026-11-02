@@ -1,0 +1,2 @@
+[55.201s] [three_robot_dstar_mpc-4] [INFO] [1793514620.306230071] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[59.208s] [three_robot_dstar_mpc-4] [WARN] [1793514624.961140610] [three_robot_dstar_mpc]: D* Lite: no route for the leader with current obstacles.

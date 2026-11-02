@@ -1,0 +1,15 @@
+{
+  "active": true,
+  "clear": true,
+  "stale": true,
+  "epoch": true,
+  "rawMissing": true,
+  "http_replay": true,
+  "sparse_images_original": true,
+  "no_future_camera": true,
+  "social_overlay": true,
+  "png_with_camera": true,
+  "standalone": true,
+  "legacy_clear": true,
+  "gazebo_started": false
+}

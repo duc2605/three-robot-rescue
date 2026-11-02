@@ -1,0 +1,5 @@
+Error opening log file: /home/duc/.ignition/auto_default.log
+PASS robot1: real plugin ECM no yielding, robot-independent pose/gait timeline, GUI change flags, reset
+PASS robot2: real plugin ECM no yielding, robot-independent pose/gait timeline, GUI change flags, reset
+PASS rendered heading vs displacement: 4730 translated samples
+PASS robot3: real plugin ECM no yielding, robot-independent pose/gait timeline, GUI change flags, reset

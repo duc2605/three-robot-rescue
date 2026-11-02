@@ -1,0 +1,16 @@
+{
+  "time": [
+    0.001,
+    247.951
+  ],
+  "first_contact": 193.26,
+  "pairs": 6,
+  "episodes": 8,
+  "robot2_no_recorded_non_ground_contact": true,
+  "goal_distance_end": {
+    "robot1": 1.0883542058872482,
+    "robot2": 1.9492812497626628,
+    "robot3": 2.142308323219178
+  },
+  "acceptance": "NOT PASSED: remaining physical contacts in later cycle; no general collision-free claim."
+}

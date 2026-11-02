@@ -1,0 +1,192 @@
+{
+  "elapsed": 60.0,
+  "sim": 47.554,
+  "sim_elapsed": 15.788000000000004,
+  "rtf_recent": 0.21251502928887492,
+  "goal": [
+    1.08156,
+    -2.57733
+  ],
+  "leader_goal_distance": 2.0296884528350034,
+  "team": [
+    [
+      3.868486344397025,
+      -2.627159591843065,
+      -3.071700522227553
+    ],
+    [
+      2.9541398372554006,
+      -2.673516919851018,
+      2.184079520781183
+    ],
+    [
+      3.09154221084054,
+      -2.2951833578503473,
+      2.9080781315527084
+    ]
+  ],
+  "path_length_sampled": [
+    0.6698545481145034,
+    0.4781784489667417,
+    0.6609406507021603
+  ],
+  "command_counts": {
+    "robot1": {
+      "total": 409,
+      "linear_nonzero": 30,
+      "any_nonzero": 30,
+      "angular_nonzero": 21
+    },
+    "robot2": {
+      "total": 387,
+      "linear_nonzero": 23,
+      "any_nonzero": 23,
+      "angular_nonzero": 10
+    },
+    "robot3": {
+      "total": 374,
+      "linear_nonzero": 27,
+      "any_nonzero": 27,
+      "angular_nonzero": 14
+    }
+  },
+  "safety_latest": {
+    "robot1": "normal",
+    "robot2": "normal",
+    "robot3": "normal"
+  },
+  "counts": {
+    "clock": 15789,
+    "robot1/safety": 212,
+    "robot1/cmd": 409,
+    "team": 158,
+    "reference": 169,
+    "robot1/scan": 79,
+    "robot2/scan": 79,
+    "robot3/scan": 67,
+    "robot3/cmd": 374,
+    "robot3/safety": 189,
+    "robot2/cmd": 387,
+    "robot2/safety": 212,
+    "goal_msg": 1
+  },
+  "log_warning_counts": {},
+  "social": null,
+  "observation": null,
+  "started_vietnam": "2026-11-01T12:45:08.080966+07:00",
+  "ended_vietnam": "2026-11-01T12:46:08.171566+07:00",
+  "duration_wall_seconds": 60.00606912300009,
+  "first_team": [
+    [
+      3.948604136611895,
+      -3.0937221655156417,
+      1.7384790735343256
+    ],
+    [
+      3.003700995480827,
+      -2.8852931092718563,
+      1.3596476421295847
+    ],
+    [
+      3.490755779059226,
+      -2.218108076387866,
+      1.6611065069918378
+    ]
+  ],
+  "status_message_counts": {
+    "robot1": {
+      "normal": 95,
+      "stale_data: holding; fresh state/reference or active escape sensors required": 94,
+      "moving_obstacle: yielding with checked local escape; speed=0.77m/s band=fast TTC=0.98s; A*=right; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.60m/s band=fast TTC=0.78s; A*=right; uncertainty_recovery=False": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.662m buffer_gap=0.570m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.620m buffer_gap=0.520m": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.49m/s band=slow TTC=0.77s; A*=left; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.46m/s band=slow TTC=0.90s; A*=left; uncertainty_recovery=False": 1,
+      "moving_obstacle: stop, fresh state/lidar/physical map required": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.36m/s band=slow TTC=0.67s; A*=reactive fallback; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.36m/s band=slow TTC=0.53s; A*=reactive fallback; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.42m/s band=slow TTC=0.29s; A*=reactive fallback; uncertainty_recovery=False": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.295m buffer_gap=0.195m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.117m buffer_gap=0.027m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.066m buffer_gap=-0.034m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.009m buffer_gap=-0.099m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.059m buffer_gap=-0.159m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.037m buffer_gap=-0.053m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.002m buffer_gap=-0.098m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.026m buffer_gap=-0.136m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.045m buffer_gap=-0.165m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.052m buffer_gap=-0.182m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.046m buffer_gap=-0.186m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.028m buffer_gap=-0.178m": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.82m/s band=fast TTC=0.92s; A*=rear; uncertainty_recovery=False": 1
+    },
+    "robot2": {
+      "moving_obstacle: yielding with checked local escape; speed=0.80m/s band=fast TTC=2.33s; A*=reactive fallback; uncertainty_recovery=False": 1,
+      "moving_obstacle: stop, stale state or escape sensors; hazard unresolved": 2,
+      "normal": 98,
+      "stale_data: holding; fresh state/reference or active escape sensors required": 91,
+      "moving_obstacle: yielding with checked local escape; speed=0.59m/s band=fast TTC=2.53s; A*=rear; uncertainty_recovery=False": 1,
+      "moving_obstacle: stop, fresh state/lidar/physical map required": 3,
+      "moving_obstacle: yielding with checked local escape; speed=0.42m/s band=slow TTC=2.48s; A*=rear; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.62m/s band=fast TTC=1.24s; A*=rear; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.62m/s band=fast TTC=1.11s; A*=rear; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.78m/s band=fast TTC=0.90s; A*=rear; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.72m/s band=fast TTC=2.11s; A*=reactive fallback; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.62m/s band=fast TTC=1.01s; A*=left; uncertainty_recovery=False": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 3, 'peer': 0}": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 2, 'peer': 0}": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 13, 'peer': 0}": 2,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.077m buffer_gap=-0.043m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.076m buffer_gap=-0.054m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.075m buffer_gap=-0.065m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.074m buffer_gap=-0.076m": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.00m/s band=close TTC=0.00s; A*=reactive fallback; uncertainty_recovery=False": 1
+    },
+    "robot3": {
+      "moving_obstacle: yielding with checked local escape; speed=0.69m/s band=fast TTC=2.52s; A*=right; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.63m/s band=fast TTC=2.10s; A*=right; uncertainty_recovery=False": 1,
+      "moving_obstacle: stop, fresh state/lidar/physical map required": 4,
+      "normal": 87,
+      "stale_data: holding; fresh state/reference or active escape sensors required": 86,
+      "moving_obstacle: yielding with checked local escape; speed=0.42m/s band=slow TTC=2.54s; A*=reactive fallback; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.52m/s band=fast TTC=1.06s; A*=reactive fallback; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.42m/s band=slow TTC=2.21s; A*=reactive fallback; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.42m/s band=slow TTC=2.00s; A*=reactive fallback; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.51m/s band=fast TTC=2.02s; A*=rear; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.51m/s band=fast TTC=1.55s; A*=rear; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.20m/s band=slow TTC=2.90s; A*=rear; uncertainty_recovery=False": 1,
+      "moving_obstacle: stop, stale state or escape sensors; hazard unresolved": 2,
+      "moving_obstacle: yielding with checked local escape; speed=0.82m/s band=fast TTC=1.71s; A*=right; uncertainty_recovery=False": 1
+    }
+  },
+  "goal_changes": [
+    {
+      "elapsed": 31.578,
+      "sim": 41.489,
+      "xy": [
+        1.0815577507019043,
+        -2.577329158782959
+      ],
+      "source": "ROS /goal_pose"
+    },
+    {
+      "elapsed": 32.098,
+      "sim": 41.591,
+      "xy": [
+        1.08156,
+        -2.57733
+      ],
+      "source": "RViz log"
+    }
+  ],
+  "min_capture_matched_camera_center_distance": null,
+  "limitations": [
+    "Read-only ROS observations; no contact sensor or ground-truth collision verification",
+    "Path length is sampled XY movement with 2 mm noise threshold per 1s snapshot",
+    "Status message counts are not time percentages or independent hazard encounters",
+    "Data age and receipt age differ; camera-center distance only computed with <=0.2s capture stamp difference",
+    "No goal, command, parameter or restart action by monitor"
+  ]
+}

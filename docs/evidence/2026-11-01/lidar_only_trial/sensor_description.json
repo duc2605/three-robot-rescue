@@ -1,0 +1,7 @@
+{
+  "domain": 32,
+  "rgbd_sensor_count": 0,
+  "gpu_lidar_sensor_count": 1,
+  "vertical_samples": "91",
+  "/three_robot_dstar_mpc/get_parameters": "timeout"
+}

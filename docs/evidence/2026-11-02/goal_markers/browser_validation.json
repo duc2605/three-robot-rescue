@@ -1,0 +1,25 @@
+{
+  "before": null,
+  "first": {
+    "t": 0.501,
+    "epoch": 0,
+    "sequence": 1,
+    "xy": [
+      2,
+      1
+    ],
+    "source": "synthetic_test_selection"
+  },
+  "second": {
+    "t": 1.501,
+    "epoch": 0,
+    "sequence": 2,
+    "xy": [
+      4,
+      1
+    ],
+    "source": "synthetic_test_selection"
+  },
+  "otherEpoch": null,
+  "label": "GOAL #2: (4.00, 1.00) · t=1.501s"
+}

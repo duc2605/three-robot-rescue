@@ -1,0 +1,31 @@
+{
+  "goal_sent": true,
+  "goal": [
+    1.0815577507019043,
+    -2.0020322799682617
+  ],
+  "last_sim": 74.998,
+  "wall_seconds": 185.96395914699997,
+  "scans": {
+    "robot1": {
+      "range_max": 2.0,
+      "rays": 240
+    },
+    "robot2": {
+      "range_max": 2.0,
+      "rays": 240
+    },
+    "robot3": {
+      "range_max": 2.0,
+      "rays": 240
+    }
+  },
+  "last_status": {
+    "robot3": "normal",
+    "robot2": "normal",
+    "robot1": "normal"
+  },
+  "launch_exit": 0,
+  "ros_domain": "64",
+  "scope": "One isolated full-stack run; not repeated benchmark or proof of general avoidance."
+}

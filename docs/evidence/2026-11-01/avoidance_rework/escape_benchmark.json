@@ -1,0 +1,19 @@
+{
+  "before": {
+    "repetitions": 50,
+    "median_ms": 1.1336139996274142,
+    "min_ms": 1.0732569999163388,
+    "max_ms": 1.4633660002800752,
+    "median_edge_checks": 171.0,
+    "side": "rear"
+  },
+  "after": {
+    "repetitions": 50,
+    "median_ms": 0.04043100034323288,
+    "min_ms": 0.03935099994123448,
+    "max_ms": 0.05930399947828846,
+    "median_edge_checks": 7.0,
+    "side": "left"
+  },
+  "limit": "Same synthetic local escape input, sequential timing; not Gazebo RTF or full MPC benchmark."
+}

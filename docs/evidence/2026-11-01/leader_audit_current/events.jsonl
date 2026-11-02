@@ -1,0 +1,615 @@
+{"elapsed": 0.126, "sim": 31.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 0.176, "sim": 31.816, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 0.395, "sim": 31.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 0.576, "sim": 31.978, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 0.64, "sim": 32.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 0.775, "sim": 32.046, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 1.267, "sim": 32.248, "kind": "robot1/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.77m/s band=fast TTC=0.98s; A*=right; uncertainty_recovery=False"}
+{"elapsed": 1.417, "sim": 32.317, "kind": "robot1/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.60m/s band=fast TTC=0.78s; A*=right; uncertainty_recovery=False"}
+{"elapsed": 1.516, "sim": 32.361, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.69m/s band=fast TTC=2.52s; A*=right; uncertainty_recovery=False"}
+{"elapsed": 1.611, "sim": 32.398, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.662m buffer_gap=0.570m"}
+{"elapsed": 1.67, "sim": 32.418, "kind": "robot2/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.80m/s band=fast TTC=2.33s; A*=reactive fallback; uncertainty_recovery=False"}
+{"elapsed": 1.671, "sim": 32.418, "kind": "robot2/safety_change", "value": "moving_obstacle: stop, stale state or escape sensors; hazard unresolved"}
+{"elapsed": 1.674, "sim": 32.419, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 1.736, "sim": 32.444, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 1.784, "sim": 32.47, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.620m buffer_gap=0.520m"}
+{"elapsed": 1.843, "sim": 32.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 1.845, "sim": 32.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 1.937, "sim": 32.547, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 1.976, "sim": 32.567, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 2.043, "sim": 32.598, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.63m/s band=fast TTC=2.10s; A*=right; uncertainty_recovery=False"}
+{"elapsed": 2.044, "sim": 32.598, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required"}
+{"elapsed": 2.047, "sim": 32.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 2.048, "sim": 32.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 2.051, "sim": 32.601, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 2.095, "sim": 32.62, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 2.137, "sim": 32.637, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 2.175, "sim": 32.653, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 2.285, "sim": 32.7, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 2.295, "sim": 32.704, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 2.504, "sim": 32.8, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 2.696, "sim": 32.881, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 2.734, "sim": 32.9, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 2.896, "sim": 32.976, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 2.926, "sim": 32.987, "kind": "robot1/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.49m/s band=slow TTC=0.77s; A*=left; uncertainty_recovery=False"}
+{"elapsed": 2.952, "sim": 33.0, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 3.096, "sim": 33.05, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 3.235, "sim": 33.1, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 3.295, "sim": 33.123, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 3.473, "sim": 33.2, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 3.496, "sim": 33.209, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 3.699, "sim": 33.294, "kind": "robot2/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.59m/s band=fast TTC=2.53s; A*=rear; uncertainty_recovery=False"}
+{"elapsed": 3.701, "sim": 33.295, "kind": "robot2/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required"}
+{"elapsed": 3.713, "sim": 33.3, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 3.715, "sim": 33.301, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 3.72, "sim": 33.303, "kind": "robot1/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.46m/s band=slow TTC=0.90s; A*=left; uncertainty_recovery=False"}
+{"elapsed": 3.722, "sim": 33.304, "kind": "robot1/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required"}
+{"elapsed": 3.737, "sim": 33.31, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 3.896, "sim": 33.375, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 3.946, "sim": 33.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 3.948, "sim": 33.4, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 3.948, "sim": 33.4, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 3.975, "sim": 33.411, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.095, "sim": 33.471, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.138, "sim": 33.49, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.162, "sim": 33.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 4.163, "sim": 33.5, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 4.164, "sim": 33.501, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 4.175, "sim": 33.505, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.295, "sim": 33.558, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.337, "sim": 33.58, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.38, "sim": 33.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 4.38, "sim": 33.6, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 4.382, "sim": 33.601, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 4.495, "sim": 33.644, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.537, "sim": 33.661, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.576, "sim": 33.676, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.638, "sim": 33.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 4.639, "sim": 33.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 4.639, "sim": 33.7, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 4.695, "sim": 33.726, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.737, "sim": 33.745, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.775, "sim": 33.763, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.845, "sim": 33.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 4.846, "sim": 33.8, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 4.847, "sim": 33.801, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 4.895, "sim": 33.819, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.937, "sim": 33.837, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 4.975, "sim": 33.854, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 5.09, "sim": 33.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 5.09, "sim": 33.9, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 5.092, "sim": 33.9, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 5.096, "sim": 33.902, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 5.137, "sim": 33.917, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 5.175, "sim": 33.938, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 5.295, "sim": 34.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 5.296, "sim": 34.0, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 5.298, "sim": 34.001, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 5.298, "sim": 34.001, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 5.337, "sim": 34.018, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 5.375, "sim": 34.034, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 5.499, "sim": 34.1, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 5.501, "sim": 34.101, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 5.501, "sim": 34.101, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 5.537, "sim": 34.117, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 5.575, "sim": 34.135, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 5.695, "sim": 34.183, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 5.736, "sim": 34.2, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 5.736, "sim": 34.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 5.737, "sim": 34.2, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 5.738, "sim": 34.201, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 5.776, "sim": 34.213, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 5.896, "sim": 34.256, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 5.995, "sim": 34.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 5.995, "sim": 34.3, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 5.996, "sim": 34.3, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 6.094, "sim": 34.352, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 6.137, "sim": 34.37, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 6.176, "sim": 34.388, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 6.204, "sim": 34.4, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 6.204, "sim": 34.4, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 6.205, "sim": 34.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 6.296, "sim": 34.439, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 6.337, "sim": 34.457, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 6.375, "sim": 34.475, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 6.426, "sim": 34.5, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 6.428, "sim": 34.501, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 6.428, "sim": 34.501, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 6.495, "sim": 34.532, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 6.537, "sim": 34.547, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 6.576, "sim": 34.562, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 6.665, "sim": 34.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 6.666, "sim": 34.6, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 6.667, "sim": 34.601, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 6.696, "sim": 34.612, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 6.737, "sim": 34.626, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 6.775, "sim": 34.642, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 6.919, "sim": 34.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 6.919, "sim": 34.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 6.92, "sim": 34.7, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 6.937, "sim": 34.707, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 6.975, "sim": 34.725, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 7.095, "sim": 34.784, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 7.13, "sim": 34.8, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 7.131, "sim": 34.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 7.132, "sim": 34.8, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 7.137, "sim": 34.803, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 7.175, "sim": 34.817, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 7.295, "sim": 34.864, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 7.381, "sim": 34.9, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 7.382, "sim": 34.9, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 7.495, "sim": 34.954, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 7.536, "sim": 34.97, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 7.612, "sim": 35.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 7.613, "sim": 35.0, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 7.635, "sim": 35.006, "kind": "robot1/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.36m/s band=slow TTC=0.67s; A*=reactive fallback; uncertainty_recovery=False"}
+{"elapsed": 7.695, "sim": 35.029, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 7.737, "sim": 35.044, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 7.78, "sim": 35.058, "kind": "robot1/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.36m/s band=slow TTC=0.53s; A*=reactive fallback; uncertainty_recovery=False"}
+{"elapsed": 8.002, "sim": 35.154, "kind": "robot1/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.42m/s band=slow TTC=0.29s; A*=reactive fallback; uncertainty_recovery=False"}
+{"elapsed": 8.189, "sim": 35.219, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.295m buffer_gap=0.195m"}
+{"elapsed": 8.378, "sim": 35.303, "kind": "robot2/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.42m/s band=slow TTC=2.48s; A*=rear; uncertainty_recovery=False"}
+{"elapsed": 8.389, "sim": 35.307, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.117m buffer_gap=0.027m"}
+{"elapsed": 8.601, "sim": 35.409, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.066m buffer_gap=-0.034m"}
+{"elapsed": 8.616, "sim": 35.414, "kind": "robot2/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.62m/s band=fast TTC=1.24s; A*=rear; uncertainty_recovery=False"}
+{"elapsed": 8.821, "sim": 35.497, "kind": "robot2/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.62m/s band=fast TTC=1.11s; A*=rear; uncertainty_recovery=False"}
+{"elapsed": 8.847, "sim": 35.506, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.009m buffer_gap=-0.099m"}
+{"elapsed": 9.107, "sim": 35.606, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.42m/s band=slow TTC=2.54s; A*=reactive fallback; uncertainty_recovery=False"}
+{"elapsed": 9.11, "sim": 35.607, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required"}
+{"elapsed": 9.111, "sim": 35.607, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.059m buffer_gap=-0.159m"}
+{"elapsed": 9.172, "sim": 35.627, "kind": "robot2/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.78m/s band=fast TTC=0.90s; A*=rear; uncertainty_recovery=False"}
+{"elapsed": 9.182, "sim": 35.632, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 9.337, "sim": 35.692, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 9.359, "sim": 35.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 9.377, "sim": 35.707, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.037m buffer_gap=-0.053m"}
+{"elapsed": 9.537, "sim": 35.78, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 9.574, "sim": 35.801, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 9.592, "sim": 35.807, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.002m buffer_gap=-0.098m"}
+{"elapsed": 9.737, "sim": 35.868, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 9.812, "sim": 35.9, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 9.826, "sim": 35.906, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.026m buffer_gap=-0.136m"}
+{"elapsed": 9.937, "sim": 35.957, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 10.056, "sim": 36.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 10.075, "sim": 36.007, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.045m buffer_gap=-0.165m"}
+{"elapsed": 10.138, "sim": 36.031, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 10.138, "sim": 36.031, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.52m/s band=fast TTC=1.06s; A*=reactive fallback; uncertainty_recovery=False"}
+{"elapsed": 10.287, "sim": 36.1, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 10.301, "sim": 36.106, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.052m buffer_gap=-0.182m"}
+{"elapsed": 10.337, "sim": 36.118, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 10.379, "sim": 36.138, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.42m/s band=slow TTC=2.21s; A*=reactive fallback; uncertainty_recovery=False"}
+{"elapsed": 10.539, "sim": 36.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 10.552, "sim": 36.204, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.046m buffer_gap=-0.186m"}
+{"elapsed": 10.58, "sim": 36.215, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.42m/s band=slow TTC=2.00s; A*=reactive fallback; uncertainty_recovery=False"}
+{"elapsed": 10.584, "sim": 36.216, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 10.695, "sim": 36.255, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 10.738, "sim": 36.274, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 10.798, "sim": 36.3, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 10.799, "sim": 36.301, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 10.828, "sim": 36.315, "kind": "robot1/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.028m buffer_gap=-0.178m"}
+{"elapsed": 10.895, "sim": 36.345, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 10.937, "sim": 36.361, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.027, "sim": 36.4, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 11.028, "sim": 36.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 11.028, "sim": 36.4, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 11.096, "sim": 36.431, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.137, "sim": 36.451, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.175, "sim": 36.47, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.232, "sim": 36.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 11.233, "sim": 36.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 11.234, "sim": 36.5, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 11.295, "sim": 36.532, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.337, "sim": 36.554, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.375, "sim": 36.574, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.43, "sim": 36.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 11.431, "sim": 36.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 11.432, "sim": 36.6, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 11.496, "sim": 36.628, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.537, "sim": 36.65, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.575, "sim": 36.67, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.642, "sim": 36.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 11.642, "sim": 36.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 11.642, "sim": 36.7, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 11.695, "sim": 36.727, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.737, "sim": 36.748, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.775, "sim": 36.763, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.862, "sim": 36.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 11.863, "sim": 36.801, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 11.863, "sim": 36.801, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 11.896, "sim": 36.815, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.937, "sim": 36.831, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 11.975, "sim": 36.849, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 12.094, "sim": 36.9, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 12.096, "sim": 36.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 12.096, "sim": 36.9, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 12.098, "sim": 36.901, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 12.137, "sim": 36.917, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 12.176, "sim": 36.937, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 12.319, "sim": 37.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 12.32, "sim": 37.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 12.32, "sim": 37.0, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 12.337, "sim": 37.007, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 12.375, "sim": 37.02, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 12.496, "sim": 37.069, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 12.574, "sim": 37.1, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 12.576, "sim": 37.101, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 12.577, "sim": 37.101, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 12.737, "sim": 37.161, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 12.852, "sim": 37.2, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 12.852, "sim": 37.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 12.937, "sim": 37.234, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 12.975, "sim": 37.248, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 13.109, "sim": 37.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 13.112, "sim": 37.301, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 13.137, "sim": 37.313, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 13.175, "sim": 37.329, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 13.344, "sim": 37.4, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 13.345, "sim": 37.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 13.375, "sim": 37.414, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 13.536, "sim": 37.474, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 13.582, "sim": 37.495, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.51m/s band=fast TTC=2.02s; A*=rear; uncertainty_recovery=False"}
+{"elapsed": 13.595, "sim": 37.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 13.596, "sim": 37.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 13.737, "sim": 37.556, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 13.776, "sim": 37.572, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 13.837, "sim": 37.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 13.838, "sim": 37.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 13.937, "sim": 37.643, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 13.975, "sim": 37.661, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 14.081, "sim": 37.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 14.082, "sim": 37.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 14.137, "sim": 37.723, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 14.176, "sim": 37.742, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 14.313, "sim": 37.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 14.313, "sim": 37.8, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 14.317, "sim": 37.801, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.51m/s band=fast TTC=1.55s; A*=rear; uncertainty_recovery=False"}
+{"elapsed": 14.319, "sim": 37.802, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 14.32, "sim": 37.802, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 14.337, "sim": 37.808, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 14.375, "sim": 37.819, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 14.634, "sim": 37.9, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 14.635, "sim": 37.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 14.636, "sim": 37.9, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 14.696, "sim": 37.915, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 14.737, "sim": 37.926, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 14.775, "sim": 37.936, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 14.985, "sim": 38.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 14.987, "sim": 38.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 15.138, "sim": 38.034, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 15.176, "sim": 38.041, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 15.374, "sim": 38.1, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 15.376, "sim": 38.1, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 15.377, "sim": 38.101, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 15.537, "sim": 38.159, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 15.642, "sim": 38.2, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 15.643, "sim": 38.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 15.737, "sim": 38.23, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 15.777, "sim": 38.239, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 16.052, "sim": 38.301, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 16.053, "sim": 38.301, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 16.139, "sim": 38.317, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 16.178, "sim": 38.324, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 16.586, "sim": 38.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 16.587, "sim": 38.4, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 16.678, "sim": 38.426, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.20m/s band=slow TTC=2.90s; A*=rear; uncertainty_recovery=False"}
+{"elapsed": 16.681, "sim": 38.427, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, stale state or escape sensors; hazard unresolved"}
+{"elapsed": 16.686, "sim": 38.428, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required"}
+{"elapsed": 16.739, "sim": 38.441, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 16.776, "sim": 38.448, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 17.022, "sim": 38.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 17.024, "sim": 38.5, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 17.026, "sim": 38.501, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 17.096, "sim": 38.518, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 17.139, "sim": 38.527, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 17.176, "sim": 38.536, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 17.476, "sim": 38.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 17.478, "sim": 38.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 17.479, "sim": 38.6, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 17.496, "sim": 38.604, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 17.538, "sim": 38.612, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 17.578, "sim": 38.623, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 17.922, "sim": 38.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 17.924, "sim": 38.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 17.924, "sim": 38.7, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 17.941, "sim": 38.703, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 17.976, "sim": 38.71, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 18.097, "sim": 38.739, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 18.387, "sim": 38.8, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 18.389, "sim": 38.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 18.389, "sim": 38.8, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 18.497, "sim": 38.824, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 18.54, "sim": 38.833, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 18.578, "sim": 38.841, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 18.878, "sim": 38.9, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 18.879, "sim": 38.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 18.881, "sim": 38.9, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required"}
+{"elapsed": 18.939, "sim": 38.914, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 18.976, "sim": 38.922, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 19.336, "sim": 39.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 19.338, "sim": 39.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 19.34, "sim": 39.001, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 19.377, "sim": 39.008, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 19.808, "sim": 39.1, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 19.81, "sim": 39.1, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 19.811, "sim": 39.1, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 19.896, "sim": 39.118, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 19.938, "sim": 39.127, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 19.976, "sim": 39.135, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 20.289, "sim": 39.2, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 20.292, "sim": 39.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 20.292, "sim": 39.2, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 20.297, "sim": 39.201, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 20.337, "sim": 39.209, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 20.378, "sim": 39.217, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 20.76, "sim": 39.3, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 20.762, "sim": 39.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 20.763, "sim": 39.3, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 20.776, "sim": 39.304, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 20.898, "sim": 39.329, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 20.939, "sim": 39.338, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 21.26, "sim": 39.4, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 21.262, "sim": 39.4, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 21.267, "sim": 39.401, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 21.297, "sim": 39.406, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 21.338, "sim": 39.413, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 21.377, "sim": 39.419, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 21.797, "sim": 39.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 21.798, "sim": 39.5, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 21.799, "sim": 39.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 21.897, "sim": 39.519, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 21.938, "sim": 39.527, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 21.977, "sim": 39.534, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 22.294, "sim": 39.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 22.296, "sim": 39.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 22.296, "sim": 39.6, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 22.299, "sim": 39.601, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 22.338, "sim": 39.609, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 22.377, "sim": 39.617, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 22.764, "sim": 39.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 22.766, "sim": 39.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 22.766, "sim": 39.7, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 22.778, "sim": 39.702, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 22.898, "sim": 39.725, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 22.938, "sim": 39.733, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 23.249, "sim": 39.8, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 23.251, "sim": 39.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 23.252, "sim": 39.8, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 23.297, "sim": 39.809, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 23.338, "sim": 39.818, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 23.376, "sim": 39.825, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 23.759, "sim": 39.9, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 23.761, "sim": 39.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 23.762, "sim": 39.9, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 23.777, "sim": 39.903, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 23.898, "sim": 39.923, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 23.938, "sim": 39.93, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 24.3, "sim": 40.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 24.302, "sim": 40.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 24.303, "sim": 40.0, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 24.339, "sim": 40.007, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 24.377, "sim": 40.013, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 24.498, "sim": 40.037, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 24.836, "sim": 40.1, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 24.838, "sim": 40.1, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 24.839, "sim": 40.1, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 24.897, "sim": 40.113, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 24.94, "sim": 40.121, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 24.977, "sim": 40.129, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 25.306, "sim": 40.2, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 25.307, "sim": 40.2, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 25.308, "sim": 40.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 25.338, "sim": 40.207, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 25.377, "sim": 40.214, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 25.496, "sim": 40.24, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 25.799, "sim": 40.3, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 25.8, "sim": 40.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 25.804, "sim": 40.301, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 25.896, "sim": 40.321, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 25.939, "sim": 40.331, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 25.976, "sim": 40.34, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 26.229, "sim": 40.4, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 26.231, "sim": 40.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 26.233, "sim": 40.4, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 26.298, "sim": 40.415, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 26.343, "sim": 40.424, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 26.376, "sim": 40.431, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 26.694, "sim": 40.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 26.695, "sim": 40.5, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 26.696, "sim": 40.501, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 26.697, "sim": 40.501, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 26.738, "sim": 40.509, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 26.775, "sim": 40.517, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 27.147, "sim": 40.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 27.148, "sim": 40.601, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 27.149, "sim": 40.601, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 27.177, "sim": 40.608, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 27.296, "sim": 40.637, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 27.338, "sim": 40.648, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 27.585, "sim": 40.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 27.588, "sim": 40.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 27.588, "sim": 40.7, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 27.697, "sim": 40.723, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 27.738, "sim": 40.73, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 27.776, "sim": 40.738, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 28.078, "sim": 40.8, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 28.079, "sim": 40.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 28.08, "sim": 40.8, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 28.097, "sim": 40.803, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 28.139, "sim": 40.811, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 28.176, "sim": 40.819, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 28.598, "sim": 40.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 28.599, "sim": 40.9, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 28.696, "sim": 40.92, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 28.777, "sim": 40.936, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 29.07, "sim": 41.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 29.072, "sim": 41.0, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 29.099, "sim": 41.005, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 29.177, "sim": 41.02, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 29.569, "sim": 41.1, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 29.571, "sim": 41.1, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 29.577, "sim": 41.101, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 29.696, "sim": 41.122, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 30.116, "sim": 41.2, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 30.119, "sim": 41.2, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 30.179, "sim": 41.212, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 30.297, "sim": 41.237, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 30.617, "sim": 41.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 30.619, "sim": 41.3, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 30.696, "sim": 41.315, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 30.777, "sim": 41.329, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 31.122, "sim": 41.4, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 31.124, "sim": 41.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 31.177, "sim": 41.409, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 31.297, "sim": 41.43, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 31.578, "sim": 41.489, "kind": "goal", "value": {"elapsed": 31.578, "sim": 41.489, "xy": [1.0815577507019043, -2.577329158782959], "source": "ROS /goal_pose"}}
+{"elapsed": 31.839, "sim": 41.539, "kind": "robot2/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.72m/s band=fast TTC=2.11s; A*=reactive fallback; uncertainty_recovery=False"}
+{"elapsed": 31.841, "sim": 41.54, "kind": "robot2/safety_change", "value": "moving_obstacle: stop, stale state or escape sensors; hazard unresolved"}
+{"elapsed": 31.845, "sim": 41.541, "kind": "robot2/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required"}
+{"elapsed": 32.098, "sim": 41.591, "kind": "goal", "value": {"elapsed": 32.098, "sim": 41.591, "xy": [1.08156, -2.57733], "source": "RViz log"}}
+{"elapsed": 32.146, "sim": 41.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 32.641, "sim": 41.7, "kind": "robot2/safety_change", "value": "moving_obstacle: stop, fresh state/lidar/physical map required"}
+{"elapsed": 33.125, "sim": 41.786, "kind": "robot1/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.82m/s band=fast TTC=0.92s; A*=rear; uncertainty_recovery=False"}
+{"elapsed": 33.152, "sim": 41.789, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 33.179, "sim": 41.793, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 33.221, "sim": 41.801, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 33.295, "sim": 41.813, "kind": "robot3/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.82m/s band=fast TTC=1.71s; A*=right; uncertainty_recovery=False"}
+{"elapsed": 33.299, "sim": 41.813, "kind": "robot3/safety_change", "value": "moving_obstacle: stop, stale state or escape sensors; hazard unresolved"}
+{"elapsed": 33.315, "sim": 41.816, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 33.376, "sim": 41.826, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 33.498, "sim": 41.848, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 33.767, "sim": 41.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 33.769, "sim": 41.9, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 33.775, "sim": 41.902, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 33.895, "sim": 41.93, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 34.238, "sim": 42.0, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 34.243, "sim": 42.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 34.299, "sim": 42.011, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 34.377, "sim": 42.024, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 34.737, "sim": 42.1, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 34.739, "sim": 42.1, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 34.77, "sim": 42.107, "kind": "robot2/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.62m/s band=fast TTC=1.01s; A*=left; uncertainty_recovery=False"}
+{"elapsed": 34.776, "sim": 42.109, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 34.788, "sim": 42.111, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 34.896, "sim": 42.135, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 34.94, "sim": 42.145, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 35.185, "sim": 42.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 35.186, "sim": 42.2, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 35.188, "sim": 42.201, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 35.296, "sim": 42.224, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 35.338, "sim": 42.233, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 35.644, "sim": 42.3, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 35.644, "sim": 42.3, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 39.539, "sim": 43.115, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 39.696, "sim": 43.149, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 39.919, "sim": 43.2, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 39.922, "sim": 43.201, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 39.941, "sim": 43.204, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 40.099, "sim": 43.242, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 40.38, "sim": 43.3, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 40.381, "sim": 43.3, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 40.496, "sim": 43.325, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 40.54, "sim": 43.334, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 40.576, "sim": 43.343, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 40.824, "sim": 43.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 40.826, "sim": 43.401, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 40.826, "sim": 43.401, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 40.896, "sim": 43.416, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 40.939, "sim": 43.425, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 40.975, "sim": 43.434, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 41.287, "sim": 43.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 41.289, "sim": 43.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 41.29, "sim": 43.5, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 41.296, "sim": 43.501, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 41.339, "sim": 43.51, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 41.378, "sim": 43.521, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 41.724, "sim": 43.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 41.726, "sim": 43.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 41.727, "sim": 43.6, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 41.738, "sim": 43.603, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 41.779, "sim": 43.611, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 41.897, "sim": 43.637, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 42.187, "sim": 43.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 42.188, "sim": 43.7, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 42.19, "sim": 43.7, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 42.296, "sim": 43.724, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 42.338, "sim": 43.734, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 42.376, "sim": 43.743, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 42.622, "sim": 43.8, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 42.626, "sim": 43.8, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 42.627, "sim": 43.8, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 42.697, "sim": 43.816, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 42.738, "sim": 43.826, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 42.777, "sim": 43.837, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.077, "sim": 43.9, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 43.079, "sim": 43.9, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 43.079, "sim": 43.9, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 43.096, "sim": 43.904, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.138, "sim": 43.914, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.177, "sim": 43.923, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.5, "sim": 44.0, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 43.5, "sim": 44.0, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 43.502, "sim": 44.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 43.538, "sim": 44.008, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.576, "sim": 44.016, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.696, "sim": 44.045, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.937, "sim": 44.1, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 43.938, "sim": 44.1, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 43.938, "sim": 44.1, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 43.942, "sim": 44.1, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 43.976, "sim": 44.107, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.096, "sim": 44.132, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.417, "sim": 44.2, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 44.418, "sim": 44.2, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 44.421, "sim": 44.201, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 44.497, "sim": 44.215, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.538, "sim": 44.222, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.577, "sim": 44.229, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.937, "sim": 44.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 44.938, "sim": 44.3, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 44.939, "sim": 44.3, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 44.942, "sim": 44.3, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 44.978, "sim": 44.306, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 45.096, "sim": 44.326, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 45.473, "sim": 44.4, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 45.474, "sim": 44.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 45.475, "sim": 44.4, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 48.252, "sim": 44.984, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 3, 'peer': 0}"}
+{"elapsed": 48.31, "sim": 45.0, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 48.316, "sim": 45.001, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 2, 'peer': 0}"}
+{"elapsed": 48.78, "sim": 45.1, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 50.096, "sim": 45.409, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 50.176, "sim": 45.424, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 50.497, "sim": 45.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 50.499, "sim": 45.501, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 50.501, "sim": 45.501, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}"}
+{"elapsed": 50.923, "sim": 45.601, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 50.929, "sim": 45.603, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 13, 'peer': 0}"}
+{"elapsed": 51.351, "sim": 45.7, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 51.364, "sim": 45.702, "kind": "robot2/safety_change", "value": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 13, 'peer': 0}"}
+{"elapsed": 51.889, "sim": 45.817, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.077m buffer_gap=-0.043m"}
+{"elapsed": 52.406, "sim": 45.92, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.076m buffer_gap=-0.054m"}
+{"elapsed": 52.931, "sim": 46.024, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.075m buffer_gap=-0.065m"}
+{"elapsed": 53.339, "sim": 46.119, "kind": "robot2/safety_change", "value": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.074m buffer_gap=-0.076m"}
+{"elapsed": 53.7, "sim": 46.201, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 53.805, "sim": 46.224, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 53.823, "sim": 46.228, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 53.979, "sim": 46.261, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 53.985, "sim": 46.263, "kind": "robot2/safety_change", "value": "moving_obstacle: yielding with checked local escape; speed=0.00m/s band=close TTC=0.00s; A*=reactive fallback; uncertainty_recovery=False"}
+{"elapsed": 54.165, "sim": 46.3, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 54.168, "sim": 46.301, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 54.178, "sim": 46.303, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 54.297, "sim": 46.329, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 54.631, "sim": 46.4, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 54.634, "sim": 46.401, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 54.697, "sim": 46.414, "kind": "robot3/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 54.776, "sim": 46.432, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 54.874, "sim": 46.453, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 54.938, "sim": 46.467, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 55.098, "sim": 46.5, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 55.1, "sim": 46.5, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 55.101, "sim": 46.5, "kind": "robot3/safety_change", "value": "normal"}
+{"elapsed": 55.138, "sim": 46.508, "kind": "robot2/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 55.176, "sim": 46.516, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 55.517, "sim": 46.6, "kind": "robot1/safety_change", "value": "normal"}
+{"elapsed": 55.518, "sim": 46.6, "kind": "robot2/safety_change", "value": "normal"}
+{"elapsed": 58.884, "sim": 47.308, "kind": "robot1/safety_change", "value": "stale_data: holding; fresh state/reference or active escape sensors required"}
+{"elapsed": 58.903, "sim": 47.312, "kind": "robot1/safety_change", "value": "normal"}

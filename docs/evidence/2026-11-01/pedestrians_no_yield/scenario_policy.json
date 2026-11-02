@@ -1,0 +1,13 @@
+{
+  "reactive_yield": false,
+  "schedule_clock": "simulation time; independent of robots",
+  "articulated_walk_animation": true,
+  "timeline": {
+    "watch_until": 12.0,
+    "stand_until": 14.0,
+    "drink_start": 61.396111270685864,
+    "drink_end": 67.39611127068586,
+    "return_to_chair": 127.35859315573089,
+    "cycle": 129.3585931557309
+  }
+}

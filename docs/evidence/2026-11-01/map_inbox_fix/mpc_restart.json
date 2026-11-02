@@ -1,0 +1,50 @@
+[
+  {
+    "node": "robot1_distributed_mpc",
+    "old_pid": 64817,
+    "new_pid": 65978,
+    "args": [
+      "/usr/bin/python3",
+      "/home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc",
+      "--ros-args",
+      "-r",
+      "__node:=robot1_distributed_mpc",
+      "--params-file",
+      "/tmp/launch_params_mvwdo6bg",
+      "-r",
+      "/clock:=/navigation/clock"
+    ]
+  },
+  {
+    "node": "robot2_distributed_mpc",
+    "old_pid": 64819,
+    "new_pid": 65979,
+    "args": [
+      "/usr/bin/python3",
+      "/home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc",
+      "--ros-args",
+      "-r",
+      "__node:=robot2_distributed_mpc",
+      "--params-file",
+      "/tmp/launch_params_dw_z9q_0",
+      "-r",
+      "/clock:=/navigation/clock"
+    ]
+  },
+  {
+    "node": "robot3_distributed_mpc",
+    "old_pid": 64821,
+    "new_pid": 65980,
+    "args": [
+      "/usr/bin/python3",
+      "/home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc",
+      "--ros-args",
+      "-r",
+      "__node:=robot3_distributed_mpc",
+      "--params-file",
+      "/tmp/launch_params_1_qq__7k",
+      "-r",
+      "/clock:=/navigation/clock"
+    ]
+  }
+]

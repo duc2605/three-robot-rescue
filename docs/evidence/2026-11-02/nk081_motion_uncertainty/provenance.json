@@ -1,0 +1,18 @@
+{
+  "tested_variant": "initial uncertainty speed prior; rejected as an accepted solution after physical regression",
+  "tested_hashes": {
+    "moving_obstacles.py": "e5acf68c0493eeba01b1484b1b5a745960e03d76f2d18ccff04e276891e7754c",
+    "dstar_mpc_controller.py": "dfb57b31a5ecb0a9331404d256d7a493a55d781fa6dac593ead67aa9abda401b"
+  },
+  "final_hashes": {
+    "moving_obstacles.py": "cc5b2150e9a51dcb0dedd29824dcb06ba8b7f06a58dc57289593b1d3502b64bc",
+    "dstar_mpc_controller.py": "9a29c5d2867dba685a4b6985e34527b10f74ce993cf79ba03f9aa28649d370f7"
+  },
+  "final_variant": "measured-only dropout hint plus corridor and coasting/overspeed checks; no synthetic speed prior",
+  "final_gazebo_tested": false,
+  "gazebo_launches": 1,
+  "evaluation_end_sim": 120.001,
+  "raw_cleanup_tail_end_sim": 125.601,
+  "backup_before_task": "backups/20261102_153811_755576_nk081_motion_uncertainty_corridor_escape",
+  "backup_before_narrowing": "backups/20261102_155547_550541_nk081_checkpoint_prior_trial_before_narrowing"
+}

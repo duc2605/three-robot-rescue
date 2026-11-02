@@ -1,0 +1,12 @@
+{
+  "backup": "backups/20261102_142358_806135_nk076_resume_goal_after_escape",
+  "unchanged_ast": {
+    "yield_to_moving_obstacles": true,
+    "checked_tracking_rollout": true,
+    "stationary_scan_points": true,
+    "peer_sweep_safe": true
+  },
+  "source_sha256": "90690517c1bca0a93ab9abab56bcbf02b578dd0345ab2cb0fa4a3cf4a9f82e49",
+  "change": "Normal fallback beam tries full horizons at widths 1,3,12 within original100ms; normal commands clear replay escape marker",
+  "simulations_allowed": 1
+}

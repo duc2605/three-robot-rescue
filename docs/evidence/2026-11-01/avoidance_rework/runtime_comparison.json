@@ -1,0 +1,222 @@
+{
+  "runtime_after_goal": {
+    "samples": 60,
+    "pair_min_sampled": {
+      "1-2": 0.6835466522890027,
+      "1-3": 0.6383787981579759,
+      "2-3": 0.3712765421366943
+    },
+    "status_snapshot_counts": {
+      "robot1": {
+        "unknown": 3,
+        "stale_data": 26,
+        "normal": 7,
+        "moving_obstacle": 24
+      },
+      "robot2": {
+        "unknown": 2,
+        "moving_obstacle": 20,
+        "stale_data": 32,
+        "normal": 6
+      },
+      "robot3": {
+        "unknown": 3,
+        "stale_data": 33,
+        "moving_obstacle": 15,
+        "normal": 9
+      }
+    },
+    "scan_stale_snapshots": {
+      "robot3": 11
+    },
+    "rtf_whole": 0.22171666666666667,
+    "rtf_recent": 0.2269050908276988,
+    "command_counts": {
+      "robot1": {
+        "total": 271,
+        "linear_nonzero": 19,
+        "angular_nonzero": 6,
+        "any_nonzero": 19
+      },
+      "robot2": {
+        "total": 261,
+        "linear_nonzero": 17,
+        "any_nonzero": 20,
+        "angular_nonzero": 5
+      },
+      "robot3": {
+        "total": 332,
+        "linear_nonzero": 11,
+        "angular_nonzero": 6,
+        "any_nonzero": 11
+      }
+    },
+    "limit": "Snapshot minimum, not continuous swept/contact clearance; runs differ in phase/goal and no controlled A/B claim."
+  },
+  "runtime_compact_stream": {
+    "samples": 60,
+    "pair_min_sampled": {
+      "1-2": 0.8817686072126035,
+      "1-3": 0.7996437895722347,
+      "2-3": 0.2726614822993457
+    },
+    "status_snapshot_counts": {
+      "robot1": {
+        "unknown": 5,
+        "stale_data": 28,
+        "normal": 23,
+        "moving_obstacle": 4
+      },
+      "robot2": {
+        "unknown": 3,
+        "normal_mpc": 7,
+        "normal": 18,
+        "stale_data": 18,
+        "moving_obstacle": 14
+      },
+      "robot3": {
+        "unknown": 4,
+        "normal": 20,
+        "stale_data": 14,
+        "normal_mpc": 6,
+        "moving_obstacle": 16
+      }
+    },
+    "scan_stale_snapshots": {
+      "robot3": 5
+    },
+    "rtf_whole": 0.3555,
+    "rtf_recent": 0.3711586307986432,
+    "command_counts": {
+      "robot1": {
+        "total": 603,
+        "linear_nonzero": 42,
+        "angular_nonzero": 31,
+        "any_nonzero": 42
+      },
+      "robot2": {
+        "total": 512,
+        "linear_nonzero": 9,
+        "angular_nonzero": 11,
+        "any_nonzero": 11
+      },
+      "robot3": {
+        "total": 500,
+        "linear_nonzero": 11,
+        "angular_nonzero": 11,
+        "any_nonzero": 11
+      }
+    },
+    "limit": "Snapshot minimum, not continuous swept/contact clearance; runs differ in phase/goal and no controlled A/B claim."
+  },
+  "runtime_verified": {
+    "samples": 60,
+    "pair_min_sampled": {
+      "1-2": 0.2909428086480351,
+      "1-3": 0.7893267956233436,
+      "2-3": 0.5691787844725058
+    },
+    "status_snapshot_counts": {
+      "robot1": {
+        "unknown": 5,
+        "normal": 23,
+        "normal_mpc": 3,
+        "stale_data": 29
+      },
+      "robot2": {
+        "unknown": 5,
+        "normal": 20,
+        "normal_mpc": 3,
+        "stale_data": 32
+      },
+      "robot3": {
+        "unknown": 5,
+        "normal": 21,
+        "stale_data": 34
+      }
+    },
+    "scan_stale_snapshots": {
+      "robot3": 6
+    },
+    "rtf_whole": 0.3046666666666667,
+    "rtf_recent": 0.2941180709545033,
+    "command_counts": {
+      "robot1": {
+        "total": 569,
+        "linear_nonzero": 30,
+        "angular_nonzero": 27,
+        "any_nonzero": 30
+      },
+      "robot2": {
+        "total": 581,
+        "angular_nonzero": 27,
+        "any_nonzero": 33,
+        "linear_nonzero": 20
+      },
+      "robot3": {
+        "total": 563,
+        "linear_nonzero": 25,
+        "angular_nonzero": 23,
+        "any_nonzero": 25
+      }
+    },
+    "limit": "Snapshot minimum, not continuous swept/contact clearance; runs differ in phase/goal and no controlled A/B claim."
+  },
+  "runtime_braking": {
+    "samples": 60,
+    "pair_min_sampled": {
+      "1-2": 0.8116608107013404,
+      "1-3": 0.7047978094327539,
+      "2-3": 0.42719421355224657
+    },
+    "status_snapshot_counts": {
+      "robot1": {
+        "unknown": 5,
+        "normal_mpc": 9,
+        "moving_obstacle": 3,
+        "normal": 35,
+        "stale_data": 8
+      },
+      "robot2": {
+        "unknown": 2,
+        "normal": 36,
+        "normal_mpc": 6,
+        "moving_obstacle": 7,
+        "stale_data": 9
+      },
+      "robot3": {
+        "unknown": 2,
+        "normal": 37,
+        "normal_mpc": 3,
+        "moving_obstacle": 15,
+        "stale_data": 3
+      }
+    },
+    "scan_stale_snapshots": {
+      "robot3": 6
+    },
+    "rtf_whole": 0.38999999999999996,
+    "rtf_recent": 0.3616289034608808,
+    "command_counts": {
+      "robot1": {
+        "total": 345,
+        "linear_nonzero": 88,
+        "angular_nonzero": 87,
+        "any_nonzero": 91
+      },
+      "robot2": {
+        "total": 304,
+        "linear_nonzero": 86,
+        "angular_nonzero": 77,
+        "any_nonzero": 91
+      },
+      "robot3": {
+        "total": 229,
+        "linear_nonzero": 87,
+        "angular_nonzero": 70,
+        "any_nonzero": 89
+      }
+    },
+    "limit": "Snapshot minimum, not continuous swept/contact clearance; runs differ in phase/goal and no controlled A/B claim."
+  }
+}

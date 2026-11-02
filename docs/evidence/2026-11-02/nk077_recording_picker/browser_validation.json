@@ -1,0 +1,9 @@
+{
+  "http_switch_unicode": true,
+  "scene_frames_goals_match_selected": true,
+  "folder_import": true,
+  "partial_tail_ignored": true,
+  "http_poll_does_not_replace_local_folder": true,
+  "standalone_folder_available": true,
+  "gazebo_started": false
+}

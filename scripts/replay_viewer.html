@@ -1,0 +1,225 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><title>Phát lại robot – người</title>
+<style>body{margin:0;background:#101923;color:#e2eaf2;font:15px system-ui}header{padding:12px 20px;background:#1b2a39;display:flex;gap:16px;align-items:center;flex-wrap:wrap}button,select,input{font:inherit}button,select{padding:6px;border-radius:5px}main{display:grid;grid-template-columns:minmax(500px,1fr) 320px;gap:12px;padding:12px}canvas{background:#f1f5f8;width:100%;border-radius:6px}aside{padding:10px;background:#1b2a39;border-radius:6px;overflow:auto;max-height:76vh}#time{font-size:20px;font-weight:bold}#seek{width:45vw}p{line-height:1.5}small{color:#b2c5d8}#alerts{color:#ffb7b7}#status{padding:8px 20px;color:#a5c8e8}label{white-space:nowrap}pre{white-space:pre-wrap;font:13px system-ui}.pill{border:1px solid #8da3b5;padding:3px 7px;border-radius:4px}</style>
+<header><b>Phát lại robot – người</b><button id="play">▶ Chạy</button><button id="prev">◀ Bước</button><button id="next">Bước ▶</button><input id="seek" type="range" min="0" max="0" value="0"><span id="time">Chưa có dữ liệu</span><select id="speed"><option>.25</option><option>.5</option><option selected>1</option><option>2</option><option>4</option></select><button id="png">Lưu ảnh PNG</button></header>
+<div style="padding:10px 20px;background:#1b2a39;display:flex;gap:8px;align-items:center;flex-wrap:wrap"><b>Bản ghi trên máy</b><select id="recordingList" aria-label="Chọn bản ghi cũ"><option value="">Đang tải…</option></select><button id="refreshRecordings">Làm mới danh sách</button><button id="openRecording">Mở bản ghi</button><button id="openFolder">Mở thư mục khác…</button><input id="folderFiles" type="file" webkitdirectory multiple hidden><small id="recordingHint"></small></div>
+<div id="status">Đang tải dữ liệu…</div><main><canvas id="map" width="1200" height="900"></canvas><aside><section><b>Camera leader</b><select id="cameraSource" aria-label="Nguồn camera"><option value="auto">Tự chọn</option><option value="detection">Ảnh nhận diện</option><option value="raw">Camera gốc</option></select><img id="leaderCamera" alt="Ảnh camera leader trong bản ghi" hidden style="width:100%;margin-top:8px;border-radius:5px"><pre id="cameraStatus">Chưa có ảnh camera</pre><label><input id="socialRegions" type="checkbox" checked> Hiện vùng xã hội đã nhận diện</label><pre id="socialStatus"></pre><small>Vùng là đầu ra camera/social map đã publish, không phải vùng quét LiDAR hoặc nhãn kịch bản. Ảnh cũ luôn có nhãn tuổi dữ liệu.</small></section><hr><span class="pill">Vị trí thật Gazebo · đánh giá</span><p><b>Tiếp xúc vật lý Gazebo</b><br><small>Viền đỏ: physics ghi nhận contact. Viền cam: chỉ chồng lấn hình học ước tính. Không có contact ghi nhận chưa chứng minh luôn an toàn.</small></p><label><input type="checkbox" id="live" checked> Bám phiên đang ghi</label><p><label>Quỹ đạo <select id="trail"><option value="10">10 giây</option><option value="30" selected>30 giây</option><option value="100000">Toàn bộ (giới hạn 5000 mẫu)</option></select></label></p><p><label><input type="checkbox" id="labels"> Tên đồ vật tĩnh</label></p><select id="object"><option value="">Chọn đối tượng</option></select><pre id="details"></pre><hr><b>LiDAR và điểm né</b><p><select id="sensorRobot"><option value="all">Cả 3 xe</option><option>robot1</option><option>robot2</option><option>robot3</option></select></p><p><label><input id="lidarRange" type="checkbox" checked> Tầm quét</label> <label><input id="lidarPoints" type="checkbox" checked> Điểm trả về</label><br><label><input id="lidarRays" type="checkbox"> Tia có điểm</label> <label><input id="escapePoints" type="checkbox" checked> Điểm né</label></p><small>Vòng: tầm tối đa, có thể bị che. Chấm: điểm LiDAR. ◇ A*: đề xuất; × MPC: điểm thực chọn. “Tia gần người” là đối chiếu hình học Gazebo, không phải nhận dạng người từ LiDAR.</small><pre id="sensorStatus"></pre><div id="robots"></div><p id="goal"></p><p id="alerts"></p><hr><small>Vòng/trục xanh: hướng đầu xe. Mũi tên đỏ: hướng di chuyển đo từ các mẫu trước. “Phải” = phía phải thân xe, không phụ thuộc góc nhìn Gazebo. Bản đồ: +X sang phải, +Y lên trên.</small><hr><label>Mở dữ liệu offline: <input type="file" id="files" multiple accept=".json,.jsonl"></label><p><small>Chọn scene.json, world_frames.jsonl và navigation.jsonl cùng phiên; hoặc mở file replay.html đã xuất.</small></p></aside></main>
+<script>
+const EMBEDDED=__REPLAY_DATA__;
+let goals=[],navigation=[],navigationOffset=0,recorderStatus={};
+const navigationIndex=new Map(),projectionCache=new WeakMap(),peopleCache=new WeakMap(),rangeCache=new WeakMap(),entryCache=new WeakMap();
+let sensorLabels=[],offline=false;
+let perception=[],perceptionOffset=0,perceptionStatus={};const perceptionIndex=new Map();
+let scene=null,frames=[],index=0,playing=false,offset=0,loading=false,session={},lastWall=performance.now(),accum=0;
+const $=s=>document.getElementById(s),canvas=$('map'),ctx=canvas.getContext('2d');
+const colors={robot1:'#df5149',robot2:'#287fd0',robot3:'#0c9d6c'};
+function active(o){return o&&o.p.every(Number.isFinite)&&o.p[2]>-5}
+function byName(f){return Object.fromEntries(f.objects.map(o=>[o.name,o]))}
+function config(o){return scene.objects[o.name]||{name:o.name,kind:o.kind==='actor'?'actor':'object',shapes:[],initial_pose:null}}
+function visible(o,lookup){let c=config(o);return active(o)&&o.name!=='ground_plane'&&!(c.proxy&&active(lookup[c.proxy]))}
+function info(o){let c=config(o);return c.kind==='robot'||c.kind==='human'}
+function worldShapes(o){const c=config(o),[x,y,z,,,yaw]=o.p,cs=Math.cos(yaw),sn=Math.sin(yaw);if(c.kind==='robot')return [{circle:[x,y,c.radius],z:[z+c.z[0],z+c.z[1]]}];return (c.shapes||[]).filter(s=>s.collision).map(s=>({polygon:s.polygon.map(([a,b])=>[x+cs*a-sn*b,y+sn*a+cs*b]),z:[z+s.z[0],z+s.z[1]]}))}
+function inside(p,poly){let hit=false;for(let i=0,j=poly.length-1;i<poly.length;j=i++){let a=poly[i],b=poly[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])hit=!hit}return hit}
+function segdist(p,a,b){let x=b[0]-a[0],y=b[1]-a[1],t=Math.max(0,Math.min(1,((p[0]-a[0])*x+(p[1]-a[1])*y)/(x*x+y*y||1)));return Math.hypot(p[0]-a[0]-t*x,p[1]-a[1]-t*y)}
+function overlap(a,b){if(a.z[1]<b.z[0]||b.z[1]<a.z[0])return false;if(a.circle&&b.circle)return Math.hypot(a.circle[0]-b.circle[0],a.circle[1]-b.circle[1])<=a.circle[2]+b.circle[2];if(a.circle||b.circle){let c=a.circle?a.circle:b.circle,p=a.polygon||b.polygon;return inside(c,p)||p.some((v,i)=>segdist(c,v,p[(i+1)%p.length])<=c[2])}let p=a.polygon,q=b.polygon;for(let poly of [p,q])for(let i=0;i<poly.length;i++){let u=poly[i],v=poly[(i+1)%poly.length],axis=[u[1]-v[1],v[0]-u[0]],pa=p.map(x=>x[0]*axis[0]+x[1]*axis[1]),qa=q.map(x=>x[0]*axis[0]+x[1]*axis[1]);if(Math.max(...pa)<Math.min(...qa)||Math.max(...qa)<Math.min(...pa))return false}return true}
+function collisions(objects){let result=[];for(let i=0;i<objects.length;i++)for(let j=i+1;j<objects.length;j++){let a=objects[i],b=objects[j];if(config(a).kind!=='robot'&&config(b).kind!=='robot')continue;if(config(a).ignore_overlap||config(b).ignore_overlap)continue;if(worldShapes(a).some(x=>worldShapes(b).some(y=>overlap(x,y))))result.push([a.name,b.name])}return result}
+function measured(o){let now=frames[index];for(let i=index-1;i>=0&&i>=index-30;i--){let old=frames[i];if(old.epoch!==now.epoch)break;let dt=now.t-old.t;if(dt<.2)continue;if(dt>1)return null;let prev=old.objects.find(x=>x.name===o.name);if(!active(prev))return null;let vx=(o.p[0]-prev.p[0])/dt,vy=(o.p[1]-prev.p[1])/dt,yaw=o.p[5],bx=Math.cos(yaw)*vx+Math.sin(yaw)*vy,by=-Math.sin(yaw)*vx+Math.cos(yaw)*vy;return {vx,vy,speed:Math.hypot(vx,vy),body:[bx,by]}}return null}
+function direction(m){if(!m||m.speed<.015)return 'đứng / chưa đủ mẫu';let [x,y]=m.body;return [(x>.025?'tiến':x<-.025?'lùi':''),(y>.025?'trái':y<-.025?'phải':'')].filter(Boolean).join(' – ')||'di chuyển chậm'}
+function scale(){let [a,b,c,d]=scene.bounds,s=Math.min((canvas.width-90)/(c-a),(canvas.height-110)/(d-b));return {s,xy:(x,y)=>[45+(x-a)*s,canvas.height-55-(y-b)*s]}}
+function line(points,color,width=1){if(!points.length)return;ctx.beginPath();points.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke()}
+function arrow(x,y,dx,dy,color){let n=Math.hypot(dx,dy);if(n<1e-5)return;let ex=x+dx,ey=y+dy;line([[x,y],[ex,ey]],color,2);let a=Math.atan2(dy,dx);line([[ex-8*Math.cos(a-.45),ey-8*Math.sin(a-.45)],[ex,ey],[ex-8*Math.cos(a+.45),ey-8*Math.sin(a+.45)]],color,2)}
+function goalAt(frame){return goals.filter(g=>g.epoch===frame.epoch&&g.t<=frame.t&&g.xy?.length===2&&g.xy.every(Number.isFinite)).at(-1)}
+function drawGoal(frame,xy){let goal=goalAt(frame);$('goal').textContent=goal?`GOAL #${goal.sequence}: (${goal.xy[0].toFixed(2)}, ${goal.xy[1].toFixed(2)}) · t=${goal.t.toFixed(3)}s`:'Chưa có goal được ghi tại thời điểm này';if(!goal)return;let [x,y]=xy(...goal.xy);ctx.strokeStyle='#b51cb8';ctx.lineWidth=3;ctx.beginPath();ctx.arc(x,y,11,0,2*Math.PI);ctx.stroke();line([[x-17,y],[x+17,y]],'#b51cb8',2);line([[x,y-17],[x,y+17]],'#b51cb8',2);ctx.fillStyle='#98129b';ctx.font='bold 15px system-ui';ctx.fillText(`GOAL #${goal.sequence} (${goal.t.toFixed(2)}s)`,x+19,y-12)}
+function indexNavigation(rows,reset=false){
+ if(reset){navigation=[];navigationIndex.clear()}
+ for(let event of rows){if(!['scan','astar','decision'].includes(event.kind)||!Number.isFinite(event.t)||!Number.isFinite(event.stamp))continue;
+  navigation.push(event);let key=`${event.epoch}:${event.robot}:${event.kind}`,list=navigationIndex.get(key)||[];list.push(event);navigationIndex.set(key,list)}
+ for(let list of navigationIndex.values())list.sort((a,b)=>a.t-b.t);
+}
+function telemetryAt(robot,kind,frame){
+ let rows=navigationIndex.get(`${frame.epoch}:${robot}:${kind}`)||[],lo=0,hi=rows.length;
+ while(lo<hi){let mid=(lo+hi)>>1;if(rows[mid].t<=frame.t+1e-8)lo=mid+1;else hi=mid}
+ let event=rows[lo-1];return event&&event.stamp<=frame.t+1e-8?event:null;
+}
+function poseAt(name,t,epoch){
+ let lo=0,hi=frames.length;while(lo<hi){let mid=(lo+hi)>>1,f=frames[mid];if(f.epoch<epoch||(f.epoch===epoch&&f.t<=t))lo=mid+1;else hi=mid}
+ let a=frames[lo-1],b=frames[lo];if(!a||a.epoch!==epoch)return null;
+ let p=a.objects.find(o=>o.name===name);if(!active(p))return null;
+ if(Math.abs(a.t-t)<1e-7)return p.p.slice();
+ if(!b||b.epoch!==epoch||b.t-t>.08||t-a.t>.08)return null;
+ let q=b.objects.find(o=>o.name===name);if(!active(q))return null;
+ let f=(t-a.t)/(b.t-a.t);return p.p.map((v,i)=>i<3?v+f*(q.p[i]-v):v+f*Math.atan2(Math.sin(q.p[i]-v),Math.cos(q.p[i]-v)));
+}
+function rotateQuaternion(v,q){let [x,y,z,w]=q,[a,b,c]=v;let tx=2*(y*c-z*b),ty=2*(z*a-x*c),tz=2*(x*b-y*a);return [a+w*tx+y*tz-z*ty,b+w*ty+z*tx-x*tz,c+w*tz+x*ty-y*tx]}
+function toWorld(base,v){let [x,y,z,r,p,yaw]=base,cr=Math.cos(r),sr=Math.sin(r),cp=Math.cos(p),sp=Math.sin(p),cy=Math.cos(yaw),sy=Math.sin(yaw),[a,b,c]=v;
+ return [x+cy*cp*a+(cy*sp*sr-sy*cr)*b+(cy*sp*cr+sy*sr)*c,y+sy*cp*a+(sy*sp*sr+cy*cr)*b+(sy*sp*cr-cy*sr)*c,z-sp*a+cp*sr*b+cp*cr*c]}
+function scanPoints(event){
+ if(projectionCache.has(event))return projectionCache.get(event);
+ let base=poseAt(event.robot,event.stamp,event.epoch),e=event.extrinsic;
+ if(!base||!e||!Array.isArray(e.xyz)||!Array.isArray(e.q)||e.xyz.length!==3||e.q.length!==4||!e.xyz.concat(e.q).every(Number.isFinite)||!event.ranges||event.ranges.length<2||Math.abs(event.angle_increment)*(event.ranges.length-1)>2*Math.PI+.15)return null;
+ let origin=toWorld(base,e.xyz),points=[];
+ event.ranges.forEach((r,i)=>{if(!Number.isFinite(r)||r<event.range_min||r>=event.range_max)return;
+  let a=event.angle_min+i*event.angle_increment,p=rotateQuaternion([r*Math.cos(a),r*Math.sin(a),0],e.q).map((v,j)=>v+e.xyz[j]);points.push(toWorld(base,p))});
+ let result={origin,points};projectionCache.set(event,result);return result;
+}
+function shapeDistance(p,shape){if(shape.circle)return Math.max(0,Math.hypot(p[0]-shape.circle[0],p[1]-shape.circle[1])-shape.circle[2]);let poly=shape.polygon;if(!poly?.length)return Infinity;return inside(p,poly)?0:Math.min(...poly.map((a,i)=>segdist(p,a,poly[(i+1)%poly.length])))}
+function rangeObservation(event){
+ if(rangeCache.has(event))return rangeCache.get(event);
+ let base=poseAt(event.robot,event.stamp,event.epoch),e=event.extrinsic;if(!base||!e)return null;
+ let origin=toWorld(base,e.xyz),bodies=[];
+ for(let [name,c] of Object.entries(scene.objects)){if(c.kind!=='human')continue;let at=poseAt(name,event.stamp,event.epoch);if(!at)continue;
+  let shapes=worldShapes({name,p:at});if(shapes.some(s=>shapeDistance(origin,s)<=event.range_max))bodies.push({name,shapes})}
+ let result={origin,bodies};rangeCache.set(event,result);return result;
+}
+function rangeEntry(event,name){
+ let cached=entryCache.get(event)||{};if(cached[name])return cached[name];
+ let list=navigationIndex.get(`${event.epoch}:${event.robot}:scan`)||[],i=list.indexOf(event),first=event.stamp,from=null;
+ for(let k=i-1;k>=0&&event.stamp-list[k].stamp<=30;k--){let p=list[k];if(p.stamp>=first)continue;if(first-p.stamp>.35)break;
+  let old=rangeObservation(p);if(!old)break;if(!old.bodies.some(h=>h.name===name)){from=p.stamp;break}first=p.stamp}
+ let result={from,to:first};cached[name]=result;entryCache.set(event,cached);return result;
+}
+function scanPeople(event,projected,frame){
+ if(peopleCache.has(event))return peopleCache.get(event);
+ let observed=rangeObservation(event),inRange=[],nearReturns=[];if(!observed)return {inRange,nearReturns};
+ for(let {name,shapes} of observed.bodies){inRange.push(name);
+  let count=projected.points.filter(p=>shapes.some(s=>p[2]>=s.z[0]-.05&&p[2]<=s.z[1]+.05&&shapeDistance(p,s)<=.06)).length;
+  if(count)nearReturns.push({name,count});
+ }
+ let result={inRange,nearReturns};peopleCache.set(event,result);return result;
+}
+function sensorLabel(text,x,y,color,preferred=14){
+ ctx.font='bold 12px system-ui';let w=ctx.measureText(text).width;
+ let choices=[[12,preferred],[12,preferred+20],[12,preferred+40],[-w-12,preferred],[12,-24],[-w-12,-24]];
+ let chosen=choices.find(([dx,dy])=>{let a={x:x+dx,y:y+dy-13,w:w+4,h:17};return a.x>=8&&a.x+a.w<canvas.width-8&&a.y>32&&a.y+a.h<canvas.height-25&&!sensorLabels.some(b=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y)})||choices[0];
+ let [dx,dy]=chosen;if(Math.abs(dy)>30||dx<0)line([[x+4,y+4],[x+dx-3,y+dy-5]],color,1);
+ ctx.fillStyle=color;ctx.fillText(text,x+dx,y+dy);sensorLabels.push({x:x+dx,y:y+dy-13,w:w+4,h:17});
+}
+function marker(point,xy,color,text,diamond){let [x,y]=xy(...point);ctx.strokeStyle=color;ctx.lineWidth=3;ctx.beginPath();if(diamond){ctx.moveTo(x,y-9);ctx.lineTo(x+9,y);ctx.lineTo(x,y+9);ctx.lineTo(x-9,y);ctx.closePath()}else{ctx.moveTo(x-8,y-8);ctx.lineTo(x+8,y+8);ctx.moveTo(x-8,y+8);ctx.lineTo(x+8,y-8)}ctx.stroke();sensorLabel(text,x,y,color,diamond?14:30)}
+function drawSensors(frame,xy,s){
+ let status=[],selection=$('sensorRobot').value;sensorLabels=[];
+ for(let o of frame.objects.filter(o=>active(o)&&info(o))){let p=xy(...o.p);ctx.font='14px system-ui';sensorLabels.push({x:p[0]+7,y:p[1]-28,w:ctx.measureText(o.name).width+12,h:19})}
+ for(let robot of ['robot1','robot2','robot3']){if(selection!=='all'&&selection!==robot)continue;
+  let color=colors[robot],scan=telemetryAt(robot,'scan',frame),astar=telemetryAt(robot,'astar',frame),decision=telemetryAt(robot,'decision',frame);
+  if(!scan){status.push(`${robot}: chưa có scan được ghi tại thời điểm này`)}else{
+   let age=frame.t-scan.stamp,cloud=scanPoints(scan),fresh=age<=.350001;
+   let body=frame.objects.find(o=>o.name===robot);
+   if(body&&scan.extrinsic&&$('lidarRange').checked){let center=xy(...toWorld(body.p,scan.extrinsic.xyz));ctx.save();ctx.strokeStyle=fresh?color:'#89949c';ctx.lineWidth=1.5;ctx.setLineDash([7,5]);ctx.beginPath();let span=scan.angle_increment*(scan.ranges.length-1),q=scan.extrinsic.q,heading=body.p[5]+Math.atan2(2*(q[3]*q[2]+q[0]*q[1]),1-2*(q[1]*q[1]+q[2]*q[2]));
+    if(Math.abs(span)>=2*Math.PI-.15)ctx.arc(...center,scan.range_max*s,0,2*Math.PI);else ctx.arc(...center,scan.range_max*s,-heading-scan.angle_min,-heading-scan.angle_min-span,span>0);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle=color;ctx.font='13px system-ui';ctx.fillText(`${robot} LiDAR ${scan.range_max.toFixed(1)}m`,center[0]+8,center[1]-scan.range_max*s+15);ctx.restore()}
+   status.push(`${robot}: scan ${scan.stamp.toFixed(3)}s, ghi ${scan.t.toFixed(3)}s, tuổi ${age.toFixed(2)}s${fresh?'':' — DỮ LIỆU CŨ'}`);
+   if(!cloud)status.push('  Thiếu pose/transform tại lúc quét; không dựng điểm.');
+   else if(fresh){
+    let origin=xy(...cloud.origin);ctx.save();ctx.globalAlpha=.3;
+    if($('lidarRays').checked)for(let p of cloud.points)line([origin,xy(...p)],color,.6);
+    ctx.globalAlpha=.95;if($('lidarPoints').checked){ctx.fillStyle=color;for(let p of cloud.points){let q=xy(...p);ctx.fillRect(q[0]-1.6,q[1]-1.6,3.2,3.2)}}ctx.restore();
+    let people=scanPeople(scan,cloud,frame);
+    status.push('  Trong bán kính: '+(people.inRange.join(', ')||'không có'));
+    for(let name of people.inRange){let entry=rangeEntry(scan,name);status.push(`  ${name}: ${entry.from==null?'trong từ mẫu '+entry.to.toFixed(2)+'s':'vào giữa '+entry.from.toFixed(2)+'–'+entry.to.toFixed(2)+'s'}`)}
+    status.push('  Tia gần người (ước lượng): '+(people.nearReturns.map(p=>`${p.name} [${p.count}]`).join(', ')||'không có'));
+    for(let h of people.nearReturns){let o=frame.objects.find(o=>o.name===h.name);if(o){let p=xy(...o.p);ctx.strokeStyle=color;ctx.lineWidth=2;ctx.beginPath();ctx.arc(...p,13+2*['robot1','robot2','robot3'].indexOf(robot),0,2*Math.PI);ctx.stroke();sensorLabel(`${robot}: ${h.count} điểm @${scan.stamp.toFixed(2)}s`,p[0],p[1],color,25+14*['robot1','robot2','robot3'].indexOf(robot))}}
+   }
+  }
+  if(!$('escapePoints').checked)continue;
+  if(astar?.goal&&frame.t-astar.stamp<=.65){ctx.save();ctx.setLineDash([6,4]);line(astar.points.map(p=>xy(...p)),color,2);ctx.restore();
+   let base=poseAt(robot,astar.stamp,frame.epoch),side='';if(base){let a=Math.atan2(astar.goal[1]-base[1],astar.goal[0]-base[0])-base[5],x=Math.cos(a),y=Math.sin(a);side=Math.abs(y)>.6?(y>0?'trái':'phải'):(x>0?'trước':'sau')}
+   marker(astar.goal,xy,color,`${robot} A* ${side}`,true);status.push(`  A* ${side}: (${astar.goal.map(v=>v.toFixed(2)).join(', ')}) @${astar.stamp.toFixed(2)}s`)}
+  if(decision?.goal&&frame.t-decision.stamp<=.35){marker(decision.goal,xy,color,`${robot} MPC ${decision.stops?'điểm dừng':'đang thoát'}`,false);status.push(`  MPC chọn: (${decision.goal.map(v=>v.toFixed(2)).join(', ')})${decision.terminal_safe?' · có chỗ chờ':' · chưa có chỗ chờ'}`)}
+ }
+ if(recorderStatus.error||recorderStatus.dropped)status.push(`Bộ ghi: ${recorderStatus.error||'đang ghi'}, bỏ do hàng đợi ${recorderStatus.dropped||0} mẫu`);
+ $('sensorStatus').textContent=(navigation.length?'':'Bản ghi chưa có dữ liệu LiDAR/A*. Cần ghi phiên mới.\n')+status.join('\n');
+}
+function indexPerception(rows,reset=false){
+ if(reset){perception=[];perceptionIndex.clear()}
+ for(let r of rows||[]){if(!Number.isFinite(r.t)||!Number.isInteger(r.epoch))continue;
+  let key=`${r.epoch}:${r.kind}:${r.kind==='camera'?r.source:''}`;
+  let list=perceptionIndex.get(key)||[];list.push(r);perceptionIndex.set(key,list);perception.push(r)}
+}
+function perceptionAt(kind,frame,source=''){
+ if(!frame)return null;let rows=perceptionIndex.get(`${frame.epoch}:${kind}:${source}`)||[],lo=0,hi=rows.length;
+ while(lo<hi){let m=(lo+hi)>>1;if(rows[m].t<=frame.t)lo=m+1;else hi=m}
+ for(let i=lo-1;i>=0;i--){let r=rows[i];if(r.stamp==null||r.stamp<=frame.t)return r}return null;
+}
+function drawPerception(frame,xy){
+ let choice=$('cameraSource').value,photo=perceptionAt('camera',frame,choice==='auto'?'detection':choice);
+ if(choice==='auto'&&(!photo||frame.t-photo.t>2)){let raw=perceptionAt('camera',frame,'raw');if(raw&&(!photo||raw.t>photo.t))photo=raw}
+ let image=$('leaderCamera');
+ if(photo&&typeof photo.image==='string'&&photo.image.startsWith('data:image/jpeg;base64,')){
+  if(image.getAttribute('src')!==photo.image)image.src=photo.image;image.hidden=false;
+  let age=frame.t-(photo.stamp??photo.t),capture=photo.capture_known===false||photo.stamp==null?'không có timestamp capture':`capture ${photo.stamp.toFixed(3)}s`;
+  $('cameraStatus').textContent=`${photo.source==='raw'?'Camera gốc':'Ảnh nhận diện'} · ${capture}\nNhận/lưu ${photo.t.toFixed(3)}s · cách mẫu đang xem ${age.toFixed(2)}s`+(photo.sparse_snapshot?'\nẢNH LƯU RỜI RẠC, không phải video liên tục.':'')+(age>2?'\nẢNH CŨ: không có ảnh mới hơn tại thời điểm này.':'');
+ }else{image.hidden=true;image.removeAttribute('src');$('cameraStatus').textContent='Không có ảnh camera trước thời điểm này trong bản ghi.'}
+ let social=perceptionAt('social',frame),age=social?frame.t-(social.stamp??social.t):Infinity;
+ let regions=social&&age<=2?social.regions||[]:[];
+ if($('socialRegions').checked&&xy)for(let r of regions){
+  if(!Array.isArray(r.points)||r.points.length<3)continue;
+  let color=r.color||[.9,.35,.75,1.],rgb=color.slice(0,3).map(v=>Math.round(Math.max(0,Math.min(1,v))*255)).join(',');
+  ctx.beginPath();r.points.forEach((p,i)=>{let q=xy(...p);i?ctx.lineTo(...q):ctx.moveTo(...q)});ctx.closePath();ctx.fillStyle=`rgba(${rgb},.15)`;ctx.fill();ctx.strokeStyle=`rgba(${rgb},.85)`;ctx.lineWidth=2;ctx.stroke();
+  let center=r.points.reduce((a,p)=>[a[0]+p[0]/r.points.length,a[1]+p[1]/r.points.length],[0,0]),q=xy(...center);
+  ctx.fillStyle=`rgb(${rgb})`;ctx.font='bold 13px system-ui';ctx.fillText((r.label||'Vùng xã hội').split('\n')[0],q[0]+4,q[1]-8);
+ }
+ let status=perceptionAt('social_status',frame);
+ $('socialStatus').textContent=!social?'Chưa có dữ liệu vùng xã hội ở thời điểm này.':age>2?`Dữ liệu vùng xã hội cũ (${age.toFixed(2)}s), đã ẩn.`:`${regions.length} vùng @${social.stamp?.toFixed(3)??social.t.toFixed(3)}s\n`+regions.map(r=>r.label).join('\n\n');
+ if(status&&frame.t-status.t<=2)$('socialStatus').textContent+='\n'+status.text;
+ if(perceptionStatus.error||perceptionStatus.dropped)$('socialStatus').textContent+=`\nBộ ghi ảnh/vùng: ${perceptionStatus.error||''}; bỏ ${perceptionStatus.dropped||0} mẫu`;
+}
+function render(){if(!scene||!frames.length){$('status').textContent='Chưa có world_frames.jsonl. Cần chạy một phiên mới có bộ ghi Gazebo.';return}index=Math.min(index,frames.length-1);let frame=frames[index],lookup=byName(frame),objects=frame.objects.filter(o=>visible(o,lookup)),hits=collisions(objects),hitNames=new Set(hits.flat()),physical=(frame.contacts||[]).filter(c=>c.a!=='ground_plane'&&c.b!=='ground_plane'),physicalNames=new Set(physical.flatMap(c=>[c.a,c.b])),{s,xy}=scale();ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle='#eef3f6';ctx.fillRect(0,0,canvas.width,canvas.height);
+ for(let x=Math.ceil(scene.bounds[0]);x<=scene.bounds[2];x++)line([xy(x,scene.bounds[1]),xy(x,scene.bounds[3])],'#d4dde4');for(let y=Math.ceil(scene.bounds[1]);y<=scene.bounds[3];y++)line([xy(scene.bounds[0],y),xy(scene.bounds[2],y)],'#d4dde4');
+ drawPerception(frame,xy);
+ for(let name of Object.keys(scene.objects).filter(n=>['robot','human'].includes(scene.objects[n].kind))){let o={name};let points=[],limit=Number($('trail').value);for(let k=Math.max(0,index-5000);k<=index;k++){let f=frames[k];if(f.epoch!==frame.epoch||frame.t-f.t>limit)continue;let q=f.objects.find(p=>p.name===o.name);if(!active(q)){line(points,colors[o.name]||'#d68d34',1.5);points=[];continue}points.push(xy(q.p[0],q.p[1]))}line(points,colors[o.name]||'#d68d34',1.5)}
+ for(let o of objects){let c=config(o),color=colors[o.name]||(c.kind==='human'?'#f0b34f':'#748794'),[px,py]=xy(o.p[0],o.p[1]),yaw=o.p[5];let geom=(c.shapes||[]),draw=geom.some(g=>g.collision)?geom.filter(g=>g.collision):geom;
+  ctx.fillStyle=color+'88';ctx.strokeStyle=physicalNames.has(o.name)?'#ef2435':hitNames.has(o.name)?'#e68b16':color;ctx.lineWidth=(physicalNames.has(o.name)||hitNames.has(o.name))?4:1;
+  if(c.kind==='robot'){ctx.beginPath();ctx.arc(px,py,c.radius*s,0,2*Math.PI);ctx.fill();ctx.stroke()}else for(let g of draw){ctx.beginPath();g.polygon.forEach(([a,b],i)=>{let p=xy(o.p[0]+Math.cos(yaw)*a-Math.sin(yaw)*b,o.p[1]+Math.sin(yaw)*a+Math.cos(yaw)*b);i?ctx.lineTo(...p):ctx.moveTo(...p)});ctx.closePath();ctx.fill();ctx.stroke()}
+  if(!draw.length&&c.kind!=='robot'){ctx.beginPath();ctx.arc(px,py,3,0,2*Math.PI);ctx.fill()}
+  if(info(o)){let facing=(c.facing_source&&active(lookup[c.facing_source]))?lookup[c.facing_source].p[5]+(c.facing_offset||0):yaw;arrow(px,py,.45*s*Math.cos(facing),-.45*s*Math.sin(facing),'#147b9b');let m=measured(o);if(m&&m.speed>.015)arrow(px,py,m.vx*s,-m.vy*s,'#ce1f34');ctx.fillStyle='#172938';ctx.font='14px system-ui';ctx.fillText(o.name.replace('_contact','')+(o.name===(scene.leader||'robot3')?' [LEADER]':''),px+9,py-14)}else if($('labels').checked||$('object').value===o.name){ctx.fillStyle='#263b4b';ctx.font='11px system-ui';ctx.fillText(o.name,px+4,py-4)}
+ }
+ drawSensors(frame,xy,s);
+ drawGoal(frame,xy);
+ ctx.fillStyle='#162d40';ctx.font='bold 20px system-ui';ctx.fillText(`t = ${frame.t.toFixed(3)} s | epoch ${frame.epoch} | ${frame.paused?'PAUSE':'Gazebo measured poses'}`,20,28);ctx.font='14px system-ui';ctx.fillText('Đỏ: hướng di chuyển thực từ mẫu trước · Xanh: hướng đầu · Viền đỏ: CONTACT PHYSICS · Cam: hình học ước tính',20,canvas.height-15);
+ $('seek').max=frames.length-1;$('seek').value=index;$('time').textContent=`${frame.t.toFixed(2)} s · epoch ${frame.epoch}`;
+ $('status').textContent=`${scene.world} | ${objects.length} đối tượng đang hiện / ${frame.objects.length} đã ghi | mẫu ${index+1}/${frames.length} | ${session.state||'offline'} | ${frame.physics_contact_source?'Có dữ liệu contact physics':'Bản ghi cũ: chưa có contact physics'}`;
+ $('alerts').textContent=(frame.physics_contact_source?(physical.length?'GAZEBO XÁC NHẬN CONTACT:\n'+physical.map(c=>`${c.a} ↔ ${c.b} | t=${c.first_t.toFixed(3)}–${c.last_t.toFixed(3)}s | sâu tối đa=${c.max_depth==null?"không có số đo":(1000*c.max_depth).toFixed(2)+"mm"}`).join('\n'):'Không ghi nhận contact ngoài nền trong khoảng mẫu này.'):'Bản ghi cũ: không có dữ liệu contact physics.')+(hits.length?'\nCHỒNG LẤN ƯỚC TÍNH:\n'+hits.map(p=>p.join(' ↔ ')).join('\n'):'');
+ $('robots').replaceChildren();for(let o of objects.filter(o=>config(o).kind==='robot')){let m=measured(o),p=document.createElement('p');p.textContent=`${o.name}${o.name===(scene.leader||'robot3')?' · leader':''}: ${direction(m)}; v≈${m?m.speed.toFixed(2):'?'} m/s; yaw=${(o.p[5]*180/Math.PI).toFixed(1)}°`;$('robots').append(p)}
+ let selected=lookup[$('object').value];$('details').textContent=selected?`${selected.name}\nX=${selected.p[0].toFixed(3)} Y=${selected.p[1].toFixed(3)} Z=${selected.p[2].toFixed(3)}\nYaw=${(selected.p[5]*180/Math.PI).toFixed(1)}°\n${active(selected)?'Đang hiện':'Ẩn/chưa hoạt động'}`:'';
+}
+function accept(data){perceptionStatus=data.perception_status||{};indexPerception(data.perception||[],true);drawPerception(null,null);recorderStatus=data.navigation_status||{};indexNavigation(data.navigation||[],true);goals=data.goals||[];scene=data.scene;frames=data.frames||[];session=data.session||{};index=Math.max(0,Math.min(frames.length-1,Number(new URLSearchParams(location.search).get('frame'))||0));populate();render()}
+function populate(){let old=$('object').value;$('object').replaceChildren(new Option('Chọn đối tượng',''));let names=new Set(Object.keys(scene.objects));for(let f of frames.slice(-1))for(let o of f.objects)names.add(o.name);for(let n of [...names].sort())$('object').add(new Option(n,n));$('object').value=old}
+function api(path){let url=new URL(path,location.href);let selected=new URLSearchParams(location.search).get('recording');if(selected)url.searchParams.set('recording',selected);return url.pathname+url.search}
+async function refreshRecordings(){
+ if(location.protocol==='file:'||EMBEDDED){$('recordingList').disabled=true;$('refreshRecordings').disabled=true;$('openRecording').disabled=true;$('recordingHint').textContent='HTML độc lập: dùng Mở thư mục khác…';return}
+ try{let response=await fetch(api('/recordings'));if(!response.ok)throw Error('Không tải được danh sách');let data=await response.json();$('recordingList').replaceChildren();for(let r of data.recordings)$('recordingList').add(new Option(r.name,r.id));$('recordingList').value=data.selected;$('recordingHint').textContent='Các thư mục có bản ghi trong recordings/'}catch(e){$('recordingHint').textContent=e.message}
+}
+$('refreshRecordings').onclick=refreshRecordings;
+$('openRecording').onclick=()=>{let url=new URL(location.href);url.search='';if($('recordingList').value)url.searchParams.set('recording',$('recordingList').value);location.assign(url.href)};
+$('openFolder').onclick=()=>{$('folderFiles').value='';$('folderFiles').click()};
+async function loadFiles(files){
+ const wanted=new Set(['scene.json','world_frames.jsonl','goals.jsonl','navigation.jsonl','navigation_status.json','session.json','perception.jsonl','perception_status.json']);
+ let selected=[...files].filter(f=>wanted.has(f.name));
+ let roots=new Set(selected.map(f=>(f.webkitRelativePath||f.name).split('/').slice(0,-1).join('/')));
+ if(roots.size>1){alert('Hãy chọn đúng một thư mục bản ghi, không chọn thư mục chứa nhiều bản ghi.');return}
+ let data={scene:null,frames:[],goals:[],navigation:[],perception:[]};
+ const jsonl=text=>{let lines=text.split('\n'),last=lines.pop();let result=lines.filter(l=>l.trim()).map(l=>JSON.parse(l));if(last.trim()){try{result.push(JSON.parse(last))}catch(e){/* snapshot of an incomplete live tail */}}return result};
+ try{
+  for(let f of selected){let text=await f.text();if(f.name==='scene.json')data.scene=JSON.parse(text);else if(f.name==='session.json')data.session=JSON.parse(text);else if(f.name==='perception_status.json')data.perception_status=JSON.parse(text);else if(f.name==='perception.jsonl')data.perception=jsonl(text);else if(f.name==='navigation_status.json')data.navigation_status=JSON.parse(text);else if(f.name==='world_frames.jsonl')data.frames=jsonl(text).filter(x=>x.objects);else if(f.name==='navigation.jsonl')data.navigation=jsonl(text);else if(f.name==='goals.jsonl')data.goals=jsonl(text)}
+  if(!data.scene||!selected.some(f=>f.name==='world_frames.jsonl'))throw Error('Thư mục cần có scene.json và world_frames.jsonl');
+  offline=true;while(loading)await new Promise(resolve=>setTimeout(resolve,20));playing=false;accum=0;$('play').textContent='▶ Chạy';$('live').checked=false;accept(data);$('recordingHint').textContent='Đang xem thư mục đã chọn trên máy (ảnh chụp dữ liệu khi mở).';
+ }catch(e){alert('Không mở được bản ghi: '+e.message)}
+}
+$('folderFiles').onchange=()=>loadFiles($('folderFiles').files);
+async function poll(){if(location.protocol==='file:'||EMBEDDED||offline||loading)return;loading=true;try{if(!scene){let loadedScene=await(await fetch(api('/scene'))).json();if(offline)return;scene=loadedScene;populate()}let data=await(await fetch(api(`/frames?offset=${offset}`))).json();if(offline)return;if(data.reset){frames=[];index=0;indexNavigation([],true);navigationOffset=0;perceptionOffset=0;indexPerception([],true)}offset=data.offset;let tail=index>=frames.length-2;frames.push(...data.frames);let nav=await(await fetch(api(`/navigation?offset=${navigationOffset}`))).json();navigationOffset=nav.offset;indexNavigation(nav.navigation,nav.reset);recorderStatus=await(await fetch(api('/navigation-status'))).json();let vision=await(await fetch(api(`/perception?offset=${perceptionOffset}`))).json();perceptionOffset=vision.offset;indexPerception(vision.perception,vision.reset);perceptionStatus=await(await fetch(api('/perception-status'))).json();session=await(await fetch(api('/session'))).json();goals=await(await fetch(api('/goals'))).json();if(tail&&$('live').checked)index=frames.length-1;if(data.frames.length)populate();render()}catch(e){$('status').textContent='Chưa đọc được phiên: '+e.message}finally{loading=false}}
+$('play').onclick=()=>{playing=!playing;$('live').checked=false;$('play').textContent=playing?'⏸ Dừng':'▶ Chạy';lastWall=performance.now()};$('seek').oninput=()=>{index=+$('seek').value;playing=false;$('live').checked=false;$('play').textContent='▶ Chạy';render()};for(let [name,delta] of [['prev',-1],['next',1]])$(name).onclick=()=>{index=Math.max(0,Math.min(frames.length-1,index+delta));playing=false;accum=0;$('play').textContent='▶ Chạy';$('live').checked=false;render()};for(let n of ['trail','labels','object','sensorRobot','lidarRange','lidarPoints','lidarRays','escapePoints','socialRegions','cameraSource'])$(n).onchange=render;
+function replayPNGCanvas(){
+ let image=$('leaderCamera');if(image.hidden||!image.complete||!image.naturalWidth)return canvas;
+ let output=document.createElement('canvas');output.width=canvas.width+400;output.height=canvas.height;
+ let c=output.getContext('2d');c.fillStyle='#eef3f6';c.fillRect(0,0,output.width,output.height);c.drawImage(canvas,0,0);
+ c.fillStyle='#162d40';c.font='bold 20px system-ui';c.fillText('Camera leader',canvas.width+15,30);
+ let height=370*image.naturalHeight/image.naturalWidth;c.drawImage(image,canvas.width+15,50,370,height);
+ c.font='14px system-ui';let y=75+height;
+ for(let line of ($('cameraStatus').textContent+'\n'+$('socialStatus').textContent).split('\n')){
+  for(let start=0;start<line.length;start+=46){if(y>output.height-20)break;c.fillText(line.slice(start,start+46),canvas.width+15,y);y+=20}
+ }
+ return output;
+}
+$('png').onclick=()=>{let a=document.createElement('a');a.download=`replay_epoch${frames[index]?.epoch}_t${frames[index]?.t.toFixed(3)}.png`;a.href=replayPNGCanvas().toDataURL('image/png');a.click()};
+$('files').onchange=()=>loadFiles($('files').files);
+function animate(now){if(playing&&frames.length){accum+=(now-lastWall)/1000*Number($('speed').value);let changed=false;while(index<frames.length-1){let dt=frames[index+1].epoch===frames[index].epoch?Math.max(.001,frames[index+1].t-frames[index].t):.1;if(accum<dt)break;accum-=dt;index++;changed=true}if(index===frames.length-1){playing=false;accum=0;$('play').textContent='▶ Chạy'}if(changed)render()}lastWall=now;requestAnimationFrame(animate)}
+refreshRecordings();
+if(EMBEDDED){$('live').checked=false;accept(EMBEDDED)}else{poll();setInterval(poll,1000)}requestAnimationFrame(animate);
+</script></html>

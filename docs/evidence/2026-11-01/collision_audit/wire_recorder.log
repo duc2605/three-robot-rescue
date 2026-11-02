@@ -1,0 +1,4 @@
+[INFO] [1793518013.038743046] [collision_monitor]: Physics contact diagnostics enabled; events: /home/duc/three-robot-rescue/docs/evidence/2026-11-01/collision_audit/wire_events.jsonl
+[INFO] [1793518017.081726410] [collision_monitor]: Contact audit coverage: {"session":"1793518015134716560","epoch":0,"sim_time":0.001,"paused":false,"physics_sample_received":true,"coverage_complete":true,"robot_models":1,"human_models":1,"monitored_collisions":2,"active_pairs":0,"begin_events":0}
+[WARN] [1793518017.611932456] [collision_monitor]: PHYSICS CONTACT human_robot: person_test <-> robot3 at sim=1.062s
+[INFO] [1793518018.569825062] [collision_monitor]: contact_end person_test|robot3

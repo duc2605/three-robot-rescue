@@ -1,0 +1,42 @@
+[
+  {
+    "pid": 34668,
+    "args": "ign gazebo server                                                                                                                                                   ",
+    "cpu_percent": 160.82513211589503
+  },
+  {
+    "pid": 34669,
+    "args": "ign gazebo gui                                                                                                                                                      ",
+    "cpu_percent": 141.64598592567648
+  },
+  {
+    "pid": 34624,
+    "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/three_robot_dstar_mpc --ros-args -r __node:=three_robot_dstar_mpc --params-file ",
+    "cpu_percent": 24.972846601847053
+  },
+  {
+    "pid": 34632,
+    "args": "/opt/ros/humble/lib/rviz2/rviz2 -d /home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/rviz/social_navigation.rviz --ros-args -r __node:=three_robot_dstar_",
+    "cpu_percent": 17.480992621292938
+  },
+  {
+    "pid": 34628,
+    "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot2_distributed_mpc --params-file",
+    "cpu_percent": 15.083599347515621
+  },
+  {
+    "pid": 34626,
+    "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot1_distributed_mpc --params-file",
+    "cpu_percent": 14.883816574700845
+  },
+  {
+    "pid": 34630,
+    "args": "/usr/bin/python3 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/robot_distributed_mpc --ros-args -r __node:=robot3_distributed_mpc --params-file",
+    "cpu_percent": 14.684033801886068
+  },
+  {
+    "pid": 34619,
+    "args": "ign gazebo /home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/worlds/social_dynamic.sdf -r -v 4                                 ",
+    "cpu_percent": 0.0
+  }
+]

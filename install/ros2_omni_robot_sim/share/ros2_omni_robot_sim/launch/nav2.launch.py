@@ -1,1 +1,0 @@
-/home/long/ros2_ws/ros2_omni_robot_sim/launch/nav2.launch.py

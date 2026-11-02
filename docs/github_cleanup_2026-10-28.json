@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-28",
+  "packages": {
+    "astar_planner": "social_navigation_planner",
+    "ros2_omni_robot_sim": "social_navigation_sim"
+  },
+  "excluded_local_directories": [
+    "build",
+    "install",
+    "log",
+    ".vscode",
+    ".agents",
+    ".codex",
+    ".aws",
+    ".git"
+  ],
+  "temporary_recovery_archive": "/tmp/three-robot-rescue-before-package-rename-20261028.tar.gz",
+  "algorithms_retained": [
+    "DStar Lite + MPC",
+    "Paper1 GWO-WOA/DWA",
+    "Paper2 APF-MPC"
+  ],
+  "scenes_retained": [
+    "social_static",
+    "social_dynamic"
+  ]
+}

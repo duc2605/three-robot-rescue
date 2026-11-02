@@ -1,0 +1,2106 @@
+{
+  "summary": {
+    "counts": {
+      "/robot2/cmd_vel": 76,
+      "/robot1/cmd_vel": 75,
+      "/robot3/cmd_vel": 71,
+      "/clock": 12
+    },
+    "latest": {
+      "/robot2/cmd_vel": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/robot1/cmd_vel": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/robot3/cmd_vel": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/clock": 26.418
+    },
+    "status_values": {},
+    "nonzero_commands": {
+      "robot1": 0,
+      "robot2": 0,
+      "robot3": 0
+    },
+    "rtf": 0.0008184523809523238,
+    "publishers": {
+      "/robot1/escape_path": [
+        "robot1_distributed_mpc"
+      ],
+      "/robot2/escape_path": [
+        "robot2_distributed_mpc"
+      ],
+      "/robot3/escape_path": [
+        "robot3_distributed_mpc"
+      ]
+    }
+  },
+  "events": [
+    {
+      "wall": 0.037,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 0.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 0.236,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 0.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 0.436,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 0.45,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 0.636,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 0.65,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 0.836,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 0.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 0.973,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 0.997,
+      "topic": "/clock",
+      "value": 26.407
+    },
+    {
+      "wall": 1.036,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.172,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.236,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.436,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.635,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.649,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.772,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.836,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 1.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.036,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.172,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.236,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.386,
+      "topic": "/clock",
+      "value": 26.408
+    },
+    {
+      "wall": 2.436,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.636,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.649,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.772,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.835,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 2.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.036,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.172,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.235,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.436,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.635,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.649,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.743,
+      "topic": "/clock",
+      "value": 26.409
+    },
+    {
+      "wall": 3.772,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.835,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 3.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.035,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.172,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.235,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.435,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.636,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.649,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.772,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.836,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 4.923,
+      "topic": "/clock",
+      "value": 26.41
+    },
+    {
+      "wall": 4.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.036,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.172,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.235,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.436,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.635,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.649,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.772,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.836,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 5.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.036,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.164,
+      "topic": "/clock",
+      "value": 26.411
+    },
+    {
+      "wall": 6.172,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.236,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.435,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.635,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.649,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.772,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.835,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 6.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.036,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.172,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.236,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.369,
+      "topic": "/clock",
+      "value": 26.412
+    },
+    {
+      "wall": 7.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.435,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.635,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.649,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.772,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.835,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 7.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.035,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.172,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.235,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.435,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.561,
+      "topic": "/clock",
+      "value": 26.413
+    },
+    {
+      "wall": 8.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.636,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.649,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.772,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.835,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 8.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.035,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.172,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.235,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.435,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.635,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.649,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.737,
+      "topic": "/clock",
+      "value": 26.414
+    },
+    {
+      "wall": 9.772,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.835,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 9.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.035,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.172,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.235,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.435,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.636,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.651,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.772,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.835,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 10.956,
+      "topic": "/clock",
+      "value": 26.415
+    },
+    {
+      "wall": 10.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.035,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.172,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.235,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.435,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.635,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.649,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.772,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.835,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 11.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.035,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.144,
+      "topic": "/clock",
+      "value": 26.416
+    },
+    {
+      "wall": 12.172,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.235,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.435,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.635,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.649,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.772,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.835,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 12.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.035,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.171,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.235,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.329,
+      "topic": "/clock",
+      "value": 26.417
+    },
+    {
+      "wall": 13.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.435,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.635,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.649,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.772,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.835,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 13.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.035,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.049,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.172,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.235,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.249,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.372,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.435,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.437,
+      "topic": "/clock",
+      "value": 26.418
+    },
+    {
+      "wall": 14.449,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.572,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.635,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.649,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.771,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.835,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.849,
+      "topic": "/robot1/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 14.972,
+      "topic": "/robot3/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "wall": 15.035,
+      "topic": "/robot2/cmd_vel",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

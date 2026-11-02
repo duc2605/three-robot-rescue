@@ -1,0 +1,71 @@
+[12.126s] [three_robot_dstar_mpc-4] [INFO] [1793509155.120624848] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[13.127s] [leader_person_detector.py-9] [WARN] [1793509156.438214615] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[18.133s] [three_robot_dstar_mpc-4] [INFO] [1793509161.375691536] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[19.138s] [three_robot_dstar_mpc-4] [INFO] [1793509162.564242572] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[21.144s] [three_robot_dstar_mpc-4] [INFO] [1793509164.052241534] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[30.164s] [three_robot_dstar_mpc-4] [INFO] [1793509173.193453204] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[33.169s] [leader_person_detector.py-9] [WARN] [1793509175.840147585] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[47.202s] [three_robot_dstar_mpc-4] [INFO] [1793509189.932659958] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[53.215s] [three_robot_dstar_mpc-4] [INFO] [1793509196.548409485] [three_robot_dstar_mpc]: Formation: yield / leader passing; followers clear corridor
+[56.221s] [three_robot_dstar_mpc-4] [INFO] [1793509199.299168279] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[65.244s] [three_robot_dstar_mpc-4] [INFO] [1793509207.912276437] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[67.246s] [leader_person_detector.py-9] [WARN] [1793509210.438946726] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[70.255s] [three_robot_dstar_mpc-4] [INFO] [1793509212.973560061] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[72.260s] [three_robot_dstar_mpc-4] [INFO] [1793509215.544779484] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[80.269s] [three_robot_dstar_mpc-4] [INFO] [1793509223.676112754] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[81.270s] [three_robot_dstar_mpc-4] [INFO] [1793509224.636769485] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[86.280s] [three_robot_dstar_mpc-4] [INFO] [1793509229.710021874] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[89.288s] [three_robot_dstar_mpc-4] [INFO] [1793509232.656223129] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[98.305s] [three_robot_dstar_mpc-4] [INFO] [1793509241.242612415] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[112.385s] [three_robot_dstar_mpc-4] [INFO] [1793509255.515275519] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[113.386s] [leader_person_detector.py-9] [WARN] [1793509256.588647187] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[114.386s] [three_robot_dstar_mpc-4] [INFO] [1793509257.510503324] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[141.466s] [leader_person_detector.py-9] [WARN] [1793509284.237755710] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[158.526s] [leader_person_detector.py-9] [WARN] [1793509301.188935102] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[180.568s] [three_robot_dstar_mpc-4] [INFO] [1793509323.413735498] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[180.568s] [three_robot_dstar_mpc-4] [INFO] [1793509323.729265639] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[182.569s] [three_robot_dstar_mpc-4] [INFO] [1793509325.569666212] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[190.588s] [three_robot_dstar_mpc-4] [INFO] [1793509333.397807777] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[193.594s] [three_robot_dstar_mpc-4] [INFO] [1793509336.720719831] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[200.602s] [three_robot_dstar_mpc-4] [INFO] [1793509343.817884223] [three_robot_dstar_mpc]: Formation: peer separation recovery
+[205.612s] [leader_person_detector.py-9] [WARN] [1793509349.186762692] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[208.618s] [social_costmap.py-12] [INFO] [1793509351.724436867] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Waiting for the observation cooldown.; social keepout active on D* Lite and all three MPC maps
+[213.639s] [three_robot_dstar_mpc-4] [INFO] [1793509357.113271986] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[218.648s] [three_robot_dstar_mpc-4] [INFO] [1793509361.259497205] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[218.648s] [three_robot_dstar_mpc-4] [INFO] [1793509362.237991424] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[219.652s] [social_costmap.py-12] [INFO] [1793509362.257966679] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=5, remembered_viewing_regions=0, viewing_recheck_required=0, search=Waiting for the observation cooldown.; social keepout active on D* Lite and all three MPC maps
+[219.652s] [three_robot_dstar_mpc-4] [INFO] [1793509363.165687526] [three_robot_dstar_mpc]: Formation: peer separation recovery
+[229.668s] [social_costmap.py-12] [INFO] [1793509372.377641823] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=2, remembered_viewing_regions=0, viewing_recheck_required=0, search=Waiting for the observation cooldown.; social keepout active on D* Lite and all three MPC maps
+[239.683s] [social_costmap.py-12] [INFO] [1793509382.628606827] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Waiting for the observation cooldown.; social keepout active on D* Lite and all three MPC maps
+[253.703s] [leader_person_detector.py-9] [WARN] [1793509397.238030293] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[282.773s] [leader_person_detector.py-9] [WARN] [1793509426.237213417] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[373.994s] [leader_person_detector.py-9] [WARN] [1793509517.188572016] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[403.062s] [leader_person_detector.py-9] [WARN] [1793509545.938947962] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[415.302s] [three_robot_dstar_mpc-4] [INFO] [1793509557.917407538] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[418.352s] [leader_person_detector.py-9] [WARN] [1793509560.985936617] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[432.689s] [leader_person_detector.py-9] [WARN] [1793509576.035778159] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[447.902s] [leader_person_detector.py-9] [WARN] [1793509591.085727790] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[463.303s] [leader_person_detector.py-9] [WARN] [1793509606.135618178] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[477.702s] [leader_person_detector.py-9] [WARN] [1793509621.185422678] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[492.777s] [leader_person_detector.py-9] [WARN] [1793509636.339559841] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[512.829s] [leader_person_detector.py-9] [WARN] [1793509655.488077767] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[536.911s] [three_robot_dstar_mpc-4] [INFO] [1793509680.352608528] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[542.926s] [three_robot_dstar_mpc-4] [INFO] [1793509686.256705158] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[543.928s] [leader_person_detector.py-9] [WARN] [1793509686.939905791] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[544.931s] [three_robot_dstar_mpc-4] [INFO] [1793509687.692447661] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[549.943s] [three_robot_dstar_mpc-4] [INFO] [1793509692.761385651] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[550.944s] [three_robot_dstar_mpc-4] [INFO] [1793509693.753928593] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[558.954s] [three_robot_dstar_mpc-4] [INFO] [1793509701.618305814] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[561.958s] [three_robot_dstar_mpc-4] [INFO] [1793509705.074632613] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[563.964s] [leader_person_detector.py-9] [WARN] [1793509707.388879013] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[567.977s] [three_robot_dstar_mpc-4] [INFO] [1793509710.866062141] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[568.983s] [three_robot_dstar_mpc-4] [INFO] [1793509712.297605611] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[571.996s] [three_robot_dstar_mpc-4] [INFO] [1793509714.947032991] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[572.997s] [three_robot_dstar_mpc-4] [INFO] [1793509716.237893455] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[575.000s] [three_robot_dstar_mpc-4] [INFO] [1793509717.715432865] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[575.000s] [three_robot_dstar_mpc-4] [INFO] [1793509718.577510700] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[578.010s] [three_robot_dstar_mpc-4] [INFO] [1793509720.627983856] [three_robot_dstar_mpc]: Formation: yield / leader passing; followers clear corridor
+[589.046s] [three_robot_dstar_mpc-4] [INFO] [1793509731.734245629] [three_robot_dstar_mpc]: Formation: yield / leader passing; followers clear corridor
+[596.068s] [leader_person_detector.py-9] [WARN] [1793509738.789668977] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[599.070s] [three_robot_dstar_mpc-4] [INFO] [1793509742.004199963] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[599.070s] [social_costmap.py-12] [INFO] [1793509742.374067383] [social_navigation]: usable_orientations=2, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=0, remembered_people=4, remembered_viewers=2, tv_tracks=1, tv_raw_tracks=0, person_tracks=1, remembered_viewing_regions=0, viewing_recheck_required=0, search=Waiting for the observation cooldown.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target

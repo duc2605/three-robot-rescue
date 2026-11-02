@@ -1,0 +1,19 @@
+{
+  "frames": 50,
+  "contact_intervals": 78,
+  "confirmed_pairs": [
+    [
+      "ground_plane",
+      "robot1"
+    ],
+    [
+      "person_contact",
+      "robot3"
+    ]
+  ],
+  "gap_10mm_no_contact": true,
+  "initial_separation_no_contact": true,
+  "positions_present": true,
+  "depth_unavailable_kept_null": true,
+  "scope": "Isolated primitive physics fixture; not full URDF navigation or human scenario validation."
+}

@@ -1,0 +1,74 @@
+{
+  "elapsed": 60.0,
+  "sim": 37.817,
+  "sim_elapsed": 13.303,
+  "rtf_recent": 0.2269050908276988,
+  "goal": null,
+  "leader_goal_distance": null,
+  "team": [
+    [
+      3.538745500970008,
+      -2.662505143165133,
+      3.1129735178448747
+    ],
+    [
+      2.9065100695051442,
+      -2.9345254657343234,
+      2.3836215828490888
+    ],
+    [
+      2.9028888346676363,
+      -2.434736378160683,
+      3.0268145526341566
+    ]
+  ],
+  "path_length_sampled": [
+    0.5367175180062538,
+    0.2356440969561939,
+    0.25742594160806226
+  ],
+  "command_counts": {
+    "robot1": {
+      "total": 271,
+      "linear_nonzero": 19,
+      "angular_nonzero": 6,
+      "any_nonzero": 19
+    },
+    "robot2": {
+      "total": 261,
+      "linear_nonzero": 17,
+      "any_nonzero": 20,
+      "angular_nonzero": 5
+    },
+    "robot3": {
+      "total": 332,
+      "linear_nonzero": 11,
+      "angular_nonzero": 6,
+      "any_nonzero": 11
+    }
+  },
+  "safety_latest": {
+    "robot1": "moving_obstacle: stop, fresh state/lidar/physical map required",
+    "robot2": "normal",
+    "robot3": "normal"
+  },
+  "counts": {
+    "robot3/cmd": 332,
+    "team": 135,
+    "reference": 144,
+    "robot1/cmd": 271,
+    "robot3/scan": 51,
+    "clock": 13304,
+    "robot2/safety": 145,
+    "robot2/cmd": 261,
+    "robot1/scan": 67,
+    "robot2/scan": 67,
+    "robot3/safety": 154,
+    "robot1/safety": 150
+  },
+  "log_warning_counts": {
+    "no_route": 3
+  },
+  "social": null,
+  "observation": null
+}

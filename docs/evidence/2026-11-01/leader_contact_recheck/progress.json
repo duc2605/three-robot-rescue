@@ -1,0 +1,76 @@
+{
+  "elapsed": 15.0,
+  "sim": 153.43,
+  "sim_elapsed": 4.189999999999998,
+  "rtf_recent": 0.2820678673898706,
+  "goal": [
+    1.08156,
+    -2.64636
+  ],
+  "leader_goal_distance": 0.10691399800709583,
+  "team": [
+    [
+      1.6593280309655996,
+      -2.6731122296351963,
+      -1.5924841632330682
+    ],
+    [
+      1.0958220291090892,
+      -1.8063884237639842,
+      -1.1758226834449201
+    ],
+    [
+      1.188426046855799,
+      -2.649561718175524,
+      -0.9707230960043506
+    ]
+  ],
+  "path_length_sampled": [
+    0.029530903156546256,
+    0.3051992229540388,
+    0.3785451820831742
+  ],
+  "command_counts": {
+    "robot1": {
+      "total": 128,
+      "linear_nonzero": 2,
+      "angular_nonzero": 6,
+      "any_nonzero": 6
+    },
+    "robot2": {
+      "total": 38,
+      "linear_nonzero": 12,
+      "angular_nonzero": 8,
+      "any_nonzero": 12
+    },
+    "robot3": {
+      "total": 58,
+      "linear_nonzero": 11,
+      "angular_nonzero": 5,
+      "any_nonzero": 11
+    }
+  },
+  "safety_latest": {
+    "robot1": "normal",
+    "robot2": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.053m buffer_gap=-0.193m; rejected={'map': 0, 'lidar': 0, 'track': 64, 'peer': 0, 'peer_braking': 0, 'terminal': 0}",
+    "robot3": "normal"
+  },
+  "counts": {
+    "clock": 420,
+    "robot2/cmd": 38,
+    "team": 42,
+    "reference": 45,
+    "contact_status": 15,
+    "robot3/cmd": 58,
+    "robot1/scan": 21,
+    "robot2/scan": 21,
+    "robot1/cmd": 128,
+    "robot3/scan": 19,
+    "robot3/safety": 35,
+    "robot1/safety": 58,
+    "robot2/safety": 21
+  },
+  "log_warning_counts": {},
+  "social": null,
+  "observation": null
+}

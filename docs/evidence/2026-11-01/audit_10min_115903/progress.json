@@ -1,0 +1,80 @@
+{
+  "elapsed": 600.0,
+  "sim": 216.678,
+  "sim_elapsed": 114.777,
+  "rtf_recent": 0.210099331853284,
+  "goal": [
+    1.24217,
+    -2.67986
+  ],
+  "leader_goal_distance": 0.03170863346483282,
+  "team": [
+    [
+      1.2107966516284103,
+      -2.0592318701454104,
+      0.05550638707483313
+    ],
+    [
+      1.8624444567428948,
+      -2.9186396448308765,
+      2.2814724190092495
+    ],
+    [
+      1.2181259676827032,
+      -2.659188233115384,
+      0.01742610581285976
+    ]
+  ],
+  "path_length_sampled": [
+    5.5179318933876855,
+    4.472938968207056,
+    2.11101265498035
+  ],
+  "command_counts": {
+    "robot1": {
+      "total": 2845,
+      "linear_nonzero": 197,
+      "angular_nonzero": 140,
+      "any_nonzero": 237
+    },
+    "robot2": {
+      "total": 3224,
+      "linear_nonzero": 164,
+      "angular_nonzero": 116,
+      "any_nonzero": 199
+    },
+    "robot3": {
+      "total": 3001,
+      "linear_nonzero": 153,
+      "angular_nonzero": 128,
+      "any_nonzero": 180
+    }
+  },
+  "safety_latest": {
+    "robot1": "normal",
+    "robot2": "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 2, 'peer': 0}",
+    "robot3": "normal"
+  },
+  "counts": {
+    "clock": 114766,
+    "robot2/cmd": 3224,
+    "robot1/cmd": 2845,
+    "robot1/scan": 574,
+    "robot2/scan": 574,
+    "robot3/scan": 395,
+    "rgb": 553,
+    "team": 1146,
+    "reference": 1196,
+    "robot3/cmd": 3001,
+    "social": 573,
+    "people": 372,
+    "robot2/safety": 1457,
+    "robot1/safety": 1332,
+    "robot3/safety": 1434
+  },
+  "log_warning_counts": {
+    "no_fresh_rgb": 21
+  },
+  "social": "usable_orientations=2, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=0, remembered_people=4, remembered_viewers=2, tv_tracks=1, tv_raw_tracks=0, person_tracks=1, remembered_viewing_regions=0, viewing_recheck_required=0, search=Waiting for the observation cooldown.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target",
+  "observation": null
+}

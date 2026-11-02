@@ -1,0 +1,74 @@
+{
+  "elapsed": 60.0,
+  "sim": 26.68,
+  "sim_elapsed": 23.4,
+  "rtf_recent": 0.3616289034608808,
+  "goal": null,
+  "leader_goal_distance": null,
+  "team": [
+    [
+      2.8433336621084915,
+      -2.112360680866689,
+      -3.1138999611721907
+    ],
+    [
+      2.179971323179031,
+      -2.8729229337213202,
+      3.0846826738234387
+    ],
+    [
+      1.4220949290649778,
+      -2.359886782668885,
+      -3.0676941536863755
+    ]
+  ],
+  "path_length_sampled": [
+    1.7307155073230274,
+    1.889478435503655,
+    2.480193158837071
+  ],
+  "command_counts": {
+    "robot1": {
+      "total": 345,
+      "linear_nonzero": 88,
+      "angular_nonzero": 87,
+      "any_nonzero": 91
+    },
+    "robot2": {
+      "total": 304,
+      "linear_nonzero": 86,
+      "angular_nonzero": 77,
+      "any_nonzero": 91
+    },
+    "robot3": {
+      "total": 229,
+      "linear_nonzero": 87,
+      "angular_nonzero": 70,
+      "any_nonzero": 89
+    }
+  },
+  "safety_latest": {
+    "robot1": "normal",
+    "robot2": "stale_data: holding; fresh state/reference or active escape sensors required",
+    "robot3": "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.373m buffer_gap=0.238m"
+  },
+  "counts": {
+    "clock": 2341,
+    "team": 234,
+    "reference": 246,
+    "robot1/cmd": 345,
+    "robot2/cmd": 304,
+    "robot1/scan": 117,
+    "robot2/scan": 117,
+    "robot3/cmd": 229,
+    "robot2/safety": 138,
+    "robot3/safety": 82,
+    "robot3/scan": 92,
+    "robot1/safety": 151
+  },
+  "log_warning_counts": {
+    "no_route": 1
+  },
+  "social": null,
+  "observation": null
+}

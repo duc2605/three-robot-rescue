@@ -1,0 +1,32 @@
+{
+  "directory": "/home/duc/three-robot-rescue/docs/evidence/2026-11-02/stop_diagnostics/ros_smoke_final",
+  "streams": {
+    "stop_coordinator.jsonl": {
+      "samples": 10,
+      "reasons": {
+        "coordinator_stale_robot_poses": 10
+      },
+      "max_compute_elapsed_wall_ms": 0.6274929983192123,
+      "nonzero_command_with_team_pose_stall": 0,
+      "max_dropped_records": 0
+    },
+    "stop_robot3.jsonl": {
+      "samples": 13,
+      "reasons": {
+        "motion_disabled_or_missing_map_pose_or_stale_state": 4,
+        "invalid_team_state": 5,
+        "watchdog_wall_freshness": 3,
+        "invalid_or_empty_reference": 1
+      },
+      "max_compute_elapsed_wall_ms": 0.4553339967969805,
+      "nonzero_command_with_team_pose_stall": 0,
+      "max_dropped_records": 0
+    }
+  },
+  "physics_contact_context": [],
+  "limits": [
+    "Counters count first rejected checks, not unique paths or collision impacts.",
+    "Diagnostic windows may be missing or capped; absence is not evidence of safety.",
+    "Sim-time alignment is approximate callback timing; no raw images or full scans stored."
+  ]
+}

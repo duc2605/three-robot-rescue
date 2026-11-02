@@ -1,0 +1,15 @@
+{
+  "source": "recovered from complete Gazebo frames, goals, recorded decisions, social events and launch parameter files",
+  "sim_range": [
+    0.001,
+    120.001
+  ],
+  "completed_120_sim": true,
+  "launch_count": 1,
+  "harness_exit_code": 143,
+  "harness_summary_missing": true,
+  "limitation": "Harness terminated during cleanup before writing live.json/samples.json; exact wall duration and in-memory service results are unavailable. Complete recorded pose/contact stream reaches120.001s; recorder closed with0 dropped and no IO error.",
+  "normal_navigation_unchanged": true,
+  "direct_camera_avoidance_use": false,
+  "remaining_test_processes": false
+}

@@ -1,0 +1,191 @@
+{
+  "baseline": {
+    "session": "recordings/lidar_vung_01",
+    "frame_count": 3305,
+    "sim_range": [
+      0.001,
+      165.201
+    ],
+    "goal": [
+      1.0815577507019043,
+      -2.0020322799682617
+    ],
+    "non_ground_contact_frame_counts": {},
+    "robots": {
+      "robot1": {
+        "root_distance_m": 16.83015527058834,
+        "last_xy": [
+          0.822872178252,
+          -1.01656164507
+        ],
+        "decision_counts": {
+          "invalid_or_empty_reference": 48,
+          "watchdog_wall_freshness": 54,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 22,
+          "invalid_team_state": 20,
+          "missing_or_stale_reference": 23,
+          "mpc_compute_budget_exhausted": 18,
+          "checked_escape_command": 225,
+          "moving_obstacle_pause_hold": 252,
+          "refuge_wait_for_pass": 70,
+          "escape_all_rollouts_rejected": 8,
+          "mpc_sensor_data_expired_before_publish": 1,
+          "escape_compute_budget_exhausted": 11
+        },
+        "last_escape_t": 157.217,
+        "first_tracking_after_last_escape_t": null
+      },
+      "robot2": {
+        "root_distance_m": 11.832924977851501,
+        "last_xy": [
+          1.52090637001,
+          -1.31894538814
+        ],
+        "decision_counts": {
+          "invalid_or_empty_reference": 47,
+          "watchdog_wall_freshness": 55,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 22,
+          "invalid_team_state": 20,
+          "missing_or_stale_reference": 23,
+          "mpc_beam_empty_step_4": 1,
+          "checked_escape_command": 159,
+          "moving_obstacle_pause_hold": 214,
+          "refuge_wait_for_pass": 96,
+          "escape_all_rollouts_rejected": 15,
+          "escape_compute_budget_exhausted": 14,
+          "mpc_sensor_data_expired_before_publish": 1,
+          "mpc_beam_empty_step_1": 8
+        },
+        "last_escape_t": 163.317,
+        "first_tracking_after_last_escape_t": null
+      },
+      "robot3": {
+        "root_distance_m": 9.488742859609646,
+        "last_xy": [
+          1.04273606704,
+          -1.94283645419
+        ],
+        "decision_counts": {
+          "watchdog_wall_freshness": 56,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 22,
+          "invalid_team_state": 20,
+          "invalid_or_empty_reference": 45,
+          "missing_or_stale_reference": 23,
+          "mpc_beam_empty_step_1": 34,
+          "mpc_compute_budget_exhausted": 321,
+          "mpc_beam_empty_step_6": 1,
+          "checked_escape_command": 149,
+          "moving_obstacle_pause_hold": 186,
+          "escape_compute_budget_exhausted": 13,
+          "refuge_wait_for_pass": 79,
+          "escape_all_rollouts_rejected": 2,
+          "mpc_sensor_data_expired_before_publish": 1
+        },
+        "last_escape_t": 163.317,
+        "first_tracking_after_last_escape_t": null,
+        "min_goal_distance_m": 0.0007305161021533474,
+        "last_goal_distance_m": 0.0707903165123258,
+        "first_within_15cm_t": 14.251,
+        "after_last_escape_min_goal_distance_m": 0.0707903165123258
+      }
+    }
+  },
+  "one_validation": {
+    "session": "recordings/nk076_resume_goal_once",
+    "frame_count": 1502,
+    "sim_range": [
+      0.001,
+      75.051
+    ],
+    "goal": [
+      1.0815577507019043,
+      -2.0020322799682617
+    ],
+    "non_ground_contact_frame_counts": {},
+    "robots": {
+      "robot1": {
+        "root_distance_m": 9.777727754707575,
+        "last_xy": [
+          1.80022527671,
+          -2.47480750648
+        ],
+        "decision_counts": {
+          "invalid_or_empty_reference": 32,
+          "watchdog_wall_freshness": 47,
+          "invalid_team_state": 22,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 22,
+          "missing_or_stale_reference": 4,
+          "mpc_tracking_command": 609,
+          "checked_escape_command": 54,
+          "moving_obstacle_pause_hold": 31,
+          "escape_compute_budget_exhausted": 1,
+          "refuge_wait_for_pass": 12
+        },
+        "last_escape_t": 58.92700000000001,
+        "first_tracking_after_last_escape_t": 60.201
+      },
+      "robot2": {
+        "root_distance_m": 9.213437116643801,
+        "last_xy": [
+          0.867406473582,
+          -2.8351698366
+        ],
+        "decision_counts": {
+          "watchdog_wall_freshness": 48,
+          "invalid_or_empty_reference": 32,
+          "invalid_team_state": 22,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 22,
+          "missing_or_stale_reference": 4,
+          "mpc_tracking_command": 544,
+          "mpc_beam_empty_step_6": 1,
+          "checked_escape_command": 82,
+          "moving_obstacle_pause_hold": 47,
+          "refuge_wait_for_pass": 15,
+          "escape_all_rollouts_rejected": 2,
+          "escape_compute_budget_exhausted": 3,
+          "mpc_compute_budget_exhausted": 1,
+          "mpc_beam_empty_step_2": 3,
+          "mpc_beam_empty_step_1": 8,
+          "mpc_beam_empty_step_3": 1
+        },
+        "last_escape_t": 58.926,
+        "first_tracking_after_last_escape_t": 60.201
+      },
+      "robot3": {
+        "root_distance_m": 7.258336111567908,
+        "last_xy": [
+          1.08155776324,
+          -2.00203232627
+        ],
+        "decision_counts": {
+          "watchdog_wall_freshness": 41,
+          "invalid_or_empty_reference": 31,
+          "invalid_team_state": 22,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 22,
+          "missing_or_stale_reference": 4,
+          "mpc_tracking_command": 527,
+          "checked_escape_command": 103,
+          "refuge_wait_for_pass": 27,
+          "moving_obstacle_pause_hold": 48,
+          "escape_compute_budget_exhausted": 1,
+          "mpc_beam_empty_step_1": 1
+        },
+        "last_escape_t": 58.92700000000001,
+        "first_tracking_after_last_escape_t": 60.201,
+        "min_goal_distance_m": 4.796931129352733e-08,
+        "last_goal_distance_m": 4.796931129352733e-08,
+        "first_within_15cm_t": 12.151,
+        "after_last_escape_min_goal_distance_m": 4.796931129352733e-08,
+        "first_within_15cm_after_last_escape_t": 58.951,
+        "major_excursion": {
+          "initial_arrival_t": 12.151,
+          "first_departure_beyond_50cm_t": 24.051,
+          "first_return_within_15cm_t": 58.501,
+          "max_distance_m": 1.540042741902623
+        }
+      }
+    }
+  },
+  "limits": "One headless run, not repeated benchmark, conditions differ from user GUI run; source escape policy unchanged. Counts are samples, not independent attempts.",
+  "stop_reason": "Stopped the single run after observed return to goal; no second Gazebo launch."
+}

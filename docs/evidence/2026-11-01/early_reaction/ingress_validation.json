@@ -1,0 +1,5 @@
+{
+  "ingress_received_while_control_group_blocked": true,
+  "domain": 99,
+  "scope": "Production MPC subscription/executor, no Gazebo or live robot domain. Blocking probe releases Python GIL; does not benchmark CPU-bound GIL contention."
+}

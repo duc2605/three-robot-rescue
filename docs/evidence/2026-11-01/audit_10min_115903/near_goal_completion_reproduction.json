@@ -1,0 +1,10 @@
+{
+  "audit_snapshot_elapsed": 299.798,
+  "sim": 170.502,
+  "leader_goal_distance": 0.02681013878908636,
+  "leader_completion_threshold": 0.05,
+  "finished_after_first_preview": true,
+  "follower_remaining_to_target": 0.2828427124746191,
+  "reference_rows_computed": 9,
+  "note": "Offline completion-predicate reproduction using frozen observed poses; free-space callback, constructed follower target, not exact live maneuver telemetry. Coordinator discards rows if finished before publishing."
+}

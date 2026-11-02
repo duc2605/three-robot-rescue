@@ -1,0 +1,14 @@
+{
+  "initial_zones": 2,
+  "zones_after_200s_without_camera": 2,
+  "initial_keepout_cells": 832,
+  "keepout_cells_after_200s": 832,
+  "zones_after_one_viewer_departed": 1,
+  "keepout_cells_after_departure": 576,
+  "capture_stamp_preserved": 1.7,
+  "status_after_occlusion": "usable_orientations=0, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=2, color_targets=0, remembered_people=2, remembered_viewers=0, tv_tracks=1, tv_raw_tracks=0, person_tracks=0, remembered_viewing_regions=2, viewing_recheck_required=2, search=idle; social keepout active on D* Lite and all three MPC maps",
+  "map_geometry_reset_passed": true,
+  "clock_reset_passed": true,
+  "domain": 94,
+  "limits": "ROS node tick with synthetic measurements and empty physical map; no Gazebo or DNN replay"
+}

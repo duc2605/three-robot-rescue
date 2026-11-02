@@ -1,0 +1,1047 @@
+[leader_person_detector.py-9] [INFO] [1793509147.791960706] [leader_person_detector]: people=0, located=0, heads=0, tv=0, bodies=0, lying_candidates=0, color_targets=0/0, inference_ms=1612; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509150.587247272] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=7, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=0, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[three_robot_dstar_mpc-4] [INFO] [1793509155.113878897] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509155.120624848] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[leader_person_detector.py-9] [WARN] [1793509156.438214615] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[leader_person_detector.py-9] [INFO] [1793509159.541591092] [leader_person_detector]: people=0, located=0, heads=0, tv=0, bodies=0, lying_candidates=0, color_targets=0/0, inference_ms=1529; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509161.215812211] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=7, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=0, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[three_robot_dstar_mpc-4] [INFO] [1793509161.360039124] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509161.375691536] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793509162.564242572] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[three_robot_dstar_mpc-4] [INFO] [1793509164.030594534] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509164.052241534] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[leader_person_detector.py-9] [INFO] [1793509169.993159092] [leader_person_detector]: people=1, located=0, heads=0, tv=0, bodies=0, lying_candidates=0, color_targets=0/0, inference_ms=994; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509171.325815393] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=7, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=0, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[three_robot_dstar_mpc-4] [INFO] [1793509173.170587208] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509173.193453204] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[leader_person_detector.py-9] [WARN] [1793509175.840147585] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[leader_person_detector.py-9] [INFO] [1793509180.550828526] [leader_person_detector]: people=2, located=1, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=0/0, inference_ms=1687; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509181.976436705] [social_navigation]: Camera search: inspect_person
+[social_costmap.py-12] [INFO] [1793509181.978755475] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=7, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=0, remembered_viewing_regions=0, viewing_recheck_required=0, search=requesting inspect_person; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[social_costmap.py-12] [INFO] [1793509185.837649271] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509185.954208510] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509187.651390403] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509189.919831992] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509189.932659958] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[social_costmap.py-12] [INFO] [1793509192.180429940] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=7, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=2, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [INFO] [1793509192.200900080] [leader_person_detector]: people=2, located=1, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=0/0, inference_ms=1743; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509196.538312675] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509196.548409485] [three_robot_dstar_mpc]: Formation: yield / leader passing; followers clear corridor
+[three_robot_dstar_mpc-4] [INFO] [1793509198.782070667] [three_robot_dstar_mpc]: Follower order adapted after passing: robot3 -> robot1 -> robot2
+[three_robot_dstar_mpc-4] [INFO] [1793509198.784740986] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509199.286554196] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509199.299168279] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[social_costmap.py-12] [INFO] [1793509202.983933975] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=7, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=1, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[social_costmap.py-12] [INFO] [1793509203.854661957] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509204.077017059] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[leader_person_detector.py-9] [INFO] [1793509204.582256434] [leader_person_detector]: people=3, located=3, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=2143; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509205.670357429] [social_navigation]: Camera search: find_screen
+[social_costmap.py-12] [INFO] [1793509206.597587875] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509207.895169060] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509207.912276437] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[social_costmap.py-12] [INFO] [1793509210.141458301] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509210.335846773] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[leader_person_detector.py-9] [WARN] [1793509210.438946726] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[three_robot_dstar_mpc-4] [INFO] [1793509212.913537484] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509212.973560061] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[social_costmap.py-12] [INFO] [1793509213.656346624] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509215.446636286] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[leader_person_detector.py-9] [INFO] [1793509215.523572549] [leader_person_detector]: people=2, located=2, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=1/1, inference_ms=1201; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509215.544779484] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[social_costmap.py-12] [INFO] [1793509221.847733931] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509222.066048322] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509223.564197716] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509223.676112754] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[social_costmap.py-12] [INFO] [1793509224.511718684] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509224.554048345] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509224.636769485] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[leader_person_detector.py-9] [INFO] [1793509225.914730393] [leader_person_detector]: people=2, located=2, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=1/1, inference_ms=1895; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509229.033091437] [social_navigation]: Camera search: find_screen
+[three_robot_dstar_mpc-4] [INFO] [1793509229.604183249] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509229.710021874] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509232.521276122] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509232.656223129] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[social_costmap.py-12] [INFO] [1793509234.838892151] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=2, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [INFO] [1793509236.618427120] [leader_person_detector]: people=1, located=1, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=1/1, inference_ms=982; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509241.167856152] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509241.242612415] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[social_costmap.py-12] [INFO] [1793509244.975195438] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509244.984919753] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=1, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509245.123439002] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[leader_person_detector.py-9] [INFO] [1793509247.062776954] [leader_person_detector]: people=1, located=1, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=1/1, inference_ms=765; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509253.172992045] [social_navigation]: Camera search: find_viewers
+[three_robot_dstar_mpc-4] [INFO] [1793509255.467020928] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509255.515275519] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[social_costmap.py-12] [INFO] [1793509255.775441249] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=1, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [WARN] [1793509256.588647187] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[three_robot_dstar_mpc-4] [INFO] [1793509257.510503324] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[leader_person_detector.py-9] [INFO] [1793509257.787853229] [leader_person_detector]: Waiting for a fresh matched RGB-D capture; inference held
+[social_costmap.py-12] [INFO] [1793509263.822534024] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509263.993558270] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509266.534183234] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=6, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=2, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[social_costmap.py-12] [INFO] [1793509268.578341760] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[leader_person_detector.py-9] [INFO] [1793509269.400387158] [leader_person_detector]: people=1, located=0, heads=0, tv=0, bodies=0, lying_candidates=0, color_targets=1/1, inference_ms=1683; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509274.047221130] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509274.240375313] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509277.631493642] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=2, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[social_costmap.py-12] [INFO] [1793509278.752651944] [social_navigation]: Camera search: find_viewers
+[leader_person_detector.py-9] [INFO] [1793509279.841721698] [leader_person_detector]: people=0, located=0, heads=0, tv=0, bodies=0, lying_candidates=0, color_targets=0/0, inference_ms=476; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509279.957514882] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509280.225155599] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[leader_person_detector.py-9] [WARN] [1793509284.237755710] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[social_costmap.py-12] [INFO] [1793509286.853850307] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509287.006805086] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509288.674582953] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [INFO] [1793509290.008359367] [leader_person_detector]: people=1, located=1, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=0/0, inference_ms=850; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509297.311869275] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509297.575991596] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509299.040204774] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [INFO] [1793509300.939845252] [leader_person_detector]: Waiting for a fresh matched RGB-D capture; inference held
+[leader_person_detector.py-9] [WARN] [1793509301.188935102] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[social_costmap.py-12] [INFO] [1793509303.852068578] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509304.046233731] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509308.161729340] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509309.777769623] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [INFO] [1793509311.850294461] [leader_person_detector]: people=1, located=1, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=1/1, inference_ms=1478; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509312.215036127] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509312.231539842] [social_navigation]: Camera search: find_screen
+[three_robot_dstar_mpc-4] [INFO] [1793509312.426974410] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509319.554595779] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509319.757599629] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509320.258020381] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [INFO] [1793509322.314746706] [leader_person_detector]: people=1, located=1, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=1/1, inference_ms=655; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509323.399233140] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509323.403991900] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509323.413735498] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793509323.729265639] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793509325.561920702] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509325.569666212] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[social_costmap.py-12] [INFO] [1793509330.876524544] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509330.892843666] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=5, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509331.116691362] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509331.579177087] [social_navigation]: Social map updated: 2 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509331.592651074] [social_navigation]: Camera search: find_screen
+[social_costmap.py-12] [INFO] [1793509332.356097870] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[leader_person_detector.py-9] [INFO] [1793509332.486112956] [leader_person_detector]: Waiting for a fresh matched RGB-D capture; inference held
+[three_robot_dstar_mpc-4] [INFO] [1793509333.384121279] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509333.397807777] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[social_costmap.py-12] [INFO] [1793509334.404072758] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509336.708216990] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509336.720719831] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[social_costmap.py-12] [INFO] [1793509338.061455681] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509338.265753838] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509341.221416206] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[social_costmap.py-12] [INFO] [1793509342.022867712] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509343.816942477] [three_robot_dstar_mpc]: Peer separation recovery: spacing 0.353 m; moving one robot at 0.05 m/s toward 0.46 m clearance.
+[three_robot_dstar_mpc-4] [INFO] [1793509343.817884223] [three_robot_dstar_mpc]: Formation: peer separation recovery
+[leader_person_detector.py-9] [INFO] [1793509344.881316706] [leader_person_detector]: people=4, located=4, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=1629; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509345.680739943] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509345.840349561] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[leader_person_detector.py-9] [WARN] [1793509349.186762692] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[social_costmap.py-12] [INFO] [1793509349.590713942] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509351.064920530] [social_navigation]: Camera search: inspect_person
+[social_costmap.py-12] [INFO] [1793509351.724436867] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Waiting for the observation cooldown.; social keepout active on D* Lite and all three MPC maps
+[social_costmap.py-12] [INFO] [1793509353.095351016] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509353.285714423] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509353.896041873] [social_navigation]: Social map updated: 2 group regions; camera observations + conservative LiDAR candidates.
+[leader_person_detector.py-9] [INFO] [1793509355.675909885] [leader_person_detector]: people=5, located=5, heads=0, tv=1, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=752; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509356.023883570] [social_navigation]: Social map updated: 2 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509356.709729896] [social_navigation]: Social map updated: 2 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509357.104722479] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509357.113271986] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[social_costmap.py-12] [INFO] [1793509357.682755078] [social_navigation]: Social map updated: 2 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509360.043040326] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509360.201350656] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509360.895605303] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509361.239572321] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509361.259497205] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509362.227332672] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot1 -> robot2; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509362.237991424] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[social_costmap.py-12] [INFO] [1793509362.257966679] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=5, remembered_viewing_regions=0, viewing_recheck_required=0, search=Waiting for the observation cooldown.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509362.572129749] [three_robot_dstar_mpc]: Follower intersects leader route; preparing a local yield.
+[three_robot_dstar_mpc-4] [INFO] [1793509363.163560034] [three_robot_dstar_mpc]: Peer separation recovery: spacing 0.375 m; moving one robot at 0.05 m/s toward 0.46 m clearance.
+[three_robot_dstar_mpc-4] [INFO] [1793509363.165687526] [three_robot_dstar_mpc]: Formation: peer separation recovery
+[social_costmap.py-12] [INFO] [1793509364.506285189] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509366.706957060] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509366.897288455] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[leader_person_detector.py-9] [INFO] [1793509368.109853149] [leader_person_detector]: people=2, located=2, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=1741; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509368.463635311] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509368.472440793] [three_robot_dstar_mpc]: Follower order adapted after passing: robot3 -> robot2 -> robot1
+[three_robot_dstar_mpc-4] [INFO] [1793509368.475443271] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509368.872953258] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509368.877495182] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509369.160612707] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509369.165544864] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509369.491776211] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509369.498763375] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509369.830519804] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509369.837224194] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509370.163320832] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509370.168463999] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509370.253036828] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509370.557062404] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509370.565659355] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509370.865353523] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509370.873788461] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509371.226180758] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509371.231454376] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509371.580182379] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509371.591047102] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509371.675253724] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509372.006527063] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509372.012444670] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509372.313578479] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509372.322148676] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509372.377641823] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=2, remembered_viewing_regions=0, viewing_recheck_required=0, search=Waiting for the observation cooldown.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509372.658271199] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509372.666229622] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509372.998692382] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509373.007658329] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509373.032667122] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509373.222859227] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509373.383943676] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509373.391822178] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509373.703271962] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509373.711412441] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509374.045232224] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509374.049816123] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509374.401588074] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509374.407031062] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509374.774150177] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509374.783338793] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509375.210356454] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509375.216801630] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509375.229516596] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509375.545444433] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509375.550321635] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509375.865826875] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509375.871758693] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509376.231928097] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509376.238395283] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509376.585060648] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509376.590330735] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509376.973155344] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509376.979597043] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509377.309890932] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509377.313940258] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509377.698238069] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509377.704413819] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509378.044498873] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509378.049230157] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[leader_person_detector.py-9] [INFO] [1793509378.149193358] [leader_person_detector]: people=4, located=3, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=0/0, inference_ms=726; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509378.397011407] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509378.401511712] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509378.800935543] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509378.804616797] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509378.874184759] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509379.083434130] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509379.202654839] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509379.209187076] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509379.540820649] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509379.545102199] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509379.625141666] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509379.941464444] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509379.948437497] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509380.293616097] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509380.300219579] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509380.671324632] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509380.677473672] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509381.039769257] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509381.044353827] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509381.404372369] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509381.409371910] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509381.793940722] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509381.799434172] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509382.141456026] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509382.145215667] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509382.509957133] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509382.514836631] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509382.615031508] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509382.628606827] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Waiting for the observation cooldown.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509382.926498173] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509382.930777419] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509383.266693719] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509383.271250167] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509383.696963249] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509383.703023311] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509384.067893325] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509384.072586438] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509384.450887721] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509384.457340168] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509384.814838042] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509384.821962704] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509385.203058833] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509385.209575002] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509385.553456410] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509385.558124980] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509385.606596868] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509385.741705936] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509386.004292559] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509386.008616560] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509386.369795195] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509386.376475915] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509386.430976051] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509386.750612073] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509386.755534819] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509387.132829711] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509387.140576472] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509387.542036656] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509387.546649034] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509387.940503798] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509387.947153896] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509388.006989056] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509388.347498822] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509388.354038427] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[leader_person_detector.py-9] [INFO] [1793509388.607649641] [leader_person_detector]: people=3, located=2, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=1289; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509388.711077121] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509388.720169294] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509388.787911289] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509389.138699092] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509389.143048192] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509389.491788995] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509389.495577841] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509389.931290676] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509389.937656513] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509390.275368409] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509390.281875953] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509390.351087864] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509390.363225120] [social_navigation]: Camera search: find_screen
+[three_robot_dstar_mpc-4] [INFO] [1793509390.653975414] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509390.660409651] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509391.001999179] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509391.006220911] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509391.402043522] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509391.409824912] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509391.815031801] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509391.819831490] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509392.209273816] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509392.216696949] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509392.562752228] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509392.568914708] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509392.925158836] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509392.931101301] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509393.263807834] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509393.267080929] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509393.298734057] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Recovery / obstacle clearance takes priority over observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[three_robot_dstar_mpc-4] [INFO] [1793509393.644360402] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509393.648890401] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509393.995990599] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509394.000032244] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509394.373816818] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509394.379986358] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509394.759518410] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509394.766184119] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509394.815925834] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509395.059297899] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509395.226389436] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509395.232762225] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509395.592930052] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509395.597542359] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509395.665507106] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509396.042084923] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509396.046314659] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509396.446454493] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509396.453685164] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509396.874930866] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509396.880928373] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[leader_person_detector.py-9] [WARN] [1793509397.238030293] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[three_robot_dstar_mpc-4] [INFO] [1793509397.254552121] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509397.260399604] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509397.629994441] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509397.634116214] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509398.062147167] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509398.069831035] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509398.137244629] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509398.463520764] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509398.470739558] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509398.827861727] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509398.835454635] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[leader_person_detector.py-9] [INFO] [1793509399.086338999] [leader_person_detector]: Waiting for a fresh matched RGB-D capture; inference held
+[three_robot_dstar_mpc-4] [INFO] [1793509399.226289851] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509399.232199477] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509399.620459461] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509399.626725863] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509399.653972365] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509400.034608914] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509400.041292418] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509400.518176702] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509400.525732705] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509400.941216351] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509400.945072680] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509401.371690586] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509401.377711039] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509401.733491843] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509401.740264380] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509402.150829119] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509402.158216456] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509402.171839719] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509402.343535538] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509402.536874319] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509402.542964933] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509402.894752886] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509402.899505055] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509403.297920803] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509403.301304609] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509403.680508039] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509403.686948597] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509403.689048299] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Recovery / obstacle clearance takes priority over observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[three_robot_dstar_mpc-4] [INFO] [1793509404.046694577] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509404.052955677] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509404.441648520] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509404.447269326] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509404.822304620] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509404.829372071] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509405.230018132] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509405.236262599] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509405.628502180] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509405.632312591] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509406.033476887] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509406.039961521] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509406.102646829] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509406.480912534] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509406.488075621] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509407.056597648] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509407.064857303] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509407.582627960] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509407.587963173] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509408.133514197] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509408.141855346] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509408.706532370] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509408.719705914] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509409.364938651] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509409.378846688] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509409.451738000] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509409.749978014] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509410.001662066] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509410.010689525] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[leader_person_detector.py-9] [INFO] [1793509410.531090493] [leader_person_detector]: people=3, located=3, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=1533; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509410.553300912] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509410.558566652] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509410.961285731] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509410.966480471] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509411.372786813] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509411.379641690] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509411.444584486] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509411.825199701] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509411.832185721] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509412.271322913] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509412.282618493] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509412.308490475] [social_navigation]: Camera search: inspect_person
+[three_robot_dstar_mpc-4] [INFO] [1793509412.793136590] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509412.799262169] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509413.140865734] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509413.147402585] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509413.511856995] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509413.516605424] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509413.911105018] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509413.915607886] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509413.967588287] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=6, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Recovery / obstacle clearance takes priority over observation.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509414.317971049] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509414.322870339] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509414.701849770] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509414.707964553] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509415.036995735] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509415.042958095] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509415.410986808] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509415.417209136] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509415.813230015] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509415.816962342] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509416.166269455] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509416.173950681] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509416.559778704] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509416.565937491] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509416.932086322] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509416.938639198] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509417.325828503] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509417.329659052] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509417.759563720] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509417.765763688] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509418.151510699] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509418.155175838] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509418.551798965] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509418.558653280] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509418.931521077] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509418.937763149] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509419.301853032] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509419.308809583] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509419.421434325] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509419.543585070] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509419.721052645] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509419.727640668] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509420.080033110] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509420.086656402] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509420.440047728] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509420.443447773] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509420.820866428] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509420.827046764] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509420.874769411] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509421.213086137] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509421.216821471] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[leader_person_detector.py-9] [INFO] [1793509421.227132422] [leader_person_detector]: people=4, located=4, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=591; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509421.586703352] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509421.589740636] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509422.004290089] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509422.007976473] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509422.387991639] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509422.394569916] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509422.777593169] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509422.781820761] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509423.144702600] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509423.151430185] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509423.191721979] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509423.556551602] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509423.563158525] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509423.960515278] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509423.967523923] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509424.030292320] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=6, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Recovery / obstacle clearance takes priority over observation.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509424.382142803] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509424.390095296] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509424.799378940] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509424.809555840] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509425.215935676] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509425.220262945] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509425.663953170] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509425.667898522] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509425.766977216] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509425.954808914] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509426.049257134] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509426.052769768] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[leader_person_detector.py-9] [WARN] [1793509426.237213417] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[three_robot_dstar_mpc-4] [INFO] [1793509426.393674433] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509426.400622102] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509426.780731058] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509426.786695304] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509427.146109050] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509427.151268963] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509427.243212274] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509427.570608427] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509427.577558658] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509427.971043498] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509427.975785564] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509428.078878392] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509428.408264321] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509428.415219810] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509428.744867646] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509428.752906007] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509429.107501015] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509429.111634867] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509429.473435287] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509429.478877696] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509429.560716688] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509429.975920668] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509429.983407308] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509430.381815260] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509430.386178060] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509430.793262865] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509430.799557223] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509431.182026118] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509431.186399567] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509431.292646819] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509431.495982518] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509431.578931662] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509431.584196766] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509431.974378177] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509431.981022824] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[leader_person_detector.py-9] [INFO] [1793509432.011599509] [leader_person_detector]: people=4, located=3, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=1120; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509432.385170528] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509432.391056583] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509432.750961707] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509432.757450904] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509433.116621098] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509433.123380179] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509433.496944760] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509433.501010458] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509433.910168688] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509433.914030048] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509434.293108286] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509434.297558274] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509434.344416772] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=6, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Recovery / obstacle clearance takes priority over observation.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509434.698442878] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509434.701977338] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509435.098937668] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509435.105018847] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509435.200957189] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509435.470187596] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509435.475738815] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509435.848672589] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509435.855604076] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509436.302587799] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509436.311194299] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509436.677470272] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509436.683786530] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509436.731628048] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509436.866451171] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509437.036196233] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509437.040235076] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509437.401769816] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509437.407458561] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509437.805124274] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509437.808610017] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509438.163734586] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509438.171023641] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509438.598174777] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509438.602814877] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509439.034269783] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509439.041787421] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509439.089022786] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509439.453644300] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509439.458285866] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509439.830269523] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509439.835105148] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509440.216749785] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509440.221506867] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509440.671106018] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509440.677889809] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509441.065100264] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509441.068900665] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509441.492411589] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509441.499563709] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509441.899207207] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509441.905036119] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509442.275388996] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509442.281962730] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509442.678519343] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509442.684309224] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509443.034031243] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509443.040370028] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509443.417859366] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509443.424386904] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509443.810951087] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509443.817494155] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509444.210759059] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509444.216931545] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[leader_person_detector.py-9] [INFO] [1793509444.477860184] [leader_person_detector]: people=3, located=2, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=1599; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509444.618375657] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509444.623148683] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509444.699222170] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=6, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Recovery / obstacle clearance takes priority over observation.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509445.063052118] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509445.069951701] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509445.443634762] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509445.452929732] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509445.821059049] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509445.829298020] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509446.199578216] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509446.203566777] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509446.574782802] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509446.580651734] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509446.930720854] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509446.938067383] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509446.988938282] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509447.177140266] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509447.346459825] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509447.353849104] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509447.706964255] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509447.713370757] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509448.061791829] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509448.065346205] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509448.445706040] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509448.452277812] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509448.825060904] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509448.828823496] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509449.205183776] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509449.212229233] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509449.646564903] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509449.650542064] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509450.026037259] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509450.031214271] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509450.433048681] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509450.437893275] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509450.891466347] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509450.898221145] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509451.346197234] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509451.353331875] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509451.715742372] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509451.721982463] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509452.087470298] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509452.091769851] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509452.455349206] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509452.460249993] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509452.519059375] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509452.633526211] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509452.893691762] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509452.897422064] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509453.279871158] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509453.284667488] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509453.681619730] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509453.687835631] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509454.050261799] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509454.055218829] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509454.409256890] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509454.413252297] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509454.798791304] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509454.804988244] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509454.845606406] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509454.857619725] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Recovery / obstacle clearance takes priority over observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [INFO] [1793509455.087347568] [leader_person_detector]: Waiting for a fresh matched RGB-D capture; inference held
+[three_robot_dstar_mpc-4] [INFO] [1793509455.161631655] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509455.165477729] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509455.604196490] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509455.610540763] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509455.982978546] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509455.986984982] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509456.357949266] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509456.362669984] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509456.796787844] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509456.800470759] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509457.172693491] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509457.176706990] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509457.532204841] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509457.535937306] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509457.885754897] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509457.892526180] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509458.269308063] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509458.276061657] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509458.663118239] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509458.670089018] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509458.729216675] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509458.918938823] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509459.063424323] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509459.070625862] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509459.452764416] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509459.457329303] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509459.856573570] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509459.862874029] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509460.179755607] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509460.183729506] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509460.586028545] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509460.589692778] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509460.979424857] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509460.986116362] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509461.341399712] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509461.347030903] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509461.707972258] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509461.715145919] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509462.079139047] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509462.083108103] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509462.450250232] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509462.454792323] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509462.512443197] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509462.846574040] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509462.853716931] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509463.187349373] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509463.193720691] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509463.562274542] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509463.568321042] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509463.925452268] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509463.932333502] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509463.974427734] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509463.982291224] [social_navigation]: Camera search: inspect_person
+[three_robot_dstar_mpc-4] [INFO] [1793509464.114923359] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509464.374651765] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509464.381688697] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509464.795330589] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509464.801645403] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509464.860582625] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Recovery / obstacle clearance takes priority over observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[three_robot_dstar_mpc-4] [INFO] [1793509465.196052432] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509465.202561548] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[leader_person_detector.py-9] [INFO] [1793509465.330287620] [leader_person_detector]: people=3, located=3, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=645; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509465.607660471] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509465.612398089] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509465.991868192] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509465.999309604] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509466.605825073] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509466.610571360] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509467.170213053] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509467.179127926] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509467.738650422] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509467.748841090] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509468.307389671] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509468.313226373] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509468.913908060] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509468.922183968] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509469.454811187] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509469.465318030] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509470.027832803] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509470.036240564] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509470.618721080] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509470.623743409] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509471.220160202] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509471.228557670] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509471.811901559] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509471.821048912] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509472.434631470] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509472.441172072] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509472.561159649] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509472.814531909] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509473.021621018] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509473.027642227] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509473.637697411] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509473.646109828] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509474.281968769] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509474.287977912] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509474.883986395] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509474.888925429] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509474.959083320] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Recovery / obstacle clearance takes priority over observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[leader_person_detector.py-9] [INFO] [1793509475.409332403] [leader_person_detector]: people=4, located=3, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=0/0, inference_ms=1035; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509475.536878670] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509475.545422937] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509476.075018232] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509476.082855392] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509476.560856077] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509476.570244438] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509477.116331362] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509477.122401451] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509477.639563104] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509477.647319049] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509478.155753403] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509478.163021462] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509478.219448040] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509478.463220804] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509478.723939607] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509478.734351129] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509479.255553625] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509479.266517335] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509479.849445974] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509479.857554451] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509480.415837257] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509480.424775142] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509480.978022777] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509480.985882905] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509481.553977645] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509481.562156644] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509482.113328715] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509482.120979030] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509482.605675270] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509482.616544835] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509483.122941640] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509483.130852494] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509483.621643079] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509483.628163934] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509483.705436693] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509483.862457111] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509484.194980319] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509484.203407074] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509484.710865203] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509484.716853522] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509485.264308128] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509485.268206896] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[leader_person_detector.py-9] [INFO] [1793509485.781807376] [leader_person_detector]: people=4, located=3, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=0/0, inference_ms=875; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509485.864168985] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509485.874800986] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509485.920061473] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Recovery / obstacle clearance takes priority over observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[three_robot_dstar_mpc-4] [INFO] [1793509486.373821049] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509486.381888209] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509486.910681053] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509486.919146261] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509487.371710692] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509487.376741387] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509487.890532707] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509487.897191962] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509488.413658786] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509488.417892143] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509488.902709023] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509488.908764944] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509488.976954925] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509489.139205981] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509489.422855635] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509489.430936400] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509489.904473044] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509489.909705633] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509490.416266567] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509490.424666790] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509490.897863451] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509490.902769083] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509491.477870981] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509491.485493961] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509492.028797731] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509492.037178961] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509492.517974031] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509492.525758524] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509493.038562619] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509493.046083914] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509493.051532884] [social_navigation]: Camera search: inspect_person
+[three_robot_dstar_mpc-4] [INFO] [1793509493.532791128] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509493.537306791] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509494.005039027] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509494.010050443] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509494.105921991] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509494.326992635] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509494.560868897] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509494.569382210] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509495.049094987] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509495.055657025] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509495.635020199] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509495.644676041] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509496.151368537] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509496.160949388] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509496.226880521] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Recovery / obstacle clearance takes priority over observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[leader_person_detector.py-9] [INFO] [1793509496.247315129] [leader_person_detector]: people=3, located=3, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=953; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509496.657736790] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509496.666090753] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509497.213848557] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509497.223247055] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509497.730462916] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509497.736565753] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509498.256030931] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509498.261073306] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509498.780723360] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509498.785597897] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509499.283110813] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509499.292180515] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509499.345095321] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509499.588981385] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509499.811955104] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509499.818963343] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509500.313890335] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509500.324848299] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509500.840791200] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509500.848408887] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509501.349325790] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509501.358284340] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509501.855852532] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509501.863826272] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509502.351472184] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509502.357319152] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509502.830907138] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509502.835996147] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509503.377661935] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509503.386737038] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509503.894405971] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509503.902214237] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[three_robot_dstar_mpc-4] [INFO] [1793509504.412358352] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509504.420632798] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509504.508525560] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509504.744779575] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509504.966370956] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509504.975096141] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509506.676116251] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Recovery / obstacle clearance takes priority over observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[leader_person_detector.py-9] [INFO] [1793509508.045335555] [leader_person_detector]: people=3, located=3, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=1245; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509509.876528605] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509509.880980989] [three_robot_dstar_mpc]: Leader passed followers; resuming adaptive following.
+[social_costmap.py-12] [INFO] [1793509509.955236755] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509510.149150770] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509515.101799483] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509515.229531185] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509516.877229442] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Recovery / obstacle clearance takes priority over observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[leader_person_detector.py-9] [WARN] [1793509517.188572016] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[leader_person_detector.py-9] [INFO] [1793509518.514148092] [leader_person_detector]: people=4, located=3, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=1069; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509519.657621397] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509519.668172314] [social_navigation]: Camera search: inspect_person
+[social_costmap.py-12] [INFO] [1793509524.443586297] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509524.601303081] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509527.494935727] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[leader_person_detector.py-9] [INFO] [1793509529.037300458] [leader_person_detector]: Waiting for fresh RGB on /leader/camera/image_raw
+[social_costmap.py-12] [INFO] [1793509529.339475833] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509534.153603367] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509534.404659910] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509537.983063045] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=6, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=4, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[social_costmap.py-12] [INFO] [1793509538.988453553] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[leader_person_detector.py-9] [INFO] [1793509540.630506224] [leader_person_detector]: people=2, located=2, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=2033; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509541.056993973] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509541.321049903] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509543.993525442] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509545.158558878] [social_navigation]: Camera search: inspect_person
+[leader_person_detector.py-9] [WARN] [1793509545.938947962] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[social_costmap.py-12] [INFO] [1793509550.319538033] [social_navigation]: Social map updated: 2 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509550.327709988] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=0, color_targets=1, remembered_people=7, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=5, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509550.444908146] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[leader_person_detector.py-9] [INFO] [1793509551.535883457] [leader_person_detector]: Waiting for fresh RGB on /leader/camera/image_raw
+[three_robot_dstar_mpc-4] [INFO] [1793509557.912433271] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509557.917407538] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[leader_person_detector.py-9] [WARN] [1793509560.985936617] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[leader_person_detector.py-9] [INFO] [1793509561.885549224] [leader_person_detector]: Waiting for fresh RGB on /leader/camera/image_raw
+[social_costmap.py-12] [INFO] [1793509564.170761359] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509564.176452842] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=6, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=5, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509564.319753998] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[leader_person_detector.py-9] [INFO] [1793509572.185264601] [leader_person_detector]: Waiting for fresh RGB on /leader/camera/image_raw
+[leader_person_detector.py-9] [WARN] [1793509576.035778159] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[social_costmap.py-12] [INFO] [1793509581.780589905] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509581.793517549] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=6, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=5, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[three_robot_dstar_mpc-4] [INFO] [1793509581.908095274] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[leader_person_detector.py-9] [INFO] [1793509582.835781900] [leader_person_detector]: Waiting for a fresh matched RGB-D capture; inference held
+[leader_person_detector.py-9] [WARN] [1793509591.085727790] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[leader_person_detector.py-9] [INFO] [1793509593.035687435] [leader_person_detector]: Waiting for fresh RGB on /leader/camera/image_raw
+[social_costmap.py-12] [INFO] [1793509599.726110741] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=6, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=5, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [INFO] [1793509603.585942656] [leader_person_detector]: Waiting for fresh RGB on /leader/camera/image_raw
+[leader_person_detector.py-9] [WARN] [1793509606.135618178] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[social_costmap.py-12] [INFO] [1793509613.004960916] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=5, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [INFO] [1793509613.785815354] [leader_person_detector]: Waiting for fresh RGB on /leader/camera/image_raw
+[leader_person_detector.py-9] [WARN] [1793509621.185422678] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[leader_person_detector.py-9] [INFO] [1793509624.585529767] [leader_person_detector]: Waiting for fresh RGB on /leader/camera/image_raw
+[social_costmap.py-12] [INFO] [1793509625.730519394] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=5, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[social_costmap.py-12] [INFO] [1793509626.861701712] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509627.059276969] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509632.106382361] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509632.350675951] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509634.057675764] [social_navigation]: Social map updated: 2 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509635.025657439] [social_navigation]: Social map updated: 2 group regions; camera observations + conservative LiDAR candidates.
+[leader_person_detector.py-9] [INFO] [1793509635.336128877] [leader_person_detector]: Waiting for a fresh matched RGB-D capture; inference held
+[social_costmap.py-12] [INFO] [1793509635.962999233] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=0, color_targets=1, remembered_people=6, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=5, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [WARN] [1793509636.339559841] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[social_costmap.py-12] [INFO] [1793509636.854681962] [social_navigation]: Social map updated: 2 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509646.484324091] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=2, color_regions=0, tv_regions=0, color_targets=1, remembered_people=6, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [INFO] [1793509648.026764843] [leader_person_detector]: people=3, located=3, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=2466; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509648.427623490] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509648.677950529] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509651.374329805] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509655.088278819] [social_navigation]: Camera search: inspect_person
+[leader_person_detector.py-9] [WARN] [1793509655.488077767] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[social_costmap.py-12] [INFO] [1793509656.060350915] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509656.240091862] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509657.043188266] [social_navigation]: usable_orientations=5, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=6, remembered_viewers=5, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [INFO] [1793509658.453656629] [leader_person_detector]: people=1, located=1, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=0/0, inference_ms=800; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509668.177506668] [social_navigation]: usable_orientations=4, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=6, remembered_viewers=4, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[leader_person_detector.py-9] [INFO] [1793509668.800789411] [leader_person_detector]: people=2, located=1, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=0/0, inference_ms=1686; RGB-D + capture-time TF
+[social_costmap.py-12] [INFO] [1793509669.306575669] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509669.528071363] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[social_costmap.py-12] [INFO] [1793509678.439566131] [social_navigation]: usable_orientations=3, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=3, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[social_costmap.py-12] [INFO] [1793509679.413441678] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509679.574548684] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[leader_person_detector.py-9] [INFO] [1793509679.609345101] [leader_person_detector]: people=2, located=1, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=0/0, inference_ms=1323; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509680.338392273] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509680.352608528] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[social_costmap.py-12] [INFO] [1793509684.429894314] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509684.443673828] [social_navigation]: Camera search: inspect_person
+[three_robot_dstar_mpc-4] [INFO] [1793509684.698202397] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509686.233864484] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509686.256705158] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[leader_person_detector.py-9] [WARN] [1793509686.939905791] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[three_robot_dstar_mpc-4] [INFO] [1793509687.682440713] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509687.692447661] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[social_costmap.py-12] [INFO] [1793509689.256107509] [social_navigation]: Social map updated: 1 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509689.271763281] [social_navigation]: usable_orientations=3, provisional_regions=0, confirmed_regions=1, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=3, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; social keepout active on D* Lite and all three MPC maps
+[social_costmap.py-12] [INFO] [1793509690.123320262] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509690.308838751] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[leader_person_detector.py-9] [INFO] [1793509690.629829275] [leader_person_detector]: people=2, located=2, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=1197; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509692.741434891] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509692.761385651] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793509693.740945196] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509693.753928593] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[social_costmap.py-12] [INFO] [1793509694.302695664] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[social_costmap.py-12] [INFO] [1793509700.187842888] [social_navigation]: usable_orientations=3, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=3, tv_tracks=1, tv_raw_tracks=1, person_tracks=3, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[leader_person_detector.py-9] [INFO] [1793509701.187162513] [leader_person_detector]: Waiting for a fresh matched RGB-D capture; inference held
+[three_robot_dstar_mpc-4] [INFO] [1793509701.598927507] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509701.618305814] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[social_costmap.py-12] [INFO] [1793509704.151600119] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509704.342461319] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509705.061305736] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509705.074632613] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[leader_person_detector.py-9] [WARN] [1793509707.388879013] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[social_costmap.py-12] [INFO] [1793509709.876844276] [social_navigation]: Camera search: inspect_person
+[three_robot_dstar_mpc-4] [INFO] [1793509710.852435309] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509710.866062141] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[social_costmap.py-12] [INFO] [1793509710.873219518] [social_navigation]: usable_orientations=3, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=3, tv_tracks=1, tv_raw_tracks=0, person_tracks=2, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[three_robot_dstar_mpc-4] [INFO] [1793509712.297605611] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[leader_person_detector.py-9] [INFO] [1793509712.814294051] [leader_person_detector]: people=2, located=2, heads=0, tv=0, bodies=2, lying_candidates=0, color_targets=0/0, inference_ms=1010; RGB-D + capture-time TF
+[three_robot_dstar_mpc-4] [INFO] [1793509714.947032991] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793509716.221184714] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509716.237893455] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793509717.715432865] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793509718.560655137] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509718.577510700] [three_robot_dstar_mpc]: Formation: column / tracking / narrow passage / closing gaps
+[three_robot_dstar_mpc-4] [INFO] [1793509720.220544525] [three_robot_dstar_mpc]: Follower intersects leader route; preparing a local yield.
+[three_robot_dstar_mpc-4] [INFO] [1793509720.616650275] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509720.627983856] [three_robot_dstar_mpc]: Formation: yield / leader passing; followers clear corridor
+[social_costmap.py-12] [INFO] [1793509721.574537219] [social_navigation]: usable_orientations=3, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=3, tv_tracks=1, tv_raw_tracks=0, person_tracks=2, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[leader_person_detector.py-9] [INFO] [1793509723.537079784] [leader_person_detector]: Waiting for a fresh matched RGB-D capture; inference held
+[social_costmap.py-12] [INFO] [1793509728.304345156] [social_navigation]: Social map updated: 0 group regions; camera observations + conservative LiDAR candidates.
+[three_robot_dstar_mpc-4] [INFO] [1793509728.479207697] [three_robot_dstar_mpc]: Map received: 260 x 220, 0.050 m/cell.
+[three_robot_dstar_mpc-4] [INFO] [1793509731.728514527] [three_robot_dstar_mpc]: Follower yield ready: turn / aligning leader; followers tracking
+[three_robot_dstar_mpc-4] [INFO] [1793509731.734245629] [three_robot_dstar_mpc]: Formation: yield / leader passing; followers clear corridor
+[social_costmap.py-12] [INFO] [1793509732.226946300] [social_navigation]: usable_orientations=3, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=1, remembered_people=5, remembered_viewers=3, tv_tracks=1, tv_raw_tracks=0, person_tracks=1, remembered_viewing_regions=0, viewing_recheck_required=0, search=Moving obstacle avoidance takes priority over camera observation.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target
+[social_costmap.py-12] [INFO] [1793509735.155546379] [social_navigation]: Camera search: inspect_person
+[leader_person_detector.py-9] [INFO] [1793509735.164577068] [leader_person_detector]: people=1, located=1, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=0/0, inference_ms=1566; RGB-D + capture-time TF
+[leader_person_detector.py-9] [WARN] [1793509738.789668977] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[three_robot_dstar_mpc-4] [INFO] [1793509741.986243163] [three_robot_dstar_mpc]: Leader/follower ready: robot3 -> robot2 -> robot1; gap 0.70 m; adaptive triangle/column=True.
+[three_robot_dstar_mpc-4] [INFO] [1793509742.004199963] [three_robot_dstar_mpc]: Formation: column / tracking / closing gaps / final slots
+[social_costmap.py-12] [INFO] [1793509742.374067383] [social_navigation]: usable_orientations=2, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=0, remembered_people=4, remembered_viewers=2, tv_tracks=1, tv_raw_tracks=0, person_tracks=1, remembered_viewing_regions=0, viewing_recheck_required=0, search=Waiting for the observation cooldown.; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target

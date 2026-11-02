@@ -1,0 +1,10 @@
+{
+  "recorded_events": [
+    "contact_begin",
+    "contact_end"
+  ],
+  "marker_messages": 22,
+  "red_sphere_received": true,
+  "end_received": true,
+  "passed": true
+}

@@ -1,0 +1,465 @@
+{
+  "source": "recordings/thu_ne_01",
+  "sha256": "188e21ba449e617ba069f6bf729094028d52c92d6345b05f017d1666c1312d69",
+  "bytes_read": 11306660,
+  "frames": 1619,
+  "sim_time": [
+    0.001,
+    80.901
+  ],
+  "epochs": [
+    0
+  ],
+  "contacts": [
+    {
+      "pair": [
+        "robot3",
+        "tv_viewer_a_walking"
+      ],
+      "collision_interval_records": 905,
+      "episodes": [
+        {
+          "epoch": 0,
+          "first_t": 29.701,
+          "last_t": 32.268
+        }
+      ],
+      "collision_pairs": [
+        [
+          "social_dynamic::robot3::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::base_footprint::base_footprint_fixed_joint_lump__leader_camera_link_collision_3",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::base_footprint::base_footprint_fixed_joint_lump__lidar_support_collision_2",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::base_footprint::base_footprint_fixed_joint_lump__mast_collision_1",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::omni_wheel_link_1::omni_wheel_link_1_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::omni_wheel_link_2::omni_wheel_link_2_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::omni_wheel_link_3::omni_wheel_link_3_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_11::roller_link_11_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_12::roller_link_12_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_13::roller_link_13_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_14::roller_link_14_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_15::roller_link_15_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_16::roller_link_16_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_21::roller_link_21_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_22::roller_link_22_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_23::roller_link_23_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_24::roller_link_24_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_25::roller_link_25_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_26::roller_link_26_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_31::roller_link_31_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_32::roller_link_32_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_33::roller_link_33_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_34::roller_link_34_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_35::roller_link_35_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot3::roller_link_36::roller_link_36_collision",
+          "social_dynamic::tv_viewer_a_walking::link::body_envelope"
+        ]
+      ]
+    },
+    {
+      "pair": [
+        "patrol_person",
+        "robot2"
+      ],
+      "collision_interval_records": 457,
+      "episodes": [
+        {
+          "epoch": 0,
+          "first_t": 79.626,
+          "last_t": 80.901
+        }
+      ],
+      "collision_pairs": [
+        [
+          "social_dynamic::robot2::base_footprint::base_footprint_fixed_joint_lump__base_link_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::base_footprint::base_footprint_fixed_joint_lump__camera_link_1_collision_1",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::omni_wheel_link_1::omni_wheel_link_1_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::omni_wheel_link_2::omni_wheel_link_2_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::omni_wheel_link_3::omni_wheel_link_3_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_11::roller_link_11_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_12::roller_link_12_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_13::roller_link_13_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_14::roller_link_14_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_15::roller_link_15_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_16::roller_link_16_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_21::roller_link_21_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_22::roller_link_22_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_23::roller_link_23_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_24::roller_link_24_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_25::roller_link_25_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_26::roller_link_26_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_31::roller_link_31_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_32::roller_link_32_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_33::roller_link_33_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_34::roller_link_34_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_35::roller_link_35_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ],
+        [
+          "social_dynamic::robot2::roller_link_36::roller_link_36_collision",
+          "social_dynamic::patrol_person::link::body_envelope"
+        ]
+      ]
+    }
+  ],
+  "windows": [
+    {
+      "robot": "robot3",
+      "human": "tv_viewer_a_walking",
+      "time": [
+        28,
+        33
+      ],
+      "root_min_distance": 0.040334167558511484,
+      "root_min_time": 31.001,
+      "robot_net_displacement": 0.02075284324175305,
+      "snapshots": [
+        {
+          "t": 28.001,
+          "robot_xy": [
+            1.65195486882,
+            -1.88766141304
+          ],
+          "human_xy": [
+            1.6,
+            -2.5
+          ],
+          "root_distance": 0.6145387322815974,
+          "human_in_robot_body_xy": [
+            0.12088315230143018,
+            0.6025322538785306
+          ],
+          "robot_measured_body_velocity": [
+            -6.996647820033074e-08,
+            4.05139183739837e-08
+          ],
+          "human_measured_world_velocity": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "t": 29.001,
+          "robot_xy": [
+            1.65195486882,
+            -1.88766141304
+          ],
+          "human_xy": [
+            1.6,
+            -2.5
+          ],
+          "root_distance": 0.6145387322815974,
+          "human_in_robot_body_xy": [
+            0.12088315230143018,
+            0.6025322538785306
+          ],
+          "robot_measured_body_velocity": [
+            -0.0,
+            0.0
+          ],
+          "human_measured_world_velocity": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "t": 30.001,
+          "robot_xy": [
+            1.63982344773,
+            -1.86729624532
+          ],
+          "human_xy": [
+            1.6,
+            -2.22555945063
+          ],
+          "root_distance": 0.36046973696567003,
+          "human_in_robot_body_xy": [
+            0.07415596437197014,
+            0.35275958415918685
+          ],
+          "robot_measured_body_velocity": [
+            0.020225697044742065,
+            -0.042878513439260475
+          ],
+          "human_measured_world_velocity": [
+            0.0,
+            0.3163999999999998
+          ]
+        },
+        {
+          "t": 33.001,
+          "robot_xy": [
+            1.64188932863,
+            -1.86951298602
+          ],
+          "human_xy": [
+            1.6,
+            -1.16680945063
+          ],
+          "root_distance": 0.7039509745022569,
+          "human_in_robot_body_xy": [
+            0.00040587253618794977,
+            -0.7039508574965737
+          ],
+          "robot_measured_body_velocity": [
+            -2.7578268906725394e-05,
+            -0.0004766304406154881
+          ],
+          "human_measured_world_velocity": [
+            0.0,
+            0.35420000000000007
+          ]
+        }
+      ]
+    },
+    {
+      "robot": "robot2",
+      "human": "patrol_person",
+      "time": [
+        78,
+        80.901
+      ],
+      "root_min_distance": 0.19919427686789032,
+      "root_min_time": 80.551,
+      "robot_net_displacement": 0.0022469282305060227,
+      "snapshots": [
+        {
+          "t": 78.001,
+          "robot_xy": [
+            1.40377307052,
+            -2.01800460978
+          ],
+          "human_xy": [
+            1.6,
+            -0.969525877128
+          ],
+          "root_distance": 1.0666830179002071,
+          "human_in_robot_body_xy": [
+            0.09755127326302523,
+            1.0622129775903963
+          ],
+          "robot_measured_body_velocity": [
+            0.0,
+            0.0
+          ],
+          "human_measured_world_velocity": [
+            0.0,
+            -0.3648
+          ]
+        },
+        {
+          "t": 79.001,
+          "robot_xy": [
+            1.40377307052,
+            -2.01800460978
+          ],
+          "human_xy": [
+            1.6,
+            -1.37432587713
+          ],
+          "root_distance": 0.6729244524603482,
+          "human_in_robot_body_xy": [
+            0.1353178447447837,
+            0.6591785794552838
+          ],
+          "robot_measured_body_velocity": [
+            0.0,
+            0.0
+          ],
+          "human_measured_world_velocity": [
+            0.0,
+            -0.4047999999999998
+          ]
+        },
+        {
+          "t": 80.001,
+          "robot_xy": [
+            1.40163108839,
+            -2.01754818165
+          ],
+          "human_xy": [
+            1.6,
+            -1.77912587713
+          ],
+          "root_distance": 0.31015386566342135,
+          "human_in_robot_body_xy": [
+            0.17328800992539165,
+            0.2572288591936391
+          ],
+          "robot_measured_body_velocity": [
+            -0.004354230254912685,
+            0.0004757470121619634
+          ],
+          "human_measured_world_velocity": [
+            0.0,
+            -0.40480000000000027
+          ]
+        },
+        {
+          "t": 80.901,
+          "robot_xy": [
+            1.40156978619,
+            -2.01756390054
+          ],
+          "human_xy": [
+            1.6,
+            -2
+          ],
+          "root_distance": 0.19920602489598888,
+          "human_in_robot_body_xy": [
+            0.1956395576697264,
+            0.03752604201957799
+          ],
+          "robot_measured_body_velocity": [
+            -3.753442225136949e-05,
+            1.6586906744093164e-05
+          ],
+          "human_measured_world_velocity": [
+            0.0,
+            -0.11854824574
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No camera pixels, LiDAR scans, goal or cmd_vel recorded; cannot infer perception failure or command intent.",
+    "Measured displacement may include physics response; it is not a command.",
+    "Model root distance is not surface clearance.",
+    "Contact intervals merged across collision shapes with gaps <= 0.1 sim s; record count is not number of impacts."
+  ]
+}

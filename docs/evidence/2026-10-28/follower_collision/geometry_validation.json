@@ -1,0 +1,8 @@
+{
+  "urdf_collisions": 23,
+  "sdf_collisions": 23,
+  "sdf_collision_meshes": 1,
+  "roller_cylinders": 18,
+  "continuous_joints": 21,
+  "self_collision_enabled": 0
+}

@@ -1,0 +1,3 @@
+{"robot": 1, "status": "normal_mpc: no feasible rollout at step=6; rejected={'map': 0, 'lidar': 0, 'track': 58, 'peer': 0}", "command": [0.0, 0.0, 0.0], "ms": 22.86453699980484}
+{"robot": 2, "status": "normal_mpc: no feasible rollout at step=6; rejected={'map': 0, 'lidar': 0, 'track': 58, 'peer': 0}", "command": [0.0, 0.0, 0.0], "ms": 11.54695700006414}
+{"robot": 3, "status": "normal_mpc: no feasible rollout at step=6; rejected={'map': 0, 'lidar': 0, 'track': 58, 'peer': 0}", "command": [0.0, 0.0, 0.0], "ms": 13.369195999985095}

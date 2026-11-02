@@ -1,0 +1,104 @@
+Sun Nov  1 13:34:33 2026    docs/evidence/2026-11-01/avoidance_rework/coordinator.prof
+
+         15278682 function calls (15273076 primitive calls) in 19.984 seconds
+
+   Ordered by: cumulative time
+   List reduced from 3367 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    765/1    0.011    0.000   19.988   19.988 {built-in method builtins.exec}
+        1    0.000    0.000   19.988   19.988 /home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/three_robot_dstar_mpc:1(<module>)
+        1    0.000    0.000   18.423   18.423 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1757(main)
+        1    0.013    0.013   17.918   17.918 /opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py:214(spin)
+     2158    0.004    0.000   17.880    0.008 /opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py:811(spin_once)
+     2158    0.018    0.000   17.876    0.008 /opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py:796(_spin_once_impl)
+     2158    0.023    0.000   15.863    0.007 /opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py:272(__call__)
+     2158    0.020    0.000   15.823    0.007 /opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py:306(_execute_coroutine_step)
+     2158    0.043    0.000   15.768    0.007 {method 'send' of 'coroutine' objects}
+     2158    0.042    0.000   15.725    0.007 /opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py:468(handler)
+     2122    2.260    0.001   14.266    0.007 /opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py:398(_take_subscription)
+    46216    0.558    0.000    4.756    0.000 /opt/ros/humble/local/lib/python3.10/dist-packages/geometry_msgs/msg/_transform_stamped.py:83(__init__)
+    91908    0.889    0.000    4.754    0.000 /opt/ros/humble/local/lib/python3.10/dist-packages/geometry_msgs/msg/_transform.py:80(__init__)
+   140177    1.311    0.000    2.411    0.000 /opt/ros/humble/local/lib/python3.10/dist-packages/geometry_msgs/msg/_quaternion.py:104(__init__)
+    93864    0.687    0.000    2.343    0.000 /opt/ros/humble/local/lib/python3.10/dist-packages/std_msgs/msg/_header.py:76(__init__)
+1015083/1014900    1.353    0.000    2.224    0.000 <frozen importlib._bootstrap>:1053(_handle_fromlist)
+     2158    0.015    0.000    1.994    0.001 /opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py:766(wait_for_ready_callbacks)
+     2989    0.034    0.000    1.980    0.001 {built-in method builtins.next}
+     2851    0.778    0.000    1.943    0.001 /opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py:516(_wait_for_ready_callbacks)
+   554/61    0.011    0.000    1.706    0.028 <frozen importlib._bootstrap>:1022(_find_and_load)
+   506/13    0.007    0.000    1.700    0.131 <frozen importlib._bootstrap>:987(_find_and_load_unlocked)
+   489/14    0.008    0.000    1.696    0.121 <frozen importlib._bootstrap>:664(_load_unlocked)
+   849/25    0.004    0.000    1.692    0.068 <frozen importlib._bootstrap>:233(_call_with_frames_removed)
+    436/4    0.004    0.000    1.678    0.419 <frozen importlib._bootstrap_external>:877(exec_module)
+   142197    0.818    0.000    1.569    0.000 /opt/ros/humble/local/lib/python3.10/dist-packages/geometry_msgs/msg/_vector3.py:77(__init__)
+
+
+Sun Nov  1 13:34:33 2026    docs/evidence/2026-11-01/avoidance_rework/coordinator.prof
+
+         15278682 function calls (15273076 primitive calls) in 19.984 seconds
+
+   Ordered by: cumulative time
+   List reduced from 3367 to 59 due to restriction <'dstar_mpc_controller'>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   18.423   18.423 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1757(main)
+        1    0.000    0.000    1.470    1.470 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1(<module>)
+       36    0.003    0.000    0.436    0.012 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1621(control_tick)
+        1    0.001    0.001    0.424    0.424 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:268(__init__)
+      534    0.002    0.000    0.327    0.001 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:442(<lambda>)
+      534    0.007    0.000    0.325    0.001 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:517(odom_callback)
+      534    0.029    0.000    0.318    0.001 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:545(publish_map_odom)
+      662    0.055    0.000    0.228    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:529(world_pose_callback)
+       36    0.016    0.000    0.216    0.006 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1665(publish_markers)
+        1    0.001    0.001    0.168    0.168 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:591(map_callback)
+        1    0.136    0.136    0.160    0.160 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:637(make_inflated_grid)
+       36    0.002    0.000    0.158    0.004 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1406(publish_reference)
+     1986    0.021    0.000    0.116    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:506(record_pose)
+     2855    0.022    0.000    0.114    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:490(now_seconds)
+       36    0.001    0.000    0.091    0.003 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:987(start_peer_recovery)
+       37    0.001    0.000    0.038    0.001 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1245(clear_paths)
+     2511    0.022    0.000    0.035    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:54(quaternion_yaw)
+       36    0.003    0.000    0.035    0.001 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1649(publish_team_states)
+       73    0.002    0.000    0.032    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1239(publish_empty_reference)
+       45    0.000    0.000    0.029    0.001 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:448(<lambda>)
+       45    0.013    0.000    0.029    0.001 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:565(scan_callback)
+       37    0.013    0.000    0.020    0.001 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1552(update_dynamic_layer)
+     7944    0.008    0.000    0.010    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:507(<genexpr>)
+        1    0.000    0.000    0.009    0.009 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:966(recovery_map_callback)
+      144    0.000    0.000    0.008    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1456(<genexpr>)
+        1    0.008    0.008    0.008    0.008 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:973(<listcomp>)
+      108    0.001    0.000    0.008    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:712(is_free_world)
+        1    0.000    0.000    0.007    0.007 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:396(<listcomp>)
+      117    0.001    0.000    0.006    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:493(poses_ready)
+      216    0.002    0.000    0.004    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:61(set_pose_yaw)
+       72    0.001    0.000    0.004    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:933(moving_safety_active)
+     2945    0.003    0.000    0.004    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:586(<genexpr>)
+     1929    0.002    0.000    0.002    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:715(<genexpr>)
+      200    0.001    0.000    0.002    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:408(<lambda>)
+      522    0.002    0.000    0.002    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:50(normalize_angle)
+      466    0.002    0.000    0.002    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:495(<genexpr>)
+      200    0.001    0.000    0.002    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:938(moving_safety_callback)
+      272    0.001    0.000    0.002    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:684(world_to_grid)
+      368    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:483(get_robot_pose)
+        1    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:659(<listcomp>)
+      144    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1415(<genexpr>)
+       44    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:589(<listcomp>)
+        8    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1560(<listcomp>)
+       35    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:46(clamp)
+        4    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1099(plan)
+       72    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:935(<genexpr>)
+      108    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:717(<genexpr>)
+        1    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:265(ThreeRobotDStarMPC)
+        1    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:68(DStarLiteGrid)
+        2    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:317(<lambda>)
+        1    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:306(<listcomp>)
+        7    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1599(invalidate_blocked_motion)
+        1    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:1772(DistributedRobotMPC)
+       12    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:307(<genexpr>)
+        3    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:316(<genexpr>)
+        4    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:479(<genexpr>)
+        1    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:434(<listcomp>)
+        1    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:435(<listcomp>)
+        1    0.000    0.000    0.000    0.000 /home/duc/three-robot-rescue/build/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py:436(<listcomp>)
+
+

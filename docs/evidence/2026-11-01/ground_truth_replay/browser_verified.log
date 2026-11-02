@@ -1,0 +1,8 @@
+*** You are running in headless mode.
+Gtk-Message: 20:20:36.865: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+[WARN  glean_core::upload] Attempted to enqueue a duplicate ping 30990444-0846-4598-9604-2a156ed35dd1 at /submit/firefox-desktop/deletion-request/1/30990444-0846-4598-9604-2a156ed35dd1.
+[WARN  rkv::backend::impl_safe::environment] `load_ratio()` is irrelevant for this storage backend.
+[WARN  neqo_common::log] Logging initialization error SetLoggerError(())
+[WARN  neqo_transport::ecn] ECN validation failed, no ECN counts in ACK frame
+[WARN  glean_core::upload] Recoverable upload failure while attempting to send ping 70ef77eb-71f5-4200-ad21-548f02f0cc57, will retry. Error was RecoverableFailure { unused: 0 }

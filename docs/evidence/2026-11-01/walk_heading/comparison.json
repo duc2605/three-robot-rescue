@@ -1,0 +1,40 @@
+{
+  "snapshots": [
+    {
+      "sim": 3.9,
+      "trajectory": [
+        -4.22258,
+        -4.8,
+        1.0599,
+        0.0,
+        0.0,
+        -0.000576
+      ],
+      "animation_nanoseconds": 5701886701
+    },
+    {
+      "sim": 8.004,
+      "trajectory": [
+        -2.58498,
+        -4.8,
+        1.0599,
+        0.0,
+        0.0,
+        -0.000576
+      ],
+      "animation_nanoseconds": 980786233
+    }
+  ],
+  "loop_metadata": {
+    "duration": 5.74999938,
+    "height_offset": 1.0599,
+    "mesh": "walk_inplace.dae",
+    "mesh_forward_yaw": 0.0005762013130303796,
+    "reference_speed": 0.24157310378032307,
+    "forward_calibration": "mean rest Foot to ToeBase XY, both feet"
+  },
+  "displacement_m": 1.6376,
+  "rendered_forward_dot_travel": 0.9999999999999797,
+  "cpp_translated_samples": 4730,
+  "limits": "Two GUI frames on one straight section; full-route heading checked in synthetic ECM, not full Gazebo cycle or biomechanical validation"
+}

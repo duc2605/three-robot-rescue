@@ -1,0 +1,4 @@
+[INFO] [1793556905.150428082] [distributed_robot_mpc]: robot1: MPC waiting for measured team poses and common reference.
+[INFO] [1793556905.161123996] [distributed_robot_mpc]: robot2: MPC waiting for measured team poses and common reference.
+[INFO] [1793556905.172052173] [distributed_robot_mpc]: robot3: MPC waiting for measured team poses and common reference.
+[{'robot': 'robot1', 'camera_subscription': False, 'lidar_range': 2.0, 'all_three_scan_subscriptions': True}, {'robot': 'robot2', 'camera_subscription': False, 'lidar_range': 2.0, 'all_three_scan_subscriptions': True}, {'robot': 'robot3', 'camera_subscription': False, 'lidar_range': 2.0, 'all_three_scan_subscriptions': True}]

@@ -1,0 +1,21 @@
+[3.084s] [three_robot_dstar_mpc-4] [WARN] [1793515948.547497627] [three_robot_dstar_mpc]: D* Lite: no route for the leader with current obstacles.
+[5.098s] [three_robot_dstar_mpc-4] [INFO] [1793515950.464039183] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[9.154s] [spawner-20] [WARN] [1793515953.751487811] [robot2.robot2_controller_spawner]: Failed getting a result from calling /robot2/controller_manager/load_controller in 10.0. (Attempt 1 of 3.)
+[9.154s] [ign gazebo-1] [ERROR] [1793515953.751993905] [robot2.controller_manager]: A controller named 'joint_state_broadcaster' was already loaded inside the controller manager
+[9.154s] [ERROR] [spawner-20]: process has died [pid 35198, exit code 1, cmd '/opt/ros/humble/lib/controller_manager/spawner joint_state_broadcaster wheel1_controller wheel2_controller wheel3_controller --controller-manager /robot2/controller_manager --controller-manager-timeout 60 --ros-args -r __node:=robot2_controller_spawner -r __ns:=/robot2'].
+[11.216s] [three_robot_dstar_mpc-4] [INFO] [1793515956.695495234] [three_robot_dstar_mpc]: Formation: peer separation recovery
+[19.322s] [three_robot_dstar_mpc-4] [WARN] [1793515964.012780722] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[22.375s] [three_robot_dstar_mpc-4] [WARN] [1793515967.070763520] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[25.401s] [three_robot_dstar_mpc-4] [WARN] [1793515970.222107464] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[28.429s] [three_robot_dstar_mpc-4] [WARN] [1793515973.414606411] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[31.472s] [three_robot_dstar_mpc-4] [WARN] [1793515976.539804110] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[34.489s] [three_robot_dstar_mpc-4] [WARN] [1793515979.638550073] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[37.521s] [three_robot_dstar_mpc-4] [WARN] [1793515982.677406459] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[40.572s] [three_robot_dstar_mpc-4] [WARN] [1793515985.707634769] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[43.603s] [three_robot_dstar_mpc-4] [WARN] [1793515988.742670216] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[46.654s] [three_robot_dstar_mpc-4] [WARN] [1793515991.773057529] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[49.672s] [three_robot_dstar_mpc-4] [WARN] [1793515995.065200389] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[52.690s] [three_robot_dstar_mpc-4] [WARN] [1793515998.172026423] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[56.722s] [three_robot_dstar_mpc-4] [WARN] [1793516001.414456765] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[57.737s] [rviz2-8] [INFO] [1793516002.370277392] [rviz2]: Setting goal pose: Frame:map, Position(1.03553, -2.48528, 0), Orientation(0, 0, 0, 1) = Angle: 0
+[59.754s] [three_robot_dstar_mpc-4] [WARN] [1793516004.427586236] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.

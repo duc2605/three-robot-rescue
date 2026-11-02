@@ -1,0 +1,359 @@
+{
+  "source_session": "recordings/nk078_social_camera_120s_once",
+  "checkpoints": [
+    {
+      "robot": "robot3",
+      "t": 83.0,
+      "reason": "checked_escape_command",
+      "pose": [
+        0.6232473635246454,
+        -1.800343586894707,
+        -0.2218868577798394
+      ],
+      "command_body": [
+        0.0396643560727032,
+        -0.2739871977849119,
+        0.0
+      ],
+      "command_world": [
+        -0.02160458812582034,
+        -0.2759990714922865
+      ],
+      "last_selected_goal": [
+        0.6200066753057724,
+        -2.6397434476185473
+      ],
+      "selected_goal_is_new": true,
+      "nearby_track": {
+        "position": [
+          1.4209058853940413,
+          -1.9839047801344905
+        ],
+        "velocity": [
+          -0.1402252476740598,
+          -0.0032909757770643463
+        ],
+        "radius": 0.4299999999999995,
+        "stamp": 82.9
+      },
+      "ground_truth_patrol_velocity_at_track_stamp": [
+        -0.4040000000000229,
+        0.0
+      ],
+      "scan_age_sim": 0.09999999999999432,
+      "state_age_sim": 0.09999999999999432,
+      "compute_ms": 61.9308540003658,
+      "rejected_checks": {
+        "astar.endpoint_approach_corridor": 2,
+        "astar.moving": 1,
+        "escape.moving": 9,
+        "escape.peer": 14,
+        "escape.lidar": 2
+      }
+    },
+    {
+      "robot": "robot3",
+      "t": 83.10000000000001,
+      "reason": "checked_escape_command",
+      "pose": [
+        0.6072536016343352,
+        -1.8210813243339248,
+        -0.17279887051071355
+      ],
+      "command_body": [
+        0.02144813473195532,
+        -0.1960887428575773,
+        0.0
+      ],
+      "command_world": [
+        -0.012586823050576929,
+        -0.1968562659516802
+      ],
+      "last_selected_goal": [
+        0.5272536016343352,
+        -1.2610813243339247
+      ],
+      "selected_goal_is_new": true,
+      "nearby_track": {
+        "position": [
+          1.377037011613308,
+          -1.9900094106253559
+        ],
+        "velocity": [
+          -0.16814658594663506,
+          -0.012410473119952931
+        ],
+        "radius": 0.4300000000000009,
+        "stamp": 83.0
+      },
+      "ground_truth_patrol_velocity_at_track_stamp": [
+        -0.40399999999996544,
+        0.0
+      ],
+      "scan_age_sim": 0.10000000000000853,
+      "state_age_sim": 0.10400000000001342,
+      "compute_ms": 61.99155600006634,
+      "rejected_checks": {
+        "astar.moving": 2,
+        "astar.map": 1,
+        "astar.peer": 2,
+        "escape.moving": 9,
+        "astar.endpoint_approach_corridor": 2,
+        "escape.peer": 6,
+        "escape.lidar": 2
+      }
+    },
+    {
+      "robot": "robot3",
+      "t": 83.5,
+      "reason": "escape_all_rollouts_rejected",
+      "pose": [
+        0.5636697347674944,
+        -1.890434700704426,
+        -0.09390733509155855
+      ],
+      "command_body": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "command_world": [
+        0.0,
+        0.0
+      ],
+      "last_selected_goal": [
+        0.5272536016343352,
+        -1.2610813243339247
+      ],
+      "selected_goal_is_new": false,
+      "nearby_track": {
+        "position": [
+          1.1220436526077395,
+          -1.998066962889841
+        ],
+        "velocity": [
+          -0.4022850797544119,
+          0.08327625486959919
+        ],
+        "radius": 0.4699999999999995,
+        "stamp": 83.4
+      },
+      "ground_truth_patrol_velocity_at_track_stamp": [
+        -0.4040000000000229,
+        0.0
+      ],
+      "scan_age_sim": 0.09999999999999432,
+      "state_age_sim": 0.1039999999999992,
+      "compute_ms": 21.0122430003139,
+      "rejected_checks": {
+        "escape.moving": 144
+      }
+    },
+    {
+      "robot": "robot3",
+      "t": 84.10000000000001,
+      "reason": "escape_all_rollouts_rejected",
+      "pose": [
+        0.5478007676414705,
+        -1.9113173906859557,
+        -0.06840685089274007
+      ],
+      "command_body": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "command_world": [
+        0.0,
+        0.0
+      ],
+      "last_selected_goal": [
+        0.5272536016343352,
+        -1.2610813243339247
+      ],
+      "selected_goal_is_new": false,
+      "nearby_track": {
+        "position": [
+          0.9026708805392927,
+          -1.999097883319494
+        ],
+        "velocity": [
+          -0.578152237215814,
+          -0.09563900653513004
+        ],
+        "radius": 0.4300000000000009,
+        "stamp": 84.0
+      },
+      "ground_truth_patrol_velocity_at_track_stamp": [
+        -0.40399999999996544,
+        0.0
+      ],
+      "scan_age_sim": 0.10000000000000853,
+      "state_age_sim": 0.10600000000000875,
+      "compute_ms": 26.40879299997323,
+      "rejected_checks": {
+        "astar.moving": 15,
+        "escape.moving": 140
+      }
+    },
+    {
+      "robot": "robot2",
+      "t": 84.0,
+      "reason": "moving_obstacle_pause_hold",
+      "pose": [
+        0.004397608009534257,
+        -1.8861012776375363,
+        -0.825577685594897
+      ],
+      "command_body": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "command_world": [
+        0.0,
+        0.0
+      ],
+      "last_selected_goal": [
+        -0.5584265561474423,
+        -1.348133206140775
+      ],
+      "selected_goal_is_new": false,
+      "nearby_track": {
+        "position": [
+          1.0089061537096176,
+          -2.032342500956616
+        ],
+        "velocity": [
+          0.0,
+          0.0
+        ],
+        "radius": 0.8299999999999995,
+        "stamp": 83.9
+      },
+      "ground_truth_patrol_velocity_at_track_stamp": [
+        -0.4040000000000229,
+        0.0
+      ],
+      "scan_age_sim": 0.09999999999999432,
+      "state_age_sim": 0.10200000000000387,
+      "compute_ms": 2.562208000199462,
+      "rejected_checks": {}
+    },
+    {
+      "robot": "robot2",
+      "t": 85.10000000000001,
+      "reason": "moving_obstacle_pause_hold",
+      "pose": [
+        -0.053260859163352846,
+        -1.947561777799976,
+        -0.5691866036829442
+      ],
+      "command_body": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "command_world": [
+        0.0,
+        0.0
+      ],
+      "last_selected_goal": [
+        -0.5934963512349081,
+        -2.4980049727674993
+      ],
+      "selected_goal_is_new": false,
+      "nearby_track": {
+        "position": [
+          0.5478464677940996,
+          -2.128572854171401
+        ],
+        "velocity": [
+          0.0,
+          0.0
+        ],
+        "radius": 0.830000000000001,
+        "stamp": 85.0
+      },
+      "ground_truth_patrol_velocity_at_track_stamp": [
+        -0.40399999999996544,
+        0.0
+      ],
+      "scan_age_sim": 0.10000000000000853,
+      "state_age_sim": 0.10400000000001342,
+      "compute_ms": 2.1269379999466764,
+      "rejected_checks": {}
+    },
+    {
+      "robot": "robot2",
+      "t": 85.60000000000001,
+      "reason": "escape_all_rollouts_rejected",
+      "pose": [
+        -0.051206928413896374,
+        -1.9562631291375598,
+        -0.5695019133488969
+      ],
+      "command_body": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "command_world": [
+        0.0,
+        0.0
+      ],
+      "last_selected_goal": [
+        -0.5934963512349081,
+        -2.4980049727674993
+      ],
+      "selected_goal_is_new": false,
+      "nearby_track": {
+        "position": [
+          0.3627774203796144,
+          -2.099104493567838
+        ],
+        "velocity": [
+          -0.4091653350023641,
+          0.03879915788779232
+        ],
+        "radius": 0.4300000000000009,
+        "stamp": 85.5
+      },
+      "ground_truth_patrol_velocity_at_track_stamp": [
+        -0.40399999999996544,
+        0.0
+      ],
+      "scan_age_sim": 0.10000000000000853,
+      "state_age_sim": 0.10200000000000387,
+      "compute_ms": 13.397356000041327,
+      "rejected_checks": {
+        "astar.moving": 15,
+        "escape.moving": 132
+      }
+    }
+  ],
+  "leader_root_displacement_during_zero_command": {
+    "start_t": 83.201,
+    "end_t": 84.151,
+    "start": [
+      0.583259535332,
+      -1.86405920925
+    ],
+    "end": [
+      0.54701143895,
+      -1.91107849017
+    ],
+    "distance_m": 0.05936949780445042
+  },
+  "ground_truth_use": "offline evaluation only; no semantic identity from LiDAR implied",
+  "source_hashes": {
+    "social_navigation_planner/social_navigation_planner/moving_obstacles.py": "26258196ae649b698e01fb94e51d9a1532c144cf8b47ab5460082d097de24c5e",
+    "social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py": "90690517c1bca0a93ab9abab56bcbf02b578dd0345ab2cb0fa4a3cf4a9f82e49"
+  },
+  "limits": [
+    "No new simulation or intervention",
+    "No proof an admissible physical escape existed after83.3s",
+    "No actuator/wheel diagnosis from root drift alone",
+    "No matched120s cameraoff baseline; do not attribute causality to camera enable alone"
+  ]
+}

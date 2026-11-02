@@ -1,0 +1,12 @@
+{
+  "reference": "local snapshot HEAD 5ac6982; not an exact archive of all source at NK-008",
+  "DStarLiteGrid_ast_equal": true,
+  "methods": {
+    "map_callback": true,
+    "update_dynamic_layer": true,
+    "invalidate_blocked_motion": true,
+    "control_tick": true
+  },
+  "roller_unchanged_after_package_normalization": true,
+  "world_unchanged_since_file_rename_after_package_normalization": true
+}

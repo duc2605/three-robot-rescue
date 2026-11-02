@@ -1,0 +1,4 @@
+[1.012s] [ign gazebo-1] [WARN] [1793515590.960311890] [robot3.gz_ros2_control]: IMU sensor 'robot1_imu_sensor' not found in hardware_info, skipping.
+[1.012s] [ign gazebo-1] [WARN] [1793515590.960328271] [robot3.gz_ros2_control]: IMU sensor 'robot2_imu_sensor' not found in hardware_info, skipping.
+[1.012s] [ign gazebo-1] [WARN] [1793515590.960343851] [robot3.gz_ros2_control]: IMU sensor 'robot3_imu_sensor' not found in hardware_info, skipping.
+[2.012s] [ign gazebo-1] [WARN] [1793515591.010879982] [robot3.gz_ros2_control]:  Desired controller update period (0.02 s) is slower than the gazebo simulation period (0.001 s).

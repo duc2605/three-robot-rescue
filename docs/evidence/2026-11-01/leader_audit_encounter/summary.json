@@ -1,0 +1,209 @@
+{
+  "elapsed": 120.0,
+  "sim": 75.055,
+  "sim_elapsed": 26.18200000000001,
+  "rtf_recent": 0.22897289257546644,
+  "goal": [
+    1.08156,
+    -2.57733
+  ],
+  "leader_goal_distance": 0.10865694976030696,
+  "team": [
+    [
+      1.6983376142128874,
+      -2.1225223726158995,
+      -2.1180565475837962
+    ],
+    [
+      1.4180774835853056,
+      -2.1951268201407843,
+      -0.5432654548128898
+    ],
+    [
+      1.1186104172674782,
+      -2.4751850083874904,
+      -2.6359122273354125
+    ]
+  ],
+  "path_length_sampled": [
+    2.9361721620998384,
+    3.4672818093762694,
+    3.284547054995759
+  ],
+  "command_counts": {
+    "robot1": {
+      "total": 352,
+      "linear_nonzero": 82,
+      "angular_nonzero": 73,
+      "any_nonzero": 82
+    },
+    "robot2": {
+      "total": 393,
+      "linear_nonzero": 97,
+      "angular_nonzero": 110,
+      "any_nonzero": 115
+    },
+    "robot3": {
+      "total": 337,
+      "linear_nonzero": 104,
+      "angular_nonzero": 96,
+      "any_nonzero": 108
+    }
+  },
+  "safety_latest": {
+    "robot1": "stale_data: holding; fresh state/reference or active escape sensors required",
+    "robot2": "stale_data: holding; fresh state/reference or active escape sensors required",
+    "robot3": "stale_data: holding; fresh state/reference or active escape sensors required"
+  },
+  "counts": {
+    "clock": 26183,
+    "robot3/cmd": 337,
+    "team": 259,
+    "reference": 281,
+    "robot2/cmd": 393,
+    "robot1/cmd": 352,
+    "robot1/scan": 131,
+    "robot2/scan": 131,
+    "robot3/scan": 98,
+    "robot2/safety": 186,
+    "robot1/safety": 251,
+    "robot3/safety": 156
+  },
+  "log_warning_counts": {},
+  "social": null,
+  "observation": null,
+  "started_vietnam": "2026-11-01T12:46:14.798158+07:00",
+  "ended_vietnam": "2026-11-01T12:48:14.983566+07:00",
+  "duration_wall_seconds": 120.00035043599974,
+  "first_team": [
+    [
+      3.857016575221625,
+      -2.624826310784198,
+      -2.9735257108727664
+    ],
+    [
+      2.895187560882804,
+      -2.667816214362013,
+      2.065195774257392
+    ],
+    [
+      3.0897030892335517,
+      -2.292369157557308,
+      2.8782210879267307
+    ]
+  ],
+  "status_message_counts": {
+    "robot1": {
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 12, 'peer': 0}": 3,
+      "normal": 109,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}": 15,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 9, 'peer': 0}": 19,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}": 37,
+      "stale_data: holding; fresh state/reference or active escape sensors required": 33,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.286m buffer_gap=-0.556m": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 10, 'peer': 0}": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 1, 'peer': 0}": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.004m buffer_gap=-0.210m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.092m buffer_gap=-0.128m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.166m buffer_gap=-0.256m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.112m buffer_gap=-0.212m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.112m buffer_gap=-0.222m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.113m buffer_gap=-0.233m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.113m buffer_gap=-0.243m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.113m buffer_gap=-0.253m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.113m buffer_gap=-0.263m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.223m buffer_gap=-0.372m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.223m buffer_gap=-0.382m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.223m buffer_gap=-0.392m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.223m buffer_gap=-0.402m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.223m buffer_gap=-0.412m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.223m buffer_gap=-0.422m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.223m buffer_gap=-0.432m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.223m buffer_gap=-0.442m": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 6, 'peer': 0}": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.241m buffer_gap=-0.351m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.240m buffer_gap=-0.360m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.240m buffer_gap=-0.370m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.240m buffer_gap=-0.380m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.239m buffer_gap=-0.389m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.239m buffer_gap=-0.399m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.203m buffer_gap=-0.413m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.202m buffer_gap=-0.422m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.202m buffer_gap=-0.432m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.202m buffer_gap=-0.442m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.201m buffer_gap=-0.451m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.201m buffer_gap=-0.461m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.201m buffer_gap=-0.471m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.201m buffer_gap=-0.481m": 1
+    },
+    "robot2": {
+      "stale_data: holding; fresh state/reference or active escape sensors required": 54,
+      "normal": 82,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 12, 'peer': 0}": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}": 5,
+      "moving_obstacle: yielding with checked local escape; speed=0.90m/s band=fast TTC=2.66s; A*=right; uncertainty_recovery=False": 1,
+      "moving_obstacle: stop, stale state or escape sensors; hazard unresolved": 1,
+      "moving_obstacle: stop, fresh state/lidar/physical map required": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 10, 'peer': 0}": 3,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}": 16,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.031m buffer_gap=-0.179m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.014m buffer_gap=-0.206m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.002m buffer_gap=-0.232m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.019m buffer_gap=-0.259m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.036m buffer_gap=-0.286m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.050m buffer_gap=-0.310m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=-0.065m buffer_gap=-0.335m": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 2, 'peer': 0}": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 8}": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.83m/s band=fast TTC=1.42s; A*=reactive fallback; uncertainty_recovery=False": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.940m buffer_gap=0.807m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.943m buffer_gap=0.809m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.941m buffer_gap=0.802m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.002m buffer_gap=0.792m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.002m buffer_gap=0.782m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.987m buffer_gap=0.804m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.908m buffer_gap=0.715m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.056m buffer_gap=0.960m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=1.057m buffer_gap=0.953m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.792m buffer_gap=0.582m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.792m buffer_gap=0.572m": 1,
+      "moving_obstacle: no verified safe escape, holding; estimated_body_gap=0.793m buffer_gap=0.563m": 1
+    },
+    "robot3": {
+      "stale_data: holding; fresh state/reference or active escape sensors required": 51,
+      "normal": 73,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 13, 'peer': 0}": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 11, 'peer': 0}": 5,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 10, 'peer': 0}": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 7, 'peer': 0}": 4,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 9, 'peer': 0}": 6,
+      "moving_obstacle: yielding with checked local escape; speed=0.29m/s band=slow TTC=1.30s; A*=right; uncertainty_recovery=False": 1,
+      "moving_obstacle: stop, stale state or escape sensors; hazard unresolved": 2,
+      "moving_obstacle: yielding with checked local escape; speed=0.00m/s band=close TTC=0.00s; A*=rear; uncertainty_recovery=False": 3,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 3, 'peer': 0}": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 2, 'peer': 0}": 4,
+      "moving_obstacle: stop, fresh state/lidar/physical map required": 2,
+      "moving_obstacle: yielding with checked local escape; speed=0.17m/s band=slow TTC=2.76s; A*=left; uncertainty_recovery=False": 1,
+      "moving_obstacle: yielding with checked local escape; speed=0.15m/s band=slow TTC=1.89s; A*=reactive fallback; uncertainty_recovery=False": 1
+    }
+  },
+  "goal_changes": [
+    {
+      "elapsed": 0.075,
+      "sim": null,
+      "xy": [
+        1.08156,
+        -2.57733
+      ],
+      "source": "trial initial goal (user or unchanged reapplied goal)"
+    }
+  ],
+  "min_capture_matched_camera_center_distance": null,
+  "limitations": [
+    "Read-only ROS observations; no contact sensor or ground-truth collision verification",
+    "Path length is sampled XY movement with 2 mm noise threshold per 1s snapshot",
+    "Status message counts are not time percentages or independent hazard encounters",
+    "Data age and receipt age differ; camera-center distance only computed with <=0.2s capture stamp difference",
+    "No goal, command, parameter or restart action by monitor"
+  ]
+}

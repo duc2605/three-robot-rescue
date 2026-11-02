@@ -1,0 +1,48 @@
+{
+  "session": "recordings/lidar_vung_01",
+  "window": {
+    "start_exclusive": 106.025,
+    "end_inclusive": 126.025
+  },
+  "decision_counts": {
+    "invalid_or_empty_reference": 1,
+    "missing_or_stale_reference": 1,
+    "mpc_compute_budget_exhausted": 173,
+    "checked_escape_command": 2,
+    "escape_compute_budget_exhausted": 2,
+    "moving_obstacle_pause_hold": 12
+  },
+  "frame_t": 126.301,
+  "leader": {
+    "id": 365,
+    "name": "robot3",
+    "kind": "model",
+    "p": [
+      0.525395211406,
+      -0.375415503126,
+      0.0194215129762,
+      4.27102722869e-05,
+      0.00591694847789,
+      -0.56963168948
+    ]
+  },
+  "goal": {
+    "t": 3.031,
+    "epoch": 0,
+    "sequence": 1,
+    "xy": [
+      1.0815577507019043,
+      -2.0020322799682617
+    ],
+    "source": "selected_goal",
+    "meaning": "Selected map goal; route feasibility not guaranteed"
+  },
+  "goal_distance_m": 1.7190691983805586,
+  "non_ground_contacts_at_last_frame": [],
+  "wall_budget_s": 0.1,
+  "cause_confirmed": "MPC exceeded compute deadline and explicitly published zero Twist; underlying per-check cost/CPU contention not profiled",
+  "camera_enabled": false,
+  "navigation_changed": false,
+  "ros_safety_topic_probe": "12-second timeout; no message obtained; conclusion uses recorded decision stream and source",
+  "source_sha256": "ce3425b37ebbe7919c3219ac91130d66b5b5ea227748b1cccfb3ccd312a670b8"
+}

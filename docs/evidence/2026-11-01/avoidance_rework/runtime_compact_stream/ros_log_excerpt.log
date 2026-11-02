@@ -1,0 +1,14 @@
+[3.105s] [three_robot_dstar_mpc-4] [WARN] [1793515231.999639703] [three_robot_dstar_mpc]: Goal lacks obstacle clearance; choose a free goal.
+[6.128s] [three_robot_dstar_mpc-4] [INFO] [1793515234.900146560] [three_robot_dstar_mpc]: Formation: triangle / tracking
+[8.144s] [three_robot_dstar_mpc-4] [INFO] [1793515236.958674796] [three_robot_dstar_mpc]: Formation: yield / leader passing; followers clear corridor
+[10.222s] [three_robot_dstar_mpc-4] [INFO] [1793515238.724027590] [three_robot_dstar_mpc]: Formation: peer separation recovery
+[22.341s] [three_robot_dstar_mpc-4] [WARN] [1793515250.731875034] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[25.360s] [three_robot_dstar_mpc-4] [WARN] [1793515253.986253014] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[28.378s] [three_robot_dstar_mpc-4] [WARN] [1793515257.211965263] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[31.382s] [three_robot_dstar_mpc-4] [WARN] [1793515260.369058840] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[35.408s] [three_robot_dstar_mpc-4] [WARN] [1793515263.439065596] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[38.456s] [three_robot_dstar_mpc-4] [WARN] [1793515266.821568676] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[41.491s] [three_robot_dstar_mpc-4] [WARN] [1793515269.941515478] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[44.539s] [three_robot_dstar_mpc-4] [WARN] [1793515273.061786377] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.
+[49.581s] [three_robot_dstar_mpc-4] [WARN] [1793515277.662344587] [three_robot_dstar_mpc]: Goal lacks obstacle clearance; choose a free goal.
+[49.581s] [three_robot_dstar_mpc-4] [WARN] [1793515277.664443727] [three_robot_dstar_mpc]: Measured peer spacing is below the footprint limit; team held.

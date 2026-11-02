@@ -1,0 +1,8 @@
+{
+  "published": true,
+  "reason": "Restore last RViz selection from previous session log; rounded log precision",
+  "goal": [
+    1.03553,
+    -2.48528
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "domain": 32,
+  "per_robot": {
+    "robot1": {
+      "yield_transitions": 2,
+      "uncertainty_recovery_transitions": 0,
+      "no_escape_transitions": 90,
+      "normal_mpc_blocked_transitions": 60
+    },
+    "robot2": {
+      "yield_transitions": 24,
+      "uncertainty_recovery_transitions": 1,
+      "no_escape_transitions": 50,
+      "normal_mpc_blocked_transitions": 58
+    },
+    "robot3": {
+      "yield_transitions": 34,
+      "uncertainty_recovery_transitions": 2,
+      "no_escape_transitions": 63,
+      "normal_mpc_blocked_transitions": 31
+    }
+  },
+  "summary": {
+    "duration_wall": 180.00219472900017,
+    "started_vietnam": "2026-11-01T12:21:23.755101+07:00",
+    "ended_vietnam": "2026-11-01T12:24:23.865244+07:00",
+    "sim_elapsed": 53.894999999999996,
+    "rtf_overall_from_clock": 0.29941301594206043,
+    "goal_changes": [
+      {
+        "elapsed": 0.043,
+        "sim": null,
+        "xy": [
+          1.12758,
+          -2.78444
+        ],
+        "source": "trial initial goal (user or unchanged reapplied goal)"
+      },
+      {
+        "elapsed": 136.586,
+        "sim": 57.421,
+        "xy": [
+          1.0355337858200073,
+          -2.3932342529296875
+        ],
+        "source": "ROS /goal_pose"
+      },
+      {
+        "elapsed": 137.265,
+        "sim": 57.617,
+        "xy": [
+          1.03553,
+          -2.39323
+        ],
+        "source": "RViz log"
+      }
+    ],
+    "last_goal": [
+      1.03553,
+      -2.39323
+    ],
+    "leader_goal_distance_last": 0.11913822791467651,
+    "leader_goal_distance_min_sampled": 0.0027752639980847373,
+    "sampled_path_lengths": [
+      2.6950547605627335,
+      3.632409943007431,
+      3.4954395269548852
+    ],
+    "commands": {
+      "robot1": {
+        "total": 932,
+        "linear_nonzero": 115,
+        "angular_nonzero": 119,
+        "any_nonzero": 129
+      },
+      "robot2": {
+        "total": 881,
+        "linear_nonzero": 132,
+        "any_nonzero": 137,
+        "angular_nonzero": 100
+      },
+      "robot3": {
+        "total": 683,
+        "linear_nonzero": 141,
+        "any_nonzero": 149,
+        "angular_nonzero": 103
+      }
+    },
+    "leader_yield_status_transitions": 34,
+    "leader_uncertainty_recovery_transitions": 2,
+    "recovery_examples": [
+      {
+        "elapsed": 39.917,
+        "sim": 28.185,
+        "kind": "robot3/safety_change",
+        "value": "moving_obstacle: yielding with checked local escape; speed=0.00m/s band=close TTC=0.00s; A*=reactive fallback; uncertainty_recovery=True"
+      },
+      {
+        "elapsed": 71.241,
+        "sim": 37.529,
+        "kind": "robot3/safety_change",
+        "value": "moving_obstacle: yielding with checked local escape; speed=0.00m/s band=close TTC=0.00s; A*=left; uncertainty_recovery=True"
+      }
+    ],
+    "longest_leader_xy_stationary_intervals": [
+      {
+        "start": 12.068,
+        "end": 20.081,
+        "duration": 8.013,
+        "xy": [
+          2.826177236652913,
+          -2.4925918602254034
+        ]
+      },
+      {
+        "start": 44.119,
+        "end": 48.122,
+        "duration": 4.003,
+        "xy": [
+          2.6074692329075186,
+          -2.434688691709774
+        ]
+      },
+      {
+        "start": 163.306,
+        "end": 166.308,
+        "duration": 3.001999999999981,
+        "xy": [
+          0.9561348011689623,
+          -2.6984638512847607
+        ]
+      },
+      {
+        "start": 143.273,
+        "end": 145.278,
+        "duration": 2.0049999999999955,
+        "xy": [
+          0.9522737090341755,
+          -2.8941673175528004
+        ]
+      },
+      {
+        "start": 26.092,
+        "end": 28.094,
+        "duration": 2.0020000000000024,
+        "xy": [
+          2.682343631333966,
+          -2.5200131666062653
+        ]
+      }
+    ],
+    "reference_empty_samples": 100,
+    "reference_observed_samples": 178,
+    "sensor_age": {
+      "robot1/scan": {
+        "receipt_p50": 0.337,
+        "receipt_p95": 0.653,
+        "receipt_max": 0.704,
+        "capture_p95": 0.199,
+        "capture_max": 0.208,
+        "capture_over_0_3_sample_count": 0,
+        "sample_count": 179
+      },
+      "robot2/scan": {
+        "receipt_p50": 0.335,
+        "receipt_p95": 0.665,
+        "receipt_max": 0.699,
+        "capture_p95": 0.208,
+        "capture_max": 0.215,
+        "capture_over_0_3_sample_count": 0,
+        "sample_count": 179
+      },
+      "robot3/scan": {
+        "receipt_p50": 0.41,
+        "receipt_p95": 1.281,
+        "receipt_max": 1.881,
+        "capture_p95": 0.407,
+        "capture_max": 0.609,
+        "capture_over_0_3_sample_count": 24,
+        "sample_count": 179
+      },
+      "rgb": {
+        "receipt_p50": null,
+        "receipt_p95": null,
+        "receipt_max": null,
+        "capture_p95": null,
+        "capture_max": null,
+        "capture_over_0_3_sample_count": 0,
+        "sample_count": 0
+      },
+      "team": {
+        "receipt_p50": 0.136,
+        "receipt_p95": 0.378,
+        "receipt_max": 1.444,
+        "capture_p95": 0.117,
+        "capture_max": 0.444,
+        "capture_over_0_3_sample_count": 1,
+        "sample_count": 178
+      },
+      "reference": {
+        "receipt_p50": 0.143,
+        "receipt_p95": 0.36,
+        "receipt_max": 1.044,
+        "capture_p95": 0.113,
+        "capture_max": 0.337,
+        "capture_over_0_3_sample_count": 1,
+        "sample_count": 178
+      }
+    },
+    "log_counts_during_window": {
+      "yield_ready": 0,
+      "passed_followers": 0,
+      "no_route": 2,
+      "no_fresh_rgb": 0,
+      "errors": 0
+    },
+    "tv_regions_minmax": null,
+    "remembered_viewing_regions_minmax": null,
+    "limitations": [
+      "Read-only ROS observations; no contact sensor or ground-truth collision verification",
+      "Path length is sampled XY movement with 2 mm noise threshold per 1s snapshot",
+      "Status message counts are not time percentages or independent hazard encounters",
+      "Data age and receipt age differ; camera-center distance only computed with <=0.2s capture stamp difference",
+      "No goal, command, parameter or restart action by monitor",
+      "Nonzero command or near-goal pose is not proof of avoidance success",
+      "Stationary intervals use 2mm per-snapshot threshold and do not exclude yaw changes",
+      "No measured contact sensor; user reported leader had not avoided; do not classify this run collision-free",
+      "Camera recognition and social keepouts intentionally disabled; absence of TV regions expected"
+    ]
+  }
+}

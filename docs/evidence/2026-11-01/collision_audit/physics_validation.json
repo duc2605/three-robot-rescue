@@ -1,0 +1,235 @@
+[
+  {
+    "case": "robot1_contact",
+    "returncode": 0,
+    "begins": 1,
+    "ends": 1,
+    "events": [
+      {
+        "event": "contact_begin",
+        "session": "1793517725582761827",
+        "epoch": 0,
+        "sim_time": 1.062,
+        "pair": "person_test|robot1",
+        "category": "human_robot",
+        "models": [
+          "person_test",
+          "robot1"
+        ],
+        "began": 1.062,
+        "last_contact": 1.062,
+        "duration": 0,
+        "physics_samples": 1,
+        "collisions": [
+          "contact_fixture::person_test::body::body_envelope",
+          "contact_fixture::robot1::body::body_collision"
+        ],
+        "positions": [
+          [
+            0.149680851064,
+            -1.71616707094e-19,
+            0.17979790634
+          ],
+          [
+            0.149680851064,
+            -1.71616707094e-19,
+            0.17979790634
+          ]
+        ],
+        "source": "gazebo_physics_contact"
+      },
+      {
+        "event": "contact_end",
+        "session": "1793517725582761827",
+        "epoch": 0,
+        "sim_time": 2.979,
+        "pair": "person_test|robot1",
+        "category": "human_robot",
+        "models": [
+          "person_test",
+          "robot1"
+        ],
+        "began": 1.062,
+        "last_contact": 2.978,
+        "duration": 1.917,
+        "physics_samples": 1917,
+        "collisions": [
+          "contact_fixture::person_test::body::body_envelope",
+          "contact_fixture::robot1::body::body_collision"
+        ],
+        "positions": [
+          [
+            0.147975994821,
+            -1.22792761971e-08,
+            0.17979821566
+          ],
+          [
+            0.147975994821,
+            -1.22792761971e-08,
+            0.17979821566
+          ]
+        ],
+        "source": "gazebo_physics_contact"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "case": "robot2_contact",
+    "returncode": 0,
+    "begins": 1,
+    "ends": 1,
+    "events": [
+      {
+        "event": "contact_begin",
+        "session": "1793517731310489832",
+        "epoch": 0,
+        "sim_time": 1.062,
+        "pair": "person_test|robot2",
+        "category": "human_robot",
+        "models": [
+          "person_test",
+          "robot2"
+        ],
+        "began": 1.062,
+        "last_contact": 1.062,
+        "duration": 0,
+        "physics_samples": 1,
+        "collisions": [
+          "contact_fixture::person_test::body::body_envelope",
+          "contact_fixture::robot2::body::body_collision"
+        ],
+        "positions": [
+          [
+            0.149680851064,
+            -1.71616707094e-19,
+            0.17979790634
+          ],
+          [
+            0.149680851064,
+            -1.71616707094e-19,
+            0.17979790634
+          ]
+        ],
+        "source": "gazebo_physics_contact"
+      },
+      {
+        "event": "contact_end",
+        "session": "1793517731310489832",
+        "epoch": 0,
+        "sim_time": 2.979,
+        "pair": "person_test|robot2",
+        "category": "human_robot",
+        "models": [
+          "person_test",
+          "robot2"
+        ],
+        "began": 1.062,
+        "last_contact": 2.978,
+        "duration": 1.917,
+        "physics_samples": 1917,
+        "collisions": [
+          "contact_fixture::person_test::body::body_envelope",
+          "contact_fixture::robot2::body::body_collision"
+        ],
+        "positions": [
+          [
+            0.147975994821,
+            -1.22792761971e-08,
+            0.17979821566
+          ],
+          [
+            0.147975994821,
+            -1.22792761971e-08,
+            0.17979821566
+          ]
+        ],
+        "source": "gazebo_physics_contact"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "case": "robot3_contact",
+    "returncode": 0,
+    "begins": 1,
+    "ends": 1,
+    "events": [
+      {
+        "event": "contact_begin",
+        "session": "1793517736922509390",
+        "epoch": 0,
+        "sim_time": 1.062,
+        "pair": "person_test|robot3",
+        "category": "human_robot",
+        "models": [
+          "person_test",
+          "robot3"
+        ],
+        "began": 1.062,
+        "last_contact": 1.062,
+        "duration": 0,
+        "physics_samples": 1,
+        "collisions": [
+          "contact_fixture::person_test::body::body_envelope",
+          "contact_fixture::robot3::body::body_collision"
+        ],
+        "positions": [
+          [
+            0.149680851064,
+            -1.71616707094e-19,
+            0.17979790634
+          ],
+          [
+            0.149680851064,
+            -1.71616707094e-19,
+            0.17979790634
+          ]
+        ],
+        "source": "gazebo_physics_contact"
+      },
+      {
+        "event": "contact_end",
+        "session": "1793517736922509390",
+        "epoch": 0,
+        "sim_time": 2.979,
+        "pair": "person_test|robot3",
+        "category": "human_robot",
+        "models": [
+          "person_test",
+          "robot3"
+        ],
+        "began": 1.062,
+        "last_contact": 2.978,
+        "duration": 1.917,
+        "physics_samples": 1917,
+        "collisions": [
+          "contact_fixture::person_test::body::body_envelope",
+          "contact_fixture::robot3::body::body_collision"
+        ],
+        "positions": [
+          [
+            0.147975994821,
+            -1.22792761971e-08,
+            0.17979821566
+          ],
+          [
+            0.147975994821,
+            -1.22792761971e-08,
+            0.17979821566
+          ]
+        ],
+        "source": "gazebo_physics_contact"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "case": "robot3_near_miss",
+    "returncode": 0,
+    "begins": 0,
+    "ends": 0,
+    "events": [],
+    "passed": true
+  }
+]

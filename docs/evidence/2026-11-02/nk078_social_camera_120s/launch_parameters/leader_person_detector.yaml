@@ -1,0 +1,14 @@
+/**:
+  ros__parameters:
+    body_input_size: 224
+    body_max_people: 2
+    body_pose_enabled: true
+    colorful_targets_enabled: true
+    confidence: 0.35
+    cpu_threads: 1
+    head_pose_enabled: true
+    horizontal_scan_every: 4
+    inference_rate: 2.0
+    input_size: 416
+    max_inference_wall: 3.0
+    use_sim_time: true

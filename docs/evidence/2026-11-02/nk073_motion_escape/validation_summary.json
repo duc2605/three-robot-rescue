@@ -1,0 +1,1564 @@
+{
+  "trials": [
+    {
+      "folder": "recordings/nk073_validation_01",
+      "frames": 2420,
+      "time": [
+        0.001,
+        120.951
+      ],
+      "contact_pairs": [
+        {
+          "pair": [
+            "patrol_person",
+            "robot1"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 78.109,
+              "last_t": 78.469
+            }
+          ]
+        },
+        {
+          "pair": [
+            "patrol_person",
+            "robot2"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 85.951,
+              "last_t": 87.949
+            },
+            {
+              "epoch": 0,
+              "first_t": 88.73,
+              "last_t": 88.733
+            },
+            {
+              "epoch": 0,
+              "first_t": 90.055,
+              "last_t": 90.059
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot3",
+            "tv_viewer_a_returning"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 95.463,
+              "last_t": 97.587
+            }
+          ]
+        }
+      ],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            0.846339021317,
+            -2.43252188833
+          ],
+          "sampled_xy_travel": 12.694062930016479
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            -6.92571562088,
+            2.20963510736
+          ],
+          "sampled_xy_travel": 28.5247687136891
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            -0.0150383630693,
+            -2.45751869164
+          ],
+          "sampled_xy_travel": 10.656911117438066
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 120.89800000000001,
+          "reasons": {
+            "watchdog_wall_freshness": 92,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 19,
+            "invalid_team_state": 7,
+            "missing_or_stale_reference": 113,
+            "mpc_tracking_command": 370,
+            "checked_escape_command": 174,
+            "moving_obstacle_pause_hold": 229,
+            "escape_compute_budget_exhausted": 12,
+            "escape_all_rollouts_rejected": 49,
+            "invalid_or_empty_reference": 2,
+            "mpc_compute_budget_exhausted": 5,
+            "mpc_beam_empty_step_1": 122
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 101.67969900066964
+        },
+        "stop_robot1": {
+          "last_t": 120.897,
+          "reasons": {
+            "watchdog_wall_freshness": 89,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 19,
+            "invalid_team_state": 7,
+            "invalid_or_empty_reference": 3,
+            "missing_or_stale_reference": 114,
+            "mpc_tracking_command": 549,
+            "checked_escape_command": 223,
+            "moving_obstacle_pause_hold": 117,
+            "escape_all_rollouts_rejected": 45,
+            "escape_compute_budget_exhausted": 24,
+            "mpc_beam_empty_step_1": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 63.44562598678749
+        },
+        "stop_robot3": {
+          "last_t": 120.893,
+          "reasons": {
+            "watchdog_wall_freshness": 92,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 21,
+            "invalid_team_state": 3,
+            "invalid_or_empty_reference": 5,
+            "missing_or_stale_reference": 110,
+            "mpc_tracking_command": 425,
+            "checked_escape_command": 242,
+            "moving_obstacle_pause_hold": 147,
+            "escape_all_rollouts_rejected": 47,
+            "mpc_beam_empty_step_1": 69,
+            "escape_compute_budget_exhausted": 17
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 63.36714500503149
+        }
+      },
+      "frame_sha256": "d22d97e75307518913d49af2d4e62d0dfb5d301a563809acc15ad5e241ff804a",
+      "phase": "Fusion, flow commitment, braking prediction; cruise-only rollout still rejected refuges.",
+      "early_stopped_for_observed_failure": true,
+      "runtime_sources": {
+        "dstar_mpc_controller": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py",
+          "sha256": "fea31186f62cc9e25e8965dc4f47b28faae4584e0e1bb2dbe5490a7bb3e90f73"
+        },
+        "stop_diagnostics": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/stop_diagnostics.py",
+          "sha256": "ece7678cb5fbc02de94a4aa71a50e789d12a95e4f504d7636a26b89924617e93"
+        },
+        "moving_obstacles": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/moving_obstacles.py",
+          "sha256": "c832d788e588d72b0056f2af1911daca873af61bc2cde44b5b8573c25ed220a2"
+        },
+        "local_escape": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/local_escape.py",
+          "sha256": "310b551d72286f804fea113d11f0bc921287147ae9b8325e827dac195eed6ab8"
+        },
+        "scan_pose_history": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/scan_pose_history.py",
+          "sha256": "4e1219aa9478cc4b3b7bccc0dafa9ee72512d37f0fd9a9f6b1b4d81bd4d843ff"
+        },
+        "robot_motion": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/robot_motion.py",
+          "sha256": "e41cbfc93f8474d1b7360928286641b722d2a83c709dd14d5d97bb745056bb9f"
+        }
+      },
+      "source_matches_current": {
+        "dstar_mpc_controller": false,
+        "stop_diagnostics": true,
+        "moving_obstacles": false,
+        "local_escape": true,
+        "scan_pose_history": true,
+        "robot_motion": true
+      }
+    },
+    {
+      "folder": "recordings/nk073_validation_02",
+      "frames": 2603,
+      "time": [
+        0.001,
+        130.101
+      ],
+      "contact_pairs": [
+        {
+          "pair": [
+            "patrol_person",
+            "robot2"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 84.484,
+              "last_t": 86.051
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot3",
+            "tv_viewer_a_returning"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 101.18,
+              "last_t": 103.709
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot3",
+            "tv_viewer_a_walking"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 123.088,
+              "last_t": 123.814
+            },
+            {
+              "epoch": 0,
+              "first_t": 127.692,
+              "last_t": 130.101
+            }
+          ]
+        }
+      ],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            0.96499636081,
+            -1.85553205542
+          ],
+          "sampled_xy_travel": 12.982515076323645
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            0.0435525952819,
+            -1.79242643451
+          ],
+          "sampled_xy_travel": 10.09142249958352
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            -0.0739949969326,
+            -2.43937827632
+          ],
+          "sampled_xy_travel": 9.591745894903845
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 129.5,
+          "reasons": {
+            "watchdog_wall_freshness": 74,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 15,
+            "invalid_team_state": 5,
+            "invalid_or_empty_reference": 2,
+            "missing_or_stale_reference": 57,
+            "mpc_tracking_command": 454,
+            "mpc_beam_empty_step_5": 111,
+            "mpc_beam_empty_step_4": 1,
+            "mpc_beam_empty_step_3": 2,
+            "mpc_beam_empty_step_2": 1,
+            "mpc_beam_empty_step_1": 11,
+            "mpc_compute_budget_exhausted": 7,
+            "mpc_beam_empty_step_7": 2,
+            "mpc_beam_empty_step_6": 81,
+            "checked_escape_command": 195,
+            "moving_obstacle_pause_hold": 203,
+            "escape_compute_budget_exhausted": 36,
+            "escape_all_rollouts_rejected": 35,
+            "mpc_sensor_data_expired_before_publish": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 101.97241599962581
+        },
+        "stop_robot1": {
+          "last_t": 129.5,
+          "reasons": {
+            "watchdog_wall_freshness": 65,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 19,
+            "invalid_team_state": 3,
+            "invalid_or_empty_reference": 5,
+            "missing_or_stale_reference": 60,
+            "mpc_tracking_command": 751,
+            "mpc_compute_budget_exhausted": 1,
+            "checked_escape_command": 131,
+            "moving_obstacle_pause_hold": 135,
+            "mpc_beam_empty_step_1": 26,
+            "escape_compute_budget_exhausted": 16,
+            "escape_all_rollouts_rejected": 7,
+            "mpc_sensor_data_expired_before_publish": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 100.69906500575598
+        },
+        "stop_robot3": {
+          "last_t": 129.4,
+          "reasons": {
+            "watchdog_wall_freshness": 65,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 18,
+            "invalid_team_state": 6,
+            "invalid_or_empty_reference": 2,
+            "missing_or_stale_reference": 62,
+            "mpc_tracking_command": 516,
+            "mpc_beam_empty_step_1": 113,
+            "checked_escape_command": 266,
+            "moving_obstacle_pause_hold": 142,
+            "escape_all_rollouts_rejected": 36,
+            "mpc_compute_budget_exhausted": 2,
+            "mpc_beam_empty_step_4": 1,
+            "mpc_beam_empty_step_3": 1,
+            "mpc_beam_empty_step_2": 1,
+            "escape_compute_budget_exhausted": 77,
+            "mpc_sensor_data_expired_before_publish": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 100.90681099973153
+        }
+      },
+      "frame_sha256": "35e5ba240c83140bee17b09e195a8e8b86795fa713af2191a8031ced1ea8007d",
+      "phase": "Both cruise/refuge rollout; remaining map-supported phantom motion constraints.",
+      "early_stopped_for_observed_failure": true,
+      "runtime_sources": {
+        "dstar_mpc_controller": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py",
+          "sha256": "8fde71131b7aefd3e5d07947a944871b71f7ca1e5b0cadebfbc2c917cac0b614"
+        },
+        "stop_diagnostics": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/stop_diagnostics.py",
+          "sha256": "ece7678cb5fbc02de94a4aa71a50e789d12a95e4f504d7636a26b89924617e93"
+        },
+        "moving_obstacles": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/moving_obstacles.py",
+          "sha256": "c832d788e588d72b0056f2af1911daca873af61bc2cde44b5b8573c25ed220a2"
+        },
+        "local_escape": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/local_escape.py",
+          "sha256": "310b551d72286f804fea113d11f0bc921287147ae9b8325e827dac195eed6ab8"
+        },
+        "scan_pose_history": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/scan_pose_history.py",
+          "sha256": "4e1219aa9478cc4b3b7bccc0dafa9ee72512d37f0fd9a9f6b1b4d81bd4d843ff"
+        },
+        "robot_motion": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/robot_motion.py",
+          "sha256": "e41cbfc93f8474d1b7360928286641b722d2a83c709dd14d5d97bb745056bb9f"
+        }
+      },
+      "source_matches_current": {
+        "dstar_mpc_controller": false,
+        "stop_diagnostics": true,
+        "moving_obstacles": false,
+        "local_escape": true,
+        "scan_pose_history": true,
+        "robot_motion": true
+      }
+    },
+    {
+      "folder": "recordings/nk073_validation_03",
+      "frames": 3287,
+      "time": [
+        0.001,
+        164.301
+      ],
+      "contact_pairs": [
+        {
+          "pair": [
+            "robot3",
+            "tv_viewer_a_walking"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 31.713,
+              "last_t": 33.13
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot3",
+            "tv_console"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 35.707,
+              "last_t": 35.727
+            },
+            {
+              "epoch": 0,
+              "first_t": 88.713,
+              "last_t": 88.792
+            },
+            {
+              "epoch": 0,
+              "first_t": 89.053,
+              "last_t": 89.21
+            },
+            {
+              "epoch": 0,
+              "first_t": 89.676,
+              "last_t": 89.78
+            },
+            {
+              "epoch": 0,
+              "first_t": 90.008,
+              "last_t": 90.053
+            }
+          ]
+        },
+        {
+          "pair": [
+            "patrol_person",
+            "robot3"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 85.445,
+              "last_t": 87.355
+            },
+            {
+              "epoch": 0,
+              "first_t": 94.865,
+              "last_t": 94.956
+            },
+            {
+              "epoch": 0,
+              "first_t": 95.185,
+              "last_t": 95.192
+            },
+            {
+              "epoch": 0,
+              "first_t": 95.748,
+              "last_t": 95.866
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot3",
+            "standing_a"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 94.17,
+              "last_t": 94.36
+            },
+            {
+              "epoch": 0,
+              "first_t": 96.408,
+              "last_t": 96.485
+            },
+            {
+              "epoch": 0,
+              "first_t": 96.734,
+              "last_t": 96.764
+            }
+          ]
+        }
+      ],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            -2.2025376196,
+            -2.14928853014
+          ],
+          "sampled_xy_travel": 13.889222237040903
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            -2.62945241521,
+            -2.21588695251
+          ],
+          "sampled_xy_travel": 14.535396378049054
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            -4.53728454575,
+            -2.44513861803
+          ],
+          "sampled_xy_travel": 17.686136379718818
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 164.20000000000002,
+          "reasons": {
+            "watchdog_wall_freshness": 72,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 10,
+            "invalid_team_state": 10,
+            "missing_or_stale_reference": 146,
+            "mpc_tracking_command": 613,
+            "mpc_beam_empty_step_5": 2,
+            "mpc_beam_empty_step_4": 1,
+            "mpc_compute_budget_exhausted": 39,
+            "mpc_beam_empty_step_1": 17,
+            "checked_escape_command": 192,
+            "moving_obstacle_pause_hold": 213,
+            "escape_compute_budget_exhausted": 18,
+            "escape_all_rollouts_rejected": 14,
+            "mpc_sensor_data_expired_before_publish": 1,
+            "invalid_or_empty_reference": 5,
+            "mpc_beam_empty_step_8": 10,
+            "mpc_beam_empty_step_7": 120
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 102.00353899563197
+        },
+        "stop_robot1": {
+          "last_t": 164.3,
+          "reasons": {
+            "invalid_or_empty_reference": 10,
+            "watchdog_wall_freshness": 105,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 13,
+            "invalid_team_state": 9,
+            "missing_or_stale_reference": 140,
+            "mpc_tracking_command": 1090,
+            "mpc_compute_budget_exhausted": 1,
+            "checked_escape_command": 128,
+            "moving_obstacle_pause_hold": 97,
+            "mpc_beam_empty_step_1": 16,
+            "escape_compute_budget_exhausted": 9,
+            "mpc_sensor_data_expired_before_publish": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 100.61881999718025
+        },
+        "stop_robot3": {
+          "last_t": 164.3,
+          "reasons": {
+            "invalid_or_empty_reference": 10,
+            "watchdog_wall_freshness": 83,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 10,
+            "invalid_team_state": 9,
+            "missing_or_stale_reference": 133,
+            "mpc_tracking_command": 866,
+            "mpc_beam_empty_step_4": 2,
+            "checked_escape_command": 166,
+            "moving_obstacle_pause_hold": 177,
+            "mpc_beam_empty_step_1": 24,
+            "escape_compute_budget_exhausted": 17,
+            "escape_all_rollouts_rejected": 44,
+            "mpc_compute_budget_exhausted": 12,
+            "mpc_sensor_data_expired_before_publish": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 101.9915720098652
+        }
+      },
+      "frame_sha256": "13af8483fbb954683a84d4333b08bb4e5288a95b2715b85b104d83924550b0ae",
+      "phase": "Map-supported motion gate; raw rays retained; paused-object approach still failed.",
+      "early_stopped_for_observed_failure": true,
+      "runtime_sources": {
+        "dstar_mpc_controller": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py",
+          "sha256": "b70c6a9e2b3b22672089b609a6fab04f94aac38d69a6fc7e765dd2857d2986de"
+        },
+        "stop_diagnostics": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/stop_diagnostics.py",
+          "sha256": "ece7678cb5fbc02de94a4aa71a50e789d12a95e4f504d7636a26b89924617e93"
+        },
+        "moving_obstacles": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/moving_obstacles.py",
+          "sha256": "c832d788e588d72b0056f2af1911daca873af61bc2cde44b5b8573c25ed220a2"
+        },
+        "local_escape": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/local_escape.py",
+          "sha256": "310b551d72286f804fea113d11f0bc921287147ae9b8325e827dac195eed6ab8"
+        },
+        "scan_pose_history": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/scan_pose_history.py",
+          "sha256": "4e1219aa9478cc4b3b7bccc0dafa9ee72512d37f0fd9a9f6b1b4d81bd4d843ff"
+        },
+        "robot_motion": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/robot_motion.py",
+          "sha256": "e41cbfc93f8474d1b7360928286641b722d2a83c709dd14d5d97bb745056bb9f"
+        }
+      },
+      "source_matches_current": {
+        "dstar_mpc_controller": false,
+        "stop_diagnostics": true,
+        "moving_obstacles": false,
+        "local_escape": true,
+        "scan_pose_history": true,
+        "robot_motion": true
+      }
+    },
+    {
+      "folder": "recordings/nk073_validation_04",
+      "frames": 3168,
+      "time": [
+        0.001,
+        158.351
+      ],
+      "contact_pairs": [
+        {
+          "pair": [
+            "patrol_person",
+            "robot1"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 85.546,
+              "last_t": 87.661
+            },
+            {
+              "epoch": 0,
+              "first_t": 94.195,
+              "last_t": 94.259
+            },
+            {
+              "epoch": 0,
+              "first_t": 94.552,
+              "last_t": 95.666
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot1",
+            "tv_console"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 88.419,
+              "last_t": 88.429
+            },
+            {
+              "epoch": 0,
+              "first_t": 89.158,
+              "last_t": 89.16
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot1",
+            "standing_a"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 93.831,
+              "last_t": 93.889
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot3",
+            "tv_viewer_a_returning"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 95.918,
+              "last_t": 96.536
+            }
+          ]
+        }
+      ],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            -4.18663692533,
+            -12.8161105183
+          ],
+          "sampled_xy_travel": 40.12087823826051
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            0.272257268931,
+            -1.30840739407
+          ],
+          "sampled_xy_travel": 10.853223819554417
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            0.939556204923,
+            -3.69133485419
+          ],
+          "sampled_xy_travel": 11.231383642788678
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 158.341,
+          "reasons": {
+            "watchdog_wall_freshness": 314,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 9,
+            "invalid_team_state": 5,
+            "invalid_or_empty_reference": 17,
+            "missing_or_stale_reference": 255,
+            "mpc_tracking_command": 462,
+            "checked_escape_command": 195,
+            "moving_obstacle_pause_hold": 278,
+            "escape_compute_budget_exhausted": 5,
+            "escape_all_rollouts_rejected": 12,
+            "mpc_beam_empty_step_1": 13
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 74.44132800446823
+        },
+        "stop_robot1": {
+          "last_t": 158.342,
+          "reasons": {
+            "watchdog_wall_freshness": 296,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 5,
+            "invalid_team_state": 6,
+            "invalid_or_empty_reference": 17,
+            "missing_or_stale_reference": 256,
+            "mpc_tracking_command": 373,
+            "checked_escape_command": 100,
+            "moving_obstacle_pause_hold": 117,
+            "escape_compute_budget_exhausted": 25,
+            "escape_all_rollouts_rejected": 22,
+            "mpc_beam_empty_step_1": 208
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 62.26362599409185
+        },
+        "stop_robot3": {
+          "last_t": 158.35600000000002,
+          "reasons": {
+            "invalid_or_empty_reference": 15,
+            "watchdog_wall_freshness": 324,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 8,
+            "invalid_team_state": 5,
+            "missing_or_stale_reference": 250,
+            "mpc_tracking_command": 509,
+            "checked_escape_command": 302,
+            "moving_obstacle_pause_hold": 196,
+            "escape_compute_budget_exhausted": 37,
+            "escape_all_rollouts_rejected": 12,
+            "mpc_compute_budget_exhausted": 1,
+            "mpc_beam_empty_step_5": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 100.78935600176919
+        }
+      },
+      "frame_sha256": "2f03c812ce197d5c0ce1bcee345e1bc2138baac787b716bdcbd01776e7a28cf6",
+      "phase": "Recent-turn/pause reserve; escape budget still interrupted follower acceleration.",
+      "early_stopped_for_observed_failure": true,
+      "runtime_sources": {
+        "dstar_mpc_controller": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py",
+          "sha256": "bff5dd73712129e2d9afe8bb34456febe4fc4856799301308b49baf378f2b73a"
+        },
+        "stop_diagnostics": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/stop_diagnostics.py",
+          "sha256": "ece7678cb5fbc02de94a4aa71a50e789d12a95e4f504d7636a26b89924617e93"
+        },
+        "moving_obstacles": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/moving_obstacles.py",
+          "sha256": "68fa12eabcc71ace323f46bfb2de9b02cf77c7b9c4683f53091164fadba1ee87"
+        },
+        "local_escape": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/local_escape.py",
+          "sha256": "310b551d72286f804fea113d11f0bc921287147ae9b8325e827dac195eed6ab8"
+        },
+        "scan_pose_history": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/scan_pose_history.py",
+          "sha256": "4e1219aa9478cc4b3b7bccc0dafa9ee72512d37f0fd9a9f6b1b4d81bd4d843ff"
+        },
+        "robot_motion": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/robot_motion.py",
+          "sha256": "e41cbfc93f8474d1b7360928286641b722d2a83c709dd14d5d97bb745056bb9f"
+        }
+      },
+      "source_matches_current": {
+        "dstar_mpc_controller": false,
+        "stop_diagnostics": true,
+        "moving_obstacles": false,
+        "local_escape": true,
+        "scan_pose_history": true,
+        "robot_motion": true
+      }
+    },
+    {
+      "folder": "recordings/nk073_validation_05",
+      "frames": 2165,
+      "time": [
+        0.001,
+        108.201
+      ],
+      "contact_pairs": [
+        {
+          "pair": [
+            "robot2",
+            "tv_viewer_a_walking"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 32.066,
+              "last_t": 34.342
+            }
+          ]
+        },
+        {
+          "pair": [
+            "patrol_person",
+            "robot1"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 78.109,
+              "last_t": 78.414
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot3",
+            "tv_viewer_a_returning"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 101.231,
+              "last_t": 101.519
+            },
+            {
+              "epoch": 0,
+              "first_t": 101.83,
+              "last_t": 101.897
+            },
+            {
+              "epoch": 0,
+              "first_t": 102.321,
+              "last_t": 106.744
+            }
+          ]
+        },
+        {
+          "pair": [
+            "chair_tv_viewer_a_leg_-1_1",
+            "robot3"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 101.706,
+              "last_t": 101.724
+            }
+          ]
+        },
+        {
+          "pair": [
+            "chair_tv_viewer_a_leg_1_1",
+            "robot3"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 102.504,
+              "last_t": 102.578
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot3",
+            "tv_viewer_a"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 106.745,
+              "last_t": 108.201
+            }
+          ]
+        }
+      ],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            2.83316459855,
+            -1.30294277953
+          ],
+          "sampled_xy_travel": 9.982276554470431
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            0.117464692831,
+            -1.45443020626
+          ],
+          "sampled_xy_travel": 8.976121874023622
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            -0.997730900325,
+            -3.48049976976
+          ],
+          "sampled_xy_travel": 10.41447528484664
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 108.24900000000001,
+          "reasons": {
+            "invalid_or_empty_reference": 7,
+            "watchdog_wall_freshness": 1373,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 6,
+            "invalid_team_state": 7,
+            "missing_or_stale_reference": 78,
+            "mpc_tracking_command": 373,
+            "mpc_compute_budget_exhausted": 1,
+            "checked_escape_command": 166,
+            "moving_obstacle_pause_hold": 253,
+            "escape_compute_budget_exhausted": 42,
+            "escape_all_rollouts_rejected": 12,
+            "mpc_beam_empty_step_1": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 101.16707600536756
+        },
+        "stop_robot1": {
+          "last_t": 108.24900000000001,
+          "reasons": {
+            "invalid_or_empty_reference": 7,
+            "watchdog_wall_freshness": 1383,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 10,
+            "invalid_team_state": 3,
+            "missing_or_stale_reference": 83,
+            "mpc_tracking_command": 547,
+            "checked_escape_command": 131,
+            "moving_obstacle_pause_hold": 140,
+            "escape_compute_budget_exhausted": 20,
+            "escape_all_rollouts_rejected": 18
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 62.12694199348334
+        },
+        "stop_robot3": {
+          "last_t": 108.24900000000001,
+          "reasons": {
+            "invalid_or_empty_reference": 4,
+            "watchdog_wall_freshness": 1378,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 10,
+            "invalid_team_state": 7,
+            "missing_or_stale_reference": 75,
+            "mpc_tracking_command": 404,
+            "mpc_beam_empty_step_1": 18,
+            "moving_obstacle_pause_hold": 169,
+            "checked_escape_command": 202,
+            "escape_all_rollouts_rejected": 24,
+            "escape_compute_budget_exhausted": 41,
+            "mpc_compute_budget_exhausted": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 101.21953199268319
+        }
+      },
+      "frame_sha256": "d02c01f060085712f0ef9e50986923429b63dafa4de9871cbbfc490943414f86",
+      "phase": "Warm direction; refuge still moved with robot; contacts and physics slowdown.",
+      "early_stopped_for_observed_failure": true,
+      "runtime_sources": {
+        "dstar_mpc_controller": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py",
+          "sha256": "769b73e00e6524f12a51d2f7f44d5b9da0cd648dc37780649bf1179beb339ba9"
+        },
+        "stop_diagnostics": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/stop_diagnostics.py",
+          "sha256": "ece7678cb5fbc02de94a4aa71a50e789d12a95e4f504d7636a26b89924617e93"
+        },
+        "moving_obstacles": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/moving_obstacles.py",
+          "sha256": "68fa12eabcc71ace323f46bfb2de9b02cf77c7b9c4683f53091164fadba1ee87"
+        },
+        "local_escape": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/local_escape.py",
+          "sha256": "310b551d72286f804fea113d11f0bc921287147ae9b8325e827dac195eed6ab8"
+        },
+        "scan_pose_history": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/scan_pose_history.py",
+          "sha256": "4e1219aa9478cc4b3b7bccc0dafa9ee72512d37f0fd9a9f6b1b4d81bd4d843ff"
+        },
+        "robot_motion": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/robot_motion.py",
+          "sha256": "e41cbfc93f8474d1b7360928286641b722d2a83c709dd14d5d97bb745056bb9f"
+        }
+      },
+      "source_matches_current": {
+        "dstar_mpc_controller": false,
+        "stop_diagnostics": true,
+        "moving_obstacles": false,
+        "local_escape": true,
+        "scan_pose_history": true,
+        "robot_motion": true
+      }
+    },
+    {
+      "folder": "recordings/nk073_validation_06",
+      "frames": 4960,
+      "time": [
+        0.001,
+        247.951
+      ],
+      "contact_pairs": [
+        {
+          "pair": [
+            "robot3",
+            "tv_viewer_b"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 193.26,
+              "last_t": 193.288
+            },
+            {
+              "epoch": 0,
+              "first_t": 193.798,
+              "last_t": 193.841
+            },
+            {
+              "epoch": 0,
+              "first_t": 194.156,
+              "last_t": 194.204
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot1",
+            "tv_viewer_a_returning"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 202,
+              "last_t": 203.311
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot3",
+            "tv_viewer_a_returning"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 208.159,
+              "last_t": 211.035
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot3",
+            "tv_viewer_a"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 213.459,
+              "last_t": 221.358
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot3",
+            "tv_viewer_a_walking"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 229.159,
+              "last_t": 232.098
+            }
+          ]
+        },
+        {
+          "pair": [
+            "robot1",
+            "tv_viewer_a_walking"
+          ],
+          "episodes": [
+            {
+              "epoch": 0,
+              "first_t": 245.868,
+              "last_t": 247.951
+            }
+          ]
+        }
+      ],
+      "robots": {
+        "robot1": {
+          "start": [
+            4,
+            -2.9
+          ],
+          "end": [
+            1.4004243795,
+            -0.953657495156
+          ],
+          "sampled_xy_travel": 32.18696870835219
+        },
+        "robot2": {
+          "start": [
+            3,
+            -2.9
+          ],
+          "end": [
+            2.87640231719,
+            -1.33800555044
+          ],
+          "sampled_xy_travel": 18.604874853156446
+        },
+        "robot3": {
+          "start": [
+            3.5,
+            -2.2
+          ],
+          "end": [
+            -0.761062015388,
+            -3.14595193759
+          ],
+          "sampled_xy_travel": 18.44167197434145
+        }
+      },
+      "diagnostics": {
+        "stop_robot2": {
+          "last_t": 247.9,
+          "reasons": {
+            "invalid_or_empty_reference": 4,
+            "watchdog_wall_freshness": 84,
+            "invalid_team_state": 1,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 12,
+            "missing_or_stale_reference": 114,
+            "mpc_tracking_command": 1425,
+            "mpc_compute_budget_exhausted": 1,
+            "checked_escape_command": 316,
+            "moving_obstacle_pause_hold": 205,
+            "refuge_wait_for_pass": 148,
+            "escape_all_rollouts_rejected": 10,
+            "escape_compute_budget_exhausted": 14,
+            "mpc_beam_empty_step_1": 21,
+            "mpc_beam_empty_step_3": 3,
+            "mpc_beam_empty_step_6": 1,
+            "mpc_beam_empty_step_5": 1,
+            "mpc_beam_empty_step_4": 1
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 100.97584799223114
+        },
+        "stop_robot1": {
+          "last_t": 247.9,
+          "reasons": {
+            "watchdog_wall_freshness": 87,
+            "invalid_team_state": 3,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 9,
+            "missing_or_stale_reference": 98,
+            "mpc_tracking_command": 830,
+            "escape_compute_budget_exhausted": 25,
+            "checked_escape_command": 515,
+            "moving_obstacle_pause_hold": 291,
+            "refuge_wait_for_pass": 124,
+            "mpc_beam_empty_step_1": 31,
+            "escape_all_rollouts_rejected": 63,
+            "mpc_compute_budget_exhausted": 20,
+            "invalid_or_empty_reference": 4
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 102.19779900216963
+        },
+        "stop_robot3": {
+          "last_t": 247.9,
+          "reasons": {
+            "invalid_or_empty_reference": 5,
+            "watchdog_wall_freshness": 85,
+            "motion_disabled_or_missing_map_pose_or_stale_state": 13,
+            "missing_or_stale_reference": 108,
+            "mpc_tracking_command": 1381,
+            "checked_escape_command": 417,
+            "refuge_wait_for_pass": 76,
+            "moving_obstacle_pause_hold": 194,
+            "escape_all_rollouts_rejected": 48,
+            "mpc_beam_empty_step_1": 30,
+            "mpc_beam_empty_step_4": 2,
+            "mpc_beam_empty_step_3": 1,
+            "mpc_compute_budget_exhausted": 16,
+            "escape_compute_budget_exhausted": 23,
+            "mpc_beam_empty_step_2": 2
+          },
+          "max_saved_command_speed": 0.2800000000000001,
+          "max_saved_compute_elapsed_wall_ms": 101.60255001392215
+        }
+      },
+      "frame_sha256": "f8f89e38682c9771fc6a2822c725090f229e7972593f5af7d4eacae1305894d8",
+      "phase": "Final: fixed world refuge revalidated until risk passes.",
+      "early_stopped_for_observed_failure": false,
+      "runtime_sources": {
+        "dstar_mpc_controller": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py",
+          "sha256": "c88471ec9952ddc251f5f306571859a9c1fa15442f8438661d47a09e16253b60"
+        },
+        "stop_diagnostics": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/stop_diagnostics.py",
+          "sha256": "ece7678cb5fbc02de94a4aa71a50e789d12a95e4f504d7636a26b89924617e93"
+        },
+        "moving_obstacles": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/moving_obstacles.py",
+          "sha256": "26258196ae649b698e01fb94e51d9a1532c144cf8b47ab5460082d097de24c5e"
+        },
+        "local_escape": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/local_escape.py",
+          "sha256": "310b551d72286f804fea113d11f0bc921287147ae9b8325e827dac195eed6ab8"
+        },
+        "scan_pose_history": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/scan_pose_history.py",
+          "sha256": "4e1219aa9478cc4b3b7bccc0dafa9ee72512d37f0fd9a9f6b1b4d81bd4d843ff"
+        },
+        "robot_motion": {
+          "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/robot_motion.py",
+          "sha256": "e41cbfc93f8474d1b7360928286641b722d2a83c709dd14d5d97bb745056bb9f"
+        }
+      },
+      "source_matches_current": {
+        "dstar_mpc_controller": true,
+        "stop_diagnostics": true,
+        "moving_obstacles": true,
+        "local_escape": true,
+        "scan_pose_history": true,
+        "robot_motion": true
+      }
+    }
+  ],
+  "final": {
+    "folder": "recordings/nk073_validation_06",
+    "frames": 4960,
+    "time": [
+      0.001,
+      247.951
+    ],
+    "contact_pairs": [
+      {
+        "pair": [
+          "robot3",
+          "tv_viewer_b"
+        ],
+        "episodes": [
+          {
+            "epoch": 0,
+            "first_t": 193.26,
+            "last_t": 193.288
+          },
+          {
+            "epoch": 0,
+            "first_t": 193.798,
+            "last_t": 193.841
+          },
+          {
+            "epoch": 0,
+            "first_t": 194.156,
+            "last_t": 194.204
+          }
+        ]
+      },
+      {
+        "pair": [
+          "robot1",
+          "tv_viewer_a_returning"
+        ],
+        "episodes": [
+          {
+            "epoch": 0,
+            "first_t": 202,
+            "last_t": 203.311
+          }
+        ]
+      },
+      {
+        "pair": [
+          "robot3",
+          "tv_viewer_a_returning"
+        ],
+        "episodes": [
+          {
+            "epoch": 0,
+            "first_t": 208.159,
+            "last_t": 211.035
+          }
+        ]
+      },
+      {
+        "pair": [
+          "robot3",
+          "tv_viewer_a"
+        ],
+        "episodes": [
+          {
+            "epoch": 0,
+            "first_t": 213.459,
+            "last_t": 221.358
+          }
+        ]
+      },
+      {
+        "pair": [
+          "robot3",
+          "tv_viewer_a_walking"
+        ],
+        "episodes": [
+          {
+            "epoch": 0,
+            "first_t": 229.159,
+            "last_t": 232.098
+          }
+        ]
+      },
+      {
+        "pair": [
+          "robot1",
+          "tv_viewer_a_walking"
+        ],
+        "episodes": [
+          {
+            "epoch": 0,
+            "first_t": 245.868,
+            "last_t": 247.951
+          }
+        ]
+      }
+    ],
+    "robots": {
+      "robot1": {
+        "start": [
+          4,
+          -2.9
+        ],
+        "end": [
+          1.4004243795,
+          -0.953657495156
+        ],
+        "sampled_xy_travel": 32.18696870835219
+      },
+      "robot2": {
+        "start": [
+          3,
+          -2.9
+        ],
+        "end": [
+          2.87640231719,
+          -1.33800555044
+        ],
+        "sampled_xy_travel": 18.604874853156446
+      },
+      "robot3": {
+        "start": [
+          3.5,
+          -2.2
+        ],
+        "end": [
+          -0.761062015388,
+          -3.14595193759
+        ],
+        "sampled_xy_travel": 18.44167197434145
+      }
+    },
+    "diagnostics": {
+      "stop_robot2": {
+        "last_t": 247.9,
+        "reasons": {
+          "invalid_or_empty_reference": 4,
+          "watchdog_wall_freshness": 84,
+          "invalid_team_state": 1,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 12,
+          "missing_or_stale_reference": 114,
+          "mpc_tracking_command": 1425,
+          "mpc_compute_budget_exhausted": 1,
+          "checked_escape_command": 316,
+          "moving_obstacle_pause_hold": 205,
+          "refuge_wait_for_pass": 148,
+          "escape_all_rollouts_rejected": 10,
+          "escape_compute_budget_exhausted": 14,
+          "mpc_beam_empty_step_1": 21,
+          "mpc_beam_empty_step_3": 3,
+          "mpc_beam_empty_step_6": 1,
+          "mpc_beam_empty_step_5": 1,
+          "mpc_beam_empty_step_4": 1
+        },
+        "max_saved_command_speed": 0.2800000000000001,
+        "max_saved_compute_elapsed_wall_ms": 100.97584799223114
+      },
+      "stop_robot1": {
+        "last_t": 247.9,
+        "reasons": {
+          "watchdog_wall_freshness": 87,
+          "invalid_team_state": 3,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 9,
+          "missing_or_stale_reference": 98,
+          "mpc_tracking_command": 830,
+          "escape_compute_budget_exhausted": 25,
+          "checked_escape_command": 515,
+          "moving_obstacle_pause_hold": 291,
+          "refuge_wait_for_pass": 124,
+          "mpc_beam_empty_step_1": 31,
+          "escape_all_rollouts_rejected": 63,
+          "mpc_compute_budget_exhausted": 20,
+          "invalid_or_empty_reference": 4
+        },
+        "max_saved_command_speed": 0.2800000000000001,
+        "max_saved_compute_elapsed_wall_ms": 102.19779900216963
+      },
+      "stop_robot3": {
+        "last_t": 247.9,
+        "reasons": {
+          "invalid_or_empty_reference": 5,
+          "watchdog_wall_freshness": 85,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 13,
+          "missing_or_stale_reference": 108,
+          "mpc_tracking_command": 1381,
+          "checked_escape_command": 417,
+          "refuge_wait_for_pass": 76,
+          "moving_obstacle_pause_hold": 194,
+          "escape_all_rollouts_rejected": 48,
+          "mpc_beam_empty_step_1": 30,
+          "mpc_beam_empty_step_4": 2,
+          "mpc_beam_empty_step_3": 1,
+          "mpc_compute_budget_exhausted": 16,
+          "escape_compute_budget_exhausted": 23,
+          "mpc_beam_empty_step_2": 2
+        },
+        "max_saved_command_speed": 0.2800000000000001,
+        "max_saved_compute_elapsed_wall_ms": 101.60255001392215
+      }
+    },
+    "frame_sha256": "f8f89e38682c9771fc6a2822c725090f229e7972593f5af7d4eacae1305894d8",
+    "phase": "Final: fixed world refuge revalidated until risk passes.",
+    "early_stopped_for_observed_failure": false,
+    "runtime_sources": {
+      "dstar_mpc_controller": {
+        "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py",
+        "sha256": "c88471ec9952ddc251f5f306571859a9c1fa15442f8438661d47a09e16253b60"
+      },
+      "stop_diagnostics": {
+        "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/stop_diagnostics.py",
+        "sha256": "ece7678cb5fbc02de94a4aa71a50e789d12a95e4f504d7636a26b89924617e93"
+      },
+      "moving_obstacles": {
+        "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/moving_obstacles.py",
+        "sha256": "26258196ae649b698e01fb94e51d9a1532c144cf8b47ab5460082d097de24c5e"
+      },
+      "local_escape": {
+        "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/local_escape.py",
+        "sha256": "310b551d72286f804fea113d11f0bc921287147ae9b8325e827dac195eed6ab8"
+      },
+      "scan_pose_history": {
+        "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/scan_pose_history.py",
+        "sha256": "4e1219aa9478cc4b3b7bccc0dafa9ee72512d37f0fd9a9f6b1b4d81bd4d843ff"
+      },
+      "robot_motion": {
+        "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/robot_motion.py",
+        "sha256": "e41cbfc93f8474d1b7360928286641b722d2a83c709dd14d5d97bb745056bb9f"
+      }
+    },
+    "source_matches_current": {
+      "dstar_mpc_controller": true,
+      "stop_diagnostics": true,
+      "moving_obstacles": true,
+      "local_escape": true,
+      "scan_pose_history": true,
+      "robot_motion": true
+    }
+  },
+  "conditions": {
+    "goal": [
+      1.0355337858200073,
+      -1.9790207147598267
+    ],
+    "goal_after_sim": 8.69,
+    "camera": false,
+    "range_m": 2.0,
+    "gui": false,
+    "rviz": false,
+    "final_domain": 60,
+    "final_partition": "nk073_validation_06",
+    "ROS_LOCALHOST_ONLY": "0",
+    "RMW_FASTRTPS_PUBLICATION_MODE": "ASYNCHRONOUS"
+  },
+  "limits": [
+    "Single final trial, not a repeated controlled benchmark.",
+    "Raw pose/contact indicates observed physics, not guaranteed perception accuracy.",
+    "Braking reserve is not a calibration of wheel or actuator physics.",
+    "Earlier changed source hashes are expected; per-trial source config and checkpoints preserved."
+  ]
+}

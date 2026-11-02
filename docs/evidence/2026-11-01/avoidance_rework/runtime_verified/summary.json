@@ -1,0 +1,161 @@
+{
+  "elapsed": 60.0,
+  "sim": 23.04,
+  "sim_elapsed": 18.28,
+  "rtf_recent": 0.2941180709545033,
+  "goal": [
+    1.03553,
+    -2.48528
+  ],
+  "leader_goal_distance": 1.5363883580591877,
+  "team": [
+    [
+      3.2610818062614904,
+      -2.771609936636387,
+      -3.0439447625349896
+    ],
+    [
+      3.00000000000011,
+      -2.8999999998940327,
+      1.5699999999994865
+    ],
+    [
+      2.5607133216592297,
+      -2.300063850292892,
+      -2.981176520052258
+    ]
+  ],
+  "path_length_sampled": [
+    0.769993817592061,
+    0.0,
+    0.7379892283694283
+  ],
+  "command_counts": {
+    "robot1": {
+      "total": 569,
+      "linear_nonzero": 30,
+      "angular_nonzero": 27,
+      "any_nonzero": 30
+    },
+    "robot2": {
+      "total": 581,
+      "angular_nonzero": 27,
+      "any_nonzero": 33,
+      "linear_nonzero": 20
+    },
+    "robot3": {
+      "total": 563,
+      "linear_nonzero": 25,
+      "angular_nonzero": 23,
+      "any_nonzero": 25
+    }
+  },
+  "safety_latest": {
+    "robot1": "normal",
+    "robot2": "stale_data: holding; fresh state/reference or active escape sensors required",
+    "robot3": "stale_data: holding; fresh state/reference or active escape sensors required"
+  },
+  "counts": {
+    "clock": 1829,
+    "robot1/scan": 92,
+    "robot2/scan": 92,
+    "robot2/cmd": 581,
+    "robot3/cmd": 563,
+    "robot1/cmd": 569,
+    "team": 179,
+    "reference": 235,
+    "robot3/scan": 77,
+    "robot1/safety": 256,
+    "robot2/safety": 259,
+    "robot3/safety": 241,
+    "goal_msg": 1
+  },
+  "log_warning_counts": {
+    "no_route": 1,
+    "errors": 2
+  },
+  "social": null,
+  "observation": null,
+  "started_vietnam": "2026-11-01T13:52:25.497587+07:00",
+  "ended_vietnam": "2026-11-01T13:53:25.578292+07:00",
+  "duration_wall_seconds": 60.000169627000105,
+  "first_team": [
+    [
+      3.9494101487299695,
+      -2.6631651999657993,
+      2.2753888738160435
+    ],
+    [
+      3.00000000000011,
+      -2.8999999998940327,
+      1.5699999999994865
+    ],
+    [
+      3.261833098628945,
+      -2.2755125326676247,
+      2.2155783790894192
+    ]
+  ],
+  "status_message_counts": {
+    "robot1": {
+      "stale_data: holding; fresh state/reference or active escape sensors required": 119,
+      "normal": 128,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 11}; nearest_track=(0.8103502327822774, -4.176665049479598) velocity=(0.0, 0.0) confirmed=False radius=0.463": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 11}; nearest_track=(0.8103502327822774, -4.176665049479598) velocity=(0.0, 0.0) confirmed=False radius=0.470": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 11}; nearest_track=(0.7939136496889327, -4.158319134845491) velocity=(0.0, 0.0) confirmed=True radius=0.420": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 11}; nearest_track=(2.628705258782782, -0.5771625466307089) velocity=(0.0, 0.0) confirmed=False radius=0.410": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 11}; nearest_track=(2.628705258782782, -0.5771625466307089) velocity=(0.0, 0.0) confirmed=False radius=0.420": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 11}; nearest_track=(2.628705258782782, -0.5771625466307089) velocity=(0.0, 0.0) confirmed=False radius=0.430": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 11}; nearest_track=(2.628705258782782, -0.5771625466307089) velocity=(0.0, 0.0) confirmed=False radius=0.440": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 11}; nearest_track=(2.628705258782782, -0.5771625466307089) velocity=(0.0, 0.0) confirmed=False radius=0.450": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 11}; nearest_track=(2.628705258782782, -0.5771625466307089) velocity=(0.0, 0.0) confirmed=False radius=0.460": 1
+    },
+    "robot2": {
+      "stale_data: holding; fresh state/reference or active escape sensors required": 121,
+      "normal": 129,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 9}; nearest_track=(0.8103502327822774, -4.176665049479598) velocity=(0.0, 0.0) confirmed=False radius=0.461": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 8}; nearest_track=(0.8103502327822774, -4.176665049479598) velocity=(0.0, 0.0) confirmed=False radius=0.470": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 8}; nearest_track=(0.7860847123629315, -4.162784645292194) velocity=(0.0, 0.0) confirmed=True radius=0.440": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 8}; nearest_track=(1.616250557175574, -1.1134003906385184) velocity=(0.0, 0.0) confirmed=False radius=0.410": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 8}; nearest_track=(1.616250557175574, -1.1134003906385184) velocity=(0.0, 0.0) confirmed=False radius=0.420": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 8}; nearest_track=(1.616250557175574, -1.1134003906385184) velocity=(0.0, 0.0) confirmed=False radius=0.430": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 8}; nearest_track=(1.616250557175574, -1.1134003906385184) velocity=(0.0, 0.0) confirmed=False radius=0.440": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 8}; nearest_track=(1.616250557175574, -1.1134003906385184) velocity=(0.0, 0.0) confirmed=False radius=0.450": 1,
+      "normal_mpc: no feasible rollout at step=1; rejected={'map': 0, 'lidar': 0, 'track': 0, 'peer': 8}; nearest_track=(1.616250557175574, -1.1134003906385184) velocity=(0.0, 0.0) confirmed=False radius=0.460": 1
+    },
+    "robot3": {
+      "stale_data: holding; fresh state/reference or active escape sensors required": 120,
+      "normal": 119,
+      "moving_obstacle: yielding with checked local escape; speed=0.43m/s band=slow TTC=2.34s; A*=reactive fallback; uncertainty_recovery=False": 1,
+      "moving_obstacle: stop, stale state or escape sensors; hazard unresolved": 1
+    }
+  },
+  "goal_changes": [
+    {
+      "elapsed": 56.794,
+      "sim": 22.07,
+      "xy": [
+        1.0355337858200073,
+        -2.4852817058563232
+      ],
+      "source": "ROS /goal_pose"
+    },
+    {
+      "elapsed": 57.737,
+      "sim": 22.37,
+      "xy": [
+        1.03553,
+        -2.48528
+      ],
+      "source": "RViz log"
+    }
+  ],
+  "min_capture_matched_camera_center_distance": null,
+  "limitations": [
+    "Read-only ROS observations; no contact sensor or ground-truth collision verification",
+    "Path length is sampled XY movement with 2 mm noise threshold per 1s snapshot",
+    "Status message counts are not time percentages or independent hazard encounters",
+    "Data age and receipt age differ; camera-center distance only computed with <=0.2s capture stamp difference",
+    "No goal, command, parameter or restart action by monitor"
+  ]
+}

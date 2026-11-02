@@ -1,0 +1,273 @@
+Arguments (pass arguments as '<name>:=<value>'):
+
+    'social_scene':
+        One of: ['static', 'dynamic']
+        (default: 'static')
+
+    'navigation_backend':
+        One of: ['baseline', 'paper1', 'paper2']
+        (default: 'baseline')
+
+    'scenario_annotations':
+        Publish authored scene markers, not camera detections. Valid choices are: ['true', 'false']
+        (default: 'true')
+
+    'simulation':
+        no description given
+        (default: 'true')
+
+    'motion_enabled':
+        One of: ['true', 'false']
+        (default: 'true')
+
+    'leader_robot':
+        One of: ['robot1', 'robot2', 'robot3']
+        (default: 'robot3')
+
+    'leader_camera':
+        One of: ['true', 'false']
+        (default: 'true')
+
+    'person_detection':
+        Detect people from leader RGB and locate them using depth/TF. Valid choices are: ['true', 'false']
+        (default: 'true')
+
+    'person_confidence':
+        no description given
+        (default: '0.35')
+
+    'person_detection_rate':
+        Maximum inference frequency in wall time; latest frame only.
+        (default: '4.0')
+
+    'person_input_size':
+        DNN input size; multiple of 32, e.g. 320, 416, 608.
+        (default: '416')
+
+    'person_cpu_threads':
+        no description given
+        (default: '2')
+
+    'head_pose_enabled':
+        One of: ['true', 'false']
+        (default: 'true')
+
+    'body_pose_enabled':
+        One of: ['true', 'false']
+        (default: 'true')
+
+    'body_input_size':
+        no description given
+        (default: '256')
+
+    'body_max_people':
+        no description given
+        (default: '3')
+
+    'horizontal_scan_every':
+        Extra rotated RGB person scan every N matched frames; 0 disables.
+        (default: '0')
+
+    'detection_wall_budget':
+        no description given
+        (default: '2.0')
+
+    'social_analysis_window':
+        no description given
+        (default: '10.0')
+
+    'leg_detection':
+        One of: ['true', 'false']
+        (default: 'true')
+
+    'social_avoidance':
+        One of: ['true', 'false']
+        (default: 'true')
+
+    'social_zone_memory':
+        no description given
+        (default: '60.0')
+
+    'social_protect_uncertain':
+        Deprecated: proximity alone no longer creates social regions. Valid choices are: ['true', 'false']
+        (default: 'false')
+
+    'social_provisional_memory':
+        no description given
+        (default: '20.0')
+
+    'social_group_distance':
+        Nearby peer distance for one-way attention and shared viewing (metres).
+        (default: '2.5')
+
+    'social_group_margin':
+        no description given
+        (default: '0.45')
+
+    'social_viewing_length':
+        no description given
+        (default: '3.2')
+
+    'social_tv_distance':
+        Maximum distance from each viewer to the observed TV/colour target.
+        (default: '4.5')
+
+    'social_color_attention':
+        Protect common directions towards a nearby RGB-D TV or multicolour object. Valid choices are: ['true', 'false']
+        (default: 'true')
+
+    'social_color_person_memory':
+        no description given
+        (default: '75.0')
+
+    'social_color_object_memory':
+        no description given
+        (default: '75.0')
+
+    'social_color_zone_memory':
+        no description given
+        (default: '90.0')
+
+    'social_observation':
+        One of: ['true', 'false']
+        (default: 'true')
+
+    'social_auto_observe':
+        One of: ['true', 'false']
+        (default: 'true')
+
+    'social_inspect_obstacles':
+        One of: ['true', 'false']
+        (default: 'false')
+
+    'social_observe_cooldown':
+        no description given
+        (default: '30.0')
+
+    'social_prediction_horizon':
+        no description given
+        (default: '1.5')
+
+    'social_inferred_focus':
+        Deprecated: viewing requires an observed multicolour target. Valid choices are: ['true', 'false']
+        (default: 'false')
+
+    'world':
+        no description given
+        (default: 'social_static')
+
+    'map_yaml':
+        no description given
+        (default: '/home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/map/social_static.yaml')
+
+    'planning_map_topic':
+        Map shared by the coordinator and all three MPC nodes.
+        (default: '/map')
+
+    'social_observation_enabled':
+        One of: ['true', 'false']
+        (default: 'false')
+
+    'observation_angular_speed':
+        no description given
+        (default: '0.75')
+
+    'observation_dwell':
+        no description given
+        (default: '0.8')
+
+    'observation_analysis_time':
+        no description given
+        (default: '0.0')
+
+    'rviz_config':
+        no description given
+        (default: '/home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/rviz/dstar_mpc.rviz')
+
+    'bridge_config':
+        no description given
+        (default: '/home/duc/three-robot-rescue/install/social_navigation_sim/share/social_navigation_sim/config/gz_bridge/social_static_bridge.yaml')
+
+    'adaptive_formation':
+        Use triangle formation in open space and a column in narrow passages.
+        (default: 'true')
+
+    'camera_width':
+        no description given
+        (default: '640')
+
+    'camera_height':
+        no description given
+        (default: '480')
+
+    'camera_rate':
+        no description given
+        (default: '15.0')
+
+    'formation_transition_speed':
+        Reference speed in m/s while folding or opening the formation.
+        (default: '0.22')
+
+    'formation_follower_speed':
+        Reference speed in m/s for independent follower catch-up.
+        (default: '0.22')
+
+    'formation_narrow_follower_speed':
+        Follower catch-up reference speed limit in narrow passages (m/s).
+        (default: '0.12')
+
+    'formation_open_hold':
+        Seconds of clear space before expanding from a column to a triangle.
+        (default: '0.60')
+
+    'rviz':
+        Open RViz with the map, paths, and robot position markers.
+        (default: 'true')
+
+    'rviz_rendering':
+        RViz GLX backend. Auto uses Intel, or software rendering, if NVIDIA reports a driver/library version mismatch. Valid choices are: ['auto', 'native', 'intel', 'software']
+        (default: 'auto')
+
+    'gazebo_rendering':
+        Graphics backend for both Gazebo GUI and sensor rendering. Valid choices are: ['auto', 'native', 'intel', 'software']
+        (default: 'auto')
+
+    'robot1_x':
+        no description given
+        (default: '3.5')
+
+    'robot1_y':
+        no description given
+        (default: '-3.8')
+
+    'robot1_yaw':
+        no description given
+        (default: '1.57')
+
+    'robot2_x':
+        no description given
+        (default: '3.5')
+
+    'robot2_y':
+        no description given
+        (default: '-3.0')
+
+    'robot2_yaw':
+        no description given
+        (default: '1.57')
+
+    'robot3_x':
+        no description given
+        (default: '3.5')
+
+    'robot3_y':
+        no description given
+        (default: '-2.2')
+
+    'robot3_yaw':
+        no description given
+        (default: '1.57')
+
+    'use_sim_time':
+        Use simulation time
+        (default: 'true')

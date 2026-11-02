@@ -1,0 +1,31 @@
+......................................................F................. [ 90%]
+........                                                                 [100%]
+=================================== FAILURES ===================================
+__ test_follower_escapes_before_logged_contact_geometry_with_nearby_teammates __
+
+    def test_follower_escapes_before_logged_contact_geometry_with_nearby_teammates():
+        # Relative geometry captured at sim 26.483 s. Start observations 2.483 s
+        # earlier, before overlap. This is kinematic feedback, not Gazebo replay.
+        poses=[(2.1862476905,-2.2141150693,-3.0599277976),
+               (1.6761732659,-2.7598619302,-1.9778582797),
+               (1.6602096178,-3.3345621152,-.7859522957)]
+        clock=[0.];node=controller(1,empty_grid(),clock)
+        node.own_pose=poses[1];node.peer_poses=poses.copy()
+        minimum=math.inf;moved=False
+        for k in range(65):
+            now=k*.1;clock[0]=now
+            person=(1.3926288352+.35*(now-2.483),-2.5)
+            measured_person(node,now,person);node.peer_poses[1]=node.own_pose
+            before=node.own_pose;node.control_tick()
+            vx,vy,spin=node.last_command;mid=before[2]+spin*.05
+            after=(before[0]+.1*(vx*math.cos(mid)-vy*math.sin(mid)),
+                   before[1]+.1*(vx*math.sin(mid)+vy*math.cos(mid)),before[2]+.1*spin)
+            minimum=min(minimum,swept_separation(before,after,person,(person[0]+.035,person[1])))
+>           assert minimum>.47, (now,minimum,node.safety_state)
+E           AssertionError: (2.2, 0.46568707067432524, 'moving_obstacle: yielding with checked local escape; speed=0.35m/s band=slow TTC=0.00s; A* proposal=reactive fallback')
+E           assert 0.46568707067432524 > 0.47
+
+social_navigation_planner/test/test_moving_obstacle_safety.py:316: AssertionError
+=========================== short test summary info ============================
+FAILED social_navigation_planner/test/test_moving_obstacle_safety.py::test_follower_escapes_before_logged_contact_geometry_with_nearby_teammates
+1 failed, 79 passed in 23.68s

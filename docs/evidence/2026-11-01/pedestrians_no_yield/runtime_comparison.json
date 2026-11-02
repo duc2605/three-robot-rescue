@@ -1,0 +1,78 @@
+{
+  "sim": 5.625,
+  "comparisons": [
+    {
+      "model": "tv_viewer_a",
+      "actual": [
+        -1.0,
+        -3.85,
+        0.0,
+        0.0,
+        -0.0,
+        1.35299
+      ],
+      "nominal": [
+        -1.0,
+        -3.85,
+        0.0,
+        1.3529954362584782
+      ],
+      "xyz_error_m": 0.0
+    },
+    {
+      "model": "tv_viewer_a_walking",
+      "actual": [
+        0.0,
+        0.0,
+        -50.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "nominal": null
+    },
+    {
+      "model": "tv_viewer_a_drinking",
+      "actual": [
+        0.0,
+        0.0,
+        -50.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "nominal": null
+    },
+    {
+      "model": "tv_viewer_a_returning",
+      "actual": [
+        0.0,
+        0.0,
+        -50.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "nominal": null
+    },
+    {
+      "model": "patrol_person",
+      "actual": [
+        -3.53458,
+        -4.8,
+        0.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "nominal": [
+        -3.5277777777777772,
+        -4.8,
+        0.0,
+        0.0
+      ],
+      "xyz_error_m": 0.00680222222222282
+    }
+  ],
+  "limit": "Startup smoke; no controlled Gazebo blocking encounter"
+}

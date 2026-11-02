@@ -1,0 +1,13 @@
+[rviz2-8] [INFO] [1793508639.557464322] [rviz2]: Setting goal pose: Frame:map, Position(1.24217, -2.67986, 0), Orientation(0, 0, 0, 1) = Angle: 0
+[leader_person_detector.py-9] [WARN] [1793508623.380113702] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.
+[ign gazebo-1] [WARN] [1793508625.901890560] [robot1.gz_ros2_control]: IMU sensor 'robot1_imu_sensor' not found in hardware_info, skipping.
+[ign gazebo-1] [WARN] [1793508625.980516517] [robot1.gz_ros2_control]:  Desired controller update period (0.02 s) is slower than the gazebo simulation period (0.001 s).
+[ign gazebo-1] [WARN] [1793508627.563602740] [robot2.gz_ros2_control]: IMU sensor 'robot1_imu_sensor' not found in hardware_info, skipping.
+[ign gazebo-1] [WARN] [1793508627.563646215] [robot2.gz_ros2_control]: IMU sensor 'robot2_imu_sensor' not found in hardware_info, skipping.
+[ign gazebo-1] [WARN] [1793508627.628351348] [robot2.gz_ros2_control]:  Desired controller update period (0.02 s) is slower than the gazebo simulation period (0.001 s).
+[ign gazebo-1] [WARN] [1793508629.579660060] [robot3.gz_ros2_control]: IMU sensor 'robot1_imu_sensor' not found in hardware_info, skipping.
+[ign gazebo-1] [WARN] [1793508629.579680316] [robot3.gz_ros2_control]: IMU sensor 'robot2_imu_sensor' not found in hardware_info, skipping.
+[ign gazebo-1] [WARN] [1793508629.579690784] [robot3.gz_ros2_control]: IMU sensor 'robot3_imu_sensor' not found in hardware_info, skipping.
+[ign gazebo-1] [WARN] [1793508629.745643954] [robot3.gz_ros2_control]:  Desired controller update period (0.02 s) is slower than the gazebo simulation period (0.001 s).
+[three_robot_dstar_mpc-4] [WARN] [1793508644.888976821] [three_robot_dstar_mpc]: D* Lite: no route for the leader with current obstacles.
+[leader_person_detector.py-9] [WARN] [1793508668.530681612] [leader_person_detector]: No fresh leader RGB images; check camera/bridge or paused Gazebo.

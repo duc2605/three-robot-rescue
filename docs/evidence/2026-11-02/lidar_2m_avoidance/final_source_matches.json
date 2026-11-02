@@ -1,0 +1,7 @@
+{
+  "dstar_mpc_controller": true,
+  "stop_diagnostics": true,
+  "moving_obstacles": true,
+  "local_escape": true,
+  "scan_pose_history": true
+}

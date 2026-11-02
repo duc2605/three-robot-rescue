@@ -1,0 +1,200 @@
+{
+  "session": "recordings/nk078_social_camera_120s_once",
+  "frame_count": 2401,
+  "sim_range": [
+    0.001,
+    120.001
+  ],
+  "goal": [
+    1.0815577507019043,
+    -2.0020322799682617
+  ],
+  "non_ground_contact_frame_counts": {
+    "patrol_person / robot3": 722,
+    "patrol_person / robot2": 756
+  },
+  "robots": {
+    "robot1": {
+      "root_distance_m": 11.199245181818792,
+      "last_xy": [
+        0.802961061255,
+        -1.38185949084
+      ],
+      "decision_counts": {
+        "watchdog_wall_freshness": 85,
+        "invalid_or_empty_reference": 84,
+        "motion_disabled_or_missing_map_pose_or_stale_state": 35,
+        "invalid_team_state": 34,
+        "missing_or_stale_reference": 42,
+        "mpc_tracking_command": 664,
+        "mpc_beam_empty_step_1": 64,
+        "checked_escape_command": 134,
+        "moving_obstacle_pause_hold": 160,
+        "refuge_wait_for_pass": 23,
+        "escape_compute_budget_exhausted": 27,
+        "escape_all_rollouts_rejected": 48,
+        "mpc_compute_budget_exhausted": 3
+      },
+      "last_escape_t": 118.912,
+      "first_tracking_after_last_escape_t": null
+    },
+    "robot2": {
+      "root_distance_m": 10.213519881142766,
+      "last_xy": [
+        1.64472278518,
+        -1.71469091579
+      ],
+      "decision_counts": {
+        "watchdog_wall_freshness": 82,
+        "invalid_or_empty_reference": 81,
+        "motion_disabled_or_missing_map_pose_or_stale_state": 34,
+        "invalid_team_state": 34,
+        "missing_or_stale_reference": 38,
+        "mpc_tracking_command": 682,
+        "mpc_beam_empty_step_2": 1,
+        "mpc_beam_empty_step_1": 50,
+        "checked_escape_command": 129,
+        "refuge_wait_for_pass": 90,
+        "moving_obstacle_pause_hold": 130,
+        "escape_compute_budget_exhausted": 15,
+        "escape_all_rollouts_rejected": 29,
+        "mpc_beam_empty_step_5": 2
+      },
+      "last_escape_t": 105.715,
+      "first_tracking_after_last_escape_t": 107.301
+    },
+    "robot3": {
+      "root_distance_m": 10.434382946794802,
+      "last_xy": [
+        1.08155171241,
+        -2.00191032904
+      ],
+      "decision_counts": {
+        "watchdog_wall_freshness": 82,
+        "invalid_or_empty_reference": 80,
+        "motion_disabled_or_missing_map_pose_or_stale_state": 35,
+        "invalid_team_state": 34,
+        "missing_or_stale_reference": 39,
+        "mpc_tracking_command": 736,
+        "mpc_sensor_data_expired_before_publish": 22,
+        "checked_escape_command": 189,
+        "moving_obstacle_pause_hold": 112,
+        "refuge_wait_for_pass": 11,
+        "escape_compute_budget_exhausted": 16,
+        "escape_all_rollouts_rejected": 28,
+        "mpc_beam_empty_step_1": 8,
+        "escape_requires_fresh_sensors_map_and_peers": 4
+      },
+      "last_escape_t": 105.715,
+      "first_tracking_after_last_escape_t": 107.001,
+      "min_goal_distance_m": 3.691303631923462e-08,
+      "last_goal_distance_m": 0.00012210032707967594,
+      "first_within_15cm_t": 20.801,
+      "after_last_escape_min_goal_distance_m": 0.00012210032707967594
+    }
+  },
+  "camera_social": {
+    "topic_counts": {
+      "/social_navigation/attention_debug": 60,
+      "/social_navigation/keepout": 77,
+      "/social_navigation/status": 600,
+      "/social_navigation/markers": 600,
+      "/leader/people/tv_screens": 400,
+      "/leader/people/poses": 370,
+      "/leader/people/head_poses": 374,
+      "/leader/people/attention_targets": 376,
+      "/leader/people/status": 361,
+      "/leader/people/social_body_poses": 239,
+      "/leader/people/activity": 239,
+      "/leader/people/body_observations": 386,
+      "/social_navigation/observation_status": 6,
+      "/social_navigation/search_status": 10
+    },
+    "first_detector_status": {
+      "t": 0.466,
+      "topic": "/leader/people/status",
+      "data": "Waiting for fresh RGB on /leader/camera/image_raw"
+    },
+    "last_detector_status": {
+      "t": 119.545,
+      "topic": "/leader/people/status",
+      "data": "people=1, located=1, heads=0, tv=0, bodies=1, lying_candidates=0, color_targets=0/0, inference_ms=628; RGB-D + capture-time TF"
+    },
+    "first_social_status": {
+      "t": 0.0,
+      "topic": "/social_navigation/status",
+      "data": "usable_orientations=0, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=0, remembered_people=0, remembered_viewers=0, tv_tracks=0, tv_raw_tracks=0, person_tracks=0, search=idle; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target"
+    },
+    "last_social_status": {
+      "t": 119.803,
+      "topic": "/social_navigation/status",
+      "data": "usable_orientations=2, provisional_regions=0, confirmed_regions=0, color_regions=0, tv_regions=0, color_targets=0, remembered_people=3, remembered_viewers=2, tv_tracks=0, tv_raw_tracks=0, person_tracks=1, search=cancelled: yielding to an approaching moving obstacle; no group region: need a direction towards a nearby peer, or one heading towards a nearby TV/colour target"
+    },
+    "max_keepout_cells": 5570,
+    "last_keepout_cells": 201,
+    "max_tv_regions": 1,
+    "max_confirmed_regions": 2,
+    "max_color_regions": 0,
+    "max_person_tracks": 8,
+    "max_tv_tracks": 1,
+    "max_tv_raw_tracks": 1,
+    "max_detector_people": 6,
+    "max_detector_located": 6,
+    "max_detector_heads": 0,
+    "max_detector_tv": 1,
+    "max_detector_bodies": 2,
+    "max_detector_lying_candidates": 0,
+    "max_detector_inference_ms": 1644,
+    "marker_labels": {
+      "facing_group\nnearby people: at least one measured direction towards a peer; TV not required\n+ 0.45 m buffer": 614,
+      "person\ncamera person; motion unconfirmed\n+ 0.40 m buffer": 765,
+      "person\nconstant velocity 0.40 m/s; <= 1.5 s\n+ 0.55 m buffer": 5,
+      "person\nconstant velocity 0.38 m/s; <= 1.5 s\n+ 0.55 m buffer": 15,
+      "viewing_tv\ntemporally confirmed viewer + RGB-D measured TV segment\n+ 0.40 m buffer": 11,
+      "person\nconstant velocity 0.34 m/s; <= 1.5 s\n+ 0.55 m buffer": 5,
+      "person\nconstant velocity 0.31 m/s; <= 1.5 s\n+ 0.55 m buffer": 5,
+      "person\nconstant velocity 0.32 m/s; <= 1.5 s\n+ 0.55 m buffer": 10,
+      "person\nconstant velocity 0.37 m/s; <= 1.5 s\n+ 0.55 m buffer": 20,
+      "person\nconstant velocity 0.36 m/s; <= 1.5 s\n+ 0.55 m buffer": 20,
+      "person\nconstant velocity 0.33 m/s; <= 1.5 s\n+ 0.55 m buffer": 30,
+      "possible_legs\npossible paired legs; orientation unknown\n+ 0.55 m buffer": 80,
+      "possible_legs\npossible paired legs; orientation unknown\n+ 0.40 m buffer": 170,
+      "person\nconstant velocity 0.30 m/s; <= 1.5 s\n+ 0.55 m buffer": 5,
+      "person\nconstant velocity 0.20 m/s; <= 1.5 s\n+ 0.55 m buffer": 5,
+      "person\nconstant velocity 0.23 m/s; <= 1.5 s\n+ 0.55 m buffer": 5,
+      "person\nconstant velocity 0.35 m/s; <= 1.5 s\n+ 0.55 m buffer": 5,
+      "person\nconstant velocity 0.45 m/s; <= 1.5 s\n+ 0.55 m buffer": 5
+    },
+    "viewing_tv_evidence": {
+      "samples": 11,
+      "first_t": 14.033,
+      "last_t": 18.235
+    },
+    "facing_group_evidence": {
+      "samples": 324,
+      "first_t": 4.619,
+      "last_t": 103.013
+    },
+    "lying_person_evidence": {
+      "samples": 0,
+      "first_t": null,
+      "last_t": null
+    }
+  },
+  "non_ground_contact_times": {
+    "patrol_person / robot3": {
+      "first_t": 84.18,
+      "last_t": 86.253
+    },
+    "patrol_person / robot2": {
+      "first_t": 85.647,
+      "last_t": 87.771
+    }
+  },
+  "leader_excursion": {
+    "initial_arrival_t": 20.801,
+    "departure_beyond_50cm_t": 24.001,
+    "return_within_15cm_t": 55.101
+  },
+  "scope": "One120s simulation with camera/social features enabled; no avoidance code changes, no repeated benchmark."
+}

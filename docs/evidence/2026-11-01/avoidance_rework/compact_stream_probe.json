@@ -1,0 +1,14 @@
+{
+  "clock_messages": 464,
+  "clock_rate_sim": 100.0000000000001,
+  "pose_messages": 93,
+  "pose_lengths": {
+    "3": 93
+  },
+  "pose_names": [
+    "robot1",
+    "robot2",
+    "robot3"
+  ],
+  "pose_rate_sim": 19.999999999999993
+}

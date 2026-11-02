@@ -1,0 +1,20 @@
+{
+  "controller_pid": 164943,
+  "controller_started_local": "2026-10-28 14:36:55 +07",
+  "controller_source_mtime_local": "2026-10-28 14:57:13 +07",
+  "astar_module_mtime_local": "2026-10-28 14:44:26 +07",
+  "latest_goal_from_rviz_log": [
+    1.26517,
+    -4.54311
+  ],
+  "clock_or_sensor_events_received_in_12s": false,
+  "zero_cmd_messages": 60,
+  "escape_path_publishers": 0,
+  "escape_goal_publishers": 0,
+  "gazebo_stats_received_in_9s": false,
+  "limitations": [
+    "No received messages does not alone identify whether publisher, bridge, physics, pause or transport is the cause.",
+    "Absent escape publishers and start time earlier than new module show this process does not expose the new A* interface.",
+    "No goal commands or restart were performed."
+  ]
+}

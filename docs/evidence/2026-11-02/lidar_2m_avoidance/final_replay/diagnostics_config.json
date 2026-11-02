@@ -1,0 +1,31 @@
+{
+  "mode": "manual_stop_diagnostics",
+  "sources": {
+    "dstar_mpc_controller": {
+      "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py",
+      "sha256": "b09c089dcbaec8e2e0f2628e732cf8c1b49771698bd0870b8d956dd7e7c2ea37"
+    },
+    "stop_diagnostics": {
+      "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/stop_diagnostics.py",
+      "sha256": "ece7678cb5fbc02de94a4aa71a50e789d12a95e4f504d7636a26b89924617e93"
+    },
+    "moving_obstacles": {
+      "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/moving_obstacles.py",
+      "sha256": "0dc89b371aab9ab2133adf9c4b7be1cdb3f99efcddebdf11dae33b4879cb443c"
+    },
+    "local_escape": {
+      "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/local_escape.py",
+      "sha256": "2b5cbab01807aa1327e3d04dbdcea6638d0d6ec7048b6b659a515992549bc36c"
+    },
+    "scan_pose_history": {
+      "path": "/home/duc/three-robot-rescue/social_navigation_planner/social_navigation_planner/scan_pose_history.py",
+      "sha256": "b9b4ed070beb785172592133cffff8e3b6c2a1dc96b14a34d5452ce42ad176ea"
+    }
+  },
+  "pre_wall_seconds": 3,
+  "post_recovery_wall_seconds": 5,
+  "maximum_samples_per_wall_second": 10,
+  "maximum_bytes_per_stream": 20971520,
+  "raw_camera_pixels_saved": false,
+  "full_lidar_ranges_saved": false
+}
