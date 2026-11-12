@@ -28,7 +28,8 @@ def generate_launch_description():
         SetEnvironmentVariable('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', [
             os.path.join(get_package_prefix('social_navigation_sim'), 'lib'), os.pathsep,
             EnvironmentVariable('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', default_value='')]),
-        DeclareLaunchArgument('navigation_backend', default_value='baseline', choices=['baseline', 'paper1', 'paper2', 'compare01', 'compare02', 'compare03', 'compare04', 'compare05', 'compare06', 'compare07', 'compare08', 'compare09', 'compare10']),
+        DeclareLaunchArgument('navigation_enabled', default_value='true', choices=['true','false']),
+        DeclareLaunchArgument('navigation_backend', default_value='baseline', choices=['baseline', 'paper1', 'paper2']),
         DeclareLaunchArgument('scenario_annotations', default_value='true',
                               choices=['true', 'false'],
                               description='Publish authored scene markers, not camera detections.'),
@@ -72,7 +73,7 @@ def generate_launch_description():
         DeclareLaunchArgument('social_color_zone_memory', default_value='90.0'),
         DeclareLaunchArgument('social_observation', default_value='true', choices=['true', 'false']),
         DeclareLaunchArgument('social_auto_observe', default_value='true', choices=['true', 'false']),
-        DeclareLaunchArgument('social_inspect_obstacles', default_value='false', choices=['true', 'false']),
+        DeclareLaunchArgument('social_inspect_obstacles', default_value='true', choices=['true', 'false']),
         DeclareLaunchArgument('social_observe_cooldown', default_value='30.0'),
         DeclareLaunchArgument('social_prediction_horizon', default_value='1.5'),
         DeclareLaunchArgument('social_inferred_focus', default_value='false', choices=['true', 'false'],
@@ -82,6 +83,7 @@ def generate_launch_description():
             launch_arguments={
                 'world': world,
                 'navigation_backend': LaunchConfiguration('navigation_backend'),
+                'navigation_enabled': LaunchConfiguration('navigation_enabled'),
                 'map_yaml': asset('map', 'social_static.yaml'),
                 'bridge_config': asset('config/gz_bridge', 'social_static_bridge.yaml'),
                 'rviz_config': os.path.join(share, 'rviz', 'social_navigation.rviz'),

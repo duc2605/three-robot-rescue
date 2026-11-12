@@ -1,0 +1,34 @@
+{
+  "recording": "recordings/dynamic_20261103_092310_218187918",
+  "source_before_fix": "NK109 matches pre-NK110 backup manifest",
+  "controller_sha256": "f887815a5981ccac1b0a26238e5c6d399d320c4f97072ca140af8e3701a684a1",
+  "end_t": 97.701,
+  "contacts_excluding_ground": {
+    "robot3/tv_viewer_a_walking": [
+      32.37,
+      34.848
+    ],
+    "robot3/tv_viewer_a_returning": [
+      93.995,
+      95.968
+    ]
+  },
+  "at_32_4": {
+    "reason": "escape_compute_budget_exhausted",
+    "emergency": true,
+    "selected_phase": null,
+    "rejected_checks": {
+      "escape.moving": 88
+    }
+  },
+  "at_94": {
+    "reason": "escape_compute_budget_exhausted",
+    "emergency": true,
+    "selected_phase": null,
+    "rejected_checks": {
+      "escape.moving": 103
+    }
+  },
+  "implemented": "NK110 adds measured initial-pose retreat preference, not a guaranteed solution to the two contacts.",
+  "validation": "AST/source diff only; regression cases written but not executed. No build/Gazebo/push."
+}

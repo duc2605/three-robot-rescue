@@ -4,6 +4,7 @@ DOI 10.3390/drones9010039. Not author code or a validated reproduction.
 Planar world-velocity inputs replace four Mecanum wheel inputs; reduced
 horizons and explicit swept-footprint validation are integration choices.
 """
+from .peer_safety import CONTROL_SEPARATION
 import math
 import time
 import numpy as np
@@ -226,6 +227,6 @@ def trace_safe(trace, grid, obstacles, peers=(), dt=.1, margin=.20):
                 return False
         for peer in peers:
             pa, pb = peer[min(k, len(peer)-1)], peer[min(k+1, len(peer)-1)]
-            if distance_segment((0, 0), a-pa, b-pb) < 2*margin+.03:
+            if distance_segment((0, 0), a-pa, b-pb) < CONTROL_SEPARATION:
                 return False
     return True

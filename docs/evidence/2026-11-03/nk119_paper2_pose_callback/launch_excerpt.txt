@@ -1,0 +1,2 @@
+1793690139.8257205 [INFO] [paper2_controller-5]: process started with pid [79905]
+1793690144.8838272 [ERROR] [paper2_controller-5]: process has died [pid 79905, exit code 1, cmd '/home/duc/three-robot-rescue/install/social_navigation_planner/lib/social_navigation_planner/paper2_controller --ros-args -r __node:=three_robot_dstar_mpc --params-file /tmp/launch_params_wybfx6y_ -r /map:=/social_navigation/map -r /physical_map:=/map'].

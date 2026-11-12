@@ -14,7 +14,8 @@
       <collision>
         <origin xyz="0 0 0.01"/>
         <geometry>
-          <cylinder radius="0.029" length="0.020" />
+          <!-- Full 10mm edge rounding, bounding radius29mm and width20mm. -->
+          <mesh filename="package://social_navigation_sim/meshes/3w_v2/omni_frame_collision_rounded.stl" />
         </geometry>
       </collision>
       <inertial>

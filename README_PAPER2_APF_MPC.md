@@ -1,5 +1,8 @@
 # Paper 2 — APF–MPC + enhanced APF formation, v1 adapted
 
+Mặc định Paper2 chạy **môi trường động**, có ghi bản chạy; dùng
+`social_scene:=static` ở cuối lệnh paper2 nếu cần cảnh tĩnh.
+
 ## Install and build
 
 The paper backend is integrated in this repository. Build directly; no patch installer is needed.
@@ -87,9 +90,9 @@ Legacy RViz/topic names containing dstar/mpc remain for display compatibility.
    narrow passages can still cause SAFETY_BRAKE/EMERGENCY_HOLD. No claim of
    better RTF, fewer collisions or better accuracy until measured on the same
    tests as paper1 and baseline.
-9. Active camera turning / social search is disabled, while perception and
-   social-map keepout remain enabled. Protected TV-viewing regions are not
-   erased to force goal reaching. Poses still use Gazebo as in the base project.
+9. NK185 enables shared camera observation tasks and LiDAR motion classification.
+   PaperBehavior applies common speed limits and swept safety checks.
+   Poses use the same Gazebo feedback as the base project.
 
 
 ## Verify the active algorithm
@@ -157,4 +160,21 @@ in packaging validation. These are offline checks, not Gazebo experiments.
 cd ~/three-robot-rescue
 PYTHONPATH=social_navigation_planner python3 -m unittest discover \
   -s social_navigation_planner/test -p test_paper2_apf_mpc.py -v
+```
+
+## RViz hiện map nhưng báo Global Status: Error — NK119
+
+Nếu chỉ có marker `spawn estimate`, kiểm tra terminal xem `paper2_controller`
+có thoát code1 không. Đã sửa callback pose thiếu timestamp so với lớp nền;
+cần build lại bằng khối lệnh đầu trang. Map động/bridge vẫn được chọn theo
+`social_scene`. Chưa chạy Gazebo kiểm chứng bản sửa; nếu lỗi còn, mở rộng
+`Global Status` trong RViz và giữ traceback terminal để xác định thông báo cụ thể.
+
+Regression offline, chạy sau build/source ở trên (không tạo mô phỏng mới):
+
+```bash
+cd ~/three-robot-rescue
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+python3 -m pytest -q social_navigation_planner/test/test_paper2_apf_mpc.py -k pose_callback
 ```

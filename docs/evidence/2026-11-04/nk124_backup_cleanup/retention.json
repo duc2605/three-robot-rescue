@@ -1,0 +1,71 @@
+{
+  "kept": [
+    "20261101_185410_before_nk034_restore",
+    "20261102_184916_116752_nk095_preserve_contact_free_before_goal_recovery",
+    "20261104_102810_011426_nk124_prune_intermediate_backups"
+  ],
+  "removed": [
+    {
+      "name": "20261103_101107_193563_nk113_extended_coordinated_escape",
+      "bytes": 106161642,
+      "archive_sha256": "ce85a1c9aafd60939a805779d9cb0add86f8df610f1279b14e8eabb926ba8bd1",
+      "reason": "Intermediate snapshot; oldest, NK094 checkpoint and fresh current snapshot retained"
+    },
+    {
+      "name": "20261103_131545_100937_nk117_prune_failed_backups_dynamic_papers",
+      "bytes": 106163021,
+      "archive_sha256": "efab0da4be94d3af71fdb0f8c938ed22e84a961e0ccd0e3d6f73ef0789f61113",
+      "reason": "Intermediate snapshot; oldest, NK094 checkpoint and fresh current snapshot retained"
+    },
+    {
+      "name": "20261103_141512_279177_nk118_audit_dynamic_restored_baseline",
+      "bytes": 106167474,
+      "archive_sha256": "448a473546011cd055c9927d299df38b4c9c523a245d03553786587f79a1aa6e",
+      "reason": "Intermediate snapshot; oldest, NK094 checkpoint and fresh current snapshot retained"
+    },
+    {
+      "name": "20261103_141814_707453_nk119_fix_paper2_timestamp_pose_callback",
+      "bytes": 106170309,
+      "archive_sha256": "7c024421feed1736e364c974ccec9c69dcf6d2836fbdba19e07d2d8c0dac0a35",
+      "reason": "Intermediate snapshot; oldest, NK094 checkpoint and fresh current snapshot retained"
+    },
+    {
+      "name": "20261103_145748_487541_nk120_audit_paper3_formation_leak",
+      "bytes": 106173790,
+      "archive_sha256": "afaa19703f4cc638989c78ce869f80b0e457c9054765f0f709c1c4ad4283527a",
+      "reason": "Intermediate snapshot; oldest, NK094 checkpoint and fresh current snapshot retained"
+    },
+    {
+      "name": "20261103_150117_828475_nk120_isolate_and_rewrite_papers03_12_from_sources",
+      "bytes": 106173807,
+      "archive_sha256": "cbafed8f9f2cfbf70a574157ccb5bb0c4102b0789131bbdceb44d316e5d93e14",
+      "reason": "Intermediate snapshot; oldest, NK094 checkpoint and fresh current snapshot retained"
+    },
+    {
+      "name": "20261103_161952_273035_nk121_replace_papers08_10_upstream_repositories",
+      "bytes": 106193221,
+      "archive_sha256": "e3633c7f222d10b8737db861063c5a85319be45999c94d5bcc2b9f0923141e39",
+      "reason": "Intermediate snapshot; oldest, NK094 checkpoint and fresh current snapshot retained"
+    },
+    {
+      "name": "20261104_095952_039090_nk121_continue_papers08_10_partial_checkpoint",
+      "bytes": 106194642,
+      "archive_sha256": "312c73ec074071caba1a97b863aed366736c1c7c739707229397f7b173bd03d3",
+      "reason": "Intermediate snapshot; oldest, NK094 checkpoint and fresh current snapshot retained"
+    },
+    {
+      "name": "20261104_101615_566274_nk122_remove_skipped_papers",
+      "bytes": 106213345,
+      "archive_sha256": "4f7c02b4f7920bae28e8ffce071b8e4e854dca7f666e67bcec745ee4716b828b",
+      "reason": "Intermediate snapshot; oldest, NK094 checkpoint and fresh current snapshot retained"
+    },
+    {
+      "name": "20261104_102119_658492_nk123_remove_duplicate_old_paper_names",
+      "bytes": 106209778,
+      "archive_sha256": "edeb52530e108903d338a314e3dfac49e370d318fb2744391423fcf737d811e1",
+      "reason": "Intermediate snapshot; oldest, NK094 checkpoint and fresh current snapshot retained"
+    }
+  ],
+  "removed_count": 10,
+  "freed_bytes": 1061821029
+}

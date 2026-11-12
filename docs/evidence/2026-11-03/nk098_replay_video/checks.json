@@ -1,0 +1,21 @@
+{
+  "date_vietnam": "2026-11-03",
+  "python_ast_files": [
+    "scripts/replay_media.py",
+    "scripts/record_replay_media.py",
+    "scripts/view_replay.py",
+    "scripts/tests/test_replay_media.py",
+    "social_navigation_sim/scripts/replay_sensor_recorder.py"
+  ],
+  "javascript_syntax": "V8 new Function compile only, no execution",
+  "html_ids": "unique and literal JS lookups present",
+  "local_markdown_links_and_fences": "pass",
+  "shell": "bash -n scripts/run_dynamic.sh",
+  "controller_unchanged_from_backup": true,
+  "ffmpeg_available": false,
+  "pytest_run": false,
+  "browser_run": false,
+  "gazebo_run": false,
+  "encoding_run": false,
+  "rtf_benchmark_run": false
+}

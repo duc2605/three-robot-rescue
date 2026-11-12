@@ -131,3 +131,24 @@ def test_writer_limit_is_reported_while_observer_still_running(tmp_path):
     assert status['error']=='navigation byte limit reached'
     assert status['writer_finished']
     writer.close()
+
+
+def test_global_route_length_and_clear_are_recorded_separately_from_escape():
+    node=observer([1.]);msg=RosPath();msg.header.frame_id='map';msg.header.stamp.sec=1
+    for x,y in [(0.,0.),(3.,0.),(3.,4.)]:
+        pose=PoseStamped();pose.pose.position.x=x;pose.pose.position.y=y;msg.poses.append(pose)
+    node.route(msg,'leader','route')
+    assert node.writer.rows[-1]['length_m'] == pytest.approx(7.)
+    assert node.writer.rows[-1]['source'] == '/dstar_lite/path'
+    node.route(msg,'leader','route')
+    assert len(node.writer.rows)==1
+    msg.poses=[];node.route(msg,'leader','route')
+    assert node.writer.rows[-1]['points']==[]
+    assert node.writer.rows[-1]['length_m']==0.
+
+
+def test_route_rejects_wrong_frame_and_nonfinite_geometry():
+    node=observer([1.]);msg=RosPath();msg.header.frame_id='odom';msg.header.stamp.sec=1
+    node.route(msg,'robot1','desired_route');assert not node.writer.rows
+    msg.header.frame_id='map';pose=PoseStamped();pose.pose.position.x=math.nan;msg.poses=[pose]
+    node.route(msg,'robot1','desired_route');assert not node.writer.rows

@@ -1,0 +1,82 @@
+{
+  "recording": "recordings/dynamic_20261103_094020_777814925",
+  "source": "NK110 hash matches current/pre-audit backup",
+  "controller_sha256": "4fc97d5233f3dd191f1cab5bcf67b9ab1ee6a77f90bd143f3db010de075b64d2",
+  "end_sim": 33.601,
+  "world_frames": 673,
+  "frames_with_contact_data": 613,
+  "contacts_excluding_ground": {
+    "robot3/tv_viewer_a_walking": [
+      31.763,
+      33.601
+    ]
+  },
+  "goal": [
+    1.1736056804656982,
+    -1.9790207147598267
+  ],
+  "minimum_leader_goal_distance_m": 0.3886043753768776,
+  "minimum_leader_goal_t": 23.151,
+  "leader_home": [
+    3.5,
+    -2.2,
+    1.57
+  ],
+  "snapshots": {
+    "23.3": {
+      "home_rejected": "escape.lidar",
+      "reason": "checked_escape_command"
+    },
+    "25.6": {
+      "home_rejected": "escape.peer",
+      "reason": "checked_escape_command"
+    },
+    "28.0": {
+      "reason": "mpc_tracking_command"
+    },
+    "29.0": {
+      "reason": "mpc_beam_empty_step_1",
+      "near_track_velocity": [
+        0.0,
+        0.0
+      ]
+    },
+    "31.0": {
+      "reason": "escape_compute_budget_exhausted",
+      "home_rejected": "escape.moving",
+      "measured_world_velocity": [
+        -0.07013625336468433,
+        0.160200896934725,
+        -0.5108917001250254
+      ],
+      "escape_initial_body_velocity": [
+        0.022710566571245816,
+        -0.2790774626622741,
+        0.0
+      ]
+    },
+    "31.7": {
+      "reason": "escape_compute_budget_exhausted",
+      "home_rejected": "escape.moving",
+      "selected_phase": null,
+      "state_age_sim": 0.102,
+      "scan_age_sim": 0.1
+    },
+    "32.0": {
+      "reason": "escape_compute_budget_exhausted",
+      "home_rejected": "escape.corridor",
+      "selected_phase": null
+    },
+    "33.0": {
+      "reason": "checked_escape_command",
+      "selected_phase": "physical_emergency",
+      "selected_proposal": "refuge"
+    }
+  },
+  "limits": [
+    "No controlled A/B or unique-root-cause proof.",
+    "Robot initial-command and measured-world velocities are different coordinate frames; do not compare raw components directly.",
+    "Contact first/last are not proof of uninterrupted contact.",
+    "No new simulation or controller edit."
+  ]
+}

@@ -8,7 +8,7 @@ from .peer_safety import PHYSICAL_SEPARATION, peer_motion_free, minimum_team_dis
 
 class SeparationRecoveryPlanner:
     def __init__(self, segment_free, clearance, order, physical=PHYSICAL_SEPARATION,
-                 trigger=0.38, target=0.46, obstacle_margin=0.18):
+                 trigger=0.32, target=0.34, obstacle_margin=0.18):
         self.segment_free, self.clearance, self.order = segment_free, clearance, tuple(order)
         self.physical, self.trigger, self.target = physical, trigger, target
         self.obstacle_margin = obstacle_margin

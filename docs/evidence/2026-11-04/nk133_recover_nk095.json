@@ -1,0 +1,19 @@
+{
+  "recovered_backup": "backups/20261104_132250_223052_nk095_recovered_from_git",
+  "commit": "c8af894130b833a51a7d42fb7b927813b4a804ba",
+  "archive_sha256": "b785ec1fe7ae5d09b4ca2ce718ee6e17923673ab63fb41d8784d5e1cbebdd7df",
+  "verified_files": 1118,
+  "original_archive_byte_identical": false,
+  "untracked_files_restored": false,
+  "working_tree_rolled_back": false,
+  "current_backup": "backups/20261104_132201_881452_nk133_before_recover_nk095_archive",
+  "verification": "Full path set and each Git blob object hash checked, then SHA256 archive/manifest verified",
+  "baseline_checkpoint_file_sha256": {
+    "docs/evidence/2026-11-02/nk081_motion_uncertainty/tested_source/dstar_mpc_controller.py": "dfb57b31a5ecb0a9331404d256d7a493a55d781fa6dac593ead67aa9abda401b",
+    "docs/evidence/2026-11-02/nk081_motion_uncertainty/tested_source/moving_obstacles.py": "e5acf68c0493eeba01b1484b1b5a745960e03d76f2d18ccff04e276891e7754c",
+    "social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py": "f3a24ff7fb8752c07a6d885c6b052a70f2c98a9073e0de0236b0559963f4a19e",
+    "social_navigation_planner/social_navigation_planner/local_escape.py": "ed081833f1ad612102ed3aaf2f1d0cecd0199a02c9a80f8667386fd43622668d",
+    "social_navigation_planner/social_navigation_planner/moving_obstacles.py": "cc5b2150e9a51dcb0dedd29824dcb06ba8b7f06a58dc57289593b1d3502b64bc",
+    "social_navigation_planner/social_navigation_planner/social_observation.py": "523bd6d60ed7647265ad9754880936aadd237c3e3db030657e399247192c7a86"
+  }
+}

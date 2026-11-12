@@ -65,9 +65,11 @@ class ColorAttention:
         self.tv_aliases = {k: v for k, v in self.tv_aliases.items() if v in self.objects}
 
     def observe_screen_objects(self, objects, stamp):
-        """Attach measured screen endpoints to TV tracks without colour cues."""
+        """Accept measured screen geometry with same-capture display evidence."""
         used = set()
         for obj in objects:
+            if not obj.get('display_confirmed', False):
+                continue
             p = np.asarray(obj['position'], float)
             boundary = np.asarray(obj['footprint'], float)
             if (p.shape != (3,) or boundary.shape != (2, 2)
@@ -83,10 +85,19 @@ class ColorAttention:
             old = self.objects[key]
             if stamp <= old.get('geometry_stamp', -math.inf):
                 continue
-            old.update(p=boundary.mean(axis=0), footprint=boundary, geometry_stamp=stamp, z=float(p[2]))
             front = np.asarray(obj.get('front', []), float)
-            if front.shape == (2,) and np.isfinite(front).all() and np.linalg.norm(front) > .9:
-                old['front'] = front/np.linalg.norm(front)
+            if (front.shape != (2,) or not np.isfinite(front).all()
+                    or np.linalg.norm(front) < .9):
+                continue
+            front = front/np.linalg.norm(front)
+            previous_front = old.get('front')
+            # A later view of the same stationary TV cannot flip its front.
+            if previous_front is not None and front @ previous_front < math.cos(math.radians(30)):
+                continue
+            old.update(p=boundary.mean(axis=0), footprint=boundary,
+                       geometry_stamp=stamp, z=float(p[2]), display_confirmed=True)
+            if previous_front is None:
+                old['front'] = front
             if stamp > old['stamp'] or old['hits'] == 0:
                 old.update(stamp=stamp, hits=old['hits']+1)
             used.add(key)
@@ -270,7 +281,14 @@ class ColorAttention:
 
     def viewing_angle(self, person, target):
         """Angular miss from a screen segment; head/body direction is not eye gaze."""
+        # Colour proposals remain useful for directing camera observation.
+        # Only the confirmed screen track may establish a viewing corridor.
+        if target.get('source') != 'tv':
+            return math.inf
         if person.get('d') is None:
+            return math.inf
+        if target.get('source') == 'tv' and (not target.get('display_confirmed')
+                or target.get('front') is None or target.get('footprint') is None):
             return math.inf
         vector = target['p']-person['p']
         if target.get('front') is not None and (-vector) @ target['front'] <= .1:
@@ -279,6 +297,21 @@ class ColorAttention:
         if not .4 < length <= self.target_distance:
             return math.inf
         direction = person['d']/max(float(np.linalg.norm(person['d'])), 1e-9)
+        if target.get('source') == 'tv':
+            # Positive front-side distance and a forward ray intersection
+            # are both required, even for previously confirmed viewers.
+            normal = np.asarray(target['front'])
+            approach = float(direction @ normal)
+            if approach >= -1e-6:
+                return math.inf
+            distance_to_plane = float((person['p']-target['p']) @ normal)
+            intersection = person['p'] + direction*(-distance_to_plane/approach)
+            segment = np.asarray(target['footprint'])
+            edge = segment[-1]-segment[0]
+            fraction = float((intersection-segment[0]) @ edge/max(float(edge @ edge), 1e-9))
+            if not 0. <= fraction <= 1.:
+                return math.inf
+            return 0.
         angle = math.acos(float(np.clip(direction @ (vector/length), -1, 1)))
         footprint = target.get('footprint')
         if footprint is not None:
@@ -345,6 +378,8 @@ class ColorAttention:
             if members <= self.people.keys():
                 return not any(members <= group for group in self.conversation_groups(visible))
             return False
+        if key[0] == 'color_attention':
+            return True
         members, target_id = set(key[1:-1]), key[-1]
         if target_id in self.retired_targets:
             return True

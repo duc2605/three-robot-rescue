@@ -6,8 +6,8 @@ from .adaptive_structure import swept_separation
 
 
 PHYSICAL_SEPARATION = 0.32  # Two 0.15 m footprints plus 0.02 m reserve.
-CONTROL_SEPARATION = 0.34
-ROUTING_SEPARATION = 0.38
+CONTROL_SEPARATION = 0.32
+ROUTING_SEPARATION = 0.32
 
 
 def peer_motion_free(a0, a1, b0, b1, preferred=CONTROL_SEPARATION,

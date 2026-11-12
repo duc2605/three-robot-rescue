@@ -58,7 +58,7 @@ def transform_xyz(xyz, transform):
 
 
 def obstacle_ranges(xyz, *, bins=240, min_height=0.025, max_height=0.40,
-                    min_range=0.16, max_range=2.0):
+                    min_range=0.16, max_range=12.0):
     """Keep the nearest obstacle in each azimuth, excluding floor and self.
 
     Output is horizontal distance in base_link, not the oblique beam length.
@@ -85,7 +85,7 @@ class LeaderObstacleScan(Node):
         for name, value in (
             ('robot_name', 'robot3'), ('min_obstacle_height', 0.025),
             ('max_obstacle_height', 0.40), ('self_radius', 0.16),
-            ('max_range', 2.0), ('max_cloud_age', 0.30),
+            ('max_range', 12.0), ('max_cloud_age', 0.30),
         ):
             self.declare_parameter(name, value)
         self.robot = str(self.get_parameter('robot_name').value)
@@ -137,7 +137,7 @@ class LeaderObstacleScan(Node):
         scan.angle_min = -math.pi
         scan.angle_max = math.pi
         scan.angle_increment = 2 * math.pi / (len(ranges) - 1)
-        scan.scan_time = 0.1
+        scan.scan_time = 1.0 / 5.5
         scan.range_min = self.self_radius
         scan.range_max = self.max_range
         scan.ranges = ranges.tolist()

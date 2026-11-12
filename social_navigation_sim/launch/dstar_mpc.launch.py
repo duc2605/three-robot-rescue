@@ -84,6 +84,7 @@ def generate_launch_description():
     )
 
     controller = Node(
+        condition=IfCondition(LaunchConfiguration('navigation_enabled')),
         package='social_navigation_planner',
         executable=PythonExpression([
             "'paper2_controller' if '", LaunchConfiguration('navigation_backend'),
@@ -142,8 +143,9 @@ def generate_launch_description():
             ]),
             name=f'{robot_name}_distributed_mpc',
             condition=IfCondition(PythonExpression([
-                "'", LaunchConfiguration('navigation_backend'), "' == 'baseline' or '",
-                LaunchConfiguration('navigation_backend'), "'.startswith('compare')",
+                "'", LaunchConfiguration('navigation_enabled'), "' == 'true' and ('",
+                LaunchConfiguration('navigation_backend'), "' == 'baseline' or '",
+                LaunchConfiguration('navigation_backend'), "'.startswith('compare'))",
             ])),
             output='screen',
             parameters=[
@@ -173,10 +175,11 @@ def generate_launch_description():
 
     return LaunchDescription(
         [
+            DeclareLaunchArgument('navigation_enabled', default_value='true', choices=['true','false']),
             DeclareLaunchArgument('gazebo_gui', default_value='true', choices=['true','false']),
             DeclareLaunchArgument('world', default_value='social_static'),
             DeclareLaunchArgument('navigation_backend', default_value='baseline',
-                                  choices=['baseline', 'paper1', 'paper2', 'compare01', 'compare02', 'compare03', 'compare04', 'compare05', 'compare06', 'compare07', 'compare08', 'compare09', 'compare10']),
+                                  choices=['baseline', 'paper1', 'paper2']),
             DeclareLaunchArgument('map_yaml', default_value=map_yaml),
             DeclareLaunchArgument('planning_map_topic', default_value='/map',
                                   description='Map shared by the coordinator and all three MPC nodes.'),

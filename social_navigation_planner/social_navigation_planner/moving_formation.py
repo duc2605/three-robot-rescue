@@ -30,7 +30,7 @@ def checked_team_row(before, proposed, order, segment_free):
     # a leader step that requires a follower to have moved first.
     leader_clear = (segment_free(before[leader], proposed[leader])
                     and all(peer_motion_free(before[leader], proposed[leader],
-                                             before[i], before[i], preferred=0.38)
+                                             before[i], before[i], preferred=0.32)
                             for i in order[1:]))
     candidate = list(proposed)
     if not leader_clear:
@@ -60,7 +60,7 @@ class FollowerTrack:
         if hint and all(self.segment_free(a, b) for a, b in zip(hint, hint[1:])):
             path = hint
         elif (self.segment_free(actual, goal)
-              and all(peer_motion_free(actual, goal, p, p, preferred=0.38) for p in peers)):
+              and all(peer_motion_free(actual, goal, p, p, preferred=0.32) for p in peers)):
             path = [actual, goal]
         else:
             if self.line is not None:
@@ -71,7 +71,7 @@ class FollowerTrack:
                 if (self.line.length > 1e-6 and error < 0.20
                         and math.dist(self.goal[:2], goal[:2]) < 0.10
                         and all(self.segment_free(a, b) for a, b in zip(remaining, remaining[1:]))
-                        and all(peer_motion_free(a, b, p, p, preferred=0.38)
+                        and all(peer_motion_free(a, b, p, p, preferred=0.32)
                                 for a, b in zip(remaining, remaining[1:])
                                 for p in peers)):
                     self.progress = s

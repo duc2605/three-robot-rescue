@@ -1,0 +1,32 @@
+{
+  "backup": "backups/20261104_101615_566274_nk122_remove_skipped_papers",
+  "deleted_file_count": 28,
+  "unchanged_runtime_sha256": {
+    "social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py": "74c6b9f35c896d05a707b95255ef2f69ba136b132c8e91c14b45b84becc13908",
+    "social_navigation_planner/social_navigation_planner/paper1_gwo_woa_node.py": "158fb19d0e5b456cc542780ab7f79321276e54b754496745108ae9d86753d1f8",
+    "social_navigation_planner/social_navigation_planner/paper1_gwo_woa_core.py": "08c680ea4a847667d771190c49521601e76edba434b50475e43411e1b72463b8",
+    "social_navigation_planner/social_navigation_planner/paper2_apf_mpc_node.py": "6fc243fc27717705e062db279b3252ce21920862a110fb3e679e9f19096f555e",
+    "social_navigation_planner/social_navigation_planner/paper2_apf_mpc_core.py": "341db2f1dffcf24b1dd50684ac690bf5ca39d806ea5d80ec36a8ea835d1910f1",
+    "social_navigation_planner/social_navigation_planner/paper_experiment_node.py": "96cdfbf319903374cb1720b0418a7d72e27f1d8bc30c02d7157f53897af5aa15",
+    "social_navigation_planner/social_navigation_planner/paper_models/environment.py": "1fec5d9b298045daa868c71b8d2f2862592cf1a17cb136f305edf7830d04dd4a",
+    "social_navigation_planner/social_navigation_planner/paper_models/drivetrains.py": "87bfe2671727c10033e5b26e71e5f98e51016fefdcf129dc88c7838cbc47c7b1",
+    "social_navigation_planner/social_navigation_planner/paper_models/kinematic.py": "9614489a82228b7539549a2074f301b790f1addb4bee35cc6f59e770dfcb2859",
+    "social_navigation_planner/social_navigation_planner/paper_models/__init__.py": "45d9d52e4a5dcc92b13751315fd7c64c5f20502629d5e27809e04ad85be7997f",
+    "social_navigation_planner/social_navigation_planner/paper_models/ho_mpc.py": "f9538b1af0320b93c575814a05d0bdf53fa74cba18e09deb386a457d47ebfb80",
+    "social_navigation_planner/social_navigation_planner/paper_models/upstream_sources.py": "398914bc8d15ea92b3ca3fa691f2a5cf908518154ee1b4783f719785c9bc1aac",
+    "social_navigation_planner/social_navigation_planner/paper_models/robile.py": "0d03340a326f9d28c844e6f4e0418e9864f33ac660bdd26d86c66c1ce762aec9",
+    "social_navigation_planner/social_navigation_planner/paper_models/deform.py": "7748478fc7aee074dc97844e9921889c5c71751f7a63b7cbea010c55b1287e97"
+  },
+  "ast_files": [
+    "social_navigation_planner/social_navigation_planner/paper_models/catalog.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/registry.py",
+    "social_navigation_planner/test/test_comparison_methods.py",
+    "social_navigation_sim/launch/_comparison_backend.py"
+  ],
+  "shell_scripts": 3,
+  "readme_bash_blocks_syntax_only": 16,
+  "local_links": "passed",
+  "build_run": false,
+  "tests_run": false,
+  "gazebo_run": false
+}

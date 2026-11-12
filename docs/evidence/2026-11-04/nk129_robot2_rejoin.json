@@ -1,0 +1,76 @@
+{
+  "recording": "recordings/dynamic_20261104_111606_125384942",
+  "backend": "baseline",
+  "controller_sha256": "74c6b9f35c896d05a707b95255ef2f69ba136b132c8e91c14b45b84becc13908",
+  "reviewed_until_sim_s": 152.8,
+  "observations": [
+    {
+      "t": 147.9,
+      "robot": "robot2",
+      "pose": [
+        -2.8208681615214792,
+        -4.27293668743812,
+        3.039250196861938
+      ],
+      "command_xy": [
+        0.0,
+        0.0
+      ],
+      "reason": "mpc_tracking_command",
+      "safety_status": "normal",
+      "reference_own_pose_matches_measured": true,
+      "scan_age_sim_s": 0.1,
+      "compute_elapsed_wall_ms": 3.620157000113977
+    },
+    {
+      "t": 148.0,
+      "coordinator_robot2_join_status": "joining measured leader trail"
+    },
+    {
+      "t": 148.2,
+      "robot": "robot2",
+      "command": [
+        0.0147779585365151,
+        -0.07862322774786286,
+        -0.19999999999998952
+      ]
+    },
+    {
+      "t": 148.6,
+      "coordinator_robot2_join_status": "joining measured leader trail"
+    },
+    {
+      "t": 148.9,
+      "goal_progress_mode": null
+    },
+    {
+      "t": 149.2,
+      "coordinator_robot2_join_status": "holding: no checked join"
+    },
+    {
+      "t": 152.8,
+      "coordinator_robot2_join_status": "holding: no checked join",
+      "moving_safety_active": false,
+      "goal_progress_mode": "goal progress / followers rejoin independently",
+      "robot2_pose": [
+        -2.9346433626876154,
+        -4.306741758518488,
+        -3.014943455184797
+      ],
+      "robot2_command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scan_age_sim_s": 0.1,
+      "compute_elapsed_wall_ms": 3.6383329997988767
+    }
+  ],
+  "conclusion": "Robot2 is held by coordinator join/reference generation in independent-goal mode. A brief join/motion occurred around148s, then returned to no checked join. Not explained by absent scans or a slow MPC in these samples.",
+  "limitations": [
+    "Exact route rejection cause (start/end connector, map path, peer) is not logged; cannot attribute to a specific obstacle or social zone.",
+    "Reset/holding transition observed; exact reset trigger not confirmed.",
+    "Independent mode follows measured trail; this does not prove triangle recovery.",
+    "No full contact/RTF audit, no new simulation or tests."
+  ]
+}

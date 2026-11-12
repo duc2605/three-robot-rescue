@@ -220,7 +220,7 @@ class TurnaroundPlanner:
             for _, point in sorted(candidates):
                 peers = [actual[j] for j in range(3) if j != index]
                 if (self.segment_free(actual[index], point)
-                        and all(peer_motion_free(actual[index], point, p, p, preferred=0.38)
+                        and all(peer_motion_free(actual[index], point, p, p, preferred=0.32)
                                 for p in peers)):
                     path = [actual[index], point]
                 else:
@@ -289,7 +289,7 @@ class TurnaroundPlanner:
                     peers = [actual[j] for j in (first, second) if j != index]
                     if (self.segment_free(actual[index], targets[index])
                             and all(peer_motion_free(actual[index], targets[index], p, p,
-                                                     preferred=0.38) for p in peers)):
+                                                     preferred=0.32) for p in peers)):
                         # Avoid a cell-center detour when a follower can hold
                         # its position or join along a clear straight segment.
                         path = [actual[index], targets[index]]

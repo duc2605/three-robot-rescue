@@ -59,6 +59,67 @@ def shapes(model):
     return result
 
 
+def evaluation_map(project, world):
+    """Snapshot authored map/zones for offline evaluation only."""
+    import base64
+    import yaml
+    package = project/'social_navigation_sim'
+    map_name = 'street_pedestrian' if world == 'street_intersection' else world
+    metadata = yaml.safe_load((package/'map'/f'{map_name}.yaml').read_text())
+    image = (package/'map'/metadata['image']).read_bytes()
+    # These project assets are binary 8-bit PGM, with optional header comments.
+    cursor = 0
+    def token():
+        nonlocal cursor
+        while cursor < len(image):
+            if image[cursor:cursor+1] == b'#':
+                cursor = image.index(b'\n',cursor)+1
+            elif image[cursor:cursor+1].isspace():
+                cursor += 1
+            else:
+                break
+        start = cursor
+        while cursor < len(image) and not image[cursor:cursor+1].isspace():
+            cursor += 1
+        return image[start:cursor]
+    magic = token();width = int(token());height = int(token());maximum = int(token())
+    if magic != b'P5' or maximum != 255:
+        raise ValueError('Evaluation map requires an 8-bit P5 PGM')
+    cursor += 2 if image[cursor:cursor+2] == b'\r\n' else 1
+    pixels = image[cursor:]
+    if len(pixels) != width*height:
+        raise ValueError('Invalid evaluation PGM dimensions')
+    threshold = float(metadata.get('free_thresh',.25))
+    negate = bool(metadata.get('negate',0))
+    occupied = bytes(int((v/255 if negate else (255-v)/255) >= threshold)
+                     for row in range(height-1,-1,-1) for v in pixels[row*width:(row+1)*width])
+    authored = json.loads((package/'config'/f'{world}_scene.json').read_text())
+    zones = [z for z in authored.get('zones',[]) if min(z.get('size',[0,0])) > 0]
+    tv_source = 'scene_config'
+    if world == 'social_dynamic':
+        static = json.loads((package/'config/social_static_scene.json').read_text())
+        zones = [z for z in zones if z['name'] != 'tv_group']
+        zones += [z for z in static['zones'] if z['name'] == 'tv_group']
+        tv_source = 'social_static_scene.json, user requested fixed evaluation TV zone'
+    return dict(width=width,height=height,resolution=float(metadata['resolution']),
+                origin=metadata['origin'],occupied_b64=base64.b64encode(occupied).decode(),
+                zones=zones,clearance=.18,tv_source=tv_source,
+                source='authored physical map and fixed social zones, evaluation only',
+                navigation_permissions='pedestrian_sidewalk_crosswalk' if world=='street_intersection' else 'indoor')
+
+
+def add_evaluation_map(scene, project):
+    if 'evaluation_map' in scene:
+        return scene
+    result = dict(scene)
+    try:
+        result['evaluation_map'] = evaluation_map(project,scene['world'])
+        result['evaluation_map']['snapshot_source'] = 'current_project_assets_for_old_recording'
+    except (OSError,ValueError,KeyError,TypeError,ImportError) as error:
+        result['evaluation_map_error'] = str(error)
+    return result
+
+
 def make_scene(project,world='social_dynamic'):
     package=project/'social_navigation_sim'
     source=package/'worlds'/f'{world}.sdf'
@@ -83,10 +144,16 @@ def make_scene(project,world='social_dynamic'):
         objects[name]={'name':name,'kind':'robot','radius':.15,'z':[0.,.20],
                        'geometry_source':'configured circular robot envelope; overlap estimate, not exact wheel contacts',
                        'initial_pose':None,'shapes':[]}
-    return {'version':1,'world':xml.get('name'),'bounds':authored.get('bounds',[-6.5,-5.5,6.5,5.5]),
+    result = {'version':1,'world':xml.get('name'),'bounds':authored.get('bounds',[-6.5,-5.5,6.5,5.5]),
             'source':'SDF geometry + measured ECM poses; never used as perception/navigation input',
             'overlap_label':'GEOMETRY ESTIMATE - NOT PHYSICS CONTACT',
             'objects':objects,'limits':['Robot circle is a configured envelope, not full wheel/mesh geometry.',
               'Boxes/cylinders projected from SDF; cylinder polygons have 32 sides.',
               'Non-primitive meshes without collision geometry are markers only.',
               'Pose samples are 20Hz. New recordings contain per-step physics contacts aggregated into each frame; old frames may have none.']}
+
+    try:
+        result['evaluation_map'] = dict(evaluation_map(project,world),snapshot_source='recording_creation')
+    except (OSError,ValueError,KeyError,TypeError,ImportError) as error:
+        result['evaluation_map_error'] = str(error)
+    return result

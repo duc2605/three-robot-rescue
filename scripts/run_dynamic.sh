@@ -21,8 +21,8 @@ if [[ "${1:-}" == "--profile" ]]; then
   case "$profile" in
     dynamic) ;;
     static) launch_file="social_static.launch.py"; default_scene="static" ;;
-    paper1) launch_file="paper1_gwo_woa.launch.py"; default_scene="static" ;;
-    paper2) launch_file="paper2_apf_mpc.launch.py"; default_scene="static" ;;
+    paper1) launch_file="paper1_gwo_woa.launch.py"; default_scene="dynamic" ;;
+    paper2) launch_file="paper2_apf_mpc.launch.py"; default_scene="dynamic" ;;
     *) echo 'Profile must be dynamic, static, paper1 or paper2' >&2; exit 2 ;;
   esac
   shift 2
@@ -30,14 +30,23 @@ fi
 comparison_method=""
 if [[ "${1:-}" == "--comparison" ]]; then
   comparison_method="${2:-}"
-  if [[ ! "$comparison_method" =~ ^(0[1-9]|10)$ ]]; then
-    echo 'Comparison method must be 01..10' >&2
+  if [[ ! "$comparison_method" =~ ^0[1-6]$ ]]; then
+    echo 'Comparison method must be 01,02,03,04,05,06' >&2
     exit 2
   fi
   if [[ "$profile" != "dynamic" ]]; then
     echo 'Do not combine --profile with --comparison' >&2
     exit 2
   fi
+  # Validate the installed implementation before creating a recording/launching.
+  /usr/bin/python3 - "$comparison_method" <<'CHECK_PAPER'
+import sys
+from social_navigation_planner.paper_models.catalog import require_runtime
+try:
+    require_runtime(int(sys.argv[1])+2)
+except (ValueError, RuntimeError) as exc:
+    raise SystemExit(str(exc))
+CHECK_PAPER
   profile="compare$comparison_method"
   shift 2
 fi
@@ -83,7 +92,7 @@ if sys.argv[2]:
     scene['comparison_method'] = int(sys.argv[2])
     scene['navigation_backend'] = 'compare' + sys.argv[2]
 scene['sensor_replay'] = {'version':1,'stream':'navigation.jsonl','source':'ROS scans and planner outputs; replay/evaluation only'}
-scene['perception_replay'] = {'stream':'perception.jsonl','camera':'raw and detection JPEG, max2Hz per source; manual recording only','social':'published social marker snapshots'}
+scene['perception_replay'] = {'stream':'perception.jsonl','camera':'raw JPEG max10Hz, detection max2Hz; timestamped MP4 prepared after stop','social':'published social marker snapshots'}
 scene['leader'] = next((arg.split(':=', 1)[1] for arg in reversed(args) if arg.startswith('leader_robot:=')), 'robot3')
 # Refuse to overwrite any existing recording.
 folder.mkdir(parents=True, exist_ok=False)
@@ -103,11 +112,13 @@ import sys
 sources = {}
 names = ['dstar_mpc_controller', 'stop_diagnostics', 'moving_obstacles', 'local_escape', 'scan_pose_history', 'robot_motion']
 if sys.argv[2]:
-    from social_navigation_planner.comparison_methods.registry import METHODS
-    info = METHODS[int(sys.argv[2])]
-    names += ['comparison_controller', 'comparison_methods.common', 'comparison_methods.registry']
-    names += ['comparison_methods.' + info['module'] + '.' + part
-              for part in ['pipeline', 'formation', 'trajectory', 'control']]
+    names = ['paper_experiment_node', 'paper_models.catalog', 'paper_models.kinematic',
+             'paper_models.environment', 'grid_clearance', 'scan_pose_history']
+    if int(sys.argv[2]) == 6:
+        names += ['paper_models.deform']
+    extra={3:'ho_mpc',4:'drivetrains',5:'robile'}.get(int(sys.argv[2]))
+    if extra:
+        names += ['paper_models.'+extra,'paper_models.upstream_sources']
 if sys.argv[3] == 'paper1':
     names += ['paper1_gwo_woa_node', 'paper1_gwo_woa_core']
 elif sys.argv[3] == 'paper2':
@@ -128,20 +139,33 @@ config['run_profile'] = sys.argv[3]
 config['navigation_backend'] = sys.argv[3] if sys.argv[3] in ('paper1', 'paper2') else 'baseline'
 if sys.argv[2]:
     config['comparison_method'] = int(sys.argv[2])
+    config['controller_family'] = 'independent_paper_adaptation'
+    if int(sys.argv[2])+2 in (5,6,7):
+        from social_navigation_planner.paper_models.upstream_sources import SOURCES
+        config['upstream'] = SOURCES[int(sys.argv[2])+2]
+    config['shared_baseline_escape'] = False
     config['navigation_backend'] = 'compare' + sys.argv[2]
 (Path(sys.argv[1]) / 'diagnostics_config.json').write_text(json.dumps(config, indent=2) + '\n')
 PYTHON
     echo "Stop diagnosis enabled: $SOCIAL_STOP_DIAGNOSTICS_DIRECTORY/stop_*.jsonl"
   fi
 fi
+# The supervisor forwards Ctrl+C to ROS, finalizes window/camera videos, and
+# uses a separate process; no screen capture or encoding runs in control ticks.
+run_launch() {
+  if [[ -n "${SOCIAL_REPLAY_DIRECTORY:-}" ]]; then
+    exec /usr/bin/python3 scripts/record_replay_media.py --session "$SOCIAL_REPLAY_DIRECTORY" -- "$@"
+  fi
+  exec "$@"
+}
 if [[ -n "$comparison_method" ]]; then
-  exec ros2 launch social_navigation_sim comparison.launch.py \
+  run_launch ros2 launch social_navigation_sim comparison.launch.py \
     method:="$comparison_method" social_scene:=dynamic \
     rviz_rendering:=intel gazebo_rendering:=intel "$@"
 fi
 if [[ "$profile" == "dynamic" ]]; then
-  exec ros2 launch social_navigation_sim "$launch_file" \
+  run_launch ros2 launch social_navigation_sim "$launch_file" \
     rviz_rendering:=intel gazebo_rendering:=intel leader_camera:=false "$@"
 fi
-exec ros2 launch social_navigation_sim "$launch_file" \
+run_launch ros2 launch social_navigation_sim "$launch_file" \
   rviz_rendering:=intel gazebo_rendering:=intel "$@"

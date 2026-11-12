@@ -2,6 +2,9 @@
 
 ## Cài đặt
 
+Mặc định môi trường động, có ghi bản chạy. Thêm `social_scene:=static`
+ở cuối lệnh paper1 nếu muốn cảnh tĩnh.
+
 Dừng mô phỏng cũ bằng Ctrl+C, rồi:
 
 ```bash
@@ -71,11 +74,11 @@ cũ bị tắt bởi điều kiện launch. Không chạy đồng thời hai lư
    horizon và gia tốc là cấu hình tích hợp, chưa được hiệu chuẩn theo bài.
    Cửa sổ vận tốc dùng lệnh trước làm xấp xỉ trạng thái vận tốc; cần đo sai lệch
    lệnh/đo thực khi đánh giá khả năng phanh trong Gazebo.
-6. LiDAR giữ các điểm đo mới như vật cản đứng yên trong horizon ngắn. Chưa có
-   dự báo vận tốc người hoặc bảo đảm tránh mọi người di chuyển ngoài góc nhìn.
-7. Tạm tắt **tự quay quan sát** để không chạy bộ điều phối nhiệm vụ riêng của
-   bản MPC. Camera và vùng xã hội vẫn cập nhật khi xe di chuyển; không xóa
-   vùng cấm để ép xe đi. Chưa có cơ chế đổi tam giác sang hàng dọc.
+6. Từ NK185, LiDAR dùng MotionTracks chung với baseline để phân loại cụm
+   tại chỗ/chuyển dịch, kèm kiểm swept vật động trước khi phát lệnh.
+7. Tự quay quan sát dùng lớp PaperBehavior và ObservationSweep chung.
+   Pipeline camera/vùng xã hội nhận cùng cấu hình launch. Đội hình của bài
+   tiếp tục dùng mục tiêu ảo và Eq32 theo cấu trúc được mô tả ở trên.
 8. Pose nhóm được lấy từ Gazebo như bản nền; đây chưa phải bài thử định vị thực.
 
 
@@ -104,6 +107,9 @@ so với vị trí ảo; phần tử leader là khoảng cách đến goal, khô
 bám ngang đường. `travelled_m` là quãng đường đo từ pose sau khi đặt goal;
 `goal_elapsed_sim_s`, `goal_reached_sim_s` dùng thời gian mô phỏng.
 Đây chưa phải bộ benchmark đầy đủ (chưa có thống kê va chạm/RTF/RMSE theo lô).
+
+Mặc định paper chạy môi trường động; dùng `social_scene:=static` trong lệnh
+chạy paper nếu muốn cảnh tĩnh.
 
 ## Trở lại bản nền
 

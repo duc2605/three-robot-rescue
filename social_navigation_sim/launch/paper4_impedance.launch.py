@@ -1,4 +1,4 @@
-"""Three-stage comparison wrapper; see README_PAPERS_03_12.md."""
+"""Independent comparison wrapper; see project README.md and the selected paper README."""
 import os
 from launch.launch_description_sources.python_launch_file_utilities import load_python_launch_file_as_module
 

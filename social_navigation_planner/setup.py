@@ -24,6 +24,7 @@ setup(
     },
    entry_points={
     'console_scripts': [
+        'paper_experiment = social_navigation_planner.paper_experiment_node:main',
         'comparison_robot_controller = social_navigation_planner.comparison_controller:main',
         'paper1_controller = social_navigation_planner.paper1_gwo_woa_node:main',
         'paper2_controller = social_navigation_planner.paper2_apf_mpc_node:main',

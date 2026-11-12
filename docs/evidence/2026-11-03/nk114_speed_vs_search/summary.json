@@ -1,0 +1,82 @@
+{
+  "recording": "recordings/dynamic_20261103_102805_536340398",
+  "source": "NK113, recorded hash matches current/pre-audit source",
+  "controller_sha256": "7a768cc54ed0e3a13c857a60acc9e2b4882b9d621c5ddf0f3b92e4b1865a4fec",
+  "end_sim": 80.501,
+  "contacts_excluding_ground": {
+    "patrol_person/robot2": [
+      79.778,
+      80.501
+    ]
+  },
+  "motion_76_78": {
+    "robot2_start": [
+      1.51656654752,
+      -1.93935736867
+    ],
+    "robot2_end": [
+      1.49074229992,
+      -2.10048298111
+    ],
+    "robot2_net_speed_m_s": 0.0815909841040527,
+    "patrol_net_speed_m_s": 0.3946,
+    "elapsed_sim": 2.0,
+    "elapsed_wall": 10.565600395202637
+  },
+  "last_checked_escape_before_contact": 78.4,
+  "failed_search_wall_ms_range_75_to_contact": [
+    61.75408600029186,
+    64.10475299890095
+  ],
+  "selected_76": {
+    "goal": [
+      2.0780263784785715,
+      -2.993903586910349
+    ],
+    "distance": 1.1945677004259077,
+    "horizon": 5.85
+  },
+  "selected_77": {
+    "goal": [
+      1.0788885695635186,
+      -3.083437802047003
+    ],
+    "distance": 1.1950630111775205,
+    "horizon": 5.85
+  },
+  "at_78": {
+    "reason": "escape_no_socially_clear_rollout",
+    "emergency": false,
+    "rejections": {
+      "escape.corridor": 15,
+      "escape.peer": 12,
+      "escape.moving": 1,
+      "escape.target_not_reached": 7
+    },
+    "peer_block_example": {
+      "robot": "robot3",
+      "kind": "prediction"
+    }
+  },
+  "at_contact_79_8": {
+    "reason": "escape_compute_budget_exhausted",
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "wall_ms": 62.40569500005222,
+    "state_age_sim": 0.102,
+    "scan_age_sim": 0.1,
+    "measured_speed_m_s": 0.006394824064787622,
+    "trials": 101,
+    "accepted": 0,
+    "rejected_moving": 100,
+    "selected_phase": null
+  },
+  "limits": [
+    "Net speed is displacement/time, includes braking and stop commands; not measured maximum capability.",
+    "Compute ms is wall time, contact timeline is simulation time.",
+    "One trial, no controlled CPU/speed A/B; no proof that higher max speed or larger compute budget solves the encounter."
+  ]
+}

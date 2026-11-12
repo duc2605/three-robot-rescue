@@ -16,6 +16,8 @@
   <depend>sensor_msgs</depend>
   <depend>rclpy</depend>
   <exec_depend>python3</exec_depend>
+  <depend>ignition-transport11</depend>
+  <depend>ignition-msgs8</depend>
   <exec_depend>social_navigation_planner</exec_depend>
   <exec_depend>python3-numpy</exec_depend>
   <exec_depend>python3-opencv</exec_depend>

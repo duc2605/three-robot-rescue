@@ -1,0 +1,43 @@
+{
+  "date_vietnam": "2026-11-04",
+  "source": "/home/duc/three-robot-rescue",
+  "destination": "/home/duc/three-robot-rescue-real",
+  "source_backup": "/home/duc/three-robot-rescue/backups/20261104_141947_547183_nk135_fork_real_hardware_workspace",
+  "real_backup": "/home/duc/three-robot-rescue-real/backups/20261104_142050_523037_real001_before_hardware_adaptation",
+  "copied_files_sha256_verified": 1133,
+  "checks_performed": [
+    "29 Python AST",
+    "4 YAML parse",
+    "package.xml parse",
+    "safe-default and non-Gazebo launch inspection",
+    "source SHA verification"
+  ],
+  "not_run": [
+    "pytest",
+    "colcon build",
+    "MCU compile",
+    "MCU flash",
+    "ROS launch",
+    "Gazebo",
+    "physical robot trial"
+  ],
+  "hardware_confirmed": {
+    "computer": "Pi 5",
+    "imu": "MPU6050",
+    "wheel_diameter_mm": 51,
+    "USB_bridge": "CH340",
+    "ESP32_chip": "unconfirmed"
+  },
+  "hardware_proposed": {
+    "motor": "3x GA25-370 12V 130rpm encoder A/B per robot",
+    "driver": "3x DRV8871 per robot",
+    "PWM": "PCA9685",
+    "encoder_counts": "must measure"
+  },
+  "source_code_unchanged": true,
+  "github_pushed": false,
+  "final_static_check": "Passed after final implementation edits",
+  "original_files_changed_by_task": [
+    "README_NHAT_KY_DU_AN.md"
+  ]
+}

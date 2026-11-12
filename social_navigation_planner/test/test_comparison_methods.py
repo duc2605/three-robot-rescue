@@ -1,4 +1,4 @@
-"""User-run numerical checks of ten prototypes; no Gazebo or paper benchmark."""
+"""User-run numerical checks of remaining historical prototypes; no Gazebo or paper benchmark."""
 import math
 from pathlib import Path
 
@@ -13,7 +13,7 @@ def fixture():
     return poses,refs
 
 
-@pytest.mark.parametrize('method_id',range(1,11))
+@pytest.mark.parametrize('method_id',sorted(METHODS))
 @pytest.mark.parametrize('index',range(3))
 def test_all_three_stages_produce_finite_bounded_commands(method_id,index):
     pipeline,_=load_method(method_id)
@@ -26,7 +26,7 @@ def test_all_three_stages_produce_finite_bounded_commands(method_id,index):
     assert all(len(v)==3 and all(math.isfinite(x) for x in v) for v in stages.values())
 
 
-@pytest.mark.parametrize('method_id',range(1,11))
+@pytest.mark.parametrize('method_id',sorted(METHODS))
 def test_invalid_reference_holds(method_id):
     pipeline,_=load_method(method_id)
     poses,refs=fixture()
@@ -36,7 +36,7 @@ def test_invalid_reference_holds(method_id):
         assert twist==(0.,0.,0.) and 'error' in stages
 
 
-@pytest.mark.parametrize('method_id',[3,5,9])
+@pytest.mark.parametrize('method_id',[5])
 def test_sampled_trackers_honor_rejected_candidates(method_id):
     pipeline,_=load_method(method_id)
     poses,refs=fixture();calls=[]
@@ -49,9 +49,9 @@ def test_sampled_trackers_honor_rejected_candidates(method_id):
     assert all(math.isfinite(v) for v in twist)
 
 
-def test_registry_matches_ten_launches_and_unique_modules():
-    assert set(METHODS)==set(range(1,11))
-    assert len({m['module'] for m in METHODS.values()})==10
+def test_registry_matches_remaining_legacy_launches_and_unique_modules():
+    assert set(METHODS)=={1,2,5}
+    assert len({m['module'] for m in METHODS.values()})==3
     root=Path(__file__).resolve().parents[2]
     for m in METHODS.values():
-        assert (root/'social_navigation_sim/launch'/f"paper{m['paper_number']}_{m['slug']}.launch.py").exists()
+        assert (root/'social_navigation_sim/launch'/f"paper{8 if m['id']==5 else m['paper_number']}_{m['slug']}.launch.py").exists()

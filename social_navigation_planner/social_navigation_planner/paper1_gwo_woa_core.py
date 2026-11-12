@@ -4,6 +4,7 @@ Reference: Zhou et al., JACIII 26(3), 342-354 (2022),
 doi:10.20965/jaciii.2022.p0342. Independent implementation, not author code.
 See README_PAPER1_GWO_WOA.md for the explicit adaptations and limits.
 """
+from .peer_safety import CONTROL_SEPARATION
 import math
 import time
 import numpy as np
@@ -190,7 +191,7 @@ def trajectory_safe(trajectory, grid, points, peers, radius=.18):
             return False
         if any(point_segment_distance(p, a, b) < margin+.04 for p in points):
             return False
-    return all(pair_clear(trajectory, peer, 2*margin+.04) for peer in peers)
+    return all(pair_clear(trajectory, peer, CONTROL_SEPARATION) for peer in peers)
 
 
 def dwa(pose, current, target, grid, points, peers, dt=.1, desired=None,

@@ -88,10 +88,16 @@ class ReplaySensorRecorder(Node):
             self.create_subscription(Image,topic,lambda m,s=source:self.camera(m,s),qos_profile_sensor_data)
         self.create_subscription(MarkerArray,'/social_navigation/markers',self.social,qos_profile_sensor_data)
         self.create_subscription(String,'/social_navigation/status',self.social_status,10)
+        self.create_subscription(String,'/street/rules_status',self.street_rules_status,10)
         self.create_subscription(TFMessage,'/tf_static',self.static_tf,
                                  QoSProfile(depth=100,durability=DurabilityPolicy.TRANSIENT_LOCAL))
+        self.last_routes = {}
+        self.create_subscription(RosPath,'/dstar_lite/path',
+                                 lambda m:self.route(m,'leader','route'),10)
         for robot in ['robot1','robot2','robot3']:
             self.create_subscription(LaserScan,f'/{robot}/scan',lambda m,r=robot:self.scan(m,r),qos_profile_sensor_data)
+            self.create_subscription(RosPath,f'/{robot}/desired_path',
+                                     lambda m,r=robot:self.route(m,r,'desired_route'),10)
             self.create_subscription(RosPath,f'/{robot}/escape_path',lambda m,r=robot:self.astar(m,r),10)
             self.create_subscription(String,f'/{robot}/escape_decision',lambda m,r=robot:self.decision(m,r),10)
         self.get_logger().info('Replay LiDAR/A* recording: '+str(self.writer.path))
@@ -102,7 +108,8 @@ class ReplaySensorRecorder(Node):
         if not -.05<=row['t']-row['stamp']<=5.:return
         key=(row['epoch'],source);wall=time.monotonic()
         previous=self.last_images.get(key)
-        if previous and (row['stamp']-previous[0]<.5 or wall-previous[1]<.5):return
+        interval = .1 if source == 'raw' else .5
+        if previous and (row['stamp']-previous[0]<interval or wall-previous[1]<interval):return
         self.last_images[key]=(row['stamp'],wall)
         row.update(source=source,capture_known=True,frame=msg.header.frame_id,_image=msg)
         self.perception_writer.put(row)
@@ -126,6 +133,23 @@ class ReplaySensorRecorder(Node):
         now=self.get_clock().now().nanoseconds*1e-9
         row=self.envelope('leader','social_status',now);row['text']=msg.data
         self.perception_writer.put(row)
+
+    def street_rules_status(self,msg):
+        try:
+            data=json.loads(msg.data);captured=float(data['stamp'])
+            if not math.isfinite(captured):return
+            for robot in data['robots'][:3]:
+                if robot['robot'] not in ('robot1','robot2','robot3'):continue
+                row=self.envelope(robot['robot'],'street_rule',captured)
+                if not -.05 <= row['t']-captured <= 1.:continue
+                row.update(reason=str(robot['reason']),mode='pedestrian',command=robot['command'],
+                           missing_inputs=robot.get('missing_inputs',[]),
+                           pose_age=robot.get('pose_age'),command_age=robot.get('command_age'),
+                           entry_axes=robot.get('entry_axes',[]),
+                           pedestrian_green_axes=robot.get('pedestrian_green_axes',[]))
+                self.writer.put(row)
+        except (ValueError,TypeError,KeyError):
+            return
 
     def static_tf(self,msg):
         for transform in msg.transforms:self.transforms.set_transform_static(transform,'replay')
@@ -174,6 +198,27 @@ class ReplaySensorRecorder(Node):
         row.update(points=points,goal=points[-1] if points else None)
         self.writer.put(row)
 
+    def route(self, msg, robot, kind):
+        if msg.header.frame_id != 'map' or len(msg.poses) > 50000:
+            return
+        points = [[float(p.pose.position.x),float(p.pose.position.y)] for p in msg.poses]
+        if not all(math.isfinite(v) for point in points for v in point):
+            return
+        row = self.envelope(robot,kind,stamp(msg.header))
+        if not -.05 <= row['t']-row['stamp'] <= 1.:
+            return
+        cache = getattr(self,'last_routes',{})
+        key = (row['epoch'],robot,kind)
+        previous = cache.get(key)
+        if previous is not None and previous[0] == points and 0 <= row['stamp']-previous[1] < 1.:
+            return
+        cache[key] = (points,row['stamp'])
+        self.last_routes = cache
+        row.update(points=points,
+                   length_m=math.fsum(math.dist(a,b) for a,b in zip(points,points[1:])),
+                   source='/dstar_lite/path' if kind=='route' else f'/{robot}/desired_path')
+        self.writer.put(row)
+
     def decision(self,msg,robot):
         try:
             data=json.loads(msg.data);captured=float(data['stamp']);goal=data.get('goal')
@@ -182,6 +227,14 @@ class ReplaySensorRecorder(Node):
             if not -.05<=row['t']-row['stamp']<=1.:return
             row.update(goal=goal,stops=bool(data.get('stops')),terminal_safe=bool(data.get('terminal_safe')),
                        reason=str(data.get('reason','')))
+            motion_tracks = data.get('motion_tracks')
+            if (isinstance(motion_tracks,list) and len(motion_tracks) <= 24
+                    and len(json.dumps(motion_tracks,allow_nan=False)) <= 24576):
+                row['motion_tracks'] = motion_tracks
+                row['safety_status'] = str(data.get('safety_status',''))[:500]
+            search = data.get('search')
+            if isinstance(search,dict) and len(json.dumps(search,allow_nan=False)) <= 24576:
+                row['search'] = search
             self.writer.put(row)
         except (ValueError,TypeError,KeyError):return
 

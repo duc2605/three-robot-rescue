@@ -16,6 +16,8 @@ find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(ignition-gazebo6 REQUIRED)
+find_package(ignition-transport11 REQUIRED)
+find_package(ignition-msgs8 REQUIRED)
 find_package(ignition-plugin1 REQUIRED COMPONENTS register)
 
 add_library(social_scenario_motion SHARED src/social_scenario_motion.cpp)
@@ -23,6 +25,14 @@ target_compile_features(social_scenario_motion PRIVATE cxx_std_17)
 target_link_libraries(social_scenario_motion ignition-gazebo6::ignition-gazebo6
                       ignition-plugin1::ignition-plugin1)
 install(TARGETS social_scenario_motion LIBRARY DESTINATION lib)
+
+# Independent third scene; no change to social_scenario_motion or robot controllers.
+add_library(street_traffic SHARED src/street_traffic.cpp)
+target_compile_features(street_traffic PRIVATE cxx_std_17)
+target_link_libraries(street_traffic ignition-gazebo6::ignition-gazebo6
+                      ignition-transport11::ignition-transport11 ignition-msgs8::ignition-msgs8
+                      ignition-plugin1::ignition-plugin1)
+install(TARGETS street_traffic LIBRARY DESTINATION lib)
 
 # Ground-truth replay is isolated from ROS navigation and collision geometry.
 add_library(replay_recorder SHARED src/replay_recorder.cpp)
@@ -69,9 +79,6 @@ install(DIRECTORY
   map
   DESTINATION share/${PROJECT_NAME}/
 )
-
-install(FILES README_DSTAR_MPC.md README_SOCIAL_STATIC.md README_SOCIAL_DYNAMIC.md
-        DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

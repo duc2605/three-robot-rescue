@@ -28,7 +28,7 @@ def upcoming_targets(leader, path, targets):
     for p in points[first+1:]:
         length += np.linalg.norm(p-ahead[-1])
         ahead.append(p)
-        if length >= 2.:
+        if length >= 3.:
             break
     if len(ahead) < 2:
         return []
@@ -36,7 +36,7 @@ def upcoming_targets(leader, path, targets):
     result = []
     for center, radius in targets:
         distance = np.linalg.norm(center-leader)
-        if not .8 < distance < 2.5 or (center-leader) @ forward < 0:
+        if not .16 < distance <= 3.0 or (center-leader) @ forward < 0:
             continue
         nearest = float('inf')
         for a, b in zip(ahead, ahead[1:]):
@@ -46,3 +46,34 @@ def upcoming_targets(leader, path, targets):
         if nearest-radius < .6:
             result.append(center)
     return sorted(result, key=lambda p: np.linalg.norm(p-leader))
+
+
+def scan_targets(ranges, angle_min, angle_increment, range_min, range_max):
+    """Measured clusters in sensor XY; proposals only, never semantic regions."""
+    ranges = np.asarray(ranges, float)
+    angles = angle_min + np.arange(len(ranges)) * angle_increment
+    points = np.column_stack((ranges * np.cos(angles), ranges * np.sin(angles)))
+    valid = np.isfinite(ranges) & (ranges >= range_min) & (ranges <= min(3., range_max))
+    groups, current = [], []
+    for i in range(len(ranges)):
+        if not valid[i]:
+            if current:
+                groups.append(current)
+            current = []
+            continue
+        if current and np.linalg.norm(points[i] - points[current[-1]]) > .20:
+            groups.append(current)
+            current = []
+        current.append(i)
+    if current:
+        groups.append(current)
+    result = []
+    for group in groups:
+        if len(group) < 3:
+            continue
+        cluster = points[group]
+        center = np.mean(cluster, axis=0)
+        radius = float(np.max(np.linalg.norm(cluster-center, axis=1)))
+        if radius <= 1.5:
+            result.append((center, max(.05, radius)))
+    return result

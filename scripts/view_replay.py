@@ -3,8 +3,11 @@
 import argparse
 import json
 from pathlib import Path
+from replay_data import add_evaluation_map
 import threading
 import webbrowser
+
+from replay_media import ensure_camera_videos, media_path, byte_range
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 
@@ -40,7 +43,7 @@ def complete_perception(folder):
 
 
 def export(folder, target):
-    scene=json.loads((folder/'scene.json').read_text())
+    scene=add_evaluation_map(json.loads((folder/'scene.json').read_text()),ROOT)
     frames=complete_frames(folder/'world_frames.jsonl')
     if not frames:raise ValueError('No complete Gazebo frames recorded yet')
     session=json.loads((folder/'session.json').read_text()) if (folder/'session.json').exists() else {}
@@ -88,9 +91,35 @@ def make_handler(folder):
                         {'id':key,'name':path.name+(' (mở ban đầu)' if key=='' else '')}
                         for key,path in choices.items()]})
                 elif request.path=='/':self.send(TEMPLATE.read_text().replace('__REPLAY_DATA__','null'),'text/html')
-                elif request.path=='/scene':self.send(json.loads((current/'scene.json').read_text()))
+                elif request.path=='/scene':self.send(add_evaluation_map(json.loads((current/'scene.json').read_text()),ROOT))
                 elif request.path=='/session':self.send(json.loads((current/'session.json').read_text()) if (current/'session.json').exists() else {'state':'unknown'})
                 elif request.path=='/goals':self.send(complete_goals(current))
+                elif request.path=='/media':
+                    self.send(ensure_camera_videos(current))
+                elif request.path=='/video':
+                    path=media_path(current, query.get('file',[''])[0])
+                    size=path.stat().st_size
+                    try:
+                        first,last,partial=byte_range(self.headers.get('Range'),size)
+                    except (ValueError,TypeError):
+                        self.send_response(416)
+                        self.send_header('Content-Range',f'bytes */{size}')
+                        self.end_headers()
+                        return
+                    self.send_response(206 if partial else 200)
+                    self.send_header('Content-Type','video/mp4' if path.suffix=='.mp4' else 'video/webm')
+                    self.send_header('Accept-Ranges','bytes')
+                    self.send_header('Content-Length',str(last-first+1))
+                    if partial:self.send_header('Content-Range',f'bytes {first}-{last}/{size}')
+                    self.end_headers()
+                    with path.open('rb') as video:
+                        video.seek(first)
+                        remaining=last-first+1
+                        while remaining:
+                            chunk=video.read(min(256*1024,remaining))
+                            if not chunk:break
+                            self.wfile.write(chunk)
+                            remaining-=len(chunk)
                 elif request.path=='/perception-status':self.send(json.loads((current/'perception_status.json').read_text()) if (current/'perception_status.json').exists() else {})
                 elif request.path=='/navigation-status':self.send(json.loads((current/'navigation_status.json').read_text()) if (current/'navigation_status.json').exists() else {})
                 elif request.path in ('/frames','/navigation','/perception'):

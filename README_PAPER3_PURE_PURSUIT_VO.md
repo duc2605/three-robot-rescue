@@ -1,12 +1,12 @@
-# Paper 3 — pure_pursuit_vo (comparison 01)
+# Paper3 — bản chuyển đổi độc lập trên omni (NK120)
 
-## 1. Build và chạy môi trường tĩnh
+## 1. Chạy môi trường động, có ghi bản chạy
 
-Các lệnh để người dùng tự chạy trên máy có ROS 2 Humble/Gazebo Fortress.
-Dừng phiên cũ bằng Ctrl+C trước khi mở phiên mới; chọn 2D Goal Pose trong RViz.
+Dừng phiên cũ bằng Ctrl+C trước khi mở. Chọn 2D Goal Pose trong RViz.
 
 ```bash
 cd ~/three-robot-rescue
+sudo apt install -y python3-numpy python3-scipy ffmpeg x11-utils
 source /opt/ros/humble/setup.bash
 colcon build --symlink-install \
   --base-paths social_navigation_planner social_navigation_sim \
@@ -15,16 +15,16 @@ colcon build --symlink-install \
 source install/setup.bash
 export ROS_DOMAIN_ID=31
 recording_dir="recordings/paper3_$(date +%Y%m%d_%H%M%S_%N)"
-bash scripts/run_simulation.sh paper3 --diagnose-stop "$recording_dir" \
-  social_scene:=static
-# Sau khi dừng mô phỏng bằng Ctrl+C, xem bản vừa ghi:
+bash scripts/run_simulation.sh paper3 --diagnose-stop "$recording_dir" social_scene:=dynamic
+# Ctrl+C để dừng, rồi xem đúng lượt vừa chạy:
 python3 scripts/view_replay.py --session "$recording_dir"
 ```
 
-## 2. Build và chạy môi trường động
+## 2. Chạy môi trường tĩnh, có ghi bản chạy
 
 ```bash
 cd ~/three-robot-rescue
+sudo apt install -y python3-numpy python3-scipy ffmpeg x11-utils
 source /opt/ros/humble/setup.bash
 colcon build --symlink-install \
   --base-paths social_navigation_planner social_navigation_sim \
@@ -33,87 +33,36 @@ colcon build --symlink-install \
 source install/setup.bash
 export ROS_DOMAIN_ID=31
 recording_dir="recordings/paper3_$(date +%Y%m%d_%H%M%S_%N)"
-bash scripts/run_simulation.sh paper3 --diagnose-stop "$recording_dir" \
-  social_scene:=dynamic
-# Sau khi dừng mô phỏng bằng Ctrl+C, xem bản vừa ghi:
+bash scripts/run_simulation.sh paper3 --diagnose-stop "$recording_dir" social_scene:=static
+# Ctrl+C để dừng, rồi xem đúng lượt vừa chạy:
 python3 scripts/view_replay.py --session "$recording_dir"
 ```
 
-Mỗi bộ lệnh chạy phía trên đã bật ghi bản chạy vào thư mục mới.
-Camera và vùng xã hội bật trong wrapper. Quan sát chủ động tự quay mặc định
-tắt cho các chế độ đối chiếu, có thể bật `social_observation:=true social_auto_observe:=true`.
-Để tắt camera/xã hội, thêm `leader_camera:=false person_detection:=false
-head_pose_enabled:=false body_pose_enabled:=false social_avoidance:=false` vào cuối lệnh.
+## 3. Thuật toán, nguồn và phần chuyển đổi
 
-## 3. Test và kiểm tra ba tầng
+[Nguồn DOI](https://doi.org/10.12962/jaree.v9i1.433)
 
-Bộ test đã viết, **chưa được chạy trong tác vụ tích hợp**. Toàn bộ lệnh:
+Nguồn: Putra, Agustinah, Sahal (2025), *Leader-Follower Formation and Obstacle Avoidance for Nonholonomic Mobile Robots Using Velocity Obstacles*.
 
-```bash
-cd ~/three-robot-rescue
-source /opt/ros/humble/setup.bash
-colcon build --symlink-install \
-  --base-paths social_navigation_planner social_navigation_sim \
-  --packages-select social_navigation_planner social_navigation_sim \
-  --cmake-args -DBUILD_TESTING=OFF
-source install/setup.bash
-export ROS_DOMAIN_ID=31
-PYTHONPATH="$PWD/social_navigation_planner:$PYTHONPATH" /usr/bin/python3 -m pytest \
-  social_navigation_planner/test/test_comparison_methods.py \
-  social_navigation_planner/test/test_comparison_adapter.py \
-  -q -p no:cacheprovider
-```
+- Đội hình V: đích follower lấy trực tiếp từ pose leader đo được, `pL + R(thetaL)[−0.7, ±0.5]`, tương ứng Eq5–6. Không lấy offset từ coordinator baseline.
+- Pure Pursuit: góc mục tiêu dùng `atan2`, `w=2v sin(alpha)/Ld` (Eq3–4); chuẩn hóa góc, quay tại chỗ nếu mục tiêu ở phía sau.
+- VO: kiểm tia vận tốc tương đối cắt đĩa Minkowski (Eq12). Bản chuyển đổi dùng horizon3s, 24hướng×3mức tốc độ; chọn nghiệm gần vận tốc mong muốn và tiến mục tiêu.
+- **Chuyển đổi:** đầu ra VO được phép chạy ngang bằng bánh omni. Đây không còn là ràng buộc nonholonomic nguyên bản. Giới hạn0.28m/s,1.2rad/s, kích thướcV và tiêu chí chọn ứng viên là cấu hình thực nghiệm của dự án, không phải sao chép tham số kết quả tác giả.
+- Mã: `paper_models/kinematic.py`: `v_targets`, `pursuit`, `vo_collision`, `vo_command`.
 
-Trong terminal khác khi mô phỏng đang chạy, kiểm tra phương pháp và các đầu ra:
+## Hạ tầng chung và giới hạn đối chiếu
 
-```bash
-cd ~/three-robot-rescue
-source /opt/ros/humble/setup.bash
-source install/setup.bash
-export ROS_DOMAIN_ID=31
-ros2 topic echo /comparison/robot3/status --once
-ros2 topic info /robot3/cmd_vel
-```
+`paper_experiment_node.py` là node độc lập, không kế thừa D*+MPC của người dùng. Launch tắt coordinator và ba MPC baseline **chỉ trong chế độ paper**. Baseline, Paper1 và Paper2 giữ nguyên thuật toán.
 
-`stages` gồm `formation_target`, `trajectory_twist`, `control_twist` khi
-tracking được tính. Nếu shared safety/escape đang giữ quyền điều khiển,
-stages có thể rỗng; xem `reason` và `command_body`. Mỗi xe chỉ được có một
-publisher cmd_vel từ bộ điều khiển đang chọn. Tên node vẫn chứa distributed_mpc
-để tương thích chẩn đoán, không chứng minh thuật toán đang là baseline.
+Chung scene/camera/nhận diện và map vùng xã hội; LiDAR tối đa2m, vận tốc vật thể ước lượng từ cụm điểm qua thời gian. Chỉ pose robot dùng Gazebo để định vị, không dùng lịch/pose người ground truth cho điều khiển. Ước lượng cụm đơn giản có thể nhầm association/che khuất, không tương đương tracker đã benchmark.
 
-## 4. Ba thuật toán và phạm vi triển khai
+A* thông thường trong `paper_models/environment.py` chỉ cấp waypoint cho leader, là **hạ tầng thực nghiệm thêm vào**, không phải luật né A* baseline và không gán là công thức bài báo. Các luật paper tự tạo formation/command. Lớp veto kiểm map vật lý, map xã hội, swept LiDAR và peer trong0.4s; nếu vi phạm thì phanh, **không tìm hộ đường né bằng baseline**. Phanh không bảo đảm người không đi vào robot đang đứng. Nếu xe đang nằm trong vùng xã hội mới xuất hiện, veto có thể giữ xe; đây là giới hạn, không phải kết quả bài báo.
 
-| Tầng | Nội dung |
-|---|---|
-| Điều khiển robot | Kinematic Velocity Control |
-| Bám quỹ đạo | Pure Pursuit |
-| Đội hình | V-Formation + separation-bearing + VO-inspired safety |
+Từ NK185, camera/xã hội và quan sát chủ động bật mặc định qua PaperBehavior, dùng ObservationSweep với phản hồi hướng đo và kiểm an toàn chung. Node ghi `stamp`, lý do, lệnh trước/sau veto và target vào `escape_decision.search`; `goal` né đểnull vì đây không phải đíchA*né. Viewer giữ nguyên; goal người dùng vẫn do recorder goal ghi riêng. `terminal_safe=false` nghĩa chưa chứng minh an toàn dừng dài hạn.
 
-Thứ tự thực thi theo phụ thuộc dữ liệu: **formation → trajectory → control**,
-sau đó giới hạn gia tốc và kiểm tra quỹ đạo an toàn. D* Lite/coordinator
-vẫn cấp tham chiếu chung; nguồn camera/LiDAR/map và nhánh né khẩn cấp
-NK-084 dùng chung. Vì vậy đây là thử kiến trúc lai, không so sánh thuần
-thuật toán né của bài báo. Không dùng kết quả này để tuyên bố tái lập bài gốc.
+**Trạng thái:** đã viết mã chuyển đổi và kiểm cấu trúc; chưa build/pytest/Gazebo. Không phải tái lập nguyên vẹn hay bằng chứng tốt hơn D*+MPC. Khi so sánh phải báo cả phần chuyển đổi, số lần veto và điều kiện mô phỏng; không gán kết quả hệ kết hợp hoàn toàn cho tác giả.
 
-**Giới hạn riêng:** VO-inspired là hiệu chỉnh khoảng cách/đội hình, không giải đầy đủ tập velocity obstacles của bài gốc.
-
-Nguồn triển khai: bản generator ba tầng trong [cuộc trao đổi người dùng cung cấp](https://chatgpt.com/share/6ae85d47-5250-83ec-80a5-0b07b13a65e6).
-Trích các chuỗi module bằng AST literal, không thực thi generator/shell từ
-trang chia sẻ. Không tải được artifact sandbox từ phiên khác; đây là tích
-hợp mã xuất hiện trong hội thoại, không phải giải nén ZIP gốc.
-Tên tác giả/DOI/phương trình từng bài chưa được đối chiếu đầy đủ; không gán
-kết quả Gazebo cũ hoặc số test của phiên chia sẻ thành kết quả của dự án này.
-
-**Kiểm chứng tác vụ này:** kiểm tra cú pháp tĩnh và đường dẫn; chưa build,
-chưa chạy pytest, chưa ROS/Gazebo. Baseline NK-083 vẫn có lỗi contact,
-nhánh an toàn chung không là bảo đảm không va chạm.
-
-## 5. File chính
-
-- `social_navigation_planner/social_navigation_planner/comparison_methods/method_01_pure_pursuit_vo/formation.py`.
-- Cùng thư mục: `trajectory.py`, `control.py`, `pipeline.py`.
-- `social_navigation_planner/social_navigation_planner/comparison_controller.py`: ROS/safety adapter.
-- `social_navigation_sim/launch/paper3_pure_pursuit_vo.launch.py`: launch riêng.
-- `scripts/run_comparison.sh`: chạy động và tự ghi từng lượt.
-
-Tổng hợp: [10 phương pháp](README_PAPERS_03_12.md).
+Cập nhật NK185 dùng lớp cảm biến, phân loại LiDAR, giới hạn vận tốc,
+an toàn và camera quan sát chung cho các paper. Thông số và giới hạn kiểm
+chứng xem mục “Hành vi chung” trong README gốc. Chính sách điều khiển và
+đội hình của bài được mô tả ở các mục trên. Chưa chạy thử NK185.

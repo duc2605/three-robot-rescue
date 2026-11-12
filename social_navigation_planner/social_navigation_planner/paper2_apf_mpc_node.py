@@ -8,6 +8,7 @@ from rclpy.clock import Clock, ClockType
 from geometry_msgs.msg import Twist, PoseArray
 from std_msgs.msg import String
 
+from .paper_behavior import PaperBehavior
 from .dstar_mpc_controller import ThreeRobotDStarMPC, quaternion_yaw
 from .paper2_apf_mpc_core import (solve_mpc, predict_controls, follower_velocity,
                           virtual_target, limit, wrap, velocity_trace, trace_safe)
@@ -16,6 +17,7 @@ from .paper2_apf_mpc_core import (solve_mpc, predict_controls, follower_velocity
 class Paper2Controller(ThreeRobotDStarMPC):
     def __init__(self):
         super().__init__()
+        self.shared = PaperBehavior(self,self.leader_index,self.now_seconds)
         self.declare_parameter('motion_enabled', True)
         self.declare_parameter('paper2_solver_budget', .15)
         self.enabled = bool(self.get_parameter('motion_enabled').value)
@@ -42,9 +44,11 @@ class Paper2Controller(ThreeRobotDStarMPC):
         self.get_logger().info('PAPER2_V1_ADAPTED: continuous APF-MPC leader; enhanced APF followers; '
                                'no D*/GWO/DWA/distributed-MPC controller in this backend.')
 
-    def record_pose(self, index, x, y, yaw):
+    def record_pose(self, index, x, y, yaw, stamp=None):
         if hasattr(self, 'previous_measurements') and all(math.isfinite(v) for v in (x, y, yaw)):
-            now = self.now_seconds()
+            # Match the shared world-pose callback and use measurement time
+            # for velocity estimates when reception is delayed.
+            now = self.now_seconds() if stamp is None else stamp
             previous = self.previous_measurements[index]
             if previous is not None:
                 dt = now-previous[0]
@@ -54,14 +58,18 @@ class Paper2Controller(ThreeRobotDStarMPC):
                     if self.goal_start is not None:
                         self.distance[index] += float(np.linalg.norm(displacement))
             self.previous_measurements[index] = (now, np.array((x, y)))
-        super().record_pose(index, x, y, yaw)
+        super().record_pose(index, x, y, yaw, stamp)
 
     def scan_callback(self, msg, index):
         now = self.now_seconds()
         stamp = msg.header.stamp.sec+msg.header.stamp.nanosec*1e-9
         if self.poses_ready() and 0 <= now-stamp <= .3:
             self.scan_time[index], self.scan_wall[index] = stamp, time.monotonic()
+        previous_stamp = self.last_scan_stamp[index]
         super().scan_callback(msg, index)
+        if self.last_scan_stamp[index] != previous_stamp:
+            pose = self.scan_pose_history.at(index, stamp)
+            self.shared.observe(index,[(x,y) for x,y,_ in self.scan_points[index]],pose,stamp)
 
     def people_callback(self, msg):
         stamp = msg.header.stamp.sec+msg.header.stamp.nanosec*1e-9
@@ -111,11 +119,7 @@ class Paper2Controller(ThreeRobotDStarMPC):
         raise RuntimeError('Baseline planner disabled in PAPER2')
 
     def search_callback(self, msg):
-        try:
-            self.search_status(json.loads(msg.data).get('id'), 'rejected',
-                               'PAPER2: active observation is not implemented')
-        except (ValueError, AttributeError):
-            pass
+        self.shared.on_search(msg)
 
     def start_observation(self, *args, **kwargs):
         return False
@@ -125,6 +129,9 @@ class Paper2Controller(ThreeRobotDStarMPC):
             self.commands = [[0., 0., 0.] for _ in range(3)]
             for pub in self.cmd_pubs:
                 pub.publish(Twist())
+            if hasattr(self,'shared'):
+                poses=[self.get_robot_pose(i)[:3] for i in range(3)]
+                self.shared.emit(poses,[(0.,0.,0.)]*3,[self.state]*3)
 
     def watchdog(self):
         if (time.monotonic()-self.last_tick_wall > 1.
@@ -135,9 +142,7 @@ class Paper2Controller(ThreeRobotDStarMPC):
     def obstacles(self, poses):
         rows = list(self.static_obstacles)
         now = self.now_seconds()
-        rows += [(x, y, 0., 0., .03) for scan in self.scan_points for x, y, expiry in scan if expiry > now]
-        if 0 <= now-self.people_time < .8:
-            rows += self.people_obstacles
+        rows += [row for i in range(3) for row in self.shared.obstacles(i,now)]
         # Merge nearby samples; exact grid checks remain independent of this
         # potential-field approximation. Preserve larger people radii.
         merged = {}
@@ -161,7 +166,7 @@ class Paper2Controller(ThreeRobotDStarMPC):
             self.state = 'WAIT_MAP_OR_FRESH_POSES'
             self.stop()
             return
-        if any(not 0 <= now-t < .65 or time.monotonic()-w > 5
+        if any(not 0 <= now-t < .4 or time.monotonic()-w > 3
                for t, w in zip(self.scan_time, self.scan_wall)):
             self.state = 'WAIT_FRESH_LIDAR'
             self.stop()
@@ -173,6 +178,24 @@ class Paper2Controller(ThreeRobotDStarMPC):
             self.stop()
             return
         poses = [self.get_robot_pose(i)[:3] for i in range(3)]
+        if self.shared.physical is None:
+            self.state = 'WAIT_PHYSICAL_MAP'
+            self.stop()
+            return
+        shared_obstacles = [self.shared.obstacles(i,now) for i in range(3)]
+        observation = self.shared.camera_commands(poses,now)
+        if observation is not None:
+            commands,reasons = self.shared.gate(poses,observation,shared_obstacles,self.collision_grid)
+            for i,(vx,vy,spin) in enumerate(commands):
+                heading=poses[i][2];message=Twist()
+                message.linear.x=math.cos(heading)*vx+math.sin(heading)*vy
+                message.linear.y=-math.sin(heading)*vx+math.cos(heading)*vy
+                message.angular.z=spin
+                self.commands[i]=[message.linear.x,message.linear.y,spin]
+                self.cmd_pubs[i].publish(message)
+            self.shared.emit(poses,commands,['camera_observation' if r=='policy' else r for r in reasons])
+            self.state = 'CAMERA_OBSERVATION'
+            return
         leader, middle, tail = self.convoy_order
         targets = {middle: virtual_target(poses[leader], self.follow_gap, self.triangle_half_width),
                    tail: virtual_target(poses[leader], self.follow_gap, -self.triangle_half_width)}
@@ -190,7 +213,7 @@ class Paper2Controller(ThreeRobotDStarMPC):
         peer_obs = [(poses[j][0], poses[j][1], *self.world_velocity[j], .18)
                     for j in range(3) if j != leader]
         leader_obs = np.vstack([environment, np.asarray(peer_obs)])
-        vmax = .08 if max(self.errors[middle], self.errors[tail]) > .5 else .18
+        vmax = self.shared.leader_speed
         # When current measured velocity exceeds a reduced limit, use the old
         # physical limit in the optimizer and decelerate through the safety gate.
         solver_vmax = max(vmax, min(.28, float(np.linalg.norm(self.world_velocity[leader]))))
@@ -246,12 +269,17 @@ class Paper2Controller(ThreeRobotDStarMPC):
         self.state = 'TRACKING: '+','.join(modes)
         if abs(heading_error) > .65:
             self.state += '; LEADER_ALIGN_CAMERA'
+        gated,reasons=self.shared.gate(poses,
+            [(float(v[0]),float(v[1]),yaw_rate if i==leader else float(np.clip(wrap(poses[leader][2]-poses[i][2]),-.7,.7)))
+             for i,v in enumerate(world_commands)],shared_obstacles,self.collision_grid)
+        self.shared.emit(poses,gated,reasons)
+        world_commands=[np.asarray(command[:2]) for command in gated]
         for i, velocity in enumerate(world_commands):
             yaw = poses[i][2]
             msg = Twist()
             msg.linear.x = float(math.cos(yaw)*velocity[0]+math.sin(yaw)*velocity[1])
             msg.linear.y = float(-math.sin(yaw)*velocity[0]+math.cos(yaw)*velocity[1])
-            msg.angular.z = yaw_rate if i == leader else float(np.clip(wrap(poses[leader][2]-yaw), -.7, .7))
+            msg.angular.z = gated[i][2]
             self.commands[i] = [msg.linear.x, msg.linear.y, msg.angular.z]
             self.cmd_pubs[i].publish(msg)
 
@@ -262,6 +290,7 @@ class Paper2Controller(ThreeRobotDStarMPC):
         now = self.now_seconds()
         if self.sim_previous is not None and now < self.sim_previous:
             self.warm = None
+            self.shared.clear()
             self.scan_time, self.scan_wall = [-math.inf]*3, [-math.inf]*3
             self.previous_measurements = [None]*3
             self.world_velocity = [np.zeros(2) for _ in range(3)]
@@ -286,8 +315,8 @@ class Paper2Controller(ThreeRobotDStarMPC):
                 'formation_error_m': self.errors, 'commands_body_vx_vy_w': self.commands,
                 'goal_elapsed_sim_s': None if self.goal_start is None else now-self.goal_start,
                 'goal_reached_sim_s': self.goal_reached,
-                'obstacle_velocity_model': 'peers_measured;people_and_lidar_stationary_unknown',
-                'active_observation': False,
+                'obstacle_velocity_model': 'shared_lidar_motion_in_place_translation',
+                'active_observation': self.shared.sweep is not None,
             }, allow_nan=False)
             self.status_pub.publish(msg)
 

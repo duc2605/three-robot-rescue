@@ -13,7 +13,7 @@ def team_motion_free(before, after, segment_free):
     if not all(segment_free(a, b) for a, b in zip(before, after)):
         return False
     for i, j in ((0, 1), (0, 2), (1, 2)):
-        if not peer_motion_free(before[i], after[i], before[j], after[j], preferred=0.38):
+        if not peer_motion_free(before[i], after[i], before[j], after[j], preferred=0.32):
             return False
     return True
 

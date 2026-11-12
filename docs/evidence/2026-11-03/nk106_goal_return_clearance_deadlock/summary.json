@@ -1,0 +1,46 @@
+{
+  "recording": "recordings/dynamic_20261103_083547_393965840",
+  "source_version": "NK105",
+  "controller_sha256": "d1e87e125978677200825c468af79e611ba9acf23d196325c7ad02c08c61e6e1",
+  "goal": [
+    1.0585472583770752,
+    -1.9560085535049438
+  ],
+  "end_sim": 129.301,
+  "leader_min_goal_distance_m": 0.0010483501481168829,
+  "leader_min_goal_t": 70.301,
+  "leader_last_controller_t": 129.0,
+  "leader_last_goal_distance_m": 1.478687343297265,
+  "empty_route_interval_observed": [
+    96.8,
+    126.0
+  ],
+  "coordinator_reason": "coordinator_no_route_or_maneuver",
+  "robot2_clearance_at_110": 0.13560606887387827,
+  "robot_radius_limit": 0.15,
+  "robot3_at_110": {
+    "reference_rows": 0,
+    "state_age_sim": 0.098,
+    "scan_age_sim": 0.098,
+    "reference_age_wall": 80.49728011499974
+  },
+  "leader_return_events": [
+    24.5,
+    24.6,
+    28.7
+  ],
+  "physical_contact_excluding_ground": {
+    "robot3/tv_viewer_b": [
+      95.638,
+      95.847
+    ]
+  },
+  "world_frames": 2587,
+  "frames_with_contact_data": 2545,
+  "goal_scan_last_result": {
+    "reason": "aborted: camera inference is stale",
+    "degrees": 15.751132675555295,
+    "camera_sectors": []
+  },
+  "limits": "One user trial, not controlled benchmark; nearest obstacle identity not determined."
+}

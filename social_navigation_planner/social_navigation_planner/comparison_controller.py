@@ -1,4 +1,6 @@
-"""Shared ROS/safety adapter for ten explicitly approximate three-stage policies.
+"""RETIRED in NK120: constructor refuses execution; retained for provenance.
+
+Historical shared adapter for ten explicitly approximate three-stage policies.
 
 D* references and the existing LiDAR/peer/physical/social safety and emergency
 escape remain shared infrastructure. Normal tracking uses the selected policy;
@@ -21,6 +23,7 @@ from .peer_safety import peer_motion_free
 
 class ComparisonRobotController(DistributedRobotMPC):
     def __init__(self):
+        raise RuntimeError('Legacy approximate policies retired in NK120. Use paper_experiment via paper launch; unsupported papers fail explicitly.')
         super().__init__()
         self.declare_parameter('comparison_method', 'compare01')
         self.declare_parameter('comparison_leader', 'robot3')

@@ -62,8 +62,8 @@ Thêm đo contact có chi phí truy vấn physics; chưa có benchmark overhead.
 
 ## Kiểm chứng
 
-[Fixture nguồn](../social_navigation_sim/test/contact_fixtures/contact.sdf)
-cho người tiến vào robot rồi rời đi trong world riêng, không dùng camera
+Fixture lịch sử `social_navigation_sim/test/contact_fixtures/contact.sdf`
+(đã gỡ khỏi nguồn hiện hành) cho người tiến vào robot rồi rời đi trong world riêng, không dùng camera
 hoặc controller né. Đã chạy physics cho robot1/2/3: mỗi ca có begin và end;
 ca đi lệch 1 m không có contact. Fixture dùng thân robot đơn giản, không
 thay thế replay toàn bộ URDF/leader hoặc benchmark tránh va chạm.

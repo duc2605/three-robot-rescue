@@ -1,0 +1,53 @@
+{
+  "deleted": [
+    "docs/RESTORE_NK034.md",
+    "docs/SO_SANH_HIEN_TAI_VOI_NK094.md",
+    "docs/GITHUB_PREPARATION.md",
+    "docs/RUN_BEDSIDE_TV.md",
+    "docs/LIDAR_2M_AVOIDANCE.md",
+    "docs/LEADER_CAMERA_LIDAR_DIEU_HUONG.md"
+  ],
+  "backup": "backups/20261104_110502_127926_nk126_remove_obsolete_docs",
+  "new_readmes_created": false,
+  "report_change": "Only four obsolete references redirected to corresponding existing journal entries; technical results preserved",
+  "tests_run": false,
+  "build_run": false,
+  "gazebo_run": false,
+  "checks": {
+    "deleted_document_references": "cleared from current guides/report",
+    "preexisting_missing_links": [
+      [
+        "docs/COLLISION_AUDIT.md",
+        "../social_navigation_sim/test/contact_fixtures/contact.sdf"
+      ]
+    ],
+    "source_sha256_unchanged": {
+      "social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py": "74c6b9f35c896d05a707b95255ef2f69ba136b132c8e91c14b45b84becc13908",
+      "social_navigation_planner/social_navigation_planner/local_escape.py": "ed081833f1ad612102ed3aaf2f1d0cecd0199a02c9a80f8667386fd43622668d",
+      "social_navigation_planner/social_navigation_planner/moving_obstacles.py": "cc5b2150e9a51dcb0dedd29824dcb06ba8b7f06a58dc57289593b1d3502b64bc",
+      "social_navigation_planner/social_navigation_planner/social_observation.py": "523bd6d60ed7647265ad9754880936aadd237c3e3db030657e399247192c7a86",
+      "social_navigation_planner/social_navigation_planner/independent_goal_progress.py": "ef793b344c637b35c88de50c3a12de2024b58ac24036c9ed27283d587c2bd3c7",
+      "social_navigation_planner/social_navigation_planner/paper_experiment_node.py": "a610b56264604710d513ad5e82b772c5fb0073e0d05e28f8281b85192b718ea7",
+      "social_navigation_planner/social_navigation_planner/paper_models/environment.py": "1fec5d9b298045daa868c71b8d2f2862592cf1a17cb136f305edf7830d04dd4a",
+      "social_navigation_planner/social_navigation_planner/paper_models/drivetrains.py": "901977e43de82c3d5b1053cc10ae329140a9a24f0a250d2831f423fc4ea6c285",
+      "social_navigation_planner/social_navigation_planner/paper_models/kinematic.py": "9614489a82228b7539549a2074f301b790f1addb4bee35cc6f59e770dfcb2859",
+      "social_navigation_planner/social_navigation_planner/paper_models/__init__.py": "45d9d52e4a5dcc92b13751315fd7c64c5f20502629d5e27809e04ad85be7997f",
+      "social_navigation_planner/social_navigation_planner/paper_models/ho_mpc.py": "c4e3388828874cace22200f27abfd0be761465e1aa52b0b878abdc493934492c",
+      "social_navigation_planner/social_navigation_planner/paper_models/catalog.py": "95d5a4216e89ce163c98dafed8a785f1c29d62a18bba37ac092a3ebdc0284ac5",
+      "social_navigation_planner/social_navigation_planner/paper_models/upstream_sources.py": "64f82603376d78eecc1e85ee50f551ac1d79fe9dd78f2b0d012dd3380b12157f",
+      "social_navigation_planner/social_navigation_planner/paper_models/robile.py": "9fc88949afb08da103a4d7f342d1fe3daee888c43a97387f292b003fd8613ed2",
+      "social_navigation_planner/social_navigation_planner/paper_models/deform.py": "7748478fc7aee074dc97844e9921889c5c71751f7a63b7cbea010c55b1287e97"
+    },
+    "remaining_docs_markdown": [
+      "docs/BACKUP_VA_KHOI_PHUC.md",
+      "docs/CHAN_DOAN_DUNG_XE.md",
+      "docs/CHAN_DOAN_PHIEN_CHAY.md",
+      "docs/COLLISION_AUDIT.md",
+      "docs/DANH_MUC_THU_MUC_VA_FILE.md",
+      "docs/FILE_CAN_DOC_VA_LENH_CHAY.md",
+      "docs/PHAT_LAI_MO_PHONG.md"
+    ],
+    "preexisting_missing_link_resolution": "COLLISION_AUDIT fixture marked historical and no longer a live link",
+    "current_local_links": "passed"
+  }
+}

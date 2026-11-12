@@ -229,5 +229,28 @@ class SeatedProfileTests(unittest.TestCase):
         self.assertGreaterEqual(quality, .65)
 
 
+
+
+
+class ConfirmedScreenOnlyRegression(unittest.TestCase):
+    def test_colour_cannot_create_viewing_corridor(self):
+        memory = scene()
+        memory.objects = {'colour': dict(memory.objects['screen'], source='colour')}
+        self.assertTrue(math.isinf(memory.viewing_angle(memory.people[0], memory.objects['colour'])))
+        self.assertFalse(confirm(memory))
+
+    def test_cached_colour_corridor_is_invalidated(self):
+        memory = scene()
+        self.assertTrue(memory.contradicted(('color_attention', 0, 'colour'), lambda a, b: True))
+
+    def test_confirmed_screen_accepts_front_and_rejects_back(self):
+        memory = scene()
+        screen = memory.objects['screen']
+        screen.update(display_confirmed=True, front=np.array([0., -1.]))
+        self.assertEqual(memory.viewing_angle(person((0., 0.)), screen), 0.)
+        self.assertEqual(memory.viewing_angle(person((.5, 0.)), screen), 0.)
+        self.assertTrue(math.isinf(memory.viewing_angle(person((0., 6.)), screen)))
+
+
 if __name__ == '__main__':
     unittest.main()

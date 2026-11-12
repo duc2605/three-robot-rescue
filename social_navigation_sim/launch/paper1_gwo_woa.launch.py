@@ -10,7 +10,11 @@ from launch.substitutions import LaunchConfiguration
 def generate_launch_description():
     share = get_package_share_directory('social_navigation_sim')
     defaults = {
-        'social_scene': 'static', 'leader_robot': 'robot3',
+        'social_scene': 'dynamic', 'leader_robot': 'robot3',
+        'leader_camera': 'true', 'person_detection': 'true',
+        'head_pose_enabled': 'true', 'body_pose_enabled': 'true',
+        'social_avoidance': 'true', 'social_observation': 'true',
+        'social_auto_observe': 'true', 'social_inspect_obstacles': 'true',
         'person_input_size': '416', 'person_confidence': '0.25',
         'camera_width': '480', 'camera_height': '360', 'camera_rate': '8.0',
         'rviz_rendering': 'auto', 'gazebo_rendering': 'auto', 'motion_enabled': 'true',
@@ -18,12 +22,11 @@ def generate_launch_description():
     return LaunchDescription([
         *[DeclareLaunchArgument(k, default_value=v) for k, v in defaults.items()],
         LogInfo(msg='PAPER1_V1: independent adaptation; GWO-WOA + DWA + Eq32. '
-                'Active camera turns disabled; camera perception/social keepout remain enabled.'),
+                'Shared camera observation and safety behavior enabled.'),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(os.path.join(share, 'launch', 'social_navigation.launch.py')),
             launch_arguments={
                 **{k: LaunchConfiguration(k) for k in defaults},
                 'navigation_backend': 'paper1',
-                'social_auto_observe': 'false', 'social_observation': 'false',
             }.items()),
     ])

@@ -268,3 +268,177 @@ Chỉ có ảnh/region nếu camera/detector/social đang bật; ghi replay khô
 tự bật nhận diện. Các file stop vẫn không chứa pixel camera. Từ NK-088 wrapper
 ghi mỗi lượt. Chi phí ghi/encode chưa benchmark, không coi là sửa thuật toán.
 Sau mỗi lượt thử sẽ cung cấp lệnh mở đúng runtime theo yêu cầu người dùng.
+
+
+## Video và bố cục thu gọn — NK098
+
+Giao diện mới giới hạn map khoảng52% chiều cao cửa sổ, sidebar nhỏ và hai
+khung Gazebo/RViz ở hàng dưới. Màn hình hẹp xếp một cột. Nút Chạy/dừng,
+seek/bước và tốc độ chung điều khiển các video theo bản ghi.
+
+Cài phụ thuộc một lần (người dùng tự chạy):
+
+```bash
+sudo apt install -y ffmpeg x11-utils
+```
+
+Sau đó dùng nguyên bộ lệnh động/tĩnh/paper trong README; ghi video đã nằm
+trong runner chung, không có lệnh quay cửa sổ riêng phải chạy song song.
+Không tự khởi động/dừng mô phỏng để cập nhật giao diện. Camera phải bật
+trong profile nếu muốn có hình; profile LiDAR-only không tự bật camera.
+
+- `scripts/record_replay_media.py` giám sát launch và dùng FFmpeg x11grab
+  theo window ID để ghi Gazebo/RViz thực,8fps,640×360. Không lấy canvas2D
+  của replay giả làm ảnh của hai ứng dụng. Nếu thiếu X11/DISPLAY/ffmpeg/
+  xwininfo, vẫn chạy ROS và ghi JSONL, đồng thời báo thiếu video.
+- Giữ cửa sổ không thu nhỏ hoặc đổi kích thước trong khi ghi. Tên Gazebo
+  và title có RViz/.rviz được tự tìm; chưa hỗ trợ portal quay Wayland thuần.
+  Không cam kết quay đúng nội dung khi desktop/driver từ chối hoặc che cửa sổ.
+- Camera raw tối đa10Hz theo cả sim/wall, detection vẫn2Hz; JPEG vẫn giữ
+  trong perception.jsonl để audit. Hết phiên, FFmpeg tạo camera MP4 theo
+  thời điểm nhận khung trong sim; mỗi source/epoch một clip. Không tạo
+  chuyển động mới khi ảnh gốc thưa hoặc bị rơi; khi gap video giữ khung cũ,
+  giao diện vẫn báo tuổi capture. Giới hạn stream256MB hiện có vẫn áp dụng.
+- Trong lúc ghi, camera có thể phát chuỗi khung qua video/canvas stream;
+  MP4 hoàn chỉnh tốt nhất xem sau Ctrl+C và chờ thông báo chuẩn bị video
+  xong. Nếu thiếu FFmpeg thì fallback phát khung đã ghi và hiển thị lý do.
+- `media/manifest.json` chứa stream và clock mẫu nối video wall-time với
+  world_frames sim-time. Video cửa sổ đồng bộ GẦN ĐÚNG (poll0.2s + flush/
+  capture latency), không dùng để kết luận timestamp contact chính xác.
+- HTTP `/video` hỗ trợ Range để seek; file chỉ nằm trong media của phiên
+  đang chọn, không phục vụ đường dẫn tùy ý hoặc symlink ra ngoài.
+- Bản cũ: viewer có thể chuẩn bị MP4 camera khi perception writer đã đóng,
+  sau khi cài FFmpeg. Nó không dựng lại video Gazebo/RViz chưa từng được ghi.
+- “Mở thư mục khác…” đọc manifest/video có sẵn bằng blob URL. HTML standalone
+  export vẫn có replay/camera khung đã nhúng, chưa nhúng video cửa sổ; dùng
+  HTTP viewer hoặc chọn thư mục đầy đủ để xem video Gazebo/RViz.
+
+Xem lại bản hiện có không cần build ROS. Với lượt mới muốn raw camera10Hz,
+cần build/source theo README để cài recorder cập nhật. Hai video cửa sổ
+và mã hóa camera có chi phí CPU/IO; chưa đo RTF hoặc kiểm thử browser/Gazebo
+bản này. Node điều hướng và thuật toán né không thay đổi.
+
+
+## Chẩn đoán chọn hướng né và vùng xã hội — NK109
+
+Bản chạy nguồn NK109 trở đi lưu `search` trên `kind=decision` trong
+navigation.jsonl; stop_robotN.jsonl có `escape_search`. Trường `t` là tick
+bắt đầu search; chỉ gắn vào decision khi tuổi<=0.5s sim. Bản cũ không có
+trace thì không suy ra hướng chưa chọn đã bị loại.
+
+- `selected_phase`: social hoặc physical_emergency; null khi chưa chọn.
+- `emergency`, `hold_clearance`: đứng yên dự báo0.8s có clearance<3cm theo
+  mô hình threat; không phải xác nhận tiếp xúc vật lý.
+- `candidates`: tối đa48chi tiết phase/side/heading/goal/horizon/stops,
+  reason, endpoint/social_rank/terminal_safe nếu accepted. Accepted chỉ
+  nghĩa qua gate của phase, không chứng minh command đã thực hiện an toàn.
+- `directions`: thống kê theo phase:side về attempted/accepted/rejected/
+  budget_interrupted. Không có mục hoặc attempted0 không chứng minh bất khả thi.
+- `trials`, `omitted`: số đã thử/số chi tiết không giữ do cap. Không dùng
+  trace48mục để nói đã duyệt mọi candidate. Recorder giới hạn search24KB.
+
+UI hiện vẫn giữ cách vẽ cũ; trace mới dùng đọc JSONL để chẩn đoán. Nhãn
+A* proposal nói về kế hoạch đề xuất, không xác nhận hướng rollout cuối.
+Không cần chạy lại hoặc build để đọc bản cũ; không có cơ chế bổ sung trace
+cho lịch sử đã chạy.
+
+
+NK110 bổ sung `search.home` (pose map đầu phiên riêng xe), `home_target`
+(bước né<=0.72m), `selected_proposal` và `selected_home_rank`. Từng trial
+có `proposal=home/refuge/astar/direction`; `side` vẫn theo yaw thân xe nên
+home không đồng nghĩa rear. Origin được reset khi clock lùi, giữ khi đổi
+goal; không coi tọa độ đó là đã xác nhận còn trống hoặc waypoint luôn tới
+được. Các trường mới không tồn tại ở bản chạy NK109 trở về trước.
+
+
+NK113 bổ sung trong `decision.search`: `search_radius`, `full_horizon`,
+`selected_distance` là khoảng cách endpoint đã kiểm tới đầu rollout,
+`peer_goals` là các endpoint intent còn mới. Trial có `distance` tới đích
+đề xuất, `blocked_by.robot/kind` khi bị peer prediction/intent/braking hoặc
+reserved_goal chặn. Requested target có thể khác endpoint đã kiểm; điểm
+né công bố là endpoint thực của rollout. Bản cũ không có trường này.
+
+Topic `/robotN/escape_intent` luôn hoạt động khi chạy local MPC, không phụ
+thuộc recorder; data stamp/dt/goal/fulltrajectory, expired0.35s sim+wall,
+hủy khi normal/stop. Không coi đây là xác nhận xe khác đã nhường đường;
+không có handshake nguyên tử. Prediction dài được giữ trong local peer
+safety; recorder navigation vẫn chủ yếu decision/scan/A* như trước.
+
+## Đường lập kế hoạch và so sánh sau tới goal — NK187
+
+Bật “Hiện đường đã lập” để xem Path tại mốc thời gian đang chọn. Recorder
+lưu `/dstar_lite/path` và `/robotN/desired_path` vào navigation.jsonl,
+kèm chiều dài polyline theo mét. Path rỗng xóa đường. Đường kết thúc cách
+goal trên20cm được gắn nhãn đoạn tham chiếu. Bản cũ thiếu Path cần ghi phiên
+mới, việc thêm lớp hiển thị không khôi phục được Path chưa từng lưu.
+
+Khi leader cách goal<=12cm, mục so sánh hiện hai đường. Đường chuẩn màu đen
+được tính bằng A*8hướng trên map PGM và vùng xã hội đặt sẵn, mở rộng vật cản
+0,18m theo kích thước xe và dự phòng. Đó là đường ngắn nhất trên lưới8hướng
+với quy tắc chặn góc và độ phân giải ghi trong map, có thể dài hơn đường
+liên tục đi chéo tùy ý. Worker tính offline để giữ thanh thời gian phản hồi.
+
+Vùng TV của map động trong phép so sánh lấy rectangle tv_group của map tĩnh
+(2,3×3,7m) theo lựa chọn user. Các vùng khác lấy rectangle đặt sẵn có kích
+thước dương của scene config. Đây là chuẩn cố định cho đánh giá, không phải
+bản đồ vùng xã hội thay đổi theo chuyển động người/xe trong kịch bản.
+Map và zones được snapshot trong scene.json của lượt mới. Lượt cũ mở bằng
+viewer lấy assets hiện có và hiện cảnh báo nguồn dữ liệu này.
+
+Đường tím nét đứt là polyline ngắn nhất backend đã publish có đầu cách điểm
+bắt đầu của goal<=15cm và cuối cách goal<=15cm, trước khi leader tới đích.
+Nối hai sai lệch nhỏ vào điểm đầu/goal và tính cả phần nối. Các route lập
+lại ở vị trí xa hơn không được trộn vào phép so sánh cùng điểm đầu. Nếu
+polyline xuyên vùng cấm đặt sẵn, giao diện báo rõ và không tính chênh lệch.
+Paper chỉ publish horizon ngắn sẽ hiện thiếu đường đủ đầu–goal, không suy
+ra toàn tuyến từ các đoạn ngắn. Có thể kéo thời gian xem từng route đã lập.
+
+Chỉ cần mở viewer, không cần build để đổi giao diện. Muốn ghi Path mới cần
+build social_navigation_sim rồi chạy mô phỏng bằng wrapper như README.
+Chưa chạy test/trình duyệt/Gazebo NK187. AST Python và cú pháp JavaScript đạt.
+
+## Đường thực tế và ẩn hình xe — NK188
+
+“Hiện đường thực tế” bật lớp nét liền đậm theo màu robot. Bảng cho quãng
+đường từng xe tới mốc đang xem, chọn từ goal hiện tại hoặc đầu epoch mô
+phỏng. Đường kế hoạch chuyển sang nét đứt để dễ phân biệt. Bỏ chọn “Hiện
+hình xe” sẽ ẩn thân, hướng và tên robot trên canvas. Các đường và số liệu
+vẫn hiển thị để đối chiếu. LiDAR/vùng camera có nút bật tắt riêng.
+
+Quãng đường là tổng khoảng cách XY giữa các pose Gazebo liên tiếp đã ghi,
+bao gồm né, lùi và dao động thực. Bắt đầu ở mẫu đầu tiên từ lúc chọn goal.
+Không nối qua epoch reset, mẫu thiếu robot, thời gian không tăng hoặc đoạn
+thiếu trên1giây. Khi thiếu đoạn, số mét chỉ cộng phần có dữ liệu và có nhãn
+cảnh báo. Đường cong giữa hai mẫu vẫn chỉ được xấp xỉ bởi đoạn thẳng.
+Lớp này dùng toàn bộ mẫu trong phạm vi chọn, độc lập giới hạn trail5000mẫu.
+
+Sau leader tới goal, bảng NK187 thêm quãng đường thực leader tính tới đúng
+mẫu đầu cáchgoal<=12cm. Bảng quãng đường từng xe vẫn theo mốc đang xem nên
+có thể tiếp tục tăng sau khi tới goal nếu xe còn di chuyển. Bản ghi cũ có
+world_frames.jsonl dùng được, chỉ cần mở lại viewer và tải lại trang.
+Chưa chạy regression/trình duyệt, đã kiểm cú pháp JS và AST test Python.
+
+## Quy tắc đường phố — NK190
+
+Bản ghi ngã tư mới có street_rule trong navigation.jsonl, gồm lý do sau lớp
+quy tắc và lệnh thực sự được cho qua. Mục LiDAR của viewer hiện “chờ đèn
+người đi bộ xanh” hoặc “giữ xe trong vỉa hè/vạch qua đường”. Các backend
+vẫn có command trước gate trong telemetry riêng, nên cần đối chiếu cả hai.
+traffic.jsonl thêm cờ cars_in_crossing/robots_crossing. Chu kỳ đèn có thể
+kéo dài để giải phóng giao lộ, đây là trạng thái kịch bản được bridge để
+áp quy tắc. Snapshot đường chuẩn của street dùng street_pedestrian.pgm,
+nhằm áp cùng giới hạn tuyến vỉa hè/vạch qua đường khi so chiều dài.
+
+## Đèn theo hướng và điểm dừng ôtô — NK191
+
+traffic.jsonl và /street/traffic_state thêm pedestrian_green_axes theo thứ
+tự Đông–Tây/Bắc–Nam. Cờ pedestrian_green chung chỉ cho biết có hướng đi bộ
+được xanh. Quyền vào vạch của robot dùng axis tương ứng, thông báo replay
+hiện hướng vạch đang chờ. pedestrian_remaining_axes cho thời gian mở vào
+vạch, dữ liệu cũ hoặc sắp hết xanh giữ xe trước khi vào đường.
+
+traffic.jsonl thêm cars với position, speed, route_s, stop_s,
+approach_stop_gap và yield_stop_s. approach_stop_gap là khoảng cách dọc
+hướng tiếp cận từ đầu xe ước tính đến mép vạch trước giao lộ, có ý nghĩa
+trước khi qua vạch. Khi đã đi qua, giá trị có thể âm. Mục tiêu dừng15cm
+được tính theo phần đầu xe1,33m trước tâm và nửa bề dày vạch0,07m.

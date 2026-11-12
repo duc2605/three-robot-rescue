@@ -1,0 +1,37 @@
+{
+  "recording": "recordings/dynamic_20261103_081423_551496763",
+  "controller_sha256": "7f044997bb6dd5c96b739a5fa50fb7e4664635cce2a820f8b12e1723b38b1850",
+  "source_version": "NK099 current source hash matches recording",
+  "end_sim": 39.101,
+  "goal": [
+    1.0815577507019043,
+    -1.979020595550537
+  ],
+  "leader_min_goal_distance_m": 0.014423739916778663,
+  "leader_min_goal_t": 19.151,
+  "physical_contacts_excluding_ground": {
+    "robot2/tv_viewer_a_walking": {
+      "first_t": 30.959,
+      "last_t": 31.964,
+      "entries": 145
+    }
+  },
+  "contact_frames": 742,
+  "world_frames": 783,
+  "coordinator_exit": {
+    "wall_unix": 1793668550.8836105,
+    "exit_code": 1,
+    "pid": 15203,
+    "last_log": "Leader observing; followers hold their measured positions.",
+    "last_log_wall_unix": 1793668550.4657958
+  },
+  "robot2_at_contact": {
+    "lidar_stamp": 30.9,
+    "lidar_accepted": false,
+    "reason": "missing_or_stale_pose",
+    "front_nearest_m": 0.27625638246536255,
+    "state_age_sim": 11.751,
+    "state_age_wall": 64.198993611
+  },
+  "likely_trigger": "publish_markers accesses observation.index and observation.targets; FastGoalSweep has neither. Traceback unavailable in retained launch/python logs; exact exception inferred from source and timing."
+}

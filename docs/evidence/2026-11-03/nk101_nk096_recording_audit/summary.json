@@ -1,0 +1,89 @@
+{
+  "recording": "recordings/dynamic_20261103_073340_299331702",
+  "controller_sha256": "1fb2e988224f66be389dbe11bf4784da1d15957c60a47220c31e1fe414fa8aef",
+  "source_version": "NK096, matches pre-NK097 and pre-NK098 backup manifests; not NK099",
+  "goal": [
+    0.9434859156608582,
+    -1.9790207147598267
+  ],
+  "leader_min_distance_m": 0.0010150878940707673,
+  "leader_min_distance_t": 67.451,
+  "leader_min_distance_xy": [
+    0.944306622961,
+    -1.9796180781
+  ],
+  "contact_frames": 2175,
+  "world_frames": 2233,
+  "physical_contacts_excluding_ground": {
+    "robot1/tv_viewer_b": {
+      "first_t": 89.561,
+      "last_t": 99.914,
+      "entries": 55
+    },
+    "robot3/tv_viewer_a_returning": {
+      "first_t": 101.737,
+      "last_t": 104.366,
+      "entries": 846
+    },
+    "robot3/tv_viewer_a": {
+      "first_t": 106.745,
+      "last_t": 111.601,
+      "entries": 1764
+    }
+  },
+  "controllers": {
+    "robot1": {
+      "return_events": 0,
+      "return_first": null,
+      "return_last": null,
+      "last": {
+        "t": 111.539,
+        "pose": [
+          0.3054026288365944,
+          -2.965057341971104,
+          2.2862179651039587
+        ],
+        "reason": "watchdog_wall_freshness",
+        "reference_rows": 0,
+        "safety_status": "stale_data: holding; fresh state/reference or active escape sensors required"
+      }
+    },
+    "robot2": {
+      "return_events": 0,
+      "return_first": null,
+      "return_last": null,
+      "last": {
+        "t": 111.543,
+        "pose": [
+          -0.22853302251681967,
+          -1.1997517316779023,
+          -0.6425831517796083
+        ],
+        "reason": "watchdog_wall_freshness",
+        "reference_rows": 0,
+        "safety_status": "stale_data: holding; fresh state/reference or active escape sensors required"
+      }
+    },
+    "robot3": {
+      "return_events": 14,
+      "return_first": 24.1,
+      "return_last": 80.80000000000001,
+      "last": {
+        "t": 111.531,
+        "pose": [
+          -1.0303730023869087,
+          -3.2853043886252515,
+          1.277651477031901
+        ],
+        "reason": "watchdog_wall_freshness",
+        "reference_rows": 0,
+        "safety_status": "stale_data: holding; fresh state/reference or active escape sensors required"
+      }
+    }
+  },
+  "limitations": [
+    "Contact entries are not independent collision episodes or continuous duration.",
+    "No controlled A/B or repeated benchmark.",
+    "Holding reasons explain immediate stop, not the exact cause of map rejection or stale transport."
+  ]
+}

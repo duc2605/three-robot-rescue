@@ -2,6 +2,7 @@
 """D* Lite, adaptive leader-first triangle/column references and distributed MPC."""
 
 import bisect
+from dataclasses import asdict
 import heapq
 import json
 import math
@@ -33,6 +34,7 @@ from .adaptive_structure import interpolate, swept_separation
 from .moving_formation import MovingAdaptiveFormation
 from .grid_clearance import GridClearance
 from .leader_follower import ClearanceRecovery
+from .independent_goal_progress import IndependentGoalProgress
 from .turnaround import TurnaroundPlanner, leader_route_blockers
 from .peer_safety import minimum_team_distance, peer_motion_free
 from .separation_recovery import SeparationRecoveryPlanner
@@ -42,7 +44,7 @@ from .local_escape import plan_escape
 from .stop_diagnostics import StopDiagnostics
 from .goal_history import GoalHistory
 from .scan_pose_history import ScanPoseHistory
-from .moving_obstacles import motion_hypotheses, crosses_approach_corridor
+from .moving_obstacles import motion_hypotheses, crosses_approach_corridor, tracking_motion_free
 from .robot_motion import braking_pose
 
 
@@ -283,6 +285,10 @@ class ThreeRobotDStarMPC(Node):
         self.declare_parameter('unknown_is_obstacle', True)
         self.declare_parameter('inflation_radius', 0.18)
         self.declare_parameter('robot_radius', 0.15)
+        self.declare_parameter('goal_progress_without_formation', True)
+        self.goal_progress_without_formation = bool(self.get_parameter('goal_progress_without_formation').value)
+        self.formation_disrupted = False
+        self.goal_progress = None
         self.declare_parameter('leader_robot', 'robot3')
         self.declare_parameter('formation_follow_gap', 0.70)
         self.declare_parameter('adaptive_formation', True)
@@ -736,13 +742,13 @@ class ThreeRobotDStarMPC(Node):
                 and self.collision_grid.point_free((x, y))
                 and all(math.hypot(x - ox, y - oy) >= self.inflation_radius
                         for ox, oy in self.dynamic_obstacles)
-                and all(math.hypot(x - p[0], y - p[1]) >= 0.38
+                and all(math.hypot(x - p[0], y - p[1]) >= 0.32
                         for p in self.routing_peers))
 
     def peer_connector_free(self, point, center):
         """Leave a peer's preferred buffer without getting closer to that peer.
 
-        MPC prefers 0.34 m, while routing prefers 0.38 m. A measured
+        MPC and routing both require 0.32 m. A measured
         endpoint inside the preferred buffer is legal if its entire connector
         preserves its current peer distance and reaches the normal search grid.
         """
@@ -751,7 +757,7 @@ class ThreeRobotDStarMPC(Node):
                        for p in self.dynamic_obstacles)):
             return False
         for peer in self.routing_peers:
-            if not peer_motion_free(point, center, peer, peer, preferred=0.38,
+            if not peer_motion_free(point, center, peer, peer, preferred=0.32,
                                     physical=2.0 * self.robot_radius + 0.02):
                 return False
         return True
@@ -828,6 +834,7 @@ class ThreeRobotDStarMPC(Node):
         if not math.isfinite(x) or not math.isfinite(y):
             return
         self.goal_xy = (x, y)
+        self.formation_disrupted = False
         self.approach_goal_xy = None
         self.goal_route_status = "planning"
         self.goal_scan_done = False
@@ -984,6 +991,7 @@ class ThreeRobotDStarMPC(Node):
 
     def moving_safety_callback(self, msg, index):
         if msg.data.startswith('moving_obstacle:'):
+            self.formation_disrupted = True
             was_active = self.moving_safety_active()
             self.safety_holds[index] = (self.now_seconds(),time.monotonic())
             self.last_observation = self.now_seconds()
@@ -1032,10 +1040,11 @@ class ThreeRobotDStarMPC(Node):
                 and all(swept_separation(a, b, p, p) >= self.robot_radius
                         for p in self.dynamic_obstacles))
 
-    def start_peer_recovery(self, actual):
+    def start_peer_recovery(self, actual, trigger=.32):
         planner = SeparationRecoveryPlanner(
             self.segment_is_free, self.clearance_world, self.convoy_order,
-            physical=2.0 * self.robot_radius + 0.02, obstacle_margin=self.inflation_radius)
+            physical=2.0 * self.robot_radius + 0.02, trigger=trigger,
+            target=max(.34, trigger+.02), obstacle_margin=self.inflation_radius)
         motion = planner.build(actual)
         if motion is None:
             self.get_logger().warning(planner.failure_reason + '; team held.',
@@ -1144,6 +1153,50 @@ class ThreeRobotDStarMPC(Node):
                             occupied[ny * self.width + nx] = True
         return occupied
 
+    def start_independent_goal(self, actual):
+        if (not getattr(self,'goal_progress_without_formation',False)
+                or type(self) is not ThreeRobotDStarMPC
+                or not self.is_free_world(*actual[self.leader_index][:2])):
+            return False
+        peers = [actual[i] for i in range(3) if i!=self.leader_index]
+        target = self.approach_goal_xy or self.goal_xy
+        if target is None:
+            return False
+        candidates = [target] if self.is_free_world(*target) else []
+        if not candidates:
+            options = []
+            for radius in (.10,.20,.35,.50,.75,1.):
+                for k in range(16):
+                    point = (self.goal_xy[0]+radius*math.cos(k*math.pi/8),
+                             self.goal_xy[1]+radius*math.sin(k*math.pi/8))
+                    if self.is_free_world(*point):
+                        options.append((radius,math.dist(actual[self.leader_index][:2],point),point))
+            candidates = [point for _,_,point in sorted(options)[:8]]
+        points = None
+        for target in candidates:
+            points = self.route_between(actual[self.leader_index],target,peers)
+            if points:
+                break
+        if not points:
+            return False
+        self.approach_goal_xy = target if target!=self.goal_xy else None
+        self.goal_route_status = 'independent_approach' if self.approach_goal_xy else 'independent_goal'
+        trail = getattr(self,'trails',[[],[],[]])[self.leader_index]
+        self.goal_progress = IndependentGoalProgress(points,actual,self.convoy_order,
+            self.route_between,self.segment_is_free,trail=trail,gap=self.follow_gap,
+            speed=float(self.get_parameter('formation_speed').value),
+            follower_speed=self.follower_speed,radius=self.robot_radius)
+        self.convoy_order = self.goal_progress.order
+        self.convoy = self.structure = self.maneuver = None
+        self.recovering_peers = False
+        self.replan_required = False
+        self.last_tick = self.now_seconds()
+        headings,_ = self.path_geometry(points)
+        self.publish_global_path(points,headings)
+        self.publish_formation_paths()
+        self.get_logger().info('Leader proceeds to goal; followers join independently without reassembly.')
+        return True
+
     def plan(self):
         self.last_plan_attempt = self.now_seconds()
         self.assembly_route_cache = {}
@@ -1154,10 +1207,15 @@ class ThreeRobotDStarMPC(Node):
                                       throttle_duration_sec=3.0)
             return
         actual = tuple(self.get_robot_pose(i)[:3] for i in range(3))
+        needs_independent = (getattr(self,'formation_disrupted',False)
+            or any(not self.is_free_world(*p[:2]) for p in actual)
+            or minimum_team_distance(actual)<.32)
+        if needs_independent and self.start_independent_goal(actual):
+            return
         if any(not self.is_free_world(*pose[:2]) for pose in actual):
             self.start_clearance_recovery(actual)
             return
-        if minimum_team_distance(actual) < 0.38:
+        if minimum_team_distance(actual) < 0.32:
             self.start_peer_recovery(actual)
             return
 
@@ -1273,6 +1331,8 @@ class ThreeRobotDStarMPC(Node):
             other = [actual[i] for i in range(3) if i not in (source, target)]
             connector = self.route_between(actual[source], actual[target], other)
             if connector is None:
+                if self.start_independent_goal(actual):
+                    return
                 self.get_logger().warning(
                     f'No safe trail connector: {self.robot_names[source]} -> {self.robot_names[target]}.',
                     throttle_duration_sec=3.0)
@@ -1344,6 +1404,8 @@ class ThreeRobotDStarMPC(Node):
                 moving_safety_active=self.moving_safety_active(),
                 replan_required=self.replan_required,
                 recovering_peers=self.recovering_peers,
+                goal_progress_mode=getattr(getattr(self,'goal_progress',None),'mode',None),
+                follower_join_status=getattr(getattr(self,'goal_progress',None),'follower_status',{}),
                 maneuver=getattr(self.maneuver, 'failure_reason', None),
                 robot_poses=poses), not rows or bool(stationary_robots))
         except Exception as error:
@@ -1357,6 +1419,7 @@ class ThreeRobotDStarMPC(Node):
         self.diagnostic_reference([],reason)
 
     def clear_paths(self):
+        self.goal_progress = None
         self.structure = None
         self.convoy = None
         self.maneuver = None
@@ -1383,7 +1446,7 @@ class ThreeRobotDStarMPC(Node):
         # Most joins and passing-bay moves are short, clear segments. Avoid a
         # grid search and cell-centre detour when the continuous sweep is safe.
         if (self.segment_is_free(start, goal)
-                and all(peer_motion_free(start, goal, peer, peer, preferred=0.38,
+                and all(peer_motion_free(start, goal, peer, peer, preferred=0.32,
                                          physical=2.0 * self.robot_radius + 0.02)
                         for peer in peers)):
             return [tuple(start[:2]), tuple(goal[:2])]
@@ -1445,7 +1508,7 @@ class ThreeRobotDStarMPC(Node):
         return (self.collision_grid is not None and self.collision_grid.segment_free(a, b)
                 and all(swept_separation(a, b, p, p) >= self.inflation_radius
                         for p in self.dynamic_obstacles)
-                and all(swept_separation(a, b, p, p) >= 0.38 for p in self.routing_peers))
+                and all(swept_separation(a, b, p, p) >= 0.32 for p in self.routing_peers))
 
     @staticmethod
     def path_geometry(points):
@@ -1495,7 +1558,9 @@ class ThreeRobotDStarMPC(Node):
 
     def publish_formation_paths(self):
         stamp = self.get_clock().now().to_msg()
-        if self.maneuver is not None:
+        if getattr(self,'goal_progress',None) is not None:
+            paths = self.goal_progress.display_paths()
+        elif self.maneuver is not None:
             paths = self.maneuver.display_paths()
         elif self.convoy is not None:
             paths = self.convoy.display_paths()
@@ -1531,6 +1596,31 @@ class ThreeRobotDStarMPC(Node):
             self.publish_empty_reference('coordinator_stale_robot_poses')
             return
         actual = tuple(self.get_robot_pose(i)[:3] for i in range(3))
+        now = self.now_seconds()
+        previous = getattr(self, 'peer_spacing_sample', None)
+        self.peer_spacing_sample = (now, actual)
+        approaching = []
+        if previous is not None and .02 <= now-previous[0] <= .5:
+            elapsed = now-previous[0]
+            velocities = [tuple((p[k]-old[k])/elapsed for k in (0,1))
+                          for p,old in zip(actual,previous[1])]
+            if all(math.hypot(*v) <= .5 for v in velocities):
+                future = [tuple(p[k]+.6*v[k] for k in (0,1))
+                          for p,v in zip(actual,velocities)]
+                for i,j in ((0,1),(0,2),(1,2)):
+                    distance = math.dist(actual[i][:2],actual[j][:2])
+                    if distance >= .32 and swept_separation(
+                            actual[i],future[i],actual[j],future[j]) < .32:
+                        approaching.append(distance)
+        if (approaching and not self.recovering_peers
+                and all(self.is_free_world(*p[:2]) for p in actual)):
+            if self.observation is not None:
+                self.finish_observation('aborted: predicted peer spacing below 32cm')
+            self.clear_paths()
+            self.replan_required = True
+            if not self.start_peer_recovery(actual, trigger=max(approaching)+.001):
+                self.publish_empty_reference('predicted_peer_separation_unavailable')
+                return
         if self.observation is not None:
             if time.monotonic() >= self.observation_wall_deadline:
                 self.finish_observation('aborted: brief camera check reached its wall-time limit')
@@ -1539,7 +1629,7 @@ class ThreeRobotDStarMPC(Node):
                     or time.monotonic() - self.observation_frame_wall > 3.0):
                 self.finish_observation('aborted: camera inference is stale')
                 return
-            if (minimum_team_distance(actual) < 0.38
+            if (minimum_team_distance(actual) < 0.32
                     or not all(self.is_free_world(*p[:2]) for p in actual)):
                 self.finish_observation('aborted: clearance changed')
                 return
@@ -1548,6 +1638,16 @@ class ThreeRobotDStarMPC(Node):
                 self.finish_observation(self.observation.reason)
                 return
             self.publish_reference_rows(rows)
+            return
+        if getattr(self,'goal_progress',None) is not None:
+            rows = self.goal_progress.rows(actual,dt,self.mpc_horizon,self.mpc_dt)
+            if rows is None:
+                self.clear_paths()
+                self.replan_required = True
+                return
+            self.publish_reference_rows(rows)
+            if self.now_seconds()-self.last_convoy_display>.5:
+                self.publish_formation_paths()
             return
         if self.structure is None and (self.convoy is not None or self.maneuver is not None):
             # MPC tracking error can put a robot inside the planning buffer
@@ -1570,7 +1670,7 @@ class ThreeRobotDStarMPC(Node):
                 if not self.start_clearance_recovery(actual):
                     return
         if (not self.recovering_peers and self.structure is None
-                and minimum_team_distance(actual) < 0.37
+                and minimum_team_distance(actual) < 0.32
                 and all(self.is_free_world(*pose[:2]) for pose in actual)):
             self.clear_paths()
             self.replan_required = True
@@ -1609,6 +1709,10 @@ class ThreeRobotDStarMPC(Node):
                 self.publish_formation_paths()
         elif self.convoy is not None:
             if not self.convoy.observe(actual):
+                if self.start_independent_goal(actual):
+                    rows = self.goal_progress.rows(actual,dt,self.mpc_horizon,self.mpc_dt)
+                    self.publish_reference_rows(rows or [actual]*(self.mpc_horizon+1))
+                    return
                 self.get_logger().warning(self.convoy.failure_reason + '; replanning.',
                                           throttle_duration_sec=3.0)
                 self.clear_paths()
@@ -1626,10 +1730,22 @@ class ThreeRobotDStarMPC(Node):
                 return
             rows = self.convoy.rows(actual, dt, self.mpc_horizon, self.mpc_dt)
             if self.convoy.failure_reason:
+                if self.start_independent_goal(actual):
+                    rows = self.goal_progress.rows(actual,dt,self.mpc_horizon,self.mpc_dt)
+                    self.publish_reference_rows(rows or [actual]*(self.mpc_horizon+1))
+                    return
                 self.get_logger().warning(self.convoy.failure_reason + '; replanning.',
                                           throttle_duration_sec=3.0)
                 self.clear_paths()
                 self.replan_required = True
+                return
+            if (getattr(self,'goal_progress_without_formation',False)
+                    and self.goal_xy is not None
+                    and math.dist(actual[self.leader_index][:2],self.goal_xy)>.20
+                    and math.dist(rows[-1][self.leader_index][:2],actual[self.leader_index][:2])<.005
+                    and self.start_independent_goal(actual)):
+                self.publish_reference_rows(self.goal_progress.rows(actual,dt,self.mpc_horizon,self.mpc_dt)
+                                            or [actual]*(self.mpc_horizon+1))
                 return
             if self.convoy.mode != self.last_formation_mode:
                 self.last_formation_mode = self.convoy.mode
@@ -1762,6 +1878,7 @@ class ThreeRobotDStarMPC(Node):
             self.last_observation = -INF
             self.observation_frame_time = self.observation_frame_wall = -INF
             self.clear_paths()
+            self.formation_disrupted = False
             self.robot_state = [None, None, None]
             self.pose_times = [-INF, -INF, -INF]
             self.scan_points = [[], [], []]
@@ -2011,8 +2128,8 @@ class DistributedRobotMPC(Node):
         self.escape_decision_pub = (self.create_publisher(String,f'/{self.robot_name}/escape_decision',1)
                                     if os.environ.get('SOCIAL_REPLAY_DIRECTORY') else None)
         self.physical_grid = None
-        self.camera_motion, self.lidar_motion = MotionTracks(), MotionTracks(padding=.02,persistence=.4,pause_reserve=True)
-        self.team_lidar_motion = [MotionTracks(padding=.02,persistence=.4,pause_reserve=True) for _ in self.robot_names]
+        self.camera_motion, self.lidar_motion = MotionTracks(), MotionTracks(padding=.02,persistence=.4,pause_reserve=True,classify_in_place=True)
+        self.team_lidar_motion = [MotionTracks(padding=.02,persistence=.4,pause_reserve=True,classify_in_place=True) for _ in self.robot_names]
         self.team_lidar_motion[self.robot_index] = self.lidar_motion
         self.guard_active = False
         self.guard_wall = -INF
@@ -2085,8 +2202,7 @@ class DistributedRobotMPC(Node):
             now, wall = self.now_seconds(), time.monotonic()
             sources = [('camera',self.camera_motion)] + [
                 ('lidar_'+str(i+1),tracks) for i,tracks in enumerate(self.team_lidar_motion)]
-            tracks = [dict(source=source, position=o.position, velocity=o.velocity,
-                           radius=o.radius, stamp=o.stamp,
+            tracks = [dict(source=source, **asdict(o),
                            risk=collision_risk(o,self.own_pose,now,self.robot_radius)
                            if self.own_pose is not None else None)
                       for source,tracker in sources for o in tracker.recent(now)[:32]]
@@ -2106,8 +2222,7 @@ class DistributedRobotMPC(Node):
                 tracks=tracks, sensors=self.diagnostic_sensors,
                 measured_robot_velocities=[self.measured_velocity(i) for i in range(3)],
                 avoidance_use_camera=getattr(self,'avoidance_use_camera',False),
-                selected_lidar_tracks=[dict(position=o.position,velocity=o.velocity,radius=o.radius,stamp=o.stamp,velocity_hint=o.velocity_hint)
-                                       for o in getattr(self,'selected_lidar_tracks',[])],
+                selected_lidar_tracks=[asdict(o) for o in getattr(self,'selected_lidar_tracks',[])],
                 safety_motion_hypotheses=getattr(self,'diagnostic_motion_hypotheses',[]),
                 escape_initial_command=getattr(self,'escape_initial_command',None),
                 camera_last_accepted_stamp=self.camera_motion.last_stamp,
@@ -2355,7 +2470,7 @@ class DistributedRobotMPC(Node):
         return braking_pose(self.peer_poses[index],self.measured_velocity(index),
                             max(0.,seconds-self.state_time))
 
-    def peer_sweep_safe(self,a,b,index,start,end,now,preferred=.34):
+    def peer_sweep_safe(self,a,b,index,start,end,now,preferred=.32):
         physical=2*self.robot_radius+.02
         if not peer_motion_free(a,b,self.peer_at(index,start,now),self.peer_at(index,end,now),
                                 preferred=preferred,physical=physical):return False
@@ -2413,7 +2528,10 @@ class DistributedRobotMPC(Node):
             publisher.publish(String(data=json.dumps(dict(stamp=now,reason=reason,
                 goal=getattr(self,'selected_escape_goal',None) if active else None,
                 stops=getattr(self,'selected_escape_stops',False) if active else False,
-                terminal_safe=getattr(self,'selected_escape_terminal_safe',False) if active else False),allow_nan=False)))
+                terminal_safe=getattr(self,'selected_escape_terminal_safe',False) if active else False,
+                safety_status=getattr(self,'safety_state',''),
+                motion_tracks=[dict(**asdict(o), risk=collision_risk(o,self.own_pose,now,self.robot_radius))
+                               for o in getattr(self,'selected_lidar_tracks',[])[:24]]),allow_nan=False)))
         except Exception as error:
             try:self.get_logger().warning('Replay escape telemetry skipped: '+str(error),throttle_duration_sec=5.)
             except Exception:pass
@@ -2481,6 +2599,9 @@ class DistributedRobotMPC(Node):
             # checking escape instead of commanding a fixed-duration pause.
             retained = self.recent_escape_threats[1]
             for obstacle in retained:
+                if any(o.stamp > obstacle.stamp and math.dist(o.position, obstacle.position) < .45
+                       for o in obstacles):
+                    continue
                 risk = collision_risk(obstacle, self.own_pose, now, self.robot_radius)
                 if risk is not None:
                     risks.append((obstacle, risk))
@@ -2753,7 +2874,7 @@ class DistributedRobotMPC(Node):
             wx,wy=(tx-old[0])/self.mpc_dt+2*(tx-x),(ty-old[1])/self.mpc_dt+2*(ty-y)
             vx,vy=math.cos(yaw)*wx+math.sin(yaw)*wy,-math.sin(yaw)*wx+math.cos(yaw)*wy
             limit=self.max_linear_speed
-            if step==1 and any(math.dist(self.own_pose[:2],self.peer_poses[i][:2])<.38 for i in peers):
+            if step==1 and any(math.dist(self.own_pose[:2],self.peer_poses[i][:2])<.32 for i in peers):
                 limit=min(limit,.06)
             speed=math.hypot(vx,vy)
             if speed>limit: vx,vy=vx*limit/speed,vy*limit/speed
@@ -2770,11 +2891,12 @@ class DistributedRobotMPC(Node):
             required=max(self.robot_radius,min(self.inflation_radius,clearance))
             if (not self.segment_free((x,y),q,required)
                     or any(swept_separation((x,y),q,o,o)<required-1e-9 for o in obstacles)
-                    or any(o.clearance((x,y),q,now+(step-1)*self.mpc_dt,now+step*self.mpc_dt,self.robot_radius)<.03 for o in moving)
+                    or any(not tracking_motion_free(o,(x,y),q,now+(step-1)*self.mpc_dt,
+                                                    now+step*self.mpc_dt,self.robot_radius) for o in moving)
                     or any(not self.peer_sweep_safe((x,y),q,i,now+(step-1)*self.mpc_dt,
                                                     now+step*self.mpc_dt,now) for i in peers)
                     or (step==1 and any(not peer_motion_free((x,y),q,self.peer_poses[i],self.peer_poses[i],
-                                        preferred=.38,physical=2*self.robot_radius+.02) for i in peers))):
+                                        preferred=.32,physical=2*self.robot_radius+.02) for i in peers))):
                 return None
             previous=(vx,vy,spin)
             if first is None: first=previous
@@ -2831,7 +2953,7 @@ class DistributedRobotMPC(Node):
                             return None, 'mpc_compute_budget_exhausted'
                         speed = math.hypot(vx, vy)
                         speed_limit = self.max_linear_speed
-                        if step == 1 and any(math.dist(self.own_pose[:2], self.peer_poses[i][:2]) < 0.38
+                        if step == 1 and any(math.dist(self.own_pose[:2], self.peer_poses[i][:2]) < 0.32
                                              for i in peers):
                             speed_limit = min(speed_limit, 0.06)
                         if speed > speed_limit:
@@ -2861,8 +2983,8 @@ class DistributedRobotMPC(Node):
                                for o in obstacles):
                             self.diagnostic_check('mpc.lidar',False)
                             continue
-                        if any(o.clearance(before, after, now+(step-1)*self.mpc_dt,
-                                           now+step*self.mpc_dt, self.robot_radius) < .03 for o in moving):
+                        if any(not tracking_motion_free(o,before,after,now+(step-1)*self.mpc_dt,
+                                                        now+step*self.mpc_dt,self.robot_radius) for o in moving):
                             self.diagnostic_check('mpc.moving',False)
                             continue
                         if any(not self.peer_sweep_safe(before,after,i,now+(step-1)*self.mpc_dt,
@@ -2870,7 +2992,7 @@ class DistributedRobotMPC(Node):
                             self.diagnostic_check('mpc.peer',False)
                             continue
                         if step == 1 and any(not peer_motion_free(
-                                before, after, self.peer_poses[i], self.peer_poses[i], preferred=0.38,
+                                before, after, self.peer_poses[i], self.peer_poses[i], preferred=0.32,
                                 physical=2.0 * self.robot_radius + 0.02) for i in peers):
                             self.diagnostic_check('mpc.peer_close',False)
                             continue
@@ -2951,7 +3073,7 @@ class DistributedRobotMPC(Node):
                                    remote_sources=[i for i,o in remote])
         self.selected_lidar_tracks = lidar
         lidar=motion_hypotheses(lidar)
-        self.diagnostic_motion_hypotheses=[dict(position=o.position,velocity=o.velocity,radius=o.radius,stamp=o.stamp) for o in lidar]
+        self.diagnostic_motion_hypotheses=[asdict(o) for o in lidar]
         moving = (self.camera_motion.recent(now) if getattr(self,'avoidance_use_camera',True) else []) + lidar
         if self.yield_to_moving_obstacles(now, moving):
             return

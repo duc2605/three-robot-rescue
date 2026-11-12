@@ -1,0 +1,43 @@
+{
+  "deleted": [
+    "README_PAPER8_BACKSTEPPING.md",
+    "README_PAPER9_SLIDING_MODE.md",
+    "README_PAPER10_OBSERVER.md",
+    "social_navigation_sim/launch/paper8_backstepping.launch.py",
+    "social_navigation_sim/launch/paper9_sliding_mode.launch.py",
+    "social_navigation_sim/launch/paper10_observer.launch.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_06_backstepping/pipeline.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_06_backstepping/__init__.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_06_backstepping/formation.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_06_backstepping/control.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_06_backstepping/trajectory.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_07_sliding_mode/pipeline.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_07_sliding_mode/__init__.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_07_sliding_mode/formation.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_07_sliding_mode/control.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_07_sliding_mode/trajectory.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_08_observer/pipeline.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_08_observer/__init__.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_08_observer/formation.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_08_observer/control.py",
+    "social_navigation_planner/social_navigation_planner/comparison_methods/method_08_observer/trajectory.py"
+  ],
+  "renamed": {
+    "README_PAPER8_HO_MPC.md": "README_PAPER5_HO_MPC.md",
+    "README_PAPER9_DIFFERENT_DRIVETRAINS.md": "README_PAPER6_DIFFERENT_DRIVETRAINS.md",
+    "README_PAPER10_ROBILE_FORMATION.md": "README_PAPER7_ROBILE_FORMATION.md",
+    "README_PAPER7_DEFORM.md": "README_PAPER8_DEFORM.md",
+    "social_navigation_sim/launch/paper8_ho_mpc.launch.py": "social_navigation_sim/launch/paper5_ho_mpc.launch.py",
+    "social_navigation_sim/launch/paper9_different_drivetrains.launch.py": "social_navigation_sim/launch/paper6_different_drivetrains.launch.py",
+    "social_navigation_sim/launch/paper10_robile_formation.launch.py": "social_navigation_sim/launch/paper7_robile_formation.launch.py",
+    "social_navigation_sim/launch/paper7_deform.launch.py": "social_navigation_sim/launch/paper8_deform.launch.py",
+    "scripts/prepare_paper8.py": "scripts/prepare_ho_mpc.py",
+    "social_navigation_planner/test/test_paper8_optional.py": "social_navigation_planner/test/test_ho_mpc_optional.py"
+  },
+  "number_mapping": {
+    "8 HO-MPC": 5,
+    "9 Different Drivetrains": 6,
+    "10 Robile": 7,
+    "7 DEFORM": 8
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "recording": "recordings/dynamic_baseline_20261109_105559_854274212",
+  "previous_recording": "recordings/dynamic_baseline_20261109_104558_743411995",
+  "controller_sha256": "2e7c4b8669913346ab1e1d9eee2c7267481de341988ee10906213fab453caf3f",
+  "goal": [
+    -5.041522979736328,
+    -3.0157058238983154
+  ],
+  "goal_sequence": 1,
+  "goal_sim_t": 8.0,
+  "build_packages": [
+    "social_navigation_planner",
+    "social_navigation_sim"
+  ],
+  "build_summary": "2 packages finished [1.52s]",
+  "gazebo_window": "0x1c0001a",
+  "rviz_window": "0x1600106",
+  "window_state": "IsViewable",
+  "observed_sim_t": 12.675,
+  "tracking_command_events_in_last_5_sim_seconds": {
+    "robot1": 26,
+    "robot2": 7,
+    "robot3": 18
+  },
+  "remaining_observations": [
+    "Startup sample still contains watchdog and stale-state/reference events.",
+    "robot2 also issued checked braking holds.",
+    "No full-goal, physical-contact, social-region or formation success claim."
+  ],
+  "pytest_executed": false,
+  "simulation_runs_started": 1
+}

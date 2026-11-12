@@ -149,7 +149,7 @@ class LeaderPersonDetector(Node):
             raise ValueError('Invalid inference rate, freshness limit or depth range')
         for name in ('model_config', 'model_weights'):
             if not Path(opts[name]).is_file():
-                raise FileNotFoundError(f"Missing {name}: {opts[name]}. See README_SOCIAL_STATIC.md")
+                raise FileNotFoundError(f"Missing {name}: {opts[name]}. See project README.md and the model README files under models/")
         cv2.setNumThreads(max(1, int(opts['cpu_threads'])))
         cv2.ocl.setUseOpenCL(False)
         net = cv2.dnn.readNetFromDarknet(opts['model_config'], opts['model_weights'])
@@ -447,7 +447,8 @@ class LeaderPersonDetector(Node):
         markers = MarkerArray(markers=[Marker(action=Marker.DELETEALL)])
         colours = locate_colorful_regions(result['colours'], *depth_context, transform, transform_point)
         self.publish_color_targets(map_header, colours)
-        screens = locate_tv_screens(result['targets'], *depth_context, transform, transform_point)
+        screens = locate_tv_screens(result['targets'], *depth_context, transform, transform_point,
+                                    display_regions=result['colours'])
         self.publish_tv_screens(map_header, screens)
         for index, obj in enumerate(colours):
             x1, y1, x2, y2 = map(round, obj['box'])

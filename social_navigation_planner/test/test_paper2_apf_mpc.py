@@ -7,11 +7,42 @@ import numpy as np
 from social_navigation_planner.grid_clearance import GridClearance
 from social_navigation_planner.paper2_apf_mpc_core import (
     leader_potential, follower_velocity, follower_potential, solve_mpc,
-    predict_controls, virtual_target, velocity_trace, trace_safe,
+    predict_controls, virtual_target, velocity_trace, trace_safe, limit,
 )
 
 
 class Paper2Checks(unittest.TestCase):
+    def test_pose_callback_accepts_and_preserves_measurement_stamp(self):
+        # Load only the adapter method so this contract check needs no ROS graph.
+        source = Path(__file__).parents[1] / 'social_navigation_planner' / 'paper2_apf_mpc_node.py'
+        tree = ast.parse(source.read_text())
+        adapter = next(n for n in tree.body if isinstance(n, ast.ClassDef)
+                       and n.name == 'Paper2Controller')
+        method = next(n for n in adapter.body if isinstance(n, ast.FunctionDef)
+                      and n.name == 'record_pose')
+
+        class PoseSink:
+            def record_pose(self, index, x, y, yaw, stamp=None):
+                self.forwarded = (index, x, y, yaw, stamp)
+
+        adapter.bases = [ast.Name(id='PoseSink', ctx=ast.Load())]
+        adapter.body = [method]
+        module = ast.fix_missing_locations(ast.Module(body=[adapter], type_ignores=[]))
+        namespace = {'PoseSink': PoseSink, 'math': math, 'np': np, 'limit': limit}
+        exec(compile(module, str(source), 'exec'), namespace)
+        node = namespace['Paper2Controller']()
+        node.previous_measurements = [None] * 3
+        node.world_velocity = [np.zeros(2) for _ in range(3)]
+        node.goal_start = None
+        node.now_seconds = lambda: 100.0
+        node.record_pose(0, 0.0, 0.0, 0.0, 10.0)
+        node.record_pose(0, .01, 0.0, 0.0, 10.1)
+        self.assertEqual(node.forwarded, (0, .01, 0.0, 0.0, 10.1))
+        np.testing.assert_allclose(node.world_velocity[0], [.06, 0.0])
+        node.record_pose(1, 1.0, 2.0, 0.0)
+        self.assertEqual(node.forwarded, (1, 1.0, 2.0, 0.0, None))
+        self.assertEqual(node.previous_measurements[1][0], 100.0)
+
     def test_potential_zero_at_goal(self):
         cost = leader_potential([[2., 0]], [[0., 0]], (2, 0), [(2, .5, 0, 0, .05)], [.1])
         self.assertAlmostEqual(cost[0], 0.)

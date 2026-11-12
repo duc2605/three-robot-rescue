@@ -1,0 +1,35 @@
+{
+  "kept": "20261104_111229_242934_nk128_keep_current_only",
+  "removed": [
+    {
+      "name": "20261101_185410_before_nk034_restore",
+      "archive_sha256": "850078b28db97031abfc87c8d817c947f50e7864609b4babbce4110dd4a8ec3a"
+    },
+    {
+      "name": "20261102_184916_116752_nk095_preserve_contact_free_before_goal_recovery",
+      "archive_sha256": "906bac9d51e6afd71eabc75d5eccd465a509c2689f15ff8dab6d7485c50fdece"
+    },
+    {
+      "name": "20261104_102810_011426_nk124_prune_intermediate_backups",
+      "archive_sha256": "9a1f4200bf07f847ab0e45600cdc246e4acc1e57c20c775d24b00f2d69ce2e6a"
+    },
+    {
+      "name": "20261104_103212_969641_nk125_remove_redundant_readmes",
+      "archive_sha256": "d5999f2a9b87980503beed8caebd5ff47fcb3c7ce39847f92267f82f9558fbcb"
+    },
+    {
+      "name": "20261104_110502_127926_nk126_remove_obsolete_docs",
+      "archive_sha256": "47a84f9b7f23df196b17f3f961d1305831e2aca8d3082ad3bd713373f5d4983c"
+    },
+    {
+      "name": "20261104_111035_243337_nk127_remove_duplicate_papers_index",
+      "archive_sha256": "e0325493156df5b49398747df3769a7de314189e5ded76bcaaac50887b8012b1"
+    }
+  ],
+  "removed_count": 6,
+  "build_removed": true,
+  "install_removed": false,
+  "source_unchanged": true,
+  "tests_run": false,
+  "simulation_started": false
+}

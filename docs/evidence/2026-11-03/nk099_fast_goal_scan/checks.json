@@ -1,0 +1,22 @@
+{
+  "date_vietnam": "2026-11-03",
+  "python_ast_files": [
+    "social_navigation_planner/social_navigation_planner/social_observation.py",
+    "social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py",
+    "social_navigation_planner/test/test_goal_scan_rotation.py",
+    "social_navigation_sim/launch/dstar_mpc.launch.py",
+    "social_navigation_sim/launch/social_navigation.launch.py"
+  ],
+  "local_links_and_fences": "pass",
+  "readme_shell_blocks_syntax": "pass",
+  "unchanged_from_backup": [
+    "social_navigation_planner/social_navigation_planner/local_escape.py",
+    "social_navigation_planner/social_navigation_planner/moving_obstacles.py",
+    "social_navigation_sim/scripts/social_costmap.py",
+    "social_navigation_sim/scripts/color_attention.py"
+  ],
+  "pytest_run": false,
+  "gazebo_run": false,
+  "build_run": false,
+  "measured_scan_duration": null
+}

@@ -1,0 +1,35 @@
+{
+  "recording": "recordings/dynamic_baseline_20261109_115329_569801484",
+  "navigation_window_sim": [
+    21.9,
+    29.9
+  ],
+  "checked_escape_commands": {
+    "robot1": 4,
+    "robot2": 12,
+    "robot3": 6
+  },
+  "leader_escape_requires_fresh_sensors_events": 21,
+  "leader_escape_budget_exhausted_events": 17,
+  "leader_stopping_tail_moving_obstacle_rejections": 15,
+  "coordinator_rtf_window_sim": [
+    27.0,
+    30.2
+  ],
+  "coordinator_window_wall_seconds": 137.55214524269104,
+  "rtf_estimate": 0.023263904713038547,
+  "latest_diagnostic_sim_t": 30.118,
+  "reference_age_wall_approximately_seconds": 21,
+  "scan_age_wall_approximately_seconds": 11.5,
+  "wall_freshness_cap_seconds": 12,
+  "live_robot_description_observed": {
+    "roller": "cylinder R.009 L.015 + spheres R.009 at z +/-.0075",
+    "hub": "omni_frame_collision_rounded.stl"
+  },
+  "limitations": [
+    "Repeated events are not independent failures.",
+    "Read-only audit; no simulation restarted.",
+    "Cannot attribute slowdown solely to wheel collisions from this run.",
+    "New 6mm rounding has not been spawned or measured."
+  ]
+}

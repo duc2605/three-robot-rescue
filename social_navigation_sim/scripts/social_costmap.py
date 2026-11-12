@@ -16,7 +16,9 @@ import rclpy
 from geometry_msgs.msg import Point, Pose, PoseArray
 from nav_msgs.msg import OccupancyGrid, Path as NavPath
 from rclpy.node import Node
-from rclpy.qos import DurabilityPolicy, QoSProfile
+from rclpy.qos import DurabilityPolicy, QoSProfile, qos_profile_sensor_data
+from sensor_msgs.msg import LaserScan
+from tf2_ros import Buffer, TransformException, TransformListener
 from std_msgs.msg import String
 from std_srvs.srv import Trigger
 from visualization_msgs.msg import Marker, MarkerArray
@@ -24,7 +26,7 @@ from camera_people_tracking import CameraPeople
 from social_search import SocialSearch, VIEWING_KINDS
 from color_attention import ColorAttention
 from human_posture import LyingPeople
-from route_inspection import inspection_targets, upcoming_targets
+from route_inspection import inspection_targets, upcoming_targets, scan_targets
 
 
 def yaw(q):
@@ -64,7 +66,7 @@ class SocialNavigation(Node):
                         nearby_group_distance=2.5, provisional_margin=0.45,
                         viewing_length=3.2, nearby_tv_distance=4.5, color_attention_enabled=True,
                         color_person_memory=75.0, color_object_memory=75.0,
-                        color_zone_memory=90.0, tv_view_memory=75.0, inspect_mapped_obstacles=False)
+                        color_zone_memory=90.0, tv_view_memory=75.0, inspect_mapped_obstacles=True)
         for name, value in defaults.items():
             self.declare_parameter(name, value)
         self.cfg = {k: self.get_parameter(k).value for k in defaults}
@@ -102,6 +104,12 @@ class SocialNavigation(Node):
         self.create_subscription(String, '/leader/people/tv_screens', self.on_tv_screens, 1)
         self.create_subscription(PoseArray, '/formation/robot_states', self.on_team, 1)
         self.route_points, self.mapped_targets = [], []
+        self.scan_candidates, self.scan_confirmed = [], []
+        self.scan_stamp = -math.inf
+        self.scan_tf = Buffer()
+        self.scan_listener = TransformListener(self.scan_tf, self)
+        self.create_subscription(LaserScan, f"/{self.cfg['leader_robot']}/scan",
+                                 self.on_inspection_scan, qos_profile_sensor_data)
         self.create_subscription(NavPath, '/dstar_lite/path', self.on_route, 1)
         self.create_subscription(String, '/social_navigation/observation_status', self.on_observation_status, 1)
         self.create_service(Trigger, '/social_navigation/reset_memory', self.reset_memory)
@@ -388,13 +396,44 @@ class SocialNavigation(Node):
         if msg.header.frame_id == 'map':
             self.route_points = [np.array([p.pose.position.x, p.pose.position.y]) for p in msg.poses]
 
+    def on_inspection_scan(self, msg):
+        now, stamp = self.now(), self.stamp(msg)
+        if not 0 <= now-stamp <= .5 or stamp <= self.scan_stamp:
+            return
+        try:
+            transform = self.scan_tf.lookup_transform(
+                'map', msg.header.frame_id, rclpy.time.Time.from_msg(msg.header.stamp)).transform
+        except TransformException:
+            return
+        theta = yaw(transform.rotation)
+        rotation = np.array([[math.cos(theta), -math.sin(theta)],
+                             [math.sin(theta), math.cos(theta)]])
+        origin = np.array([transform.translation.x, transform.translation.y])
+        candidates = []
+        for center, radius in scan_targets(msg.ranges, msg.angle_min, msg.angle_increment,
+                                            msg.range_min, msg.range_max):
+            center = origin + rotation @ center
+            if now-self.team_stamp <= .5 and any(
+                    np.linalg.norm(center-np.asarray(peer)) < radius+.20
+                    for peer in self.team):
+                continue
+            candidates.append((center, radius))
+        # Require support in two consecutive fresh captures; no object labels inferred.
+        self.scan_confirmed = [item for item in candidates
+                               if stamp-self.scan_stamp <= .5 and any(
+                                   np.linalg.norm(item[0]-old[0]) < .35
+                                   for old in self.scan_candidates)]
+        self.scan_candidates, self.scan_stamp = candidates, stamp
+
     def request_mapped_inspection(self, now):
         if (not self.cfg['inspect_mapped_obstacles'] or not self.cfg['auto_observe']
                 or self.observation_active or self.search.current is not None
                 or now-self.team_stamp > 1. or len(self.team) != 3):
             return
         leader = np.asarray(self.team[self.leader_index])
-        for point in upcoming_targets(leader, self.route_points, self.mapped_targets):
+        # Use live measured geometry, not static map contents as proof of presence.
+        targets = self.scan_confirmed if 0 <= now-self.scan_stamp <= .5 else []
+        for point in upcoming_targets(leader, self.route_points, targets):
             if self.search.inspect_obstacle(point, leader, now):
                 self.last_look = now
                 break
@@ -648,6 +687,8 @@ class SocialNavigation(Node):
         self.person_regions.clear()
         self.lying_people = LyingPeople()
         self.route_points.clear()
+        self.scan_candidates, self.scan_confirmed = [], []
+        self.scan_stamp = -math.inf
         self.last_attention_debug = -math.inf
         self.observed_places.clear()
         self.pending_look = []

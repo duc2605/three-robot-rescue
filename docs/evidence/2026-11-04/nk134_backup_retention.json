@@ -1,0 +1,34 @@
+{
+  "kept": [
+    "20261104_132515_481253_nk134_keep_current_and_nk095",
+    "20261104_132250_223052_nk095_recovered_from_git"
+  ],
+  "removed": [
+    {
+      "name": "20261104_111229_242934_nk128_keep_current_only",
+      "archive_sha256": "fa488b294122ee95937aaee69d8cb683109cd8668a5d878ed1ba3408aa2b507c"
+    },
+    {
+      "name": "20261104_113059_718036_nk129_audit_robot2_formation_return",
+      "archive_sha256": "f46123f48c77b04925d7fb792d1da104d2bb96573edd98b083d59ef2fef6bbde"
+    },
+    {
+      "name": "20261104_123031_405924_nk130_audit_dynamic_vs_paper4_today",
+      "archive_sha256": "25c13143de2efdb5f49217592dbb20cebf5e98253e6d5cf863ab249fe494d3ec"
+    },
+    {
+      "name": "20261104_124057_440945_nk131_algorithm_table_root_readme",
+      "archive_sha256": "f5c42956333d1e569413265abdbe7617cba724af7356e40ef7f9754d9b232fd8"
+    },
+    {
+      "name": "20261104_130330_589461_nk132_paper_authors_algorithm_statistics_table",
+      "archive_sha256": "adbff1b0fac8e646ce7625bd460e2a8f25b8670821d2f977e789b87448e0939a"
+    },
+    {
+      "name": "20261104_132201_881452_nk133_before_recover_nk095_archive",
+      "archive_sha256": "391a72ef803674c3f46bc782297822f66056f7a0d3bc0836bb23830bb08060d7"
+    }
+  ],
+  "removed_count": 6,
+  "runtime_changed": false
+}

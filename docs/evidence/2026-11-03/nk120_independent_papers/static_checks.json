@@ -1,0 +1,93 @@
+{
+  "backup": "backups/20261103_150117_828475_nk120_isolate_and_rewrite_papers03_12_from_sources",
+  "protected_files": {
+    "social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py": {
+      "sha256": "74c6b9f35c896d05a707b95255ef2f69ba136b132c8e91c14b45b84becc13908",
+      "unchanged_from_backup": true
+    },
+    "social_navigation_planner/social_navigation_planner/independent_goal_progress.py": {
+      "sha256": "ef793b344c637b35c88de50c3a12de2024b58ac24036c9ed27283d587c2bd3c7",
+      "unchanged_from_backup": true
+    },
+    "social_navigation_planner/social_navigation_planner/local_escape.py": {
+      "sha256": "ed081833f1ad612102ed3aaf2f1d0cecd0199a02c9a80f8667386fd43622668d",
+      "unchanged_from_backup": true
+    },
+    "social_navigation_planner/social_navigation_planner/moving_obstacles.py": {
+      "sha256": "cc5b2150e9a51dcb0dedd29824dcb06ba8b7f06a58dc57289593b1d3502b64bc",
+      "unchanged_from_backup": true
+    },
+    "social_navigation_planner/social_navigation_planner/social_observation.py": {
+      "sha256": "523bd6d60ed7647265ad9754880936aadd237c3e3db030657e399247192c7a86",
+      "unchanged_from_backup": true
+    },
+    "social_navigation_planner/social_navigation_planner/paper1_gwo_woa_node.py": {
+      "sha256": "158fb19d0e5b456cc542780ab7f79321276e54b754496745108ae9d86753d1f8",
+      "unchanged_from_backup": true
+    },
+    "social_navigation_planner/social_navigation_planner/paper1_gwo_woa_core.py": {
+      "sha256": "08c680ea4a847667d771190c49521601e76edba434b50475e43411e1b72463b8",
+      "unchanged_from_backup": true
+    },
+    "social_navigation_planner/social_navigation_planner/paper2_apf_mpc_node.py": {
+      "sha256": "6fc243fc27717705e062db279b3252ce21920862a110fb3e679e9f19096f555e",
+      "unchanged_from_backup": true
+    },
+    "social_navigation_planner/social_navigation_planner/paper2_apf_mpc_core.py": {
+      "sha256": "341db2f1dffcf24b1dd50684ac690bf5ca39d806ea5d80ec36a8ea835d1910f1",
+      "unchanged_from_backup": true
+    }
+  },
+  "ast_files": [
+    "social_navigation_planner/social_navigation_planner/paper_experiment_node.py",
+    "social_navigation_planner/social_navigation_planner/paper_models/environment.py",
+    "social_navigation_planner/social_navigation_planner/paper_models/kinematic.py",
+    "social_navigation_planner/social_navigation_planner/paper_models/__init__.py",
+    "social_navigation_planner/social_navigation_planner/paper_models/catalog.py",
+    "social_navigation_planner/social_navigation_planner/paper_models/deform.py",
+    "social_navigation_planner/test/test_independent_papers.py",
+    "social_navigation_planner/social_navigation_planner/comparison_controller.py",
+    "social_navigation_planner/setup.py",
+    "social_navigation_sim/launch/_comparison_backend.py",
+    "social_navigation_sim/launch/dstar_mpc.launch.py",
+    "social_navigation_sim/launch/social_navigation.launch.py"
+  ],
+  "tests_run": false,
+  "build_run": false,
+  "gazebo_run": false,
+  "changed_sources_since_backup": [
+    "README.md",
+    "README_BAO_CAO_TIEN_DO.md",
+    "README_NHAT_KY_DU_AN.md",
+    "README_PAPERS_03_12.md",
+    "README_PAPER3_PURE_PURSUIT_VO.md",
+    "README_PAPER7_DEFORM.md",
+    "README_PAPER5_RECEDING_MPC.md",
+    "README_PAPER6_CTC_VIRTUAL.md",
+    "README_PAPER8_BACKSTEPPING.md",
+    "README_PAPER4_IMPEDANCE.md",
+    "README_PAPER9_SLIDING_MODE.md",
+    "README_PAPER11_DWA.md",
+    "README_PAPER12_CONSENSUS_POLYGON.md",
+    "README_PAPER10_OBSERVER.md",
+    "docs/FILE_CAN_DOC_VA_LENH_CHAY.md",
+    "docs/DANH_MUC_THU_MUC_VA_FILE.md",
+    "scripts/run_dynamic.sh",
+    "social_navigation_planner/package.xml",
+    "social_navigation_planner/social_navigation_planner/paper_experiment_node.py",
+    "social_navigation_planner/social_navigation_planner/paper_models/environment.py",
+    "social_navigation_planner/social_navigation_planner/paper_models/kinematic.py",
+    "social_navigation_planner/social_navigation_planner/paper_models/__init__.py",
+    "social_navigation_planner/social_navigation_planner/paper_models/catalog.py",
+    "social_navigation_planner/social_navigation_planner/paper_models/deform.py",
+    "social_navigation_planner/test/test_independent_papers.py",
+    "social_navigation_planner/social_navigation_planner/comparison_controller.py",
+    "social_navigation_planner/setup.py",
+    "social_navigation_sim/launch/_comparison_backend.py",
+    "social_navigation_sim/launch/dstar_mpc.launch.py",
+    "social_navigation_sim/launch/social_navigation.launch.py"
+  ],
+  "shell_syntax": "bash -n scripts/run_dynamic.sh passed",
+  "diff_check": "git diff --check passed",
+  "readme_links": "current supported paper links resolve"
+}

@@ -1,0 +1,26 @@
+{
+  "recording": "recordings/dynamic_baseline_20261109_083049_926526585",
+  "source_controller_sha256": "25da0d9323e9aeb2cf3d5950dd57c04cfa6562e7842203a195712d928830f582",
+  "navigation_window_sim": [
+    170.503,
+    185.503
+  ],
+  "watchdog_event_counts": {
+    "robot1": 161,
+    "robot2": 162,
+    "robot3": 162
+  },
+  "leader_sensor_expired_before_publish_events": 34,
+  "world_sample_duration_sim": 14.929,
+  "world_path_length_m": {
+    "robot1": 0.35878719111128116,
+    "robot2": 0.4047273155586871,
+    "robot3": 0.4830744483570742
+  },
+  "rtf_estimate_from_coordinator_wall_stamps": 0.12094009032203325,
+  "limitations": [
+    "Scoped live-recording read before NK163, not a controlled benchmark.",
+    "Repeated watchdog records are events, not independent failures.",
+    "No claim that NK163 improves RTF or resolves physical contacts before a new run."
+  ]
+}

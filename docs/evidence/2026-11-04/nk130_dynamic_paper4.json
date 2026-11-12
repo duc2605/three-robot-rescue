@@ -1,0 +1,634 @@
+{
+  "scope": "Two user recordings; fixed cutoffs captured during audit, not repeated benchmark",
+  "recordings": {
+    "dynamic_20261104_111606_125384942": {
+      "recording": "recordings/dynamic_20261104_111606_125384942",
+      "cut_sim_s": 173.2,
+      "backend": "baseline",
+      "goal": [
+        -5.0185041427612305,
+        -2.946643590927124
+      ],
+      "goal_t": 2.358,
+      "goal_time_source": "selected_goal_recorder",
+      "reasons": {
+        "robot3": {
+          "watchdog_wall_freshness": 126,
+          "invalid_or_empty_reference": 68,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 23,
+          "invalid_team_state": 18,
+          "missing_or_stale_reference": 41,
+          "mpc_tracking_command": 1366,
+          "mpc_sensor_data_expired_before_publish": 68,
+          "checked_escape_command": 167,
+          "escape_measured_speed_exceeds_command_limits": 6,
+          "escape_all_rollouts_rejected": 3,
+          "escape_compute_budget_exhausted": 13,
+          "escape_requires_fresh_sensors_map_and_peers": 9,
+          "mpc_beam_empty_step_1": 31,
+          "mpc_state_expired_before_publish": 1,
+          "mpc_compute_budget_exhausted": 2
+        },
+        "robot2": {
+          "watchdog_wall_freshness": 113,
+          "invalid_or_empty_reference": 65,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 22,
+          "invalid_team_state": 18,
+          "missing_or_stale_reference": 42,
+          "mpc_tracking_command": 1239,
+          "checked_escape_command": 255,
+          "mpc_beam_empty_step_1": 142,
+          "escape_all_rollouts_rejected": 16,
+          "escape_compute_budget_exhausted": 8,
+          "escape_measured_speed_exceeds_command_limits": 3,
+          "mpc_sensor_data_expired_before_publish": 3
+        },
+        "robot1": {
+          "watchdog_wall_freshness": 111,
+          "invalid_or_empty_reference": 67,
+          "motion_disabled_or_missing_map_pose_or_stale_state": 23,
+          "invalid_team_state": 18,
+          "missing_or_stale_reference": 42,
+          "mpc_tracking_command": 1465,
+          "mpc_compute_budget_exhausted": 1,
+          "mpc_beam_empty_step_1": 35,
+          "checked_escape_command": 157,
+          "escape_compute_budget_exhausted": 1,
+          "escape_measured_speed_exceeds_command_limits": 4,
+          "mpc_beam_empty_step_3": 1,
+          "mpc_sensor_data_expired_before_publish": 1
+        }
+      },
+      "last_decision": {
+        "robot3": {
+          "t": 173.101,
+          "stamp": 173.10000000000002,
+          "epoch": 0,
+          "robot": "robot3",
+          "kind": "decision",
+          "goal": null,
+          "stops": false,
+          "terminal_safe": false,
+          "reason": "mpc_tracking_command"
+        },
+        "robot2": {
+          "t": 173.101,
+          "stamp": 173.10000000000002,
+          "epoch": 0,
+          "robot": "robot2",
+          "kind": "decision",
+          "goal": null,
+          "stops": false,
+          "terminal_safe": false,
+          "reason": "mpc_tracking_command"
+        },
+        "robot1": {
+          "t": 173.101,
+          "stamp": 173.10000000000002,
+          "epoch": 0,
+          "robot": "robot1",
+          "kind": "decision",
+          "goal": null,
+          "stops": false,
+          "terminal_safe": false,
+          "reason": "mpc_tracking_command"
+        }
+      },
+      "last_transitions": [
+        {
+          "t": 164.601,
+          "robot": "robot2",
+          "reason": "mpc_tracking_command"
+        },
+        {
+          "t": 168.90300000000002,
+          "robot": "robot1",
+          "reason": "invalid_or_empty_reference"
+        },
+        {
+          "t": 168.90300000000002,
+          "robot": "robot2",
+          "reason": "invalid_or_empty_reference"
+        },
+        {
+          "t": 168.90300000000002,
+          "robot": "robot3",
+          "reason": "invalid_or_empty_reference"
+        },
+        {
+          "t": 169.001,
+          "robot": "robot3",
+          "reason": "mpc_tracking_command"
+        },
+        {
+          "t": 169.001,
+          "robot": "robot1",
+          "reason": "mpc_tracking_command"
+        },
+        {
+          "t": 169.002,
+          "robot": "robot2",
+          "reason": "mpc_tracking_command"
+        },
+        {
+          "t": 169.80200000000002,
+          "robot": "robot2",
+          "reason": "invalid_or_empty_reference"
+        },
+        {
+          "t": 169.80200000000002,
+          "robot": "robot3",
+          "reason": "invalid_or_empty_reference"
+        },
+        {
+          "t": 169.803,
+          "robot": "robot1",
+          "reason": "invalid_or_empty_reference"
+        },
+        {
+          "t": 169.9,
+          "robot": "robot3",
+          "reason": "missing_or_stale_reference"
+        },
+        {
+          "t": 169.9,
+          "robot": "robot1",
+          "reason": "missing_or_stale_reference"
+        },
+        {
+          "t": 169.9,
+          "robot": "robot2",
+          "reason": "missing_or_stale_reference"
+        },
+        {
+          "t": 170.001,
+          "robot": "robot1",
+          "reason": "mpc_tracking_command"
+        },
+        {
+          "t": 170.001,
+          "robot": "robot2",
+          "reason": "mpc_tracking_command"
+        },
+        {
+          "t": 170.001,
+          "robot": "robot3",
+          "reason": "mpc_tracking_command"
+        },
+        {
+          "t": 171.001,
+          "robot": "robot3",
+          "reason": "mpc_sensor_data_expired_before_publish"
+        },
+        {
+          "t": 171.101,
+          "robot": "robot3",
+          "reason": "mpc_tracking_command"
+        }
+      ],
+      "world_frames": 3464,
+      "contact_sources": {
+        "Gazebo ContactSensorData": 3464
+      },
+      "travelled_xy_m": {
+        "robot1": 16.7449265257377,
+        "robot2": 18.77675489831035,
+        "robot3": 22.667450977555184
+      },
+      "last": {
+        "t": 173.151,
+        "poses": {
+          "robot1": [
+            -4.84289855536,
+            -3.59981983249,
+            0.0193315280708,
+            0.000731675503352,
+            0.00403339846451,
+            2.67192190856
+          ],
+          "robot2": [
+            -2.93464336269,
+            -4.30674175852,
+            0.0186583475921,
+            -0.0112314080884,
+            0.00282661522956,
+            -3.01494345518
+          ],
+          "robot3": [
+            -5.04908689774,
+            -3.00354762514,
+            0.024019634178,
+            0.025945721726,
+            0.0733207334159,
+            0.836091127067
+          ]
+        },
+        "dist_to_leader": {
+          "robot1": 0.6309153491487219,
+          "robot2": 2.483784695216312
+        },
+        "leader_goal_distance": 0.06460165641677916
+      },
+      "common_at_70": {
+        "t": 69.951,
+        "poses": {
+          "robot1": [
+            -0.180303896417,
+            -4.60269711146,
+            0.0210858876755,
+            -0.00108731757685,
+            -0.0701952964176,
+            -3.12733579501
+          ],
+          "robot2": [
+            -2.6859636478,
+            -4.01182188861,
+            0.0205317909941,
+            0.00355728617286,
+            -0.00916381696158,
+            2.79087205667
+          ],
+          "robot3": [
+            -4.67949783779,
+            -3.18124666536,
+            0.0191608446146,
+            0.00249950294191,
+            0.0221378477241,
+            2.53855934365
+          ]
+        },
+        "dist_to_leader": {
+          "robot1": 4.718396707866497,
+          "robot2": 2.1596374158955185
+        },
+        "leader_goal_distance": 0.4122667550792868
+      },
+      "leader_closest": [
+        0.00023615430842139018,
+        86.701
+      ],
+      "first_leader_within_12cm": 71.101,
+      "non_ground_contacts": [],
+      "last_coordinator": {
+        "t": 173.10000000000002,
+        "moving_safety_active": false,
+        "goal_progress_mode": "goal progress / followers rejoin independently",
+        "follower_join_status": {
+          "1": "holding: no checked join",
+          "0": "holding: no checked join"
+        },
+        "goal_scan_active": false,
+        "goal_scan_done": false
+      },
+      "recorded_source_sha_matches_current": {
+        "dstar_mpc_controller": true,
+        "stop_diagnostics": true,
+        "moving_obstacles": true,
+        "local_escape": true,
+        "scan_pose_history": true,
+        "robot_motion": true
+      }
+    },
+    "paper4_20261104_121742_000112274": {
+      "recording": "recordings/paper4_20261104_121742_000112274",
+      "cut_sim_s": 70.5,
+      "backend": "compare02",
+      "goal": [
+        -5.0185041427612305,
+        -2.992685079574585
+      ],
+      "goal_t": 3.302,
+      "goal_time_source": "first_recorded_decision_with_goal_upper_bound_on_goal_receipt",
+      "reasons": {
+        "robot1": {
+          "no_goal": 29,
+          "policy": 659,
+          "social_map_veto": 6,
+          "lidar_swept_veto": 7,
+          "stale_scan_or_missing_extrinsic": 1
+        },
+        "robot2": {
+          "no_goal": 29,
+          "policy": 615,
+          "peer_swept_veto": 8,
+          "lidar_swept_veto": 10,
+          "social_map_veto": 38,
+          "stale_scan_or_missing_extrinsic": 1
+        },
+        "robot3": {
+          "no_goal": 29,
+          "policy": 603,
+          "peer_swept_veto": 8,
+          "lidar_swept_veto": 52,
+          "social_map_veto": 8,
+          "stale_scan_or_missing_extrinsic": 1
+        }
+      },
+      "last_decision": {
+        "robot1": {
+          "t": 70.5,
+          "stamp": 70.5,
+          "epoch": 0,
+          "robot": "robot1",
+          "kind": "decision",
+          "goal": null,
+          "stops": false,
+          "terminal_safe": false,
+          "reason": "policy",
+          "search": {
+            "paper": 4,
+            "policy_target": [
+              -5.384040850387615,
+              -3.4790567937962487
+            ],
+            "navigation_goal": [
+              -5.0185041427612305,
+              -2.992685079574585
+            ],
+            "raw_command_world": [
+              -0.1446058242337409,
+              0.06652002740127029,
+              -1.2
+            ],
+            "command_body": [
+              -0.0038193883292197833,
+              -0.15912627287967232,
+              -1.2
+            ],
+            "baseline_escape": false,
+            "reason": "policy"
+          }
+        },
+        "robot2": {
+          "t": 70.4,
+          "stamp": 70.4,
+          "epoch": 0,
+          "robot": "robot2",
+          "kind": "decision",
+          "goal": null,
+          "stops": false,
+          "terminal_safe": false,
+          "reason": "policy",
+          "search": {
+            "paper": 4,
+            "policy_target": [
+              -4.887729483025107,
+              -2.5827939548684493
+            ],
+            "navigation_goal": [
+              -5.0185041427612305,
+              -2.992685079574585
+            ],
+            "raw_command_world": [
+              0.09546868972675418,
+              -0.029503495170280565,
+              0.007445518657774319
+            ],
+            "command_body": [
+              0.09992291312978907,
+              0.00037199067549020456,
+              0.007445518657774319
+            ],
+            "baseline_escape": false,
+            "reason": "policy"
+          }
+        },
+        "robot3": {
+          "t": 70.4,
+          "stamp": 70.4,
+          "epoch": 0,
+          "robot": "robot3",
+          "kind": "decision",
+          "goal": null,
+          "stops": false,
+          "terminal_safe": false,
+          "reason": "policy",
+          "search": {
+            "paper": 4,
+            "policy_target": [
+              -5.0185041427612305,
+              -2.992685079574585
+            ],
+            "navigation_goal": [
+              -5.0185041427612305,
+              -2.992685079574585
+            ],
+            "raw_command_world": [
+              -0.058025942197184446,
+              0.04815497782291879,
+              -0.44681033955290944
+            ],
+            "command_body": [
+              0.07353107249865624,
+              -0.016706083747968913,
+              -0.44681033955290944
+            ],
+            "baseline_escape": false,
+            "reason": "policy"
+          }
+        }
+      },
+      "last_transitions": [
+        {
+          "t": 63.703,
+          "robot": "robot3",
+          "reason": "lidar_swept_veto"
+        },
+        {
+          "t": 63.804,
+          "robot": "robot3",
+          "reason": "policy"
+        },
+        {
+          "t": 64.101,
+          "robot": "robot3",
+          "reason": "lidar_swept_veto"
+        },
+        {
+          "t": 64.301,
+          "robot": "robot3",
+          "reason": "policy"
+        },
+        {
+          "t": 65.601,
+          "robot": "robot3",
+          "reason": "lidar_swept_veto"
+        },
+        {
+          "t": 65.70100000000001,
+          "robot": "robot3",
+          "reason": "policy"
+        },
+        {
+          "t": 65.902,
+          "robot": "robot3",
+          "reason": "lidar_swept_veto"
+        },
+        {
+          "t": 66.00200000000001,
+          "robot": "robot3",
+          "reason": "policy"
+        },
+        {
+          "t": 67.20100000000001,
+          "robot": "robot3",
+          "reason": "lidar_swept_veto"
+        },
+        {
+          "t": 67.302,
+          "robot": "robot3",
+          "reason": "policy"
+        },
+        {
+          "t": 67.903,
+          "robot": "robot3",
+          "reason": "lidar_swept_veto"
+        },
+        {
+          "t": 68.00200000000001,
+          "robot": "robot3",
+          "reason": "policy"
+        },
+        {
+          "t": 68.101,
+          "robot": "robot3",
+          "reason": "lidar_swept_veto"
+        },
+        {
+          "t": 68.3,
+          "robot": "robot3",
+          "reason": "policy"
+        },
+        {
+          "t": 69.003,
+          "robot": "robot3",
+          "reason": "lidar_swept_veto"
+        },
+        {
+          "t": 69.303,
+          "robot": "robot3",
+          "reason": "policy"
+        },
+        {
+          "t": 70.101,
+          "robot": "robot3",
+          "reason": "lidar_swept_veto"
+        },
+        {
+          "t": 70.202,
+          "robot": "robot3",
+          "reason": "policy"
+        }
+      ],
+      "world_frames": 1410,
+      "contact_sources": {
+        "Gazebo ContactSensorData": 1410
+      },
+      "travelled_xy_m": {
+        "robot1": 17.70094338255266,
+        "robot2": 16.75444561387144,
+        "robot3": 15.1756808446423
+      },
+      "last": {
+        "t": 70.451,
+        "poses": {
+          "robot1": [
+            -5.78939681622,
+            -3.99015665171,
+            0.0205271359893,
+            0.000258317182501,
+            0.0161227989038,
+            -1.92988479851
+          ],
+          "robot2": [
+            -4.45466735152,
+            -3.03212041922,
+            0.0282662523138,
+            0.0999257643621,
+            0.00194047712981,
+            -0.287610031785
+          ],
+          "robot3": [
+            -5.74517736261,
+            -2.70418310403,
+            0.0246350212621,
+            0.0951911832375,
+            0.0730294864764,
+            2.66317268789
+          ]
+        },
+        "dist_to_leader": {
+          "robot1": 1.2867335875814587,
+          "robot2": 1.3315250547464497
+        },
+        "leader_goal_distance": 0.7818486799493275
+      },
+      "common_at_70": {
+        "t": 69.951,
+        "poses": {
+          "robot1": [
+            -5.72321172741,
+            -3.98268681729,
+            0.0206731785671,
+            0.0551754325499,
+            0.00964416039947,
+            -1.55339534419
+          ],
+          "robot2": [
+            -4.51065465995,
+            -3.05113321657,
+            0.0240295070492,
+            0.0076997354463,
+            -0.0694786664341,
+            -0.751262000053
+          ],
+          "robot3": [
+            -5.67188508299,
+            -2.76475040757,
+            0.0247126174962,
+            -0.102889157541,
+            0.0234770899987,
+            2.67881399086
+          ]
+        },
+        "dist_to_leader": {
+          "robot1": 1.2190174414457986,
+          "robot2": 1.1960230803309726
+        },
+        "leader_goal_distance": 0.6919977368142681
+      },
+      "leader_closest": [
+        0.01465248635292936,
+        60.951
+      ],
+      "first_leader_within_12cm": 60.601,
+      "non_ground_contacts": [],
+      "final_V_slot_error_m": {
+        "robot1": 0.6781205110791486,
+        "robot2": 0.6282739687528839
+      },
+      "recorded_source_sha_matches_current": {
+        "paper_experiment_node": true,
+        "paper_models.catalog": true,
+        "paper_models.kinematic": true,
+        "paper_models.environment": true,
+        "grid_clearance": true,
+        "scan_pose_history": true
+      }
+    }
+  },
+  "comparison_limits": [
+    "Goal Y differs by0.04604148864746094m.",
+    "Dynamic goal recorded2.358s; Paper4 first goal-bearing decision3.302s is only an upper bound on goal receipt.",
+    "Dynamic reviewed through173.2s; Paper4 through70.5s.",
+    "No non-ground robot contact recorded in reviewed windows does not prove all avoidance cases safe.",
+    "Distances from follower to leader are not assigned-slot formation errors."
+  ],
+  "source_findings": [
+    "IndependentGoalProgress holds a follower if no checked trail connector; does not guarantee return to triangle.",
+    "Paper4 Impedance continues feedback/repulsion/velocity integration with no explicit goal-hold state. At61.301s it still commands about0.215m/s after closest approach60.951s.",
+    "Per-force diagnostics absent, so separate effects of inertia, reference changes, repulsion are not quantified."
+  ],
+  "algorithm_changed": false,
+  "simulation_started_or_stopped": false
+}

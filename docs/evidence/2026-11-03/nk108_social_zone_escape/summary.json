@@ -1,0 +1,41 @@
+{
+  "recording": "recordings/dynamic_20261103_090103_258376983",
+  "source": "NK107 current hash matches",
+  "controller_sha256": "820404a4f1f9a8f64fc3e0d224bad2d05942f5582888e08f4478b24a3977c3d9",
+  "end_t": 47.751,
+  "leader_enters_recorded_tv_polygon_t": 31.551,
+  "leader_entry_xy": [
+    0.710013036012,
+    -1.36210264677
+  ],
+  "decision": {
+    "t": 31.516,
+    "stamp": 31.5,
+    "goal": [
+      0.026207608388415626,
+      -1.340838107860751
+    ],
+    "stops": true,
+    "terminal_safe": true,
+    "reason": "checked_escape_command"
+  },
+  "rear_example_at_31_501": {
+    "distance_behind_m": 0.6,
+    "xy": [
+      1.2461730452179909,
+      -1.6472101896416202
+    ],
+    "walking_person_xy": [
+      1.6,
+      -1.69705945063
+    ],
+    "distance_to_person_center_m": 0.3573212318788202,
+    "limitations": "Example relative to measured yaw, not a reconstructed candidate rejection or the exact user-drawn point."
+  },
+  "non_ground_robot_contacts_recorded": {},
+  "limits": [
+    "Region containment uses robot center and last recorded camera-social polygon, not exact planner-map contents at command time.",
+    "No per-candidate rank/rejection trace is recorded; cannot assert rear was infeasible or fully searched.",
+    "No repeated benchmark; no controller changes in this task."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "8": {
+    "repository": "https://github.com/ddebenedittis/hierarchical_optimization_mpc",
+    "commit": "4f4f0898d555c3864b7bc025e5099860c83f6cb9",
+    "doi": "10.1109/LRA.2025.3559843"
+  },
+  "9": {
+    "repository": "https://github.com/Fangtnw/Formation-Control-of-the-Mobile-Robot-with-Different-Drivetrains",
+    "commit": "5b3912443cdae2aff31897816c2641fc0d7fb593",
+    "kind": "project_repository"
+  },
+  "10": {
+    "repository": "https://github.com/SuneshSundarasami/Robile-Multi-Robot-Formation-Simulation-Environment-Using-Pybullet-And-ROS2",
+    "commit": "1af1a4c802621e4d8a22791e28daf3728271eb08",
+    "kind": "simulation_repository"
+  }
+}

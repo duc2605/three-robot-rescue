@@ -1,0 +1,42 @@
+{
+  "baseline_backup": "backups/20261102_184916_116752_nk095_preserve_contact_free_before_goal_recovery",
+  "before_restore_backup": "backups/20261103_130052_564246_nk116_restore_nk094_independent_goal",
+  "archives_sha256_verified": true,
+  "restore_staged_separately_and_file_hashes_verified": true,
+  "baseline_classes_restored_exact_ast": [
+    "DistributedRobotMPC",
+    "DStarLiteGrid"
+  ],
+  "baseline_files_restored_exact_sha256": {
+    "social_navigation_planner/social_navigation_planner/local_escape.py": "ed081833f1ad612102ed3aaf2f1d0cecd0199a02c9a80f8667386fd43622668d",
+    "social_navigation_planner/social_navigation_planner/moving_obstacles.py": "cc5b2150e9a51dcb0dedd29824dcb06ba8b7f06a58dc57289593b1d3502b64bc",
+    "social_navigation_planner/social_navigation_planner/social_observation.py": "523bd6d60ed7647265ad9754880936aadd237c3e3db030657e399247192c7a86"
+  },
+  "replay_files_preserved_exact_sha256": {
+    "scripts/replay_viewer.html": "1673bd377bd8b63fa2ef74a6b692d81769872a397e05f61e8884c1b94057ef94",
+    "scripts/view_replay.py": "69937694e321d518357bab8cfeac4018d73e4945b4c49dafee65317297fcd868",
+    "scripts/replay_media.py": "34ca603c88ca23c4022bfde4197ba5f11a01bcde0c1dd6cec5b11ad6793dfd9a",
+    "scripts/record_replay_media.py": "9abf6cef15724c7d0392d845fc5997f5a913cf558d1700256edaf8d76528e12b",
+    "scripts/run_dynamic.sh": "cd1d0ca440be7dbfac3034d85f11a7c83eb4823ae5c7410146db8f56cd75cee5",
+    "social_navigation_sim/scripts/replay_sensor_recorder.py": "d45b4171b4a8d7f0627beb9cbf93cbf30b13b01957360d52b31f6a83b119b2d3",
+    "scripts/tests/test_replay_media.py": "dc053b166243dfafec4b078923fe15065e8730d281026f27e9c13fb8f741e3dd"
+  },
+  "ast_parsed": [
+    "social_navigation_planner/social_navigation_planner/dstar_mpc_controller.py",
+    "social_navigation_planner/social_navigation_planner/local_escape.py",
+    "social_navigation_planner/social_navigation_planner/moving_obstacles.py",
+    "social_navigation_planner/social_navigation_planner/social_observation.py",
+    "social_navigation_planner/social_navigation_planner/independent_goal_progress.py",
+    "social_navigation_planner/test/test_independent_goal_progress.py",
+    "social_navigation_sim/launch/dstar_mpc.launch.py",
+    "social_navigation_sim/launch/social_navigation.launch.py"
+  ],
+  "new_behavior": "Coordinator-only independent leader goal progress after avoidance/failed formation joins; local safety unchanged",
+  "new_tests_written": 6,
+  "pytest_run": false,
+  "build_run": false,
+  "gazebo_run": false,
+  "push_run": false,
+  "new_coordinator_module_sha256": "ef793b344c637b35c88de50c3a12de2024b58ac24036c9ed27283d587c2bd3c7",
+  "markdown_fences_checked": true
+}

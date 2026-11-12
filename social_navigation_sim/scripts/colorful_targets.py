@@ -118,7 +118,7 @@ def locate_colorful_regions(regions, depth, info, transform, transform_point):
     return located
 
 
-def locate_tv_screens(boxes, depth, info, transform, transform_point):
+def locate_tv_screens(boxes, depth, info, transform, transform_point, display_regions=()):
     """Project bounded interior TV samples onto a coherent measured plane.
 
     A detector rectangle alone does not measure a screen. Reject missing depth,
@@ -131,6 +131,21 @@ def locate_tv_screens(boxes, depth, info, transform, transform_point):
     for x1, y1, x2, y2, score in boxes:
         if (x1 < 2 or y1 < 2 or x2 > depth.shape[1]-3 or y2 > depth.shape[0]-3
                 or min(x2-x1, y2-y1) < 12):
+            continue
+        # Require visible display content in this same RGB capture before
+        # orienting the measured plane toward the observing camera.
+        display_seen = False
+        for region in display_regions:
+            samples = np.asarray(region['uv'])
+            inside = ((samples[:, 0] >= x1) & (samples[:, 0] <= x2)
+                      & (samples[:, 1] >= y1) & (samples[:, 1] <= y2))
+            if inside.mean() < .9 or hue_groups(np.asarray(region['hues'])[inside]) < 3:
+                continue
+            extent = np.ptp(samples[inside], axis=0)
+            if extent.prod() >= .20*(x2-x1)*(y2-y1):
+                display_seen = True
+                break
+        if not display_seen:
             continue
         xx, yy = np.meshgrid(np.linspace(x1+.08*(x2-x1), x2-.08*(x2-x1), 24),
                              np.linspace(y1+.15*(y2-y1), y2-.15*(y2-y1), 12))
@@ -174,5 +189,5 @@ def locate_tv_screens(boxes, depth, info, transform, transform_point):
         if front @ (camera[:2]-center[:2]) < 0:
             front = -front
         located.append(dict(position=center.tolist(), footprint=endpoints.tolist(),
-                            front=front.tolist(), confidence=float(score), source='rgbd_tv_screen'))
+                            front=front.tolist(), display_confirmed=True, confidence=float(score), source='rgbd_tv_screen'))
     return located

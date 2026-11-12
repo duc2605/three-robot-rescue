@@ -3,6 +3,7 @@
 from collections import deque
 from dataclasses import dataclass, replace
 import math
+from statistics import median
 
 from .adaptive_structure import swept_separation
 
@@ -14,6 +15,11 @@ class MovingObstacle:
     radius: float
     stamp: float
     velocity_hint: tuple | None = None
+    motion_state: str = 'unclassified'
+    displacement: float = 0.0
+    observation_window: float = 0.0
+    direction_consistency: float = 0.0
+    measured_velocity: tuple | None = None
 
     def at(self, seconds):
         dt = max(0.0, min(4.5, seconds - self.stamp))
@@ -31,7 +37,8 @@ class MotionTracks:
     Radius bounds and expiry keep extrapolation local to recent observations.
     """
 
-    def __init__(self, padding=.08, persistence=0., pause_reserve=False):
+    def __init__(self, padding=.08, persistence=0., pause_reserve=False, classify_in_place=False):
+        self.classify_in_place = classify_in_place
         self.pause_reserve = pause_reserve
         self.persistence = float(persistence)
         self.padding = float(padding)
@@ -72,13 +79,37 @@ class MotionTracks:
             if key is None:
                 key = self.sequence
                 self.sequence += 1
-                self.tracks[key] = _Track()
+                self.tracks[key] = _Track(self.classify_in_place)
             track = self.tracks[key]
             track.history.append((stamp, x, y))
-            while len(track.history) > 1 and stamp-track.history[0][0] > 1.0:
+            while len(track.history) > 1 and stamp-track.history[0][0] > (1.5 if self.classify_in_place else 1.0):
                 track.history.popleft()
             track.position, track.radius, track.stamp = (x, y), radius, stamp
-            velocity=estimate_velocity(track.history)
+            track.radius_history.append((stamp, x, y, radius))
+            while track.radius_history and stamp-track.radius_history[0][0] > 1.5:
+                track.radius_history.popleft()
+            velocity_history = [row for row in track.history if stamp-row[0] <= 1.0]
+            velocity=estimate_velocity(velocity_history)
+            track.measured_velocity = velocity
+            if self.classify_in_place:
+                (track.motion_state, track.displacement, track.observation_window,
+                 track.direction_consistency) = classify_motion(track.history, track.in_place_anchor)
+            if track.motion_state == 'in_place':
+                # Use recent measured geometry; the longer window only classifies motion.
+                geometry = [row for row in track.radius_history if stamp-row[0] <= .4]
+                center = tuple(median(row[i] for row in geometry) for i in (1, 2))
+                if track.in_place_anchor is None:
+                    track.in_place_anchor = center
+                track.radius = max(row[3]+math.dist(center, row[1:3])
+                                   for row in geometry)
+                track.position = center
+                track.velocity = (0., 0.)
+                track.last_moving_stamp = track.motion_seen = -math.inf
+                track.last_velocity = (0., 0.)
+                track.motion_bound = 0.
+                continue
+            if track.motion_state == 'translating':
+                track.in_place_anchor = None
             if math.hypot(*velocity)>=.15:
                 track.motion_bound=max(math.hypot(*velocity),track.motion_bound
                                        if stamp-track.motion_seen<=2. else 0.)
@@ -100,7 +131,7 @@ class MotionTracks:
             hint=None
             # An uncertain fit is not an observation that motion stopped.
             # Keep one bounded alternative, while retaining the nominal fit.
-            uncertain=(self.pause_reserve and not stationary and speed<.05
+            uncertain=(self.pause_reserve and t.motion_state != 'in_place' and not stationary and speed<.05
                        and now-t.last_moving_stamp<=.8)
             if uncertain and math.hypot(*t.last_velocity)>=.05:
                 # Retain an actual recently measured direction/speed. Do not
@@ -109,13 +140,20 @@ class MotionTracks:
             radius=(t.radius+self.padding+.10*max(0.,now-t.stamp)
                     +(min(.4,t.motion_bound) if self.pause_reserve and now-t.motion_seen<=2.
                       and speed<.12 else 0.))
-            result.append(MovingObstacle(t.position,t.velocity,radius,t.stamp,hint))
+            result.append(MovingObstacle(t.position,t.velocity,radius,t.stamp,hint,
+                                         t.motion_state,t.displacement,t.observation_window,
+                                         t.direction_consistency,t.measured_velocity))
         return result
 
 
 class _Track:
-    def __init__(self):
-        self.history = deque(maxlen=8)
+    def __init__(self, classify_in_place=False):
+        self.in_place_anchor = None
+        self.history = deque(maxlen=24 if classify_in_place else 8)
+        self.radius_history = deque(maxlen=24)
+        self.motion_state = 'unclassified'
+        self.displacement = self.observation_window = self.direction_consistency = 0.
+        self.measured_velocity = (0., 0.)
         self.position = self.velocity = (0.0, 0.0)
         self.radius = .32
         self.stamp = -math.inf
@@ -127,6 +165,40 @@ class _Track:
     def at(self, seconds):
         dt = max(0.0, min(.5, seconds-self.stamp))
         return tuple(p+dt*v for p, v in zip(self.position, self.velocity))
+
+
+def classify_motion(history, in_place_anchor=None):
+    """Separate bounded return oscillation from coherent map-frame translation.
+
+    Labels describe LiDAR clusters, including uncertainty and partial occlusion.
+    A recent coherent departure takes precedence over a long stationary window.
+    """
+    rows = list(history)
+    if len(rows) < 3:
+        return 'uncertain', 0., 0., 0.
+    window = rows[-1][0]-rows[0][0]
+    displacement = math.dist(rows[0][1:], rows[-1][1:])
+    travel = sum(math.dist(a[1:], b[1:]) for a, b in zip(rows, rows[1:]))
+    consistency = displacement/max(travel, 1e-9)
+    recent = rows[-3:]
+    first = tuple(recent[1][i]-recent[0][i] for i in (1, 2))
+    second = tuple(recent[2][i]-recent[1][i] for i in (1, 2))
+    aligned = sum(a*b for a,b in zip(first,second)) > .85*math.hypot(*first)*math.hypot(*second)
+    recent_distance = math.dist(recent[0][1:], recent[-1][1:])
+    recent_window = recent[-1][0]-recent[0][0]
+    departure = (aligned and recent_distance >= .06 and recent_window > 0
+                 and recent_distance/recent_window >= .12)
+    if (in_place_anchor is not None and window >= 1.0
+            and max(math.dist(in_place_anchor, row[1:]) for row in rows) <= .10):
+        return 'in_place', displacement, window, consistency
+    if departure or (window >= .4 and displacement >= .06 and consistency >= .75):
+        return 'translating', displacement, window, consistency
+    center = tuple(median(row[i] for row in rows) for i in (1, 2))
+    excursion = max(math.dist(center, row[1:]) for row in rows)
+    if (window >= 1.0 and excursion <= .10
+            and (consistency < .65 or displacement < .035)):
+        return 'in_place', displacement, window, consistency
+    return 'uncertain', displacement, window, consistency
 
 
 def estimate_velocity(history, allow_recent=True):
@@ -163,7 +235,7 @@ def collision_risk(obstacle, robot, now, robot_radius):
     whether a nearby person is approaching or simply passing safely.
     """
     speed = math.hypot(*obstacle.velocity)
-    if speed < .05:
+    if obstacle.motion_state == 'in_place' or speed < .05:
         return None
     fast = speed >= .5
     # A 0.28 m/s robot needs time to move a body width sideways, especially
@@ -176,13 +248,13 @@ def collision_risk(obstacle, robot, now, robot_radius):
     reserve += min(.35,.35*speed)
     radius = obstacle.radius+robot_radius+reserve
     c = r[0]*r[0]+r[1]*r[1]-radius*radius
+    dot = sum(a*b for a,b in zip(r,obstacle.velocity))
+    if dot >= 0:
+        return None
     if c <= 0:
         ttc = 0.
     else:
-        dot = sum(a*b for a,b in zip(r,obstacle.velocity))
         discriminant = dot*dot-speed*speed*c
-        if dot >= 0:
-            return None
         if discriminant < 0:
             # Near an approaching object, a short turn invalidates a straight
             # velocity forecast. Reserve lateral room before that turn.
@@ -222,9 +294,10 @@ def scan_clusters(points, observer=None):
         center = tuple(sum(p[i] for p in group)/len(group) for i in (0, 1))
         extent = max(math.dist(center, p) for p in group)
         if extent <= .45:
-            # A visible leg surface underestimates the person's whole body.
-            radius = max(.40,min(.55,extent+.15))
-            if observer is not None and len(group)>=3:
+            # Enclose measured returns with 3 cm reserve. Hidden body geometry
+            # remains uncertain; raw rays remain independent hard constraints.
+            radius = max(.08,extent+.03)
+            if observer is not None and len(group)>=5:
                 a,b,c = group[0],group[len(group)//2],group[-1]
                 ux,uy=b[0]-a[0],b[1]-a[1];vx,vy=c[0]-a[0],c[1]-a[1]
                 denominator=2*(ux*vy-uy*vx)
@@ -236,7 +309,11 @@ def scan_clusters(points, observer=None):
                     if (.08<=fitted_radius<=.45
                             and math.dist(candidate,observer[:2])>=math.dist(center,observer[:2])
                             and all(abs(math.dist(candidate,p)-fitted_radius)<.025 for p in group)):
-                        center,radius=candidate,(max(.32,fitted_radius+.03) if fitted_radius>=.18 else .40)
+                        span = math.dist(a,c)
+                        # A tiny arc gives an unstable inferred centre.
+                        if span >= 2*fitted_radius*math.sin(math.radians(22.5)):
+                            center = candidate
+                            radius = max(.08,max(math.dist(center,p) for p in group)+.03)
             # A non-circular/sparse return does not justify shifting an
             # unknown object centre behind its visible surface. Keep a
             # conservative disk around the grouped returns instead.
@@ -268,6 +345,15 @@ def escape_motion_free(obstacle, a, b, start, end, robot_radius, margin=.03, gap
                 math.dist(a[:2],q0),robot_radius+min(obstacle.radius,.30)+margin)-1e-9)
 
 
+def tracking_motion_free(obstacle, a, b, start, end, robot_radius, margin=.03):
+    """Permit a verified outward step from an in-place cluster's inflated disk."""
+    gap = obstacle.clearance(a,b,start,end,robot_radius)
+    if gap >= margin:
+        return True
+    return (obstacle.motion_state == 'in_place'
+            and escape_motion_free(obstacle,a,b,start,end,robot_radius,margin,gap))
+
+
 def select_lidar_tracks(local, remote, now, remote_sources=None):
     """Prefer local geometry; use peers for objects absent from local scans.
 
@@ -297,11 +383,14 @@ def select_lidar_tracks(local, remote, now, remote_sources=None):
         votes = list(nearby.values())
         agreement = max(([b for b in votes if math.dist(a.velocity,b.velocity) <= .20]
                          for a in votes), key=len, default=[])
+        if chosen.motion_state == 'in_place':
+            agreement = [o for o in agreement if o.motion_state == 'translating']
         if len(agreement) >= 2:
             velocity = tuple(sum(o.velocity[i] for o in agreement)/len(agreement) for i in (0,1))
             if math.dist(velocity,chosen.velocity) > .20:
-                chosen=replace(chosen,velocity=velocity,radius=chosen.radius+.04)
-        hints=[o for o in nearby.values() if o.velocity_hint is not None
+                chosen=replace(chosen,velocity=velocity,radius=chosen.radius+.04,
+                               motion_state='translating',velocity_hint=None)
+        hints=[o for o in nearby.values() if chosen.motion_state != 'in_place' and o.velocity_hint is not None
                and (math.hypot(*chosen.velocity)<.05
                     or sum(a*b for a,b in zip(o.velocity_hint,chosen.velocity))>0)]
         if hints:
