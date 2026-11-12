@@ -5,6 +5,15 @@
 
 ## 0. Bàn giao hiện hành — AI tiếp nhận đọc phần này trước
 
+### Cập nhật tài liệu NK195 — mục trạng thái theo chức năng
+
+README mục5 đã viết lại theo cảm biến/hành vi, khác biệt từng map, replay,
+trạng thái kiểm chứng và tài liệu liên quan. Không dùng mã NK trong mục5.
+Bỏ khối khôi phục cũ và câu nguồn hiện hành NK116 gây hiểu sai. Mô tả rõ
+camera ngã tư bật nhưng social_observation tắt, đèn từ kịch bản. Ghi vấn đề
+MPC/follower trong phiên ngã tư mới nhất, nguyên nhân track sát thân còn
+cần đối chiếu. Đây là thay đổi tài liệu, báo cáo kỹ thuật giữ nguyên.
+
 ### Cập nhật tài liệu NK194 — lệnh GitHub ở đầu báo cáo
 
 Theo yêu cầu người dùng, README_BAO_CAO_TIEN_DO.md mở đầu bằng bộ lệnh
@@ -9501,3 +9510,24 @@ Giữ nguyên nội dung kỹ thuật cũ bên dưới, cập nhật bàn giao n
 Backup `backups/20261112_184458_377872_nk194_github_commands_report_top`
 đã verify1163file archive/manifest/SHA trước sửa. Kiểm vị trí khối đầu,
 nguyên văn phần báo cáo cũ và cú pháp bash, không thực thi lệnh GitHub.
+
+### NK195 — 12/11/2026 — Viết lại mục trạng thái README theo chức năng
+
+User yêu cầu sửa mục5 và dùng từ mô tả thay mã NK hoặc bỏ mã. Viết lại
+mục5 README theo nhóm cảm biến/hành vi, camera/map, replay, kiểm chứng và
+liên kết tài liệu. Gỡ mô tả nguồn hiện hành NK116 cùng khối khôi phục cũ
+khỏi mục5. Phân rõ camera/social pipeline trong nhà và camera raw/quy tắc
+đi bộ từ đèn kịch bản ở street. Thuật toán từng paper vẫn riêng.
+
+Bổ sung kết quả đọc phiên street_baseline_20261112_183601_816930302,
+đoạn15–26s. Leader nhiều mpc_beam_empty_step_1 với mpc.moving, lúc22s
+track uncertain tại(10,6287;-11,1302), cách tâmxe0,232m, bánkính0,1326m,
+robotradius0,15m nên chồng hình học ước tính0,051m. Chưa xác nhận tracklà
+thânxe hay vậtthật. Followerholding no checked join, còn sensor stale.
+Street gate pedestrian_route_permitted, missing_inputs rỗng ởmốc21,452s.
+Đây là giới hạn được ghi nhận, chưa triển khai sửa điều khiển trong tác vụ.
+
+Backup `backups/20261112_184912_580953_nk195_readme_current_status_without_history_ids`
+verified1163file archive/manifest/SHA trước sửa. Kiểm mục5 không còn mã
+NK, liên kết còn tồn tại, phầnngoài mục5 nguyênvẹn và diff. Không chạy
+build/test/môphỏng/GitHub. Báo cáo tiếnđộ giữ nội dung kỹthuật vì sửa docs.

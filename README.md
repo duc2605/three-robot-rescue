@@ -771,85 +771,77 @@ PYTHONPATH="$PWD/social_navigation_planner:$PYTHONPATH" /usr/bin/python3 -m pyte
 
 ## 5. Trạng thái và tài liệu
 
-### Hành vi chung khi so sánh baseline và Paper1–8
+### Cảm biến và hành vi dùng chung
 
-Từ NK185, các backend dùng cùng mô hình xe, LiDAR12m/5,5Hz và pipeline
-camera/vùng xã hội hiện hành. Lớp chuyển động LiDAR của paper dùng
-MotionTracks như NK184, gồm dao động tại chỗ, chuyển dịch có hướng và
-chưa đủ bằng chứng. Phạm vi xử lý vật cản cục bộ hiện tại là2m, camera
-chủ động xác nhận cụm gần đường trong3m theo NK177.
+Các phương pháp dùng cùng mô hình xe omni và LiDAR có tầm quét vật lý
+12m, tần số 5,5Hz. Bộ xử lý vật cản cục bộ hiện dùng phạm vi 2m.
+Track LiDAR được phân thành chuyển dịch có hướng, dao động tại chỗ và
+chưa đủ bằng chứng. Phân loại này tác động tới dự báo và kiểm tra an toàn.
 
-Paper1–8 dùng `paper_behavior.py` để thống nhất lọc vật động, chia sẻ scan,
-giới hạn vận tốc tham chiếu leader0,16m/s/follower0,22m/s, sàn an toàn giữa
-hai tâm32cm và ghi telemetry. Giới hạn vận tốc tối đa cấu hình0,28m/s và vận tốc góc1,0rad/s.
-Các giới hạn là trần, tốc độ thực còn phụ thuộc bộ điều khiển từng bài.
-NK186 dùng vùng bao cụm LiDAR đo được +3cm, sàn8cm cho cụm thưa,
-geometry dao động tại chỗ giữ0,4s. Cụm có thể thiếu phần cơ thể bị che khuất.
-Kiểm bước thoát vùng đệm được áp qua helper chung, cần kiểm thử thực nghiệm.
-Lớp an toàn chung kiểm swept map vật lý/xã hội, vật cản và xe đồng đội.
+Paper1–8 dùng `paper_behavior.py` để chia sẻ scan, lọc vật động, giới hạn
+vận tốc và kiểm tra an toàn. Vận tốc tham chiếu của lớp chung là
+0,16m/s cho leader và 0,22m/s cho follower. Trần vận tốc cấu hình là
+0,28m/s, vận tốc góc tối đa 1rad/s. Khoảng cách tối thiểu giữa hai tâm xe
+là 32cm. Vận tốc thực phụ thuộc cấu hình chạy và bộ điều khiển từng bài.
+Lớp an toàn kiểm tra chuyển động qua map, vật cản và xe đồng đội.
 
-Các wrapper bật `social_observation` và `social_auto_observe` mặc định.
-Yêu cầu nhìn camera dùng ObservationSweep cùng phản hồi thời gian/hướng
-và kiểm an toàn. Paper3–8 xuất đường tham chiếu leader cho bộ chọn mục tiêu
-quan sát3m. Camera cần ảnh mới, request hết hạn sẽ trả trạng thái rõ ràng.
+Điều khiển, hàm chi phí, bám quỹ đạo và duy trì đội hình dùng triển khai
+riêng của từng phương pháp. Baseline cho leader tiếp tục tiến về goal khi
+follower còn tìm đường nối lại vệt leader. Follower giữ vị trí khi chưa tìm
+được đường nối hợp lệ. Bộ chọn thứ tự nối đội hình xét độ dài đường khả thi.
 
-Điều khiển, chi phí tối ưu, quỹ đạo, né theo phương pháp và cấu trúc đội hình
-là phần riêng từng bài. Việc ưu tiên follower nối theo đường ngắn NK183
-thuộc bộ đội hình baseline. Khi đánh giá, so cả lệnh trước/sau lớp an toàn
-trong replay. Các bổ sung chung là tích hợp của dự án để so sánh.
-Chưa chạy test/build/Gazebo cho NK185, chưa chứng minh các backend đạt cùng
-hiệu quả tránh va chạm hoặc hành vi thực nghiệm.
+### Camera, vùng xã hội và quy tắc theo map
 
-Replay NK188 thêm đường thực tế nét liền đậm và quãng đường từng xe từ
-goal hoặc đầu lượt. Bỏ chọn “Hiện hình xe” để nhìn rõ đường. Lớp này dùng
-pose đã ghi nên áp dụng được cho bản ghi cũ. Bảng sau tới goal cũng có tổng
-đường thực leader đi tới mốc tới đích.
+Ở map động và map tĩnh, các wrapper bật quan sát xã hội tự động theo cấu
+hình trong từng khối lệnh chạy. Camera được yêu cầu xác nhận cụm gần tuyến
+trong phạm vi 3m. Quan sát dùng ảnh mới và có giới hạn thời gian chờ.
+Vùng xã hội nhận diện được tham gia lập đường và kiểm tra chuyển động.
 
-Replay NK187 có lớp đường kế hoạch tới goal và chiều dài theo mét. Sau khi
-leader cách goal<=12cm, hiện đường chuẩn từ map/vùng đặt sẵn màu đen và
-đường ngắn nhất backend đã xuất cùng đầu–goal màu tím nét đứt. Vùng TV chuẩn
-của map động lấy vùng cố định map tĩnh theo lựa chọn người dùng. Chuẩn là
-A*8hướng trên lưới, còn phụ thuộc độ phân giải map. Bản ghi cũ thiếu Path
-sẽ báo chưa có dữ liệu. Xem hướng dẫn trong docs/PHAT_LAI_MO_PHONG.md.
+Ở map ngã tư, camera leader bật mặc định, ảnh RGB-D 480 × 360 ở 6Hz.
+RViz bật sẵn khung **Leader RGB Camera**. Launch ngã tư hiện tắt quan sát
+xã hội tự động và dùng lớp quy tắc đi bộ dựa trên trạng thái đèn kịch bản.
+Robot đi trên vỉa hè/vạch qua đường, chờ quyền xanh trước khi vào vạch.
+Hai chiều xe đối diện cùng được xanh theo trục, người đi bộ song song
+được xanh, xe rẽ nhường người và xe rẽ trái nhường dòng ngược chiều.
+Nhận diện đèn bằng camera và tự chọn chế độ người đi bộ/xe cơ giới theo
+vị trí vẫn là phần phát triển tiếp.
 
-### Ghi chú khôi phục NK116 trong lịch sử
+### Đọc và so sánh bản ghi
 
-Hiện tại **NK116** đã khôi phục nhánh né/local MPC, A* và xử lý vật động
-về nguồn mốc NK094 (checkpoint c8af894), giữ giao diện/MP4/ghi dữ liệu hiện tại.
-Bán kính A* trở lại0.8m, điểm0.56/0.72m, escape horizon khoảng3s và fallback
-0.6s; bỏ các bổ sung home/intents/guard và quick scan sau mốc này.
+Giao diện phát lại hiển thị quỹ đạo thực tế, đường kế hoạch, ảnh/video
+camera, vùng xã hội, LiDAR và điểm né khi bản ghi có đủ dữ liệu.
+Đường thực tế dùng nét liền đậm theo màu từng xe, kèm chiều dài tính từ
+pose đã ghi. Bỏ chọn **Hiện hình xe** để nhìn rõ các đường chồng nhau.
+Đường kế hoạch dùng nét đứt và có chiều dài theo mét.
 
-Phần bổ sung mới chỉ ở coordinator: sau né hoặc khi không thể ráp lại đội
-hình, leader tìm tuyến có kiểm map/peer tới goal; từng follower nối lại
-vệt leader khi có đường. Follower chưa nối được có thể giữ, không ép leader
-chờ hoàn tất đội hình. Leader vẫn chờ nếu đường thật sự bị chặn; local né
-vật động và yêu cầu cảm biến mới giữ logic NK094. Camera gần goal dùng
-ObservationSweep cũ, không còn FastGoalSweep/goal_scan_angular_speed.
+Khi leader cách goal tối đa 12cm, giao diện tính đường chuẩn màu đen
+bằng A* tám hướng trên map vật cản và vùng xã hội đặt sẵn. Với map động,
+vùng TV dùng cho phép so sánh lấy từ cấu hình map tĩnh theo yêu cầu người
+dùng. Giao diện cũng chọn đường kế hoạch ngắn nhất đã ghi có cùng điểm
+đầu và goal để đối chiếu, hiển thị màu tím nét đứt. Kết quả phụ thuộc độ
+phân giải map và dữ liệu đường đã xuất. Bản ghi thiếu Path sẽ báo thiếu dữ liệu.
 
-**Chưa build/test/Gazebo NK116.** Khôi phục mã né không có nghĩa đã kiểm
-chứng hành vi mới hoặc tái lập đúng tải của lượt NK094. Lệnh trên ghi bản
-chạy mới; viewer và các bản cũ vẫn dùng như hiện tại.
+### Trạng thái kiểm chứng và vấn đề còn mở
 
-NK117 đã dọn19backup chứa mã các lượt ghi lỗi; giữ mốcNK094 và nguồn
-hiện trạng/chưa kết luận. Các chế độ được bật (1,2,3,4,5,6,7,8) mặc định **môi trường động**, tùy chọn
-`social_scene:=static`. Thuật toán điều hướng NK116 không đổi.
+Các thay đổi gần đây về lớp an toàn chung, đường so sánh và quy tắc giao
+thông đã được kiểm tra cấu trúc/cú pháp theo phạm vi từng tác vụ.
+Cần kiểm thử thực nghiệm để đánh giá khả năng né, hồi đội hình và về goal
+của từng phương pháp trong cùng điều kiện.
 
-**Nguồn hiện hành: NK116.** Đã khôi phục nhánh điều hướng mốc NK094 từ
-snapshot NK095/checkpoint c8af894, bổ sung riêng điều phối tiến goal không
-chờ tái lập đội hình. Chưa build/pytest/Gazebo; không tuyên bố né hay về
-goal ổn sau thay đổi. Giao diện, video và recorder hiện tại được giữ.
+Trong phiên ngã tư được kiểm tra gần nhất ngày 12/11/2026, leader nhiều
+lần dừng vì các bước MPC bị loại bởi kiểm tra vật cản. Lúc 22s mô phỏng,
+một track LiDAR cách tâm xe khoảng 23,2cm, bán kính khoảng 13,3cm làm vùng
+kiểm tra chồng với thân xe. Nguồn gốc track cần đối chiếu thêm. Hai follower
+báo `holding: no checked join`, có thêm các lần dừng do dữ liệu quá hạn.
+Lớp quy tắc đường phố đã nhận đủ đầu vào và cho phép tuyến di chuyển tại
+mốc đối chiếu. Chưa có kết quả xác nhận đã khắc phục các lỗi dừng này.
 
-- [Bàn giao và lịch sử](README_NHAT_KY_DU_AN.md): AI tiếp nhận đọc phần đầu.
-- [Báo cáo kỹ thuật](README_BAO_CAO_TIEN_DO.md): kết quả và giới hạn kiểm chứng.
-- [Minh chứng khôi phục NK116](docs/evidence/2026-11-03/nk116_restore_nk094/README.md).
-- [Mốc né đạt](docs/evidence/2026-11-02/nk095_contact_free_checkpoint/README.md):
-  một lượt130.801s chưa contact ngoài nền, còn goal/scan/TV chưa hoàn tất.
-- [Nhật ký NK115–116](README_NHAT_KY_DU_AN.md): đối chiếu và khôi phục mốc NK094.
-- [File cần đọc và lệnh](docs/FILE_CAN_DOC_VA_LENH_CHAY.md),
-  [phát lại mô phỏng](docs/PHAT_LAI_MO_PHONG.md).
+### Tài liệu để sử dụng và tiếp tục phát triển
 
-Tài liệu/evidence NK096–115 giữ như lịch sử, không đồng nghĩa mã các nhánh
-đó còn hoạt động. Không Git reset/revert toàn repository hoặc đổi lịch sử.
+- Nhật ký ghi yêu cầu, quyết định, thay đổi và bàn giao cho người hoặc AI tiếp nhận. [Nhật ký dự án](README_NHAT_KY_DU_AN.md).
+- Báo cáo trình bày thay đổi kỹ thuật, bằng chứng và giới hạn kiểm chứng. [Báo cáo tiến độ](README_BAO_CAO_TIEN_DO.md).
+- Hướng dẫn chọn nguồn cần đọc và lệnh theo loại tác vụ. [File cần đọc và lệnh chạy](docs/FILE_CAN_DOC_VA_LENH_CHAY.md).
+- Hướng dẫn mở bản ghi và đọc các lớp hiển thị. [Phát lại mô phỏng](docs/PHAT_LAI_MO_PHONG.md).
 
 ## 6. Thuật toán thực sự có trong dự án và nguồn gốc
 
